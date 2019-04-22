@@ -29,6 +29,7 @@ Route::get('pages/animations', 'PagesController@showAnimationsPage');
 Route::get('pages/programming', 'PagesController@showProgrammingPage');
 Route::get('pages/moodle', 'PagesController@showMoodlePage');
 
-Auth::routes(['register' => false]);
+Auth::routes(); // ['register' => false]
 
 Route::get('/home', 'HomeController@index')->name('home');
+
