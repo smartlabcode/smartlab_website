@@ -12,6 +12,7 @@ class RolesTableSeeder extends Seeder
      */
     public function run()
     {
+        // before each seed truncate the table so that ids are always 1 for superadmin and 2 for admin
         DB::table('roles')->truncate();
 
         DB::table('roles')->insert([
