@@ -1,1 +1,7 @@
-<h1>Blogs list</h1>
+@extends('layouts.app')
+
+@section('content')
+
+    <h1>Blogs list</h1>
+
+@endsection

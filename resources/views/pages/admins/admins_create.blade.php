@@ -1,1 +1,7 @@
-<h1>Admin create</h1>
+@extends('layouts.app')
+
+@section('content')
+
+    <h1>Admin create</h1>
+
+@endsection
