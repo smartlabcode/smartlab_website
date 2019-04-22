@@ -37,6 +37,10 @@ Route::get('pages/animations', 'PagesController@showAnimationsPage');
 Route::get('pages/programming', 'PagesController@showProgrammingPage');
 Route::get('pages/moodle', 'PagesController@showMoodlePage');
 
+// other routes
+Route::post('contact', 'ContactController@handleContactInfo');
+Route::put('language', 'LanguagesController@switchLanguage');
+
 Auth::routes(); // ['register' => false]
 
 Route::get('/home', 'HomeController@index')->name('home');
