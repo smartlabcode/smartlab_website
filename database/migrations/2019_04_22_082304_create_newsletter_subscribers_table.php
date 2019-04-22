@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class CreateNewsletterSubscribersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,13 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('newsletter_subscribers', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->enum('title', ['Mr.', 'Mrs.']);
             $table->string('name', 45);
-            $table->string('lastname', 45);
-            $table->string('email', 100)->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password', 255);
-            //$table->rememberToken();
+            $table->string('lastname');
+            $table->string('email', 100);
             $table->timestamps();
-            $table->integer('roles_id');
-            $table->engine = 'InnoDB';
         });
     }
 
@@ -34,6 +30,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('newsletter_subscribers');
     }
 }
