@@ -15,13 +15,18 @@ Route::get('/', function () {
     return view('index');
 });
 
-// blog controllers
-Route::resource('blogs', 'BlogsController');
+Route::middleware(['auth'])->group(function() {
+    // blog controllers
+    Route::resource('blogs', 'BlogsController');
 
-// admin vontrollers
-Route::resource('admins', 'UsersController')->except([
-    'show'
-]);
+    // admin controllers
+    Route::resource('admins', 'UsersController')->except([
+        'show'
+    ]);
+
+    Route::get('pages/statistic', 'PagesController@showStatisticPage');
+});
+
 
 // logout
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');  // https://stackoverflow.com/questions/43585416/how-to-logout-and-redirect-to-login-page-using-laravel-5-4
