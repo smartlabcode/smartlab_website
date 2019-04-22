@@ -16,6 +16,9 @@ Route::get('/', function () {
 });
 
 Route::resource('blogs', 'BlogsController');
+Route::resource('admins', 'UsersController')->except([
+    'show'
+]);
 
 Auth::routes(['register' => false]);
 
