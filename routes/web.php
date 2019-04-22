@@ -23,6 +23,10 @@ Route::resource('admins', 'UsersController')->except([
     'show'
 ]);
 
+// logout
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+
 // pages
 Route::get('pages/courses', 'PagesController@showCoursesPage');
 Route::get('pages/animations', 'PagesController@showAnimationsPage');
