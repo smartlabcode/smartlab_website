@@ -19,9 +19,13 @@
     </li>
     <li class="nav-item">Contact</li>
     @auth
+
+        @if(\Illuminate\Support\Facades\Auth::user()->roles_id == 1)
         <li class="nav-item">
             <a href="{{route('admins.index')}}">Admins</a>
         </li>
+        @endif
+
         <li class="nav-item">
             <a href="{{route('blogs.index')}}">Blogs</a>
         </li>

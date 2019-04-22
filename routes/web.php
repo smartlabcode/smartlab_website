@@ -24,8 +24,7 @@ Route::resource('admins', 'UsersController')->except([
 ]);
 
 // logout
-Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
-
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');  // https://stackoverflow.com/questions/43585416/how-to-logout-and-redirect-to-login-page-using-laravel-5-4
 
 // pages
 Route::get('pages/courses', 'PagesController@showCoursesPage');
