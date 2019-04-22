@@ -43,7 +43,4 @@ class PagesController extends Controller
         return view('pages.moodle');
     }
 
-    public function showStatisticPage() {
-        return view('pages.statistic');
-    }
 }

@@ -28,7 +28,7 @@ class CheckClientLanguage
             $lang = 'en';
         }
 
-        // set language 
+        // set language
         App::setlocale($lang);
 
         return $next($request);

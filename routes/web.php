@@ -19,8 +19,6 @@ Route::middleware(['auth'])->group(function() {
     Route::resource('admins', 'UsersController')->except([
         'show'
     ]);
-
-    Route::get('pages/statistic', 'PagesController@showStatisticPage');
 });
 
 
