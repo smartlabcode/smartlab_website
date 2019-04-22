@@ -6,6 +6,15 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
+
+    /**
+     * Display index page
+     */
+    public function index() {
+        //\Illuminate\Support\Facades\App::setlocale('de');
+        return view('index');
+    }
+
     /**
      * Display courses page
      */

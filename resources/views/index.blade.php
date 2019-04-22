@@ -2,7 +2,7 @@
 
 @section('content')
 
-       <h1>Main page</h1>
+       <h1>@lang('index.heading')</h1>
 
 @endsection
 

@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-
 Route::middleware(['auth'])->group(function() {
     // blog controllers
     Route::resource('blogs', 'BlogsController');
@@ -32,6 +28,7 @@ Route::middleware(['auth'])->group(function() {
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');  // https://stackoverflow.com/questions/43585416/how-to-logout-and-redirect-to-login-page-using-laravel-5-4
 
 // pages
+Route::get('/', 'PagesController@index');
 Route::get('pages/courses', 'PagesController@showCoursesPage');
 Route::get('pages/animations', 'PagesController@showAnimationsPage');
 Route::get('pages/programming', 'PagesController@showProgrammingPage');
