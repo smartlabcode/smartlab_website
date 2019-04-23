@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Blog;
+use App\BlogTranslation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BlogsController extends Controller
 {
@@ -34,9 +37,34 @@ class BlogsController extends Controller
      */
     public function store(Request $request)
     {
-        die("saving blog...");
+        $blog = new Blog();
+        $blogTranslation = new BlogTranslation();
+
+        // check if neccessary values are entered correctly, if no return error messages
+        $request->validate([
+            'content' => 'required',
+            'language' => 'in:en,de,bs'
+        ]);
+
+        // if data is ok set new values to the model
+        $blog->users_id = Auth::user()->id;
+
+
+//        $admin->lastname = $request->input('lastname');
+//        $admin->email = $request->input('email');
+//        $admin->password = Hash::make($request->input('password'));
+//        $admin->roles_id = $request->input('role');
+
+        // save model
+        $blog->save();
+
+        $blogTranslation->blogs_id = $blog->id;
+        $blogTranslation->text = $request->input('content');
+        $blogTranslation->language = $request->input('language');
+        $blogTranslation->save();
 
         // redirect with message
+        return back()->with(['message' => 'Blog successfully added']);
     }
 
     /**
