@@ -9,6 +9,15 @@
 
 </style>
 
+<script>
+
+    function changeSiteLanguage(value) {
+        console.log(value);
+        document.getElementById("languageForm").submit();
+    }
+
+</script>
+
 @section('menu')
 
     <li class="nav-item">@lang('menu.first_item')</li>
@@ -21,9 +30,9 @@
     @auth
 
         @if(\Illuminate\Support\Facades\Auth::user()->roles_id == 1)
-        <li class="nav-item">
-            <a href="{{route('admins.index')}}">@lang('menu.sixth_item')</a>
-        </li>
+            <li class="nav-item">
+                <a href="{{route('admins.index')}}">@lang('menu.sixth_item')</a>
+            </li>
         @endif
 
         <li class="nav-item">
@@ -31,5 +40,18 @@
         </li>
         <li class="nav-item"><a href="{{route('logout')}}">@lang('menu.eight_item')</a></li>
     @endauth
+
+    <li>
+        <form id="languageForm" action="/language" method="POST">
+            @csrf
+            @method('PUT')
+            <select name="language" onchange="changeSiteLanguage(this.value)">
+                <option value="en">@lang('menu.english_language')</option>
+                <option value="de">@lang('menu.german_language')</option>
+                <option value="bs">@lang('menu.bosnian_language')</option>
+            </select>
+        </form>
+
+    </li>
 
 @endsection

@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\App;
 
 class CheckClientLanguage
 {
+
     /**
      * Handle an incoming request.
      *
@@ -16,16 +17,23 @@ class CheckClientLanguage
      */
     public function handle($request, Closure $next)
     {
-        // get language
-        $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 
-        // check language
-        if ($lang == 'bs' || $lang == 'hr' || $lang == 'sr') {
-            $lang = 'bs';
-        } else if ($lang == 'de') {
-            $lang = 'de';
-        } else {
-            $lang = 'en';
+        // first check if language is set in session (in case if user set preferable language manually)
+        $lang = session()->get('language');
+
+        // if user didnt set language manually use his default browser language
+        if (!isset($lang)) {
+
+            $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+
+            // check language
+            if ($lang == 'bs' || $lang == 'hr' || $lang == 'sr') {
+                $lang = 'bs';
+            } else if ($lang == 'de') {
+                $lang = 'de';
+            } else {
+                $lang = 'en';
+            }
         }
 
         // set language
