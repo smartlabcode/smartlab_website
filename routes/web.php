@@ -36,7 +36,7 @@ Route::get('pages/moodle', 'PagesController@showMoodlePage');
 Route::post('contact', 'ContactController@handleContactInfo');
 Route::put('language', 'LanguagesController@switchLanguage');
 
-Auth::routes(); // ['register' => false]
+Auth::routes(); // TODO ['register' => false]
 
 Route::get('/home', 'HomeController@index')->name('home');
 
