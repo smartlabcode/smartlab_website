@@ -6,6 +6,7 @@ use App\Blog;
 use App\BlogTranslation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class BlogsController extends Controller
 {
@@ -16,7 +17,21 @@ class BlogsController extends Controller
      */
     public function index()
     {
-        return view('pages.blogs.blogs_list');
+        // get blogs
+        $blogs = DB::table('blogs')
+            ->select(
+                'blog_translations.heading',
+                        'users.id',
+                        'users.name',
+                        'users.lastname',
+                        'blogs.created_at'
+            )
+            ->leftJoin('users', 'blogs.users_id', '=', 'users.id')
+            ->leftJoin('blog_translations', 'blogs.users_id', '=', 'blog_translations.blogs_id')
+            ->get();
+
+
+        return view('pages.blogs.blogs_list', ['blogs' => $blogs]);
     }
 
     /**
@@ -43,22 +58,18 @@ class BlogsController extends Controller
         // check if neccessary values are entered correctly, if no return error messages
         $request->validate([
             'content' => 'required',
+            'title' => 'required',
             'language' => 'in:en,de,bs'
         ]);
 
         // if data is ok set new values to the model
         $blog->users_id = Auth::user()->id;
-
-
-//        $admin->lastname = $request->input('lastname');
-//        $admin->email = $request->input('email');
-//        $admin->password = Hash::make($request->input('password'));
-//        $admin->roles_id = $request->input('role');
-
         // save model
         $blog->save();
 
+        // set data to blog_translations
         $blogTranslation->blogs_id = $blog->id;
+        $blogTranslation->heading = $request->input('title');
         $blogTranslation->text = $request->input('content');
         $blogTranslation->language = $request->input('language');
         $blogTranslation->save();
@@ -86,7 +97,19 @@ class BlogsController extends Controller
      */
     public function edit($id)
     {
-        return view('pages.blogs.blogs_edit');
+        $blog = DB::table('blogs')
+            ->select(
+                'blog_translations.heading',
+                'users.id',
+                'blog_translations.text',
+                'blog_translations.language'
+            )
+            ->leftJoin('users', 'blogs.users_id', '=', 'users.id')
+            ->leftJoin('blog_translations', 'blogs.users_id', '=', 'blog_translations.blogs_id')
+            ->where('blogs.id', $id)
+            ->get();
+
+        return view('pages.blogs.blogs_edit', ['blog' => $blog[0]]);
     }
 
     /**

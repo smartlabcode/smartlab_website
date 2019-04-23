@@ -17,7 +17,7 @@ class CreateBlogTranslationsTable extends Migration
             $table->bigIncrements('id');
             $table->string('heading', 255)->nullable();
             $table->longText('text');
-            $table->timestamps();
+            //$table->timestamps();
             $table->enum('language', ['en', 'de', 'bs'])->default('en');
             $table->integer('blogs_id');
         });

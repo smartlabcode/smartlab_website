@@ -15,7 +15,7 @@
         @csrf
 
         <div class="form-group">
-            <label for="language">Example select</label>
+            <label for="language">Blog language</label>
             <select class="form-control" name="language" id="language">
                 <option value="en">English</option>
                 <option value="de">German</option>
@@ -24,8 +24,13 @@
         </div>
 
         <div class="form-group">
-            <label for="content">Example textarea</label>
-            <textarea class="form-control" name="content" id="content" rows="15"></textarea>
+            <label for="title">Blog title</label>
+            <input type="text" class="form-control" id="title" placeholder="Title" name="title">
+        </div>
+
+        <div class="form-group">
+            <label for="content">Blog text</label>
+            <textarea class="form-control" name="content" placeholder="Blog content" id="content" rows="15"></textarea>
         </div>
 
         <button id="addBlogSaveButton" type="submit" class="btn btn-primary">Save</button>
