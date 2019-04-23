@@ -17,9 +17,9 @@
 
     <h1>Admin create</h1>
 
-    @if(session('add_admin_message'))
+    @if(session('message'))
         <div class="alert alert-success" role="alert">
-            {{session('add_admin_message')}}
+            {{session('message')}}
         </div>
     @endif
 

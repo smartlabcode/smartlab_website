@@ -59,7 +59,7 @@ class UsersController extends Controller
         $admin->save();
 
         // redirect with message
-        return back()->with(['add_admin_message' => 'Admin successfully added']);
+        return back()->with(['message' => 'Admin successfully added']);
     }
 
     /**
@@ -102,7 +102,7 @@ class UsersController extends Controller
         $admin->save();
 
         // redirect with message
-        return back()->with(['edit_admin_message' => 'Admin successfully edited']);
+        return back()->with(['message' => 'Admin successfully edited']);
     }
 
     /**
@@ -113,8 +113,7 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        die("deleting admin...");
-
-        // redirect with message
+        $admin = User::findOrFail($id);
+        $admin->delete();
     }
 }

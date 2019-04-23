@@ -30,6 +30,20 @@
 
     <h1>Admin list</h1>
 
+    @if(session('message'))
+        <div class="alert alert-success" role="alert">
+            {{session('message')}}
+        </div>
+    @endif
+
+    @if($errors->any())
+        @foreach($errors->all() as $error)
+            <div class="alert alert-danger" role="alert">
+                {{$error}}
+            </div>
+        @endforeach
+    @endif
+
     <table class="table table-striped table-light">
         <thead>
         <tr>
@@ -39,6 +53,7 @@
             <th scope="col">Email</th>
             <th scope="col">Role</th>
             <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
         </tr>
         </thead>
         <tbody>
@@ -52,6 +67,7 @@
             <td>{{$admin->email}}</td>
             <td>@if($admin->roles_id == 1) Superadmin @else Admin @endif</td>
             <td><a href="admins/{{$admin->id}}/edit" class="btn btn-primary btn-sm">Edit</a></td>
+            <td><button class="btn btn-danger btn-sm" onclick="deleteAdmin({{$admin->id}})">Delete</button></td>
         </tr>
 
     @endforeach
@@ -67,6 +83,25 @@
         function redirectTocreatePage() {
             var url = "/admins/create";
             location.href = url;
+        }
+
+        function deleteAdmin(id) {
+            console.log(id);
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+
+            $.ajax({
+                method:'DELETE',
+                url:'/admins/' + id,
+                success:function(data){
+                    // reload page to  show updated list of admins
+                    location.reload();
+                }
+            });
         }
     </script>
 

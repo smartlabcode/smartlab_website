@@ -10,9 +10,9 @@
 
     <h1>Admin edit</h1>
 
-        @if(session('edit_admin_message'))
+        @if(session('message'))
             <div class="alert alert-success" role="alert">
-                {{session('edit_admin_message')}}
+                {{session('message')}}
             </div>
         @endif
 
