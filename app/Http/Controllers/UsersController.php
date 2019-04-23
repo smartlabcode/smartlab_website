@@ -64,9 +64,25 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        die("updating admin...");
+        $admin = User::findOrFail($id);
+
+        // check if neccessary values are entered correctly, if no return error messages
+        $request->validate([
+            'name' => 'required|max:45',
+            'lastname' => 'required|max:45',
+            'role' => 'in:1,2'
+        ]);
+
+        // if data is ok set new values to the model
+        $admin->name = $request->input('name');
+        $admin->lastname = $request->input('lastname');
+        $admin->roles_id = $request->input('role');
+
+        // save model
+        $admin->save();
 
         // redirect with message
+        return back()->with(['edit_admin_message' => 'Admin successfully edited']);
     }
 
     /**
