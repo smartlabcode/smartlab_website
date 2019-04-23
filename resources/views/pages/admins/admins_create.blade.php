@@ -1,9 +1,16 @@
 @extends('layouts.app')
 
 <style>
+
     #addUserSaveButton {
         float: right;
     }
+
+    #generatePasswordButton {
+        position: relative;
+        top: 31px;
+    }
+
 </style>
 
 @section('content')
@@ -28,7 +35,6 @@
     <form id="editAdminForm" action="/admins" method="POST">
 
         @csrf
-        @method('PUT')
 
         <div class="form-group">
             <label for="name">Name</label>
@@ -40,17 +46,17 @@
         </div>
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" class="form-control" id="lastname" placeholder="example@mail.com" value="">
+            <input type="email" class="form-control" id="lastname" placeholder="example@mail.com" name="email">
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="********">
+                <input type="password" class="form-control" id="password" placeholder="********" name="password">
             </div>
 
             <div class="form-group col-md-2">
-                <button type="submit" style="position: relative; top: 31px;" class="btn btn-primary">Generate</button>
+                <button id="generatePasswordButton" class="btn btn-primary" onclick="generatePassword()">Generate</button>
             </div>
         </div>
 
@@ -62,8 +68,28 @@
             </select>
         </div>
 
-        <button id="addUserSaveButton" class="btn btn-primary">Save</button>
+        <button id="addUserSaveButton" type="submit" class="btn btn-primary">Save</button>
 
     </form>
 
+    <script>
+
+        function generatePassword() {
+            event.preventDefault();
+
+            var length = Math.floor(Math.random() * 4) + 8;
+            document.getElementById("password").value = makePassword(length);
+        }
+
+        function makePassword(length) {
+            var text = "";
+            var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+            for (var i = 0; i < length; i++)
+                text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+            return text;
+        }
+
+    </script>
 @endsection

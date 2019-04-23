@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UsersController extends Controller
 {
@@ -37,9 +38,28 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        die("saving admin...");
+        $admin = new User();
+        // check if neccessary values are entered correctly, if no return error messages
+        $request->validate([
+            'name' => 'required|max:45',
+            'lastname' => 'required|max:45',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:8',
+            'role' => 'in:1,2'
+        ]);
 
-        // return with message
+        // if data is ok set new values to the model
+        $admin->name = $request->input('name');
+        $admin->lastname = $request->input('lastname');
+        $admin->email = $request->input('email');
+        $admin->password = Hash::make($request->input('password'));
+        $admin->roles_id = $request->input('role');
+
+        // save model
+        $admin->save();
+
+        // redirect with message
+        return back()->with(['add_admin_message' => 'Admin successfully added']);
     }
 
     /**
