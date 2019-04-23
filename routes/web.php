@@ -38,5 +38,5 @@ Route::put('language', 'LanguagesController@switchLanguage');
 
 Auth::routes(); // TODO ['register' => false]
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
