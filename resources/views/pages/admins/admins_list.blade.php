@@ -1,5 +1,31 @@
 @extends('layouts.app')
 
+<style>
+
+    #paperFab {
+        background-color: #3490dc;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+    }
+
+    #paperFab:hover {
+        box-shadow: 2px 2px 2px rgba(150,150,150, 0.5), -2px 0px 2px rgba(150,150,150, 0.5);
+    }
+
+    #paperFab span {
+        font-size: 30px;
+        position: relative;
+        left: 16px;
+        color: #fff;
+    }
+
+</style>
+
 @section('content')
 
     <h1>Admin list</h1>
@@ -17,10 +43,10 @@
         </thead>
         <tbody>
 
-    @foreach($admins as $admin)
+    @foreach($admins as $key => $admin)
 
         <tr>
-            <th scope="row">1</th>
+            <th scope="row">{{++$key}}</th>
             <td>{{$admin->name}}</td>
             <td>{{$admin->lastname}}</td>
             <td>{{$admin->email}}</td>
@@ -32,5 +58,16 @@
 
         </tbody>
     </table>
+
+    <div id="paperFab" onclick="redirectTocreatePage()">
+        <span>+</span>
+    </div>
+
+    <script>
+        function redirectTocreatePage() {
+            var url = "/admins/create";
+            location.href = url;
+        }
+    </script>
 
 @endsection
