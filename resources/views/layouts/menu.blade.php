@@ -42,13 +42,14 @@
     @endauth
 
     <li>
+
         <form id="languageForm" action="/language" method="POST">
             @csrf
             @method('PUT')
             <select name="language" onchange="changeSiteLanguage(this.value)">
-                <option value="en">@lang('menu.english_language')</option>
-                <option value="de">@lang('menu.german_language')</option>
-                <option value="bs">@lang('menu.bosnian_language')</option>
+                <option value="en" @if(App::getlocale() == 'en') selected @endif>@lang('menu.english_language')</option>
+                <option value="de" @if(App::getlocale() == 'de') selected @endif>@lang('menu.german_language')</option>
+                <option value="bs" @if(App::getlocale() == 'bs') selected @endif>@lang('menu.bosnian_language')</option>
             </select>
         </form>
 
