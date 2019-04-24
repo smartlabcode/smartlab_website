@@ -132,7 +132,7 @@ class BlogsController extends Controller
 
 
         $blogTranslation = BlogTranslation::where('language', $lang)->where('blogs_id', $id)->first();
-//die(print_r($blogTranslation));
+
         $blogTranslation->heading = $request->input('title');
         $blogTranslation->text = $request->input('content');
 
