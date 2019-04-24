@@ -29,6 +29,8 @@
         height: 24px;
         cursor: pointer;
         display: inline-block;
+        border-radius: 50%;
+        border: 2px solid rgba(66, 134, 244, 0.6);
         margin-right: 5px;
     }
 
@@ -81,6 +83,8 @@
         </thead>
         <tbody>
 
+        @include('parts.modal', ['title' => 'blog'])
+
         @foreach($blogs as $key => $blog)
 
             <tr>
@@ -129,11 +133,13 @@
                                 <img class="flagIconsOpaque" src="{{ asset('images/icons/003-bosnia-and-herzegovina.svg') }}">
                             </a>
                          @endif
+
                     @endforeach
                 </td>
 
                 {{--<td><a href="/blogs/{{$blog->id}}/edit" class="btn btn-primary btn-sm">Edit</a></td>--}}
-                <td><button class="btn btn-danger btn-sm" onclick="deleteBlog({{$blog->id}})">Delete</button></td>
+                <td><button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" onclick="updateId({{$blog->id}})">Delete</button></td>
+                {{--onclick="deleteBlog({{$blog->id}})"--}}
             </tr>
 
         @endforeach
@@ -147,8 +153,12 @@
 
     <script>
 
+        var id = 0;
+        function updateId(idNum) {
+            id = idNum;
+        }
+
         function changePublishState(value, id) {
-            console.log(id + ' --- ' + value);
 
             $.ajaxSetup({
                 headers: {
@@ -171,8 +181,7 @@
             location.href = url;
         }
 
-        function deleteBlog(id) {
-            console.log(id);
+        function deleteAction() {
 
             $.ajaxSetup({
                 headers: {

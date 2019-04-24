@@ -58,6 +58,8 @@
         </thead>
         <tbody>
 
+    @include('parts.modal', ['title' => 'admin'])
+
     @foreach($admins as $key => $admin)
 
         <tr>
@@ -67,7 +69,7 @@
             <td>{{$admin->email}}</td>
             <td>@if($admin->roles_id == 1) Superadmin @else Admin @endif</td>
             <td><a href="admins/{{$admin->id}}/edit" class="btn btn-primary btn-sm">Edit</a></td>
-            <td><button class="btn btn-danger btn-sm" onclick="deleteAdmin({{$admin->id}})">Delete</button></td>
+            <td><button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" onclick="updateId({{$admin->id}})">Delete</button></td>
         </tr>
 
     @endforeach
@@ -80,13 +82,18 @@
     </div>
 
     <script>
+
+        var id = 0;
+        function updateId(idNum) {
+            id = idNum;
+        }
+
         function redirectTocreatePage() {
             var url = "/admins/create";
             location.href = url;
         }
 
-        function deleteAdmin(id) {
-            console.log(id);
+        function deleteAction() {
 
             $.ajaxSetup({
                 headers: {
