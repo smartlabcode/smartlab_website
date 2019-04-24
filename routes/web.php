@@ -14,8 +14,13 @@
 Route::middleware(['auth'])->group(function() {
     // blog controllers
     Route::resource('blogs', 'BlogsController')->except([
-        'update'
+        'update',
+        'edit'
     ]);
+
+    Route::get('/blogs/{id}/add/{lang}', 'BlogsController@add')->name('add_extra_language_blog');
+    Route::get('/blogs/{id}/edit/{lang}', 'BlogsController@edit')->name('edit_language_blog');
+
 
     Route::put('/blogs/{id}/{lang}', 'BlogsController@update');
 

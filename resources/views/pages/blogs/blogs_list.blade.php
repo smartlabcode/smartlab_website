@@ -75,7 +75,7 @@
             <th scope="col">Created at</th>
             <th scope="col">Published/Unpublished</th>
             <th scope="col">Languages</th>
-            <th scope="col">Edit</th>
+            {{--<th scope="col">Edit</th>--}}
             <th scope="col">Delete</th>
         </tr>
         </thead>
@@ -99,22 +99,34 @@
                 <td>
                     @foreach(['en','de','bs'] as $lang)
                          @if($lang == 'en' && in_array($lang, [$blog->language]))
-                             <img class="flagIcons" src="{{ asset('images/icons/001-united-kingdom.svg') }}">
+                             <a href="/blogs/{{$blog->id}}/edit/{{$lang}}">
+                                 <img class="flagIcons" src="{{ asset('images/icons/001-united-kingdom.svg') }}">
+                             </a>
                          @elseif($lang == 'en' && !in_array($lang, [$blog->language]))
-                            <img class="flagIconsOpaque" src="{{ asset('images/icons/001-united-kingdom.svg') }}">
+                            <a href="/blogs/{{$blog->id}}/add/{{$lang}}">
+                                <img class="flagIconsOpaque" src="{{ asset('images/icons/001-united-kingdom.svg') }}">
+                            </a>
                          @elseif($lang == 'de' && in_array($lang, [$blog->language]))
-                            <img class="flagIcons" src="{{ asset('images/icons/002-germany.svg') }}">
+                            <a href="/blogs/{{$blog->id}}/edit/{{$lang}}">
+                                <img class="flagIcons" src="{{ asset('images/icons/002-germany.svg') }}">
+                            </a>
                          @elseif($lang == 'de' && !in_array($lang, [$blog->language]))
-                            <img class="flagIconsOpaque" src="{{ asset('images/icons/002-germany.svg') }}">
+                            <a href="/blogs/{{$blog->id}}/add/{{$lang}}">
+                                <img class="flagIconsOpaque" src="{{ asset('images/icons/002-germany.svg') }}">
+                            </a>
                          @elseif($lang == 'bs' && in_array($lang, [$blog->language]))
-                            <img class="flagIcons" src="{{ asset('images/icons/003-bosnia-and-herzegovina.svg') }}">
+                            <a href="/blogs/{{$blog->id}}/edit/{{$lang}}">
+                                <img class="flagIcons" src="{{ asset('images/icons/003-bosnia-and-herzegovina.svg') }}">
+                            </a>
                          @elseif($lang == 'bs' && !in_array($lang, [$blog->language]))
-                            <img class="flagIconsOpaque" src="{{ asset('images/icons/003-bosnia-and-herzegovina.svg') }}">
+                            <a href="/blogs/{{$blog->id}}/add/{{$lang}}">
+                                <img class="flagIconsOpaque" src="{{ asset('images/icons/003-bosnia-and-herzegovina.svg') }}">
+                            </a>
                          @endif
                     @endforeach
                 </td>
-                
-                <td><a href="/blogs/{{$blog->id}}/edit" class="btn btn-primary btn-sm">Edit</a></td>
+
+                {{--<td><a href="/blogs/{{$blog->id}}/edit" class="btn btn-primary btn-sm">Edit</a></td>--}}
                 <td><button class="btn btn-danger btn-sm" onclick="deleteBlog({{$blog->id}})">Delete</button></td>
             </tr>
 

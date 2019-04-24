@@ -44,6 +44,14 @@ class BlogsController extends Controller
         return view('pages.blogs.blogs_create');
     }
 
+    public function add($id, $lang)
+    {
+        return view('pages.blogs.blogs_create', [
+            'id' => $id,
+            'language' => $lang
+        ]);
+    }
+
     /**
      * Store a newly created resource in storage.  --->  /blogs
      *
@@ -95,7 +103,7 @@ class BlogsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id, $lang)
     {
         $blog = DB::table('blogs')
             ->select(
@@ -109,6 +117,7 @@ class BlogsController extends Controller
             ->leftJoin('users', 'blogs.users_id', '=', 'users.id')
             ->leftJoin('blog_translations', 'blogs.id', '=', 'blog_translations.blogs_id')
             ->where('blogs.id', $id)
+            ->where('blog_translations.language', $lang)
             ->get();
 
         return view('pages.blogs.blogs_edit', ['blog' => $blog[0]]);
