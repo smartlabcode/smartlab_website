@@ -22,6 +22,8 @@
 
     <h1>Blog edit</h1>
 
+    @include('parts.spinner')
+
     <form id="editBlogForm" method="POST">
 
         @csrf

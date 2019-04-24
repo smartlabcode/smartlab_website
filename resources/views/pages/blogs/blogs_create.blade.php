@@ -25,7 +25,7 @@
 
         <div class="form-group">
             <label for="language">Blog language</label>
-            <select class="form-control" name="language" id="language"> {{--@if(isset($language)) disabled @endif--}}
+            <select class="form-control" name="language" id="language">
                 <option value="en" @if(isset($language) && $language == 'en') selected @endif>English</option>
                 <option value="de" @if(isset($language) && $language == 'de') selected @endif>German</option>
                 <option value="bs" @if(isset($language) && $language == 'bs') selected @endif>Bosnian</option>
@@ -35,7 +35,7 @@
         <div class="form-group">
             <label for="title">Blog title</label>
             <input type="text" class="form-control" id="title" placeholder="Title" name="title"
-                   value="@if(isset($language)) {{$blog->heading}} @endif">
+                   value="@if(isset($language)) {{$blog->heading}} @else @endif">
         </div>
 
         <div class="form-group">

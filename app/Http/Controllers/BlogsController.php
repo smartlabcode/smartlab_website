@@ -47,7 +47,7 @@ class BlogsController extends Controller
                     LEFT JOIN blog_translations AS bt ON b.id = bt.blogs_id
                     GROUP BY b.id');
 
-        //die(print_r($blogs));
+        // die(print_r($blogs));
         return view('pages.blogs.blogs_list', ['blogs' => $blogs]);
     }
 
@@ -105,8 +105,9 @@ class BlogsController extends Controller
             'language' => 'in:en,de,bs',
             'existing' => 'in:true,false'
         ]);
+//die("d " . $request->input('existing'));
+        if ($request->input('existing') == 'false') {
 
-        if ($request->input('title') == false) {
             // if data is ok set new values to the model
             $blog->users_id = Auth::user()->id;
             // save model
@@ -122,6 +123,7 @@ class BlogsController extends Controller
             // redirect with message
             return redirect('blogs')->with(['message' => 'Blog successfully added']);
         }
+
 
         $blogTranslation->blogs_id = $request->input('blog_id');
         $blogTranslation->heading = $request->input('title');
