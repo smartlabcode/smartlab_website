@@ -46,9 +46,27 @@ class BlogsController extends Controller
 
     public function add($id, $lang)
     {
+
+        $blog = DB::table('blogs')
+            ->select(
+                'blog_translations.heading',
+                'blog_translations.language',
+                'users.id',
+                'blogs.id',
+                'blog_translations.text',
+                'blog_translations.language'
+            )
+            ->leftJoin('users', 'blogs.users_id', '=', 'users.id')
+            ->leftJoin('blog_translations', 'blogs.id', '=', 'blog_translations.blogs_id')
+            ->where('blogs.id', $id)
+            ->take(1)
+            ->get();
+
+       // die(print_r($blog[0]));
         return view('pages.blogs.blogs_create', [
             'id' => $id,
-            'language' => $lang
+            'language' => $lang,
+            'blog' => $blog[0]
         ]);
     }
 

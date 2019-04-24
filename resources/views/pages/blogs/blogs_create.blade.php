@@ -34,7 +34,8 @@
 
         <div class="form-group">
             <label for="title">Blog title</label>
-            <input type="text" class="form-control" id="title" placeholder="Title" name="title">
+            <input type="text" class="form-control" id="title" placeholder="Title" name="title"
+                   value="@if(isset($language)) {{$blog->heading}} @endif">
         </div>
 
         <div class="form-group">
@@ -42,7 +43,7 @@
             <textarea class="form-control" name="content" placeholder="Blog content" id="content" rows="15"></textarea>
         </div>
 
-        <input id="contentText" name="content" type="hidden" />
+        <input id="contentText" name="content" type="hidden" value="{{$blog->text}}"/>
 
         <button id="addBlogSaveButton" onclick="submitAddForm()" class="btn btn-primary">Save</button>
     </form>
@@ -78,6 +79,18 @@
                 height: 300
             });
         });
+
+        setTimeout(function() {
+            console.log("on load...");
+
+            // let content = document.getElementById("content");
+            // console.log(content);
+            let container = document.getElementsByClassName('note-editable')[0];
+
+            let text = document.getElementById("contentText");
+            container.innerHTML = text.value;
+
+        }, 2000);
 
     </script>
 
