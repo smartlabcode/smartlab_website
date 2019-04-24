@@ -80,28 +80,40 @@ class BlogsController extends Controller
     {
         $blog = new Blog();
         $blogTranslation = new BlogTranslation();
-
+        
         // check if neccessary values are entered correctly, if no return error messages
         $request->validate([
             'content' => 'required',
             'title' => 'required',
-            'language' => 'in:en,de,bs'
+            'language' => 'in:en,de,bs',
+            'existing' => 'in:true,false'
         ]);
 
-        // if data is ok set new values to the model
-        $blog->users_id = Auth::user()->id;
-        // save model
-        $blog->save();
+        if ($request->input('title') == false) {
+            // if data is ok set new values to the model
+            $blog->users_id = Auth::user()->id;
+            // save model
+            $blog->save();
 
-        // set data to blog_translations
-        $blogTranslation->blogs_id = $blog->id;
+            // set data to blog_translations
+            $blogTranslation->blogs_id = $blog->id;
+            $blogTranslation->heading = $request->input('title');
+            $blogTranslation->text = $request->input('content');
+            $blogTranslation->language = $request->input('language');
+            $blogTranslation->save();
+
+            // redirect with message
+            return redirect('blogs')->with(['message' => 'Blog successfully added']);
+        }
+
+        $blogTranslation->blogs_id = $request->input('blog_id');
         $blogTranslation->heading = $request->input('title');
         $blogTranslation->text = $request->input('content');
         $blogTranslation->language = $request->input('language');
         $blogTranslation->save();
 
         // redirect with message
-        return redirect('blogs')->with(['message' => 'Blog successfully added']);
+        return redirect('blogs')->with(['message' => 'Successfully added translation to a blog.']);
     }
 
     /**

@@ -25,7 +25,7 @@
 
         <div class="form-group">
             <label for="language">Blog language</label>
-            <select class="form-control" name="language" id="language" @if(isset($language)) disabled @endif>
+            <select class="form-control" name="language" id="language"> {{--@if(isset($language)) disabled @endif--}}
                 <option value="en" @if(isset($language) && $language == 'en') selected @endif>English</option>
                 <option value="de" @if(isset($language) && $language == 'de') selected @endif>German</option>
                 <option value="bs" @if(isset($language) && $language == 'bs') selected @endif>Bosnian</option>
@@ -43,7 +43,9 @@
             <textarea class="form-control" name="content" placeholder="Blog content" id="content" rows="15"></textarea>
         </div>
 
-        <input id="contentText" name="content" type="hidden" value="{{$blog->text}}"/>
+        <input id="contentText" name="content" type="hidden" value="@if(isset($blog->text)) {{$blog->text}} @endif"/>
+        <input id="addToExistingBlog" type="hidden" name="existing" value="@if(isset($language)) true @else false @endif">
+        <input id="blogId" type="hidden" name="blog_id" value="@if(isset($id)) {{$id}}@endif">
 
         <button id="addBlogSaveButton" onclick="submitAddForm()" class="btn btn-primary">Save</button>
     </form>
@@ -53,6 +55,7 @@
         function submitAddForm() {
             event.preventDefault();
 
+            console.log(document.getElementById("language").value);
             // change action route
             let form = document.getElementById("addBlogForm");
 
