@@ -11,9 +11,11 @@
 
 
 <style>
+
     #editBlogSaveButton {
         float: right;
     }
+
 </style>
 
 @section('content')

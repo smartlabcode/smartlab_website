@@ -17,20 +17,18 @@ class BlogsController extends Controller
      */
     public function index()
     {
-
         $blogs = DB::table('blogs')
             ->select(
-                'blog_translations.heading',
-                        'blog_translations.language',
-                        'users.name',
-                        'users.lastname',
-                        'blogs.created_at',
-                        'blogs.id',
-                        'blogs.published'
+            'blog_translations.heading',
+                    'blog_translations.language',
+                    'users.name',
+                    'users.lastname',
+                    'blogs.created_at',
+                    'blogs.id',
+                    'blogs.published'
             )
             ->leftJoin('users', 'blogs.users_id', '=', 'users.id')
             ->leftJoin('blog_translations', 'blogs.id', '=', 'blog_translations.blogs_id')
-
             ->get();
 
         return view('pages.blogs.blogs_list', ['blogs' => $blogs]);
