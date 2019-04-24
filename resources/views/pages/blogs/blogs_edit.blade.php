@@ -10,7 +10,7 @@
 
     <h1>Blog edit</h1>
 
-    <form action="/blogs" method="POST">
+    <form id="editBlogForm" method="POST">
 
         @csrf
         @method('PUT')
@@ -34,7 +34,23 @@
             <textarea class="form-control" name="content" id="content" rows="15">{{$blog->text}}</textarea>
         </div>
 
-        <button id="editBlogSaveButton" type="submit" class="btn btn-primary">Edit</button>
+        <input id="idValue" type="hidden" value="{{$blog->id}}">
+        <button id="editBlogSaveButton" onclick="submitEditForm()" class="btn btn-primary">Edit</button>
     </form>
 
+    <script>
+        function submitEditForm() {
+            // get language
+            let lang = document.getElementById("language").value;
+
+            // get id
+            let id = document.getElementById("idValue").value;
+
+            // change action route
+            let form = document.getElementById("editBlogForm");
+            form.action = "/blogs/" + id + "/" + lang;
+
+            form.submit();
+        }
+    </script>
 @endsection

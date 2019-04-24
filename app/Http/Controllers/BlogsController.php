@@ -101,6 +101,7 @@ class BlogsController extends Controller
             ->select(
                 'blog_translations.heading',
                 'users.id',
+                'blogs.id',
                 'blog_translations.text',
                 'blog_translations.language'
             )
@@ -119,11 +120,26 @@ class BlogsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id, $lang)
     {
-        die("updating blog...");
+        // $blog = Blog::findOrFail($id);
+
+        $request->validate([
+            'language' => 'in:en,de,bs',
+            'title' => 'required|max:255',
+            'content' => 'required'
+        ]);
+
+
+        $blogTranslation = BlogTranslation::where('language', $lang)->where('blogs_id', $id)->first();
+//die(print_r($blogTranslation));
+        $blogTranslation->heading = $request->input('title');
+        $blogTranslation->text = $request->input('content');
+
+        $blogTranslation->save();
 
         // redirect with message
+        return back()->with('message', 'Blog successfully edited.');
     }
 
     /**

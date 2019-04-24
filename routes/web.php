@@ -13,7 +13,11 @@
 
 Route::middleware(['auth'])->group(function() {
     // blog controllers
-    Route::resource('blogs', 'BlogsController');
+    Route::resource('blogs', 'BlogsController')->except([
+        'update'
+    ]);
+
+    Route::put('/blogs/{id}/{lang}', 'BlogsController@update');
 
     // admin controllers
     Route::resource('admins', 'UsersController')->except([
