@@ -69,7 +69,11 @@
             <td>{{$admin->email}}</td>
             <td>@if($admin->roles_id == 1) Superadmin @else Admin @endif</td>
             <td><a href="admins/{{$admin->id}}/edit" class="btn btn-primary btn-sm">Edit</a></td>
-            <td><button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" onclick="updateId({{$admin->id}})">Delete</button></td>
+            <td>
+                @if($admin->roles_id !== 1)
+                    <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" onclick="updateId({{$admin->id}})">Delete</button>
+                @endif
+            </td>
         </tr>
 
     @endforeach

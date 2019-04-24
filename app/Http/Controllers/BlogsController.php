@@ -32,10 +32,20 @@ class BlogsController extends Controller
 //            ->leftJoin('blog_translations', 'blogs.id', '=', 'blog_translations.blogs_id')
 //            ->get();
 
-        $blogs = DB::select('SELECT bt.heading, bt.text, u.name, u.lastname, b.created_at, b.id, b.published, GROUP_CONCAT(bt.language) AS language FROM blogs AS b
-                                    LEFT JOIN users AS u ON b.users_id = u.id
-                                    LEFT JOIN blog_translations AS bt ON b.id = bt.blogs_id
-                                    GROUP BY b.id');
+        $blogs = DB::select(
+            'SELECT 
+                      bt.heading, 
+                      bt.text, 
+                      u.name, 
+                      u.lastname, 
+                      DATE_FORMAT(b.created_at, \'%M %d, %Y\') AS created_at,  
+                      b.id, 
+                      b.published, 
+                      GROUP_CONCAT(bt.language) AS language 
+                    FROM blogs AS b
+                    LEFT JOIN users AS u ON b.users_id = u.id
+                    LEFT JOIN blog_translations AS bt ON b.id = bt.blogs_id
+                    GROUP BY b.id');
 
         //die(print_r($blogs));
         return view('pages.blogs.blogs_list', ['blogs' => $blogs]);

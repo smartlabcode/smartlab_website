@@ -59,7 +59,7 @@ class UsersController extends Controller
         $admin->save();
 
         // redirect with message
-        return back()->with(['message' => 'Admin successfully added']);
+        return redirect('admins')->with(['message' => 'Admin successfully added']);
     }
 
     /**
@@ -102,7 +102,7 @@ class UsersController extends Controller
         $admin->save();
 
         // redirect with message
-        return back()->with(['message' => 'Admin successfully edited']);
+        return redirect('admins')->with(['message' => 'Admin successfully edited']);
     }
 
     /**
