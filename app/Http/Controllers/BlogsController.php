@@ -29,7 +29,7 @@ class BlogsController extends Controller
             ->leftJoin('users', 'blogs.users_id', '=', 'users.id')
             ->leftJoin('blog_translations', 'blogs.users_id', '=', 'blog_translations.blogs_id')
             ->get();
-
+//die(print_r($blogs));
 
         return view('pages.blogs.blogs_list', ['blogs' => $blogs]);
     }

@@ -111,11 +111,11 @@
            // let content = document.getElementById("content");
            // console.log(content);
             let container = document.getElementsByClassName('note-editable')[0];
-console.log(container);
+
             let text = document.getElementById("contentText");
             container.innerHTML = text.value;
 
-        }, 3000);
+        }, 2000);
 
     </script>
 
