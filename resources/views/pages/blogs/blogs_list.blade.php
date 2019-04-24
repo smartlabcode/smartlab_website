@@ -24,6 +24,13 @@
         color: #fff;
     }
 
+    .publish button {
+        /*width: 70px;*/
+        /*position: relative;*/
+        /*left: 50%;*/
+        /*margin-left: -35px;*/
+    }
+
 </style>
 
 @section('content')
@@ -51,6 +58,7 @@
             <th scope="col">Title</th>
             <th scope="col">Author</th>
             <th scope="col">Created at</th>
+            <th scope="col">Published/Unpublished</th>
             <th scope="col">Edit</th>
             <th scope="col">Delete</th>
         </tr>
@@ -64,6 +72,13 @@
                 <td>{{$blog->heading}}</td>
                 <td>{{$blog->name}} {{$blog->lastname}}</td>
                 <td>{{$blog->created_at}}</td>
+                <td class="publish">
+                    @if($blog->published == 'false')
+                        <button type="button" class="btn btn-success btn-sm" onclick="changePublishState(true, {{$blog->id}})">Publish</button>
+                    @else
+                        <button type="button" class="btn btn-dark btn-sm" onclick="changePublishState(false, {{$blog->id}})">Unpublish</button>
+                    @endif
+                </td>
                 <td><a href="/blogs/{{$blog->id}}/edit" class="btn btn-primary btn-sm">Edit</a></td>
                 <td><button class="btn btn-danger btn-sm" onclick="deleteBlog({{$blog->id}})">Delete</button></td>
             </tr>
@@ -78,6 +93,26 @@
     </div>
 
     <script>
+
+        function changePublishState(value, id) {
+            console.log(id + ' --- ' + value);
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+
+            $.ajax({
+                method:'PUT',
+                url:'/publish/' + id + '/' + value,
+                success:function(data){
+                    // reload page to  show updated list of blogs
+                    location.reload();
+                }
+            });
+        }
+
         function redirectToCreatePage() {
             var url = "/blogs/create";
             location.href = url;

@@ -19,6 +19,8 @@ Route::middleware(['auth'])->group(function() {
 
     Route::put('/blogs/{id}/{lang}', 'BlogsController@update');
 
+    Route::put('/publish/{id}/{state}', 'BlogsController@publish');
+
     // admin controllers
     Route::resource('admins', 'UsersController')->except([
         'show'

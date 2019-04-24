@@ -24,7 +24,8 @@ class BlogsController extends Controller
                         'users.name',
                         'users.lastname',
                         'blogs.created_at',
-                        'blogs.id'
+                        'blogs.id',
+                        'blogs.published'
             )
             ->leftJoin('users', 'blogs.users_id', '=', 'users.id')
             ->leftJoin('blog_translations', 'blogs.id', '=', 'blog_translations.blogs_id')
@@ -155,5 +156,17 @@ class BlogsController extends Controller
 
         // return with message
         $request->session()->flash('message', 'Blog successfully deleted.');
+    }
+
+
+    public function publish(Request $request, $id, $state) {
+
+        $blog = Blog::findOrFail($id);
+        $blog->published = $state;
+        $blog->save();
+
+        $newState = ($state == 'true') ? 'published' : 'unpublished';
+
+        $request->session()->flash('message', 'Blog successfully ' . $newState);
     }
 }
