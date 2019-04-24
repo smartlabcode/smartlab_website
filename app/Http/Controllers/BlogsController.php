@@ -102,6 +102,7 @@ class BlogsController extends Controller
         $blog = DB::table('blogs')
             ->select(
                 'blog_translations.heading',
+                'blog_translations.language',
                 'users.id',
                 'blogs.id',
                 'blog_translations.text',

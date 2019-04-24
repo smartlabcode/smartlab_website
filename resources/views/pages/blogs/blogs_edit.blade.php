@@ -27,10 +27,10 @@
 
         <div class="form-group">
             <label for="language">Blog language</label>
-            <select class="form-control" name="language" id="language">
-                <option value="en">English</option>
-                <option value="de">German</option>
-                <option value="bs">Bosnian</option>
+            <select class="form-control" name="language" id="language" disabled>
+                <option value="en" @if($blog->language == 'en') selected @endif>English</option>
+                <option value="de" @if($blog->language == 'de') selected @endif>German</option>
+                <option value="bs" @if($blog->language == 'bs') selected @endif>Bosnian</option>
             </select>
         </div>
 
