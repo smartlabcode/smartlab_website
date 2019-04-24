@@ -1,5 +1,14 @@
 @extends('layouts.app')
 
+<!-- include libraries(jQuery, bootstrap) -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+{{--<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>--}}
+
+<!-- include summernote css/js -->
+<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.css" rel="stylesheet">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.js" defer></script>
+
+
 <style>
     #addBlogSaveButton {
         float: right;
@@ -10,7 +19,7 @@
 
     <h1>Blog create</h1>
 
-    <form action="/blogs" method="POST">
+    <form id="addBlogForm" method="POST">
 
         @csrf
 
@@ -33,7 +42,43 @@
             <textarea class="form-control" name="content" placeholder="Blog content" id="content" rows="15"></textarea>
         </div>
 
-        <button id="addBlogSaveButton" type="submit" class="btn btn-primary">Save</button>
+        <input id="contentText" name="content" type="hidden" />
+
+        <button id="addBlogSaveButton" onclick="submitAddForm()" class="btn btn-primary">Save</button>
     </form>
+
+    <script>
+
+        function submitAddForm() {
+            event.preventDefault();
+
+            // change action route
+            let form = document.getElementById("addBlogForm");
+
+            // set content
+            let content = form.getElementsByClassName('note-editable')[0];
+            let text = content.innerHTML;
+            console.log(text);
+            document.getElementById("contentText").value = text;
+
+            form.action = "/blogs";
+
+            form.submit();
+        }
+
+    </script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js" defer></script>
+    <script>
+
+        $(document).ready(function() {
+            $('#content').summernote({
+                placeholder: '',
+                tabsize: 10,
+                height: 300
+            });
+        });
+
+    </script>
 
 @endsection
