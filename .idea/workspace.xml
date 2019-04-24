@@ -106,8 +106,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="5905" />
-          <entry key="PHP" value="8025" />
+          <entry key="Blade" value="5913" />
+          <entry key="PHP" value="8067" />
           <entry key="PLAIN_TEXT" value="26" />
         </counts>
       </usages-collector>
@@ -126,7 +126,7 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BlogsController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="295">
-              <caret line="156" column="85" selection-start-line="156" selection-start-column="85" selection-end-line="156" selection-end-column="85" />
+              <caret line="156" column="73" selection-start-line="156" selection-start-column="73" selection-end-line="156" selection-end-column="73" />
               <folding>
                 <element signature="e#40#53#0#PHP" expanded="true" />
               </folding>
@@ -137,7 +137,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/blogs/blogs_list.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
+            <state relative-caret-position="1470">
               <caret line="98" column="65" selection-start-line="98" selection-start-column="65" selection-end-line="98" selection-end-column="65" />
             </state>
           </provider>
@@ -155,8 +155,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/blogs/blogs_edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="-537">
+              <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -257,8 +257,8 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_04_22_082212_create_blog_translations_table.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/blogs/blogs_create.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/blogs/blogs_edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/blogs/blogs_list.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/blogs/blogs_edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/BlogsController.php" />
       </list>
     </option>
@@ -472,12 +472,12 @@
       <option name="presentableId" value="Default" />
       <updated>1555916238724</updated>
       <workItem from="1555916240615" duration="19154000" />
-      <workItem from="1555947403335" duration="37039000" />
+      <workItem from="1555947403335" duration="37540000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54983000" />
+    <option name="totallyTimeSpent" value="55484000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -799,24 +799,10 @@
     <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/blogs/blogs_edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/blogs/blogs_create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
           <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/admins/admins_list.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="104" column="9" lean-forward="true" selection-start-line="87" selection-start-column="8" selection-end-line="104" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -830,9 +816,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/admins/admins_list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="104" column="9" lean-forward="true" selection-start-line="87" selection-start-column="8" selection-end-line="104" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/blogs/blogs_edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-537">
+          <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/blogs/blogs_list.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
+        <state relative-caret-position="1470">
           <caret line="98" column="65" selection-start-line="98" selection-start-column="65" selection-end-line="98" selection-end-column="65" />
         </state>
       </provider>
@@ -840,7 +840,7 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BlogsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
-          <caret line="156" column="85" selection-start-line="156" selection-start-column="85" selection-end-line="156" selection-end-column="85" />
+          <caret line="156" column="73" selection-start-line="156" selection-start-column="73" selection-end-line="156" selection-end-column="73" />
           <folding>
             <element signature="e#40#53#0#PHP" expanded="true" />
           </folding>

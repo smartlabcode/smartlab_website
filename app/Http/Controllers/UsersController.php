@@ -111,9 +111,12 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
         $admin = User::findOrFail($id);
         $admin->delete();
+
+        // return with message
+        $request->session()->flash('message', 'Admin successfully deleted.');
     }
 }

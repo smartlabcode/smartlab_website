@@ -146,7 +146,7 @@ class BlogsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
         $blog = Blog::findOrFail($id);
         $blog->delete();
@@ -154,6 +154,6 @@ class BlogsController extends Controller
         $blogTranslations = BlogTranslation::where('blogs_id', $id)->delete();
 
         // return with message
-        // return back()->with('message', 'Blog successfully deleted.');  TODO error 
+        $request->session()->flash('message', 'Blog successfully deleted.');
     }
 }
