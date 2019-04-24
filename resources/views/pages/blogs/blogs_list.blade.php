@@ -98,27 +98,33 @@
 
                 <td>
                     @foreach(['en','de','bs'] as $lang)
-                         @if($lang == 'en' && in_array($lang, [$blog->language]))
+
+                        @php
+                            $temp = explode(',', $blog->language);
+                        @endphp
+
+                         @if($lang == 'en' && in_array($lang, $temp))
+
                              <a href="/blogs/{{$blog->id}}/edit/{{$lang}}">
                                  <img class="flagIcons" src="{{ asset('images/icons/001-united-kingdom.svg') }}">
                              </a>
-                         @elseif($lang == 'en' && !in_array($lang, [$blog->language]))
+                         @elseif($lang == 'en' && !in_array($lang, $temp))
                             <a href="/blogs/{{$blog->id}}/add/{{$lang}}">
                                 <img class="flagIconsOpaque" src="{{ asset('images/icons/001-united-kingdom.svg') }}">
                             </a>
-                         @elseif($lang == 'de' && in_array($lang, [$blog->language]))
+                         @elseif($lang == 'de' && in_array($lang, $temp))
                             <a href="/blogs/{{$blog->id}}/edit/{{$lang}}">
                                 <img class="flagIcons" src="{{ asset('images/icons/002-germany.svg') }}">
                             </a>
-                         @elseif($lang == 'de' && !in_array($lang, [$blog->language]))
+                         @elseif($lang == 'de' && !in_array($lang, $temp))
                             <a href="/blogs/{{$blog->id}}/add/{{$lang}}">
                                 <img class="flagIconsOpaque" src="{{ asset('images/icons/002-germany.svg') }}">
                             </a>
-                         @elseif($lang == 'bs' && in_array($lang, [$blog->language]))
+                         @elseif($lang == 'bs' && in_array($lang, $temp))
                             <a href="/blogs/{{$blog->id}}/edit/{{$lang}}">
                                 <img class="flagIcons" src="{{ asset('images/icons/003-bosnia-and-herzegovina.svg') }}">
                             </a>
-                         @elseif($lang == 'bs' && !in_array($lang, [$blog->language]))
+                         @elseif($lang == 'bs' && !in_array($lang, $temp))
                             <a href="/blogs/{{$blog->id}}/add/{{$lang}}">
                                 <img class="flagIconsOpaque" src="{{ asset('images/icons/003-bosnia-and-herzegovina.svg') }}">
                             </a>

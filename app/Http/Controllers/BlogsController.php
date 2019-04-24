@@ -17,20 +17,27 @@ class BlogsController extends Controller
      */
     public function index()
     {
-        $blogs = DB::table('blogs')
-            ->select(
-            'blog_translations.heading',
-                    'blog_translations.language',
-                    'users.name',
-                    'users.lastname',
-                    'blogs.created_at',
-                    'blogs.id',
-                    'blogs.published'
-            )
-            ->leftJoin('users', 'blogs.users_id', '=', 'users.id')
-            ->leftJoin('blog_translations', 'blogs.id', '=', 'blog_translations.blogs_id')
-            ->get();
 
+//        $blogs = DB::table('blogs')
+//            ->select(
+//            'blog_translations.heading',
+//                    'blog_translations.language',
+//                    'users.name',
+//                    'users.lastname',
+//                    'blogs.created_at',
+//                    'blogs.id',
+//                    'blogs.published'
+//            )
+//            ->leftJoin('users', 'blogs.users_id', '=', 'users.id')
+//            ->leftJoin('blog_translations', 'blogs.id', '=', 'blog_translations.blogs_id')
+//            ->get();
+
+        $blogs = DB::select('SELECT bt.heading, bt.text, u.name, u.lastname, b.created_at, b.id, b.published, GROUP_CONCAT(bt.language) AS language FROM blogs AS b
+                                    LEFT JOIN users AS u ON b.users_id = u.id
+                                    LEFT JOIN blog_translations AS bt ON b.id = bt.blogs_id
+                                    GROUP BY b.id');
+
+        //die(print_r($blogs));
         return view('pages.blogs.blogs_list', ['blogs' => $blogs]);
     }
 
@@ -80,7 +87,7 @@ class BlogsController extends Controller
     {
         $blog = new Blog();
         $blogTranslation = new BlogTranslation();
-        
+
         // check if neccessary values are entered correctly, if no return error messages
         $request->validate([
             'content' => 'required',
