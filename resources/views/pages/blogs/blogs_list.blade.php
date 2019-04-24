@@ -31,6 +31,12 @@
         /*margin-left: -35px;*/
     }
 
+    .flagIcons {
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+    }
+
 </style>
 
 @section('content')
@@ -59,6 +65,7 @@
             <th scope="col">Author</th>
             <th scope="col">Created at</th>
             <th scope="col">Published/Unpublished</th>
+            <th scope="col">Languages</th>
             <th scope="col">Edit</th>
             <th scope="col">Delete</th>
         </tr>
@@ -78,6 +85,16 @@
                     @else
                         <button type="button" class="btn btn-dark btn-sm" onclick="changePublishState(false, {{$blog->id}})">Unpublish</button>
                     @endif
+                </td>
+                <td>
+
+                    @if($blog->language == 'en')
+                      <img class="flagIcons" src="{{asset('images/icons/001-united-kingdom.svg') }}">
+                     @elseif($blog->language == 'de')
+                        <img class="flagIcons" src="{{asset('images/icons/002-germany.svg') }}">
+                      @else
+                        <img class="flagIcons" src="{{asset('images/icons/003-bosnia-and-herzegovina.svg') }}">
+                     @endif
                 </td>
                 <td><a href="/blogs/{{$blog->id}}/edit" class="btn btn-primary btn-sm">Edit</a></td>
                 <td><button class="btn btn-danger btn-sm" onclick="deleteBlog({{$blog->id}})">Delete</button></td>
