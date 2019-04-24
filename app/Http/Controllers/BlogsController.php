@@ -21,15 +21,14 @@ class BlogsController extends Controller
         $blogs = DB::table('blogs')
             ->select(
                 'blog_translations.heading',
-                        'users.id',
                         'users.name',
                         'users.lastname',
-                        'blogs.created_at'
+                        'blogs.created_at',
+                        'blogs.id'
             )
             ->leftJoin('users', 'blogs.users_id', '=', 'users.id')
-            ->leftJoin('blog_translations', 'blogs.users_id', '=', 'blog_translations.blogs_id')
+            ->leftJoin('blog_translations', 'blogs.id', '=', 'blog_translations.blogs_id')
             ->get();
-//die(print_r($blogs));
 
         return view('pages.blogs.blogs_list', ['blogs' => $blogs]);
     }
@@ -75,7 +74,7 @@ class BlogsController extends Controller
         $blogTranslation->save();
 
         // redirect with message
-        return back()->with(['message' => 'Blog successfully added']);
+        return redirect('blogs')->with(['message' => 'Blog successfully added']);
     }
 
     /**
@@ -106,7 +105,7 @@ class BlogsController extends Controller
                 'blog_translations.language'
             )
             ->leftJoin('users', 'blogs.users_id', '=', 'users.id')
-            ->leftJoin('blog_translations', 'blogs.users_id', '=', 'blog_translations.blogs_id')
+            ->leftJoin('blog_translations', 'blogs.id', '=', 'blog_translations.blogs_id')
             ->where('blogs.id', $id)
             ->get();
 
@@ -122,7 +121,6 @@ class BlogsController extends Controller
      */
     public function update(Request $request, $id, $lang)
     {
-        // $blog = Blog::findOrFail($id);
 
         $request->validate([
             'language' => 'in:en,de,bs',
@@ -139,7 +137,7 @@ class BlogsController extends Controller
         $blogTranslation->save();
 
         // redirect with message
-        return back()->with('message', 'Blog successfully edited.');
+        return redirect('blogs')->with('message', 'Blog successfully edited.');
     }
 
     /**
@@ -150,8 +148,12 @@ class BlogsController extends Controller
      */
     public function destroy($id)
     {
-        die("deleting blog...");
+        $blog = Blog::findOrFail($id);
+        $blog->delete();
 
-        // redirect with message
+        $blogTranslations = BlogTranslation::where('blogs_id', $id)->delete();
+
+        // return with message
+        // return back()->with('message', 'Blog successfully deleted.');  TODO error 
     }
 }

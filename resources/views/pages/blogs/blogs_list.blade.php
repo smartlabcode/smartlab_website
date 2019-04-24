@@ -65,7 +65,7 @@
                 <td>{{$blog->name}} {{$blog->lastname}}</td>
                 <td>{{$blog->created_at}}</td>
                 <td><a href="/blogs/{{$blog->id}}/edit" class="btn btn-primary btn-sm">Edit</a></td>
-                <td><button class="btn btn-danger btn-sm">Delete</button></td>
+                <td><button class="btn btn-danger btn-sm" onclick="deleteBlog({{$blog->id}})">Delete</button></td>
             </tr>
 
         @endforeach
@@ -83,7 +83,7 @@
             location.href = url;
         }
 
-        function deleteAdmin(id) {
+        function deleteBlog(id) {
             console.log(id);
 
             $.ajaxSetup({
@@ -94,9 +94,9 @@
 
             $.ajax({
                 method:'DELETE',
-                url:'/admins/' + id,
+                url:'/blogs/' + id,
                 success:function(data){
-                    // reload page to  show updated list of admins
+                    // reload page to  show updated list of blogs
                     location.reload();
                 }
             });
