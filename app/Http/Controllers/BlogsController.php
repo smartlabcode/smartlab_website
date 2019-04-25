@@ -222,12 +222,15 @@ class BlogsController extends Controller
 
         $blog = Blog::findOrFail($id);
 
+        $blogTranslation = BlogTranslation::where('language','en')->where('blogs_id', $blog->id)->first();
+
+       // die(print_r($blogTranslation));
         // check if blog is published for first time
         if($blog->published_already == 0) {
             // TODO send request to MailChimp to send new blog to the subscribers
             // TODO DEMO
             $mailer = new MailerService();
-            $mailer->sendMailsToSubscribers();
+            $mailer->sendMailsToSubscribers($blogTranslation->heading, $blogTranslation->text);
         }
 
         $blog->published = $state;

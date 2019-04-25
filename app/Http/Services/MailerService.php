@@ -15,19 +15,19 @@ use PHPMailer\PHPMailer\Exception;
 class MailerService
 {
 
-    public function sendMailsToSubscribers() {
+    public function sendMailsToSubscribers($heading, $text) {
 
         $subscribers = Subscriber::all();
 
         foreach ($subscribers as $subscriber) {
 
             if ($subscriber->verified == 1) {
-                $this->sendNewsletterEmail($subscriber->email);
+                $this->sendNewsletterEmail($subscriber->email, $heading, $text);
             }
         }
     }
 
-    public function sendNewsletterEmail($toEmail) {
+    public function sendNewsletterEmail($toEmail, $heading, $text) {
         // TODO send email
         $mail = new PHPMailer(true);
         try {
@@ -45,8 +45,8 @@ class MailerService
             $mail->addAddress($toEmail, 'Receiver');     // Add a recipient
             //Content
             $mail->isHTML(true);                                  // Set email format to HTML
-            $mail->Subject = 'Test message subject';
-            $mail->Body    = '<div>NEWSLETTER</div>';
+            $mail->Subject = $heading;
+            $mail->Body    = $text;
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';  // if mail provider blocks HTML content set alternative body with no HTML
             $mail->send();
             echo 'Message has been sent';
