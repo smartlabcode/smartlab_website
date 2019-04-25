@@ -43,9 +43,14 @@ Route::get('pages/animations', 'PagesController@showAnimationsPage');
 Route::get('pages/programming', 'PagesController@showProgrammingPage');
 Route::get('pages/moodle', 'PagesController@showMoodlePage');
 
-// other routes
+// send contact form
 Route::post('contact', 'ContactController@handleContactInfo');
+
+// switch language
 Route::put('language', 'LanguagesController@switchLanguage');
+
+// subscribe to newsletter
+Route::post('subsrcribe', 'SubscribeController@saveSubscriber');
 
 Auth::routes(); // TODO ['register' => false]
 

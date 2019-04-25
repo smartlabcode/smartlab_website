@@ -21,25 +21,38 @@
               @endforeach
        @endif
 
+       <hr/>
+
        <form action="/contact" method="POST">
 
               @csrf
 
            Title: <select name="title">
-                  <option value="Mr." selected>Mr.</option>
-                  <option value="Mrs.">Mrs.</option>
-           </select>
+                      <option value="Mr." selected>Mr.</option>
+                      <option value="Mrs.">Mrs.</option>
+                    </select>
               <br/>
           Name: <input type="text" name="name" />
               <br/>
            Lastname: <input type="text" name="lastname" />
               <br/>
-          Email: <input type="email" name="email" />
+           Email: <input type="email" name="email" />
               <br/>
             Message: <textarea name="message"></textarea>
 
            <button>Submit</button>
        </form>
+
+    <hr/>
+
+    <form action="/subscribe" method="POST">
+
+        @csrf
+
+        Email: <input name="email" type="email"/>
+        <button>Subscribe</button>
+
+    </form>
 
 @endsection
 
