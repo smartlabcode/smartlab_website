@@ -50,7 +50,10 @@ Route::post('contact', 'ContactController@handleContactInfo');
 Route::put('language', 'LanguagesController@switchLanguage');
 
 // subscribe to newsletter
-Route::post('subsrcribe', 'SubscribeController@saveSubscriber');
+Route::post('subscribe', 'SubscribeController@saveSubscriber');
+
+// email verification
+Route::get('email_verification/{id}', 'SubscribeController@verifySubscriber');
 
 Auth::routes(); // TODO ['register' => false]
 
