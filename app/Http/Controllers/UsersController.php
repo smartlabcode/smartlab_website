@@ -15,7 +15,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $admins = User::all();
+        $admins = User::where('deleted_at', null)->get();
 
         return view('pages.admins.admins_list', ['admins' => $admins]);
     }

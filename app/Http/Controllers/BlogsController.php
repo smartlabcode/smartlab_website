@@ -46,6 +46,7 @@ class BlogsController extends Controller
                     FROM blogs AS b
                     LEFT JOIN users AS u ON b.users_id = u.id
                     LEFT JOIN blog_translations AS bt ON b.id = bt.blogs_id
+                    WHERE b.deleted_at IS NULL
                     GROUP BY b.id');
 
         // die(print_r($blogs));
