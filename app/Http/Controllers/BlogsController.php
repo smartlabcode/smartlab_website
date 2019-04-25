@@ -105,7 +105,7 @@ class BlogsController extends Controller
             'language' => 'in:en,de,bs',
             'existing' => 'in:true,false'
         ]);
-//die("d " . $request->input('existing'));
+
         if ($request->input('existing') == 'false') {
 
             // if data is ok set new values to the model
@@ -123,7 +123,6 @@ class BlogsController extends Controller
             // redirect with message
             return redirect('blogs')->with(['message' => 'Blog successfully added']);
         }
-
 
         $blogTranslation->blogs_id = $request->input('blog_id');
         $blogTranslation->heading = $request->input('title');

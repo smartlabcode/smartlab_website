@@ -68,6 +68,8 @@
         @endforeach
     @endif
 
+    @include('parts.modal', ['title' => 'blog'])
+
     <table class="table table-striped table-light">
         <thead>
         <tr>
@@ -82,8 +84,6 @@
         </tr>
         </thead>
         <tbody>
-
-        @include('parts.modal', ['title' => 'blog'])
 
         @foreach($blogs as $key => $blog)
 

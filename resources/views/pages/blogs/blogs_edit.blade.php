@@ -90,7 +90,6 @@
                 height: 300
             });
 
-
         });
 
         setTimeout(function() {
