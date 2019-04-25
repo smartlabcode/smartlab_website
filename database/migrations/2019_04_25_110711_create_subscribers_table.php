@@ -18,6 +18,7 @@ class CreateSubscribersTable extends Migration
             $table->string('email')->unique();
             $table->enum('verified', [1,0])->default(0);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -20,6 +20,7 @@ class CreateBlogTranslationsTable extends Migration
             //$table->timestamps();
             $table->enum('language', ['en', 'de', 'bs'])->default('en');
             $table->integer('blogs_id');
+            $table->softDeletes();
         });
     }
 

@@ -20,6 +20,7 @@ class CreateNewsletterSubscribersTable extends Migration
             $table->string('lastname');
             $table->string('email', 100);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
