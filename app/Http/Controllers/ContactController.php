@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Contact;
+use App\Http\Services\MailerService;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
-    public function handleContactInfo(Request $request) {
+    public function handleContactInfo(Request $request, MailerService $mailer) {
 
         // check if neccessary values are entered correctly, if no return error messages
         $request->validate([
@@ -26,6 +27,8 @@ class ContactController extends Controller
         $contact->email = $request->input('email');
 
         $contact->save();
+
+        $mailer->sendContactEmail();
 
         return back()->with('message', 'Message successfully sent.');
     }
