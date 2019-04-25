@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Services\MailchimpService;
 use App\Http\Services\MailerService;
 use App\Subscriber;
 use Illuminate\Http\Request;
@@ -25,15 +26,22 @@ class SubscribeController extends Controller
         return back()->with(['message' => 'You successfully subscribed to our newsletter.']);
     }
 
-    public function verifySubscriber($mail) {
+    public function verifySubscriber($mail, MailchimpService $mailchimp) {
 
         $subscriber = Subscriber::where('email', $mail)->firstOrFail();
 
         $subscriber->verified = 1;
         $subscriber->save();
 
-        // TODO send data to MailChimp
+        // send data to MailChimp
+        $mailchimp->addSubscriber($mail);
 
         return view('others.email_verification');
+    }
+
+    public function listSubscribers(MailchimpService $mailchimp) {
+        $data = $mailchimp->listSubscribers();
+
+        return view('pages.subscribers', ['subscribers' => $data]);
     }
 }

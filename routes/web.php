@@ -26,6 +26,10 @@ Route::middleware(['auth'])->group(function() {
 
     Route::put('/publish/{id}/{state}', 'BlogsController@publish');
 
+
+    // get subscribers TODO this route can see only super admin
+    Route::get('subscribers', 'SubscribeController@listSubscribers');
+
     // admin controllers
     Route::resource('admins', 'UsersController')->except([
         'show'
@@ -51,6 +55,8 @@ Route::put('language', 'LanguagesController@switchLanguage');
 
 // subscribe to newsletter
 Route::post('subscribe', 'SubscribeController@saveSubscriber');
+
+
 
 // email verification
 Route::get('email_verification/{mail}', 'SubscribeController@verifySubscriber');
