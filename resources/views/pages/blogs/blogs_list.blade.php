@@ -94,9 +94,9 @@
                 <td>{{$blog->created_at}}</td>
                 <td class="publish">
                     @if($blog->published == 'false')
-                        <button type="button" class="btn btn-success btn-sm" onclick="changePublishState(true, {{$blog->id}})">Publish</button>
+                        <button type="button" class="btn btn-dark btn-sm" onclick="changePublishState(true, {{$blog->id}})">Unpublished</button>
                     @else
-                        <button type="button" class="btn btn-dark btn-sm" onclick="changePublishState(false, {{$blog->id}})">Unpublish</button>
+                        <button type="button" class="btn btn-success btn-sm" onclick="changePublishState(false, {{$blog->id}})">Published</button>
                     @endif
                 </td>
 
