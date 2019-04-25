@@ -53,7 +53,7 @@ Route::put('language', 'LanguagesController@switchLanguage');
 Route::post('subscribe', 'SubscribeController@saveSubscriber');
 
 // email verification
-Route::get('email_verification/{id}', 'SubscribeController@verifySubscriber');
+Route::get('email_verification/{mail}', 'SubscribeController@verifySubscriber');
 
 Auth::routes(); // TODO ['register' => false]
 

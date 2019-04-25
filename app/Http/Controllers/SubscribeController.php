@@ -25,9 +25,9 @@ class SubscribeController extends Controller
         return back()->with(['message' => 'You successfully subscribed to our newsletter.']);
     }
 
-    public function verifySubscriber($id) {
+    public function verifySubscriber($mail) {
 
-        $subscriber = Subscriber::findOrFail($id);
+        $subscriber = Subscriber::where('email', $mail)->firstOrFail();
 
         $subscriber->verified = 1;
         $subscriber->save();

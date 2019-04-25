@@ -34,7 +34,7 @@ class MailerService
             $mail->isHTML(true);                                  // Set email format to HTML
             $mail->Subject = 'Test message subject';
             $mail->Body    = '<div>
-                                Confirm your email for newsletter: <a href="' . env("APP_BASE_URL") . '/email_verification/' . $id . '">Activation link</a>
+                                Confirm your email for newsletter: <a href="' . env("APP_BASE_URL") . '/email_verification/' . $toEmail . '">Activation link</a>
                                 </div>';
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';  // if mail provider blocks HTML content set alternative body with no HTML
             $mail->send();
