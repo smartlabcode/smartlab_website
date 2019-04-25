@@ -7,15 +7,36 @@
        <a href="{{ env('BLOG_DOMAIN') }}/blog/7/de" target="_blank">Visit some blog</a>
 
 
+       @if(session('message'))
+              <div class="alert alert-success" role="alert">
+                     {{session('message')}}
+              </div>
+       @endif
+
+       @if($errors->any())
+              @foreach($errors->all() as $error)
+                     <div class="alert alert-danger" role="alert">
+                            {{$error}}
+                     </div>
+              @endforeach
+       @endif
+
        <form action="/contact" method="POST">
-           <select name="title">
+
+              @csrf
+
+           Title: <select name="title">
                   <option value="Mr." selected>Mr.</option>
                   <option value="Mrs.">Mrs.</option>
            </select>
-          <input type="text" name="name" />
-           <input type="text" name="lastname" />
-          <input type="email" name="email" />
-            <textarea name="message"></textarea>
+              <br/>
+          Name: <input type="text" name="name" />
+              <br/>
+           Lastname: <input type="text" name="lastname" />
+              <br/>
+          Email: <input type="email" name="email" />
+              <br/>
+            Message: <textarea name="message"></textarea>
 
            <button>Submit</button>
        </form>
