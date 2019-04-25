@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Blog;
 use App\BlogTranslation;
+use App\Http\Services\MailerService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -220,8 +221,19 @@ class BlogsController extends Controller
     public function publish(Request $request, $id, $state) {
 
         $blog = Blog::findOrFail($id);
+
+        // check if blog is published for first time
+        if($blog->published_already == 0) {
+            // TODO send request to MailChimp to send new blog to the subscribers
+            // TODO DEMO
+            $mailer = new MailerService();
+            $mailer->sendMailsToSubscribers();
+        }
+
         $blog->published = $state;
+        $blog->published_already = 1;
         $blog->save();
+
 
         $newState = ($state == 'true') ? 'published' : 'unpublished';
 
