@@ -4,13 +4,23 @@ namespace App\Http\Controllers;
 
 use App\Blog;
 use App\BlogTranslation;
+use App\Http\Services\LogService;
 use App\Http\Services\MailerService;
+use App\Log;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class BlogsController extends Controller
 {
+
+    private $logService;
+
+    public function __construct(LogService $logService)
+    {
+        $this->logService = $logService;
+    }
+
     /**
      * Display a listing of the resource.  --->  /blogs
      *
@@ -18,9 +28,11 @@ class BlogsController extends Controller
      */
     public function index()
     {
-        // get blogs
-        $blogs = DB::select(
-            'SELECT 
+
+        try {
+            // get blogs
+            $blogs = DB::select(
+                'SELECT 
                       bt.heading, 
                       bt.text, 
                       u.name, 
@@ -35,8 +47,17 @@ class BlogsController extends Controller
                     WHERE b.deleted_at IS NULL
                     GROUP BY b.id');
 
-        // return blogs list page with its data
-        return view('pages.blogs.blogs_list', ['blogs' => $blogs]);
+            // return blogs list page with its data
+            return view('pages.blogs.blogs_list', ['blogs' => $blogs]);
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERRROR', $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+
     }
 
     /**
@@ -46,8 +67,18 @@ class BlogsController extends Controller
      */
     public function create()
     {
-        // return create blog form page
-        return view('pages.blogs.blogs_create');
+        try {
+            // return create blog form page
+            return view('pages.blogs.blogs_create');
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERRROR', $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+
     }
 
     /**
@@ -59,28 +90,38 @@ class BlogsController extends Controller
      */
     public function add($id, $lang)
     {
-        // get already added blog so it can be used as placeholder for the translation
-        $blog = DB::table('blogs')
-            ->select(
-                'blog_translations.heading',
-                'blog_translations.language',
-                'users.id',
-                'blogs.id',
-                'blog_translations.text',
-                'blog_translations.language'
-            )
-            ->leftJoin('users', 'blogs.users_id', '=', 'users.id')
-            ->leftJoin('blog_translations', 'blogs.id', '=', 'blog_translations.blogs_id')
-            ->where('blogs.id', $id)
-            ->take(1)
-            ->get();
+        try {
+            // get already added blog so it can be used as placeholder for the translation
+            $blog = DB::table('blogs')
+                ->select(
+                    'blog_translations.heading',
+                    'blog_translations.language',
+                    'users.id',
+                    'blogs.id',
+                    'blog_translations.text',
+                    'blog_translations.language'
+                )
+                ->leftJoin('users', 'blogs.users_id', '=', 'users.id')
+                ->leftJoin('blog_translations', 'blogs.id', '=', 'blog_translations.blogs_id')
+                ->where('blogs.id', $id)
+                ->take(1)
+                ->get();
 
-        // return page with neccessary data
-        return view('pages.blogs.blogs_create', [
-            'id' => $id,
-            'language' => $lang,
-            'blog' => $blog[0]
-        ]);
+            // return page with neccessary data
+            return view('pages.blogs.blogs_create', [
+                'id' => $id,
+                'language' => $lang,
+                'blog' => $blog[0]
+            ]);
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERRROR', $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+
     }
 
     /**
@@ -91,46 +132,56 @@ class BlogsController extends Controller
      */
     public function store(Request $request)
     {
-        // create blog and blogTranslation objects
-        $blog = new Blog();
-        $blogTranslation = new BlogTranslation();
+        try {
+            // create blog and blogTranslation objects
+            $blog = new Blog();
+            $blogTranslation = new BlogTranslation();
 
-        // check if neccessary values are entered correctly, if no return error messages
-        $request->validate([
-            'content' => 'required',
-            'title' => 'required',
-            'language' => 'in:en,de,bs',
-            'existing' => 'in:true,false'
-        ]);
+            // check if neccessary values are entered correctly, if no return error messages
+            $request->validate([
+                'content' => 'required',
+                'title' => 'required',
+                'language' => 'in:en,de,bs',
+                'existing' => 'in:true,false'
+            ]);
 
-        // check if already exist one translation for the blog, if no create new blog in the database
-        if ($request->input('existing') == 'false') {
+            // check if already exist one translation for the blog, if no create new blog in the database
+            if ($request->input('existing') == 'false') {
 
-            // if data is ok set new values to the model
-            $blog->users_id = Auth::user()->id;
-            // save model
-            $blog->save();
+                // if data is ok set new values to the model
+                $blog->users_id = Auth::user()->id;
+                // save model
+                $blog->save();
 
-            // set data to blog_translations
-            $blogTranslation->blogs_id = $blog->id;
+                // set data to blog_translations
+                $blogTranslation->blogs_id = $blog->id;
+                $blogTranslation->heading = $request->input('title');
+                $blogTranslation->text = $request->input('content');
+                $blogTranslation->language = $request->input('language');
+                $blogTranslation->save();
+
+                // redirect with message
+                return redirect('blogs')->with(['message' => 'Blog successfully added']);
+            }
+
+            // else add translation to existing blog
+            $blogTranslation->blogs_id = $request->input('blog_id');
             $blogTranslation->heading = $request->input('title');
             $blogTranslation->text = $request->input('content');
             $blogTranslation->language = $request->input('language');
             $blogTranslation->save();
 
             // redirect with message
-            return redirect('blogs')->with(['message' => 'Blog successfully added']);
+            return redirect('blogs')->with(['message' => 'Successfully added translation to the blog.']);
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERRROR', $e->getMessage());
+
+            // redirect with message
+            return redirect('blogs')->with(['message' => 'Couldnt add translation to the blog.']);
         }
 
-        // else add translation to existing blog
-        $blogTranslation->blogs_id = $request->input('blog_id');
-        $blogTranslation->heading = $request->input('title');
-        $blogTranslation->text = $request->input('content');
-        $blogTranslation->language = $request->input('language');
-        $blogTranslation->save();
-
-        // redirect with message
-        return redirect('blogs')->with(['message' => 'Successfully added translation to the blog.']);
     }
 
     /**
@@ -141,7 +192,18 @@ class BlogsController extends Controller
      */
     public function show($id)
     {
-        return view('pages.blogs.blogs_show');
+        try {
+
+            return view('pages.blogs.blogs_show');
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERRROR', $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+
     }
 
     /**
@@ -152,27 +214,38 @@ class BlogsController extends Controller
      */
     public function edit($id, $lang)
     {
-        // get blog for editing
-        $blog = DB::table('blogs')
-            ->select(
-                'blog_translations.heading',
-                'blog_translations.language',
-                'users.id',
-                'blogs.id',
-                'blog_translations.text',
-                'blog_translations.language'
-            )
-            ->leftJoin('users', 'blogs.users_id', '=', 'users.id')
-            ->leftJoin('blog_translations', 'blogs.id', '=', 'blog_translations.blogs_id')
-            ->where('blogs.id', $id)
-            ->where('blog_translations.language', $lang)
-            ->get();
+        try {
 
-        // return view with neccessary data
-        return view('pages.blogs.blogs_edit', [
-            'blog' => $blog[0],
-            'language' => $lang
-        ]);
+            // get blog for editing
+            $blog = DB::table('blogs')
+                ->select(
+                    'blog_translations.heading',
+                    'blog_translations.language',
+                    'users.id',
+                    'blogs.id',
+                    'blog_translations.text',
+                    'blog_translations.language'
+                )
+                ->leftJoin('users', 'blogs.users_id', '=', 'users.id')
+                ->leftJoin('blog_translations', 'blogs.id', '=', 'blog_translations.blogs_id')
+                ->where('blogs.id', $id)
+                ->where('blog_translations.language', $lang)
+                ->get();
+
+            // return view with neccessary data
+            return view('pages.blogs.blogs_edit', [
+                'blog' => $blog[0],
+                'language' => $lang
+            ]);
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERRROR', $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+
     }
 
     /**
@@ -184,25 +257,35 @@ class BlogsController extends Controller
      */
     public function update(Request $request, $id, $lang)
     {
-        // validate if all neccessary data is set properly
-        $request->validate([
-            'language' => 'in:en,de,bs',
-            'title' => 'required|max:255',
-            'content' => 'required'
-        ]);
+        try {
+            // validate if all neccessary data is set properly
+            $request->validate([
+                'language' => 'in:en,de,bs',
+                'title' => 'required|max:255',
+                'content' => 'required'
+            ]);
 
-        // find blog translation for editing
-        $blogTranslation = BlogTranslation::where('language', $lang)->where('blogs_id', $id)->first();
+            // find blog translation for editing
+            $blogTranslation = BlogTranslation::where('language', $lang)->where('blogs_id', $id)->first();
 
-        // update blog translation
-        $blogTranslation->heading = $request->input('title');
-        $blogTranslation->text = $request->input('content');
+            // update blog translation
+            $blogTranslation->heading = $request->input('title');
+            $blogTranslation->text = $request->input('content');
 
-        // save it
-        $blogTranslation->save();
+            // save it
+            $blogTranslation->save();
 
-        // redirect with message
-        return redirect('blogs')->with('message', 'Blog successfully edited.');
+            // redirect with message
+            return redirect('blogs')->with('message', 'Blog successfully edited.');
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERRROR', $e->getMessage());
+
+            // redirect with message
+            return redirect('blogs')->with('message', 'Blog couldnt be edited.');
+        }
+
     }
 
     /**
@@ -213,16 +296,26 @@ class BlogsController extends Controller
      */
     public function destroy(Request $request, $id)
     {
-        // get blog to delete
-        $blog = Blog::findOrFail($id);
-        // soft delete it
-        $blog->delete();
+        try {
+            // get blog to delete
+            $blog = Blog::findOrFail($id);
+            // soft delete it
+            $blog->delete();
 
-        // get blog translations and delete them
-        $blogTranslations = BlogTranslation::where('blogs_id', $id)->delete();
+            // get blog translations and delete them
+            $blogTranslations = BlogTranslation::where('blogs_id', $id)->delete();
 
-        // return with message
-        $request->session()->flash('message', 'Blog successfully deleted.');
+            // return with message
+            $request->session()->flash('message', 'Blog successfully deleted.');
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERRROR', $e->getMessage());
+
+            // return with message
+            $request->session()->flash('message', 'Blog couldnt be deleted.');
+        }
+
     }
 
     /**
@@ -234,29 +327,40 @@ class BlogsController extends Controller
      */
     public function publish(Request $request, $id, $state) {
 
-        // get blog for publishing/unpublishing
-        $blog = Blog::findOrFail($id);
+        try {
+            // get blog for publishing/unpublishing
+            $blog = Blog::findOrFail($id);
 
-        // check if blog is published for first time, if no send it
-        if($blog->published_already == 0) {
-            // TODO send request to MailChimp to send new blog to the subscribers
-            // TODO DEMO
+            // check if blog is published for first time, if no send it
+            if($blog->published_already == 0) {
+                // TODO send request to MailChimp to send new blog to the subscribers
+                // TODO DEMO
 
-            // TODO english version is sent to all users - fix it
-            $blogTranslation = BlogTranslation::where('language','en')->where('blogs_id', $blog->id)->first();
-            $mailer = new MailerService();
-            $mailer->sendMailsToSubscribers($blogTranslation->heading, $blogTranslation->text);
+                // TODO english version is sent to all users - fix it
+                $blogTranslation = BlogTranslation::where('language','en')->where('blogs_id', $blog->id)->first();
+                $mailer = new MailerService();
+                $mailer->sendMailsToSubscribers($blogTranslation->heading, $blogTranslation->text);
+            }
+
+            // set publish state to 1
+            $blog->published = $state;
+            $blog->published_already = 1;
+            $blog->save();
+
+            // set state messsage to be returned
+            $newState = ($state == 'true') ? 'published' : 'unpublished';
+
+            // set message to session
+            $request->session()->flash('message', 'Blog successfully ' . $newState);
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERRROR', $e->getMessage());
+
+            // return with message
+            $request->session()->flash('message', 'Couldnt change blog published state.');
         }
 
-        // set publish state to 1
-        $blog->published = $state;
-        $blog->published_already = 1;
-        $blog->save();
-
-        // set state messsage to be returned
-        $newState = ($state == 'true') ? 'published' : 'unpublished';
-
-        // set message to session
-        $request->session()->flash('message', 'Blog successfully ' . $newState);
     }
+
 }

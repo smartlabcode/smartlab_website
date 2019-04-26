@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Services\LogService;
 use App\Http\Services\MailerService;
 use App\User;
 use Illuminate\Http\Request;
@@ -9,6 +10,13 @@ use Illuminate\Support\Facades\Hash;
 
 class UsersController extends Controller
 {
+    private $logService;
+
+    public function __construct(LogService $logService)
+    {
+        $this->logService = $logService;
+    }
+
     /**
      * Display a listing of the resource.  --->  /admins
      *
@@ -16,11 +24,21 @@ class UsersController extends Controller
      */
     public function index()
     {
-        // get all undeleted users
-        $admins = User::where('deleted_at', null)->get();
+        try {
+            // get all undeleted users
+            $admins = User::where('deleted_at', null)->get();
 
-        // return view with users
-        return view('pages.admins.admins_list', ['admins' => $admins]);
+            // return view with users
+            return view('pages.admins.admins_list', ['admins' => $admins]);
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+
     }
 
     /**
@@ -30,8 +48,18 @@ class UsersController extends Controller
      */
     public function create()
     {
-        // return view with form for creating admin
-        return view('pages.admins.admins_create');
+        try {
+            // return view with form for creating admin
+            return view('pages.admins.admins_create');
+
+        }catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+
     }
 
     /**
@@ -42,34 +70,44 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        // create user object
-        $admin = new User();
+        try {
+            // create user object
+            $admin = new User();
 
-        // check if neccessary values are entered correctly, if no return error messages
-        $request->validate([
-            'name' => 'required|max:45',
-            'lastname' => 'required|max:45',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:8',
-            'role' => 'in:1,2'
-        ]);
+            // check if neccessary values are entered correctly, if no return error messages
+            $request->validate([
+                'name' => 'required|max:45',
+                'lastname' => 'required|max:45',
+                'email' => 'required|email|unique:users',
+                'password' => 'required|min:8',
+                'role' => 'in:1,2'
+            ]);
 
-        // if data is ok set new values to the model object
-        $admin->name = $request->input('name');
-        $admin->lastname = $request->input('lastname');
-        $admin->email = $request->input('email');
-        $admin->password = Hash::make($request->input('password'));
-        $admin->roles_id = $request->input('role');
+            // if data is ok set new values to the model object
+            $admin->name = $request->input('name');
+            $admin->lastname = $request->input('lastname');
+            $admin->email = $request->input('email');
+            $admin->password = Hash::make($request->input('password'));
+            $admin->roles_id = $request->input('role');
 
-        // save model
-        $admin->save();
+            // save model
+            $admin->save();
 
-        // send email to the new admin TODO check to replace this with MailChimp
-        $mailer = new MailerService();
-        $mailer->sendAdminEmail($request->input('email'), $request->input('password'));
+            // send email to the new admin TODO check to replace this with MailChimp
+            $mailer = new MailerService();
+            $mailer->sendAdminEmail($request->input('email'), $request->input('password'));
 
-        // redirect with message
-        return redirect('admins')->with(['message' => 'Admin successfully added']);
+            // redirect with message
+            return redirect('admins')->with(['message' => 'Admin successfully added']);
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', $e->getMessage());
+
+            // redirect with message
+            return redirect('admins')->with(['message' => 'Admin couldnt be added']);
+        }
+
     }
 
     /**
@@ -80,11 +118,21 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        // get specific user
-        $admin = User::findOrFail($id);
+        try {
+            // get specific user
+            $admin = User::findOrFail($id);
 
-        // return edit admin form view with admin data
-        return view('pages.admins.admins_edit', ['admin' => $admin]);
+            // return edit admin form view with admin data
+            return view('pages.admins.admins_edit', ['admin' => $admin]);
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+
     }
 
     /**
@@ -96,26 +144,36 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // get specific admin
-        $admin = User::findOrFail($id);
+        try {
+            // get specific admin
+            $admin = User::findOrFail($id);
 
-        // check if neccessary values are entered correctly, if no return error messages
-        $request->validate([
-            'name' => 'required|max:45',
-            'lastname' => 'required|max:45',
-            'role' => 'in:1,2'
-        ]);
+            // check if neccessary values are entered correctly, if no return error messages
+            $request->validate([
+                'name' => 'required|max:45',
+                'lastname' => 'required|max:45',
+                'role' => 'in:1,2'
+            ]);
 
-        // if data is ok set new values to the model
-        $admin->name = $request->input('name');
-        $admin->lastname = $request->input('lastname');
-        $admin->roles_id = $request->input('role');
+            // if data is ok set new values to the model
+            $admin->name = $request->input('name');
+            $admin->lastname = $request->input('lastname');
+            $admin->roles_id = $request->input('role');
 
-        // save model
-        $admin->save();
+            // save model
+            $admin->save();
 
-        // redirect with message
-        return redirect('admins')->with(['message' => 'Admin successfully edited']);
+            // redirect with message
+            return redirect('admins')->with(['message' => 'Admin successfully edited']);
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', $e->getMessage());
+
+            // redirect with message
+            return redirect('admins')->with(['message' => 'Admin couldnt be edited']);
+        }
+
     }
 
     /**
@@ -126,12 +184,22 @@ class UsersController extends Controller
      */
     public function destroy(Request $request, $id)
     {
-        // get specific admin
-        $admin = User::findOrFail($id);
-        // soft delete admin
-        $admin->delete();
+        try {
+            // get specific admin
+            $admin = User::findOrFail($id);
+            // soft delete admin
+            $admin->delete();
 
-        // return with message
-        $request->session()->flash('message', 'Admin successfully deleted.');
+            // return with message
+            $request->session()->flash('message', 'Admin successfully deleted.');
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', $e->getMessage());
+
+            // return with message
+            $request->session()->flash('message', 'Admin couldnt be deleted.');
+        }
+
     }
 }
