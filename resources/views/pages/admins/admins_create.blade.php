@@ -1,18 +1,5 @@
 @extends('layouts.app')
 
-<style>
-
-    #addUserSaveButton {
-        float: right;
-    }
-
-    #generatePasswordButton {
-        position: relative;
-        top: 31px;
-    }
-
-</style>
-
 @section('content')
 
     <h1>Admin create</h1>
@@ -57,24 +44,4 @@
 
     </form>
 
-    <script>
-
-        function generatePassword() {
-            event.preventDefault();
-
-            var length = Math.floor(Math.random() * 4) + 8;
-            document.getElementById("password").value = makePassword(length);
-        }
-
-        function makePassword(length) {
-            var text = "";
-            var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-            for (var i = 0; i < length; i++)
-                text += possible.charAt(Math.floor(Math.random() * possible.length));
-
-            return text;
-        }
-
-    </script>
 @endsection

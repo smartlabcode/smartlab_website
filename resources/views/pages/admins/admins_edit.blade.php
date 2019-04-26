@@ -1,11 +1,5 @@
 @extends('layouts.app')
 
-<style>
-    #editUserSaveButton {
-        float: right;
-    }
-</style>
-
 @section('content')
 
     <h1>Admin edit</h1>

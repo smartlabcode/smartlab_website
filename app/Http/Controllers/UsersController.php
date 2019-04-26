@@ -16,8 +16,10 @@ class UsersController extends Controller
      */
     public function index()
     {
+        // get all undeleted users
         $admins = User::where('deleted_at', null)->get();
 
+        // return view with users
         return view('pages.admins.admins_list', ['admins' => $admins]);
     }
 
@@ -28,6 +30,7 @@ class UsersController extends Controller
      */
     public function create()
     {
+        // return view with form for creating admin
         return view('pages.admins.admins_create');
     }
 
@@ -39,8 +42,9 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-
+        // create user object
         $admin = new User();
+
         // check if neccessary values are entered correctly, if no return error messages
         $request->validate([
             'name' => 'required|max:45',
@@ -50,7 +54,7 @@ class UsersController extends Controller
             'role' => 'in:1,2'
         ]);
 
-        // if data is ok set new values to the model
+        // if data is ok set new values to the model object
         $admin->name = $request->input('name');
         $admin->lastname = $request->input('lastname');
         $admin->email = $request->input('email');
@@ -60,7 +64,7 @@ class UsersController extends Controller
         // save model
         $admin->save();
 
-        // send email to the new admin
+        // send email to the new admin TODO check to replace this with MailChimp
         $mailer = new MailerService();
         $mailer->sendAdminEmail($request->input('email'), $request->input('password'));
 
@@ -76,8 +80,10 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
+        // get specific user
         $admin = User::findOrFail($id);
 
+        // return edit admin form view with admin data
         return view('pages.admins.admins_edit', ['admin' => $admin]);
     }
 
@@ -90,6 +96,7 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
+        // get specific admin
         $admin = User::findOrFail($id);
 
         // check if neccessary values are entered correctly, if no return error messages
@@ -119,7 +126,9 @@ class UsersController extends Controller
      */
     public function destroy(Request $request, $id)
     {
+        // get specific admin
         $admin = User::findOrFail($id);
+        // soft delete admin
         $admin->delete();
 
         // return with message

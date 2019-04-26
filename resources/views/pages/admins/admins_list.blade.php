@@ -1,48 +1,10 @@
 @extends('layouts.app')
 
-<style>
-
-    #paperFab {
-        background-color: #3490dc;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        position: fixed;
-        bottom: 25px;
-        right: 25px;
-    }
-
-    #paperFab:hover {
-        box-shadow: 2px 2px 2px rgba(150,150,150, 0.5), -2px 0px 2px rgba(150,150,150, 0.5);
-    }
-
-    #paperFab span {
-        font-size: 30px;
-        position: relative;
-        left: 16px;
-        color: #fff;
-    }
-
-</style>
-
 @section('content')
 
     <h1>Admin list</h1>
 
-    @if(session('message'))
-        <div class="alert alert-success" role="alert">
-            {{session('message')}}
-        </div>
-    @endif
-
-    @if($errors->any())
-        @foreach($errors->all() as $error)
-            <div class="alert alert-danger" role="alert">
-                {{$error}}
-            </div>
-        @endforeach
-    @endif
+    @include('parts.error_success')
 
     <table class="table table-striped table-light">
         <thead>
@@ -85,7 +47,10 @@
         <span>+</span>
     </div>
 
+
     <script>
+
+        /* THIS SCRIPT COULD CAUSE PROBLEMS IF IT IS IN app.js FILE*/
 
         var id = 0;
         function updateId(idNum) {

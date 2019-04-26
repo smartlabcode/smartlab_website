@@ -17,7 +17,6 @@ class CheckClientLanguage
      */
     public function handle($request, Closure $next)
     {
-
         // first check if language is set in session (in case if user set preferable language manually)
         $lang = session()->get('language');
 
@@ -36,7 +35,7 @@ class CheckClientLanguage
             }
         }
 
-        // set language
+        // set language to the App object
         App::setlocale($lang);
 
         return $next($request);
