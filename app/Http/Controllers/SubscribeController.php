@@ -12,11 +12,13 @@ class SubscribeController extends Controller
     public function saveSubscriber(Request $request, MailerService $mailer) {
 
         $request->validate([
-            'email' => 'required|max:45|unique:subscribers'
+            'email' => 'required|max:45|unique:subscribers',
+            'language' => 'in:en,de,bs'
         ]);
 
         $subscriber = new Subscriber();
         $subscriber->email = $request->input('email');
+        $subscriber->language = $request->input('language');
 
         $subscriber->save();
 

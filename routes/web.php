@@ -11,60 +11,56 @@
 |
 */
 
+// for all of the routes in the following group user needs to be authenticated to see them
 Route::middleware(['auth'])->group(function() {
-    // blog controllers
+
+    // route for displaying page after admin logs in
+    Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
+    // routes regarding the blog actions
     Route::resource('blogs', 'BlogsController')->except([
         'update',
         'edit'
     ]);
-
     Route::get('/blogs/{id}/add/{lang}', 'BlogsController@add')->name('add_extra_language_blog');
     Route::get('/blogs/{id}/edit/{lang}', 'BlogsController@edit')->name('edit_language_blog');
-
-
     Route::put('/blogs/{id}/{lang}', 'BlogsController@update');
-
     Route::put('/publish/{id}/{state}', 'BlogsController@publish');
 
 
-    // get subscribers TODO this route can only be seen by super admin
+    // following routes are only accessible by the superadmin/s
     Route::get('subscribers', 'SubscribeController@listSubscribers')->middleware(['is_superadmin']);
-
-    // admin controllers
     Route::resource('admins', 'UsersController')->except([
         'show',
         'store'
-    ]);
-
-    Route::post('admins/add', 'UsersController@store')->name('admins.store');  // TODO check to set it resource route
+    ])->middleware(['is_superadmin']);
+    Route::post('admins/add', 'UsersController@store')->middleware(['is_superadmin'])->name('admins.store');
 });
 
 
-// logout
+// logout route
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');  // https://stackoverflow.com/questions/43585416/how-to-logout-and-redirect-to-login-page-using-laravel-5-4
 
-// pages
+// pages routes
 Route::get('/', 'PagesController@index');
 Route::get('pages/courses', 'PagesController@showCoursesPage');
 Route::get('pages/animations', 'PagesController@showAnimationsPage');
 Route::get('pages/programming', 'PagesController@showProgrammingPage');
 Route::get('pages/moodle', 'PagesController@showMoodlePage');
 
-// send contact form
+// route where contact info is sent
 Route::post('contact', 'ContactController@handleContactInfo');
 
-// switch language
+// route for switching language
 Route::put('language', 'LanguagesController@switchLanguage');
 
-// subscribe to newsletter
+// route for subscribing to newsletters
 Route::post('subscribe', 'SubscribeController@saveSubscriber');
 
-
-
-// email verification
+// route for email verification
 Route::get('email_verification/{mail}', 'SubscribeController@verifySubscriber');
 
-Auth::routes(); // TODO ['register' => false]
-
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-
+// authorization routes - register option is disabled
+Auth::routes([
+    'register' => false
+]);

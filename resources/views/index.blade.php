@@ -50,6 +50,7 @@
         @csrf
 
         Email: <input name="email" type="email"/>
+        <input name="language" type="hidden" value="{{App::getlocale()}}"/>
         <button>Subscribe</button>
 
     </form>
