@@ -66,6 +66,10 @@ function submitEditForm() {
     form.submit();
 }
 
+/* Menu */
+function changeSiteLanguage(value) {
+    document.getElementById("languageForm").submit();
+}
 
 
 

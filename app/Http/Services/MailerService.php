@@ -15,17 +15,19 @@ use PHPMailer\PHPMailer\Exception;
 class MailerService
 {
 
-    public function sendMailsToSubscribers($heading, $text) {
+    // TODO check which functions will be used and refactor them (only one function may be enough)
 
-        $subscribers = Subscriber::all();
-
-        foreach ($subscribers as $subscriber) {
-
-            if ($subscriber->verified == 1) {
-                $this->sendNewsletterEmail($subscriber->email, $heading, $text);
-            }
-        }
-    }
+//    public function sendMailsToSubscribers($heading, $text) {
+//
+//        $subscribers = Subscriber::all();
+//
+//        foreach ($subscribers as $subscriber) {
+//
+//            if ($subscriber->verified == 1) {
+//                $this->sendNewsletterEmail($subscriber->email, $heading, $text);
+//            }
+//        }
+//    }
 
     public function sendNewsletterEmail($toEmail, $heading, $text) {
         // TODO send email

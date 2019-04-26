@@ -13,17 +13,30 @@ use GuzzleHttp\Client;
 class MailchimpService
 {
 
+    private $headers;
+    private $logService;
+
+    public function __construct(LogService $logService)
+    {
+        $this->headers = ['Authorization' => env('MAILCHIMP_API_KEY')];
+        $this->logService = $logService;
+    }
+
+    /**
+     * Add subscriber to MailChimp
+     *
+     * @param $email
+     */
     public function addSubscriber($email) {
-
-        $headers = ['Authorization' => env('MAILCHIMP_API_KEY')];
-
-        $client = new Client([
-            'headers' => $headers
-        ]);
-
 
         try {
 
+            // create client
+            $client = new Client([
+                'headers' => $this->headers
+            ]);
+
+            // send request for adding subscriber
             $client->post(env('MAILCHIMP_API_ROUTE'),
                 [
                     \GuzzleHttp\RequestOptions::JSON => [
@@ -37,36 +50,45 @@ class MailchimpService
                 ]);
 
         } catch (\Exception $e) {
-            die($e->getMessage());
+            // add log
+            $this->logService->setLog('ERRROR', $e->getMessage());
         }
-
-
+        
     }
 
-
+    /**
+     * Get list of subscribers from MailChimp
+     *
+     * @return array|\Psr\Http\Message\ResponseInterface
+     */
     public function listSubscribers() {
-
-        $headers = ['Authorization' => env('MAILCHIMP_API_KEY')];
-
-        $client = new Client([
-            'headers' => $headers
-        ]);
-
 
         try {
 
+            // create client object
+            $client = new Client([
+                'headers' => $this->headers
+            ]);
+
+            // get subscribers
             $subscribers = $client->get(env('MAILCHIMP_API_ROUTE'));
             $data = json_decode($subscribers->getBody()->getContents());
 
+            $subscribers = [];
+
+            // loop through returned data and extract only subscriber emails
+            foreach ($data->members as $subscriber) {
+                array_push($subscribers, $subscriber->email_address);
+            }
+
+            // return data
+            return $subscribers;
+
         } catch (\Exception $e) {
-            die($e->getMessage());
+            // add log
+            $this->logService->setLog('ERRROR', $e->getMessage());
         }
 
-        $subscribers = [];
-        foreach ($data->members as $subscriber) {
-            array_push($subscribers, $subscriber->email_address);
-        }
-
-        return $subscribers;
+        return [];
     }
 }

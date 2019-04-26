@@ -2,45 +2,112 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Services\LogService;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
 
+    private $logService;
+
+    public function __construct(LogService $logService)
+    {
+        $this->logService = $logService;
+    }
+
     /**
      * Display index page
      */
     public function index() {
-        //\Illuminate\Support\Facades\App::setlocale('de');
-        return view('index');
+
+        try {
+
+            return view('index');
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERRROR', $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+
     }
 
     /**
      * Display courses page
      */
     public function showCoursesPage() {
-        return view('pages.courses');
+
+        try {
+
+            return view('pages.courses');
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERRROR', $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+
     }
 
     /**
      * Display animations page
      */
     public function showAnimationsPage() {
-        return view('pages.animations');
+
+        try {
+
+            return view('pages.animations');
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERRROR', $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+
     }
 
     /**
      * Display programming page
      */
     public function showProgrammingPage() {
-        return view('pages.programming');
+
+        try {
+
+            return view('pages.programming');
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERRROR', $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+
     }
 
     /**
      * Display moodle page
      */
     public function showMoodlePage() {
-        return view('pages.moodle');
+
+        try {
+
+            return view('pages.moodle');
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERRROR', $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+
     }
 
 }

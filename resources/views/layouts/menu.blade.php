@@ -1,23 +1,4 @@
 
-<style>
-
-    .nav-item{
-      display: inline-block;
-        margin-right: 15px;
-        cursor: pointer;
-    }
-
-</style>
-
-<script>
-
-    function changeSiteLanguage(value) {
-        console.log(value);
-        document.getElementById("languageForm").submit();
-    }
-
-</script>
-
 @section('menu')
 
     <li class="nav-item">@lang('menu.first_item')</li>
@@ -27,8 +8,11 @@
         <a href="{{ env("BLOG_DOMAIN")  }}/@if(App::getlocale()){{App::getlocale()}}@else en @endif" target="_blank">@lang('menu.fourth_item')</a>
     </li>
     <li class="nav-item">@lang('menu.fifth_item')</li>
+
+    <!-- This menu items are available only to logged in users -->
     @auth
 
+        <!-- This menu item is available to super admins only -->
         @if(\Illuminate\Support\Facades\Auth::user()->roles_id == 1)
             <li class="nav-item">
                 <a href="{{route('admins.index')}}">@lang('menu.sixth_item')</a>
@@ -39,7 +23,7 @@
             <a href="{{route('blogs.index')}}">@lang('menu.seventh_item')</a>
         </li>
 
-
+        <!-- This menu item is available to super admins only -->
         @if(\Illuminate\Support\Facades\Auth::user()->roles_id == 1)
             <li class="nav-item">
                 <a href="/subscribers">@lang('menu.eight_item')</a>

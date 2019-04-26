@@ -337,9 +337,9 @@ class BlogsController extends Controller
                 // TODO DEMO
 
                 // TODO english version is sent to all users - fix it
-                $blogTranslation = BlogTranslation::where('language','en')->where('blogs_id', $blog->id)->first();
-                $mailer = new MailerService();
-                $mailer->sendMailsToSubscribers($blogTranslation->heading, $blogTranslation->text);
+//                $blogTranslation = BlogTranslation::where('language','en')->where('blogs_id', $blog->id)->first();
+//                $mailer = new MailerService();
+//                $mailer->sendMailsToSubscribers($blogTranslation->heading, $blogTranslation->text);
             }
 
             // set publish state to 1
