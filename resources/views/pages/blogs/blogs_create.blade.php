@@ -36,6 +36,12 @@
         <button id="addBlogSaveButton" onclick="submitAddForm()" class="btn btn-primary">Save</button>
     </form>
 
+    @if(isset($id))
+        <div id="loaderContainer">
+            <div class="loader"></div>
+        </div>
+    @endif
+
     <!-- Scripts for Summernote -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js" defer></script>
     <script>
@@ -56,6 +62,9 @@
 
             let text = document.getElementById("contentText");
             container.innerHTML = text.value;
+
+            var loader = document.getElementById("loaderContainer");
+            loader.parentNode.removeChild(loader);
 
         }, 2000);
 

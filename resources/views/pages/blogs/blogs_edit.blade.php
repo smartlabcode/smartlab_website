@@ -28,7 +28,7 @@
 
         <!-- WYSIWYG editor -->
         <div class="form-group">
-            <div id="content" onload="set()"></div>
+            <div id="content"></div>
         </div>
 
         <input id="contentText" name="content" type="hidden" value="{{$blog->text}}"/>
@@ -36,6 +36,11 @@
         <input id="idValue" type="hidden" value="{{$blog->id}}">
         <button id="editBlogSaveButton" onclick="submitEditForm()" class="btn btn-primary">Edit</button>
     </form>
+
+    <!-- loader -->
+    <div id="loaderContainer">
+        <div class="loader"></div>
+    </div>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js" defer></script>
     <script>
@@ -75,6 +80,9 @@
 
             let text = document.getElementById("contentText");
             container.innerHTML = text.value;
+
+            var loader = document.getElementById("loaderContainer");
+            loader.parentNode.removeChild(loader);
 
         }, 2000);
 

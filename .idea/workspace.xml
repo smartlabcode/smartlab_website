@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54eccf3b-5991-4a5b-afd1-7c57d47320c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/parts/modal_publish.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/admins/admins_list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/admins/admins_list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/blogs/blogs_create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/blogs/blogs_create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/blogs/blogs_list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/blogs/blogs_list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/parts/modal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/parts/modal.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/blogs/blogs_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/blogs/blogs_edit.blade.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/beyondcode/laravel-dump-server/" />
     <ignored path="$PROJECT_DIR$/vendor/composer/" />
@@ -99,8 +96,8 @@
     <session id="168846752">
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Blade" value="146" />
-          <entry key="CSS" value="2" />
+          <entry key="Blade" value="148" />
+          <entry key="CSS" value="3" />
           <entry key="JavaScript" value="1" />
           <entry key="PHP" value="195" />
           <entry key="PLAIN_TEXT" value="13" />
@@ -108,8 +105,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="9924" />
-          <entry key="CSS" value="147" />
+          <entry key="Blade" value="10196" />
+          <entry key="CSS" value="184" />
           <entry key="HTML" value="11" />
           <entry key="JavaScript" value="97" />
           <entry key="PHP" value="15212" />
@@ -145,6 +142,33 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/blogs/blogs_edit.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/app.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="101" column="34" selection-start-line="101" selection-start-column="34" selection-end-line="101" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/blogs/blogs_create.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-370">
+              <caret line="8" column="99" selection-start-line="8" selection-start-column="99" selection-end-line="8" selection-end-column="99" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/parts/modal_publish.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
@@ -153,11 +177,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/blogs/blogs_list.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-9">
-              <caret line="50" column="173" selection-start-line="50" selection-start-column="173" selection-end-line="50" selection-end-column="173" />
+            <state relative-caret-position="-1195">
+              <caret line="50" column="157" selection-start-line="50" selection-start-column="157" selection-end-line="50" selection-end-column="157" />
             </state>
           </provider>
         </entry>
@@ -228,14 +252,14 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
         <option value="$PROJECT_DIR$/resources/views/parts/blog_language_selector.blade.php" />
         <option value="$PROJECT_DIR$/public/js/app.js" />
-        <option value="$PROJECT_DIR$/resources/views/pages/blogs/blogs_edit.blade.php" />
-        <option value="$PROJECT_DIR$/public/css/app.css" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/BlogsController.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/blogs/blogs_create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/admins/admins_list.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/parts/modal_publish.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/parts/modal.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/blogs/blogs_list.blade.php" />
+        <option value="$PROJECT_DIR$/public/css/app.css" />
+        <option value="$PROJECT_DIR$/resources/views/pages/blogs/blogs_edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/blogs/blogs_create.blade.php" />
       </list>
     </option>
   </component>
@@ -416,14 +440,6 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="admins" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smartlab_website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartlab_website" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="blogs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -490,12 +506,12 @@
       <workItem from="1555947403335" duration="46756000" />
       <workItem from="1556126034233" duration="5803000" />
       <workItem from="1556174449313" duration="18959000" />
-      <workItem from="1556213846542" duration="15223000" />
+      <workItem from="1556213846542" duration="16581000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104685000" />
+    <option name="totallyTimeSpent" value="106043000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -845,13 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="101" selection-start-line="101" selection-end-line="101" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/blogs/blogs_show.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -869,20 +878,6 @@
           <folding>
             <element signature="e#40#53#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/blogs/blogs_edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="78" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/blogs/blogs_create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -909,8 +904,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/blogs/blogs_list.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="50" column="173" selection-start-line="50" selection-start-column="173" selection-end-line="50" selection-end-column="173" />
+        <state relative-caret-position="-1195">
+          <caret line="50" column="157" selection-start-line="50" selection-start-column="157" selection-end-line="50" selection-end-column="157" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="101" column="34" selection-start-line="101" selection-start-column="34" selection-end-line="101" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/blogs/blogs_edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/blogs/blogs_create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-370">
+          <caret line="8" column="99" selection-start-line="8" selection-start-column="99" selection-end-line="8" selection-end-column="99" />
         </state>
       </provider>
     </entry>
