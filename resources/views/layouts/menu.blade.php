@@ -24,7 +24,7 @@
     <li class="nav-item">@lang('menu.second_item')</li>
     <li class="nav-item">@lang('menu.third_item')</li>
     <li class="nav-item">
-        <a href="https://blog.smartlab.ba" target="_blank">@lang('menu.fourth_item')</a>
+        <a href="{{ env("BLOG_DOMAIN")  }}/@if(App::getlocale()){{App::getlocale()}}@else en @endif" target="_blank">@lang('menu.fourth_item')</a>
     </li>
     <li class="nav-item">@lang('menu.fifth_item')</li>
     @auth
