@@ -1,76 +1,15 @@
 @extends('layouts.app')
 
-<style>
-
-    #paperFab {
-        background-color: #3490dc;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        position: fixed;
-        bottom: 25px;
-        right: 25px;
-    }
-
-    #paperFab:hover {
-        box-shadow: 2px 2px 2px rgba(150,150,150, 0.5), -2px 0px 2px rgba(150,150,150, 0.5);
-    }
-
-    #paperFab span {
-        font-size: 30px;
-        position: relative;
-        left: 16px;
-        color: #fff;
-    }
-
-    .flagIcons {
-        width: 24px;
-        height: 24px;
-        cursor: pointer;
-        display: inline-block;
-        border-radius: 50%;
-        border: 2px solid rgba(66, 134, 244, 0.6);
-        margin-right: 5px;
-    }
-
-    .flagIconsOpaque {
-        width: 24px;
-        height: 24px;
-        cursor: pointer;
-        display: inline-block;
-        margin-right: 5px;
-        opacity: 0.3;
-    }
-
-    /*.flagIcons:last-child {*/
-        /*width: 20px;*/
-        /*height: 20px;*/
-    /*}*/
-
-</style>
-
 @section('content')
 
     <h1>Blogs list</h1>
 
-    @if(session('message'))
-        <div class="alert alert-success" role="alert">
-            {{session('message')}}
-        </div>
-    @endif
-
-    @if($errors->any())
-        @foreach($errors->all() as $error)
-            <div class="alert alert-danger" role="alert">
-                {{$error}}
-            </div>
-        @endforeach
-    @endif
+    @include('parts.error_success')
 
     @include('parts.modal', ['title' => 'blog'])
 
     <table class="table table-striped table-light">
+
         <thead>
         <tr>
             <th scope="col">#</th>
@@ -79,87 +18,95 @@
             <th scope="col">Created at</th>
             <th scope="col">Published/Unpublished</th>
             <th scope="col">Languages</th>
-            {{--<th scope="col">Edit</th>--}}
             <th scope="col">Delete</th>
         </tr>
         </thead>
+
         <tbody>
 
-        @foreach($blogs as $key => $blog)
+            <!-- Loop through all blogs and get neccessary data -->
+            @foreach($blogs as $key => $blog)
 
-            <tr>
-                <th scope="row">{{++$key}}</th>
-                <td>{{$blog->heading}}</td>
-                <td>{{$blog->name}} {{$blog->lastname}}</td>
-                <td>{{$blog->created_at}}</td>
-                <td class="publish">
-                    @if($blog->published == 'false')
-                        <button type="button" class="btn btn-dark btn-sm" onclick="changePublishState(true, {{$blog->id}})">Unpublished</button>
-                    @else
-                        <button type="button" class="btn btn-success btn-sm" onclick="changePublishState(false, {{$blog->id}})">Published</button>
-                    @endif
-                </td>
+                <tr>
+                    <th scope="row">{{++$key}}</th>
+                    <td>{{$blog->heading}}</td>
+                    <td>{{$blog->name}} {{$blog->lastname}}</td>
+                    <td>{{$blog->created_at}}</td>
 
-                <td>
-                    @foreach(['en','de','bs'] as $lang)
+                    <!-- Check published state and set appropriate button -->
+                    <td class="publish">
+                        @if($blog->published == 'false')
+                            <button type="button" class="btn btn-dark btn-sm" onclick="changePublishState(true, {{$blog->id}})">Unpublished</button>
+                        @else
+                            <button type="button" class="btn btn-success btn-sm" onclick="changePublishState(false, {{$blog->id}})">Published</button>
+                        @endif
+                    </td>
 
-                        @php
-                            $temp = explode(',', $blog->language);
-                        @endphp
+                    <!-- Loop through languages of given blog and set appropriate country flags-->
+                    <td>
+                        @foreach(['en','de','bs'] as $lang)
 
-                         @if($lang == 'en' && in_array($lang, $temp))
+                            <!-- Set blog languages to a temporary variable to be used in below if clausules -->
+                            @php
+                                $temp = explode(',', $blog->language);
+                            @endphp
 
-                             <a href="/blogs/{{$blog->id}}/edit/{{$lang}}">
-                                 <img class="flagIcons" src="{{ asset('images/icons/001-united-kingdom.svg') }}">
-                             </a>
-                         @elseif($lang == 'en' && !in_array($lang, $temp))
-                            <a href="/blogs/{{$blog->id}}/add/{{$lang}}">
-                                <img class="flagIconsOpaque" src="{{ asset('images/icons/001-united-kingdom.svg') }}">
-                            </a>
-                         @elseif($lang == 'de' && in_array($lang, $temp))
-                            <a href="/blogs/{{$blog->id}}/edit/{{$lang}}">
-                                <img class="flagIcons" src="{{ asset('images/icons/002-germany.svg') }}">
-                            </a>
-                         @elseif($lang == 'de' && !in_array($lang, $temp))
-                            <a href="/blogs/{{$blog->id}}/add/{{$lang}}">
-                                <img class="flagIconsOpaque" src="{{ asset('images/icons/002-germany.svg') }}">
-                            </a>
-                         @elseif($lang == 'bs' && in_array($lang, $temp))
-                            <a href="/blogs/{{$blog->id}}/edit/{{$lang}}">
-                                <img class="flagIcons" src="{{ asset('images/icons/003-bosnia-and-herzegovina.svg') }}">
-                            </a>
-                         @elseif($lang == 'bs' && !in_array($lang, $temp))
-                            <a href="/blogs/{{$blog->id}}/add/{{$lang}}">
-                                <img class="flagIconsOpaque" src="{{ asset('images/icons/003-bosnia-and-herzegovina.svg') }}">
-                            </a>
-                         @endif
+                             @if($lang == 'en' && in_array($lang, $temp))
+                                 <a href="/blogs/{{$blog->id}}/edit/{{$lang}}">
+                                     <img class="flagIcons" src="{{ asset('images/icons/001-united-kingdom.svg') }}">
+                                 </a>
+                             @elseif($lang == 'en' && !in_array($lang, $temp))
+                                <a href="/blogs/{{$blog->id}}/add/{{$lang}}">
+                                    <img class="flagIconsOpaque" src="{{ asset('images/icons/001-united-kingdom.svg') }}">
+                                </a>
+                             @elseif($lang == 'de' && in_array($lang, $temp))
+                                <a href="/blogs/{{$blog->id}}/edit/{{$lang}}">
+                                    <img class="flagIcons" src="{{ asset('images/icons/002-germany.svg') }}">
+                                </a>
+                             @elseif($lang == 'de' && !in_array($lang, $temp))
+                                <a href="/blogs/{{$blog->id}}/add/{{$lang}}">
+                                    <img class="flagIconsOpaque" src="{{ asset('images/icons/002-germany.svg') }}">
+                                </a>
+                             @elseif($lang == 'bs' && in_array($lang, $temp))
+                                <a href="/blogs/{{$blog->id}}/edit/{{$lang}}">
+                                    <img class="flagIcons" src="{{ asset('images/icons/003-bosnia-and-herzegovina.svg') }}">
+                                </a>
+                             @elseif($lang == 'bs' && !in_array($lang, $temp))
+                                <a href="/blogs/{{$blog->id}}/add/{{$lang}}">
+                                    <img class="flagIconsOpaque" src="{{ asset('images/icons/003-bosnia-and-herzegovina.svg') }}">
+                                </a>
+                             @endif
 
-                    @endforeach
-                </td>
+                        @endforeach
+                    </td>
 
-                {{--<td><a href="/blogs/{{$blog->id}}/edit" class="btn btn-primary btn-sm">Edit</a></td>--}}
-                <td><button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" onclick="updateId({{$blog->id}})">Delete</button></td>
-                {{--onclick="deleteBlog({{$blog->id}})"--}}
-            </tr>
+                    <!-- Delete button -->
+                    <td><button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" onclick="updateId({{$blog->id}})">Delete</button></td>
 
-        @endforeach
+                </tr>
+
+            @endforeach
 
         </tbody>
     </table>
 
-    <div id="paperFab" onclick="redirectToCreatePage()">
+    <!-- Add new blog element -->
+    <div id="paperFabBlogList" onclick="redirectToCreatePage()">
         <span>+</span>
     </div>
 
     <script>
 
+        /* THIS SCRIPT COULD CAUSE PROBLEMS IF IT IS IN app.js FILE*/
+
+        // track id of selected blog
         var id = 0;
         function updateId(idNum) {
             id = idNum;
         }
 
+        // send ajax request for publishing/unpublishing blog
         function changePublishState(value, id) {
-
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -176,13 +123,14 @@
             });
         }
 
+        // after ajax returns success redirect to blogs list page
         function redirectToCreatePage() {
             var url = "/blogs/create";
             location.href = url;
         }
 
+        // send ajax request for deleting blog
         function deleteAction() {
-
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')

@@ -1,3 +1,4 @@
+@extends('layouts.app')
 
 <!-- include libraries(jQuery, bootstrap) -->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
@@ -6,17 +7,6 @@
 <!-- include summernote css/js -->
 <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.css" rel="stylesheet">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.js" defer></script>
-
-@extends('layouts.app')
-
-
-<style>
-
-    #editBlogSaveButton {
-        float: right;
-    }
-
-</style>
 
 @section('content')
 
@@ -29,14 +19,7 @@
         @csrf
         @method('PUT')
 
-        <div class="form-group">
-            <label for="language">Blog language</label>
-            <select class="form-control" name="language" id="language" disabled>
-                <option value="en" @if($blog->language == 'en') selected @endif>English</option>
-                <option value="de" @if($blog->language == 'de') selected @endif>German</option>
-                <option value="bs" @if($blog->language == 'bs') selected @endif>Bosnian</option>
-            </select>
-        </div>
+        @include('parts.blog_language_selector')
 
         <div class="form-group">
             <label for="title">Blog title</label>
@@ -54,35 +37,10 @@
         <button id="editBlogSaveButton" onclick="submitEditForm()" class="btn btn-primary">Edit</button>
     </form>
 
-    <script>
-
-        function submitEditForm() {
-            event.preventDefault();
-            // get language
-            let lang = document.getElementById("language").value;
-
-            // get id
-            let id = document.getElementById("idValue").value;
-
-            // change action route
-            let form = document.getElementById("editBlogForm");
-
-            // set content
-            let content = form.getElementsByClassName('note-editable')[0];
-            let text = content.innerHTML;
-            console.log(text);
-            document.getElementById("contentText").value = text;
-
-            form.action = "/blogs/" + id + "/" + lang;
-
-            form.submit();
-        }
-
-    </script>
-
     <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js" defer></script>
     <script>
 
+        // initilize Summernote
         $(document).ready(function() {
             $('#content').summernote({
                 placeholder: '',
@@ -110,11 +68,9 @@
 
         });
 
+        // wait for Summernote to be created and then set blog text value in it
         setTimeout(function() {
-            console.log("on load...");
 
-           // let content = document.getElementById("content");
-           // console.log(content);
             let container = document.getElementsByClassName('note-editable')[0];
 
             let text = document.getElementById("contentText");

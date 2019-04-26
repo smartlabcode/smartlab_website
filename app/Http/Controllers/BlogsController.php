@@ -18,21 +18,7 @@ class BlogsController extends Controller
      */
     public function index()
     {
-
-//        $blogs = DB::table('blogs')
-//            ->select(
-//            'blog_translations.heading',
-//                    'blog_translations.language',
-//                    'users.name',
-//                    'users.lastname',
-//                    'blogs.created_at',
-//                    'blogs.id',
-//                    'blogs.published'
-//            )
-//            ->leftJoin('users', 'blogs.users_id', '=', 'users.id')
-//            ->leftJoin('blog_translations', 'blogs.id', '=', 'blog_translations.blogs_id')
-//            ->get();
-
+        // get blogs
         $blogs = DB::select(
             'SELECT 
                       bt.heading, 
@@ -49,7 +35,7 @@ class BlogsController extends Controller
                     WHERE b.deleted_at IS NULL
                     GROUP BY b.id');
 
-        // die(print_r($blogs));
+        // return blogs list page with its data
         return view('pages.blogs.blogs_list', ['blogs' => $blogs]);
     }
 
@@ -60,12 +46,20 @@ class BlogsController extends Controller
      */
     public function create()
     {
+        // return create blog form page
         return view('pages.blogs.blogs_create');
     }
 
+    /**
+     * Add new blog translation view
+     *
+     * @param $id
+     * @param $lang
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function add($id, $lang)
     {
-
+        // get already added blog so it can be used as placeholder for the translation
         $blog = DB::table('blogs')
             ->select(
                 'blog_translations.heading',
@@ -81,7 +75,7 @@ class BlogsController extends Controller
             ->take(1)
             ->get();
 
-       // die(print_r($blog[0]));
+        // return page with neccessary data
         return view('pages.blogs.blogs_create', [
             'id' => $id,
             'language' => $lang,
@@ -97,6 +91,7 @@ class BlogsController extends Controller
      */
     public function store(Request $request)
     {
+        // create blog and blogTranslation objects
         $blog = new Blog();
         $blogTranslation = new BlogTranslation();
 
@@ -108,6 +103,7 @@ class BlogsController extends Controller
             'existing' => 'in:true,false'
         ]);
 
+        // check if already exist one translation for the blog, if no create new blog in the database
         if ($request->input('existing') == 'false') {
 
             // if data is ok set new values to the model
@@ -126,6 +122,7 @@ class BlogsController extends Controller
             return redirect('blogs')->with(['message' => 'Blog successfully added']);
         }
 
+        // else add translation to existing blog
         $blogTranslation->blogs_id = $request->input('blog_id');
         $blogTranslation->heading = $request->input('title');
         $blogTranslation->text = $request->input('content');
@@ -133,7 +130,7 @@ class BlogsController extends Controller
         $blogTranslation->save();
 
         // redirect with message
-        return redirect('blogs')->with(['message' => 'Successfully added translation to a blog.']);
+        return redirect('blogs')->with(['message' => 'Successfully added translation to the blog.']);
     }
 
     /**
@@ -155,6 +152,7 @@ class BlogsController extends Controller
      */
     public function edit($id, $lang)
     {
+        // get blog for editing
         $blog = DB::table('blogs')
             ->select(
                 'blog_translations.heading',
@@ -170,7 +168,11 @@ class BlogsController extends Controller
             ->where('blog_translations.language', $lang)
             ->get();
 
-        return view('pages.blogs.blogs_edit', ['blog' => $blog[0]]);
+        // return view with neccessary data
+        return view('pages.blogs.blogs_edit', [
+            'blog' => $blog[0],
+            'language' => $lang
+        ]);
     }
 
     /**
@@ -182,19 +184,21 @@ class BlogsController extends Controller
      */
     public function update(Request $request, $id, $lang)
     {
-
+        // validate if all neccessary data is set properly
         $request->validate([
             'language' => 'in:en,de,bs',
             'title' => 'required|max:255',
             'content' => 'required'
         ]);
 
-
+        // find blog translation for editing
         $blogTranslation = BlogTranslation::where('language', $lang)->where('blogs_id', $id)->first();
 
+        // update blog translation
         $blogTranslation->heading = $request->input('title');
         $blogTranslation->text = $request->input('content');
 
+        // save it
         $blogTranslation->save();
 
         // redirect with message
@@ -209,38 +213,50 @@ class BlogsController extends Controller
      */
     public function destroy(Request $request, $id)
     {
+        // get blog to delete
         $blog = Blog::findOrFail($id);
+        // soft delete it
         $blog->delete();
 
+        // get blog translations and delete them
         $blogTranslations = BlogTranslation::where('blogs_id', $id)->delete();
 
         // return with message
         $request->session()->flash('message', 'Blog successfully deleted.');
     }
 
-
+    /**
+     * Publish/unpublish blog with its translations
+     *
+     * @param Request $request
+     * @param $id
+     * @param $state
+     */
     public function publish(Request $request, $id, $state) {
 
+        // get blog for publishing/unpublishing
         $blog = Blog::findOrFail($id);
 
-        $blogTranslation = BlogTranslation::where('language','en')->where('blogs_id', $blog->id)->first();
-
-       // die(print_r($blogTranslation));
-        // check if blog is published for first time
+        // check if blog is published for first time, if no send it
         if($blog->published_already == 0) {
             // TODO send request to MailChimp to send new blog to the subscribers
             // TODO DEMO
+
+            // TODO english version is sent to all users - fix it
+            $blogTranslation = BlogTranslation::where('language','en')->where('blogs_id', $blog->id)->first();
             $mailer = new MailerService();
             $mailer->sendMailsToSubscribers($blogTranslation->heading, $blogTranslation->text);
         }
 
+        // set publish state to 1
         $blog->published = $state;
         $blog->published_already = 1;
         $blog->save();
 
-
+        // set state messsage to be returned
         $newState = ($state == 'true') ? 'published' : 'unpublished';
 
+        // set message to session
         $request->session()->flash('message', 'Blog successfully ' . $newState);
     }
 }

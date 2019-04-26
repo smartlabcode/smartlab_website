@@ -52,18 +52,20 @@
 
         /* THIS SCRIPT COULD CAUSE PROBLEMS IF IT IS IN app.js FILE*/
 
+        // track id of selected admin
         var id = 0;
         function updateId(idNum) {
             id = idNum;
         }
 
+        // after ajax returns success redirect to admins list page
         function redirectTocreatePage() {
             var url = "/admins/create";
             location.href = url;
         }
 
+        // send ajax request for deleting admin
         function deleteAction() {
-
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')

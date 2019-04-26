@@ -21,7 +21,48 @@ function makePassword(length) {
     return text;
 }
 
-/* Edit admin */
+/* Create blog */
+function submitAddForm() {
+    event.preventDefault();
+
+    console.log(document.getElementById("language").value);
+    // change action route
+    let form = document.getElementById("addBlogForm");
+
+    // set content
+    let content = form.getElementsByClassName('note-editable')[0];
+    let text = content.innerHTML;
+    console.log(text);
+    document.getElementById("contentText").value = text;
+
+    form.action = "/blogs";
+
+    form.submit();
+}
+
+/* Edit blog */
+function submitEditForm() {
+    event.preventDefault();
+    // get language
+    let lang = document.getElementById("language").value;
+
+    // get id
+    let id = document.getElementById("idValue").value;
+
+    // change action route
+    let form = document.getElementById("editBlogForm");
+
+    // set content
+    let content = form.getElementsByClassName('note-editable')[0];
+    let text = content.innerHTML;
+    console.log(text);
+    document.getElementById("contentText").value = text;
+
+    form.action = "/blogs/" + id + "/" + lang;
+
+    form.submit();
+}
+
 
 
 
