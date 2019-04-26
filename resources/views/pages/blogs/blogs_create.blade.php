@@ -16,7 +16,19 @@
 
         @csrf
 
-        @include('parts.blog_language_selector')
+        @php
+            if(isset($id))
+            {
+                $type= 'add-edit';
+            }  else
+            {
+                $type = 'add';
+            }
+        @endphp
+
+        @include('parts.blog_language_selector',[
+            'type' => $type
+        ])
 
         <div class="form-group">
             <label for="title">Blog title</label>

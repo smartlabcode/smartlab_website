@@ -12,14 +12,14 @@
 
     <h1>Blog edit</h1>
 
-    @include('parts.spinner')
-
     <form id="editBlogForm" method="POST">
 
         @csrf
         @method('PUT')
 
-        @include('parts.blog_language_selector')
+        @include('parts.blog_language_selector', [
+            'type' => 'edit'
+        ])
 
         <div class="form-group">
             <label for="title">Blog title</label>

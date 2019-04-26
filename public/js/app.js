@@ -37,6 +37,9 @@ function submitAddForm() {
 
     form.action = "/blogs";
 
+    // enable form before sending post request
+    document.getElementById("language").disabled = false;
+
     form.submit();
 }
 
