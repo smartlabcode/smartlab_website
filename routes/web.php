@@ -27,6 +27,8 @@ Route::middleware(['auth'])->group(function() {
     Route::put('/blogs/{id}/{lang}', 'BlogsController@update');
     Route::put('/publish/{id}/{state}', 'BlogsController@publish');
 
+    // route for logs
+    Route::get('logs', 'LogsController@index');
 
     // following routes are only accessible by the superadmin/s
     Route::get('subscribers', 'SubscribeController@listSubscribers')->middleware(['is_superadmin']);

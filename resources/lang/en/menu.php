@@ -9,7 +9,8 @@ return [
     'sixth_item' => 'Admins',
     'seventh_item' => 'Blogs',
     'eight_item' => 'Subscribers',
-    'ninth_item' => 'Logout',
+    'ninth_item' => 'Logs',
+    'tenth_item' => 'Log out',
     'english_language' => 'English',
     'german_language' => 'German',
     'bosnian_language' => 'Bosnian'

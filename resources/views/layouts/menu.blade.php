@@ -46,7 +46,10 @@
             </li>
         @endif
 
-        <li class="nav-item"><a href="{{route('logout')}}">@lang('menu.ninth_item')</a></li>
+        <li class="nav-item"><a href="/logs">@lang('menu.ninth_item')</a></li>
+
+        <li class="nav-item"><a href="{{route('logout')}}">@lang('menu.tenth_item')</a></li>
+
     @endauth
 
     <li>
