@@ -6,7 +6,17 @@
 
     @include('parts.error_success')
 
-    @include('parts.modal', ['title' => 'blog'])
+    @include('parts.modal', [
+        'title' => 'Delete blog',
+        'message' => 'Are you sure?',
+        'action' => 'deleteAction()'
+    ])
+
+    @include('parts.modal_publish', [
+        'title' => 'Change blog state',
+        'message' => 'Are you sure?',
+        'action' => 'publishUnpublishBlog()'
+    ])
 
     <table class="table table-striped table-light">
 
@@ -36,9 +46,9 @@
                     <!-- Check published state and set appropriate button -->
                     <td class="publish">
                         @if($blog->published == 'false')
-                            <button type="button" class="btn btn-dark btn-sm" onclick="changePublishState(true, {{$blog->id}})">Unpublished</button>
+                            <button type="button" data-toggle="modal" data-target="#publish" class="btn btn-dark btn-sm" onclick="changePublishState(true, {{$blog->id}})">Unpublished</button>
                         @else
-                            <button type="button" class="btn btn-success btn-sm" onclick="changePublishState(false, {{$blog->id}})">Published</button>
+                            <button type="button" data-toggle="modal" data-target="#publish" class="btn btn-success btn-sm" onclick="changePublishState(false, {{$blog->id}})">Published</button>
                         @endif
                     </td>
 
@@ -106,7 +116,8 @@
         }
 
         // send ajax request for publishing/unpublishing blog
-        function changePublishState(value, id) {
+        function publishUnpublishBlog() {
+
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -115,12 +126,20 @@
 
             $.ajax({
                 method:'PUT',
-                url:'/publish/' + id + '/' + value,
+                url:'/publish/' + blogId + '/' + blogState,
                 success:function(data){
                     // reload page to  show updated list of blogs
                     location.reload();
                 }
             });
+        }
+
+        // publish/unpublish event --> track id and current state of selected blog
+        var blogId = 0;
+        var blogState = 0;
+        function changePublishState(value, id) {
+           blogId = id;
+           blogState = value;
         }
 
         // after ajax returns success redirect to blogs list page

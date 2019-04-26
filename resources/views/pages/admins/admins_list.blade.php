@@ -6,6 +6,12 @@
 
     @include('parts.error_success')
 
+    @include('parts.modal', [
+        'title' => 'Delete admin',
+        'message' => 'Are you sure?',
+        'action' => 'deleteAction()'
+    ])
+
     <table class="table table-striped table-light">
         <thead>
         <tr>
@@ -19,8 +25,6 @@
         </tr>
         </thead>
         <tbody>
-
-    @include('parts.modal', ['title' => 'admin'])
 
     @foreach($admins as $key => $admin)
 

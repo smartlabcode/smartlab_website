@@ -49,6 +49,16 @@
             });
         });
 
+        // wait for Summernote to be created and then set blog text value in it
+        setTimeout(function() {
+
+            let container = document.getElementsByClassName('note-editable')[0];
+
+            let text = document.getElementById("contentText");
+            container.innerHTML = text.value;
+
+        }, 2000);
+
     </script>
 
 @endsection
