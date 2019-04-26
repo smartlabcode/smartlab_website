@@ -119,4 +119,39 @@ class MailerService
         }
 
     }
+
+    public function sendAdminEmail($toEmail, $password) {
+
+        // TODO send email
+        $mail = new PHPMailer(true);
+        try {
+            //Server settings
+            //$mail->SMTPDebug = 2;                                 // Enable verbose debug output
+            $mail->isSMTP();                                      // Set mailer to use SMTP
+            $mail->Host = env('MAIL_HOST');                       // Specify main and backup SMTP servers
+            $mail->SMTPAuth = true;                               // Enable SMTP authentication
+            $mail->Username = env('MAIL_USERNAME');                 // SMTP username
+            $mail->Password = env('MAIL_PASSWORD');                   // Password of the account from which emails are sended (in this case it is hashed)
+            $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+            $mail->Port = env('MAIL_PORT');                                    // TCP port to connect to
+            //Recipients
+            $mail->setFrom('noreply@smartlab.ba', 'SmartLab');
+            $mail->addAddress($toEmail, 'Receiver');     // Add a recipient
+            //Content
+            $mail->isHTML(true);                                  // Set email format to HTML
+            $mail->Subject = 'Smartlab Admin credentials';
+            $mail->Body    = '<p>You are new admin at: <a href="' . env("APP_BASE_URL") . '/login">Smartlab Webpage</a></p>
+                                <p>Username: ' . $toEmail . '</p>
+                                <p>Password: ' . $password . '</p>';
+            $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';  // if mail provider blocks HTML content set alternative body with no HTML
+            $mail->send();
+            echo 'Message has been sent';
+
+        } catch (Exception $e) {
+            echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+        }
+
+    }
+
+
 }

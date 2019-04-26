@@ -32,8 +32,11 @@ Route::middleware(['auth'])->group(function() {
 
     // admin controllers
     Route::resource('admins', 'UsersController')->except([
-        'show'
+        'show',
+        'store'
     ]);
+
+    Route::post('admins', 'UsersController@store')->name('admins.store');  // TODO check to set it resource route
 });
 
 

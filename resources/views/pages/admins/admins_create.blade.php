@@ -17,7 +17,7 @@
 
     <h1>Admin create</h1>
 
-    <form id="editAdminForm" action="/admins" method="POST">
+    <form id="addAdminForm" action="{{ route('admins.store') }}" method="POST">
 
         @csrf
 

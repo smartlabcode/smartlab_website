@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Services\MailerService;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -38,6 +39,7 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
+
         $admin = new User();
         // check if neccessary values are entered correctly, if no return error messages
         $request->validate([
@@ -57,6 +59,10 @@ class UsersController extends Controller
 
         // save model
         $admin->save();
+
+        // send email to the new admin
+        $mailer = new MailerService();
+        $mailer->sendAdminEmail($request->input('email'), $request->input('password'));
 
         // redirect with message
         return redirect('admins')->with(['message' => 'Admin successfully added']);
