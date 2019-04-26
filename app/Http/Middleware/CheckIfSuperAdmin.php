@@ -20,7 +20,7 @@ class CheckIfSuperAdmin
         $uri = $request->getRequestUri();
 
         // disable any page regarding admins management if user isnt superadmin
-        if (strpos($uri, 'admins') !== false && Auth::user()->roles_id != 1) {
+        if (Auth::user()->roles_id != 1) {
             return redirect('/dashboard');
         }
 

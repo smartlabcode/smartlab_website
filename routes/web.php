@@ -27,8 +27,8 @@ Route::middleware(['auth'])->group(function() {
     Route::put('/publish/{id}/{state}', 'BlogsController@publish');
 
 
-    // get subscribers TODO this route can see only super admin
-    Route::get('subscribers', 'SubscribeController@listSubscribers');
+    // get subscribers TODO this route can only be seen by super admin
+    Route::get('subscribers', 'SubscribeController@listSubscribers')->middleware(['is_superadmin']);
 
     // admin controllers
     Route::resource('admins', 'UsersController')->except([
@@ -36,7 +36,7 @@ Route::middleware(['auth'])->group(function() {
         'store'
     ]);
 
-    Route::post('admins', 'UsersController@store')->name('admins.store');  // TODO check to set it resource route
+    Route::post('admins/add', 'UsersController@store')->name('admins.store');  // TODO check to set it resource route
 });
 
 

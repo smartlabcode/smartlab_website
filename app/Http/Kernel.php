@@ -36,7 +36,7 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,  // disable during Postman testing
             \App\Http\Middleware\CheckClientLanguage::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            \App\Http\Middleware\CheckIfSuperAdmin::class
+            //\App\Http\Middleware\CheckIfSuperAdmin::class
         ],
 
         'api' => [

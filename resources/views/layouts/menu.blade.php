@@ -38,7 +38,15 @@
         <li class="nav-item">
             <a href="{{route('blogs.index')}}">@lang('menu.seventh_item')</a>
         </li>
-        <li class="nav-item"><a href="{{route('logout')}}">@lang('menu.eight_item')</a></li>
+
+
+        @if(\Illuminate\Support\Facades\Auth::user()->roles_id == 1)
+            <li class="nav-item">
+                <a href="/subscribers">@lang('menu.eight_item')</a>
+            </li>
+        @endif
+
+        <li class="nav-item"><a href="{{route('logout')}}">@lang('menu.ninth_item')</a></li>
     @endauth
 
     <li>

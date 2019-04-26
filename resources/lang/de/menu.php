@@ -8,7 +8,8 @@ return [
     'fifth_item' => 'Kontakt',
     'sixth_item' => 'Administratoren',
     'seventh_item' => 'Blogs',
-    'eight_item' => 'Ausloggen',
+    'eight_item' => 'Abonnenten',
+    'ninth_item' => 'Ausloggen',
     'english_language' => 'Englisch',
     'german_language' => 'Deutsch',
     'bosnian_language' => 'Bosnisch'
