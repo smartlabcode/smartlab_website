@@ -31,7 +31,7 @@
         <div class="form-group">
             <label for="title">Blog title</label>
             <input type="text" class="form-control" id="title" placeholder="Title" name="title"
-                   value="@if(isset($language)) {{$blog->heading}} @else @endif">
+                   value="@if(isset($language)) {{$blog->heading}} @else @endif" required>
         </div>
 
         <div class="form-group">
