@@ -58,37 +58,6 @@ class SubscribeController extends Controller
     }
 
     /**
-     * Verification function
-     *
-     * @param $mail
-     * @param MailchimpService $mailchimp
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
-//    public function verifySubscriber($mail, MailchimpService $mailchimp) {
-//
-//        try {
-//            // get subscriber
-//            $subscriber = Subscriber::where('email', $mail)->firstOrFail();
-//
-//            $subscriber->verified = 1;
-//            $subscriber->save();
-//
-//            // send data to MailChimp
-//            $mailchimp->addSubscriber($mail);
-//
-//            return view('others.email_verification');
-//
-//        } catch (\Exception $e) {
-//            // add log
-//            $this->logService->setLog('ERRROR', $e->getMessage());
-//
-//            // return error view
-//            return view('pages.general_error');
-//        }
-//
-//    }
-
-    /**
      * Get list of subscribers from MailChimp
      *
      * @param MailchimpService $mailchimp
