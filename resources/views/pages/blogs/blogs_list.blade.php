@@ -28,6 +28,7 @@
             <th scope="col">Created at</th>
             <th scope="col">Published/Unpublished</th>
             <th scope="col">Languages</th>
+            <th scope="col">Preview</th>
             <th scope="col">Delete</th>
         </tr>
         </thead>
@@ -89,6 +90,8 @@
 
                         @endforeach
                     </td>
+
+                    <td><a href="{{ env('BLOG_DOMAIN')  }}/blog/{{$blog->id}}/{{ App::getlocale() }}/true" target="_blank"><img src="{{ asset('images/icons/open-in-new.svg') }}" /></a></td>
 
                     <!-- Delete button -->
                     <td><button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" onclick="updateId({{$blog->id}})">Delete</button></td>

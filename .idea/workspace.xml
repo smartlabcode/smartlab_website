@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54eccf3b-5991-4a5b-afd1-7c57d47320c5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/blogs/blogs_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/blogs/blogs_edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/blogs/blogs_list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/blogs/blogs_list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/parts/summernote.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/parts/summernote.blade.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/beyondcode/laravel-dump-server/" />
     <ignored path="$PROJECT_DIR$/vendor/composer/" />
@@ -95,22 +95,24 @@
     <session id="168846752">
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Blade" value="161" />
+          <entry key="Blade" value="162" />
           <entry key="CSS" value="4" />
           <entry key="JavaScript" value="3" />
           <entry key="PHP" value="258" />
-          <entry key="PLAIN_TEXT" value="14" />
+          <entry key="PLAIN_TEXT" value="15" />
+          <entry key="SVG" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="11141" />
+          <entry key="Blade" value="11320" />
           <entry key="CSS" value="197" />
           <entry key="HTML" value="11" />
           <entry key="JavaScript" value="206" />
           <entry key="PHP" value="18510" />
           <entry key="PLAIN_TEXT" value="159" />
           <entry key="SQL" value="65" />
+          <entry key="SVG" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -156,26 +158,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/parts/summernote.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/pages/blogs/blogs_edit.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="91" column="26" selection-start-line="91" selection-start-column="26" selection-end-line="91" selection-end-column="26" />
+            <state relative-caret-position="128">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/blogs/blogs_list.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+            <state relative-caret-position="248">
+              <caret line="93" column="97" selection-start-line="93" selection-start-column="97" selection-end-line="93" selection-end-column="97" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -206,7 +208,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Contact.php" />
         <option value="$PROJECT_DIR$/app/Subscriber.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
@@ -226,7 +227,6 @@
         <option value="$PROJECT_DIR$/resources/views/pages/admins/admins_list.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/parts/modal_publish.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/parts/modal.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/blogs/blogs_list.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/parts/blog_language_selector.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/general_error.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Services/LogService.php" />
@@ -253,10 +253,12 @@
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/resources/views/parts/quill.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/BlogsController.php" />
-        <option value="$PROJECT_DIR$/resources/views/parts/summernote.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/blogs/blogs_create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/blogs/blogs_edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
+        <option value="$PROJECT_DIR$/public/images/icons/open-in-new.svg" />
+        <option value="$PROJECT_DIR$/resources/views/parts/summernote.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/blogs/blogs_list.blade.php" />
       </list>
     </option>
   </component>
@@ -385,37 +387,6 @@
             <path>
               <item name="smartlab_website" type="b2602c69:ProjectViewProjectNode" />
               <item name="smartlab_website" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smartlab_website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartlab_website" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smartlab_website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartlab_website" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smartlab_website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartlab_website" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smartlab_website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartlab_website" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smartlab_website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartlab_website" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -423,6 +394,19 @@
               <item name="smartlab_website" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartlab_website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smartlab_website" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartlab_website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smartlab_website" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="icons" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="smartlab_website" type="b2602c69:ProjectViewProjectNode" />
@@ -529,12 +513,12 @@
       <workItem from="1556126034233" duration="5803000" />
       <workItem from="1556174449313" duration="18959000" />
       <workItem from="1556213846542" duration="26095000" />
-      <workItem from="1556351245098" duration="10428000" />
+      <workItem from="1556351245098" duration="12505000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125985000" />
+    <option name="totallyTimeSpent" value="128062000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -589,13 +573,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Subscriber.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
@@ -669,13 +646,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/blogs/blogs_list.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -872,13 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="71" selection-start-line="8" selection-start-column="71" selection-end-line="8" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Services/MailerService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-362">
@@ -917,17 +880,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/blogs/blogs_create.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="38" column="12" lean-forward="true" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="119" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/parts/summernote.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+        <state relative-caret-position="360">
+          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -938,10 +894,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+    <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/icons/open-in-new.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/parts/summernote.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/blogs/blogs_create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="38" column="12" lean-forward="true" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/blogs/blogs_list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="93" column="97" selection-start-line="93" selection-start-column="97" selection-end-line="93" selection-end-column="97" />
         </state>
       </provider>
     </entry>
