@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Blog;
 use App\BlogTranslation;
 use App\Http\Services\LogService;
+use App\Http\Services\MailchimpService;
 use App\Http\Services\MailerService;
 use App\Log;
 use Illuminate\Http\Request;
@@ -333,13 +334,25 @@ class BlogsController extends Controller
 
             // check if blog is published for first time, if no send it
             if($blog->published_already == 0) {
-                // TODO send request to MailChimp to send new blog to the subscribers
-                // TODO DEMO
-
-                // TODO english version is sent to all users - fix it
-//                $blogTranslation = BlogTranslation::where('language','en')->where('blogs_id', $blog->id)->first();
-//                $mailer = new MailerService();
-//                $mailer->sendMailsToSubscribers($blogTranslation->heading, $blogTranslation->text);
+//               $mailchimp = new MailchimpService(new LogService());
+//
+//                $blogData = DB::select(
+//                        'SELECT
+//                          bt.heading,
+//                          bt.text,
+//                          u.name,
+//                          u.lastname,
+//                          DATE_FORMAT(b.created_at, \'%M %d, %Y\') AS created_at,
+//                          b.id,
+//                          b.published,
+//                          GROUP_CONCAT(bt.language) AS language
+//                        FROM blogs AS b
+//                        LEFT JOIN users AS u ON b.users_id = u.id
+//                        LEFT JOIN blog_translations AS bt ON b.id = bt.blogs_id
+//                        WHERE b.deleted_at IS NULL AND b.id = ' . $blog->id . '
+//                        GROUP BY b.id');
+//
+//               $mailchimp->createTemplate($blogData->heading, $blogData->text);
             }
 
             // set publish state to 1

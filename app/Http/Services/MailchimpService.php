@@ -27,7 +27,7 @@ class MailchimpService
      *
      * @param $email
      */
-    public function addSubscriber($email) {
+    public function addPendingSubscriber($email) {
 
         try {
 
@@ -36,12 +36,12 @@ class MailchimpService
                 'headers' => $this->headers
             ]);
 
-            // send request for adding subscriber
+            // send request for adding subscriber (pending status until user verify email)
             $client->post(env('MAILCHIMP_API_ROUTE'),
                 [
                     \GuzzleHttp\RequestOptions::JSON => [
                         'email_address' => $email,
-                        'status' => 'subscribed',
+                        'status' => 'pending',
                         'merge_fields' => [
                             'FNAME' => 'Unknown',
                             'LNAME' => 'Unknown'
@@ -91,4 +91,28 @@ class MailchimpService
 
         return [];
     }
+
+//    public function createTemplate($title, $body) {
+//
+//        try {
+//
+//            // create client
+//            $client = new Client([
+//                'headers' => $this->headers
+//            ]);
+//
+//            // send request for adding subscriber (pending status until user verify email)
+//            $client->post(env('MAILCHIMP_API_ROUTE'),
+//                [
+//                    \GuzzleHttp\RequestOptions::JSON => [
+//                        'name' => $title,
+//                        'status' => $body
+//                    ]
+//                ]);
+//
+//        } catch (\Exception $e) {
+//            // add log
+//            $this->logService->setLog('ERRROR', $e->getMessage());
+//        }
+//    }
 }

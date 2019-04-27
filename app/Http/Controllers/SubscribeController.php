@@ -24,7 +24,7 @@ class SubscribeController extends Controller
      * @param MailerService $mailer
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function saveSubscriber(Request $request, MailerService $mailer) {
+    public function saveSubscriber(Request $request, MailchimpService $mailchimp) {
 
         try {
 
@@ -41,8 +41,8 @@ class SubscribeController extends Controller
 
             $subscriber->save();
 
-            // send verification email TODO check how to replace it with MailChimp
-            $mailer->sendVerificationEmail($subscriber->email, $subscriber->id);
+            // send data to MailChimp
+            $mailchimp->addPendingSubscriber($request->input('email'));
 
             // return back and set message
             return back()->with(['message' => 'You successfully subscribed to our newsletter.']);
@@ -52,7 +52,7 @@ class SubscribeController extends Controller
             $this->logService->setLog('ERRROR', $e->getMessage());
 
             // redirect with message
-            return back()->with(['message' => 'Couldnt save subscriber data.']);
+            return back()->withErrors(['message' => 'Couldnt save subscriber data.']);
         }
 
     }
@@ -64,29 +64,29 @@ class SubscribeController extends Controller
      * @param MailchimpService $mailchimp
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function verifySubscriber($mail, MailchimpService $mailchimp) {
-
-        try {
-            // get subscriber
-            $subscriber = Subscriber::where('email', $mail)->firstOrFail();
-
-            $subscriber->verified = 1;
-            $subscriber->save();
-
-            // send data to MailChimp
-            $mailchimp->addSubscriber($mail);
-
-            return view('others.email_verification');
-
-        } catch (\Exception $e) {
-            // add log
-            $this->logService->setLog('ERRROR', $e->getMessage());
-
-            // return error view
-            return view('pages.general_error');
-        }
-
-    }
+//    public function verifySubscriber($mail, MailchimpService $mailchimp) {
+//
+//        try {
+//            // get subscriber
+//            $subscriber = Subscriber::where('email', $mail)->firstOrFail();
+//
+//            $subscriber->verified = 1;
+//            $subscriber->save();
+//
+//            // send data to MailChimp
+//            $mailchimp->addSubscriber($mail);
+//
+//            return view('others.email_verification');
+//
+//        } catch (\Exception $e) {
+//            // add log
+//            $this->logService->setLog('ERRROR', $e->getMessage());
+//
+//            // return error view
+//            return view('pages.general_error');
+//        }
+//
+//    }
 
     /**
      * Get list of subscribers from MailChimp

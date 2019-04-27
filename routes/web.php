@@ -60,7 +60,7 @@ Route::put('language', 'LanguagesController@switchLanguage');
 Route::post('subscribe', 'SubscribeController@saveSubscriber');
 
 // route for email verification
-Route::get('email_verification/{mail}', 'SubscribeController@verifySubscriber');
+//Route::get('email_verification/{mail}', 'SubscribeController@verifySubscriber');
 
 // authorization routes - register option is disabled
 Auth::routes([
