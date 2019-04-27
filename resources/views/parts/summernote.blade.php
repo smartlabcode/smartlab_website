@@ -13,11 +13,11 @@
 <!-- Scripts for Summernote -->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js" defer></script>
 
-<style>
-    .note-editor.note-frame .note-editing-area .note-editable b { font-weight: bold !important; }
-    .note-editable b, .note-editable strong { font-weight: bold; }
-    b, strong { font-weight: bold; }
-</style>
+{{--<style>--}}
+    {{--.note-editor.note-frame .note-editing-area .note-editable b { font-weight: bold !important; }--}}
+    {{--.note-editable b, .note-editable strong { font-weight: bold; }--}}
+    {{--b, strong { font-weight: bold; }--}}
+{{--</style>--}}
 
 <script>
 

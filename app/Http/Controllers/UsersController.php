@@ -7,6 +7,7 @@ use App\Http\Services\MailerService;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\View;
 
 class UsersController extends Controller
 {
@@ -95,9 +96,19 @@ class UsersController extends Controller
             // save model
             $admin->save();
 
-            // send email to the new admin TODO check to replace this with MailChimp
-            $mailer = new MailerService();
-            $mailer->sendAdminEmail($request->input('email'), $request->input('password'));
+            // send email to the new admin
+            $mailer = new MailerService(new LogService());
+
+            // get corresponding mail template
+            $view = View::make('parts.admin_mail_template', [
+                'email' => $request->input('email'),
+                'password' => $request->input('password')
+            ]);
+
+            $template = $view->render();
+
+            // send mail to new admin
+            $mailer->sendEmail('Smartlab Admin', $request->input('email'), $template);
 
             // redirect with message
             return redirect('admins')->with(['message' => 'Admin successfully added']);
@@ -134,7 +145,6 @@ class UsersController extends Controller
             // return error view
             return view('pages.general_error');
         }
-
     }
 
     /**
@@ -175,7 +185,6 @@ class UsersController extends Controller
             // redirect with message
             return redirect('admins')->withErrors(['message' => 'Admin couldnt be edited']);
         }
-
     }
 
     /**
@@ -202,6 +211,6 @@ class UsersController extends Controller
             // return with message
             $request->session()->flash('error', 'Admin couldnt be deleted.');
         }
-
     }
+
 }
