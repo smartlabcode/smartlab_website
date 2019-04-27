@@ -4,9 +4,9 @@
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 {{--<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>--}}
 
-<!-- include summernote css/js -->
-<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.css" rel="stylesheet">
-<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.js" defer></script>
+{{--<!-- include summernote css/js -->--}}
+{{--<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.css" rel="stylesheet">--}}
+{{--<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.js" defer></script>--}}
 
 @section('content')
 
@@ -28,7 +28,8 @@
 
         <!-- WYSIWYG editor -->
         <div class="form-group">
-            <div id="content"></div>
+            {{--<div id="content"></div>--}}
+            <textarea class="form-control" name="content" placeholder="Blog content" id="content" rows="15"></textarea>
         </div>
 
         <input id="contentText" name="content" type="hidden" value="{{$blog->text}}"/>
@@ -42,51 +43,52 @@
         <div class="loader"></div>
     </div>
 
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js" defer></script>
-    <script>
+    {{--<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js" defer></script>--}}
+    {{--<script>--}}
 
-        // initilize Summernote
-        $(document).ready(function() {
-            $('#content').summernote({
-                placeholder: '',
-                tabsize: 10,
-                height: 300,
-                popover: {
-                    image: [
-                        ['imagesize', ['imageSize100', 'imageSize50', 'imageSize25']],
-                        ['float', ['floatLeft', 'floatRight', 'floatNone', 'floatCenter']],
-                        ['remove', ['removeMedia']]
-                    ],
-                    link: [
-                        ['link', ['linkDialogShow', 'unlink']]
-                    ],
-                    air: [
-                        ['color', ['color']],
-                        ['font', ['bold', 'underline', 'clear']],
-                        ['para', ['ul', 'paragraph']],
-                        ['table', ['table']],
-                        ['insert', ['link', 'picture']]
-                    ]
-                }
+        {{--// initilize Summernote--}}
+        {{--$(document).ready(function() {--}}
+            {{--$('#content').summernote({--}}
+                {{--placeholder: '',--}}
+                {{--tabsize: 10,--}}
+                {{--height: 300,--}}
+                {{--popover: {--}}
+                    {{--image: [--}}
+                        {{--['imagesize', ['imageSize100', 'imageSize50', 'imageSize25']],--}}
+                        {{--['float', ['floatLeft', 'floatRight', 'floatNone', 'floatCenter']],--}}
+                        {{--['remove', ['removeMedia']]--}}
+                    {{--],--}}
+                    {{--link: [--}}
+                        {{--['link', ['linkDialogShow', 'unlink']]--}}
+                    {{--],--}}
+                    {{--air: [--}}
+                        {{--['color', ['color']],--}}
+                        {{--['font', ['bold', 'underline', 'clear']],--}}
+                        {{--['para', ['ul', 'paragraph']],--}}
+                        {{--['table', ['table']],--}}
+                        {{--['insert', ['link', 'picture']]--}}
+                    {{--]--}}
+                {{--}--}}
 
-            });
+            {{--});--}}
 
-        });
+        {{--});--}}
 
-        // wait for Summernote to be created and then set blog text value in it
-        setTimeout(function() {
+        {{--// wait for Summernote to be created and then set blog text value in it--}}
+        {{--setTimeout(function() {--}}
 
-            let container = document.getElementsByClassName('note-editable')[0];
+            {{--let container = document.getElementsByClassName('note-editable')[0];--}}
 
-            let text = document.getElementById("contentText");
-            container.innerHTML = text.value;
+            {{--let text = document.getElementById("contentText");--}}
+            {{--container.innerHTML = text.value;--}}
 
-            var loader = document.getElementById("loaderContainer");
-            loader.parentNode.removeChild(loader);
+            {{--var loader = document.getElementById("loaderContainer");--}}
+            {{--loader.parentNode.removeChild(loader);--}}
 
-        }, 2000);
+        {{--}, 2000);--}}
 
-    </script>
+    {{--</script>--}}
 
+@include('parts.summernote')
 
 @endsection
