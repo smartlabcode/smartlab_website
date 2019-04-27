@@ -104,7 +104,6 @@ class UsersController extends Controller
                 'email' => $request->input('email'),
                 'password' => $request->input('password')
             ]);
-
             $template = $view->render();
 
             // send mail to new admin
