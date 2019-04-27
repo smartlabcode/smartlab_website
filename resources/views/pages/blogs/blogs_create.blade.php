@@ -4,9 +4,7 @@
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 {{--<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>--}}
 
-<!-- include summernote css/js -->
-<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.css" rel="stylesheet">
-<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.js" defer></script>
+
 
 @section('content')
 
@@ -54,32 +52,7 @@
         </div>
     @endif
 
-    <!-- Scripts for Summernote -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js" defer></script>
-    <script>
-
-        // initilize summernote
-        $(document).ready(function() {
-            $('#content').summernote({
-                placeholder: '',
-                tabsize: 10,
-                height: 300
-            });
-        });
-
-        // wait for Summernote to be created and then set blog text value in it
-        setTimeout(function() {
-
-            let container = document.getElementsByClassName('note-editable')[0];
-
-            let text = document.getElementById("contentText");
-            container.innerHTML = text.value;
-
-            var loader = document.getElementById("loaderContainer");
-            loader.parentNode.removeChild(loader);
-
-        }, 2000);
-
-    </script>
+    <!-- Include summernote editor -->
+    @include('parts.summernote')
 
 @endsection

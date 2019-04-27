@@ -140,6 +140,7 @@ class BlogsController extends Controller
             $blog = new Blog();
             $blogTranslation = new BlogTranslation();
 
+
             // check if neccessary values are entered correctly, if no return error messages
             $request->validate([
                 'content' => 'required',
@@ -182,7 +183,7 @@ class BlogsController extends Controller
             $this->logService->setLog('ERROR', $e->getMessage());
 
             // redirect with message
-            return redirect('blogs')->withErrors(['message' => 'Couldnt add translation to the blog.']);
+            return redirect('blogs')->withErrors(['message' => 'Couldnt store the blog.']);
         }
 
     }
