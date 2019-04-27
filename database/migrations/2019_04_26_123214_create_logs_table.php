@@ -15,7 +15,7 @@ class CreateLogsTable extends Migration
     {
         Schema::create('logs', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->enum('type', ['error', 'warning', 'notice'])->default('notice');
+            $table->enum('type', ['Error', 'Warning', 'Notice'])->default('Notice');
             $table->string('source', 100);
             $table->timestamps();
         });

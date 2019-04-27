@@ -29,7 +29,9 @@ class UsersController extends Controller
             $admins = User::where('deleted_at', null)->get();
 
             // return view with users
-            return view('pages.admins.admins_list', ['admins' => $admins]);
+            return view('pages.admins.admins_list', [
+                'admins' => $admins
+            ]);
 
         } catch (\Exception $e) {
             // add log
@@ -105,7 +107,7 @@ class UsersController extends Controller
             $this->logService->setLog('ERROR', $e->getMessage());
 
             // redirect with message
-            return redirect('admins')->with(['message' => 'Admin couldnt be added']);
+            return redirect('admins')->withErrors(['message' => 'Admin couldnt be added']);
         }
 
     }
@@ -171,7 +173,7 @@ class UsersController extends Controller
             $this->logService->setLog('ERROR', $e->getMessage());
 
             // redirect with message
-            return redirect('admins')->with(['message' => 'Admin couldnt be edited']);
+            return redirect('admins')->withErrors(['message' => 'Admin couldnt be edited']);
         }
 
     }
@@ -198,7 +200,7 @@ class UsersController extends Controller
             $this->logService->setLog('ERROR', $e->getMessage());
 
             // return with message
-            $request->session()->flash('message', 'Admin couldnt be deleted.');
+            $request->session()->flash('error', 'Admin couldnt be deleted.');
         }
 
     }

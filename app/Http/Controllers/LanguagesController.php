@@ -33,7 +33,7 @@ class LanguagesController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERRROR', $e->getMessage());
+            $this->logService->setLog('ERROR', $e->getMessage());
         }
 
         // return to last visted page

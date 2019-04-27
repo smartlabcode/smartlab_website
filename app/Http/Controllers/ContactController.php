@@ -46,10 +46,10 @@ class ContactController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERRROR', $e->getMessage());
+            $this->logService->setLog('ERROR', $e->getMessage());
 
             // return error message
-            return back()->with('message', 'Contact message couldnt be sent.');
+            return back()->withErrors('message', 'Contact message couldnt be sent.');
         }
 
     }

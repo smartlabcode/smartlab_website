@@ -51,7 +51,7 @@ class MailchimpService
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERRROR', $e->getMessage());
+            $this->logService->setLog('ERROR', $e->getMessage());
         }
         
     }
@@ -86,7 +86,7 @@ class MailchimpService
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERRROR', $e->getMessage());
+            $this->logService->setLog('ERROR', $e->getMessage());
         }
 
         return [];

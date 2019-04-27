@@ -49,11 +49,13 @@ class BlogsController extends Controller
                     GROUP BY b.id');
 
             // return blogs list page with its data
-            return view('pages.blogs.blogs_list', ['blogs' => $blogs]);
+            return view('pages.blogs.blogs_list', [
+                'blogs' => $blogs
+            ]);
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERRROR', $e->getMessage());
+            $this->logService->setLog('ERROR', $e->getMessage());
 
             // return error view
             return view('pages.general_error');
@@ -74,7 +76,7 @@ class BlogsController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERRROR', $e->getMessage());
+            $this->logService->setLog('ERROR', $e->getMessage());
 
             // return error view
             return view('pages.general_error');
@@ -117,7 +119,7 @@ class BlogsController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERRROR', $e->getMessage());
+            $this->logService->setLog('ERROR', $e->getMessage());
 
             // return error view
             return view('pages.general_error');
@@ -177,10 +179,10 @@ class BlogsController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERRROR', $e->getMessage());
+            $this->logService->setLog('ERROR', $e->getMessage());
 
             // redirect with message
-            return redirect('blogs')->with(['message' => 'Couldnt add translation to the blog.']);
+            return redirect('blogs')->withErrors(['message' => 'Couldnt add translation to the blog.']);
         }
 
     }
@@ -199,7 +201,7 @@ class BlogsController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERRROR', $e->getMessage());
+            $this->logService->setLog('ERROR', $e->getMessage());
 
             // return error view
             return view('pages.general_error');
@@ -241,7 +243,7 @@ class BlogsController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERRROR', $e->getMessage());
+            $this->logService->setLog('ERROR', $e->getMessage());
 
             // return error view
             return view('pages.general_error');
@@ -281,10 +283,10 @@ class BlogsController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERRROR', $e->getMessage());
+            $this->logService->setLog('ERROR', $e->getMessage());
 
             // redirect with message
-            return redirect('blogs')->with('message', 'Blog couldnt be edited.');
+            return redirect('blogs')->withErrors('message', 'Blog couldnt be edited.');
         }
 
     }
@@ -298,6 +300,7 @@ class BlogsController extends Controller
     public function destroy(Request $request, $id)
     {
         try {
+
             // get blog to delete
             $blog = Blog::findOrFail($id);
             // soft delete it
@@ -311,10 +314,10 @@ class BlogsController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERRROR', $e->getMessage());
+            $this->logService->setLog('ERROR', $e->getMessage());
 
             // return with message
-            $request->session()->flash('message', 'Blog couldnt be deleted.');
+            $request->session()->flash('error', 'Blog couldnt be deleted.');
         }
 
     }
@@ -368,10 +371,10 @@ class BlogsController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERRROR', $e->getMessage());
+            $this->logService->setLog('ERROR', $e->getMessage());
 
             // return with message
-            $request->session()->flash('message', 'Couldnt change blog published state.');
+            $request->session()->flash('error', 'Couldnt change blog published state.');
         }
 
     }

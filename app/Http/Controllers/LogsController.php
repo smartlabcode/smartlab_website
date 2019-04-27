@@ -28,7 +28,7 @@ class LogsController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERRROR', $e->getMessage());
+            $this->logService->setLog('ERROR', $e->getMessage());
 
             // return error view
             return view('pages.general_error');
