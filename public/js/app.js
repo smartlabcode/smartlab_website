@@ -23,16 +23,16 @@ function makePassword(length) {
 
 /* Create blog */
 function submitAddForm() {
+
     event.preventDefault();
 
-    console.log(document.getElementById("language").value);
     // change action route
     let form = document.getElementById("addBlogForm");
 
     // set content
     let content = form.getElementsByClassName('note-editable')[0];
     let text = content.innerHTML;
-    console.log(text);
+
     document.getElementById("contentText").value = text;
 
     form.action = "/blogs";

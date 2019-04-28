@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Blog;
+use App\BlogTag;
 use App\BlogTranslation;
 use App\Http\Services\LogService;
 use App\Http\Services\MailchimpService;
@@ -135,19 +136,24 @@ class BlogsController extends Controller
      */
     public function store(Request $request)
     {
-        try {
+        //try {
             // create blog and blogTranslation objects
             $blog = new Blog();
             $blogTranslation = new BlogTranslation();
 
 
             // check if neccessary values are entered correctly, if no return error messages
-            $request->validate([
+            $isValid = $request->validate([
                 'content' => 'required',
                 'title' => 'required',
                 'language' => 'in:en,de,bs',
-                'existing' => 'in:true,false'
+                'existing' => 'in:true,false',
+                'tags' => 'required'
             ]);
+
+            if(!$isValid){
+                return back()->withErrors(['message' => 'Invalid data']);
+            }
 
             // check if already exist one translation for the blog, if no create new blog in the database
             if ($request->input('existing') == 'false') {
@@ -164,6 +170,14 @@ class BlogsController extends Controller
                 $blogTranslation->language = $request->input('language');
                 $blogTranslation->save();
 
+                // insert blog tags
+                foreach ($request->input('tags') as $tag) {
+                    $blogTags = new BlogTag();
+                    $blogTags->tag = $tag;
+                    $blogTags->blogs_id = $blog->id;
+                    $blogTags->save();
+                }
+
                 // redirect with message
                 return redirect('blogs')->with(['message' => 'Blog successfully added']);
             }
@@ -178,13 +192,13 @@ class BlogsController extends Controller
             // redirect with message
             return redirect('blogs')->with(['message' => 'Successfully added translation to the blog.']);
 
-        } catch (\Exception $e) {
-            // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
-
-            // redirect with message
-            return redirect('blogs')->withErrors(['message' => 'Couldnt store the blog.']);
-        }
+//        } catch (\Exception $e) {
+//            // add log
+//            $this->logService->setLog('ERROR', $e->getMessage());
+//
+//            // redirect with message
+//            return redirect('blogs')->withErrors(['message' => 'Couldnt store the blog.']);
+//        }
 
     }
 

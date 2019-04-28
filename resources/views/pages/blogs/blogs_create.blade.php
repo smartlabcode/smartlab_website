@@ -10,6 +10,8 @@
 
     <h1>Blog create</h1>
 
+    @include('parts.error_success')
+
     <form id="addBlogForm" method="POST">
 
         @csrf
@@ -31,12 +33,22 @@
         <div class="form-group">
             <label for="title">Blog title</label>
             <input type="text" class="form-control" id="title" placeholder="Title" name="title"
-                   value="@if(isset($language)) {{$blog->heading}} @else @endif" required>
+                   value="@if(isset($language)) {{$blog->heading}} @else @endif">
         </div>
 
         <div class="form-group">
             <label for="content">Blog text</label>
             <textarea class="form-control" name="content" placeholder="Blog content" id="content" rows="15"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="tags">Select blog tags: </label>
+            <select multiple="multiple" class="form-control" name="tags[]" id="tags">
+                <option value="programming">Programming</option>
+                <option value="design">Design</option>
+                <option value="video">Video</option>
+                <option value="e-learning">E-learning</option>
+            </select>
         </div>
 
         <input id="contentText" name="content" type="hidden" value="@if(isset($blog->text)) {{$blog->text}} @endif"/>
