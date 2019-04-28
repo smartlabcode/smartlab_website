@@ -41,15 +41,11 @@
             <textarea class="form-control" name="content" placeholder="Blog content" id="content" rows="15"></textarea>
         </div>
 
-        <div class="form-group">
-            <label for="tags">Select blog tags: </label>
-            <select multiple="multiple" class="form-control" name="tags[]" id="tags">
-                <option value="programming">Programming</option>
-                <option value="design">Design</option>
-                <option value="video">Video</option>
-                <option value="e-learning">E-learning</option>
-            </select>
-        </div>
+
+        @include('parts.blog_tags_selector',[
+            'type' => $type,
+            'tags' => []
+        ])
 
         <input id="contentText" name="content" type="hidden" value="@if(isset($blog->text)) {{$blog->text}} @endif"/>
         <input id="addToExistingBlog" type="hidden" name="existing" value="@if(isset($language)) true @else false @endif">

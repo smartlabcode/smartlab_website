@@ -42,10 +42,12 @@ class BlogsController extends Controller
                       DATE_FORMAT(b.created_at, \'%M %d, %Y\') AS created_at,  
                       b.id, 
                       b.published, 
-                      GROUP_CONCAT(bt.language) AS language 
+                      GROUP_CONCAT(bt.language) AS language
+                      /*GROUP_CONCAT(btag.tag) AS tags*/
                     FROM blogs AS b
                     LEFT JOIN users AS u ON b.users_id = u.id
                     LEFT JOIN blog_translations AS bt ON b.id = bt.blogs_id
+                    /*LEFT JOIN blog_tags AS btag ON b.id = btag.blogs_id*/
                     WHERE b.deleted_at IS NULL
                     GROUP BY b.id');
 
@@ -107,6 +109,7 @@ class BlogsController extends Controller
                 )
                 ->leftJoin('users', 'blogs.users_id', '=', 'users.id')
                 ->leftJoin('blog_translations', 'blogs.id', '=', 'blog_translations.blogs_id')
+               // ->leftJoin('blog_tags', 'blogs.id', '=', 'blog_tags.blogs_id')
                 ->where('blogs.id', $id)
                 ->take(1)
                 ->get();
@@ -244,8 +247,10 @@ class BlogsController extends Controller
                     'blog_translations.text',
                     'blog_translations.language'
                 )
+                ->selectRaw('GROUP_CONCAT(blog_tags.tag) AS tags')
                 ->leftJoin('users', 'blogs.users_id', '=', 'users.id')
                 ->leftJoin('blog_translations', 'blogs.id', '=', 'blog_translations.blogs_id')
+                ->leftJoin('blog_tags', 'blogs.id', '=', 'blog_tags.blogs_id')
                 ->where('blogs.id', $id)
                 ->where('blog_translations.language', $lang)
                 ->get();

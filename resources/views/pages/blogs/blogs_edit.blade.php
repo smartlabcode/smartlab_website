@@ -32,6 +32,20 @@
             <textarea class="form-control" name="content" placeholder="Blog content" id="content" rows="15"></textarea>
         </div>
 
+        @php
+            $tags = [];
+
+            if($blog->tags){
+                $tags = explode(',', $blog->tags);
+            }
+
+        @endphp
+
+        @include('parts.blog_tags_selector',[
+           'type' => 'edit',
+           'tags' => $tags
+       ])
+
         <input id="contentText" name="content" type="hidden" value="{{$blog->text}}"/>
 
         <input id="idValue" type="hidden" value="{{$blog->id}}">
