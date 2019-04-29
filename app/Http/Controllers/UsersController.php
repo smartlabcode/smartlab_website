@@ -73,9 +73,11 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        try {
+        //try {
             // create user object
             $admin = new User();
+
+            $request->flash();
 
             // check if neccessary values are entered correctly, if no return error messages
             $request->validate([
@@ -112,13 +114,13 @@ class UsersController extends Controller
             // redirect with message
             return redirect('admins')->with(['message' => 'Admin successfully added']);
 
-        } catch (\Exception $e) {
-            // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
-
-            // redirect with message
-            return redirect('admins')->withErrors(['message' => 'Admin couldnt be added']);
-        }
+//        } catch (\Exception $e) {
+//            // add log
+//            $this->logService->setLog('ERROR', $e->getMessage());
+//
+//            // redirect with message
+//            return redirect('admins')->withErrors(['message' => 'Admin couldnt be added']);
+//        }
 
     }
 
@@ -155,9 +157,11 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        try {
+       // try {
             // get specific admin
             $admin = User::findOrFail($id);
+
+            $request->flash();
 
             // check if neccessary values are entered correctly, if no return error messages
             $request->validate([
@@ -177,13 +181,13 @@ class UsersController extends Controller
             // redirect with message
             return redirect('admins')->with(['message' => 'Admin successfully edited']);
 
-        } catch (\Exception $e) {
-            // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
-
-            // redirect with message
-            return redirect('admins')->withErrors(['message' => 'Admin couldnt be edited']);
-        }
+//        } catch (\Exception $e) {
+//            // add log
+//            $this->logService->setLog('ERROR', $e->getMessage());
+//
+//            // redirect with message
+//            return redirect('admins')->withErrors(['message' => 'Admin couldnt be edited']);
+//        }
     }
 
     /**
