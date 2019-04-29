@@ -11,13 +11,21 @@ use Illuminate\Support\Facades\View;
 class ContactController extends Controller
 {
     private $logService;
+    private $mailer;
 
     public function __construct(LogService $logService)
     {
         $this->logService = $logService;
+        $this->mailer = new MailerService($logService);
     }
 
-    public function handleContactInfo(Request $request, MailerService $mailer) {
+    /**
+     * Send contact info to super admin   -->  /contact
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function handleContactInfo(Request $request) {
 
         try {
             // check if neccessary values are entered correctly, if no return error messages
@@ -29,19 +37,6 @@ class ContactController extends Controller
                 'message' => 'required'
             ]);
 
-            // create model and set its values
-//            $contact = new Contact();
-//            $contact->name = $request->input('name');
-//            $contact->lastname = $request->input('lastname');
-//            $contact->title = $request->input('title');
-//            $contact->message = $request->input('message');
-//            $contact->email = $request->input('email');
-//
-//            $contact->save();
-
-            // send email
-            $mailer = new MailerService(new LogService());
-
             // get corresponding mail template
             $view = View::make('parts.contact_mail_template', [
                 'title' => $request->input('title'),
@@ -52,8 +47,8 @@ class ContactController extends Controller
             ]);
             $template = $view->render();
 
-            // send mail to new admin
-            $mailer->sendEmail('New contact message from website', env('ADMIN_EMAIL'), $template);
+            // send mail to Rizah
+            $this->mailer->sendEmail('New contact message from website', env('ADMIN_EMAIL'), $template);
 
             // return message
             return back()->with('message', 'Contact message successfully sent.');
@@ -66,5 +61,47 @@ class ContactController extends Controller
             return back()->withErrors('message', 'Contact message couldnt be sent.');
         }
 
+    }
+
+    /**
+     * Send bussiness info to super admin
+     *
+     * @param Request $request
+     */
+    public function handleBussinessInfo(Request $request) {
+
+        try {
+            die("bussines info");
+        } catch (\Exception $e) {
+
+        }
+    }
+
+    /**
+     * Send outsourcing info to super admin
+     *
+     * @param Request $request
+     */
+    public function handleOutsourcingInfo(Request $request) {
+
+        try {
+            die("outsourcing info");
+        } catch (\Exception $e) {
+
+        }
+    }
+
+    /**
+     * Send careers info to super admin
+     *
+     * @param Request $request
+     */
+    public function handleCareersInfo(Request $request) {
+
+        try {
+            die("careers info");
+        } catch (\Exception $e) {
+
+        }
     }
 }

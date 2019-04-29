@@ -39,20 +39,25 @@ class SubscribeController extends Controller
             $subscriber->email = $request->input('email');
             $subscriber->language = $request->input('language');
 
+            // save subscriber
             $subscriber->save();
 
             // send data to MailChimp
             $mailchimp->addPendingSubscriber($request->input('email'));
 
             // return back and set message
-            return back()->with(['message' => 'You successfully subscribed to our newsletter.']);
+            return back()->with([
+                'message' => 'You successfully subscribed to our newsletter.'
+            ]);
 
         } catch (\Exception $e) {
             // add log
             $this->logService->setLog('ERROR', $e->getMessage());
 
             // redirect with message
-            return back()->withErrors(['message' => 'Couldnt save subscriber data.']);
+            return back()->withErrors([
+                'message' => 'Couldnt save subscriber data.'
+            ]);
         }
 
     }

@@ -53,6 +53,12 @@ Route::get('pages/moodle', 'PagesController@showMoodlePage');
 
 // route where contact info is sent
 Route::post('contact', 'ContactController@handleContactInfo');
+// route where bussiness info is sent
+Route::post('bussiness', 'ContactController@handleBussinessInfo');
+// route where outsourcing info is sent
+Route::post('outsourcing', 'ContactController@handleOutsourcingInfo');
+// route where careers info is sent
+Route::post('careers', 'ContactController@handleCareersInfo');
 
 // route for switching language
 Route::put('language', 'LanguagesController@switchLanguage');
