@@ -73,55 +73,48 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //try {
-            // create user object
-            $admin = new User();
+        // create user object
+        $admin = new User();
 
-            $request->flash();
+        // set request data to session so that it can be used fo old input if neccessary
+        $request->flash();
 
-            // check if neccessary values are entered correctly, if no return error messages
-            $request->validate([
-                'name' => 'required|max:45',
-                'lastname' => 'required|max:45',
-                'email' => 'required|email|unique:users',
-                'password' => 'required|min:8',
-                'role' => 'in:1,2'
-            ]);
+        // check if neccessary values are entered correctly, if no return error messages
+        $request->validate([
+            'name' => 'required|max:45',
+            'lastname' => 'required|max:45',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:8',
+            'role' => 'in:1,2'
+        ]);
 
-            // if data is ok set new values to the model object
-            $admin->name = $request->input('name');
-            $admin->lastname = $request->input('lastname');
-            $admin->email = $request->input('email');
-            $admin->password = Hash::make($request->input('password'));
-            $admin->roles_id = $request->input('role');
+        // if data is ok, set new values to the model object
+        $admin->name = $request->input('name');
+        $admin->lastname = $request->input('lastname');
+        $admin->email = $request->input('email');
+        $admin->password = Hash::make($request->input('password'));
+        $admin->roles_id = $request->input('role');
 
-            // save model
-            $admin->save();
+        // save model
+        $admin->save();
 
-            // send email to the new admin
-            $mailer = new MailerService(new LogService());
+        // create mailer object
+        $mailer = new MailerService(new LogService());
 
-            // get corresponding mail template
-            $view = View::make('parts.admin_mail_template', [
-                'email' => $request->input('email'),
-                'password' => $request->input('password')
-            ]);
-            $template = $view->render();
+        // get corresponding mail template
+        $view = View::make('parts.admin_mail_template', [
+            'email' => $request->input('email'),
+            'password' => $request->input('password')
+        ]);
+        $template = $view->render();
 
-            // send mail to new admin
-            $mailer->sendEmail('Smartlab Admin', $request->input('email'), $template);
+        // send mail to new admin
+        $mailer->sendEmail('Smartlab Admin', $request->input('email'), $template);
 
-            // redirect with message
-            return redirect('admins')->with(['message' => 'Admin successfully added']);
-
-//        } catch (\Exception $e) {
-//            // add log
-//            $this->logService->setLog('ERROR', $e->getMessage());
-//
-//            // redirect with message
-//            return redirect('admins')->withErrors(['message' => 'Admin couldnt be added']);
-//        }
-
+        // redirect with message
+        return redirect('admins')->with([
+            'message' => 'Admin successfully added'
+        ]);
     }
 
     /**
@@ -137,7 +130,9 @@ class UsersController extends Controller
             $admin = User::findOrFail($id);
 
             // return edit admin form view with admin data
-            return view('pages.admins.admins_edit', ['admin' => $admin]);
+            return view('pages.admins.admins_edit', [
+                'admin' => $admin
+            ]);
 
         } catch (\Exception $e) {
             // add log
@@ -157,37 +152,31 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-       // try {
-            // get specific admin
-            $admin = User::findOrFail($id);
+        // get specific admin
+        $admin = User::findOrFail($id);
 
-            $request->flash();
+        // set request data to session so that it can be used fo old input if neccessary
+        $request->flash();
 
-            // check if neccessary values are entered correctly, if no return error messages
-            $request->validate([
-                'name' => 'required|max:45',
-                'lastname' => 'required|max:45',
-                'role' => 'in:1,2'
-            ]);
+        // check if neccessary values are entered correctly, if no return error messages
+        $request->validate([
+            'name' => 'required|max:45',
+            'lastname' => 'required|max:45',
+            'role' => 'in:1,2'
+        ]);
 
-            // if data is ok set new values to the model
-            $admin->name = $request->input('name');
-            $admin->lastname = $request->input('lastname');
-            $admin->roles_id = $request->input('role');
+        // if data is ok set new values to the model
+        $admin->name = $request->input('name');
+        $admin->lastname = $request->input('lastname');
+        $admin->roles_id = $request->input('role');
 
-            // save model
-            $admin->save();
+        // save model
+        $admin->save();
 
-            // redirect with message
-            return redirect('admins')->with(['message' => 'Admin successfully edited']);
-
-//        } catch (\Exception $e) {
-//            // add log
-//            $this->logService->setLog('ERROR', $e->getMessage());
-//
-//            // redirect with message
-//            return redirect('admins')->withErrors(['message' => 'Admin couldnt be edited']);
-//        }
+        // redirect with message
+        return redirect('admins')->with([
+            'message' => 'Admin successfully edited'
+        ]);
     }
 
     /**
@@ -201,7 +190,7 @@ class UsersController extends Controller
         try {
             // get specific admin
             $admin = User::findOrFail($id);
-            // delete admin
+            // force deleting admin even it table is adjusted for soft deletes
             $admin->forceDelete();
 
             // return with message
