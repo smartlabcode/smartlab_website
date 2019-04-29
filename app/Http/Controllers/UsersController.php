@@ -155,7 +155,7 @@ class UsersController extends Controller
         // get specific admin
         $admin = User::findOrFail($id);
 
-        // set request data to session so that it can be used fo old input if neccessary
+        // set request data to session so that it can be used for old input if neccessary
         $request->flash();
 
         // check if neccessary values are entered correctly, if no return error messages

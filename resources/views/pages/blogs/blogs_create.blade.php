@@ -18,6 +18,7 @@
         <!-- Check for session values and set them into variables -->
         @php
             $oldContent = old('content');
+            $oldTitle = old('title');
 
             if(isset($id))
             {
@@ -39,7 +40,7 @@
         <div class="form-group">
             <label for="title">Blog title</label>
             <input type="text" class="form-control" id="title" placeholder="Title" name="title"
-                   value="@if(isset($language)) {{$blog->heading}} @else {{ old('title') }} @endif">
+                   value="@if(isset($oldTitle)) {{ old('title') }} @elseif(isset($language)) {{$blog->heading}} @endif">
         </div>
         <div class="form-group">
             <label for="content">Blog text</label>

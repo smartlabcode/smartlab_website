@@ -6,9 +6,6 @@ use App\Blog;
 use App\BlogTag;
 use App\BlogTranslation;
 use App\Http\Services\LogService;
-use App\Http\Services\MailchimpService;
-use App\Http\Services\MailerService;
-use App\Log;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -30,9 +27,8 @@ class BlogsController extends Controller
      */
     public function index()
     {
-
         try {
-            // get blogs
+            // get all not deleted blogs
             $blogs = DB::select(
                 'SELECT 
                           bt.heading, 
@@ -138,92 +134,67 @@ class BlogsController extends Controller
      */
     public function store(Request $request)
     {
-        //try {
-            // create blog and blogTranslation objects
-            $blog = new Blog();
-            $blogTranslation = new BlogTranslation();
+        // create blog and blogTranslation objects
+        $blog = new Blog();
+        $blogTranslation = new BlogTranslation();
 
-            // $request->flash();
+        // set request data to session so that it can be used for old input if neccessary
+        $request->flash();
 
-            // check if neccessary values are entered correctly, if no return error messages
-            $request->validate([
-                'content' => 'required',
-                'title' => 'required',
-                'language' => 'in:en,de,bs',
-                'existing' => 'in:true,false',
-                'tags' => 'required'
-            ]);
+        // check if neccessary values are entered correctly, if no return error messages
+        $request->validate([
+            'content' => 'required',
+            'title' => 'required',
+            'language' => 'in:en,de,bs',
+            'existing' => 'in:true,false',
+            'tags' => 'required'
+        ]);
 
-            // check if already exist one translation for the blog, if no create new blog in the database
-            if ($request->input('existing') == 'false') {
+        // check if already exist one translation for the blog, if no create new blog in the database
+        if ($request->input('existing') == 'false') {
 
-                // if data is ok set new values to the model
-                $blog->users_id = Auth::user()->id;
-                // save model
-                $blog->save();
+            // if data is ok set new values to the model
+            $blog->users_id = Auth::user()->id;
+            // save model
+            $blog->save();
 
-                // set data to blog_translations
-                $blogTranslation->blogs_id = $blog->id;
-                $blogTranslation->heading = $request->input('title');
-                $blogTranslation->text = $request->input('content');
-                $blogTranslation->language = $request->input('language');
-                $blogTranslation->save();
-
-                // insert blog tags
-                foreach ($request->input('tags') as $tag) {
-                    $blogTags = new BlogTag();
-                    $blogTags->tag = $tag;
-                    $blogTags->blogs_id = $blog->id;
-                    $blogTags->save();
-                }
-
-                // redirect with message
-                return redirect('blogs')->with(['message' => 'Blog successfully added']);
-            }
-
-            // else add translation to existing blog
-            $blogTranslation->blogs_id = $request->input('blog_id');
+            // set data to blog_translations
+            $blogTranslation->blogs_id = $blog->id;
             $blogTranslation->heading = $request->input('title');
             $blogTranslation->text = $request->input('content');
             $blogTranslation->language = $request->input('language');
+
+            // save translation
             $blogTranslation->save();
 
+            // insert blog tags
+            foreach ($request->input('tags') as $tag) {
+                $blogTags = new BlogTag();
+                $blogTags->tag = $tag;
+                $blogTags->blogs_id = $blog->id;
+                $blogTags->save();
+            }
+
             // redirect with message
-            return redirect('blogs')->with(['message' => 'Successfully added translation to the blog.']);
+            return redirect('blogs')->with([
+                'message' => 'Blog successfully added'
+            ]);
+        }
 
-//        } catch (\Exception $e) {
-//            // add log
-//            $this->logService->setLog('ERROR', $e->getMessage());
-//
-//            if(isset())
-//
-//            // redirect with message
-//            return redirect('blogs')->withErrors(['message' => 'Couldnt store the blog.']);
-//        }
+        // if blog already exists add translation to it
+        $blogTranslation->blogs_id = $request->input('blog_id');
+        $blogTranslation->heading = $request->input('title');
+        $blogTranslation->text = $request->input('content');
+        $blogTranslation->language = $request->input('language');
 
+        // save blog translation
+        $blogTranslation->save();
+
+        // redirect with message
+        return redirect('blogs')->with([
+            'message' => 'Successfully added translation to the blog.'
+        ]);
     }
-
-    /**
-     * Display the specified resource.  --->  /blogs/{id}
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-//    public function show($id)
-//    {
-//        try {
-//
-//            return view('pages.blogs.blogs_show');
-//
-//        } catch (\Exception $e) {
-//            // add log
-//            $this->logService->setLog('ERROR', $e->getMessage());
-//
-//            // return error view
-//            return view('pages.general_error');
-//        }
-//
-//    }
 
     /**
      * Show the form for editing the specified resource.  --->  /blogs/{id}/edit
@@ -266,7 +237,6 @@ class BlogsController extends Controller
             // return error view
             return view('pages.general_error');
         }
-
     }
 
     /**
@@ -278,52 +248,42 @@ class BlogsController extends Controller
      */
     public function update(Request $request, $id, $lang)
     {
-       // try {
+        // set request data to session so that it can be used for old input if neccessary
+        $request->flash();
 
-            $request->flash();
+        // validate if all neccessary data is set properly
+        $request->validate([
+            'language' => 'in:en,de,bs',
+            'title' => 'required|min:3|max:255',
+            'content' => 'required|min:3',
+            'tags' => 'required'
+        ]);
 
-            // validate if all neccessary data is set properly
-            $request->validate([
-                'language' => 'in:en,de,bs',
-                'title' => 'required|min:3|max:255',
-                'content' => 'required|min:3',
-                'tags' => 'required'
-            ]);
+        // find blog translation for editing
+        $blogTranslation = BlogTranslation::where('language', $lang)->where('blogs_id', $id)->first();
 
-            // find blog translation for editing
-            $blogTranslation = BlogTranslation::where('language', $lang)->where('blogs_id', $id)->first();
+        // update blog translation
+        $blogTranslation->heading = $request->input('title');
+        $blogTranslation->text = $request->input('content');
 
-            // update blog translation
-            $blogTranslation->heading = $request->input('title');
-            $blogTranslation->text = $request->input('content');
+        // save it
+        $blogTranslation->save();
 
-            // save it
-            $blogTranslation->save();
+        // update tags
+        // first delete
+        $tags = BlogTag::where('blogs_id', $blogTranslation->blogs_id)->pluck('id')->toArray();
+        BlogTag::destroy($tags);
 
-            // update tags
-            // first delete
-            $tags = BlogTag::where('blogs_id', $blogTranslation->blogs_id)->pluck('id')->toArray();
-            BlogTag::destroy($tags);
+        // insert new blog tags
+        foreach ($request->input('tags') as $tag) {
+            $blogTags = new BlogTag();
+            $blogTags->tag = $tag;
+            $blogTags->blogs_id = $blogTranslation->blogs_id;
+            $blogTags->save();
+        }
 
-            // insert blog tags
-            foreach ($request->input('tags') as $tag) {
-                $blogTags = new BlogTag();
-                $blogTags->tag = $tag;
-                $blogTags->blogs_id = $blogTranslation->blogs_id;
-                $blogTags->save();
-            }
-
-            // redirect with message
-            return redirect('blogs')->with('message', 'Blog successfully edited.');
-
-//        } catch (\Exception $e) {
-//            // add log
-//            $this->logService->setLog('ERROR', $e->getMessage());
-//
-//            // redirect with message
-//            return redirect('blogs')->withErrors('message', 'Blog couldnt be edited.');
-//        }
-
+        // redirect with message
+        return redirect('blogs')->with('message', 'Blog successfully edited.');
     }
 
     /**
@@ -341,7 +301,7 @@ class BlogsController extends Controller
             // soft delete it
             $blog->delete();
 
-            // get blog translations and delete them
+            // get blog translations and delete them also
             $blogTranslations = BlogTranslation::where('blogs_id', $id)->delete();
 
             // return with message
@@ -370,32 +330,11 @@ class BlogsController extends Controller
             // get blog for publishing/unpublishing
             $blog = Blog::findOrFail($id);
 
-            // check if blog is published for first time, if no send it
-            if($blog->published_already == 0) {
-//               $mailchimp = new MailchimpService(new LogService());
-//
-//                $blogData = DB::select(
-//                        'SELECT
-//                          bt.heading,
-//                          bt.text,
-//                          u.name,
-//                          u.lastname,
-//                          DATE_FORMAT(b.created_at, \'%M %d, %Y\') AS created_at,
-//                          b.id,
-//                          b.published,
-//                          GROUP_CONCAT(bt.language) AS language
-//                        FROM blogs AS b
-//                        LEFT JOIN users AS u ON b.users_id = u.id
-//                        LEFT JOIN blog_translations AS bt ON b.id = bt.blogs_id
-//                        WHERE b.deleted_at IS NULL AND b.id = ' . $blog->id . '
-//                        GROUP BY b.id');
-//
-//               $mailchimp->createTemplate($blogData->heading, $blogData->text);
-            }
-
-            // set publish state to 1
+            // set publish state
             $blog->published = $state;
             $blog->published_already = 1;
+
+            // save blog state
             $blog->save();
 
             // set state messsage to be returned
