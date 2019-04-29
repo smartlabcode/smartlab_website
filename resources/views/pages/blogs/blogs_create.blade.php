@@ -20,9 +20,11 @@
             if(isset($id))
             {
                 $type= 'add-edit';
+                $tags = explode(',', $blog->tags);
             }  else
             {
                 $type = 'add';
+                $tags = [];
             }
         @endphp
 
@@ -44,7 +46,7 @@
 
         @include('parts.blog_tags_selector',[
             'type' => $type,
-            'tags' => []
+            'tags' => $tags
         ])
 
         <input id="contentText" name="content" type="hidden" value="@if(isset($blog->text)) {{$blog->text}} @endif"/>

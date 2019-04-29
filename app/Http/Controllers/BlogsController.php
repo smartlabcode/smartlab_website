@@ -35,21 +35,19 @@ class BlogsController extends Controller
             // get blogs
             $blogs = DB::select(
                 'SELECT 
-                      bt.heading, 
-                      bt.text, 
-                      u.name, 
-                      u.lastname, 
-                      DATE_FORMAT(b.created_at, \'%M %d, %Y\') AS created_at,  
-                      b.id, 
-                      b.published, 
-                      GROUP_CONCAT(bt.language) AS language
-                      /*GROUP_CONCAT(btag.tag) AS tags*/
-                    FROM blogs AS b
-                    LEFT JOIN users AS u ON b.users_id = u.id
-                    LEFT JOIN blog_translations AS bt ON b.id = bt.blogs_id
-                    /*LEFT JOIN blog_tags AS btag ON b.id = btag.blogs_id*/
-                    WHERE b.deleted_at IS NULL
-                    GROUP BY b.id');
+                          bt.heading, 
+                          bt.text, 
+                          u.name, 
+                          u.lastname, 
+                          DATE_FORMAT(b.created_at, \'%M %d, %Y\') AS created_at,  
+                          b.id, 
+                          b.published, 
+                          GROUP_CONCAT(bt.language) AS language
+                        FROM blogs AS b
+                        LEFT JOIN users AS u ON b.users_id = u.id
+                        LEFT JOIN blog_translations AS bt ON b.id = bt.blogs_id
+                        WHERE b.deleted_at IS NULL
+                        GROUP BY b.id');
 
             // return blogs list page with its data
             return view('pages.blogs.blogs_list', [
@@ -107,9 +105,10 @@ class BlogsController extends Controller
                     'blog_translations.text',
                     'blog_translations.language'
                 )
+                ->selectRaw('GROUP_CONCAT(blog_tags.tag) AS tags')
                 ->leftJoin('users', 'blogs.users_id', '=', 'users.id')
                 ->leftJoin('blog_translations', 'blogs.id', '=', 'blog_translations.blogs_id')
-               // ->leftJoin('blog_tags', 'blogs.id', '=', 'blog_tags.blogs_id')
+                ->leftJoin('blog_tags', 'blogs.id', '=', 'blog_tags.blogs_id')
                 ->where('blogs.id', $id)
                 ->take(1)
                 ->get();
@@ -297,6 +296,21 @@ class BlogsController extends Controller
 
             // save it
             $blogTranslation->save();
+
+            // update tags
+            // first delete
+            //die("id: " . $blogTranslation->blogs_id);
+            $tags = BlogTag::where('blogs_id', $blogTranslation->blogs_id)->pluck('id')->toArray();
+            BlogTag::destroy($tags);
+
+            // insert blog tags
+            foreach ($request->input('tags') as $tag) {
+                $blogTags = new BlogTag();
+                $blogTags->tag = $tag;
+                $blogTags->blogs_id = $blogTranslation->blogs_id;
+                $blogTags->save();
+            }
+
 
             // redirect with message
             return redirect('blogs')->with('message', 'Blog successfully edited.');

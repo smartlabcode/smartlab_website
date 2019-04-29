@@ -16,6 +16,7 @@
             <option value="design">Design</option>
             <option value="video">Video</option>
             <option value="e-learning">E-learning</option>
+
         @endif
 
     </select>
