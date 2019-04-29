@@ -1,17 +1,22 @@
+<!-- Extend main layout -->
 @extends('layouts.app')
 
 @section('content')
 
+    <!-- Heading -->
     <h1>Admin list</h1>
 
+    <!-- Include error/success messages to be listed if anything goes wrong -->
     @include('parts.error_success')
 
+    <!-- Include modal and set fneccessary data -->
     @include('parts.modal', [
         'title' => 'Delete admin',
         'message' => 'Are you sure?',
         'action' => 'deleteAction()'
     ])
 
+    <!-- List of admins -->
     <table class="table table-striped table-light">
         <thead>
         <tr>
@@ -26,27 +31,29 @@
         </thead>
         <tbody>
 
-    @foreach($admins as $key => $admin)
+        <!-- Loop through admins data and create new rows -->
+        @foreach($admins as $key => $admin)
 
-        <tr>
-            <th scope="row">{{++$key}}</th>
-            <td>{{$admin->name}}</td>
-            <td>{{$admin->lastname}}</td>
-            <td>{{$admin->email}}</td>
-            <td>@if($admin->roles_id == 1) Superadmin @else Admin @endif</td>
-            <td><a href="admins/{{$admin->id}}/edit" class="btn btn-primary btn-sm">Edit</a></td>
-            <td>
-                @if($admin->roles_id !== 1)
-                    <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" onclick="updateId({{$admin->id}})">Delete</button>
-                @endif
-            </td>
-        </tr>
+            <tr>
+                <th scope="row">{{++$key}}</th>
+                <td>{{$admin->name}}</td>
+                <td>{{$admin->lastname}}</td>
+                <td>{{$admin->email}}</td>
+                <td>@if($admin->roles_id == 1) Superadmin @else Admin @endif</td>
+                <td><a href="admins/{{$admin->id}}/edit" class="btn btn-primary btn-sm">Edit</a></td>
+                <td>
+                    @if($admin->roles_id !== 1)
+                        <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" onclick="updateId({{$admin->id}})">Delete</button>
+                    @endif
+                </td>
+            </tr>
 
-    @endforeach
+        @endforeach
 
         </tbody>
     </table>
 
+    <!-- Buton for redirecting to create admin page -->
     <div id="paperFab" onclick="redirectTocreatePage()">
         <span>+</span>
     </div>
@@ -54,7 +61,7 @@
 
     <script>
 
-        /* THIS SCRIPT COULD CAUSE PROBLEMS IF IT IS IN app.js FILE*/
+        /* THIS SCRIPT COULD CAUSE PROBLEMS IF IT IS IN app.js FILE */
 
         // track id of selected admin
         var id = 0;

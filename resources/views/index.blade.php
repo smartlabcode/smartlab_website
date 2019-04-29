@@ -1,47 +1,39 @@
+<!-- Extend main layout -->
 @extends('layouts.app')
 
 @section('content')
 
-       <h1>@lang('index.heading')</h1>
+    <!-- Heading -->
+   <h1>@lang('index.heading')</h1>
 
-       <a href="{{ env('BLOG_DOMAIN') }}/blog/7/de" target="_blank">Visit some blog</a>
+    <!-- Dummy link -->
+   <a href="{{ env('BLOG_DOMAIN') }}/blog/7/de" target="_blank">Visit some blog</a>
 
+   <!-- Include error/success messages to be listed if anything goes wrong -->
+   @include('parts.error_success')
 
-       @if(session('message'))
-              <div class="alert alert-success" role="alert">
-                     {{session('message')}}
-              </div>
-       @endif
+   <hr/>
 
-       @if($errors->any())
-              @foreach($errors->all() as $error)
-                     <div class="alert alert-danger" role="alert">
-                            {{$error}}
-                     </div>
-              @endforeach
-       @endif
+    <!-- Form for sending -->
+   <form action="/contact" method="POST">
 
-       <hr/>
+          @csrf
 
-       <form action="/contact" method="POST">
+       Title: <select name="title">
+                  <option value="Mr." selected>Mr.</option>
+                  <option value="Mrs.">Mrs.</option>
+                </select>
+          <br/>
+      Name: <input type="text" name="name" />
+          <br/>
+       Lastname: <input type="text" name="lastname" />
+          <br/>
+       Email: <input type="email" name="email" />
+          <br/>
+        Message: <textarea name="message"></textarea>
 
-              @csrf
-
-           Title: <select name="title">
-                      <option value="Mr." selected>Mr.</option>
-                      <option value="Mrs.">Mrs.</option>
-                    </select>
-              <br/>
-          Name: <input type="text" name="name" />
-              <br/>
-           Lastname: <input type="text" name="lastname" />
-              <br/>
-           Email: <input type="email" name="email" />
-              <br/>
-            Message: <textarea name="message"></textarea>
-
-           <button>Submit</button>
-       </form>
+       <button>Submit</button>
+   </form>
 
     <hr/>
 

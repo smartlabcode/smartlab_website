@@ -1,41 +1,47 @@
+<!-- Extend main layout -->
 @extends('layouts.app')
 
 @section('content')
 
+    <!-- Heading -->
     <h1>Blogs list</h1>
 
+    <!-- Include error/success messages to be listed if anything goes wrong -->
     @include('parts.error_success')
 
+    <!-- Include modal for deleting blog, with neccessary variables -->
     @include('parts.modal', [
         'title' => 'Delete blog',
         'message' => 'Are you sure?',
         'action' => 'deleteAction()'
     ])
 
+    <!-- Include modal for publishing/unpublishing blog, with neccessary variables -->
     @include('parts.modal_publish', [
         'title' => 'Change blog state',
         'message' => 'Are you sure?',
         'action' => 'publishUnpublishBlog()'
     ])
 
+    <!-- List of blogs -->
     <table class="table table-striped table-light">
 
         <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Title</th>
-            <th scope="col">Author</th>
-            <th scope="col">Created at</th>
-            <th scope="col">Published/Unpublished</th>
-            <th scope="col">Languages</th>
-            <th scope="col">Preview</th>
-            <th scope="col">Delete</th>
-        </tr>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Author</th>
+                <th scope="col">Created at</th>
+                <th scope="col">Published/Unpublished</th>
+                <th scope="col">Languages</th>
+                <th scope="col">Preview</th>
+                <th scope="col">Delete</th>
+            </tr>
         </thead>
 
         <tbody>
 
-            <!-- Loop through all blogs and get neccessary data -->
+            <!-- Loop through blogs data and create new rows -->
             @foreach($blogs as $key => $blog)
 
                 <tr>
@@ -57,11 +63,12 @@
                     <td>
                         @foreach(['en','de','bs'] as $lang)
 
-                            <!-- Set blog languages to a temporary variable to be used in below if clausules -->
-                            @php
-                                $temp = explode(',', $blog->language);
-                            @endphp
+                            <!-- Set blog languages to a temporary variable, in order to be used in below IF clausules -->
+                             @php
+                                 $temp = explode(',', $blog->language);
+                             @endphp
 
+                             <!-- Check if current language is in the $temp array, if yes set language as set, if not set language as not set (flag with opacity) -->
                              @if($lang == 'en' && in_array($lang, $temp))
                                  <a href="/blogs/{{$blog->id}}/edit/{{$lang}}">
                                      <img class="flagIcons" src="{{ asset('images/icons/001-united-kingdom.svg') }}">
@@ -89,8 +96,10 @@
                              @endif
 
                         @endforeach
+
                     </td>
 
+                    <!-- Blog preview button -->
                     <td><a href="{{ env('BLOG_DOMAIN')  }}/blog/{{$blog->id}}/{{ App::getlocale() }}/true" target="_blank"><img src="{{ asset('images/icons/open-in-new.svg') }}" /></a></td>
 
                     <!-- Delete button -->
@@ -103,7 +112,7 @@
         </tbody>
     </table>
 
-    <!-- Add new blog element -->
+    <!-- Buton for redirecting to create blog page -->
     <div id="paperFabBlogList" onclick="redirectToCreatePage()">
         <span>+</span>
     </div>

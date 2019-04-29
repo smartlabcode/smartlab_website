@@ -20,7 +20,8 @@ Route::middleware(['auth'])->group(function() {
     // routes regarding the blog actions
     Route::resource('blogs', 'BlogsController')->except([
         'update',
-        'edit'
+        'edit',
+        'show'
     ]);
     Route::get('/blogs/{id}/add/{lang}', 'BlogsController@add')->name('add_extra_language_blog');
     Route::get('/blogs/{id}/edit/{lang}', 'BlogsController@edit')->name('edit_language_blog');

@@ -1,9 +1,10 @@
 
-<!-- include summernote css/js -->
+<!-- Summernote css/js -->
 <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.css" rel="stylesheet">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.js" defer></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 
-<!-- codemirror -->
+<!-- Codemirror scripts -->
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.css">
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/theme/monokai.css">
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.js"></script>
@@ -13,12 +14,7 @@
 <!-- Scripts for Summernote -->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js" defer></script>
 
-{{--<style>--}}
-    {{--.note-editor.note-frame .note-editing-area .note-editable b { font-weight: bold !important; }--}}
-    {{--.note-editable b, .note-editable strong { font-weight: bold; }--}}
-    {{--b, strong { font-weight: bold; }--}}
-{{--</style>--}}
-
+<!-- Summernote custom functions -->
 <script>
 
     // initilize summernote

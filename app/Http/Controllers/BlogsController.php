@@ -209,21 +209,21 @@ class BlogsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        try {
-
-            return view('pages.blogs.blogs_show');
-
-        } catch (\Exception $e) {
-            // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
-
-            // return error view
-            return view('pages.general_error');
-        }
-
-    }
+//    public function show($id)
+//    {
+//        try {
+//
+//            return view('pages.blogs.blogs_show');
+//
+//        } catch (\Exception $e) {
+//            // add log
+//            $this->logService->setLog('ERROR', $e->getMessage());
+//
+//            // return error view
+//            return view('pages.general_error');
+//        }
+//
+//    }
 
     /**
      * Show the form for editing the specified resource.  --->  /blogs/{id}/edit

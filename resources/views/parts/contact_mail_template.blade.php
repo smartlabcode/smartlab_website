@@ -1,4 +1,5 @@
 
+<!-- Contact person info -->
 <div>
     <p>Title: {{$title}}</p>
     <p>Name: {{$name}}</p>

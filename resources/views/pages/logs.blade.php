@@ -1,7 +1,9 @@
+<!-- Extend main layout -->
 @extends('layouts.app')
 
 @section('content')
 
+    <!-- List of logs -->
     <table class="table table-striped table-light">
         <thead>
         <tr>
@@ -13,15 +15,14 @@
         </thead>
         <tbody>
 
+            <!-- Loop through logs and create rows -->
             @foreach($logs as $key => $log)
-
                 <tr>
                     <th scope="row">{{++$key}}</th>
                     <td>{{$log->type}}</td>
                     <td>{{$log->source}}</td>
                     <td>{{$log->created_at}}</td>
                 </tr>
-
             @endforeach
 
         </tbody>

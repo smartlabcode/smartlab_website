@@ -1,1 +1,0 @@
-<h1>Email queue</h1>
