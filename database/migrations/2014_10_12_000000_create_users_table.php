@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->timestamps();
             $table->integer('roles_id')->default(2);
             $table->softDeletes();
+            //$table->unique(['email', 'deleted_at']);
             $table->engine = 'InnoDB';
         });
     }

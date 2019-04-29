@@ -14,17 +14,18 @@
 
    <hr/>
 
-    <!-- Form for sending -->
+    <!-- Form for sending contact message -->
    <form action="/contact" method="POST">
 
-          @csrf
+       <!-- Include token -->
+       @csrf
 
        Title: <select name="title">
                   <option value="Mr." selected>Mr.</option>
                   <option value="Mrs.">Mrs.</option>
                 </select>
           <br/>
-      Name: <input type="text" name="name" />
+       Name: <input type="text" name="name" />
           <br/>
        Lastname: <input type="text" name="lastname" />
           <br/>
@@ -32,13 +33,17 @@
           <br/>
         Message: <textarea name="message"></textarea>
 
+       <!-- Submit form -->
        <button>Submit</button>
+
    </form>
 
     <hr/>
 
+    <!-- Form for sending subscription email -->
     <form action="/subscribe" method="POST">
 
+        <!-- Include token -->
         @csrf
 
         Email: <input name="email" type="email"/>

@@ -201,8 +201,8 @@ class UsersController extends Controller
         try {
             // get specific admin
             $admin = User::findOrFail($id);
-            // soft delete admin
-            $admin->delete();
+            // delete admin
+            $admin->forceDelete();
 
             // return with message
             $request->session()->flash('message', 'Admin successfully deleted.');
