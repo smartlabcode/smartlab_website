@@ -143,7 +143,7 @@ class BlogsController extends Controller
             $blog = new Blog();
             $blogTranslation = new BlogTranslation();
 
-            $request->flash();
+            // $request->flash();
 
             // check if neccessary values are entered correctly, if no return error messages
             $request->validate([
@@ -278,12 +278,16 @@ class BlogsController extends Controller
      */
     public function update(Request $request, $id, $lang)
     {
-        try {
+       // try {
+
+            $request->flash();
+
             // validate if all neccessary data is set properly
             $request->validate([
                 'language' => 'in:en,de,bs',
-                'title' => 'required|max:255',
-                'content' => 'required'
+                'title' => 'required|min:3|max:255',
+                'content' => 'required|min:3',
+                'tags' => 'required'
             ]);
 
             // find blog translation for editing
@@ -312,13 +316,13 @@ class BlogsController extends Controller
             // redirect with message
             return redirect('blogs')->with('message', 'Blog successfully edited.');
 
-        } catch (\Exception $e) {
-            // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
-
-            // redirect with message
-            return redirect('blogs')->withErrors('message', 'Blog couldnt be edited.');
-        }
+//        } catch (\Exception $e) {
+//            // add log
+//            $this->logService->setLog('ERROR', $e->getMessage());
+//
+//            // redirect with message
+//            return redirect('blogs')->withErrors('message', 'Blog couldnt be edited.');
+//        }
 
     }
 

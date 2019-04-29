@@ -12,6 +12,8 @@
 
     <h1>Blog edit</h1>
 
+    @include('parts.error_success')
+
     <form id="editBlogForm" method="POST">
 
         @csrf
@@ -21,9 +23,13 @@
             'type' => 'edit'
         ])
 
+        @php
+            $oldTitle = old('title');
+        @endphp
+
         <div class="form-group">
             <label for="title">Blog title</label>
-            <input type="text" class="form-control" id="title" name="title" value="{{$blog->heading}}" required>
+            <input type="text" class="form-control" id="title" name="title" value="@if(isset($oldTitle))  {{ old('title') }} @else {{$blog->heading}} @endif" required>
         </div>
 
         <!-- WYSIWYG editor -->
@@ -39,14 +45,15 @@
                 $tags = explode(',', $blog->tags);
             }
 
+            $oldContent = old('content');
         @endphp
 
         @include('parts.blog_tags_selector',[
            'type' => 'edit',
            'tags' => $tags
-       ])
+        ])
 
-        <input id="contentText" name="content" type="hidden" value="{{$blog->text}}"/>
+        <input id="contentText" name="content" type="hidden" value="@if(isset($oldContent)) {{ old('content') }} @else {{$blog->text}} @endif"/>
 
         <input id="idValue" type="hidden" value="{{$blog->id}}">
         <button id="editBlogSaveButton" onclick="submitEditForm()" class="btn btn-primary">Edit</button>
