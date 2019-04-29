@@ -143,19 +143,16 @@ class BlogsController extends Controller
             $blog = new Blog();
             $blogTranslation = new BlogTranslation();
 
+            $request->flash();
 
             // check if neccessary values are entered correctly, if no return error messages
-            $isValid = $request->validate([
+            $request->validate([
                 'content' => 'required',
                 'title' => 'required',
                 'language' => 'in:en,de,bs',
                 'existing' => 'in:true,false',
                 'tags' => 'required'
             ]);
-
-            if(!$isValid){
-                return back()->withErrors(['message' => 'Invalid data']);
-            }
 
             // check if already exist one translation for the blog, if no create new blog in the database
             if ($request->input('existing') == 'false') {
@@ -197,6 +194,8 @@ class BlogsController extends Controller
 //        } catch (\Exception $e) {
 //            // add log
 //            $this->logService->setLog('ERROR', $e->getMessage());
+//
+//            if(isset())
 //
 //            // redirect with message
 //            return redirect('blogs')->withErrors(['message' => 'Couldnt store the blog.']);
@@ -299,7 +298,6 @@ class BlogsController extends Controller
 
             // update tags
             // first delete
-            //die("id: " . $blogTranslation->blogs_id);
             $tags = BlogTag::where('blogs_id', $blogTranslation->blogs_id)->pluck('id')->toArray();
             BlogTag::destroy($tags);
 
@@ -310,7 +308,6 @@ class BlogsController extends Controller
                 $blogTags->blogs_id = $blogTranslation->blogs_id;
                 $blogTags->save();
             }
-
 
             // redirect with message
             return redirect('blogs')->with('message', 'Blog successfully edited.');

@@ -39,12 +39,14 @@ function submitAddForm() {
 
     // enable form before sending post request
     document.getElementById("language").disabled = false;
+    document.getElementById("tags").disabled = false;
 
     form.submit();
 }
 
 /* Edit blog */
 function submitEditForm() {
+
     event.preventDefault();
     // get language
     let lang = document.getElementById("language").value;
@@ -58,7 +60,7 @@ function submitEditForm() {
     // set content
     let content = form.getElementsByClassName('note-editable')[0];
     let text = content.innerHTML;
-    console.log(text);
+
     document.getElementById("contentText").value = text;
 
     form.action = "/blogs/" + id + "/" + lang;

@@ -35,7 +35,7 @@
         <div class="form-group">
             <label for="title">Blog title</label>
             <input type="text" class="form-control" id="title" placeholder="Title" name="title"
-                   value="@if(isset($language)) {{$blog->heading}} @else @endif">
+                   value="@if(isset($language)) {{$blog->heading}} @else {{ old('title') }} @endif">
         </div>
 
         <div class="form-group">
@@ -49,9 +49,9 @@
             'tags' => $tags
         ])
 
-        <input id="contentText" name="content" type="hidden" value="@if(isset($blog->text)) {{$blog->text}} @endif"/>
+        <input id="contentText" name="content" type="hidden" value="@if(isset($blog->text)) {{$blog->text}} @else {{ old('content') }} @endif"/>
         <input id="addToExistingBlog" type="hidden" name="existing" value="@if(isset($language)) true @else false @endif">
-        <input id="blogId" type="hidden" name="blog_id" value="@if(isset($id)) {{$id}}@endif">
+        <input id="blogId" type="hidden" name="blog_id" value="@if(isset($id)) {{$id}} @endif">
 
         <button id="addBlogSaveButton" onclick="submitAddForm()" class="btn btn-primary">Save</button>
     </form>
