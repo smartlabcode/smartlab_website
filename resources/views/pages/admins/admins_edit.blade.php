@@ -45,8 +45,8 @@
                 <label for="roleSelect">Role</label>
                 <select name="role" class="form-control" id="roleSelect">
                     <!-- If there is role value in session set it here, if not use original value -->
-                    <option value="1" @if($oldRole == '1') selected @elseif($admin->roles_id == 1) selected @endif>Superadmin</option>
-                    <option value="2" @if($oldRole == '2') selected @elseif($admin->roles_id == 2) selected @endif>Admin</option>
+                    <option value="1" @if($admin->roles_id == 1) selected @endif>Superadmin</option>
+                    <option value="2" @if($admin->roles_id == 2) selected @endif>Admin</option>
                 </select>
             </div>
 
