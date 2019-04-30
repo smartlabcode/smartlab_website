@@ -13,11 +13,13 @@ class ContactController extends Controller
 {
     private $logService;
     private $mailer;
+    private $uploader;
 
     public function __construct(LogService $logService)
     {
         $this->logService = $logService;
         $this->mailer = new MailerService($logService);
+        $this->uploader = new UploadService();
     }
 
     /**
@@ -64,25 +66,54 @@ class ContactController extends Controller
 
     }
 
+
     /**
-     * Send bussiness info to super admin
-     *
+     * Send bussiness contact message
+     * 
      * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function handleBussinessInfo(Request $request, UploadService $uploadService, MailerService $mailerService) {
+    public function handleBussinessInfo(Request $request) {
 
         try {
+            // validate form
+            $request->validate([
+                'bussiness_name' => 'required',
+                'bussiness_subject' => 'required',
+                'bussiness_email' => 'required|email',
+                'bussiness_message' => 'required'
+            ]);
 
-            // save uploaded file/s
-            $uploadService->uploadFiles($_FILES);
+            // save uploaded file/s if they are sent TODO file sizes will be handled in php.ini
+            $attachment = false;
+            if (file_exists($_FILES['files']['tmp_name'][0])) {
+                $this->uploader->uploadFiles($_FILES, 'bussiness');
+                $attachment = true;
+            }
+
+            // create corresponding mail template
+            $view = View::make('parts.bussiness_mail_template', [
+                'name' => $request->input('bussiness_name'),
+                'subject' => $request->input('bussiness_subject'),
+                'email' => $request->input('bussiness_email'),
+                'message' => $request->input('bussiness_message')
+            ]);
+            $template = $view->render();
 
             // send email to Rizah
-            $mailerService->sendEmail('Bussiness contact', env('ADMIN_EMAIL'), '<div>Test B</div>', true);
+            $this->mailer->sendEmail('Bussiness contact', env('ADMIN_EMAIL'), $template, $attachment, 'bussiness');
 
+            // return message
+            return back()->with('message', 'Contact message successfully sent.');
 
         } catch (\Exception $e) {
-            die($e->getMessage());
+            // add log
+            $this->logService->setLog('ERROR', $e->getMessage());
+
+            // return error message
+            return back()->withErrors('message', 'Contact message couldnt be sent.');
         }
+
     }
 
     /**

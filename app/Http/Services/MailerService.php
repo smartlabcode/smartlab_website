@@ -53,10 +53,10 @@ class MailerService
             // check if attachment will be set
             if ($attachment) {
                 // zip all files from temp_files folder
-                $this->zip();
+                $this->zip($contactType);
 
                 // add attachment to the email
-                $mail->addAttachment('temp_files/contact.zip', 'Contact_attachment.zip');
+                $mail->addAttachment('temp_files/' . $contactType.  '/contact.zip', 'Contact_attachment.zip');
             }
 
             // send email
@@ -64,7 +64,7 @@ class MailerService
 
             // if mail is sent delete all from temp_files
             if ($attachment) {
-                $this->delete();
+                $this->delete($contactType);
             }
 
         } catch (Exception $e) {
@@ -74,20 +74,31 @@ class MailerService
 
     }
 
-
-    private function zip() {
+    /**
+     * Zip all files from specified folder
+     *
+     * @param $contactType
+     */
+    private function zip($contactType) {
         $zip = new \ZipArchive();
-        $zip->open('temp_files/contact.zip', \ZipArchive::CREATE);
-        foreach (glob("temp_files/*") as $file) {
-            $zip->addFile($file);
+        $zip->open('temp_files/' . $contactType . '/contact.zip', \ZipArchive::CREATE);
+        foreach (glob("temp_files/" . $contactType . "/*") as $file) {
+            if (is_file($file)) {
+                $zip->addFile($file);
+            }
+
             //if ($file != 'target_folder/important.txt') unlink($file);
         }
         $zip->close();
     }
 
-
-    private function delete() {
-        foreach (glob("temp_files/*") as $file) {
+    /**
+     * Delete all files from specified folder
+     *
+     * @param $contactType
+     */
+    private function delete($contactType) {
+        foreach (glob("temp_files/" . $contactType . "/*") as $file) {
             unlink($file);
         }
     }

@@ -12,7 +12,7 @@ namespace App\Http\Services;
 class UploadService
 {
 
-    public function uploadFiles($files) {
+    public function uploadFiles($files, $contactType = false) {
         // Count # of uploaded files in array
         $total = count($files['files']['name']);
 
@@ -25,14 +25,16 @@ class UploadService
             //Make sure we have a file path
             if ($tmpFilePath != ""){
                 //Setup our new file path
-                $newFilePath = "temp_files/" . $files['files']['name'][$i];
+                $newFilePath = "temp_files/" . $contactType. "/" . $files['files']['name'][$i];
+
+                move_uploaded_file($tmpFilePath, $newFilePath);
 
                 //Upload the file into the temp dir
-                if (move_uploaded_file($tmpFilePath, $newFilePath)) {
-
-                    //die("moved");
-
-                }
+//                if (move_uploaded_file($tmpFilePath, $newFilePath)) {
+//
+//                    //die("moved");
+//
+//                }
             }
         }
     }
