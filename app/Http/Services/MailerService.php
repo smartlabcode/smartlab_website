@@ -28,7 +28,7 @@ class MailerService
      * @param $recipient
      * @param $emailBody
      */
-    public function sendEmail($subject, $recipient, $emailBody) {
+    public function sendEmail($subject, $recipient, $emailBody, $attachment = false, $contactType = false) {
 
         // create PHPMailer object
         $mail = new PHPMailer(true);
@@ -50,14 +50,46 @@ class MailerService
             $mail->Body    = $emailBody;
             $mail->AltBody = 'Your email provider doesnt support sending HTML mails.';
 
+            // check if attachment will be set
+            if ($attachment) {
+                // zip all files from temp_files folder
+                $this->zip();
+
+                // add attachment to the email
+                $mail->addAttachment('temp_files/contact.zip', 'Contact_attachment.zip');
+            }
+
             // send email
             $mail->send();
+
+            // if mail is sent delete all from temp_files
+            if ($attachment) {
+                $this->delete();
+            }
 
         } catch (Exception $e) {
             // add log
             $this->logService->setLog('ERROR', $mail->ErrorInfo);
         }
 
+    }
+
+
+    private function zip() {
+        $zip = new \ZipArchive();
+        $zip->open('temp_files/contact.zip', \ZipArchive::CREATE);
+        foreach (glob("temp_files/*") as $file) {
+            $zip->addFile($file);
+            //if ($file != 'target_folder/important.txt') unlink($file);
+        }
+        $zip->close();
+    }
+
+
+    private function delete() {
+        foreach (glob("temp_files/*") as $file) {
+            unlink($file);
+        }
     }
 
 }

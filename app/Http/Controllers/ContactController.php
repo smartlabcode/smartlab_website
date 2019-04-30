@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Contact;
 use App\Http\Services\LogService;
 use App\Http\Services\MailerService;
+use App\Http\Services\UploadService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 
@@ -68,12 +69,19 @@ class ContactController extends Controller
      *
      * @param Request $request
      */
-    public function handleBussinessInfo(Request $request) {
+    public function handleBussinessInfo(Request $request, UploadService $uploadService, MailerService $mailerService) {
 
         try {
-            die("bussines info");
-        } catch (\Exception $e) {
 
+            // save uploaded file/s
+            $uploadService->uploadFiles($_FILES);
+
+            // send email to Rizah
+            $mailerService->sendEmail('Bussiness contact', env('ADMIN_EMAIL'), '<div>Test B</div>', true);
+
+
+        } catch (\Exception $e) {
+            die($e->getMessage());
         }
     }
 

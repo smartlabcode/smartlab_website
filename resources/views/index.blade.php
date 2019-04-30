@@ -52,5 +52,29 @@
 
     </form>
 
+    <hr/>
+
+    <h2>Bussiness contact</h2>
+
+    <form action="/bussiness" method="POST" enctype="multipart/form-data">
+
+        <!-- Include token -->
+        @csrf
+
+        Bussiness name: <input type="text" name="bussiness_name" />
+        <br/>
+        Subject: <input type="text" name="bussiness_subject" />
+        <br/>
+        Email: <input type="email" name="bussiness_email" />
+        <br/>
+        Message: <textarea name="bussiness_message"></textarea>
+        <br/>
+        Files: <input type="file" name="files[]" multiple />
+
+        <!-- Submit form -->
+        <button>Submit</button>
+
+    </form>
+
 @endsection
 

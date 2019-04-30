@@ -40,7 +40,6 @@ Route::middleware(['auth'])->group(function() {
     Route::post('admins/add', 'UsersController@store')->middleware(['is_superadmin'])->name('admins.store');
 });
 
-
 // logout route
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');  // https://stackoverflow.com/questions/43585416/how-to-logout-and-redirect-to-login-page-using-laravel-5-4
 
