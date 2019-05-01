@@ -12,7 +12,14 @@ namespace App\Http\Services;
 class UploadService
 {
 
-    public function uploadFiles($files, $contactType = false) {
+    private $logService;
+
+    public function __construct(LogService $logService)
+    {
+        $this->logService = $logService;
+    }
+
+    public function uploadFiles($files, $folderName = false) {
         // Count # of uploaded files in array
         $total = count($files['files']['name']);
 
@@ -25,16 +32,15 @@ class UploadService
             //Make sure we have a file path
             if ($tmpFilePath != ""){
                 //Setup our new file path
-                $newFilePath = "temp_files/" . $contactType. "/" . $files['files']['name'][$i];
+                $newFilePath = "temp_files/" . $folderName . "/" . $files['files']['name'][$i];
 
-                move_uploaded_file($tmpFilePath, $newFilePath);
+               // move_uploaded_file($tmpFilePath, $newFilePath);
 
                 //Upload the file into the temp dir
-//                if (move_uploaded_file($tmpFilePath, $newFilePath)) {
-//
-//                    //die("moved");
-//
-//                }
+                if (!move_uploaded_file($tmpFilePath, $newFilePath)) {
+                    // add log
+                    $this->logService->setLog('ERROR', 'Couldnt upload file to the server.');
+                }
             }
         }
     }

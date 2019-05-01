@@ -19,7 +19,7 @@ class ContactController extends Controller
     {
         $this->logService = $logService;
         $this->mailer = new MailerService($logService);
-        $this->uploader = new UploadService();
+        $this->uploader = new UploadService($logService);
     }
 
     /**
@@ -69,13 +69,17 @@ class ContactController extends Controller
 
     /**
      * Send bussiness contact message
-     * 
+     *
      * @param Request $request
      * @return \Illuminate\Http\RedirectResponse
      */
     public function handleBussinessInfo(Request $request) {
 
         try {
+
+            // set data to session in order to use in input fields if invalid data is sent
+            $request->flash();
+
             // validate form
             $request->validate([
                 'bussiness_name' => 'required',
@@ -87,7 +91,16 @@ class ContactController extends Controller
             // save uploaded file/s if they are sent TODO file sizes will be handled in php.ini
             $attachment = false;
             if (file_exists($_FILES['files']['tmp_name'][0])) {
-                $this->uploader->uploadFiles($_FILES, 'bussiness');
+
+                // generate name
+                $folderName = rand(1,10000);
+
+                // make folder where contact files will temporary be located
+                if (!file_exists('path/to/directory')) {
+                    mkdir("temp_files/" . $folderName, 0777, true);
+                }
+
+                $this->uploader->uploadFiles($_FILES, $folderName);
                 $attachment = true;
             }
 
@@ -101,7 +114,7 @@ class ContactController extends Controller
             $template = $view->render();
 
             // send email to Rizah
-            $this->mailer->sendEmail('Bussiness contact', env('ADMIN_EMAIL'), $template, $attachment, 'bussiness');
+            $this->mailer->sendEmail('Bussiness contact', env('ADMIN_EMAIL'), $template, $attachment, $folderName);
 
             // return message
             return back()->with('message', 'Contact message successfully sent.');

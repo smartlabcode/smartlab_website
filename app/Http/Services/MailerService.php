@@ -28,7 +28,7 @@ class MailerService
      * @param $recipient
      * @param $emailBody
      */
-    public function sendEmail($subject, $recipient, $emailBody, $attachment = false, $contactType = false) {
+    public function sendEmail($subject, $recipient, $emailBody, $attachment = false, $folderName = false) {
 
         // create PHPMailer object
         $mail = new PHPMailer(true);
@@ -53,10 +53,10 @@ class MailerService
             // check if attachment will be set
             if ($attachment) {
                 // zip all files from temp_files folder
-                $this->zip($contactType);
+                $this->zip($folderName);
 
                 // add attachment to the email
-                $mail->addAttachment('temp_files/' . $contactType.  '/contact.zip', 'Contact_attachment.zip');
+                $mail->addAttachment('temp_files/' . $folderName .  '/contact.zip', 'Contact_attachment.zip');
             }
 
             // send email
@@ -64,7 +64,7 @@ class MailerService
 
             // if mail is sent delete all from temp_files
             if ($attachment) {
-                $this->delete($contactType);
+                $this->delete($folderName);
             }
 
         } catch (Exception $e) {
@@ -79,10 +79,10 @@ class MailerService
      *
      * @param $contactType
      */
-    private function zip($contactType) {
+    private function zip($folderName) {
         $zip = new \ZipArchive();
-        $zip->open('temp_files/' . $contactType . '/contact.zip', \ZipArchive::CREATE);
-        foreach (glob("temp_files/" . $contactType . "/*") as $file) {
+        $zip->open('temp_files/' . $folderName . '/contact.zip', \ZipArchive::CREATE);
+        foreach (glob("temp_files/" . $folderName . "/*") as $file) {
             if (is_file($file)) {
                 $zip->addFile($file);
             }
@@ -97,10 +97,14 @@ class MailerService
      *
      * @param $contactType
      */
-    private function delete($contactType) {
-        foreach (glob("temp_files/" . $contactType . "/*") as $file) {
+    private function delete($folderName) {
+        // delete all uploaded files
+        foreach (glob("temp_files/" . $folderName . "/*") as $file) {
             unlink($file);
         }
+
+        // delete folder
+        rmdir("temp_files/" . $folderName);
     }
 
 }
