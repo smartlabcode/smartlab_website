@@ -72,6 +72,7 @@ Route::post('assets', 'ImagesController@update');
 // routes for editing website translations
 Route::get('translations', 'TranslationsController@index');
 Route::get('translations/edit/{file}', 'TranslationsController@edit');
+Route::put('translations', 'TranslationsController@update');
 
 // authorization routes - register option is disabled
 Auth::routes([

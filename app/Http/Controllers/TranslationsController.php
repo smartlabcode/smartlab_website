@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\App;
 
 class TranslationsController extends Controller
 {
+
     public function index() {
 
         $files = array();
@@ -30,9 +31,50 @@ class TranslationsController extends Controller
     public function edit($file) {
 
         $translations = include "../resources/lang/" . App::getlocale() . "/" . $file . ".php";
-        //die(print_r($translations));
+
         return view('pages.translations.edit', [
-            'data' => $translations
+            'data' => is_array($translations) ? $translations : [],
+            'page' => $file
         ]);
+    }
+
+    public function update(Request $request) {
+
+        try {
+            // get neccessary data
+            $fileName = $request->input('file_name');
+            $translations = $request->except([
+                '_token',
+                '_method',
+                'file_name'
+            ]);
+
+            // open translations file to edit
+            $file = fopen("../resources/lang/" . App::getlocale() . "/" . $fileName . ".php", 'w');
+
+            // insert before values
+            fwrite($file, '<?php' . PHP_EOL . PHP_EOL . 'return [' . PHP_EOL);
+
+            foreach ($translations as $key => $translation) {
+
+                // replace single with double qoutes
+                $translation = str_replace("'", '"', $translation);
+
+                $line = "\t'" . $key . "'" . " => " . "'" . $translation . "'," . PHP_EOL;
+                fwrite($file, $line);
+            }
+
+            // insert after values
+            fwrite($file, '];');
+
+            // close file
+            fclose($file);
+
+            return back()->with('message', 'Translations successfully edited.');
+
+        } catch (\Exception $e) {
+
+        }
+
     }
 }

@@ -12,14 +12,24 @@
     }
 
     #translationsContainer table {
-        width: 500px;
+        width: 600px;
+        box-shadow: 3px 3px 3px rgba(150,150,150, 0.5), -3px 0 3px rgba(150,150,150, 0.5);
+    }
+
+    #translationsContainer textarea {
+        resize: none;
+        width: 100%;
+        height: 70px;
     }
 </style>
 
 @section('content')
 
+    @include('parts.error_success')
+
     <div id="translationsContainer">
-        <form action="" method="POST">
+
+        <form action="/translations" method="POST">
 
             @csrf
             @method('PUT')
@@ -35,19 +45,22 @@
 
                 <tbody>
 
+                 @foreach($data as $key => $item)
 
-                @foreach($data as $key => $item)
+                        <tr>
+                            <td>{{$key}}</td>
+                            <td>
+                                <textarea id="{{$key}}" name="{{$key}}">{{$item}}</textarea>
+                            </td>
+                        </tr>
 
-                    <tr>
-                        <td>{{$key}}</td>
-                        <td><input id="{{$key}}" value="{{$item}}"/></td>
-                    </tr>
+                 @endforeach
 
-                @endforeach
                 </tbody>
             </table>
 
-            <button id="saveTranslationsButton" type="submit" class="btn btn-success btn-sm">Save</button>
+            <input type="hidden" name="file_name" value="{{$page}}"/>
+            <button id="saveTranslationsButton" type="submit" class="btn btn-primary">Save</button>
 
         </form>
 

@@ -1,7 +1,7 @@
 <?php
 
 return [
-	'first_item' => 'Sta mi radimo',
+	'first_item' => 'Sta mi radimo2',
 	'second_item' => 'Ko smo mi',
 	'third_item' => 'Pridruzite nam se',
 	'fourth_item' => 'Blog',
