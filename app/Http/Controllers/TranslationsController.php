@@ -21,8 +21,7 @@ class TranslationsController extends Controller
                 array_push($files, substr($fileName, 0, -4));
             }
         }
-        //die($path);
-//die(print_r($files));
+
         return view('pages.translations.index', [
             'files' => $files
         ]);
@@ -30,5 +29,10 @@ class TranslationsController extends Controller
 
     public function edit($file) {
 
+        $translations = include "../resources/lang/" . App::getlocale() . "/" . $file . ".php";
+        //die(print_r($translations));
+        return view('pages.translations.edit', [
+            'data' => $translations
+        ]);
     }
 }
