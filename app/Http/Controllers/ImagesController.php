@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Services\LogService;
 use App\Http\Services\UploadService;
 use Illuminate\Http\Request;
 
@@ -9,10 +10,12 @@ class ImagesController extends Controller
 {
 
     private $uploader;
+    private $logService;
 
-    public function __construct(UploadService $uploadService)
+    public function __construct(UploadService $uploadService, LogService $logService)
     {
         $this->uploader = $uploadService;
+        $this->logService = $logService;
     }
 
     public function index(){
@@ -37,22 +40,31 @@ class ImagesController extends Controller
 
     public function update(Request $request) {
 
-        $imageName = $request->input('image_name');
+        try {
+            // get name of image to replace
+            $imageName = $request->input('image_name');
 
-        // change uploaded file name
-        $_FILES['files']['name'][0] = $imageName;
+            // change uploaded file name to old image name
+            $_FILES['files']['name'][0] = $imageName;
 
-        $path = "images/";
-        unlink($path . $imageName);
+            // set path where new image should be uploaded
+            $path = "images/";
 
-        $this->uploader->uploadFiles($_FILES, $path);
+            // delete old image
+            unlink($path . $imageName);
 
-//        foreach (glob("../storage/framework/views/*.php") as $file) {
-//            if (is_file($file)) {
-//                unlink($file);
-//            }
-//        }
+            // upload new image with same name as the old one so that image links are not broken
+            $this->uploader->uploadFiles($_FILES, $path);
 
-        return back()->with('message', 'Image changed successfully.');
+            // set message and return
+            return back()->with('message', 'Image changed successfully.');
+
+        } catch (\Exception $e) {
+            // write log
+            $this->logService->setLog('ERROR', $e->getMessage());
+
+            return back()->withErrors('message', 'Image couldnt be changed');
+        }
+
     }
 }
