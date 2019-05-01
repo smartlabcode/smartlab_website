@@ -135,4 +135,7 @@
     cursor: pointer;
 }
 
-.note-editable b{font-weight: bold !important;}
+/* Summernote */
+.note-toolbar {
+    background-color: #333;
+}
