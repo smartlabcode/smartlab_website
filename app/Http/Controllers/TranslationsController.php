@@ -2,11 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Services\LogService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 
 class TranslationsController extends Controller
 {
+
+    private $logService;
+
+    public function __construct(LogService $logService)
+    {
+        $this->logService = $logService;
+    }
 
     public function index() {
 
@@ -30,12 +38,21 @@ class TranslationsController extends Controller
 
     public function edit($file) {
 
-        $translations = include "../resources/lang/" . App::getlocale() . "/" . $file . ".php";
+        try {
+            $translations = include "../resources/lang/" . App::getlocale() . "/" . $file . ".php";
 
-        return view('pages.translations.edit', [
-            'data' => is_array($translations) ? $translations : [],
-            'page' => $file
-        ]);
+            return view('pages.translations.edit', [
+                'data' => is_array($translations) ? $translations : [],
+                'page' => $file
+            ]);
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', $e->getMessage());
+
+            return view('pages.general_error');
+        }
+
     }
 
     public function update(Request $request) {
@@ -73,7 +90,10 @@ class TranslationsController extends Controller
             return back()->with('message', 'Translations successfully edited.');
 
         } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', $e->getMessage());
 
+            return back()->withErrors('message', 'Translations couldnt be edited.');
         }
 
     }

@@ -1,7 +1,5 @@
 <?php
 
 return [
-
-    'heading' => 'Glavna stranica'
-
+	'heading' => 'Glavna stranica edit',
 ];

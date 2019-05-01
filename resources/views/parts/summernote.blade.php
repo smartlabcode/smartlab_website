@@ -3,6 +3,8 @@
 <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.css" rel="stylesheet">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.js" defer></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+{{--<link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.css" rel="stylesheet">--}}
+{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.js"></script>--}}
 
 <!-- Codemirror scripts -->
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.css">
@@ -12,7 +14,11 @@
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/formatting.js"></script>
 
 <!-- Scripts for Summernote -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js" defer></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.js" defer></script>
+
+{{--<style>--}}
+    {{--.note-editable b, .note-editable strong { font-weight: bolder !important; }--}}
+{{--</style>--}}
 
 <!-- Summernote custom functions -->
 <script>
@@ -20,6 +26,16 @@
     // initilize summernote
     $(document).ready(function() {
         $('#content').summernote({
+            toolbar: [
+                ['style', ['style']],
+                ['text', ['bold', 'italic', 'underline', 'color', 'clear', 'strikethrough']],  // 'superscript', 'subscript'
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['height', ['height']],
+                ['size', ['fontsize']],
+                ['font', ['fontname']],
+                ['insert', ['picture', 'link', 'table', 'hr']],
+                ['misc', ['undo', 'redo', 'fullscreen', 'help', 'codeview']]
+            ],
             tabsize: 10,
             height: 380,
             dialogsInBody: true,
