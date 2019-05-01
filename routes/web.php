@@ -65,8 +65,9 @@ Route::put('language', 'LanguagesController@switchLanguage');
 // route for subscribing to newsletters
 Route::post('subscribe', 'SubscribeController@saveSubscriber');
 
-// route for email verification
-//Route::get('email_verification/{mail}', 'SubscribeController@verifySubscriber');
+// routes for editing website images
+Route::get('assets', 'ImagesController@index');
+Route::post('assets', 'ImagesController@update');
 
 // authorization routes - register option is disabled
 Auth::routes([

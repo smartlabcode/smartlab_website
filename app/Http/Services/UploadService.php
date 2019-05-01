@@ -20,11 +20,11 @@ class UploadService
     }
 
     public function uploadFiles($files, $path = false) {
-        // Count # of uploaded files in array
+        // count of uploaded files in array
         $total = count($files['files']['name']);
 
         // Loop through each file
-        for( $i=0 ; $i < $total ; $i++ ) {
+        for( $i = 0 ; $i < $total ; $i++ ) {
 
             //Get the temp file path
             $tmpFilePath = $files['files']['tmp_name'][$i];
