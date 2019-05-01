@@ -96,11 +96,10 @@ class ContactController extends Controller
                 $folderName = rand(1,10000);
 
                 // make folder where contact files will temporary be located
-                if (!file_exists('path/to/directory')) {
-                    mkdir("temp_files/" . $folderName, 0777, true);
-                }
+                mkdir("temp_files/" . $folderName, 0777, true);
 
-                $this->uploader->uploadFiles($_FILES, $folderName);
+                $path = "temp_files/" . $folderName;
+                $this->uploader->uploadFiles($_FILES, $path);
                 $attachment = true;
             }
 

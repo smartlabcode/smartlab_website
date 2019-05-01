@@ -19,7 +19,7 @@ class UploadService
         $this->logService = $logService;
     }
 
-    public function uploadFiles($files, $folderName = false) {
+    public function uploadFiles($files, $path = false) {
         // Count # of uploaded files in array
         $total = count($files['files']['name']);
 
@@ -32,7 +32,7 @@ class UploadService
             //Make sure we have a file path
             if ($tmpFilePath != ""){
                 //Setup our new file path
-                $newFilePath = "temp_files/" . $folderName . "/" . $files['files']['name'][$i];
+                $newFilePath = $path . "/" . $files['files']['name'][$i];
 
                // move_uploaded_file($tmpFilePath, $newFilePath);
 

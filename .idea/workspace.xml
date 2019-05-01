@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="54eccf3b-5991-4a5b-afd1-7c57d47320c5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Services/MailerService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/MailerService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Services/UploadService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/UploadService.php" afterDir="false" />
-    </list>
+    <list default="true" id="54eccf3b-5991-4a5b-afd1-7c57d47320c5" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/vendor/beyondcode/laravel-dump-server/" />
     <ignored path="$PROJECT_DIR$/vendor/composer/" />
     <ignored path="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir/" />
@@ -100,7 +96,7 @@
           <entry key="CSS" value="4" />
           <entry key="Image" value="1" />
           <entry key="JavaScript" value="6" />
-          <entry key="PHP" value="299" />
+          <entry key="PHP" value="300" />
           <entry key="PLAIN_TEXT" value="18" />
           <entry key="SVG" value="2" />
         </counts>
@@ -111,7 +107,7 @@
           <entry key="CSS" value="197" />
           <entry key="HTML" value="11" />
           <entry key="JavaScript" value="215" />
-          <entry key="PHP" value="23982" />
+          <entry key="PHP" value="24073" />
           <entry key="PLAIN_TEXT" value="250" />
           <entry key="SQL" value="67" />
           <entry key="SVG" value="13" />
@@ -145,56 +141,7 @@
     <favorites_list name="smartlab_website" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ContactController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="60" selection-end-column="65" />
-              <folding>
-                <element signature="e#40#56#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Services/UploadService.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="34" column="59" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Services/MailerService.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="92" column="5" lean-forward="true" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="71" column="32" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/parts/bussiness_mail_template.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -222,7 +169,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/lang/en/menu.php" />
         <option value="$PROJECT_DIR$/public/css/app.css" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_26_190037_create_subscriber_categories_table.php" />
@@ -273,6 +219,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" />
         <option value="$PROJECT_DIR$/app/Http/Services/UploadService.php" />
         <option value="$PROJECT_DIR$/app/Http/Services/MailerService.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_05_01_054012_create_jobs_table.php" />
       </list>
     </option>
   </component>
@@ -404,26 +351,6 @@
             <path>
               <item name="smartlab_website" type="b2602c69:ProjectViewProjectNode" />
               <item name="smartlab_website" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smartlab_website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartlab_website" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smartlab_website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartlab_website" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smartlab_website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartlab_website" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -435,26 +362,7 @@
             <path>
               <item name="smartlab_website" type="b2602c69:ProjectViewProjectNode" />
               <item name="smartlab_website" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="temp_files" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smartlab_website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartlab_website" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smartlab_website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartlab_website" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smartlab_website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartlab_website" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="parts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="smartlab_website" type="b2602c69:ProjectViewProjectNode" />
@@ -522,12 +430,12 @@
       <workItem from="1556614916012" duration="3496000" />
       <workItem from="1556628600685" duration="2108000" />
       <workItem from="1556632568767" duration="1130000" />
-      <workItem from="1556643922767" duration="7495000" />
+      <workItem from="1556643922767" duration="8352000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174666000" />
+    <option name="totallyTimeSpent" value="175523000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -581,13 +489,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/blogs/blogs_edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
-          <caret line="67" column="38" selection-start-line="67" selection-start-column="38" selection-end-line="67" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/admins/admins_list.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
@@ -870,16 +771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ContactController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="60" selection-end-column="65" />
-          <folding>
-            <element signature="e#40#56#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Services/UploadService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="410">
@@ -887,10 +778,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_01_054012_create_jobs_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Services/MailerService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="92" column="5" lean-forward="true" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
+        <state relative-caret-position="1410">
+          <caret line="100" column="36" selection-start-line="100" selection-start-column="36" selection-end-line="100" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ContactController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="706">
+          <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="60" selection-end-column="65" />
+          <folding>
+            <element signature="e#40#56#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
