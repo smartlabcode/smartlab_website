@@ -32,15 +32,30 @@
 
         <div id="mainDashboardContainer">
 
-            <a href="{{route('admins.index')}}">
-                <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Admins</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Admins Management</h5>
-                        <p class="card-text">Create, edit or delete admins.</p>
+            <!-- Show admins and subscribers pages only to super admins -->
+            @if(\Illuminate\Support\Facades\Auth::user()->roles_id == 1)
+
+                <a href="{{route('admins.index')}}">
+                    <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                        <div class="card-header">Admins</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Admins Management</h5>
+                            <p class="card-text">Create, edit or delete admins.</p>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
+
+                <a href="/subscribers">
+                    <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                        <div class="card-header">Subscribers</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Subscribers list</h5>
+                            <p class="card-text">See list of all newsletter subscribers.</p>
+                        </div>
+                    </div>
+                </a>
+
+            @endif
 
             <a href="{{route('blogs.index')}}">
                 <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
@@ -48,16 +63,6 @@
                     <div class="card-body">
                         <h5 class="card-title">Blogs Management</h5>
                         <p class="card-text">Create, edit, delete, publish, unpublish blogs.</p>
-                    </div>
-                </div>
-            </a>
-
-            <a href="/subscribers">
-                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Subscribers</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Subscribers list</h5>
-                        <p class="card-text">See list of all newsletter subscribers.</p>
                     </div>
                 </div>
             </a>

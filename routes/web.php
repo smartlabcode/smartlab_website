@@ -69,6 +69,10 @@ Route::post('subscribe', 'SubscribeController@saveSubscriber');
 Route::get('assets', 'ImagesController@index');
 Route::post('assets', 'ImagesController@update');
 
+// routes for editing website translations
+Route::get('translations', 'TranslationsController@index');
+Route::get('translations/edit/{file}', 'TranslationsController@edit');
+
 // authorization routes - register option is disabled
 Auth::routes([
     'register' => false

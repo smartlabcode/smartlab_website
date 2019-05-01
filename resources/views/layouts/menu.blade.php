@@ -15,25 +15,25 @@
     @auth
 
         <!-- This menu item is available to super admins only (list of all admins) -->
-        @if(\Illuminate\Support\Facades\Auth::user()->roles_id == 1)
-            <li class="nav-item">
-                <a href="{{route('admins.index')}}">@lang('menu.sixth_item')</a>
-            </li>
-        @endif
-
+        {{--@if(\Illuminate\Support\Facades\Auth::user()->roles_id == 1)--}}
         <li class="nav-item">
-            <a href="{{route('blogs.index')}}">@lang('menu.seventh_item')</a>
+            <a href="/dashboard">@lang('menu.sixth_item')</a>
         </li>
+        {{--@endif--}}
+
+        {{--<li class="nav-item">--}}
+            {{--<a href="{{route('blogs.index')}}">@lang('menu.seventh_item')</a>--}}
+        {{--</li>--}}
 
         <!-- This menu item is available to super admins only (list of all subscribers) -->
-        @if(\Illuminate\Support\Facades\Auth::user()->roles_id == 1)
-            <li class="nav-item">
-                <a href="/subscribers">@lang('menu.eight_item')</a>
-            </li>
-        @endif
+        {{--@if(\Illuminate\Support\Facades\Auth::user()->roles_id == 1)--}}
+            {{--<li class="nav-item">--}}
+                {{--<a href="/subscribers">@lang('menu.eight_item')</a>--}}
+            {{--</li>--}}
+        {{--@endif--}}
 
         <!-- List of all logs in the system -->
-        <li class="nav-item"><a href="/logs">@lang('menu.ninth_item')</a></li>
+        {{--<li class="nav-item"><a href="/logs">@lang('menu.ninth_item')</a></li>--}}
 
         <!-- Link for logging out -->
         <li class="nav-item"><a href="{{route('logout')}}">@lang('menu.tenth_item')</a></li>
