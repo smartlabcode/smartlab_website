@@ -19,26 +19,30 @@ class UploadService
         $this->logService = $logService;
     }
 
+    /**
+     *
+     * @param $files
+     * @param bool $path
+     */
     public function uploadFiles($files, $path = false) {
-        // count of uploaded files in array
+        // count number of uploaded files
         $total = count($files['files']['name']);
 
-        // Loop through each file
+        // loop through each file which has been uploaded (one or many)
         for( $i = 0 ; $i < $total ; $i++ ) {
 
             //Get the temp file path
             $tmpFilePath = $files['files']['tmp_name'][$i];
 
-            //Make sure we have a file path
+            // check if path is set
             if ($tmpFilePath != ""){
-                //Setup our new file path
+
+                // set up our new file path
                 $newFilePath = $path . "/" . $files['files']['name'][$i];
 
-               // move_uploaded_file($tmpFilePath, $newFilePath);
-
-                //Upload the file into the temp dir
+                // upload file into the temp folder
                 if (!move_uploaded_file($tmpFilePath, $newFilePath)) {
-                    // add log
+                    // add log if file couldnt be stored(uploaded)
                     $this->logService->setLog('ERROR', 'Couldnt upload file to the server.');
                 }
             }

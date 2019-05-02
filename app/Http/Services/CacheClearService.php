@@ -18,6 +18,9 @@ class CacheClearService
         $this->logService = $logService;
     }
 
+    /**
+     * Clear cached view templates
+     */
     public function clearViewsCache() {
 
         try {

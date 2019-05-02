@@ -37,7 +37,7 @@ class UsersController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
+            $this->logService->setLog('ERROR', 'UsersController - index: ' . $e->getMessage());
 
             // return error view
             return view('pages.general_error');
@@ -58,7 +58,7 @@ class UsersController extends Controller
 
         }catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
+            $this->logService->setLog('ERROR', 'UsersController - create: ' . $e->getMessage());
 
             // return error view
             return view('pages.general_error');
@@ -138,7 +138,7 @@ class UsersController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
+            $this->logService->setLog('ERROR', 'UsersController - edit: ' . $e->getMessage());
 
             // return error view
             return view('pages.general_error');
@@ -193,7 +193,8 @@ class UsersController extends Controller
         try {
             // get specific admin
             $admin = User::findOrFail($id);
-            // force deleting admin even it table is adjusted for soft deletes
+
+            // force deleting admin even if table is adjusted for soft deletes
             $admin->forceDelete();
 
             // return with message
@@ -201,7 +202,7 @@ class UsersController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
+            $this->logService->setLog('ERROR', 'UsersController - destroy: ' . $e->getMessage());
 
             // return with message
             $request->session()->flash('error', 'Admin couldnt be deleted.');

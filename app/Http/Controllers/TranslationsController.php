@@ -57,7 +57,7 @@ class TranslationsController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
+            $this->logService->setLog('ERROR', 'TranslationsController - index: ' . $e->getMessage());
 
             // return error view
             return view('pages.general_error');
@@ -85,7 +85,7 @@ class TranslationsController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
+            $this->logService->setLog('ERROR', 'TranslationsController - edit: ' . $e->getMessage());
 
             // return error view
             return view('pages.general_error');
@@ -140,7 +140,7 @@ class TranslationsController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
+            $this->logService->setLog('ERROR', 'TranslationsController - update: ' . $e->getMessage());
 
             return back()->withErrors('message', 'Translations couldnt be edited.');
         }

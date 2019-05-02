@@ -26,7 +26,7 @@ class PagesController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
+            $this->logService->setLog('ERROR', 'PagesController - index: '. $e->getMessage());
 
             // return error view
             return view('pages.general_error');
@@ -45,7 +45,7 @@ class PagesController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
+            $this->logService->setLog('ERROR', 'PagesController - showCoursesPage: '. $e->getMessage());
 
             // return error view
             return view('pages.general_error');
@@ -64,7 +64,7 @@ class PagesController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
+            $this->logService->setLog('ERROR', 'PagesController - showAnimationsPage: ' . $e->getMessage());
 
             // return error view
             return view('pages.general_error');
@@ -83,7 +83,7 @@ class PagesController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
+            $this->logService->setLog('ERROR', 'PagesController - showProgrammingPage: ' . $e->getMessage());
 
             // return error view
             return view('pages.general_error');
@@ -102,7 +102,7 @@ class PagesController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
+            $this->logService->setLog('ERROR', 'PagesController - showMoodlePage: ' . $e->getMessage());
 
             // return error view
             return view('pages.general_error');

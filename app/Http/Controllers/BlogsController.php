@@ -52,7 +52,7 @@ class BlogsController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
+            $this->logService->setLog('ERROR', 'BlogsController - index: '. $e->getMessage());
 
             // return error view
             return view('pages.general_error');
@@ -73,7 +73,7 @@ class BlogsController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
+            $this->logService->setLog('ERROR', 'BlogsController - create: '. $e->getMessage());
 
             // return error view
             return view('pages.general_error');
@@ -118,7 +118,7 @@ class BlogsController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
+            $this->logService->setLog('ERROR', 'BlogsController - add: '. $e->getMessage());
 
             // return error view
             return view('pages.general_error');
@@ -232,7 +232,7 @@ class BlogsController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
+            $this->logService->setLog('ERROR', 'BlogsController - edit: '. $e->getMessage());
 
             // return error view
             return view('pages.general_error');
@@ -309,7 +309,7 @@ class BlogsController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
+            $this->logService->setLog('ERROR', 'BlogsController - destroy: '. $e->getMessage());
 
             // return with message
             $request->session()->flash('error', 'Blog couldnt be deleted.');
@@ -345,7 +345,7 @@ class BlogsController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
+            $this->logService->setLog('ERROR', 'BlogsController - publish: '. $e->getMessage());
 
             // return with message
             $request->session()->flash('error', 'Couldnt change blog published state.');

@@ -48,7 +48,7 @@ class ImagesController extends Controller
 
         } catch (\Exception $e) {
             // write log
-            $this->logService->setLog('ERROR', $e->getMessage());
+            $this->logService->setLog('ERROR', 'ImagesController - index: '. $e->getMessage());
 
             // return error page
             return view('pages.general_error');
@@ -88,7 +88,7 @@ class ImagesController extends Controller
 
         } catch (\Exception $e) {
             // write log
-            $this->logService->setLog('ERROR', $e->getMessage());
+            $this->logService->setLog('ERROR', 'ImagesController - update: '. $e->getMessage());
 
             return back()->withErrors('message', 'Image couldnt be changed');
         }

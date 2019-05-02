@@ -13,7 +13,6 @@ use PHPMailer\PHPMailer\Exception;
 
 class MailerService
 {
-
     private $logService;
 
     public function __construct(LogService $logService)
@@ -86,19 +85,20 @@ class MailerService
             $zip = new \ZipArchive();
             $zip->open('temp_files/' . $folderName . '/contact.zip', \ZipArchive::CREATE);
 
+            // loop through specified folder and add all the files to the zip
             foreach (glob("temp_files/" . $folderName . "/*") as $file) {
                 if (is_file($file)) {
                     $zip->addFile($file);
                 }
             }
 
+            // close zip object
             $zip->close();
 
         } catch (\Exception $e) {
             // add log
             $this->logService->setLog('ERROR', $e->getMessage());
         }
-
     }
 
     /**
@@ -121,7 +121,6 @@ class MailerService
             // add log
             $this->logService->setLog('ERROR', $e->getMessage());
         }
-
     }
 
 }

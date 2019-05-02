@@ -54,7 +54,7 @@ class SubscribeController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
+            $this->logService->setLog('ERROR', 'SubscribeController - saveSubscriber: ' . $e->getMessage());
 
             // redirect with message
             return back()->withErrors([
@@ -82,7 +82,7 @@ class SubscribeController extends Controller
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
+            $this->logService->setLog('ERROR', 'SubscribeController - listSubscribers: ' . $e->getMessage());
 
             // return error view
             return view('pages.general_error');

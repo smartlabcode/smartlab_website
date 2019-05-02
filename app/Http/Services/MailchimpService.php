@@ -88,6 +88,7 @@ class MailchimpService
             // add log
             $this->logService->setLog('ERROR', $e->getMessage());
 
+            // return empty array if error appears
             return [];
         }
     }
