@@ -134,6 +134,7 @@ class BlogsController extends Controller
      */
     public function store(Request $request)
     {
+        // TODO issues with try/catch block and data validation
         // create blog and blogTranslation objects
         $blog = new Blog();
         $blogTranslation = new BlogTranslation();
@@ -205,7 +206,6 @@ class BlogsController extends Controller
     public function edit($id, $lang)
     {
         try {
-
             // get blog for editing
             $blog = DB::table('blogs')
                 ->select(
@@ -248,6 +248,7 @@ class BlogsController extends Controller
      */
     public function update(Request $request, $id, $lang)
     {
+        // TODO issues with try/catch block and data validation
         // set request data to session so that it can be used for old input if neccessary
         $request->flash();
 
@@ -295,7 +296,6 @@ class BlogsController extends Controller
     public function destroy(Request $request, $id)
     {
         try {
-
             // get blog to delete
             $blog = Blog::findOrFail($id);
             // soft delete it

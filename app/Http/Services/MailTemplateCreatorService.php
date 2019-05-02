@@ -1,0 +1,45 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: user
+ * Date: 02/05/2019
+ * Time: 12:16
+ */
+
+namespace App\Http\Services;
+
+
+use Illuminate\Support\Facades\View;
+
+class MailTemplateCreatorService
+{
+
+    private $logService;
+
+    public function __construct(LogService $logService)
+    {
+        $this->logService = $logService;
+    }
+
+    /**
+     * @param $view
+     * @param $data
+     * @return string
+     */
+    public function createTemplateFromView($view, $data) {
+
+        try {
+            // create view
+            $view = View::make($view, $data);
+            // render to variable
+            $template = $view->render();
+            // return
+            return $template;
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', $e->getMessage());
+        }
+
+    }
+}

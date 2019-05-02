@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Services\LogService;
 use App\Http\Services\MailerService;
+use App\Http\Services\MailTemplateCreatorService;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -103,11 +104,11 @@ class UsersController extends Controller
         $mailer = new MailerService(new LogService());
 
         // get corresponding mail template
-        $view = View::make('parts.admin_mail_template', [
+        $mailTemplateCreator = new MailTemplateCreatorService($this->logService);
+        $template = $mailTemplateCreator->createTemplateFromView('parts.admin_mail_template', [
             'email' => $request->input('email'),
             'password' => $request->input('password')
         ]);
-        $template = $view->render();
 
         // send mail to new admin
         $mailer->sendEmail('Smartlab Admin', $request->input('email'), $template);

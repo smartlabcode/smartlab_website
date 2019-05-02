@@ -21,6 +21,11 @@ class ImagesController extends Controller
         $this->clearerService = $clearerService;
     }
 
+    /**
+     * List all images in the system
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index(){
 
         try {
@@ -51,6 +56,12 @@ class ImagesController extends Controller
 
     }
 
+    /**
+     * Replace an image with the new one
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function update(Request $request) {
 
         try {

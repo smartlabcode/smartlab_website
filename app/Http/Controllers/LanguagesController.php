@@ -36,7 +36,7 @@ class LanguagesController extends Controller
             $this->logService->setLog('ERROR', $e->getMessage());
         }
 
-        // return to last visted page
+        // return to last visited page
         return back();
     }
 }

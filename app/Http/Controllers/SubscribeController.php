@@ -27,6 +27,8 @@ class SubscribeController extends Controller
     public function saveSubscriber(Request $request, MailchimpService $mailchimp) {
 
         try {
+            // set request data to session so that it can be used for old input if neccessary
+            $request->flash();
 
             // validate data
             $request->validate([

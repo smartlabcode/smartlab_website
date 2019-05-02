@@ -15,6 +15,11 @@ class LogsController extends Controller
         $this->logService = $logService;
     }
 
+    /**
+     * List all los from the system
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index() {
 
         try {
