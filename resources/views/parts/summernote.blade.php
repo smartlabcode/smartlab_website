@@ -36,19 +36,23 @@
                 ['insert', ['picture', 'link', 'table', 'hr']],
                 ['misc', ['undo', 'redo', 'fullscreen', 'help', 'codeview']]
             ],
+            //fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Nunito', 'Courier New', 'Merriweather'],
             tabsize: 10,
-            height: 380,
-            dialogsInBody: true,
-            callbacks:{
-                onInit:function(){
-                    $('body > .note-popover').hide();
-                }
-            },
-            codemirror: { // codemirror options
-                theme: 'monokai'
-            },
-            focus: true
+                height: 380,
+                dialogsInBody: true,
+                dialogsFade: true,
+                callbacks:{
+                    onInit:function(){
+                        $('body > .note-popover').hide();
+                    }
+                },
+                codemirror: { // codemirror options
+                    theme: 'monokai'
+                },
+                focus: true
         });
+
+        //$('#content').summernote('fontName', 'Arial');
     });
 
     // wait for Summernote to be created and then set blog text value in it

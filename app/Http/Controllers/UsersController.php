@@ -73,6 +73,7 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
+        // TODO issues with try/catch block and data validation
         // create user object
         $admin = new User();
 
@@ -152,6 +153,7 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
+        // TODO issues with try/catch block and data validation
         // get specific admin
         $admin = User::findOrFail($id);
 

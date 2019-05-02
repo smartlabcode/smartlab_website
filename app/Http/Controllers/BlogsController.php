@@ -143,8 +143,8 @@ class BlogsController extends Controller
 
         // check if neccessary values are entered correctly, if no return error messages
         $request->validate([
-            'content' => 'required',
-            'title' => 'required',
+            'content' => 'required|min:3',
+            'title' => 'required|min:3|max:255',
             'language' => 'in:en,de,bs',
             'existing' => 'in:true,false',
             'tags' => 'required'

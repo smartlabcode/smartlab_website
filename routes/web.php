@@ -31,6 +31,11 @@ Route::middleware(['auth'])->group(function() {
     // route for logs
     Route::get('logs', 'LogsController@index');
 
+    // routes for editing website translations
+    Route::get('translations', 'TranslationsController@index');
+    Route::get('translations/edit/{file}', 'TranslationsController@edit');
+    Route::put('translations', 'TranslationsController@update');
+
     // following routes are only accessible by the superadmin/s
     Route::get('subscribers', 'SubscribeController@listSubscribers')->middleware(['is_superadmin']);
     Route::resource('admins', 'UsersController')->except([
@@ -68,11 +73,6 @@ Route::post('subscribe', 'SubscribeController@saveSubscriber');
 // routes for editing website images
 Route::get('assets', 'ImagesController@index');
 Route::post('assets', 'ImagesController@update');
-
-// routes for editing website translations
-Route::get('translations', 'TranslationsController@index');
-Route::get('translations/edit/{file}', 'TranslationsController@edit');
-Route::put('translations', 'TranslationsController@update');
 
 // authorization routes - register option is disabled
 Auth::routes([

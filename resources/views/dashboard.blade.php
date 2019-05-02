@@ -49,7 +49,7 @@
                     <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
                         <div class="card-header">Subscribers</div>
                         <div class="card-body">
-                            <h5 class="card-title">Subscribers list</h5>
+                            <h5 class="card-title">Subscribers List</h5>
                             <p class="card-text">See list of all newsletter subscribers.</p>
                         </div>
                     </div>
@@ -71,7 +71,7 @@
                 <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
                     <div class="card-header">Logs</div>
                     <div class="card-body">
-                        <h5 class="card-title">System logs</h5>
+                        <h5 class="card-title">System Logs</h5>
                         <p class="card-text">Check the error reports from the system.</p>
                     </div>
                 </div>
@@ -81,7 +81,7 @@
                 <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
                     <div class="card-header">Images</div>
                     <div class="card-body">
-                        <h5 class="card-title">System images</h5>
+                        <h5 class="card-title">System Images</h5>
                         <p class="card-text">Change images in the system.</p>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
                 <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
                     <div class="card-header">Translations</div>
                     <div class="card-body">
-                        <h5 class="card-title">System translations</h5>
+                        <h5 class="card-title">System Translations</h5>
                         <p class="card-text">Edit existing translations of the system.</p>
                     </div>
                 </div>

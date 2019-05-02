@@ -87,9 +87,9 @@ class MailchimpService
         } catch (\Exception $e) {
             // add log
             $this->logService->setLog('ERROR', $e->getMessage());
-        }
 
-        return [];
+            return [];
+        }
     }
 
 //    public function createTemplate($title, $body) {

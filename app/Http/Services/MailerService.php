@@ -80,16 +80,25 @@ class MailerService
      * @param $contactType
      */
     private function zip($folderName) {
-        $zip = new \ZipArchive();
-        $zip->open('temp_files/' . $folderName . '/contact.zip', \ZipArchive::CREATE);
-        foreach (glob("temp_files/" . $folderName . "/*") as $file) {
-            if (is_file($file)) {
-                $zip->addFile($file);
+
+        try {
+            // create zip file and store attachments in it
+            $zip = new \ZipArchive();
+            $zip->open('temp_files/' . $folderName . '/contact.zip', \ZipArchive::CREATE);
+
+            foreach (glob("temp_files/" . $folderName . "/*") as $file) {
+                if (is_file($file)) {
+                    $zip->addFile($file);
+                }
             }
 
-            //if ($file != 'target_folder/important.txt') unlink($file);
+            $zip->close();
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', $e->getMessage());
         }
-        $zip->close();
+
     }
 
     /**
@@ -98,13 +107,21 @@ class MailerService
      * @param $contactType
      */
     private function delete($folderName) {
-        // delete all uploaded files
-        foreach (glob("temp_files/" . $folderName . "/*") as $file) {
-            unlink($file);
+
+        try {
+            // delete all uploaded files
+            foreach (glob("temp_files/" . $folderName . "/*") as $file) {
+                unlink($file);
+            }
+
+            // delete folder
+            rmdir("temp_files/" . $folderName);
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', $e->getMessage());
         }
 
-        // delete folder
-        rmdir("temp_files/" . $folderName);
     }
 
 }

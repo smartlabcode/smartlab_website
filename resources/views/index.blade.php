@@ -76,5 +76,7 @@
 
     </form>
 
+    <img src="{{ asset('images/blog.jpg') }}"/>
+
 @endsection
 

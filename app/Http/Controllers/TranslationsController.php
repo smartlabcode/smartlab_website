@@ -22,12 +22,18 @@ class TranslationsController extends Controller
 
         session_start();
 
+        $out = ['validation.php', 'pagination.php', 'auth.php', 'passwords.php'];
+
         $path = "../resources/lang/" . App::getlocale() . "/*";
         foreach (glob($path) as $file) {
             if (is_file($file)) {
 
                 $fileName = basename($file);
-                array_push($files, substr($fileName, 0, -4));
+
+                if(!in_array($fileName, $out)) {
+                    $fileName = substr($fileName, 0, -4);
+                    array_push($files, $fileName);
+                }
             }
         }
 
