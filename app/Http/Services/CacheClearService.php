@@ -33,7 +33,7 @@ class CacheClearService
 
         } catch (\Exception $e) {
             // write log
-            $this->logService->setLog('ERROR', $e->getMessage());
+            $this->logService->setLog('ERROR', 'CacheClearService - clearViewsCache: ' . $e->getMessage());
         }
     }
 }

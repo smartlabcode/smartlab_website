@@ -29,8 +29,12 @@ class ImagesController extends Controller
     public function index(){
 
         try {
+
             // initialize array for collecting image links
             $links = array();
+
+            // clear views cache
+            $this->clearerService->clearViewsCache();
 
             // go to images folder and get all images links
             foreach (glob("images/*") as $file) {
@@ -76,9 +80,6 @@ class ImagesController extends Controller
 
             // delete old image
             unlink($path . $imageName);
-
-            // clear views cache
-            $this->clearerService->clearViewsCache();
 
             // upload new image with same name as the old one so that image links are not broken
             $this->uploader->uploadFiles($_FILES, $path);

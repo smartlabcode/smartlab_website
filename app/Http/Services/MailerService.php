@@ -68,7 +68,7 @@ class MailerService
 
         } catch (Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', $mail->ErrorInfo);
+            $this->logService->setLog('ERROR', 'MailchimpService - sendEmail: ' . $mail->ErrorInfo);
         }
 
     }
@@ -97,7 +97,7 @@ class MailerService
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
+            $this->logService->setLog('ERROR', 'MailerService - zip: ' . $e->getMessage());
         }
     }
 
@@ -119,7 +119,7 @@ class MailerService
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
+            $this->logService->setLog('ERROR', 'MailchimpService - delete: ' . $e->getMessage());
         }
     }
 

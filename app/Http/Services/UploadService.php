@@ -43,7 +43,7 @@ class UploadService
                 // upload file into the temp folder
                 if (!move_uploaded_file($tmpFilePath, $newFilePath)) {
                     // add log if file couldnt be stored(uploaded)
-                    $this->logService->setLog('ERROR', 'Couldnt upload file to the server.');
+                    $this->logService->setLog('ERROR', 'UploadService - uploadFiles: ' . 'Couldnt upload file to the server.');
                 }
             }
         }

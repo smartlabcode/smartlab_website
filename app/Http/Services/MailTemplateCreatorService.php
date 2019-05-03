@@ -38,8 +38,7 @@ class MailTemplateCreatorService
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
+            $this->logService->setLog('ERROR', 'MailTemplateCreatorService - createTemplateFromView: ' . $e->getMessage());
         }
-
     }
 }

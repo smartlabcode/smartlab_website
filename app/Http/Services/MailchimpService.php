@@ -51,7 +51,7 @@ class MailchimpService
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
+            $this->logService->setLog('ERROR', 'MailchimpService - addPendingSubscriber: ' . $e->getMessage());
         }
         
     }
@@ -86,7 +86,7 @@ class MailchimpService
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', $e->getMessage());
+            $this->logService->setLog('ERROR', 'MailchimpService - listSubscribers: ' . $e->getMessage());
 
             // return empty array if error appears
             return [];
