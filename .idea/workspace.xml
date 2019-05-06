@@ -4,13 +4,7 @@
     <list default="true" id="54eccf3b-5991-4a5b-afd1-7c57d47320c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ImagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ImagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Services/CacheClearService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/CacheClearService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Services/MailTemplateCreatorService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/MailTemplateCreatorService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Services/MailchimpService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/MailchimpService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Services/MailerService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/MailerService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Services/UploadService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/UploadService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/faktor.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/faktor.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/blog.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/blog.jpg" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/beyondcode/laravel-dump-server/" />
     <ignored path="$PROJECT_DIR$/vendor/composer/" />
@@ -98,57 +92,6 @@
   <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="168846752">
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Blade" value="238" />
-          <entry key="CSS" value="5" />
-          <entry key="Image" value="8" />
-          <entry key="JavaScript" value="6" />
-          <entry key="PHP" value="400" />
-          <entry key="PLAIN_TEXT" value="22" />
-          <entry key="SVG" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="Blade" value="20936" />
-          <entry key="CSS" value="261" />
-          <entry key="HTML" value="11" />
-          <entry key="JavaScript" value="215" />
-          <entry key="PHP" value="30401" />
-          <entry key="PLAIN_TEXT" value="250" />
-          <entry key="SQL" value="67" />
-          <entry key="SVG" value="13" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="16" />
-          <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.200" value="1" />
-          <entry key="project.open.time.23" value="1" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.33" value="1" />
-          <entry key="project.open.time.37" value="1" />
-          <entry key="project.open.time.39" value="1" />
-          <entry key="project.open.time.4" value="2" />
-          <entry key="project.open.time.413" value="1" />
-          <entry key="project.open.time.43" value="1" />
-          <entry key="project.open.time.55" value="1" />
-          <entry key="project.open.time.56" value="2" />
-          <entry key="project.open.time.72" value="1" />
-          <entry key="project.opened" value="16" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.php.new.class">
-        <counts>
-          <entry key="PHP Class.type" value="6" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FavoritesManager">
     <favorites_list name="smartlab_website" />
   </component>
@@ -157,8 +100,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ImagesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="81" column="39" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
+            <state relative-caret-position="194">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
               <folding>
                 <element signature="e#40#80#0#PHP" expanded="true" />
               </folding>
@@ -442,6 +385,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="dashboard&#9;FILE&#9;file:///Users/user/Desktop/Projects/smartlab_website/resources/views/dashboard.blade.php&#10;app.css&#9;FILE&#9;file:///Users/user/Desktop/Projects/smartlab_website/public/css/app.css&#10;app.js&#9;FILE&#9;file:///Users/user/Desktop/Projects/smartlab_website/public/js/app.js&#10;dashb&#9;null&#9;null&#10;web.&#9;FILE&#9;file:///Users/user/Desktop/Projects/smartlab_website/routes/web.php&#10;home&#9;FILE&#9;file:///Users/user/Desktop/Projects/smartlab_website/app/Http/Controllers/HomeController.php&#10;register&#9;null&#9;null&#10;web&#9;FILE&#9;file:///Users/user/Desktop/Projects/smartlab_website/routes/web.php&#10;logout&#9;null&#9;null&#10;appser&#9;FILE&#9;file:///Users/user/Desktop/Projects/smartlab_website/app/Providers/AppServiceProvider.php&#10;appserv&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -499,12 +443,12 @@
       <workItem from="1556643922767" duration="23894000" />
       <workItem from="1556729001539" duration="3719000" />
       <workItem from="1556783085120" duration="10031000" />
-      <workItem from="1556864696624" duration="948000" />
+      <workItem from="1556864696624" duration="1333000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="205714000" />
+    <option name="totallyTimeSpent" value="206148000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -517,7 +461,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50547945" side_tool="true" weight="0.3085622" />
       <window_info id="npm" order="1" side_tool="true" />
@@ -827,8 +770,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ImagesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="81" column="39" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
+        <state relative-caret-position="194">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="e#40#80#0#PHP" expanded="true" />
           </folding>
