@@ -3,7 +3,7 @@
 
 <style>
     :root {
-  --shadow-color: #a8a8a8;
+  --shadow-color: rgba(0, 53, 145, 0.15);
   --button-bg-color: #4885fa;
   --button-bg-orange: #ff931f;
   --h2-color: #0f75bc;
@@ -17,8 +17,10 @@
 body {
   margin: 0 auto;
   overflow-x: hidden;
+  background-color: white !important;
 }
 .contain{
+    max-width: 1200px;
     width: 90%;
     margin: 0 auto;
 }
@@ -290,7 +292,7 @@ body {
   padding-bottom: 100px;
 }
 .section-one-text {
-  width: 50%;
+  width: 60%;
   align-self: center;
   justify-content: space-between;
 }
@@ -301,7 +303,7 @@ body {
 .section-one-animation {
   object-fit: contain;
   height: 75vh;
-  width: 50%;
+  width: 40%;
   min-width: 350px;
 }
 
@@ -316,25 +318,28 @@ body {
   background-color: var(--button-bg-color);
 }
 .section-two-background-top {
-    transform: rotate(229deg) scale(0.5);
+    transform: rotate(230deg);
+    width: 100%;
     position: absolute;
     z-index: -100;
-    right: 59%;
-    top: -12%;
+    right: 80%;
+    top: 6%;
+
 }
 .section-two-backgound-top-orange {
-  position: absolute;
-  width: 25%;
-  left: -14%;
-  top: -2%;
-  z-index: -101;
+    position: absolute;
+    width: 25%;
+    left: -43%;
+    top: -5%;
+    z-index: -101;
 }
 .section-two-background-bot {
-  width: 45%;
-  position: absolute;
-  z-index: -100;
-  left: 90%;
-  bottom: -15%;
+    width: 100%;
+    position: absolute;
+    z-index: -100;
+    left: 80%;
+    bottom: -15%;
+    transform: rotate(30deg);
 }
 .section-two {
   padding-top: 75px;
@@ -365,11 +370,11 @@ body {
   bottom: 60%;
 }
 .section-two-background-bot-orange {
-  position: absolute;
-  width: 25%;
-  z-index: -101;
-  left: 90%;
-  bottom: -10%;
+    position: absolute;
+    width: 50%;
+    z-index: -101;
+    left: 80%;
+    bottom: -5%;
 }
 .section-two-top-left {
   display: flex;
@@ -398,7 +403,7 @@ body {
 .section-two-bot {
   min-height: 500px;
   display: flex;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .section-two-bot-item {
   min-height: 400px;
@@ -411,9 +416,9 @@ body {
   width: 33%;
   padding-bottom: 20px;
   border-radius: 15px;
-  -webkit-box-shadow: -1px -1px 15px 1px var(--shadow-color);
-  -moz-box-shadow: -1px -1px 15px 1px var(--shadow-color);
-  box-shadow: -1px -1px 15px 1px var(--shadow-color);
+  -webkit-box-shadow: -1px -1px 25px 1px var(--shadow-color);
+  -moz-box-shadow: -1px -1px 25px 1px var(--shadow-color);
+  box-shadow: -1px -1px 25px 1px var(--shadow-color);
 }
 .section-two-bot-item div {
     display: flex;
@@ -437,23 +442,29 @@ h2 span {
   display: block;
 }
 .section-two-bot-item img {
-  padding-top: 20px;
+    padding: 20px;
   object-fit: contain;
   width: 100%;
   height: 300px;
 }
+.--width-margin-top{
+    margin-top: 10px;
+    width: 97%;
+}
 .margin-both {
-  margin: 0 10px;
+  margin: 0 20px;
 }
 .section-three {
   position: relative;
 }
 .about-orange-circle {
-  position: absolute;
-  top: 0;
-  width: 25%;
-  left: -280px;
-  z-index: -100;
+    position: absolute;
+    top: -30%;
+    width: 50%;
+    transform: rotate(-150deg);
+    left: -65%;
+    z-index: -100;
+
 }
 .about-us {
   text-align: center;
@@ -479,27 +490,29 @@ h2 span {
   position: relative;
 }
 .team-orange-circle {
-  position: absolute;
-  transform: rotate(-100deg);
-  top: 0;
-  width: 25%;
-  right: -290px;
-  z-index: -100;
+    position: absolute;
+    transform: rotate(-111deg);
+    top: 0;
+    width: 35%;
+    right: -50%;
+    z-index: -100;
 }
 .team-orange-circle-bottom {
-  position: absolute;
-  width: 20%;
-  bottom: -70px;
-  left: -190px;
-  z-index: -101;
+    position: absolute;
+    width: 20%;
+    /* bottom: -70px; */
+    bottom: -5%;
+    left: -43%;
+    /* left: -340px; */
+    z-index: -101;
 }
 .team-blue-circle {
-  position: absolute;
-  width: 31%;
-  left: -290px;
-  bottom: -40px;
-  transform: rotate(166deg);
-  z-index: -100;
+    position: absolute;
+    width: 50%;
+    /* left: -420px; */
+    left: -63%;
+    transform: rotate(282deg);
+    z-index: -100;
 }
 .partners-images {
   flex-basis: 50%;
@@ -552,7 +565,7 @@ h2 span {
   padding-top: 20px;
 }
 .contact-form-group div {
-  flex-basis: 40%;
+    flex-basis: 47%;
 }
 .contact-form-group input,
 textarea {
@@ -650,6 +663,16 @@ textarea:focus {
         height: auto;
         width: 70%;
     }
+    .section-two-top-orange-img{
+        bottom: 76%;
+    }
+    .section-two-backgound-top-orange{
+        left: -23%;
+        top: 0%;
+    }
+    .section-two-background-top{
+        right: 66%;
+    }
     .section-two-bot{
         flex-direction: column;
     }
@@ -661,21 +684,22 @@ textarea:focus {
     }
     .section-two-bot-item div{
         height: unset;
-    flex-basis: 55%;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    text-align: left;
+        flex-basis: 55%;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: left;
     }
     .section-two-bot-item img{
         display: flex;
-    flex-direction: column;
-    padding: 50px;
-    flex-basis: 45%;
+        flex-direction: column;
+        padding: 50px;
+        flex-basis: 45%;
+        
     }
     .section-two-bot-item h2 {
-    margin-bottom: 2rem;
+        margin-bottom: 2rem;
 }
     .margin-both{
         margin: 10px 0;
@@ -683,6 +707,16 @@ textarea:focus {
     .contact-form-container{
         width: 80%;
     }
+    .contact-section{
+        background-position-y: 38%;
+    }
+    .background-img{
+        top: -80px;
+        right: -178px;
+        width: 100%;
+        height: auto;
+    }
+    
 }
 @media screen and (max-width: 600px){
     
@@ -1077,7 +1111,7 @@ textarea:focus {
           </div>
           <div class="section-two-bot">
             <div class="section-two-bot-item">
-              <img src="images/img/video-animation-img.svg" />
+              <img class="--width-margin-top" src="images/img/video-animation-img.svg" />
               <div>
                 <h2 class="h2-font">Educational <span>video animation</span></h2>
                 <p class="p-font">
@@ -1103,7 +1137,7 @@ textarea:focus {
               
             </div>
             <div class="section-two-bot-item">
-              <img src="images/img/moodle-img.svg" />
+              <img class="--width-margin-top" src="images/img/moodle-img.svg" />
               <div>
                 <h2 class="h2-font">Moodle <span>LMS Adaptation</span></h2>
                 <p class="p-font">
