@@ -18,6 +18,10 @@ body {
   margin: 0 auto;
   overflow-x: hidden;
 }
+.contain{
+    width: 90%;
+    margin: 0 auto;
+}
 .bold {
   font-weight: bold;
 }
@@ -307,7 +311,7 @@ body {
   border-radius: 35px;
   width: 260px;
   height: 70px;
-  font-size: 20pt;
+  font-size: 1.7em;
   color: white;
   background-color: var(--button-bg-color);
 }
@@ -413,9 +417,10 @@ body {
 }
 .section-two-bot-item div {
     display: flex;
-    height: 300px;
+    height: 400px;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
 }
 .section-two-bot-item button {
   margin-top: 20px;
@@ -426,7 +431,7 @@ body {
   padding: 0 20px;
 }
 .section-two-bot-item h2 {
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
 }
 h2 span {
   display: block;
@@ -522,7 +527,7 @@ h2 span {
   bottom: 0;
 }
 .contact-form-container {
-  width: 60%;
+  width: 50%;
   margin: 0 auto;
   padding-top: 300px;
 }
@@ -551,11 +556,11 @@ h2 span {
 }
 .contact-form-group input,
 textarea {
-  padding: 25px;
+  padding: 15px 25px;
   border-radius: 10px;
   background-color: rgba(122, 161, 233, 0.5);
   border: 2px solid rgba(255, 255, 255, 0);
-  resize: none;
+  resize: none !important;
 }
 input:focus,
 textarea:focus {
@@ -618,6 +623,72 @@ textarea:focus {
   font-size: 1.5em;
   font-weight: bold;
   color: white;
+}
+@media screen and (max-width: 1200px){
+    .contain{
+        width: 95%;
+        margin:0 auto;
+    }
+    
+}
+@media screen and (max-width: 900px){
+    .section-two-hero h2, .about-us h2{
+        padding: 0 15%;
+    }
+    .section-one{
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 0;
+    }
+    .section-one-text{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 100px;
+        margin-top: 100px;
+    }
+    .section-one-animation{
+        height: auto;
+        width: 70%;
+    }
+    .section-two-bot{
+        flex-direction: column;
+    }
+    .section-two-bot-item{
+        display: flex;
+        height: 500px;
+        width: 100%;
+        flex-direction: row;
+    }
+    .section-two-bot-item div{
+        height: unset;
+    flex-basis: 55%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+    }
+    .section-two-bot-item img{
+        display: flex;
+    flex-direction: column;
+    padding: 50px;
+    flex-basis: 45%;
+    }
+    .section-two-bot-item h2 {
+    margin-bottom: 2rem;
+}
+    .margin-both{
+        margin: 10px 0;
+    }
+    .contact-form-container{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 600px){
+    
+}
+@media screen and (max-width: 360px){
+    
 }
 @media screen and (max-width: 970px) {
   .button-overlay {
@@ -946,7 +1017,7 @@ textarea:focus {
             />
           </div>
         </div>
-        <section class="section-one">
+        <section class="section-one contain">
           <div class="section-one-text">
             <h2 class="h2-font">We design and develop</h2>
             <h1 class="h1-font bold">E-LEARNING SOLUTIONS</h1>
@@ -962,7 +1033,7 @@ textarea:focus {
           />
         </section>
       </div>
-      <section class="section-two">
+      <section class="section-two contain">
         <img
           class="section-two-background-top"
           src="images/img/header-fluid-blue.svg"
@@ -979,10 +1050,10 @@ textarea:focus {
         <div class="section-two-hero">
           <div>
             <h1 class="h1-font">What We Do?</h1>
-            <p class="h2-font">
+            <h2 class="h2-font">
               SmartLab offers different services with focus on the e-Learning
               industry.
-            </p>
+            </h2>
             <button class="button submit">Explore</button>
           </div>
         </div>
@@ -1013,9 +1084,10 @@ textarea:focus {
                   Entertain and educate your trainees with our
                   attention-grabbing and engaging animated videos.
                 </p>
+                <button class="button">Learn More</button>
               </div>
 
-              <button class="button">Learn More</button>
+              
             </div>
             <div class="section-two-bot-item margin-both">
               <img src="images/img/development-img.svg" />
@@ -1026,8 +1098,9 @@ textarea:focus {
                   interacitivty options making your courses compelling and user
                   friendly.
                 </p>
+                <button class="button">Learn More</button>
               </div>
-              <button class="button">Learn More</button>
+              
             </div>
             <div class="section-two-bot-item">
               <img src="images/img/moodle-img.svg" />
@@ -1038,14 +1111,15 @@ textarea:focus {
                   Moodle with customizable features to create private websites
                   with online coursed.
                 </p>
+                <button class="button">Learn More</button>
               </div>
 
-              <button class="button">Learn More</button>
+              
             </div>
           </div>
         </div>
       </section>
-      <section id="about" class="section-three">
+      <section id="about" class="section-three contain">
         <img class="about-orange-circle" src="images/img/orange-circle.svg" />
         <div>
           <div class="about-us">
@@ -1069,7 +1143,7 @@ textarea:focus {
           </div>
         </div>
       </section>
-      <section id="team" class="team">
+      <section id="team" class="team contain">
         <img class="team-orange-circle" src="images/img/orange-circle.svg" />
         <img class="team-blue-circle" src="images/img/blue-circle.svg" />
         <img class="team-orange-circle-bottom" src="images/img/orange-circle.svg" />
@@ -1087,7 +1161,7 @@ textarea:focus {
           </div>
         </div>
       </section>
-      <section >
+      <section class="contain">
         <div>
           <h1 class="text-center h1-font">Partners</h1>
           <div class="flex">
