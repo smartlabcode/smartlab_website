@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="1685.744 1198.428 633.858 661.47">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff931f"/>
+      <stop offset="1" stop-color="#ffb85b"/>
+    </linearGradient>
+  </defs>
+  <path id="Path_55" data-name="Path 55" class="cls-1" d="M183.64,7.206c146.261-38.733,312.9,85.91,334.069,202.558,26.009,143.559-174.635,233.184-286.667,254.465C114.507,486.3,21.954,408.044,1.574,235.1-12.388,117.436,69.131,37.606,183.64,7.206Z" transform="translate(1888.926 1859.915) rotate(-113)"/>
+</svg>
