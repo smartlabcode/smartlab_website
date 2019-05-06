@@ -316,6 +316,12 @@ body {
   font-size: 1.7em;
   color: white;
   background-color: var(--button-bg-color);
+  border: 1px solid var(--button-bg-color);
+}
+.button:hover{
+    background-color: white;
+    color: var(--button-bg-color);
+    border: 1px solid var(--button-bg-color);
 }
 .section-two-background-top {
     transform: rotate(230deg);
@@ -596,6 +602,12 @@ textarea:focus {
   align-self: flex-end;
   margin: 20px 0;
   background-color: var(--button-bg-orange);
+  border: 1px solid var(--button-bg-orange);
+}
+.submit:hover{
+    background-color: white;
+    color: var(--button-bg-orange);
+    border: 1px solid var(--button-bg-orange);
 }
 .contact-section {
   width: 112%;
