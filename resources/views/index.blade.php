@@ -34,8 +34,8 @@ body {
 }
 .p-font {
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 2em;
-  font-weight: lighter;
+  font-size: 1.5em;
+  font-weight: 300;
   color: var(--h1-color);
 }
 .background-section-one {
@@ -309,7 +309,6 @@ body {
   height: 70px;
   font-size: 20pt;
   color: white;
-  padding: 20px 0px;
   background-color: var(--button-bg-color);
 }
 .section-two-background-top {
@@ -413,7 +412,10 @@ body {
   box-shadow: -1px -1px 15px 1px var(--shadow-color);
 }
 .section-two-bot-item div {
-  flex-basis: 52%;
+    display: flex;
+    height: 300px;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .section-two-bot-item button {
   margin-top: 20px;
@@ -1006,7 +1008,7 @@ textarea:focus {
             <div class="section-two-bot-item">
               <img src="images/img/video-animation-img.svg" />
               <div>
-                <h2 class="h2-font">Educational video animation</h2>
+                <h2 class="h2-font">Educational <span>video animation</span></h2>
                 <p class="p-font">
                   Entertain and educate your trainees with our
                   attention-grabbing and engaging animated videos.
@@ -1018,7 +1020,7 @@ textarea:focus {
             <div class="section-two-bot-item margin-both">
               <img src="images/img/development-img.svg" />
               <div>
-                <h2 class="h2-font">Development/ programming</h2>
+                <h2 class="h2-font">Development/ <span>programming</span></h2>
                 <p class="p-font">
                   Back and front-end development of custom functions and
                   interacitivty options making your courses compelling and user
