@@ -112,8 +112,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/courses.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+            <state relative-caret-position="51">
+              <caret line="192" column="5" lean-forward="true" selection-start-line="192" selection-start-column="5" selection-end-line="192" selection-end-column="5" />
               <folding>
                 <element signature="e#1285#1311#0#HTML" expanded="true" />
                 <element signature="e#1909#1934#0#HTML" expanded="true" />
@@ -127,6 +127,7 @@
                 <element signature="e#4903#4922#0#HTML" expanded="true" />
                 <element signature="e#4956#5020#0#HTML" expanded="true" />
                 <element signature="e#5072#5149#0#HTML" expanded="true" />
+                <element signature="e#5439#5463#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -348,9 +349,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="2060" />
-    <option name="y" value="134" />
-    <option name="width" value="1942" />
-    <option name="height" value="876" />
+    <option name="y" value="233" />
+    <option name="width" value="1153" />
+    <option name="height" value="777" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -445,12 +446,12 @@
       <workItem from="1556783085120" duration="10031000" />
       <workItem from="1556864696624" duration="1333000" />
       <workItem from="1557140036721" duration="4928000" />
-      <workItem from="1557232856800" duration="1967000" />
+      <workItem from="1557232856800" duration="3916000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213043000" />
+    <option name="totallyTimeSpent" value="214992000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -462,14 +463,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="2060" y="134" width="1942" height="876" extended-state="0" />
+    <frame x="2060" y="233" width="1153" height="777" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50547945" side_tool="true" weight="0.3085622" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49452055" visible="true" weight="0.2120085" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49452055" visible="true" weight="0.36505032" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.36473754" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.42080745" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" />
@@ -782,8 +784,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/courses.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        <state relative-caret-position="51">
+          <caret line="192" column="5" lean-forward="true" selection-start-line="192" selection-start-column="5" selection-end-line="192" selection-end-column="5" />
           <folding>
             <element signature="e#1285#1311#0#HTML" expanded="true" />
             <element signature="e#1909#1934#0#HTML" expanded="true" />
@@ -797,6 +799,7 @@
             <element signature="e#4903#4922#0#HTML" expanded="true" />
             <element signature="e#4956#5020#0#HTML" expanded="true" />
             <element signature="e#5072#5149#0#HTML" expanded="true" />
+            <element signature="e#5439#5463#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
