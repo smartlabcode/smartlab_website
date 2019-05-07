@@ -3,6 +3,23 @@
 
 @section('content')
 
-    <h1>Courses</h1>
+
+
+
+
+    <style>
+
+    </style>
+<br>
+    <h1>Online courses</h1>
+    <div class="section1">
+        <div>
+            
+        </div>
+    </div>
+
+
+
+
 
 @endsection
