@@ -11,6 +11,9 @@
   --p-color: #c9d6e2;
   scroll-behavior: smooth;
 }
+nav {
+  display: none !important;
+}
 * {
   box-sizing: border-box;
 }
@@ -56,7 +59,6 @@ body {
   background-position-x: 300px;
   background-position-y: -200px;*/
   position: relative;
-  top: -50px;
 }
 .background-img {
   position: absolute;
@@ -288,9 +290,9 @@ body {
 }
 
 .section-one {
-  margin-top: 100px;
   display: flex;
   padding-bottom: 100px;
+  justify-content: space-between;
 }
 .section-one-text {
   width: 60%;
@@ -712,6 +714,7 @@ textarea:focus {
 }
 .contact-section {
   width: 112%;
+  height: 100%;
   left: -6%;
   background-image: url(images/img/footer-blue-bg.svg);
   background-repeat: no-repeat;
@@ -750,6 +753,16 @@ textarea:focus {
   font-weight: bold;
   color: white;
 }
+@media screen and (max-width: 1400px){
+  .background-img{
+    height: 125%;
+    top: -25%;
+    right: -25%;
+  }
+  .section-one{
+    justify-content: space-around;
+  }
+}
 @media screen and (max-width: 1200px){
     .contain{
         width: 95%;
@@ -783,8 +796,67 @@ textarea:focus {
   .section-two-bot-item div{
     min-height: 500px;
   }
+  .blog{
+    flex-basis: 45%;
+  }
+  .img-container img{
+    left: 0;
+  }
+  .blog-orange-circle-big{
+    bottom: 100px;
+  }
+  .blog-orange-circle-small{
+    bottom: 22%;
+  }
+}
+@media screen and (max-width: 1026px){
+  .section-two-bot{
+        flex-direction: column;
+    }
+    .section-two-bot-item{
+        display: flex;
+        min-height: 350px;
+        width: 100%;
+        flex-direction: row;
+    }
+    .section-two-bot-item div{
+        height: unset;
+        flex-basis: 55%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: left;
+        min-height: auto;
+      padding: 10px;
+      text-align: left;
+      align-items: flex-start;
+    }
+    .section-two-bot-item img{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 45%;
+        padding: 10px;
+    }
+    .section-two-bot-item h2 {
+        margin-bottom: 2rem;
+}
+.margin-both{
+        margin: 20px 0;
+    }
+    .contact-section{
+        background-position-y: 40%;
+        background-size: 270vw;
+    }
 }
 @media screen and (max-width: 900px){
+  .submit{
+    margin: 28px 0;
+  }
+  .background-img{
+    top: -13%;
+    right: -108%;
+    transform: rotate(70deg);
+  }
     .section-two-hero h2, .about-us h2{
         padding: 0 15%;
     }
@@ -807,60 +879,58 @@ textarea:focus {
         bottom: 76%;
     }
     .section-two-backgound-top-orange{
-        left: -10vw;
+        left: -20vw;
         top: 0%;
     }
     .section-two-background-top{
-        right: 66%;
+      right: 80%;
+    top: 3%;
     }
-    .section-two-bot{
-        flex-direction: column;
+    .section-two-background-bot{
+      left: 88%;
     }
-    .section-two-bot-item{
-        display: flex;
-        height: 500px;
-        width: 100%;
-        flex-direction: row;
+    .section-two-background-bot-orange{
+      left: 89%;
     }
-    .section-two-bot-item div{
-        height: unset;
-        flex-basis: 55%;
-        padding: 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        text-align: left;
-    }
-    .section-two-bot-item img{
-        display: flex;
-        flex-direction: column;
-        padding: 50px;
-        flex-basis: 45%;
-        
-    }
-    .section-two-bot-item h2 {
-        margin-bottom: 2rem;
-}
-    .margin-both{
-        margin: 10px 0;
-    }
+    
+    
     .contact-form-container{
         width: 80%;
     }
-    .contact-section{
-        background-position-y: 38%;
-    }
-    .background-img{
-        top: -80px;
-        right: -178px;
-        width: 100%;
-        height: auto;
-    }
+    
     .blog{
       flex-basis: 45%;
     }
     .blog-container{
       justify-content: space-between;
+    }
+    .blog-orange-circle-big{
+      right: 84vw;
+    }
+    .blog img{
+      left:0;
+    }
+    .section-two-top{
+      min-height: 350px;
+    }
+    .section-two-top-left{
+      padding: 10px;
+    }
+    .section-two-top-right{
+      padding: 10px;
+      text-align: left;
+    }
+    .section-two-bot-item{
+      
+    }
+    .section-two-bot-item div{
+      
+    }
+    .section-two-bot-item .p-font, .section-two-bot-item .h2-font{
+      padding-left: 0;
+    }
+    .section-two-bot-item img{
+      
     }
 }
 @media screen and (max-width: 600px){
