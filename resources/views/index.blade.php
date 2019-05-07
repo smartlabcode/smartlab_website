@@ -11,6 +11,9 @@
   --p-color: #c9d6e2;
   scroll-behavior: smooth;
 }
+html{
+  overflow-x: hidden;
+}
 nav {
   display: none !important;
 }
@@ -578,9 +581,9 @@ h2 span {
   transition: box-shadow 0.2s ease-in;
 }
 .blog:hover{
-  -webkit-box-shadow: -5px -5px 25px 5px var(--shadow-color);
-  -moz-box-shadow: -5px -5px 25px 5px var(--shadow-color);
-  box-shadow: -3px -3px 10px 10px var(--shadow-color);
+  -webkit-box-shadow: -1px -1px 25px 1px rgba(0, 53, 145, 0.9);
+  -moz-box-shadow: -1px -1px 25px 1px rgba(0, 53, 145, 0.9);
+  box-shadow: -1px -1px 25px 1px rgba(0, 53, 145, 0.9);
 }
 .blog .p-font{
   position: relative;
