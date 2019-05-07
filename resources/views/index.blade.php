@@ -717,13 +717,12 @@ textarea:focus {
 }
 .contact-section {
   width: 112%;
-  height: 100%;
   left: -6%;
   background-image: url(images/img/footer-blue-bg.svg);
   background-repeat: no-repeat;
   background-size: 200vw;
   background-position-x: 40%;
-  background-position-y: 33%;
+  background-position-y: 40%;
   position: relative;
 }
 .button-overlay {
