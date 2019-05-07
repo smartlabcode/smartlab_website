@@ -32,7 +32,7 @@
         color: var(--h1-color);
     }
 
-    p-font {
+    .p-font {
         font-family: "Source Sans Pro", sans-serif;
         font-size: 1.5em;
         font-weight: 300;
@@ -180,6 +180,61 @@
     <button class="button">Schedule a demo</button>
 </div>
 </div>
+
+
+<!-- SECTION FOUUUUURRR-->
+
+<style>
+    .section4{
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 150px;
+    }
+    .pics{
+        flex-basis: 50%;
+    }
+    .pics1-1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .pics1-2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 50px;
+    }
+
+    .copyright{
+        padding-top: 200px;
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+<div class="section4">
+    <div>
+        <h1 class="h1-font">Tools and <br>Technologies</h1>
+        <p style="margin-top: 30px" class="p-font">We design custom eLearning training that <br>aligns with your strategic corporate objectives<br> using a variety of tools and technologies.</p>
+    </div>
+    <div class="pics">
+        <div class="pics1-1">
+            <img src="https://via.placeholder.com/120x120">
+            <img src="https://via.placeholder.com/120x120">
+            <img src="https://via.placeholder.com/120x120">
+        </div>
+        <div class="pics1-2">
+            <img src="https://via.placeholder.com/120x120">
+            <img src="https://via.placeholder.com/120x120">
+            <img src="https://via.placeholder.com/120x120">
+        </div>
+    </div>
+</div>
+<div class="copyright">
+    <h1>Copyright © 2019 SmartLab</h1>
+</div>
+
 
 
 <script>

@@ -112,7 +112,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/courses.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
+            <state relative-caret-position="356">
               <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
               <folding>
                 <element signature="e#1285#1311#0#HTML" expanded="true" />
@@ -445,12 +445,12 @@
       <workItem from="1556783085120" duration="10031000" />
       <workItem from="1556864696624" duration="1333000" />
       <workItem from="1557140036721" duration="4928000" />
-      <workItem from="1557232856800" duration="1313000" />
+      <workItem from="1557232856800" duration="1967000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="212389000" />
+    <option name="totallyTimeSpent" value="213043000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -463,7 +463,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="2060" y="134" width="1942" height="876" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50547945" side_tool="true" weight="0.3085622" />
       <window_info id="npm" order="1" side_tool="true" />
@@ -783,7 +782,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/courses.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
+        <state relative-caret-position="356">
           <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
           <folding>
             <element signature="e#1285#1311#0#HTML" expanded="true" />
