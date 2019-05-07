@@ -31,6 +31,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 3.375em;
   margin-top: 0;
+  margin-bottom: 25px;
   color: var(--h1-color);
 }
 .h2-font {
@@ -317,6 +318,7 @@ body {
   color: white;
   background-color: var(--button-bg-color);
   border: 1px solid var(--button-bg-color);
+  transition: all 0.2s ease-in;
 }
 .button:hover{
     background-color: white;
@@ -335,7 +337,7 @@ body {
 .section-two-backgound-top-orange {
     position: absolute;
     width: 25%;
-    left: -43%;
+    left: -25vw;
     top: -5%;
     z-index: -101;
 }
@@ -468,7 +470,7 @@ h2 span {
     top: -30%;
     width: 50%;
     transform: rotate(-150deg);
-    left: -65%;
+    left: -40vw;
     z-index: -100;
 
 }
@@ -500,7 +502,7 @@ h2 span {
     transform: rotate(-111deg);
     top: 0;
     width: 35%;
-    right: -50%;
+    right: -30vw;
     z-index: -100;
 }
 .team-orange-circle-bottom {
@@ -508,7 +510,7 @@ h2 span {
     width: 20%;
     /* bottom: -70px; */
     bottom: -5%;
-    left: -43%;
+    left: -26vw;
     /* left: -340px; */
     z-index: -101;
 }
@@ -516,7 +518,7 @@ h2 span {
     position: absolute;
     width: 50%;
     /* left: -420px; */
-    left: -63%;
+    left: -40vw;
     transform: rotate(282deg);
     z-index: -100;
 }
@@ -529,6 +531,105 @@ h2 span {
   flex-basis: 45%;
   margin-right: 10px;
   margin-bottom: 10px;
+}
+.blog-section{
+  position: relative;
+  text-align: center;
+}
+.blog-section .button{
+  margin-top: 100px;
+  margin-bottom: 25px;
+}
+.blog-orange-circle-big{
+  position: absolute;
+    width: 31%;
+    right: -9vw;
+    z-index: -100;
+    bottom: 0;
+}
+.blog-orange-circle-small{
+  position: absolute;
+    width: 11%;
+    right: -12vw;
+    bottom: 30%;
+    transform: rotate(-180deg);
+}
+.blog-container{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 25px;
+}
+.blog{
+  -webkit-box-shadow: -1px -1px 25px 1px var(--shadow-color);
+  -moz-box-shadow: -1px -1px 25px 1px var(--shadow-color);
+  box-shadow: -1px -1px 25px 1px var(--shadow-color);
+  flex-basis: 24%;
+  text-align: center;
+  max-height: 515px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 10px;
+  background-color: white;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in;
+}
+.blog:hover{
+  -webkit-box-shadow: -5px -5px 25px 5px var(--shadow-color);
+  -moz-box-shadow: -5px -5px 25px 5px var(--shadow-color);
+  box-shadow: -3px -3px 10px 10px var(--shadow-color);
+}
+.blog .p-font{
+  position: relative;
+    /* -webkit-line-clamp: 3; */
+    /* -webkit-box-orient: vertical; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.4em;
+    line-height: 1.4;
+    height: 117px;
+    /* padding-bottom: 14px; */
+}
+.blog .p-font::after{
+  position: absolute;
+    content: "...";
+    bottom: 0;
+    right: 0;
+    font-size: 1.em;
+    /* line-height: 1em; */
+    padding-left: 15px;
+    padding-right: 10px;
+    padding-bottom: 4px;
+    background-color: white;
+    font-weight: 500;
+}
+.blog div:not(.img-container){
+  padding: 10px;
+}
+.blog img{
+  position: relative;
+  left: -25%;
+  top: -10%;
+  object-fit: contain;
+  object-position: 0% 0%;
+}
+.blog span{
+  opacity: 0.5;
+}
+svg {
+  transform: rotateX(-180deg) rotateY(-180deg);
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.img-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  vertical-align: middle;
+  overflow: hidden;
 }
 .navigation-button {
   display: none;
@@ -654,7 +755,34 @@ textarea:focus {
         width: 95%;
         margin:0 auto;
     }
+    .blog-container{
+      justify-content: space-evenly;
+    }
+    .blog{
+      
+      flex-basis: 35%;
+      max-height: 550px;
+      margin-bottom: 40px;
+    }
+    .blog div{
+      padding-top: 0 !important;
+    }
     
+}
+@media screen and (max-width: 1175px){
+  .button{
+    width: 208px;
+    height: 56px;
+  }
+  .section-two-bot{
+    min-height: 600px;
+  }
+  .section-two-bot-item{
+    min-height: 600px;
+  }
+  .section-two-bot-item div{
+    min-height: 500px;
+  }
 }
 @media screen and (max-width: 900px){
     .section-two-hero h2, .about-us h2{
@@ -679,7 +807,7 @@ textarea:focus {
         bottom: 76%;
     }
     .section-two-backgound-top-orange{
-        left: -23%;
+        left: -10vw;
         top: 0%;
     }
     .section-two-background-top{
@@ -728,7 +856,12 @@ textarea:focus {
         width: 100%;
         height: auto;
     }
-    
+    .blog{
+      flex-basis: 45%;
+    }
+    .blog-container{
+      justify-content: space-between;
+    }
 }
 @media screen and (max-width: 600px){
     
@@ -1223,6 +1356,68 @@ textarea:focus {
           </div>
         </div>
       </section>
+      <section class="blog-section contain">
+        <img class="blog-orange-circle-big" src="images/img/orange-circle.svg" />
+        <img class="blog-orange-circle-small" src="images/img/orange-circle.svg" />
+        <h1 class="text-center h1-font">Blog</h1>
+        <div class="blog-container">
+          <div class="blog">
+              <div class="img-container">
+                  <img src="images/img/blog-post-1.png">
+                  <svg viewBox="0 0 500 500">
+                    <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
+                  </svg>
+                </div>
+            
+            
+            <div>
+              <h2 class="h2-font">Blog Title</h2>
+              <p><span>05.07.2019.</span> <span>Haris M.</span></p>
+              <p class="p-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc odio, mollis in fringilla at, cursus aliquam felis. Curabitur in cursus orci. Vestibulum convallis lectus risus, at varius nisl egestas vel. Suspendisse laoreet ex quis odio aliquet mollis. Duis quis porta magna. Nam dignissim enim lectus, sit amet porta metus interdum a. Praesent pulvinar justo vel lectus dictum, at fermentum neque lobortis. Sed vitae nisl eget augue convallis convallis nec at nisi. Nullam fermentum lorem metus, sit amet tincidunt velit convallis non. Proin sed finibus mauris. Sed orci metus, fringilla sed sollicitudin at, efficitur in ipsum. Pellentesque egestas ex quis tempor sagittis. Integer at nulla scelerisque, luctus quam vel, feugiat sem. Donec molestie eu lacus ut egestas. Pellentesque urna justo, tempus a est sed, bibendum interdum nisl.</p>
+            </div>
+          </div>
+          <div class="blog">
+              <div class="img-container">
+                  <img src="images/img/blog-post-2.png">
+                  <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
+                    <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
+                  </svg>
+                </div>
+              <div>
+                <h2 class="h2-font">Blog Title</h2>
+                <p><span>05.07.2019.</span> <span>Haris M.</span></p>
+                <p class="p-font ">Sed scelerisque vulputate dui at mattis. Donec porta, lorem in vehicula efficitur, est libero suscipit est, id sollicitudin urna diam non sapien. Quisque porttitor, dui non porttitor efficitur, ante magna pulvinar purus, sit amet pretium nunc ipsum vel libero. Suspendisse venenatis lacus hendrerit, porttitor massa ac, consequat lectus. Praesent tempor congue nulla, nec dictum purus viverra nec. Mauris at felis metus. Vivamus egestas libero ac lectus consequat ullamcorper. Vestibulum ullamcorper ornare quam, eget ullamcorper sem malesuada sit amet. Aliquam tincidunt eleifend nulla, non dignissim odio suscipit id. Praesent quis quam leo.</p>
+              </div>
+            </div>
+            <div class="blog">
+                <div class="img-container">
+                    <img src="images/img/blog-post-1.png">
+                    <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
+                      <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
+                    </svg>
+                  </div>
+                <div>
+                  <h2 class="h2-font">Blog Title</h2>
+                  <p><span>05.07.2019.</span> <span>Haris M.</span></p>
+                  <p class="p-font ">Quisque a nisi iaculis, finibus neque quis, consectetur nisi. Nam id sollicitudin orci. Sed interdum, ante sed condimentum laoreet, augue sem tempor ligula, sed viverra lorem purus sit amet turpis. Duis odio tortor, fermentum a leo a, tempus bibendum nisl. Nunc aliquet dui ut arcu pulvinar, a mollis orci porta. Suspendisse interdum nulla est. Curabitur eget metus congue, accumsan velit quis, lobortis arcu. Phasellus et dignissim erat. Sed quis est in magna suscipit pretium id eget leo. Mauris scelerisque pellentesque odio, id porta ligula efficitur a. Fusce in fermentum nulla. Etiam cursus enim non nisi sollicitudin posuere. Phasellus malesuada tempus magna ut varius. Quisque posuere ut metus in mattis. Duis molestie dui eget odio fringilla, sed porta enim venenatis.</p>
+                </div>
+              </div>
+              <div class="blog">
+                  <div class="img-container">
+                      <img src="images/img/blog-post-2.png">
+                      <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
+                        <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
+                      </svg>
+                    </div>
+                  <div>
+                    <h2 class="h2-font">Blog Title</h2>
+                    <p><span>05.07.2019.</span> <span>Haris M.</span></p>
+                    <p class="p-font">Morbi diam lorem, fermentum sit amet felis non, venenatis eleifend arcu. Vestibulum mauris nulla, aliquam eu consequat eget, mollis non sem. Cras massa enim, lobortis in sodales eu, lobortis a nisi. Fusce sodales accumsan nisl sit amet ullamcorper. Sed vel lorem nec quam luctus pellentesque at nec magna. Pellentesque ac luctus arcu, eu fermentum justo. Nulla pulvinar tellus at auctor tempus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur lobortis bibendum metus id tempus. Nulla convallis tempor mauris, at blandit risus semper ac. Phasellus vel neque id felis tristique viverra. Praesent commodo, nunc eu imperdiet lobortis, quam tortor feugiat tortor, id convallis purus turpis et nibh.</p>
+                  </div>
+                </div>
+              </div>
+        <button class="button">Show more</button>
+      </section>
       <section class="contact-section">
         <img class="contact-orange-circle-r" src="images/img/orange-circle.svg" />
         <img class="contact-orange-circle-l" src="images/img/orange-circle.svg" />
@@ -1259,7 +1454,7 @@ textarea:focus {
       </section>
       <footer class="footer">
         <div class="map">
-          <img src="images/img/mapa-web.png" />
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5754.153583595637!2d18.389259!3d43.854237!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd3b7b0136b05bfe5!2sSmartLab!5e0!3m2!1sen!2sus!4v1557213572662!5m2!1sen!2sus" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
         <div>
           <p>Copyright &copy 2019 SmartLab</p>
