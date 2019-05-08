@@ -328,6 +328,9 @@ body {
   border: 1px solid var(--button-bg-color);
   transition: all 0.2s ease-in;
 }
+.button:focus{
+  outline: 0;
+}
 .button:hover{
     background-color: white;
     color: var(--button-bg-color);
@@ -1093,6 +1096,12 @@ textarea:focus {
   .partners-images img{
     max-width: 60%;
   }
+  .--border-right{
+    border:none;
+  }
+  .--border-bottom{
+    border: none;
+  }
 }
 @media screen and (max-width: 970px) {
   .button-overlay {
@@ -1387,14 +1396,17 @@ textarea:focus {
         <img
           class="background-img-circle --circle1"
           src="images/img/fluid-bright-circle.svg"
+          
         />
         <img
           class="background-img-circle --circle2"
           src="images/img/fluid-bright-circle.svg"
+          
         />
         <img
           class="background-img-circle --circle3"
           src="images/img/fluid-bright-circle.svg"
+          
         />
         <div class="language">
           <p class="opacity margin-right-25">
@@ -1447,6 +1459,7 @@ textarea:focus {
           <img
           class="section-two-top-orange-img"
           src="images/img/orange-circle.svg"
+          
         />
         <img
           class="section-two-background-top"
@@ -1656,7 +1669,16 @@ textarea:focus {
         <img class="blog-orange-circle-small" src="images/img/orange-circle.svg" />
         <h1 class="text-center h1-font">Blog</h1>
         <div class="blog-container">
-          <div class="blog">
+          <div class="blog"
+          data-aos-anchor=".blog-section"
+          data-aos="zoom-in-up"
+          data-aos-offset="100"
+          data-aos-delay="50"
+          data-aos-duration="300"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="false"
+          data-aos-once="true"
+          data-aos-anchor-placement="top">
               <div class="img-container">
                   <img src="images/img/blog-post-1.png">
                   <svg viewBox="0 0 500 500">
@@ -1671,7 +1693,16 @@ textarea:focus {
               <p class="p-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc odio, mollis in fringilla at, cursus aliquam felis. Curabitur in cursus orci. Vestibulum convallis lectus risus, at varius nisl egestas vel. Suspendisse laoreet ex quis odio aliquet mollis. Duis quis porta magna. Nam dignissim enim lectus, sit amet porta metus interdum a. Praesent pulvinar justo vel lectus dictum, at fermentum neque lobortis. Sed vitae nisl eget augue convallis convallis nec at nisi. Nullam fermentum lorem metus, sit amet tincidunt velit convallis non. Proin sed finibus mauris. Sed orci metus, fringilla sed sollicitudin at, efficitur in ipsum. Pellentesque egestas ex quis tempor sagittis. Integer at nulla scelerisque, luctus quam vel, feugiat sem. Donec molestie eu lacus ut egestas. Pellentesque urna justo, tempus a est sed, bibendum interdum nisl.</p>
             </div>
           </div>
-          <div class="blog">
+          <div class="blog" 
+          data-aos-anchor=".blog-section"
+          data-aos="zoom-in-up"
+          data-aos-offset="200"
+          data-aos-delay="100"
+          data-aos-duration="300"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="false"
+          data-aos-once="true"
+          data-aos-anchor-placement="top">
               <div class="img-container">
                   <img src="images/img/blog-post-2.png">
                   <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
@@ -1684,7 +1715,16 @@ textarea:focus {
                 <p class="p-font ">Sed scelerisque vulputate dui at mattis. Donec porta, lorem in vehicula efficitur, est libero suscipit est, id sollicitudin urna diam non sapien. Quisque porttitor, dui non porttitor efficitur, ante magna pulvinar purus, sit amet pretium nunc ipsum vel libero. Suspendisse venenatis lacus hendrerit, porttitor massa ac, consequat lectus. Praesent tempor congue nulla, nec dictum purus viverra nec. Mauris at felis metus. Vivamus egestas libero ac lectus consequat ullamcorper. Vestibulum ullamcorper ornare quam, eget ullamcorper sem malesuada sit amet. Aliquam tincidunt eleifend nulla, non dignissim odio suscipit id. Praesent quis quam leo.</p>
               </div>
             </div>
-            <div class="blog">
+            <div class="blog"
+            data-aos-anchor=".blog-section"
+          data-aos="zoom-in-up"
+          data-aos-offset="300"
+          data-aos-delay="150"
+          data-aos-duration="300"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="false"
+          data-aos-once="true"
+          data-aos-anchor-placement="top">
                 <div class="img-container">
                     <img src="images/img/blog-post-1.png">
                     <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
@@ -1697,7 +1737,16 @@ textarea:focus {
                   <p class="p-font ">Quisque a nisi iaculis, finibus neque quis, consectetur nisi. Nam id sollicitudin orci. Sed interdum, ante sed condimentum laoreet, augue sem tempor ligula, sed viverra lorem purus sit amet turpis. Duis odio tortor, fermentum a leo a, tempus bibendum nisl. Nunc aliquet dui ut arcu pulvinar, a mollis orci porta. Suspendisse interdum nulla est. Curabitur eget metus congue, accumsan velit quis, lobortis arcu. Phasellus et dignissim erat. Sed quis est in magna suscipit pretium id eget leo. Mauris scelerisque pellentesque odio, id porta ligula efficitur a. Fusce in fermentum nulla. Etiam cursus enim non nisi sollicitudin posuere. Phasellus malesuada tempus magna ut varius. Quisque posuere ut metus in mattis. Duis molestie dui eget odio fringilla, sed porta enim venenatis.</p>
                 </div>
               </div>
-              <div class="blog">
+              <div class="blog" 
+              data-aos-anchor=".blog-section"
+          data-aos="zoom-in-up"
+          data-aos-offset="400"
+          data-aos-delay="200"
+          data-aos-duration="300"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="false"
+          data-aos-once="true"
+          data-aos-anchor-placement="top">
                   <div class="img-container">
                       <img src="images/img/blog-post-2.png">
                       <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
