@@ -66,7 +66,7 @@ body {
 .background-img {
   position: absolute;
   /*width: calc(75vw - 100px);*/
-  height: 100vh;
+  height: 113vh;
   top: -150px;
   right: -200px;
   z-index: -10;
@@ -380,10 +380,10 @@ body {
 }
 .section-two-top-orange-img {
   position: absolute;
-  width: 50%;
-  z-index: -100;
-  right: -20%;
-  bottom: 60%;
+    width: 30%;
+    z-index: -100;
+    right: -15%;
+    bottom: 68%;
 }
 .section-two-background-bot-orange {
     position: absolute;
@@ -490,6 +490,18 @@ h2 span {
   flex-wrap: wrap;
   margin: 50px 0;
   justify-content: space-between;
+}
+.about-us div{
+  flex-basis: 25%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.--border-right{
+  border-right: 3px solid grey;
+}
+.--border-bottom{
+  border-bottom: 3px solid grey;
+  
 }
 .--four img {
   flex-basis: 24%;
@@ -611,9 +623,9 @@ h2 span {
   transition: box-shadow 0.2s ease-in;
 }
 .blog:hover{
-  -webkit-box-shadow: -1px -1px 25px 1px rgba(0, 53, 145, 0.9);
-  -moz-box-shadow: -1px -1px 25px 1px rgba(0, 53, 145, 0.9);
-  box-shadow: -1px -1px 25px 1px rgba(0, 53, 145, 0.9);
+  -webkit-box-shadow: -1px -1px 25px 1px rgba(0, 53, 145, 0.7);
+  -moz-box-shadow: -1px -1px 25px 1px rgba(0, 53, 145, 0.7);
+  box-shadow: -1px -1px 25px 1px rgba(0, 53, 145, 0.7);
 }
 .blog .p-font{
   position: relative;
@@ -1056,11 +1068,17 @@ textarea:focus {
     }
 }
 @media screen and (max-width: 360px){
+  .section-one{
+    top:0;
+  }
   .section-one-animation{
     padding: 0 27px;
   }
   .section-one-text{
     margin-bottom: 10px;
+  }
+  .section-two{
+    padding-top: 130px;
   }
   .contact-section{
     background-size: 513%;
@@ -1407,25 +1425,29 @@ textarea:focus {
         </div>
         <section class="section-one contain" >
         
-              <div class="section-one-text">
-                  <h2 class="h2-font"  data-aos="fade-down">We design and develop</h2>
-                  <h1 class="h1-font bold"  data-aos="fade-right">E-LEARNING SOLUTIONS</h1>
-                  <p class="p-font "  data-aos="fade-right">
+              <div class="section-one-text" data-aos="zoom-in">
+                  <h2 class="h2-font"  >We design and develop</h2>
+                  <h1 class="h1-font bold" >E-LEARNING SOLUTIONS</h1>
+                  <p class="p-font " >
                     We are here to turn your ideas into high quality learning
                     experience.
                   </p>
-                  <button class="button margin-top-27"  data-aos="fade-up">Get in touch</button>
+                  <button class="button margin-top-27">Get in touch</button>
                 </div>
-                <img
+                <img data-aos="zoom-in"
                   class="section-one-animation"
                   src="images/img/header-illustration.svg"
-                  data-aos="fade-left"
+                  
                 />
           
           
         </section>
       </div>
       <section class="section-two contain">
+          <img
+          class="section-two-top-orange-img"
+          src="images/img/orange-circle.svg"
+        />
         <img
           class="section-two-background-top"
           src="images/img/header-fluid-blue.svg"
@@ -1452,24 +1474,19 @@ textarea:focus {
         <div id="anchor">
           <div class="section-two-top"
           data-aos-anchor="#anchor"
-          data-aos="fade-up"
+          data-aos="zoom-in-up"
           data-aos-offset="100"
           data-aos-delay="50"
-          data-aos-duration="1000"
+          data-aos-duration="300"
           data-aos-easing="ease-in-out"
           data-aos-mirror="false"
-          data-aos-once="false"
+          data-aos-once="true"
           data-aos-anchor-placement="top"
           >
             <div class="section-two-top-left">
               <img src="images/img/online-courses-img.svg" />
             </div>
             <div class="section-two-top-right">
-              <img
-                id="orangeTop"
-                class="section-two-top-orange-img"
-                src="images/img/orange-circle.svg"
-              />
               <h2 class="h2-font">Online courses</h2>
               <p class="p-font">
                 We design and devlop eLearning content from scratch and
@@ -1481,13 +1498,13 @@ textarea:focus {
           <div class="section-two-bot">
             <div class="section-two-bot-item"
             data-aos-anchor=".section-two-bot"
-            data-aos="fade-up"
+            data-aos="zoom-in-up"
             data-aos-offset="100"
             data-aos-delay="100"
-            data-aos-duration="500"
+            data-aos-duration="300"
             data-aos-easing="ease-in-out"
             data-aos-mirror="false"
-            data-aos-once="false"
+            data-aos-once="true"
             data-aos-anchor-placement="top">
               <img class="--width-margin-top" src="images/img/video-animation-img.svg" />
               <div>
@@ -1502,13 +1519,13 @@ textarea:focus {
               
             </div>
             <div class="section-two-bot-item margin-both" data-aos-anchor=".section-two-bot"
-            data-aos="fade-up"
+            data-aos="zoom-in-up"
             data-aos-offset="200"
             data-aos-delay="200"
-            data-aos-duration="500"
+            data-aos-duration="300"
             data-aos-easing="ease-in-out"
             data-aos-mirror="false"
-            data-aos-once="false"
+            data-aos-once="true"
             data-aos-anchor-placement="top">
               <img src="images/img/development-img.svg" />
               <div>
@@ -1523,13 +1540,13 @@ textarea:focus {
               
             </div>
             <div class="section-two-bot-item" data-aos-anchor=".section-two-bot"
-            data-aos="fade-up"
+            data-aos="zoom-in-up"
             data-aos-offset="300"
             data-aos-delay="300"
-            data-aos-duration="500"
+            data-aos-duration="300"
             data-aos-easing="ease-in-out"
             data-aos-mirror="false"
-            data-aos-once="false"
+            data-aos-once="true"
             data-aos-anchor-placement="top">
               <img class="--width-margin-top" src="images/img/moodle-img.svg" />
               <div>
@@ -1558,15 +1575,32 @@ textarea:focus {
                 reach their learning goals
               </h2>
             </div>
-            <div class="flex --four">
-              <img src="https://via.placeholder.com/150" />
-              <img src="https://via.placeholder.com/150" />
-              <img src="https://via.placeholder.com/150" />
-              <img src="https://via.placeholder.com/150" />
-              <img src="https://via.placeholder.com/150" />
-              <img src="https://via.placeholder.com/150" />
-              <img src="https://via.placeholder.com/150" />
-              <img src="https://via.placeholder.com/150" />
+            <div class="flex about-us">
+                <div class="--border-right --border-bottom"> 
+                    <img src="https://via.placeholder.com/150" />
+                </div>
+                <div class="--border-right --border-bottom">
+                    <img src="https://via.placeholder.com/150" />
+                </div >
+                <div class="--border-right --border-bottom">
+                    <img src="https://via.placeholder.com/150" />
+                </div>
+                <div class="--border-bottom">
+                    <img src="https://via.placeholder.com/150" />
+                </div>
+                <div class="--border-right ">
+                    <img src="https://via.placeholder.com/150" />
+                </div>
+                <div class="--border-right">
+                    <img src="https://via.placeholder.com/150" />
+                </div>
+                <div class="--border-right">
+                    <img src="https://via.placeholder.com/150" />
+                </div>
+                <div >
+                    <img src="https://via.placeholder.com/150" />
+                </div>
+              
             </div>
           </div>
         </div>
