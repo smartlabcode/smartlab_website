@@ -74,6 +74,31 @@ function changeSiteLanguage(value) {
 }
 
 
+/* Edit job */
+function submitJobEditForm() {
+
+    event.preventDefault();
+    // get language
+    //let lang = document.getElementById("language").value;
+
+    // get id
+    let id = document.getElementById("idValue").value;
+
+    // change action route
+    let form = document.getElementById("editCareerForm");
+
+    // set content
+    let content = form.getElementsByClassName('note-editable')[0];
+    let text = content.innerHTML;
+
+    document.getElementById("contentText").value = text;
+
+    form.action = "/careers/" + id;
+
+    form.submit();
+}
+
+
 
 
 

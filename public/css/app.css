@@ -139,3 +139,43 @@
 .note-toolbar {
     background-color: #333;
 }
+
+
+/* CAREERS */
+
+/* Create job */
+#addCareerSaveButton {
+    float: right;
+}
+
+/* Edit job */
+#editCareerSaveButton {
+    float: right;
+}
+
+#editCareerSaveButton {
+    float: right;
+}
+
+/* List jobs */
+#paperFabCareerList {
+    background-color: #3490dc;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+}
+
+#paperFabCareerList:hover {
+    box-shadow: 2px 2px 2px rgba(150,150,150, 0.5), -2px 0px 2px rgba(150,150,150, 0.5);
+}
+
+#paperFabCareerList span {
+    font-size: 30px;
+    position: relative;
+    left: 16px;
+    color: #fff;
+}

@@ -2,10 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Career;
+use App\Http\Services\LogService;
+use App\User;
 use Illuminate\Http\Request;
 
 class CareersController extends Controller
 {
+    private $logService;
+
+    public function __construct(LogService $logService)
+    {
+        $this->logService = $logService;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +23,11 @@ class CareersController extends Controller
      */
     public function index()
     {
-        return view('pages.careers.careers_list');
+        $jobs = Career::all();
+
+        return view('pages.careers.careers_list', [
+            'jobs' => $jobs
+        ]);
     }
 
     /**
@@ -56,7 +70,24 @@ class CareersController extends Controller
      */
     public function edit($id)
     {
-        return view('pages.careers.careers_edit');
+
+        try {
+            // get specific user
+            $job = Career::findOrFail($id);
+
+            // return edit admin form view with admin data
+            return view('pages.careers.careers_edit', [
+                'job' => $job
+            ]);
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', 'CareersController - edit: ' . $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+
     }
 
     /**
@@ -68,7 +99,30 @@ class CareersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // TODO issues with try/catch block and data validation
+        // get specific admin
+        $job = Career::findOrFail($id);
+
+        // set request data to session so that it can be used for old input if neccessary
+        $request->flash();
+
+        // check if neccessary values are entered correctly, if no return error messages
+        $request->validate([
+            'title' => 'required|max:255',
+            'body' => 'required'
+        ]);
+
+        // if data is ok set new values to the model
+        $job->title = $request->input('title');
+        $job->body = $request->input('body');
+
+        // save model
+        $job->save();
+
+        // redirect with message
+        return redirect('careers')->with([
+            'message' => 'Job successfully edited'
+        ]);
     }
 
     /**
