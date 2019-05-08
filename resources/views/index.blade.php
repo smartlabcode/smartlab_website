@@ -35,7 +35,7 @@ body {
 }
 .h1-font {
   font-family: "Montserrat", sans-serif;
-  font-size: 2em
+  font-size: 2em;
   margin-top: 0;
   margin-bottom: 25px;
   color: var(--h1-color);
@@ -529,20 +529,40 @@ h2 span {
     z-index: -100;
 }
 .partners-images {
-  flex-basis: 50%;
+  flex-basis: 35%;
   display: flex;
   flex-wrap: wrap;
+  align-items: baseline;
 }
 .partners-text{
-  flex-basis: 50%;
+  flex-basis: 60%;
   background-image: url(images/img/quotation-marks.svg);
   background-size: 50%;
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+.partners-text div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.partners-text .p-font{
+  margin-bottom: 0;
+}
+.partners-text .h2-font{
+  margin-bottom: 0px;
+}
+.partners-text img{
+  margin-top: 35px;
+  border-radius: 50%;
 }
 .partners-images img {
-  flex-basis: 45%;
+  max-width: 45%;
   margin-right: 10px;
   margin-bottom: 10px;
+  object-fit: contain;
 }
 .blog-section{
   position: relative;
@@ -767,6 +787,11 @@ textarea:focus {
 }
 .submit{
   font-size: 1.5em;
+}
+@media screen and (max-width: 1500px){
+  .partners-images{
+    flex-basis: 40%;
+  }
 }
 @media screen and (max-width: 1400px){
   .background-img{
@@ -1043,7 +1068,10 @@ textarea:focus {
   }
   iframe{
     height: 400px;
-  } 
+  }
+  .partners-images img{
+    max-width: 60%;
+  }
 }
 @media screen and (max-width: 970px) {
   .button-overlay {
@@ -1528,7 +1556,19 @@ textarea:focus {
               <img src="https://via.placeholder.com/200" />
               <img src="https://via.placeholder.com/200" />
             </div>
-            <div class="partners-text"></div>
+            <div class="partners-text">
+              <div>
+                <p class="p-font">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rutrum rhoncus massa. Fusce dapibus accumsan volutpat. Pellentesque lobortis ex nibh, ac mattis sapien varius semper. Curabitur congue dui non libero congue, non varius dui iaculis. Nam ut accumsan urna. Curabitur eget mattis tellus, ut euismod turpis.
+                </p>
+                <div>
+                    <img src="https://via.placeholder.com/100" />
+                    <p class="h2-font">Joanna Kowalska</p>
+                    <p class="p-font">Nike co.</p>
+                </div>
+                
+              </div>
+            </div>
           </div>
         </div>
       </section>
