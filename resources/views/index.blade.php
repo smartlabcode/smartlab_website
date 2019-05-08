@@ -1,6 +1,6 @@
 <!-- Extend main layout -->
 @extends('layouts.app')
-
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <style>
     :root {
   --shadow-color: rgba(0, 53, 145, 0.15);
@@ -35,7 +35,7 @@ body {
 }
 .h1-font {
   font-family: "Montserrat", sans-serif;
-  font-size: 2em;
+  font-size: 2.8em;
   margin-top: 0;
   margin-bottom: 25px;
   color: var(--h1-color);
@@ -66,7 +66,7 @@ body {
 .background-img {
   position: absolute;
   /*width: calc(75vw - 100px);*/
-  height: calc(150% - 200px);
+  height: 100vh;
   top: -150px;
   right: -200px;
   z-index: -10;
@@ -294,12 +294,14 @@ body {
 }
 
 .section-one {
+  position: relative;
+  top: 100px;
   display: flex;
   padding-bottom: 100px;
   justify-content: space-between;
 }
 .section-one-text {
-  width: 60%;
+  width: 50%;
   align-self: center;
   justify-content: space-between;
 }
@@ -310,7 +312,7 @@ body {
 .section-one-animation {
   object-fit: contain;
   height: 75vh;
-  width: 40%;
+  width: 50%;
   min-width: 350px;
 }
 
@@ -550,6 +552,7 @@ h2 span {
 }
 .partners-text .p-font{
   margin-bottom: 0;
+  font-style: italic;
 }
 .partners-text .h2-font{
   margin-bottom: 0px;
@@ -1175,6 +1178,8 @@ textarea:focus {
 }
 </style>
 
+
+
 @section('content')
     <!-- Heading -->
    <!-- <h1>@lang('index.heading')</h1> -->
@@ -1356,7 +1361,7 @@ textarea:focus {
         </ul>
       </nav> -->
       <div class="background-section-one">
-        <img class="background-img" src="images/img/header-fluid-blue.svg" />
+        <img class="background-img" src="images/img/header-fluid-blue.svg"  />
         <img
           class="background-img-orange-circle"
           src="images/img/orange-circle.svg"
@@ -1400,20 +1405,24 @@ textarea:focus {
             />
           </div>
         </div>
-        <section class="section-one contain">
-          <div class="section-one-text">
-            <h2 class="h2-font">We design and develop</h2>
-            <h1 class="h1-font bold">E-LEARNING SOLUTIONS</h1>
-            <p class="p-font ">
-              We are here to turn your ideas into high quality learning
-              experience.
-            </p>
-            <button class="button margin-top-27">Get in touch</button>
-          </div>
-          <img
-            class="section-one-animation"
-            src="images/img/header-illustration.svg"
-          />
+        <section class="section-one contain" >
+        
+              <div class="section-one-text">
+                  <h2 class="h2-font"  data-aos="fade-down">We design and develop</h2>
+                  <h1 class="h1-font bold"  data-aos="fade-right">E-LEARNING SOLUTIONS</h1>
+                  <p class="p-font "  data-aos="fade-right">
+                    We are here to turn your ideas into high quality learning
+                    experience.
+                  </p>
+                  <button class="button margin-top-27"  data-aos="fade-up">Get in touch</button>
+                </div>
+                <img
+                  class="section-one-animation"
+                  src="images/img/header-illustration.svg"
+                  data-aos="fade-left"
+                />
+          
+          
         </section>
       </div>
       <section class="section-two contain">
@@ -1437,16 +1446,27 @@ textarea:focus {
               SmartLab offers different services with focus on the e-Learning
               industry.
             </h2>
-            <button class="button submit">Explore</button>
+            <button id="pinned-element1" class="button submit">Explore</button>
           </div>
         </div>
-        <div>
-          <div class="section-two-top">
+        <div id="anchor">
+          <div class="section-two-top"
+          data-aos-anchor="#anchor"
+          data-aos="fade-up"
+          data-aos-offset="100"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="false"
+          data-aos-once="false"
+          data-aos-anchor-placement="top"
+          >
             <div class="section-two-top-left">
               <img src="images/img/online-courses-img.svg" />
             </div>
             <div class="section-two-top-right">
               <img
+                id="orangeTop"
                 class="section-two-top-orange-img"
                 src="images/img/orange-circle.svg"
               />
@@ -1459,7 +1479,16 @@ textarea:focus {
             </div>
           </div>
           <div class="section-two-bot">
-            <div class="section-two-bot-item">
+            <div class="section-two-bot-item"
+            data-aos-anchor=".section-two-bot"
+            data-aos="fade-up"
+            data-aos-offset="100"
+            data-aos-delay="100"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="false"
+            data-aos-once="false"
+            data-aos-anchor-placement="top">
               <img class="--width-margin-top" src="images/img/video-animation-img.svg" />
               <div>
                 <h2 class="h2-font">Educational <span>video animation</span></h2>
@@ -1472,7 +1501,15 @@ textarea:focus {
 
               
             </div>
-            <div class="section-two-bot-item margin-both">
+            <div class="section-two-bot-item margin-both" data-aos-anchor=".section-two-bot"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="200"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="false"
+            data-aos-once="false"
+            data-aos-anchor-placement="top">
               <img src="images/img/development-img.svg" />
               <div>
                 <h2 class="h2-font">Development/ <span>programming</span></h2>
@@ -1485,7 +1522,15 @@ textarea:focus {
               </div>
               
             </div>
-            <div class="section-two-bot-item">
+            <div class="section-two-bot-item" data-aos-anchor=".section-two-bot"
+            data-aos="fade-up"
+            data-aos-offset="300"
+            data-aos-delay="300"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="false"
+            data-aos-once="false"
+            data-aos-anchor-placement="top">
               <img class="--width-margin-top" src="images/img/moodle-img.svg" />
               <div>
                 <h2 class="h2-font">Moodle <span>LMS Adaptation</span></h2>
@@ -1676,15 +1721,12 @@ textarea:focus {
           <p>Copyright &copy 2019 SmartLab</p>
         </div>
       </footer>
-    
-    <style>
-
-    
-
-    
-    </style>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
     <!--<script src="js/nav.js"></script>
-    <script src="js/language.js"></script> -->
+     -->
   <!-- </body>
 </html> -->
 
