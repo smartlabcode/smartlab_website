@@ -35,14 +35,14 @@ body {
 }
 .h1-font {
   font-family: "Montserrat", sans-serif;
-  font-size: 3.375em;
+  font-size: 2em
   margin-top: 0;
   margin-bottom: 25px;
   color: var(--h1-color);
 }
 .h2-font {
   font-family: "Montserrat", sans-serif;
-  font-size: 2em;
+  font-size: 1.8em;
   color: var(--h2-color);
 }
 .p-font {
@@ -533,6 +533,12 @@ h2 span {
   display: flex;
   flex-wrap: wrap;
 }
+.partners-text{
+  flex-basis: 50%;
+  background-image: url(images/img/quotation-marks.svg);
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
 .partners-images img {
   flex-basis: 45%;
   margin-right: 10px;
@@ -711,6 +717,7 @@ textarea:focus {
   margin: 20px 0;
   background-color: var(--button-bg-orange);
   border: 1px solid var(--button-bg-orange);
+
 }
 .submit:hover{
     background-color: white;
@@ -745,8 +752,9 @@ textarea:focus {
   background-position-x: 40%;
   background-position-y: 33%;
   width: 112%;
-    left: -6%;
-    position: relative;
+  left: -6%;
+  position: relative;
+  top: -18px;
 }
 .footer p {
   font-family: "Source Sans Pro", sans-serif;
@@ -756,6 +764,9 @@ textarea:focus {
   font-size: 1.5em;
   font-weight: bold;
   color: white;
+}
+.submit{
+  font-size: 1.5em;
 }
 @media screen and (max-width: 1400px){
   .background-img{
@@ -1006,13 +1017,27 @@ textarea:focus {
       font-size: 1.2em;
       outline: hidden;
     }
+    .footer p{
+      font-size: 1.1em;
+    }
+    .blog-section .button{
+      margin-top: 30px;
+    }
+    .submit{
+      font-size: 1em;
+    }
 }
 @media screen and (max-width: 360px){
   .contact-section{
     background-size: 513%;
     background-position-y: 51%;
   }
-    
+   .footer{
+     background-position-y: -360%;
+   }
+   iframe{
+     height: 400px;
+   } 
 }
 @media screen and (max-width: 970px) {
   .button-overlay {
@@ -1593,7 +1618,7 @@ textarea:focus {
               <label for="message">*Message</label>
               <textarea name="message" rows="7"></textarea>
             </div>
-            <input class="submit button" type="submit" value="Send" />
+            <input class="button submit" type="submit" value="Send" />
           </form>
         </div>
       </section>
