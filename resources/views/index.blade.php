@@ -1028,16 +1028,22 @@ textarea:focus {
     }
 }
 @media screen and (max-width: 360px){
+  .section-one-animation{
+    padding: 0 27px;
+  }
+  .section-one-text{
+    margin-bottom: 10px;
+  }
   .contact-section{
     background-size: 513%;
     background-position-y: 51%;
   }
-   .footer{
-     background-position-y: -360%;
-   }
-   iframe{
-     height: 400px;
-   } 
+  .footer{
+    background-position-y: -360%;
+  }
+  iframe{
+    height: 400px;
+  } 
 }
 @media screen and (max-width: 970px) {
   .button-overlay {
