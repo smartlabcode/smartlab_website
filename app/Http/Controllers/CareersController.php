@@ -168,8 +168,25 @@ class CareersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        //
+        try {
+            // get specific admin
+            $job = Career::findOrFail($id);
+
+            // force deleting admin even if table is adjusted for soft deletes
+            $job->delete();
+
+            // return with message
+            $request->session()->flash('message', 'Job successfully deleted.');
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', 'CareersController - destroy: ' . $e->getMessage());
+
+            // return with message
+            $request->session()->flash('error', 'Job couldnt be deleted.');
+        }
     }
+
 }
