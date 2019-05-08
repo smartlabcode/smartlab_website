@@ -112,24 +112,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/courses.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2466">
-              <caret line="37" selection-start-line="37" selection-end-line="37" />
+            <state relative-caret-position="556">
+              <caret line="284" column="31" lean-forward="true" selection-start-line="284" selection-start-column="31" selection-end-line="284" selection-end-column="31" />
               <folding>
-                <element signature="e#1285#1311#0#HTML" expanded="true" />
-                <element signature="e#1909#1934#0#HTML" expanded="true" />
-                <element signature="e#1999#2024#0#HTML" expanded="true" />
-                <element signature="e#2088#2113#0#HTML" expanded="true" />
-                <element signature="e#2176#2201#0#HTML" expanded="true" />
-                <element signature="e#2397#2423#0#HTML" expanded="true" />
-                <element signature="e#4352#4416#0#HTML" expanded="true" />
-                <element signature="e#4609#4634#0#HTML" expanded="true" />
-                <element signature="e#4688#4712#0#HTML" expanded="true" />
-                <element signature="e#4903#4922#0#HTML" expanded="true" />
-                <element signature="e#4956#5020#0#HTML" expanded="true" />
-                <element signature="e#5072#5149#0#HTML" expanded="true" />
-                <element signature="e#4691#5317#0#HTML" />
-                <element signature="e#5323#6180#0#HTML" />
-                <element signature="e#5439#5463#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -349,7 +340,7 @@
       <path value="$PROJECT_DIR$/vendor/laravel/telescope" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="2290" />
     <option name="y" value="125" />
     <option name="width" value="1153" />
@@ -448,12 +439,12 @@
       <workItem from="1556783085120" duration="10031000" />
       <workItem from="1556864696624" duration="1333000" />
       <workItem from="1557140036721" duration="4928000" />
-      <workItem from="1557232856800" duration="5119000" />
+      <workItem from="1557232856800" duration="6260000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="216195000" />
+    <option name="totallyTimeSpent" value="217336000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -465,15 +456,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="85" y="186" width="1153" height="777" extended-state="1" />
+    <frame x="1912" y="-8" width="2576" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50547945" side_tool="true" weight="0.3085622" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49452055" visible="true" weight="0.36505032" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49452055" visible="true" weight="0.15858506" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.42015505" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.032502707" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" />
@@ -500,11 +491,6 @@
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/PagesController.php</url>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/resources/views/pages/courses.blade.php</url>
-          <line>216</line>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -791,24 +777,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/courses.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2466">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        <state relative-caret-position="556">
+          <caret line="284" column="31" lean-forward="true" selection-start-line="284" selection-start-column="31" selection-end-line="284" selection-end-column="31" />
           <folding>
-            <element signature="e#1285#1311#0#HTML" expanded="true" />
-            <element signature="e#1909#1934#0#HTML" expanded="true" />
-            <element signature="e#1999#2024#0#HTML" expanded="true" />
-            <element signature="e#2088#2113#0#HTML" expanded="true" />
-            <element signature="e#2176#2201#0#HTML" expanded="true" />
-            <element signature="e#2397#2423#0#HTML" expanded="true" />
-            <element signature="e#4352#4416#0#HTML" expanded="true" />
-            <element signature="e#4609#4634#0#HTML" expanded="true" />
-            <element signature="e#4688#4712#0#HTML" expanded="true" />
-            <element signature="e#4903#4922#0#HTML" expanded="true" />
-            <element signature="e#4956#5020#0#HTML" expanded="true" />
-            <element signature="e#5072#5149#0#HTML" expanded="true" />
-            <element signature="e#4691#5317#0#HTML" />
-            <element signature="e#5323#6180#0#HTML" />
-            <element signature="e#5439#5463#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
