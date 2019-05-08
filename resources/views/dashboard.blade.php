@@ -6,7 +6,7 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: center;
     }
 
     #mainDashboardContainer > a  {
@@ -51,6 +51,16 @@
                         <div class="card-body">
                             <h5 class="card-title">Subscribers List</h5>
                             <p class="card-text">See list of all newsletter subscribers.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/careers">
+                    <div class="card text-white mb-3" style="max-width: 18rem; background-color: orange">
+                        <div class="card-header">Careers</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Jobs List</h5>
+                            <p class="card-text">See list of all added jobs.</p>
                         </div>
                     </div>
                 </a>

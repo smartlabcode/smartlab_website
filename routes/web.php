@@ -43,6 +43,9 @@ Route::middleware(['auth'])->group(function() {
         'store'
     ])->middleware(['is_superadmin']);
     Route::post('admins/add', 'UsersController@store')->middleware(['is_superadmin'])->name('admins.store');
+
+    // routes for careers
+    Route::resource('careers', 'CareersController');
 });
 
 // logout route
