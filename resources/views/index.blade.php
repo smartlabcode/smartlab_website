@@ -101,6 +101,7 @@ body {
   text-align: center;
 }
 .language {
+  display: none;
   text-align: right;
 }
 .opacity {
@@ -626,8 +627,9 @@ svg {
   transform: rotateX(-180deg) rotateY(-180deg);
   display: inline-block;
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   left: 0;
+  width: 101%;
 }
 .img-container {
   display: inline-block;
@@ -643,7 +645,7 @@ svg {
   position: absolute;
   width: 25%;
   right: -15%;
-  top: 30%;
+  top: 18%;
 }
 .contact-orange-circle-l {
   position: absolute;
@@ -717,13 +719,12 @@ textarea:focus {
 }
 .contact-section {
   width: 112%;
-  height: 100%;
   left: -6%;
   background-image: url(images/img/footer-blue-bg.svg);
   background-repeat: no-repeat;
   background-size: 200vw;
   background-position-x: 40%;
-  background-position-y: 33%;
+  background-position-y: 35%;
   position: relative;
 }
 .button-overlay {
@@ -937,9 +938,80 @@ textarea:focus {
     }
 }
 @media screen and (max-width: 600px){
-    
+    #app{
+      width: 100% !important;
+      margin: 0 !important;
+    }
+    .background-img {
+    top: 1%;
+    right: -87%;
+    transform: rotate(67deg);
+    width: 145%;
+    }
+    .section-two-top{
+      flex-direction: column;
+    }
+    .section-two-top-right{
+      text-align: center;
+      align-items: center;
+    }
+    .section-two-bot-item{
+      flex-direction: column;
+    }
+    .section-two-bot-item div{
+      align-items: center;
+      text-align: center;
+    }
+    .section-two-bot-item .h2-font{
+      margin-bottom: 8px;
+    }
+    .section-two-bot-item button{
+      margin:0;
+    }
+    .blog{
+      flex-basis: 100%;
+      max-height: 567px;
+    }
+    .contact-section{
+      margin-top: -25%;
+      background-size: 345vw;
+      height: auto;
+    }
+    .blog-section{
+      z-index: 5;
+    }
+    .img-container img{
+      width: 100%;
+    }
+    .contact-form-group{
+      flex-direction: column;
+    }
+    .footer{
+      width: auto;
+      left: auto;
+      top: -20px;
+    }
+    .h1-font{
+      font-size: 1.5em;
+    }
+    .h2-font{
+      font-size: 1.3em;
+    }
+    .p-font{
+      font-size: 1.2em;
+    }
+    .button{
+      width: 166px;
+      height: 45px;
+      font-size: 1.2em;
+      outline: hidden;
+    }
 }
 @media screen and (max-width: 360px){
+  .contact-section{
+    background-size: 513%;
+    background-position-y: 51%;
+  }
     
 }
 @media screen and (max-width: 970px) {
