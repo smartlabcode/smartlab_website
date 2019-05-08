@@ -8,7 +8,7 @@
     @include('parts.error_success')
 
     <!-- Form for editing job -->
-    <form id="addCareerForm" method="POST">
+    <form id="addCareerForm" action="/careers/store" method="POST">
 
         <!-- Include token -->
         @csrf

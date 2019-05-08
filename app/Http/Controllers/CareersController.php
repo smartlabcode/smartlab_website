@@ -60,7 +60,7 @@ class CareersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function storeJob(Request $request)
     {
         // TODO issues with try/catch block and data validation
         // create career object

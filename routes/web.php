@@ -46,6 +46,7 @@ Route::middleware(['auth'])->group(function() {
 
     // routes for careers
     Route::resource('careers', 'CareersController');
+    Route::post('careers/store', 'CareersController@storeJob');
 });
 
 // logout route

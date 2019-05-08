@@ -112,7 +112,7 @@ function submitJobAddForm() {
 
     document.getElementById("contentText").value = text;
 
-    form.action = "/careers";
+   // form.action = "/careers";
 
     form.submit();
 }

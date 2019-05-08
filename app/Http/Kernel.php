@@ -33,8 +33,8 @@ class Kernel extends HttpKernel
             \Illuminate\Session\Middleware\StartSession::class,
             // \Illuminate\Session\Middleware\AuthenticateSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-            \App\Http\Middleware\VerifyCsrfToken::class,  // disable during Postman testing
-            \App\Http\Middleware\CheckClientLanguage::class,
+            //\App\Http\Middleware\VerifyCsrfToken::class,  // disable during Postman testing
+           // \App\Http\Middleware\CheckClientLanguage::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             //\App\Http\Middleware\CheckIfSuperAdmin::class
         ],
