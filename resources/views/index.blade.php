@@ -731,11 +731,7 @@ textarea:focus {
   background-repeat: no-repeat;
   background-size: 200vw;
   background-position-x: 40%;
-<<<<<<< HEAD
   background-position-y: 35%;
-=======
-  background-position-y: 40%;
->>>>>>> 7df563c74997b42125ab319842a2586e66792902
   position: relative;
 }
 .button-overlay {
