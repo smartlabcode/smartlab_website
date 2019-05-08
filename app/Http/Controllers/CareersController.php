@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Career;
 use App\Http\Services\LogService;
+use App\Http\Services\MailerService;
+use App\Http\Services\MailTemplateCreatorService;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class CareersController extends Controller
 {
@@ -37,7 +40,18 @@ class CareersController extends Controller
      */
     public function create()
     {
-        return view('pages.careers.careers_create');
+        try {
+            // return view with form for creating job
+            return view('pages.careers.careers_create');
+
+        }catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', 'CareersController - create: ' . $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+
     }
 
     /**
@@ -48,7 +62,30 @@ class CareersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // TODO issues with try/catch block and data validation
+        // create career object
+        $job = new Career();
+
+        // set request data to session so that it can be used fo old input if neccessary
+        $request->flash();
+
+        // check if neccessary values are entered correctly, if no return error messages
+        $request->validate([
+            'title' => 'required|max:255',
+            'body' => 'required'
+        ]);
+
+        // if data is ok, set new values to the model object
+        $job->title = $request->input('title');
+        $job->body = $request->input('body');
+
+        // save model
+        $job->save();
+
+        // redirect with message
+        return redirect('careers')->with([
+            'message' => 'Job successfully added'
+        ]);
     }
 
     /**

@@ -98,6 +98,24 @@ function submitJobEditForm() {
     form.submit();
 }
 
+/* Create blog */
+function submitJobAddForm() {
+
+    event.preventDefault();
+
+    // change action route
+    let form = document.getElementById("addCareerForm");
+
+    // set content
+    let content = form.getElementsByClassName('note-editable')[0];
+    let text = content.innerHTML;
+
+    document.getElementById("contentText").value = text;
+
+    form.action = "/careers";
+
+    form.submit();
+}
 
 
 

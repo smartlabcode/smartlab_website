@@ -64,7 +64,9 @@
         container.innerHTML = text.value;
 
         var loader = document.getElementById("loaderContainer");
-        loader.parentNode.removeChild(loader);
+        if(loader !== null) {
+            loader.parentNode.removeChild(loader);
+        }
 
     }, 2000);
 
