@@ -15,6 +15,9 @@
     body{
         background: white !important;
     }
+    html{
+        overflow-x: hidden !important;
+    }
     nav{
         display: none !important;
     }
@@ -134,7 +137,6 @@
     #slider {
         margin-top: 70px;
         width: 100%;
-        height: 400px;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -142,7 +144,25 @@
         box-sizing: border-box;
         position: relative;
     }
-
+    #slider div{
+        display: flex;
+        height: 400px;
+    }
+    .slider-left{
+        width: 50%;
+    }
+    .slider-left img{
+        object-fit: cover;
+        width: 100%;
+    }
+    .slider-right{
+        width: 50%;
+        
+    }
+    .slider-right img{
+        object-fit: cover;
+        width: 100%;
+    }
     #slider > img {
         height: 100%;
         width: 530px;
@@ -275,7 +295,7 @@
     }
     .xliff-item{
         max-width: 200px;
-        flex-basis: 20%;
+        flex-basis: 23%;
         position: relative;
     }
     .xliff-item:nth-child(even){
@@ -346,7 +366,6 @@
     }
 @media screen and (max-width: 1400px){
   .background-img{
-    height: 45%;
     top: -9%;
     right: -25%;
   }
@@ -391,6 +410,10 @@
     }
     .section-one-text{
         padding-right: 0;
+    }
+    .dashed-line {
+        right: -28%;
+        width: 40%;
     }
 }
 @media screen and (max-width: 1175px){
@@ -546,8 +569,10 @@
     </div>
     <div id="slider">
             <img class="prethodni shadow-1" onclick="changeImage('previous')" src="../images/img/Picture2.png">
-            <img class="shadow-1" style="margin-right: 5px" id="firstPart" src="" />
-            <img class="shadow-1" style="margin-left: 5px" id="secondPart" src="" />
+            <div>
+                <div class="slider-left"><img class="shadow-1" id="firstPart" src="" /></div>
+                <div class="slider-right"><img class="shadow-1" id="secondPart" src="" /></div>
+            </div>
             <img class="sljedeci shadow-1" src="../images/img/Picture3.png" onclick="changeImage('next')">
     </div>
     <img class="secTwoBg3" src="../images/img/fluid-bright-circle.svg">
