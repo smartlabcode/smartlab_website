@@ -1,6 +1,33 @@
 <!-- Extend main layout -->
 @extends('layouts.app')
 
+<style>
+    #imagePlaceholder {
+        display: inline-block;
+        width: 250px !important;
+        height: 250px !important;
+        cursor: pointer;
+        box-shadow: 2px 2px 2px rgba(150,150,150, 0.5), -2px 0 2px rgba(150,150,150, 0.5);
+    }
+
+
+    #imageInput {
+        display: none;
+    }
+
+    #formContainer {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #formContainer > div {
+        width: calc(100% - 300px);
+    }
+
+</style>
+
 @section('content')
 
     <!-- Heading -->
@@ -18,11 +45,6 @@
         <!-- Set right method for the form -->
         @method('PUT')
 
-        <!-- Include language selector for the blog and set page(type) from which it is included -->
-        @include('parts.blog_language_selector', [
-            'type' => 'edit'
-        ])
-
         <!-- Check for session values and set them into variables -->
         @php
             $oldTitle = old('title');
@@ -37,10 +59,29 @@
         @endphp
 
         <!-- Form elements -->
-        <div class="form-group">
-            <label for="title">Blog title</label>
-            <input type="text" class="form-control" id="title" name="title" value="@if(isset($oldTitle))  {{ old('title') }} @else {{$blog->heading}} @endif" required>
+        <div id="formContainer">
+
+            <div>
+                <!-- Include language selector for the blog and set page(type) from which it is included -->
+                @include('parts.blog_language_selector', [
+                    'type' => 'edit'
+                ])
+
+                <div class="form-group">
+                    <label for="title">Blog title</label>
+                    <input type="text" class="form-control" id="title" name="title" value="@if(isset($oldTitle))  {{ old('title') }} @else {{$blog->heading}} @endif" required>
+                </div>
+
+            </div>
+
+            <!-- Uploading blog image -->
+            <img id="imagePlaceholder" onclick="openUploadWindow()" src="{{ asset($blog->image_path) }}"/>
+            <input id="imageInput" type="file" accept="image/jpg,image/png,image/jpeg" name="image" onchange="showUploadedImage()" />
+
         </div>
+
+        <br/>
+
         <div class="form-group">
             <!-- Fake element for editor -->
             <textarea class="form-control" name="content" placeholder="Blog content" id="content" rows="15"></textarea>

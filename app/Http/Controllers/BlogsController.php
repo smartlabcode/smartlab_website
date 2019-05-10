@@ -223,6 +223,7 @@ class BlogsController extends Controller
                     'blog_translations.language',
                     'users.id',
                     'blogs.id',
+                    'blogs.image_path',
                     'blog_translations.text',
                     'blog_translations.language'
                 )
