@@ -1899,7 +1899,7 @@ textarea:focus {
           data-aos-anchor-placement="top">
               <div class="img-container">
                   <img src="images/img/blog-post-2.png">
-                  <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
+                  <svg class="wave" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
                     <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
                   </svg>
                 </div>
@@ -1921,7 +1921,7 @@ textarea:focus {
           data-aos-anchor-placement="top">
                 <div class="img-container">
                     <img src="images/img/blog-post-1.png">
-                    <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
+                    <svg class="wave" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
                       <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
                     </svg>
                   </div>
@@ -1943,7 +1943,7 @@ textarea:focus {
           data-aos-anchor-placement="top">
                   <div class="img-container">
                       <img src="images/img/blog-post-2.png">
-                      <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
+                      <svg class="wave" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
                         <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
                       </svg>
                     </div>
