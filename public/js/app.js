@@ -32,8 +32,10 @@ function submitAddForm() {
     // set content
     let content = form.getElementsByClassName('note-editable')[0];
     let text = content.innerHTML;
-
     document.getElementById("contentText").value = text;
+
+    // check if blog image is set
+
 
     form.action = "/blogs";
 
@@ -98,7 +100,7 @@ function submitJobEditForm() {
     form.submit();
 }
 
-/* Create blog */
+/* Create job */
 function submitJobAddForm() {
 
     event.preventDefault();

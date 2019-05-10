@@ -1,6 +1,33 @@
 <!-- Extend main layout -->
 @extends('layouts.app')
 
+<style>
+    #imagePlaceholder {
+        display: inline-block;
+        width: 250px !important;
+        height: 250px !important;
+        cursor: pointer;
+        box-shadow: 2px 2px 2px rgba(150,150,150, 0.5), -2px 0 2px rgba(150,150,150, 0.5);
+    }
+
+
+    #imageInput {
+        display: none;
+    }
+
+    #formContainer {
+       display: flex;
+       flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #formContainer > div {
+        width: calc(100% - 300px);
+    }
+
+</style>
+
 @section('content')
 
     <!-- Heading -->
@@ -10,7 +37,7 @@
     @include('parts.error_success')
 
     <!-- Form for creating blog -->
-    <form id="addBlogForm" method="POST">
+    <form id="addBlogForm" method="POST" enctype="multipart/form-data">
 
         <!-- Include token -->
         @csrf
@@ -31,17 +58,32 @@
             }
         @endphp
 
-        <!-- Include language selector for the blog and set page(type) from which it is included -->
-        @include('parts.blog_language_selector',[
-            'type' => $type
-        ])
+
 
         <!-- Form elements -->
-        <div class="form-group">
-            <label for="title">Blog title</label>
-            <input type="text" class="form-control" id="title" placeholder="Title" name="title"
-                   value="@if(isset($oldTitle)) {{ old('title') }} @elseif(isset($language)) {{$blog->heading}} @endif">
+        <div id="formContainer">
+            <div>
+
+                <!-- Include language selector for the blog and set page(type) from which it is included -->
+                @include('parts.blog_language_selector',[
+                    'type' => $type
+                ])
+
+                <div class="form-group">
+                    <label for="title">Blog title</label>
+                    <input type="text" class="form-control" id="title" placeholder="Title" name="title"
+                           value="@if(isset($oldTitle)) {{ old('title') }} @elseif(isset($language)) {{$blog->heading}} @endif">
+
+                </div>
+
+            </div>
+
+            <!-- Uploading blog image -->
+            <img id="imagePlaceholder" onclick="openUploadWindow()" src="{{ asset('images/placeholder.png') }}"/>
+            <input id="imageInput" type="file" accept="image/jpg,image/png,image/jpeg" name="image" onchange="showUploadedImage()" />
+
         </div>
+
         <div class="form-group">
             <label for="content">Blog text</label>
             <!-- Fake element for editor -->
@@ -72,5 +114,23 @@
 
     <!-- Include summernote editor -->
     @include('parts.summernote')
+
+
+    <script>
+
+        function openUploadWindow() {
+
+            var upload = document.getElementById("imageInput");
+            upload.click();
+        }
+
+        function showUploadedImage() {
+            var file = document.getElementById("imageInput").files[0];
+
+            _PREVIEW_URL = URL.createObjectURL(file);
+            document.getElementById('imagePlaceholder').src = _PREVIEW_URL;
+
+        }
+    </script>
 
 @endsection

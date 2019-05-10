@@ -43,7 +43,7 @@
         @csrf
 
         <input id="image_name" type="hidden" name="image_name"/>
-        <input id="inputFile" type="file" accept="image/jpg,image/png" name="files[]" onchange="showUploadedImage()" />
+        <input id="inputFile" type="file" accept="image/jpg,image/png,image/jpeg" name="files[]" onchange="showUploadedImage()" />
     </form>
 
 

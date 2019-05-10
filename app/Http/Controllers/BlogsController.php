@@ -148,14 +148,24 @@ class BlogsController extends Controller
             'title' => 'required|min:3|max:255',
             'language' => 'in:en,de,bs',
             'existing' => 'in:true,false',
-            'tags' => 'required'
+            'tags' => 'required',
+            'image' => 'required'
         ]);
+
+
+        // set image name
+        $imageName = time().'.'.request()->image->getClientOriginalExtension();
+
+        // upload image
+        request()->image->move(public_path('/images'), $imageName);
+
 
         // check if already exist one translation for the blog, if no create new blog in the database
         if ($request->input('existing') == 'false') {
 
             // if data is ok set new values to the model
             $blog->users_id = Auth::user()->id;
+            $blog->image_path = '/images/' . $imageName;
             // save model
             $blog->save();
 
