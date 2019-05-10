@@ -820,6 +820,37 @@ textarea:focus {
 .submit{
   font-size: 1.5em;
 }
+.path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: dash 5s linear forwards;
+}
+
+@keyframes path {
+
+0% {
+   d: path('M101.6,200A100,100,0');
+}
+
+25% {
+   d: path(',0,1,8.028,135.216a9.8,9.8,0');
+}
+
+50% {
+   d: path('1,1,18.353-6.9A80.382,80.382,0'); 
+}
+
+
+
+100% {
+   d: path('1,0,101.6,19.608,9.8,9.8,0,0,1,101.6,0a100,100,0,0,1,0,200Z'); 
+}
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 @media screen and (max-width: 1500px){
   .partners-images{
     flex-basis: 40%;
@@ -1721,9 +1752,19 @@ textarea:focus {
                 <div class="--border-right --border-bottom"> 
                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="2642.807 4302.5 269.193 275">
                     <defs>
+                        <linearGradient id="left-to-right">
+                            <stop offset="0" stop-color="#4DAF4C">
+                                <animate dur="2s" attributeName="offset" fill="freeze" from="0" to="1" />
+                              </stop>
+                            <stop offset="0" stop-color="#fff">
+                                <animate dur="2s" attributeName="offset" fill="freeze" from="0" to="1" />
+                              </stop>
+                            
+                          </linearGradient>
                       <style>
+                          
                         .cls-1 {
-                          fill: #4885fa;
+                          fill: #ffffff;
                         }
                   
                         .cls-2 {
@@ -1739,8 +1780,8 @@ textarea:focus {
                       </filter>
                     </defs>
                     <g id="Group_312" data-name="Group 312" transform="translate(2680.307 4334)">
-                      <g class="cls-2" transform="matrix(1, 0, 0, 1, -2680.31, -4334)">
-                        <path id="Path_1201-2" data-name="Path 1201" class="cls-1" d="M101.6,200A100,100,0,0,1,8.028,135.216a9.8,9.8,0,1,1,18.353-6.9A80.382,80.382,0,1,0,101.6,19.608,9.8,9.8,0,0,1,101.6,0a100,100,0,0,1,0,200Z" transform="translate(2672.9 4334)"/>
+                      <g class="cls-2 " transform="matrix(1, 0, 0, 1, -2680.31, -4334)">
+                        <path id="Path_1201-2" data-name="Path 1201" class="cls-1 path" fill="#ffffff" stroke="#000000" stroke-width="10" d="M101.6,200A100,100,0,0,1,8.028,135.216a9.8,9.8,0,1,1,18.353-6.9A80.382,80.382,0,1,0,101.6,19.608,9.8,9.8,0,0,1,101.6,0a100,100,0,0,1,0,200Z" transform="translate(2672.9 4334)"/>
                       </g>
                     </g>
                   </svg>
