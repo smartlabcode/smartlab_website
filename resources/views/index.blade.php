@@ -673,7 +673,7 @@ h2 span {
 .blog span{
   opacity: 0.5;
 }
-svg {
+.wave {
   transform: rotateX(-180deg) rotateY(-180deg);
   display: inline-block;
   position: absolute;
@@ -1719,7 +1719,31 @@ textarea:focus {
             </div>
             <div class="flex about-us">
                 <div class="--border-right --border-bottom"> 
-                    <img src="https://via.placeholder.com/150" />
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="2642.807 4302.5 269.193 275">
+                    <defs>
+                      <style>
+                        .cls-1 {
+                          fill: #4885fa;
+                        }
+                  
+                        .cls-2 {
+                          filter: url(#Path_1201);
+                        }
+                      </style>
+                      <filter id="Path_1201" x="2642.807" y="4302.5" width="269.193" height="275" filterUnits="userSpaceOnUse">
+                        <feOffset dy="6" input="SourceAlpha"/>
+                        <feGaussianBlur stdDeviation="12.5" result="blur"/>
+                        <feFlood flood-color="#003591" flood-opacity="0.4"/>
+                        <feComposite operator="in" in2="blur"/>
+                        <feComposite in="SourceGraphic"/>
+                      </filter>
+                    </defs>
+                    <g id="Group_312" data-name="Group 312" transform="translate(2680.307 4334)">
+                      <g class="cls-2" transform="matrix(1, 0, 0, 1, -2680.31, -4334)">
+                        <path id="Path_1201-2" data-name="Path 1201" class="cls-1" d="M101.6,200A100,100,0,0,1,8.028,135.216a9.8,9.8,0,1,1,18.353-6.9A80.382,80.382,0,1,0,101.6,19.608,9.8,9.8,0,0,1,101.6,0a100,100,0,0,1,0,200Z" transform="translate(2672.9 4334)"/>
+                      </g>
+                    </g>
+                  </svg>
                 </div>
                 <div class="--border-right --border-bottom">
                     <img src="https://via.placeholder.com/150" />
@@ -1810,7 +1834,7 @@ textarea:focus {
           data-aos-anchor-placement="top">
               <div class="img-container">
                   <img src="images/img/blog-post-1.png">
-                  <svg viewBox="0 0 500 500">
+                  <svg class="wave" viewBox="0 0 500 500">
                     <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
                   </svg>
                 </div>
