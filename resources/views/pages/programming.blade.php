@@ -5,15 +5,16 @@
     /* SECTION ONE */
     :root {
         --shadow-color: rgba(0, 53, 145, 0.15);
-        --button-bg-color: #4885fa;
-        --button-bg-orange: #ff931f;
-        --h2-color: #0f75bc;
-        --h1-color: #14213d;
-        --p-color: #c9d6e2;
-        scroll-behavior: smooth;
+  --button-bg-color: #4885fa;
+  --button-bg-orange: #ff931f;
+  --h2-color: #4885FA;
+  --h1-color: #14213d;
+  --p-color: #c9d6e2;
+  scroll-behavior: smooth;
     }
     body{
         background: white !important;
+        overflow-x: hidden !important;
     }
     html{
         overflow-x: hidden !important;
@@ -26,14 +27,15 @@
 }
 .h1-font {
   font-family: "Montserrat", sans-serif;
-  font-size: 2.8em;
+  font-weight: bold;
+  font-size: 3em;
   margin-top: 0;
   margin-bottom: 25px;
   color: var(--h1-color);
 }
 .h2-font {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.8em;
+  font-size: 2em;
   color: var(--h2-color);
 }
 .p-font {
@@ -113,7 +115,8 @@
 }
 .section-one-text ul{
     padding-top: 20px;
-    font-weight: bold;
+    font-weight: 500;
+    list-style-type: circle;
 }
 /*.section-one-text h2,
 .section-one-text h1 {
@@ -136,10 +139,7 @@
 
     #slider {
         margin-top: 70px;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+        width:100%;
         padding: 10px;
         box-sizing: border-box;
         position: relative;
@@ -147,21 +147,30 @@
     #slider div{
         display: flex;
         height: 400px;
+        width: calc(100% + 50px);
+        
     }
     .slider-left{
         width: 50%;
+        margin-right: 5px;
+        background-color: white;
+        border-radius: 15px;
     }
     .slider-left img{
         object-fit: cover;
         width: 100%;
+        border-radius: 15px;
     }
     .slider-right{
         width: 50%;
-        
+        margin-left: 5px;
+        background-color: white;
+        border-radius: 15px;
     }
     .slider-right img{
         object-fit: cover;
         width: 100%;
+        border-radius: 15px;
     }
     #slider > img {
         height: 100%;
@@ -169,27 +178,41 @@
         border-radius: 10px;
         display:inline-block;
     }
+    .fade-in {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
 
+    @-webkit-keyframes fade {
+      from {opacity: 0} 
+      to {opacity: 1}
+    }
     #slider > img:first-child {
         margin-right: 5px;
         width: 50px;
         height: 50px;
-        position: relative;
+        position: absolute;
         display: inline-block;
-        top: 160px;
-        left: 30px;
+        top: 45%;
+        left: -15px;
         border-radius: 50%;
+        cursor: pointer;
+        z-index: 100;
     }
 
     #slider > img:last-child {
         margin-left: 5px;
         width: 50px;
         height: 50px;
-        position: relative;
+        position: absolute;
         display: inline-block;
-        top: 160px;
-        right: 30px;
+        top: 45%;
+        right: -65px;
         border-radius: 100%;
+        cursor: pointer;
+        z-index: 100;
     }
 
     .button{
@@ -198,7 +221,8 @@
         border-radius: 35px;
         width: 260px;
         height: 70px;
-        font-size: 1.7em;
+        font-size: 1.4em !important;
+        font-weight: 500;
         color: white;
         background-color: var(--button-bg-color);
         border: 1px solid var(--button-bg-color);
@@ -237,12 +261,13 @@
     }
 
     .secTwoBg2{
-        width: 800px;
+        width: 50%;
+        /* width: 800px; */
         position: absolute;
-        top: 860px;
+        top: -145px;
         z-index: -130;
-        left: -409px;
-        transform: rotate(25deg);
+        left: -589px;
+        /* transform: rotate(25deg); */
     }
 
     .secTwoBg3{
@@ -286,7 +311,7 @@
         
     }
     .xliff-section .button:hover{
-        background-color: white;
+        background-color: transparent;
         color: var(--h1-color);
         border: 1px solid var(--h1-color);
     }
@@ -295,7 +320,7 @@
     }
     .xliff-item{
         max-width: 200px;
-        flex-basis: 23%;
+        flex-basis: 25%;
         position: relative;
     }
     .xliff-item:nth-child(even){
@@ -336,7 +361,7 @@
     }
     .tools-container{
         position: relative;
-        top: 700px;
+        top: 500px;
     }
     .tools {
         display: flex;
@@ -401,6 +426,9 @@
     transform: rotate(147deg) !important;
     top: 6%;
 }
+.tools-container{
+    top: 400px;
+}
 }
 @media screen and (max-width: 1200px){
     .contain{
@@ -415,6 +443,9 @@
         right: -28%;
         width: 40%;
     }
+    .tools-container{
+      top: 250px;
+  }
 }
 @media screen and (max-width: 1175px){
     .background-img{
@@ -427,6 +458,7 @@
     width: 208px;
     height: 56px;
   }
+  
 }
 @media screen and (max-width: 1065px){
     .xliff-section{
@@ -435,10 +467,26 @@
   .background-img{
       right: -55%;
   }
+  .dashed-line {
+    right: -23%;
+    width: 35%;
+}
 }
 @media screen and (max-width: 1030px){
     .background-img{
         right: -65%;
+    }
+}
+@media screen and (max-width: 1030px){
+    .dashed-line{
+        right: -16%;
+        width: 35%;
+    }
+    .w-100{
+        width: 100% !important;
+    }
+    .xliff-background{
+        width: 145vw;
     }
 }
 @media screen and (max-width: 900px){
@@ -464,6 +512,50 @@
       height: auto;
       width: 70%;
   }
+  .xliff-background{
+      width: 170vw;
+  }
+}
+@media screen and (max-width: 768px){
+    .slider-right{
+        display: none !important;
+    }
+    .slider-left{
+        width: 100%;
+        
+    }
+    #slider{
+        height: 300px;
+    }
+    #slider div{
+        height: auto;
+        width: 100%;
+    }
+    #slider > img:last-child {
+        margin-left: 5px;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        display: inline-block;
+        top: 50%;
+        right: -25px;
+        border-radius: 100%;
+        transform: translate(-20%, -50%);
+    }
+    #slider > img:first-child {
+    margin-right: 5px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    display: inline-block;
+    top: 160px;
+    left: 30px;
+    border-radius: 50%;
+    }
+    .slider-left img {
+    object-fit: contain;
+    width: 100%;
+}
 }
 @media screen and (max-width: 600px){
     #app{
@@ -490,6 +582,60 @@
       height: 45px;
       font-size: 1.2em;
       outline: hidden;
+    }
+}
+@media screen and (max-width: 425px){
+  .section-one-animation {
+    height: 270px;
+    padding: 0;
+  }
+  .section-one{
+    margin-bottom: 40px;
+  }
+  .xliff-container{
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  .xliff-item{
+      flex-basis: 100%;
+      max-width: 80%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+  }
+  .xliff-item img{
+      width: 50%;
+  }
+  .dashed-line {
+    display: none;
+    }
+    
+    .xliff-background {
+        width: 666%;
+        top: 6%;
+    }
+    .xliff-item:nth-child(even){
+        margin-bottom: 40px;
+        
+    }
+    .xliff-item:nth-child(odd){
+       
+    }
+    .xliff-background-container{
+        margin-bottom: -100px !important;
+    }
+    .tools-container {
+        top: 130px;
+        margin-bottom: -100px;
+    }
+    .relative {
+        top: -180px;
+        margin-bottom: -100px;
+    }
+    .w-100 {
+        top: -75px;
     }
 }
 @media screen and (max-width: 360px){
@@ -534,7 +680,7 @@
                   <h1 class="h1-font bold" >Development and programming</h1>
                   <p class="p-font">
                     Back and front-end development of learning and performance managment systems, as well as custom functions and iteractivity options making your courses compelling and user friendly.
-                    <ul>
+                    <ul class="p-font">
                         <li>Custom made tracking and reporting features</li>
                         <li>Flash to HTML5 conversion of existing courses to enable delivery for multiple platforms</li>
                         <li>Scenario based quizes</li>
@@ -564,14 +710,14 @@
 
 
 
-    <div class="h2-font" style="margin-top: 280px; display: flex; justify-content: center">
-        <h3>Our Works</h3>
+    <div style="margin-top: 280px; display: flex; justify-content: center">
+        <h2 class="h1-font">Our Works</h2>
     </div>
     <div id="slider">
             <img class="prethodni shadow-1" onclick="changeImage('previous')" src="../images/img/Picture2.png">
             <div>
-                <div class="slider-left"><img class="shadow-1" id="firstPart" src="" /></div>
-                <div class="slider-right"><img class="shadow-1" id="secondPart" src="" /></div>
+                <div class="slider-left shadow-1"><img class=" fade-in" id="firstPart" src="" /></div>
+                <div class="slider-right shadow-1"><img class=" fade-in" id="secondPart" src="" /></div>
             </div>
             <img class="sljedeci shadow-1" src="../images/img/Picture3.png" onclick="changeImage('next')">
     </div>
@@ -582,14 +728,14 @@
 
     <div class="section3 contain" >
         <div style="height: 50%">
-            <p class="p-font" style="margin-top: 50px; display: flex; justify-content: center">Want to see more:</p>
+            <p class="p-font" style="margin-top: 50px; display: flex; justify-content: center; font-weight: 500">Want to see more:</p>
         </div>
         <div style="height: 50%; margin-top: 30px; display: flex; justify-content: center">
             <button class="button">Schedule a demo</button>
         </div>
     </div>
 </section>
-<section class="contain xliff-background-container">
+<section class="contain xliff-background-container w-100">
         <img class="xliff-background" src="../images/img/light-blue-bg.svg">
     <div class="xliff-section">
         
@@ -604,7 +750,7 @@
                 data-aos-easing="ease-in-out"
                 data-aos-mirror="false"
                 data-aos-once="true"
-                data-aos-anchor-placement="top-center">
+                data-aos-anchor-placement="top">
                 <img src="../images/xliff-icons/step1-icon-upload.svg" >
                 <img class="dashed-line" src="../images/img/dashed-line.svg"
                 data-aos-anchor=".xliff-background-container"
@@ -615,11 +761,13 @@
                 data-aos-easing="ease-in-out"
                 data-aos-mirror="false"
                 data-aos-once="true"
-                data-aos-anchor-placement="top-center">
-                <h5 class="h1-font">Upload your file<h5>
-                <p class="p-font">
-                    Upload XLF and select languages for translation
-                </p>
+                data-aos-anchor-placement="top">
+                <div>
+                    <h5 class="h1-font">Upload your file<h5>
+                    <p class="p-font">
+                        Upload XLF and select languages for translation
+                    </p>
+                </div>
             </div>
             
             <div class="xliff-item"
@@ -631,7 +779,7 @@
             data-aos-easing="ease-in-out"
             data-aos-mirror="false"
             data-aos-once="true"
-            data-aos-anchor-placement="top-center">
+            data-aos-anchor-placement="top">
                 <img src="../images/xliff-icons/step2-icon-download.svg">
                 <img class="dashed-line dashed-line-rotate" src="../images/img/dashed-line.svg"
                 data-aos-anchor=".xliff-background-container"
@@ -642,12 +790,13 @@
                 data-aos-easing="ease-in-out"
                 data-aos-mirror="false"
                 data-aos-once="true"
-                data-aos-anchor-placement="top-center">
-                <h5 class="h1-font">Download XLS<h5>
-                <p class="p-font">
-                    Download XLS file (excel) which contains all the data from your original XLF and additional columns for selected languages
-                </p>
-
+                data-aos-anchor-placement="top">
+                <div>
+                    <h5 class="h1-font">Download XLS<h5>
+                    <p class="p-font">
+                        Download XLS file (excel) which contains all the data from your original XLF and additional columns for selected languages
+                    </p>
+                </div>
             </div>
             <div class="xliff-item"
             data-aos-anchor=".xliff-background-container"
@@ -658,7 +807,7 @@
                 data-aos-easing="ease-in-out"
                 data-aos-mirror="false"
                 data-aos-once="true"
-                data-aos-anchor-placement="top-center">
+                data-aos-anchor-placement="top">
                 <img src="../images/xliff-icons/step3-icon-trans.svg">
                 <img class="dashed-line" src="../images/img/dashed-line.svg"
                 data-aos-anchor=".xliff-background-container"
@@ -669,12 +818,13 @@
                 data-aos-easing="ease-in-out"
                 data-aos-mirror="false"
                 data-aos-once="true"
-                data-aos-anchor-placement="top-center">
-                <h5 class="h1-font">Translate columns<h5>
-                <p class="p-font">
-                    Insert translations in given columns and upload your files (Original XLF and new XLS file with translations)
-                </p>
-                
+                data-aos-anchor-placement="top">
+                <div>
+                    <h5 class="h1-font">Translate columns<h5>
+                    <p class="p-font">
+                        Insert translations in given columns and upload yourfiles (Original XLF and new XLS file with translations)
+                    </p>
+                </div>
             </div>
             <div class="xliff-item" 
             data-aos-anchor=".xliff-background-container"
@@ -685,12 +835,14 @@
                 data-aos-easing="ease-in-out"
                 data-aos-mirror="false"
                 data-aos-once="true"
-                data-aos-anchor-placement="top-center">
+                data-aos-anchor-placement="top">
                 <img src="../images/xliff-icons/step4-icon-ready.svg">
-                <h5 class="h1-font">Ready for download<h5>
-                <p class="p-font">
-                    Now server creates XLF files for all selected languages and then they are reay to download
-                </p>
+                <div>
+                    <h5 class="h1-font">Ready for download<h5>
+                    <p class="p-font">
+                        Now server creates XLF files for all selectedlanguages and then they are reay to download
+                    </p>
+                </div>
             </div>
         </div>
         <button class="button">See more</button>
@@ -760,7 +912,9 @@
         var imgTwoSrc = images[imgTwo];
 
         document.getElementById("firstPart").src=imgOneSrc;
+        document.getElementById("firstPart").classList.add("fade-in");
         document.getElementById("secondPart").src=imgTwoSrc;
+        document.getElementById("secondPart").classList.add("fade-in");
     }
 
 
