@@ -6,7 +6,7 @@
   --shadow-color: rgba(0, 53, 145, 0.15);
   --button-bg-color: #4885fa;
   --button-bg-orange: #ff931f;
-  --h2-color: #0f75bc;
+  --h2-color: #4885FA;
   --h1-color: #14213d;
   --p-color: #c9d6e2;
   scroll-behavior: smooth;
@@ -35,14 +35,15 @@ body {
 }
 .h1-font {
   font-family: "Montserrat", sans-serif;
-  font-size: 2.8em;
+  font-weight: bold;
+  font-size: 3em;
   margin-top: 0;
   margin-bottom: 25px;
   color: var(--h1-color);
 }
 .h2-font {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.8em;
+  font-size: 2em;
   color: var(--h2-color);
 }
 .p-font {
@@ -322,7 +323,8 @@ body {
   border-radius: 35px;
   width: 260px;
   height: 70px;
-  font-size: 1.7em;
+  font-size: 1.4em !important;
+  font-weight: 500;
   color: white;
   background-color: var(--button-bg-color);
   border: 1px solid var(--button-bg-color);
@@ -367,6 +369,7 @@ body {
 .section-two-hero {
   text-align: center;
   padding-bottom: 50px;
+  margin-top: 300px;
 }
 .section-two-hero p {
 }
@@ -381,10 +384,10 @@ body {
 }
 .section-two-top-orange-img {
   position: absolute;
-    width: 30%;
+    width: 25%;
     z-index: -100;
-    right: -15%;
-    bottom: 68%;
+    right: -11%;
+    bottom: 62%;
 }
 .section-two-background-bot-orange {
     position: absolute;
@@ -473,6 +476,7 @@ h2 span {
 }
 .section-three {
   position: relative;
+  margin-top: 250px;
 }
 .about-orange-circle {
     position: absolute;
@@ -515,7 +519,7 @@ h2 span {
   padding-top: 20px;
 }
 .team {
-  padding-top: 75px;
+  margin-top: 250px;
   position: relative;
 }
 .team-orange-circle {
@@ -542,6 +546,9 @@ h2 span {
     left: -40vw;
     transform: rotate(282deg);
     z-index: -100;
+}
+.testemonials{
+  margin-top: 250px;
 }
 .partners-images {
   flex-basis: 35%;
@@ -583,6 +590,7 @@ h2 span {
 .blog-section{
   position: relative;
   text-align: center;
+  margin-top: 250px;
 }
 .blog-section .button{
   margin-top: 100px;
@@ -700,6 +708,9 @@ svg {
   margin: 0 auto;
   padding-top: 300px;
 }
+.contact-form-container .h1-font{
+  color: white;
+}
 .contact-form-container {
   color: white;
 }
@@ -749,24 +760,29 @@ textarea:focus {
   display: flex;
   flex-direction: column;
 }
+.button-orange:hover{
+  background-color: white !important;
+  color: var(--button-bg-orange) !important;
+  border: 1px solid var(--button-bg-orange) !important;
+}
 .submit {
   align-self: flex-end;
-  margin: 20px 0;
+  margin-top: 20px;
+  margin-bottom: 250px;
   background-color: var(--button-bg-orange);
   border: 1px solid var(--button-bg-orange);
-
 }
 .submit:hover{
-    background-color: white;
-    color: var(--button-bg-orange);
-    border: 1px solid var(--button-bg-orange);
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
 }
 .contact-section {
   width: 112%;
   left: -6%;
   background-image: url(images/img/footer-blue-bg.svg);
   background-repeat: no-repeat;
-  background-size: 200vw;
+  background-size: 215vw;
   background-position-x: 40%;
   background-position-y: 35%;
   position: relative;
@@ -822,7 +838,7 @@ textarea:focus {
 @media screen and (max-width: 1200px){
     .contain{
         width: 95%;
-        margin:0 auto;
+        
     }
     .blog-container{
       justify-content: space-evenly;
@@ -866,6 +882,13 @@ textarea:focus {
   }
 }
 @media screen and (max-width: 1026px){
+  .background-img-orange-circle {
+    top: -95px;
+    right: 588px;   
+}
+.--circle3 {
+    left: -15%;
+}
   .section-two-bot{
         flex-direction: column;
     }
@@ -1072,6 +1095,105 @@ textarea:focus {
       font-size: 1em;
     }
 }
+@media screen and (max-width: 425px){
+  .--border-right{
+    border-right: 0;
+  }
+  .--border-bottom{
+    border-bottom: 0;
+  }
+  .background-img {
+    top: 3%;
+  }
+  .section-one-animation {
+    height: 270px;
+    padding: 0;
+    margin-top: 50px;
+  }
+  .section-two-bot-item button{
+    margin-top: 25px;
+  }
+  .section-two-top button{
+    margin: 25px;
+  }
+  .section-one-text{
+    margin-bottom: 50px;
+  }
+  .section-one{
+    margin-bottom: 40px;
+  }
+  .section-two{
+    margin-bottom: 40px;
+  }
+  .team{
+    padding-top: 0;
+    margin-top: 75px;
+  }
+  .contact-form-container{
+    padding-top: 230px;
+  }
+  .contact-section {
+    background-size: 605vw;
+    margin-top: -15%;
+  }
+  .contact-orange-circle-l {
+    left: -8%;
+  }
+  .contact-orange-circle-r {
+    right: -12%;
+    top: 21%;
+  }
+  .blog-section .button {
+    margin-bottom: -50px;
+  }
+  .blog{
+    margin-bottom: 10px;
+  }
+  .footer{
+    top:0;
+  }
+  .section-two-hero .submit{
+    margin-bottom: 50px;
+    margin-top: 15px;
+  }
+  .section-two-top{
+    margin-bottom: -10px;
+  }
+  .section-two-bot-item{
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }
+  .about-us .h1-font{
+    padding-top: 50px;
+  }
+  .testemonials .flex{
+    flex-direction: column-reverse;
+  }
+  .testemonials .h1-font{
+    margin-top: 100px;
+  }
+  .partners-images img{
+    max-width: 25%;
+    margin: 10px;
+  }
+  .partners-images{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: center;
+  }
+  .submit {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 375px){
+.section-two-hero .submit{
+    margin-bottom: -20px;
+    margin-top: 15px;
+  }
+  .contact-section {
+    background-size: 645vw;
+}
+}
 @media screen and (max-width: 360px){
   .section-one{
     top:0;
@@ -1083,11 +1205,11 @@ textarea:focus {
     margin-bottom: 10px;
   }
   .section-two{
-    margin-top:0;
+    margin-top: -160px;
   }
   .contact-section{
-    background-size: 513%;
-    background-position-y: 51%;
+    background-size: 630vw;
+    background-position-y: 45%;
   }
   .footer{
     background-position-y: -360%;
@@ -1095,15 +1217,20 @@ textarea:focus {
   iframe{
     height: 400px;
   }
-  .partners-images img{
-    max-width: 60%;
-  }
   .--border-right{
     border:none;
   }
   .--border-bottom{
     border: none;
   }
+  .margin-both{
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 360px){
+  .contact-section {
+    background-size: 645vw;
+}
 }
 @media screen and (max-width: 970px) {
   .button-overlay {
@@ -1478,12 +1605,12 @@ textarea:focus {
         />
         <div class="section-two-hero">
           <div>
-            <h1 class="h1-font">What We Do?</h1>
-            <h2 class="h2-font">
+            <h2 class="h1-font">What We Do?</h2>
+            <h3 class="h2-font">
               SmartLab offers different services with focus on the e-Learning
               industry.
-            </h2>
-            <button id="pinned-element1" class="button submit">Explore</button>
+            </h3>
+            <button id="pinned-element1" class="button submit button-orange">Explore</button>
           </div>
         </div>
         <div id="anchor">
@@ -1584,11 +1711,11 @@ textarea:focus {
         <div>
           <div class="about-us">
             <div>
-              <h1 class="h1-font">About Us</h1>
-              <h2 class="h2-font">
+              <h2 class="h1-font">About Us</h2>
+              <h3 class="h2-font">
                 SmartLab is an eLearning company whose goal is to help customers
                 reach their learning goals
-              </h2>
+              </h3>
             </div>
             <div class="flex about-us">
                 <div class="--border-right --border-bottom"> 
@@ -1625,7 +1752,7 @@ textarea:focus {
         <img class="team-blue-circle" src="images/img/blue-circle.svg" />
         <img class="team-orange-circle-bottom" src="images/img/orange-circle.svg" />
         <div>
-          <h1 class="text-center h1-font">Our Team</h1>
+          <h2 class="text-center h1-font">Our Team</h2>
           <div class="flex --four">
             <img src="https://via.placeholder.com/200" />
             <img src="https://via.placeholder.com/200" />
@@ -1638,9 +1765,9 @@ textarea:focus {
           </div>
         </div>
       </section>
-      <section class="contain">
+      <section class="contain testemonials">
         <div>
-          <h1 class="text-center h1-font">Partners</h1>
+          <h2 class="text-center h1-font">Partners</h2>
           <div class="flex">
             <div class="partners-images">
               <img src="https://via.placeholder.com/200" />
@@ -1669,7 +1796,7 @@ textarea:focus {
       <section class="blog-section contain">
         <img class="blog-orange-circle-big" src="images/img/orange-circle.svg" />
         <img class="blog-orange-circle-small" src="images/img/orange-circle.svg" />
-        <h1 class="text-center h1-font">Blog</h1>
+        <h2 class="text-center h1-font">Blog</h2>
         <div class="blog-container">
           <div class="blog"
           data-aos-anchor=".blog-section"
@@ -1768,7 +1895,7 @@ textarea:focus {
         <img class="contact-orange-circle-r" src="images/img/orange-circle.svg" />
         <img class="contact-orange-circle-l" src="images/img/orange-circle.svg" />
         <div class="contact-form-container">
-          <h1 class="text-center h1-font">Contact</h1>
+          <h2 class="text-center h1-font">Contact</h2>
           <form class="contact-form">
             <div class="contact-form-group">
               <div>
