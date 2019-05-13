@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <title>Title</title>
 </head>
-<body style=" margin: 0 auto">
+<body  style="height: 100%; margin: 0 auto">
 <style>
+
+
+    /* SECTION ONE CSS */
     :root {
         --shadow-color: rgba(0, 53, 145, 0.15);
         --button-bg-color: #4885fa;
@@ -15,7 +19,12 @@
         --p-color: #c9d6e2;
         scroll-behavior: smooth;
     }
-
+    html{
+        overflow-x: hidden;
+    }
+    body{
+        overflow-x: hidden;
+    }
     .h1-font {
         font-family: "Montserrat", sans-serif;
         font-size: 2em;
@@ -23,13 +32,19 @@
         margin-bottom: 25px;
         color: var(--h1-color);
     }
+    .uls{
+        margin-top: 20px;
+        margin-left: -15px;
+    }
 
     .p-font {
         font-family: "Source Sans Pro", sans-serif;
         font-size: 1.5em;
-        font-weight: 300;
+        font-weight: lighter;
         color: var(--h1-color);
-
+    }
+    .bold{
+        font-weight: normal;
     }
 
     .shadow{
@@ -67,55 +82,25 @@
     .secOneBg2{
         width: 300px;
         position: absolute;
-        top: -160px;
-        left: 366px;
+        top: -25%;
+        left: 30%;
         transform: rotate(197deg);
         z-index: -110;
     }
 
     .contain{
-        max-width: 1200px;
-        width: 90%;
+        width: 80%;
         margin: 0 auto;
     }
 
-</style>
-
-<div class="section1 contain">
-    <img class="secOneBg2" src="images/orange-circle.svg">
-    <img class="secOneBg" src="images/header-fluid-blue.svg">
-    <div class="section1-1">
-        <h3 class="h1-font">
-            Online Courses
-        </h3>
-
-        <p  class="p-font">
-            We design and develop eLearning content from<br>
-            scratch and implement your ideas into high quality,<br>
-            engaging courses. To help you maximize your revenue on<br>
-            training investment, our courses are built to improve<br>
-            performance of your employees and decrease<br>
-            your training expanditure.
-        </p>
-
-        <ul class="p-font">
-            <li style="margin-top: 20px;"><b>Adaptive and responsive courses</b></li>
-            <li style="margin-top: 20px;"><b>Micro learning animated videos</b></li>
-            <li style="margin-top: 20px;"><b>Scenario based learning paths</b></li>
-            <li style="margin-top: 20px;"><b>Gamified learning experience</b></li>
-        </ul>
-    </div>
-
-    <div class="secOneImg">
-        <img src="images/online-courses-img.svg">
-    </div>
-    <div style="padding-top: 150px"> <hr></div>
-</div>
+    /* SECTION TWO CSS*/
 
 
-<!--   SECTION TWO -->
-
-<style>
+    .h2-secTwo{
+        margin-top: 280px;
+        display: flex;
+        justify-content: center;
+    }
 
     #slider {
         margin-top: 70px;
@@ -128,9 +113,9 @@
         box-sizing: border-box;
     }
 
-    #slider > img {
+    .images {
         height: 100%;
-        width: 530px;
+        width: 40%;
         border-radius: 10px;
         display:inline-block;
     }
@@ -213,8 +198,6 @@
         position: absolute;
         transform: rotate(166deg);
         z-index: -130;
-        display: flex;
-        justify-content: flex-end;
         left: 84%;
         top: 110%;
     }
@@ -227,41 +210,8 @@
         top: 138%;
     }
 
-</style>
 
-<div class="contain">
-    <img class="secTwoBg2" src="images/orange-circle.svg">
-
-    <img class="secTwoBg" src="images/header-fluid-blue.svg">
-
-
-
-    <div class="h2-font" style="margin-top: 280px; display: flex; justify-content: center">
-        <h3>Our Works</h3>
-    </div>
-    <div id="slider">
-        <img class="prethodni shadow" onclick="changeImage('previous')" src="images/Picture2.png">
-        <img class="shadow" style="margin-right: 5px" id="firstPart" src="" />
-        <img class="shadow" style="margin-left: 5px" id="secondPart" src="" />
-        <img class="sljedeci shadow" src="images/Picture3.png" onclick="changeImage('next')">
-    </div>
-    <img class="secTwoBg3" src="images/fluid-bright-circle.svg">
-    <img class="secTwoBg4" src="images/orange-circle.svg">
-
-
-
-    <div class="section3 contain" >
-        <div style="height: 50%">
-            <h5 class="h2-font" style="margin-top: 50px; display: flex; justify-content: center">Want to see more:</h5>
-        </div>
-        <div style="height: 50%; margin-top: 30px; display: flex; justify-content: center">
-            <button class="button">Schedule a demo</button>
-        </div>
-    </div>
-</div>
-<!-- SECTION FOUUUUURRR-->
-
-<style>
+    /* SECTION FOUR CSS*/
     .section4{
         display: flex;
         justify-content: space-evenly;
@@ -269,6 +219,7 @@
     }
     .pics{
         flex-basis: 50%;
+
     }
     .pics1-1{
         display: flex;
@@ -288,12 +239,498 @@
         display: flex;
         justify-content: center;
     }
+    @media screen and (min-width: 1900px) {
+        #slider{
+            height: 600px;
+        }
+
+        .secOneBg2{
+            width: 500px;
+            top: -23%;
+            left: 30%;
+        }
+
+        .h1-font{
+            font-size: 3em;
+        }
+
+        .p-font{
+            font-size: 2.2em;
+        }
+        .h2-font{
+            font-size: 3em;
+        }
+
+        .secTwoBg3{
+            display: none;
+        }
+
+        .pics1-1 img {
+            width: 250px;
+            height: 150%;
+            justify-content: space-around;
+            margin: -15px;
+        }
+
+        .pics1-2 img {
+            width: 250px;
+            height: 150%;
+            justify-content: space-around;
+            margin: -15px;
+        }
+
+        .sec4text{
+            margin-top: 3%;
+        }
+        .section4{
+            padding-top: 300px;
+        }
+    }
+
+
+    @media screen and (max-width: 1900px) {
+        .secTwoBg4 {
+            width: 20%;
+            left: 69%;
+            top: 155%;
+        }
+        .secTwoBg3{
+            display: none;
+        }
+
+        .pics1-1 img{
+            width: 185px;
+            height: 150%;
+            justify-content: space-around;
+            margin: -15px;
+        }
+        .pics1-2 img{
+            width: 185px;
+            height: 150%;
+            justify-content: space-around;
+            margin-top: -25px;
+        }
+
+        .sec4text{
+            padding-top: 7%;
+            text-align: center;
+        }
+        #slider{
+            height: 450px;
+        }
+    }
+
+    /*1400*/
+
+    @media screen and (max-width: 1400px){
+        .h1-font{
+            font-size: 2em;
+        }
+        .h2-font{
+            font-size: 1.3em;
+        }
+        .p-font{
+            font-size: 1.3em;
+        }
+        .button{
+            width: 166px;
+            height: 45px;
+            font-size: 1.2em;
+            outline: hidden;
+        }
+        #slider img{
+            width: 40%;
+            height: 80%;
+        }
+        .button{
+            width: 200px;
+        }
+        .secOneBg {
+            position: absolute;
+            z-index: -100;
+            top: -37%;
+            right: -34%;
+            height: 180%;
+            width: 100%;
+        }
+        .secOneBg2{
+            width: 300px;
+            position: absolute;
+            top: -25%;
+            left: 30%;
+            transform: rotate(197deg);
+            z-index: -110;
+        }
+
+        .images{
+            width: 40%;
+            height: 100%;
+        }
+        .secTwoBg4{
+            left: 66%;
+            top: 146%;
+        }
+
+        .secOneImg{
+            padding-right: 0%;
+        }
+        .h2-secTwo{
+            margin-top: 230px;
+        }
+    }
+
+    /*110*/
+
+    @media screen and (max-width: 1100px) {
+
+        .h1-font {
+            font-size: 1.7em;
+        }
+
+        .h2-font{
+            font-size: 1.5em;
+        }
+
+        .p-font{
+            font-size: 1.2em;
+        }
+
+        .button{
+            width: 130px;
+            height: 30px;
+            font-size: 0.9em;
+            outline: hidden;
+        }
+
+        .secTwoBg4 {
+            position: absolute;
+            top: 143%;
+            left: 64%;
+            width: 32%;
+        }
+
+        .secTwoBg3{
+            /* position: absolute;
+             top: 120%;
+             */
+            display: none;
+        }
+        .section3{
+            padding: 0;
+        }
+
+        .secOneBg {
+
+            position: absolute;
+            z-index: -100;
+            top: -41%;
+            right: -40%;
+        }
+
+        .secOneImg{
+            flex-basis: 50%;
+            display:inline-block;
+
+        }
+
+        .section1{
+            padding-left: 10%;
+        }
+
+        .secOneBg2 {
+            left: 30%;
+            top: -25%;
+        }
+
+        .images{
+            width: 40%;
+            height: 80%;
+        }
+    }
+
+
+    /*  900*/
+    @media only screen and (max-width: 900px) {
+        .h1-font {
+            font-size: 2em;
+        }
+
+        .h2-font{
+            font-size: 1.7em;
+        }
+
+        .p-font{
+            font-size: 1.4em;
+        }
+
+        .secOneImg{
+            flex-basis: 50%;
+            display:inline-block;
+            width: 70%;
+
+        }
+
+        #slider{
+            height: 300px;
+        }
+
+        .section1{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            align-items: center;
+        }
+
+        .secOneBg2{
+            top: -15%;
+            left: 30%;
+        }
+
+        .secOneBg{
+            top: -71%;
+            right: -40%;
+        }
+
+        .images {
+            width: 50%;
+            height: 100%;
+            margin-right: 5px;
+        }
+
+        .h2-secTwo{
+            margin-top: -85px;
+        }
+
+        .secTwoBg4 {
+            display: none;
+            top: 180%;
+            width: 25%;
+            left: 67%;
+        }
+
+        .secTwoBg3 {
+            display: none;
+        }
+
+        .secTwoBg {
+            width: 77%;
+            top: 142%;
+            left: -52%;
+            transform: rotate(-106deg);
+        }
+        .secTwoBg2{
+            left: -25%;
+            top: 130%;
+            transform: rotate(127deg);
+            width: 50%;
+        }
+        .button{
+            width: 55%;
+            height: 95%;
+            font-size: 1.2em;
+        }
+
+        .section4{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .pics1-1 img{
+            width: 110px;
+            height: 110px;
+            justify-content: space-around;
+            margin: 5px;
+        }
+        .pics1-2 img{
+            width: 110px;
+            height: 110px;
+            justify-content: space-around;
+            margin-top: -25px;
+        }
+
+        .pics{
+            margin-top: 30px;
+        }
+
+    }
+
+
+    /*do 600*/
+    @media screen and (max-width: 600px) {
+        .section1{
+            flex-direction: column;
+            margin-top: -20%;
+        }
+
+        .secOneBg {
+            position: absolute;
+            top: -25%;
+            right: -101%;
+            transform: rotate(53deg);
+            width: 145%;
+
+        }
+
+        .secOneBg2 {
+            position: absolute;
+            top: -8%;
+            left: 57%;
+        }
+
+        .secOneImg{
+            width: 110%;
+
+            margin-right: 8%;
+        }
+        .p-font{
+            font-size: 1em;
+            margin-left: -15px;
+        }
+        .sectionTwo{
+            margin-top: -125px;
+        }
+
+        .secTwoBg{
+            position: absolute;
+            top: 140%;
+            left: -52%;
+        }
+
+        .secTwoBg2{
+            position: absolute;
+            top: 130%;
+            left: -38%;
+
+        }
+        .secTwoBg3{
+            display: none;
+        }
+        .secTwoBg4 {
+            display: none;
+        }
+        .button{
+            width: 70%;
+            height: 60%;
+        }
+        .uls{
+            margin-top: 10px;
+        }
+        .section4{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .pics1-1 img{
+            width: 90px;
+            height: 90px;
+            justify-content: space-around;
+            margin: 5px;
+        }
+        .pics1-2 img{
+            width: 90px;
+            height: 90px;
+            justify-content: space-around;
+            margin-top: -25px;
+        }
+
+        #slider > img:first-child{
+            width: 35px;
+            height: 35px;
+            position: relative;
+            top: 172px;
+            left: 21px;
+        }
+        #slider > img:last-child{
+            width: 35px;
+            height: 35px;
+            position: relative;
+            top: 172px;
+            right: 21px;
+        }
+
+        .h1-font{
+            margin-left: -15px;
+        }
+
+        .pics{
+            margin-top: 15px;
+        }
+    }
+
 </style>
 
+<div class="section1 contain">
+    <img class="secOneBg2" src="images/orange-circle.svg">
+    <img class="secOneBg" src="images/header-fluid-blue.svg">
+    <div class="section1-1">
+        <h3 class="h1-font">
+            Online Courses
+        </h3>
+
+        <p  class="p-font">
+            We design and develop eLearning content from<br>
+            scratch and implement your ideas into high quality,<br>
+            engaging courses. To help you maximize your revenue on<br>
+            training investment, our courses are built to improve<br>
+            performance of your employees and decrease<br>
+            your training expanditure.
+        </p>
+
+        <ul class="p-font bold">
+            <li class="uls">Adaptive and responsive courses</li>
+            <li class="uls">Micro learning animated videos</li>
+            <li class="uls">Scenario based learning paths</li>
+            <li class="uls">Gamified learning <br>experience</li>
+        </ul>
+    </div>
+
+    <div class="secOneImg">
+        <img src="images/online-courses-img.svg">
+    </div>
+    <div style="padding-top: 150px"> <hr></div>
+</div>
+
+<!--   SECTION TWO -->
+
+<div class=" sectionTwo contain">
+    <img class="secTwoBg2" src="images/orange-circle.svg">
+
+    <img class="secTwoBg" src="images/header-fluid-blue.svg">
+
+
+
+    <div class="h2-font h2-secTwo">
+        <h3>Our Works</h3>
+    </div>
+    <div id="slider">
+        <img class="prethodni shadow" onclick="changeImage('previous')" src="images/Picture2.png">
+        <img class="shadow images" style="margin-right: 5px;  height: 100%;" id="firstPart" src="" />
+        <img class="shadow images" style="margin-right: 5px;  height: 100%;" id="secondPart" src="" />
+        <img class="sljedeci shadow" src="images/Picture3.png" onclick="changeImage('next')">
+    </div>
+    <img class="secTwoBg3" src="images/fluid-bright-circle.svg">
+    <img class="secTwoBg4" src="images/orange-circle.svg">
+
+
+
+    <div class="section3 contain" >
+        <div style="height: 50%">
+            <h5 class="h2-font" style="margin-top: 50px; display: flex; justify-content: center">Want to see more:</h5>
+        </div>
+        <div style="height: 50%; margin-top: 5%; display: flex; justify-content: center">
+            <button class="button">Schedule a demo</button>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION FOUUUUURRR-->
+
 <div class="section4 contain">
-    <div>
-        <h1 class="h1-font">Tools and <br>Technologies</h1>
-        <p style="margin-top: 30px" class="p-font">We design custom eLearning training that <br>aligns with your strategic corporate objectives<br> using a variety of tools and technologies.</p>
+    <div class="sec4text">
+        <h1 style="text-align: center" class="h1-font">Tools and <br>Technologies</h1>
+        <p style="margin-top: 50px; text-align: center; margin-left: 13px" class="p-font">We design custom eLearning training that <br>aligns with your strategic corporate objectives<br> using a variety of tools and technologies.</p>
     </div>
     <div class="pics">
         <div class="pics1-1">
