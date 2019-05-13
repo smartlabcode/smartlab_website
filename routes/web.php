@@ -12,7 +12,7 @@
 */
 
 // for all of the routes in the following group user needs to be authenticated to see them
-Route::middleware(['auth'])->group(function() {
+Route::middleware(['auth'])->group(function () {
 
     // route for displaying page after admin logs in
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
@@ -54,7 +54,7 @@ Route::get('pages/courses', 'PagesController@showCoursesPage');
 Route::get('pages/animations', 'PagesController@showAnimationsPage');
 Route::get('pages/programming', 'PagesController@showProgrammingPage');
 Route::get('pages/moodle', 'PagesController@showMoodlePage');
-
+Route::get('pages/xliff', 'PagesController@showXliffPage');
 // route where contact info is sent
 Route::post('contact', 'ContactController@handleContactInfo');
 // route where bussiness info is sent
