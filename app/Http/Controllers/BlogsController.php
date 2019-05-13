@@ -270,6 +270,16 @@ class BlogsController extends Controller
             'content' => 'required|min:3',
             'tags' => 'required'
         ]);
+        
+        // check if user wants to edit the blog image
+        if (isset(request()->image)) {
+            // set image name to be the same as previous one
+            $imageName = $request->input('old_image_name');
+            $imageName = substr($imageName, strrpos($imageName, '/') + 1);
+
+            // upload new image
+            request()->image->move(public_path('/images'), $imageName);
+        }
 
         // find blog translation for editing
         $blogTranslation = BlogTranslation::where('language', $lang)->where('blogs_id', $id)->first();

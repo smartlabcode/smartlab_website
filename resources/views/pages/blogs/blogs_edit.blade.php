@@ -37,7 +37,7 @@
     @include('parts.error_success')
 
     <!-- Form for editing existing blog -->
-    <form id="editBlogForm" method="POST">
+    <form id="editBlogForm" method="POST" enctype="multipart/form-data">
 
         <!-- Include token -->
         @csrf
@@ -96,6 +96,7 @@
         <!-- Hidden input values used for holding specific values -->
         <input id="contentText" name="content" type="hidden" value="@if(isset($oldContent)) {{ old('content') }} @else {{$blog->text}} @endif"/>
         <input id="idValue" type="hidden" value="{{$blog->id}}">
+        <input id="oldImageName" type="hidden" name="old_image_name" value="{{$blog->image_path}}">
 
         <!-- Submit form button -->
         <button id="editBlogSaveButton" onclick="submitEditForm()" class="btn btn-primary">Edit</button>
@@ -108,5 +109,22 @@
 
     <!-- Include summernote editor -->
     @include('parts.summernote')
+
+    <script>
+
+        function openUploadWindow() {
+
+            var upload = document.getElementById("imageInput");
+            upload.click();
+        }
+
+        function showUploadedImage() {
+            var file = document.getElementById("imageInput").files[0];
+
+            _PREVIEW_URL = URL.createObjectURL(file);
+            document.getElementById('imagePlaceholder').src = _PREVIEW_URL;
+
+        }
+    </script>
 
 @endsection
