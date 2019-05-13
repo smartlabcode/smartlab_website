@@ -112,8 +112,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/courses.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1512">
-              <caret line="734" selection-start-line="734" selection-end-line="734" />
+            <state relative-caret-position="594">
+              <caret line="789" selection-start-line="789" selection-end-line="789" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="e#259#538#0#HTML" />
@@ -149,20 +149,22 @@
                 <element signature="e#5202#5316#0#HTML" />
                 <element signature="e#5334#5479#0#HTML" />
                 <element signature="e#5499#5606#0#HTML" />
-                <element signature="e#5616#6342#0#HTML" />
-                <element signature="e#6387#7750#0#HTML" />
-                <element signature="e#7793#9129#0#HTML" />
-                <element signature="e#9175#11405#0#HTML" />
-                <element signature="e#11455#13832#0#HTML" />
+                <element signature="e#5615#6633#0#HTML" />
+                <element signature="e#6644#7417#0#HTML" />
+                <element signature="e#7462#8825#0#HTML" />
+                <element signature="e#8868#10204#0#HTML" />
+                <element signature="e#10250#12548#0#HTML" />
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#img#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h5#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#h1#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
@@ -386,7 +388,7 @@
       <path value="$PROJECT_DIR$/vendor/laravel/telescope" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="1939" />
@@ -486,12 +488,12 @@
       <workItem from="1556864696624" duration="1333000" />
       <workItem from="1557140036721" duration="4928000" />
       <workItem from="1557232856800" duration="8319000" />
-      <workItem from="1557733509209" duration="643000" />
+      <workItem from="1557733509209" duration="1252000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="220038000" />
+    <option name="totallyTimeSpent" value="220647000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -503,7 +505,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50547945" side_tool="true" weight="0.3085622" />
@@ -824,8 +826,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/courses.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1512">
-          <caret line="734" selection-start-line="734" selection-end-line="734" />
+        <state relative-caret-position="594">
+          <caret line="789" selection-start-line="789" selection-end-line="789" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#259#538#0#HTML" />
@@ -861,20 +863,22 @@
             <element signature="e#5202#5316#0#HTML" />
             <element signature="e#5334#5479#0#HTML" />
             <element signature="e#5499#5606#0#HTML" />
-            <element signature="e#5616#6342#0#HTML" />
-            <element signature="e#6387#7750#0#HTML" />
-            <element signature="e#7793#9129#0#HTML" />
-            <element signature="e#9175#11405#0#HTML" />
-            <element signature="e#11455#13832#0#HTML" />
+            <element signature="e#5615#6633#0#HTML" />
+            <element signature="e#6644#7417#0#HTML" />
+            <element signature="e#7462#8825#0#HTML" />
+            <element signature="e#8868#10204#0#HTML" />
+            <element signature="e#10250#12548#0#HTML" />
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#img#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#h1#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
