@@ -954,42 +954,14 @@
     font-size: 1.5em;
   }
 
-  .path {
-    stroke-dasharray: 100;
-    stroke-dashoffset: 100;
-    animation: dash 5s linear forwards;
-  }
-
-  @keyframes path {
-
-    0% {
-      d: path('M101.6,200A100,100,0');
-    }
-
-    25% {
-      d: path(',0,1,8.028,135.216a9.8,9.8,0');
-    }
-
-    50% {
-      d: path('1,1,18.353-6.9A80.382,80.382,0');
-    }
-
-
-
-    100% {
-      d: path('1,0,101.6,19.608,9.8,9.8,0,0,1,101.6,0a100,100,0,0,1,0,200Z');
-    }
-  }
-
-  @keyframes dash {
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
-
   @media screen and (max-width: 1500px) {
     .partners-images {
       flex-basis: 40%;
+    }
+
+    .contact-section {
+      background-size: 230vw;
+      background-position-y: 40%;
     }
   }
 
@@ -1627,6 +1599,74 @@
     z-index: 10;
   }*/
   }
+
+  /* about us animation starts */
+  .display-container {
+    margin: auto;
+    display: flex;
+  }
+
+  .note-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 25px;
+  }
+
+  .circle {
+    position: relative;
+  }
+
+  .circle__svg {
+    transform: rotate(-90deg);
+  }
+
+  .circle__progress {
+    fill: none;
+    stroke-width: 10px;
+    stroke-opacity: 0.3;
+    stroke-linecap: round;
+  }
+
+  .circle__progress--fill {
+    --initialStroke: 0;
+    --transitionDuration: 0;
+    stroke-opacity: 1;
+    stroke-dasharray: var(--initialStroke);
+    stroke-dashoffset: var(--initialStroke);
+    transition: stroke-dashoffset var(--transitionDuration) ease;
+  }
+
+  .note-display .circle__progress {
+    stroke: var(--h2-color);
+  }
+
+  .percent {
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    font-weight: bold;
+    text-align: center;
+    line-height: 28px;
+    transform: translate(-50%, -50%);
+  }
+
+  .percent__int {
+    font-size: 28px;
+  }
+
+  .percent__dec {
+    font-size: 12px;
+  }
+
+  .label {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-top: 15px;
+  }
+
+  /* about us animation ends */
 </style>
 
 
@@ -1930,63 +1970,126 @@
           reach their learning goals
         </h3>
       </div>
-      <div class="flex about-us">
+      <div id="aboutUs" class="flex about-us">
         <div class="--border-right --border-bottom">
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="2642.807 4302.5 269.193 275">
-            <defs>
-              <linearGradient id="left-to-right">
-                <stop offset="0" stop-color="#4DAF4C">
-                  <animate dur="2s" attributeName="offset" fill="freeze" from="0" to="1" />
-                </stop>
-                <stop offset="0" stop-color="#fff">
-                  <animate dur="2s" attributeName="offset" fill="freeze" from="0" to="1" />
-                </stop>
+          <div class="note-display" data-note="85">
+            <div class="circle">
+              <svg width="150" height="150" class="circle__svg">
+                <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--path"></circle>
+                <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--fill"></circle>
+              </svg>
 
-              </linearGradient>
-              <style>
-                .cls-1 {
-                  fill: #ffffff;
-                }
-
-                .cls-2 {
-                  filter: url(#Path_1201);
-                }
-              </style>
-              <filter id="Path_1201" x="2642.807" y="4302.5" width="269.193" height="275" filterUnits="userSpaceOnUse">
-                <feOffset dy="6" input="SourceAlpha" />
-                <feGaussianBlur stdDeviation="12.5" result="blur" />
-                <feFlood flood-color="#003591" flood-opacity="0.4" />
-                <feComposite operator="in" in2="blur" />
-                <feComposite in="SourceGraphic" />
-              </filter>
-            </defs>
-            <g id="Group_312" data-name="Group 312" transform="translate(2680.307 4334)">
-              <g class="cls-2 " transform="matrix(1, 0, 0, 1, -2680.31, -4334)">
-                <path id="Path_1201-2" data-name="Path 1201" class="cls-1 path" fill="#ffffff" stroke="#000000" stroke-width="10" d="M101.6,200A100,100,0,0,1,8.028,135.216a9.8,9.8,0,1,1,18.353-6.9A80.382,80.382,0,1,0,101.6,19.608,9.8,9.8,0,0,1,101.6,0a100,100,0,0,1,0,200Z" transform="translate(2672.9 4334)" />
-              </g>
-            </g>
-          </svg>
+              <div class="percent">
+                <span class="percent__int">0</span>
+                <span class="percent__sign">%</span>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="--border-right --border-bottom">
-          <img src="https://via.placeholder.com/150" />
+          <div class="note-display" data-note="65">
+            <div class="circle">
+              <svg width="150" height="150" class="circle__svg">
+                <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--path"></circle>
+                <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--fill"></circle>
+              </svg>
+
+              <div class="percent">
+                <span class="percent__int">0</span>
+                <span class="percent__sign">%</span>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="--border-right --border-bottom">
-          <img src="https://via.placeholder.com/150" />
+          <div class="note-display" data-note="95">
+            <div class="circle">
+              <svg width="150" height="150" class="circle__svg">
+                <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--path"></circle>
+                <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--fill"></circle>
+              </svg>
+
+              <div class="percent">
+                <span class="percent__int">0</span>
+                <span class="percent__sign">%</span>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="--border-bottom">
-          <img src="https://via.placeholder.com/150" />
+          <div class="note-display" data-note="85">
+            <div class="circle">
+              <svg width="150" height="150" class="circle__svg">
+                <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--path"></circle>
+                <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--fill"></circle>
+              </svg>
+
+              <div class="percent">
+                <span class="percent__int">0</span>
+                <span class="percent__sign">%</span>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="--border-right ">
-          <img src="https://via.placeholder.com/150" />
+          <div class="note-display" data-note="75">
+            <div class="circle">
+              <svg width="150" height="150" class="circle__svg">
+                <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--path"></circle>
+                <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--fill"></circle>
+              </svg>
+
+              <div class="percent">
+                <span class="percent__int">0</span>
+                <span class="percent__sign">%</span>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="--border-right">
-          <img src="https://via.placeholder.com/150" />
+          <div class="note-display" data-note="95">
+            <div class="circle">
+              <svg width="150" height="150" class="circle__svg">
+                <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--path"></circle>
+                <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--fill"></circle>
+              </svg>
+
+              <div class="percent">
+                <span class="percent__int">0</span>
+                <span class="percent__sign">%</span>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="--border-right">
-          <img src="https://via.placeholder.com/150" />
+          <div class="note-display" data-note="80">
+            <div class="circle">
+              <svg width="150" height="150" class="circle__svg">
+                <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--path"></circle>
+                <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--fill"></circle>
+              </svg>
+
+              <div class="percent">
+                <span class="percent__int">0</span>
+                <span class="percent__sign">%</span>
+              </div>
+            </div>
+          </div>
         </div>
         <div>
-          <img src="https://via.placeholder.com/150" />
+          <div class="note-display" data-note="100">
+            <div class="circle">
+              <svg width="150" height="150" class="circle__svg">
+                <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--path"></circle>
+                <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--fill"></circle>
+              </svg>
+
+              <div class="percent">
+                <span class="percent__int">0</span>
+                <span class="percent__sign">%</span>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -2142,7 +2245,62 @@
 </footer>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-  AOS.init();
+  document.addEventListener("DOMContentLoaded", function(event) {
+    AOS.init();
+    const aboutUs = document.querySelector("#aboutUs");
+    const displays = document.querySelectorAll(".note-display");
+    const transitionDuration = 900;
+    let i = 0;
+    let isInViewport = function(elem) {
+      let bounding = elem.getBoundingClientRect();
+      return (
+        bounding.top >= 0 &&
+        bounding.left >= 0 &&
+        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    };
+
+    function strokeTransition(display, note) {
+      let progress = display.querySelector(".circle__progress--fill");
+      let radius = progress.r.baseVal.value;
+      let circumference = 2 * Math.PI * radius;
+      let offset = (circumference * (1000 - note)) / 1000;
+      progress.style.setProperty("--initialStroke", circumference);
+      progress.style.setProperty(
+        "--transitionDuration",
+        `${transitionDuration}ms`
+      );
+      setTimeout(() => (progress.style.strokeDashoffset = offset), 100);
+    }
+
+    function increaseNumber(display, number) {
+      let element = display.querySelector(`.percent__int`),
+        interval = transitionDuration / number,
+        counter = 0;
+
+      let increaseInterval = setInterval(() => {
+        if (counter === number) {
+          window.clearInterval(increaseInterval);
+        }
+        element.textContent = counter;
+        counter++;
+      }, interval);
+    }
+    window.addEventListener("scroll", function(event) {
+      if (isInViewport(aboutUs)) {
+        for (i = i; i <= 1; i++) {
+          displays.forEach(display => {
+            let note = parseFloat(display.dataset.note);
+            let int = Number(display.dataset.note);
+            strokeTransition(display, note);
+            increaseNumber(display, int);
+          });
+        }
+
+      }
+    });
+  });
 </script>
 <!--<script src="js/nav.js"></script>
      -->
