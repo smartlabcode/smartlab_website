@@ -18,50 +18,48 @@ class PagesController extends Controller
     /**
      * Display index page
      */
-    public function index() {
+    public function index()
+    {
 
         try {
 
             return view('index');
-
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', 'PagesController - index: '. $e->getMessage());
+            $this->logService->setLog('ERROR', 'PagesController - index: ' . $e->getMessage());
 
             // return error view
             return view('pages.general_error');
         }
-
     }
 
     /**
      * Display courses page
      */
-    public function showCoursesPage() {
+    public function showCoursesPage()
+    {
 
         try {
 
             return view('pages.courses');
-
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', 'PagesController - showCoursesPage: '. $e->getMessage());
+            $this->logService->setLog('ERROR', 'PagesController - showCoursesPage: ' . $e->getMessage());
 
             // return error view
             return view('pages.general_error');
         }
-
     }
 
     /**
      * Display animations page
      */
-    public function showAnimationsPage() {
+    public function showAnimationsPage()
+    {
 
         try {
 
             return view('pages.animations');
-
         } catch (\Exception $e) {
             // add log
             $this->logService->setLog('ERROR', 'PagesController - showAnimationsPage: ' . $e->getMessage());
@@ -69,18 +67,17 @@ class PagesController extends Controller
             // return error view
             return view('pages.general_error');
         }
-
     }
 
     /**
      * Display programming page
      */
-    public function showProgrammingPage() {
+    public function showProgrammingPage()
+    {
 
         try {
 
             return view('pages.programming');
-
         } catch (\Exception $e) {
             // add log
             $this->logService->setLog('ERROR', 'PagesController - showProgrammingPage: ' . $e->getMessage());
@@ -88,18 +85,17 @@ class PagesController extends Controller
             // return error view
             return view('pages.general_error');
         }
-
     }
 
     /**
      * Display moodle page
      */
-    public function showMoodlePage() {
+    public function showMoodlePage()
+    {
 
         try {
 
             return view('pages.moodle');
-
         } catch (\Exception $e) {
             // add log
             $this->logService->setLog('ERROR', 'PagesController - showMoodlePage: ' . $e->getMessage());
@@ -107,7 +103,23 @@ class PagesController extends Controller
             // return error view
             return view('pages.general_error');
         }
-
     }
 
+    /**
+     * Display xliff page
+     */
+    public function showXliffPage()
+    {
+
+        try {
+
+            return view('pages.xliff');
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', 'PagesController - showXliffPage: ' . $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+    }
 }
