@@ -79,7 +79,7 @@
             </div>
 
             <!-- Uploading blog image -->
-            <img id="imagePlaceholder" onclick="openUploadWindow()" src="{{ asset('images/placeholder.png') }}"/>
+            <img id="imagePlaceholder" onclick="openUploadWindow()" src="@if (isset($blog->image_path)) {{$blog->image_path}} @else {{ asset('images/placeholder.png') }} @endif"/>
             <input id="imageInput" type="file" accept="image/jpg,image/png,image/jpeg" name="image" onchange="showUploadedImage()" />
 
         </div>

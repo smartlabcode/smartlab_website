@@ -98,6 +98,7 @@ class BlogsController extends Controller
                     'blog_translations.language',
                     'users.id',
                     'blogs.id',
+                    'blogs.image_path',
                     'blog_translations.text',
                     'blog_translations.language'
                 )
@@ -270,7 +271,7 @@ class BlogsController extends Controller
             'content' => 'required|min:3',
             'tags' => 'required'
         ]);
-        
+
         // check if user wants to edit the blog image
         if (isset(request()->image)) {
             // set image name to be the same as previous one
