@@ -26,6 +26,11 @@
         width: calc(100% - 300px);
     }
 
+    .inactiveUpload {
+        pointer-events: none;
+        opacity: 0.87;
+    }
+
 </style>
 
 @section('content')
@@ -79,7 +84,7 @@
             </div>
 
             <!-- Uploading blog image -->
-            <img id="imagePlaceholder" onclick="openUploadWindow()" src="@if (isset($blog->image_path)) {{$blog->image_path}} @else {{ asset('images/placeholder.png') }} @endif"/>
+            <img id="imagePlaceholder" onclick="openUploadWindow()" class="@if(isset($language)) inactiveUpload @endif" src="@if (isset($blog->image_path)) {{$blog->image_path}} @else {{ asset('images/placeholder.png') }} @endif"/>
             <input id="imageInput" type="file" accept="image/jpg,image/png,image/jpeg" name="image" onchange="showUploadedImage()" />
 
         </div>

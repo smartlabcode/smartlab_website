@@ -15,7 +15,7 @@ class CreateBlogTagsTable extends Migration
     {
         Schema::create('blog_tags', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->enum('tag', ['video', 'design', 'programming', 'e-learning'])->default('e-learning');
+            $table->enum('tag', ['educational', 'onlinecourses', 'development', 'moodle'])->default('onlinecourses');
             $table->timestamps();
             $table->integer('blogs_id');
         });

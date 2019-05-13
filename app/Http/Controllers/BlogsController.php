@@ -143,23 +143,36 @@ class BlogsController extends Controller
         // set request data to session so that it can be used for old input if neccessary
         $request->flash();
 
+        $existing = $request->input('existing');
         // check if neccessary values are entered correctly, if no return error messages
-        $request->validate([
-            'content' => 'required|min:3',
-            'title' => 'required|min:3|max:255',
-            'language' => 'in:en,de,bs',
-            'existing' => 'in:true,false',
-            'tags' => 'required',
-            'image' => 'required'
-        ]);
+        if ($existing == "true"){
+            $request->validate([
+                'content' => 'required|min:3',
+                'title' => 'required|min:3|max:255',
+                'language' => 'in:en,de,bs',
+                'existing' => 'in:true,false',
+                'tags' => 'required'
+            ]);
+        } else {
+            $request->validate([
+                'content' => 'required|min:3',
+                'title' => 'required|min:3|max:255',
+                'language' => 'in:en,de,bs',
+                'existing' => 'in:true,false',
+                'tags' => 'required',
+                'image' => 'required'
+            ]);
+        }
 
+        // check if image is uploaded
+        $image = request()->image;
+        if(isset($image)) {
+            // set image name
+            $imageName = time().'.'.request()->image->getClientOriginalExtension();
 
-        // set image name
-        $imageName = time().'.'.request()->image->getClientOriginalExtension();
-
-        // upload image
-        request()->image->move(public_path('/images'), $imageName);
-
+            // upload image
+            request()->image->move(public_path('/images'), $imageName);
+        }
 
         // check if already exist one translation for the blog, if no create new blog in the database
         if ($request->input('existing') == 'false') {
@@ -275,11 +288,17 @@ class BlogsController extends Controller
         // check if user wants to edit the blog image
         if (isset(request()->image)) {
             // set image name to be the same as previous one
-            $imageName = $request->input('old_image_name');
-            $imageName = substr($imageName, strrpos($imageName, '/') + 1);
+            // $imageName = $request->input('old_image_name');
+            $imageName = time().'.'.request()->image->getClientOriginalExtension();
+            //$imageName = substr($imageName, strrpos($imageName, '/') + 1);
 
             // upload new image
             request()->image->move(public_path('/images'), $imageName);
+
+            // change image path in the database
+            $blog = Blog::where('id', $id)->first();
+            $blog->image_path = '/images/' . $imageName;
+            $blog->save();
         }
 
         // find blog translation for editing
