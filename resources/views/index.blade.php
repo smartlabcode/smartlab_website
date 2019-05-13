@@ -172,88 +172,17 @@
   max-width: 100%;
   padding: 0 15%;
 }*/
-  .nav-top {
-    top: 0 !important;
-    animation: top 0.2s ease-in-out forwards;
-  }
+
 
   .margin-top-27 {
     margin-top: 27px;
   }
 
-  @keyframes top {
-    from {
-      top: 50px;
-    }
 
-    to {
-      top: 0px;
-    }
-  }
 
-  .nav {
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 50px;
-    height: 50px;
-    background: rgb(255, 255, 255);
-    background: linear-gradient(90deg,
-      rgba(255, 255, 255, 0.5) 20%,
-      rgba(15, 117, 188, 1) 55%);
-  }
 
-  .logo {
-    object-fit: contain;
-    height: 50%;
-  }
 
-  .nav-list {
-    list-style-type: none;
-    display: flex;
-    padding-left: 0;
-    margin: 0;
-    justify-content: space-around;
-  }
 
-  .nav-list a {
-    display: inline-block;
-    padding: 20px 0 20px 20px;
-    color: white;
-  }
-
-  .nav-list:last-child {
-    padding-right: 0;
-  }
-
-  .nav-list li {
-    display: block;
-    margin-left: 20px;
-    text-transform: uppercase;
-  }
-
-  .nav-list li a {
-    text-decoration: none;
-  }
-
-  .dropdown-container {
-    display: inline;
-    position: relative;
-  }
-
-  .dropdown-container img {
-    height: 7px;
-  }
-
-  .nav-list li:hover .nav-list-dropdown {
-    display: initial;
-    visibility: visible;
-    opacity: 1;
-    pointer-events: all;
-    z-index: 10;
-  }
 
   /*.dropdown-container img {
   transition: transform 0.2s ease-in-out;
@@ -261,86 +190,7 @@
 .nav-list li:hover .dropdown-container img {
   transform: rotate(-90deg);
 }*/
-  .nav-list li:hover .nav-list-dropdown,
-  .nav-list-dropdown:hover {
-    display: block;
-    visibility: visible;
-    opacity: 1;
-    pointer-events: all;
-    z-index: 10;
-  }
 
-  .nav-list-dropdown::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: -5px;
-    height: 10px;
-    width: 10px;
-    transform: rotate(-45deg) translateX(-50%) translateY(-50%);
-    background-color: var(--h2-color);
-  }
-
-  .nav-list-dropdown {
-    border-radius: 10px;
-    background-color: var(--h2-color);
-    padding: 10px;
-    position: absolute;
-    white-space: nowrap;
-    right: 4px;
-    top: 25px;
-    transform: translateX(50%);
-    opacity: 0;
-    margin-top: 5px;
-    transition: all 0.2s ease-in-out;
-    pointer-events: none;
-    z-index: -2;
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-    text-align: center;
-  }
-
-  .nav-list-dropdown li {
-    background-color: var(--button-bg-color);
-    padding: 10px;
-    margin: 10px;
-  }
-
-  .nav-list-dropdown a {
-    padding: 10px;
-  }
-
-  .--join {
-    display: flex !important;
-    width: auto;
-  }
-
-  .--join-left {
-    flex-basis: 50%;
-
-    white-space: nowrap;
-  }
-
-  .--join-left a,
-  .--join-right a {
-    padding-right: 20px;
-    height: 100%;
-  }
-
-  .--join-left a {
-    display: flex;
-    padding-top: 0;
-  }
-
-  .--join-left span {
-    align-self: center;
-  }
-
-  .--join-right {
-    flex-basis: 50%;
-    white-space: nowrap;
-  }
 
   .section-one {
     position: relative;
@@ -798,9 +648,7 @@
     overflow: hidden;
   }
 
-  .navigation-button {
-    display: none;
-  }
+
 
   .contact-orange-circle-r {
     position: absolute;
@@ -1494,105 +1342,7 @@
       top: 0;
     }
 
-    .nav-list {
-      position: absolute;
-      width: 250px;
-      z-index: -10;
-      right: 10%;
-      top: 50px;
-      display: block;
-      overflow: hidden;
-      height: 0;
-      transition: all 0.2s ease-in-out;
-    }
 
-    .nav-list li {
-      margin-left: 12%;
-    }
-
-    .nav-list-dropdown li {
-      margin-left: 10px;
-    }
-
-    .nav-list a {
-      padding-left: 0;
-    }
-
-    .navigation-button {
-      display: initial;
-      position: relative;
-      height: 40px;
-      width: 40px;
-      transform: translateY(100%);
-      bottom: 30px;
-      transition: all 0.2s ease-in-out;
-    }
-
-    .navigation-button-inner {
-      position: absolute;
-      width: 40px;
-      height: 4px;
-      background-color: white;
-      transition: all 0.2s ease-in-out;
-    }
-
-    .navigation-button-inner::before {
-      top: 10px;
-      transition: all 0.2s ease-in-out;
-    }
-
-    .navigation-button-inner::after {
-      top: 20px;
-      transition: all 0.2s ease-in-out;
-    }
-
-    .navigation-button-inner::before,
-    .navigation-button-inner::after {
-      position: absolute;
-      content: " ";
-      width: 40px;
-      height: 4px;
-      background-color: white;
-    }
-
-    .navigation-button:hover .navigation-button-inner::after {
-      transform: rotate(90deg);
-      top: 0px;
-    }
-
-    .navigation-button:hover .navigation-button-inner::before {
-      transform: rotate(-90deg);
-      top: 0px;
-    }
-
-    .navigation-button:hover .navigation-button-inner {
-      transform: rotate(45deg);
-    }
-
-    .navigation-button:hover {
-      bottom: 20px;
-    }
-
-    .navigation-button:hover .nav-list {
-      height: 300px;
-      width: 90vw;
-      z-index: 10;
-    }
-
-    .nav-list-dropdown {
-      transform: translate(115%, 0%);
-      top: -24px;
-      box-shadow: none;
-      width: 50vw;
-    }
-
-    .nav-list-dropdown::before {
-      height: 20px;
-      width: 20px;
-      left: 5px;
-      top: 20px;
-      z-index: -1;
-    }
 
     /*.nav-list:hover {
     height: 500px;
@@ -1629,7 +1379,7 @@
   }
 
   .circle__progress--fill {
-    --initialStroke: 0;
+    --initialStroke: 314;
     --transitionDuration: 0;
     stroke-opacity: 1;
     stroke-dasharray: var(--initialStroke);
@@ -1762,101 +1512,13 @@
   </head>
   <body> -->
 <!-- <link href="{{ asset('css/index/styles.css') }}" rel="stylesheet"> -->
-<!--<nav id="nav" class="nav container">
-        <img class="logo" src="images/img/smartlab-logo.svg" alt="logo" />
-        <div id="nav-button" class="navigation-button">
-          <div class="navigation-button-inner"></div>
-          <ul class="nav-list">
-            <li>
-              <a href="#">what we do</a>
-              <div class="dropdown-container">
-                <img src="images/img/menu-arrow-down.svg" alt="arrow down" />
-                <ul class="nav-list-dropdown">
-                  <li><a href="#">Online Courses</a></li>
-                  <li><a href="#">Educational Video Animation</a></li>
-                  <li><a href="#">Programming</a></li>
-                  <li><a href="#">Moodle</a></li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <a href="#">who we are</a>
-              <div class="dropdown-container">
-                <img src="images/img/menu-arrow-down.svg" alt="arrow down" />
-                <ul class="nav-list-dropdown">
-                  <li><a href="#about">About Us</a></li>
-                  <li><a href="#team">Our Team</a></li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <a href="#">join us</a>
-              <div class="dropdown-container">
-                <img src="images/img/menu-arrow-down.svg" alt="arrow down" />
-                <ul class="nav-list-dropdown --join">
-                  <li class="--join-left">
-                    <a href="#"><span>Outsourcing</span></a>
-                  </li>
-                  <div class="--join-right">
-                    <li><a href="#">Become A Patner</a></li>
-                    <li><a href="#">Careers</a></li>
-                  </div>
-                </ul>
-              </div>
-            </li>
-            <li><a href="#">blog</a></li>
-            <li><a href="#">contact</a></li>
-          </ul>
-        </div>
-        <div id="button-overlay" class="button-overlay"></div>
-        <ul class="nav-list">
-          <li>
-            <a href="#">what we do</a>
-            <div class="dropdown-container">
-              <img src="images/img/menu-arrow-down.svg" alt="arrow down" />
-              <ul class="nav-list-dropdown">
-                <li><a href="#">Online Courses</a></li>
-                <li><a href="#">Educational Video Animation</a></li>
-                <li><a href="#">Programming</a></li>
-                <li><a href="#">Moodle</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="#">who we are</a>
-            <div class="dropdown-container">
-              <img src="images/img/menu-arrow-down.svg" alt="arrow down" />
-              <ul class="nav-list-dropdown">
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#team">Our Team</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="#">join us</a>
-            <div class="dropdown-container">
-              <img src="images/img/menu-arrow-down.svg" alt="arrow down" />
-              <ul class="nav-list-dropdown --join">
-                <li class="--join-left">
-                  <a href="#"><span>Outsourcing</span></a>
-                </li>
-                <div class="--join-right">
-                  <li><a href="#">Become A Patner</a></li>
-                  <li><a href="#">Careers</a></li>
-                </div>
-              </ul>
-            </div>
-          </li>
-          <li><a href="#">blog</a></li>
-          <li><a href="#">contact</a></li>
-        </ul>
-      </nav> -->
+
 <div class="background-section-one">
-  <img class="background-img" src="images/img/header-fluid-blue.svg" />
-  <img class="background-img-orange-circle" src="images/img/orange-circle.svg" />
-  <img class="background-img-circle --circle1" src="images/img/fluid-bright-circle.svg" />
-  <img class="background-img-circle --circle2" src="images/img/fluid-bright-circle.svg" />
-  <img class="background-img-circle --circle3" src="images/img/fluid-bright-circle.svg" />
+  <img class="background-img" src="images/img/header-fluid-blue.svg" alt="blue background image" />
+  <img class="background-img-orange-circle" src="images/img/orange-circle.svg" alt="orange background circle" />
+  <img class="background-img-circle --circle1" src="images/img/fluid-bright-circle.svg" alt="bright circle background" />
+  <img class="background-img-circle --circle2" src="images/img/fluid-bright-circle.svg" alt="bright circle background" />
+  <img class="background-img-circle --circle3" src="images/img/fluid-bright-circle.svg" alt="bright circle background" />
   <div class="language">
     <p class="opacity margin-right-25">
       <span>Call: </span><span>+387 61 811 394</span>
@@ -1880,17 +1542,17 @@
       </p>
       <button class="button margin-top-27">Get in touch</button>
     </div>
-    <img data-aos="zoom-in" class="section-one-animation" src="images/img/header-illustration.svg" />
+    <img data-aos="zoom-in" class="section-one-animation" src="images/img/header-illustration.svg" alt="header ilustration" />
 
 
   </section>
 </div>
 <section class="section-two contain">
-  <img class="section-two-top-orange-img" src="images/img/orange-circle.svg" />
-  <img class="section-two-background-top" src="images/img/header-fluid-blue.svg" />
-  <img class="section-two-backgound-top-orange" src="images/img/orange-circle.svg" />
-  <img class="section-two-background-bot" src="images/img/blue-circle.svg" />
-  <img class="section-two-background-bot-orange" src="images/img/orange-circle.svg" />
+  <img class="section-two-top-orange-img" src="images/img/orange-circle.svg" alt="orange background circle" />
+  <img class="section-two-background-top" src="images/img/header-fluid-blue.svg" alt="header blue background" />
+  <img class="section-two-backgound-top-orange" src="images/img/orange-circle.svg" alt="orange background circle" />
+  <img class="section-two-background-bot" src="images/img/blue-circle.svg" alt="blue background circle" />
+  <img class="section-two-background-bot-orange" src="images/img/orange-circle.svg" alt="orange background circle" />
   <div class="section-two-hero">
     <div>
       <h2 class="h1-font">What We Do?</h2>
@@ -1904,7 +1566,7 @@
   <div id="anchor">
     <div class="section-two-top" data-aos-anchor="#anchor" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
       <div class="section-two-top-left">
-        <img src="images/img/online-courses-img.svg" />
+        <img src="images/img/online-courses-img.svg" alt="online courses" />
       </div>
       <div class="section-two-top-right">
         <h2 class="h2-font">Online courses</h2>
@@ -1917,7 +1579,7 @@
     </div>
     <div class="section-two-bot">
       <div class="section-two-bot-item" data-aos-anchor=".section-two-bot" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="100" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
-        <img class="--width-margin-top" src="images/img/video-animation-img.svg" />
+        <img class="--width-margin-top" src="images/img/video-animation-img.svg" alt="video and animation" />
         <div>
           <h2 class="h2-font">Educational <span>video animation</span></h2>
           <p class="p-font">
@@ -1930,7 +1592,7 @@
 
       </div>
       <div class="section-two-bot-item margin-both" data-aos-anchor=".section-two-bot" data-aos="zoom-in-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
-        <img src="images/img/development-img.svg" />
+        <img src="images/img/development-img.svg" alt="development" />
         <div>
           <h2 class="h2-font">Development/ <span>programming</span></h2>
           <p class="p-font">
@@ -1943,7 +1605,7 @@
 
       </div>
       <div class="section-two-bot-item" data-aos-anchor=".section-two-bot" data-aos="zoom-in-up" data-aos-offset="300" data-aos-delay="300" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
-        <img class="--width-margin-top" src="images/img/moodle-img.svg" />
+        <img class="--width-margin-top" src="images/img/moodle-img.svg" alt="moodle" />
         <div>
           <h2 class="h2-font">Moodle <span>LMS Adaptation</span></h2>
           <p class="p-font">
@@ -1960,7 +1622,7 @@
   </div>
 </section>
 <section id="about" class="section-three contain">
-  <img class="about-orange-circle" src="images/img/orange-circle.svg" />
+  <img class="about-orange-circle" src="images/img/orange-circle.svg" alt="orange background circle" />
   <div>
     <div class="about-us">
       <div>
@@ -1972,7 +1634,7 @@
       </div>
       <div id="aboutUs" class="flex about-us">
         <div class="--border-right --border-bottom">
-          <div class="note-display" data-note="85">
+          <div class="note-display" data-note="75">
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
                 <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--path"></circle>
@@ -2097,20 +1759,20 @@
   </div>
 </section>
 <section id="team" class="team contain">
-  <img class="team-orange-circle" src="images/img/orange-circle.svg" />
-  <img class="team-blue-circle" src="images/img/blue-circle.svg" />
-  <img class="team-orange-circle-bottom" src="images/img/orange-circle.svg" />
+  <img class="team-orange-circle" src="images/img/orange-circle.svg" alt="orange background circle" />
+  <img class="team-blue-circle" src="images/img/blue-circle.svg" alt="blue background circle" />
+  <img class="team-orange-circle-bottom" src="images/img/orange-circle.svg" alt="background orange circle" />
   <div>
     <h2 class="text-center h1-font">Our Team</h2>
     <div class="flex --four">
-      <img src="https://via.placeholder.com/200" />
-      <img src="https://via.placeholder.com/200" />
-      <img src="https://via.placeholder.com/200" />
-      <img src="https://via.placeholder.com/200" />
-      <img src="https://via.placeholder.com/200" />
-      <img src="https://via.placeholder.com/200" />
-      <img src="https://via.placeholder.com/200" />
-      <img src="https://via.placeholder.com/200" />
+      <img src="https://via.placeholder.com/200" alt="team members" />
+      <img src="https://via.placeholder.com/200" alt="team members" />
+      <img src="https://via.placeholder.com/200" alt="team members" />
+      <img src="https://via.placeholder.com/200" alt="team members" />
+      <img src="https://via.placeholder.com/200" alt="team members" />
+      <img src="https://via.placeholder.com/200" alt="team members" />
+      <img src="https://via.placeholder.com/200" alt="team members" />
+      <img src="https://via.placeholder.com/200" alt="team members" />
     </div>
   </div>
 </section>
@@ -2119,12 +1781,12 @@
     <h2 class="text-center h1-font">Partners</h2>
     <div class="flex">
       <div class="partners-images">
-        <img src="https://via.placeholder.com/200" />
-        <img src="https://via.placeholder.com/200" />
-        <img src="https://via.placeholder.com/200" />
-        <img src="https://via.placeholder.com/200" />
-        <img src="https://via.placeholder.com/200" />
-        <img src="https://via.placeholder.com/200" />
+        <img src="https://via.placeholder.com/200" alt="partner logo" />
+        <img src="https://via.placeholder.com/200" alt="partner logo" />
+        <img src="https://via.placeholder.com/200" alt="partner logo" />
+        <img src="https://via.placeholder.com/200" alt="partner logo" />
+        <img src="https://via.placeholder.com/200" alt="partner logo" />
+        <img src="https://via.placeholder.com/200" alt="partner logo" />
       </div>
       <div class="partners-text">
         <div>
@@ -2132,7 +1794,7 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rutrum rhoncus massa. Fusce dapibus accumsan volutpat. Pellentesque lobortis ex nibh, ac mattis sapien varius semper. Curabitur congue dui non libero congue, non varius dui iaculis. Nam ut accumsan urna. Curabitur eget mattis tellus, ut euismod turpis.
           </p>
           <div>
-            <img src="https://via.placeholder.com/100" />
+            <img src="https://via.placeholder.com/100" alt="partner image" />
             <p class="h2-font">Joanna Kowalska</p>
             <p class="p-font">Nike co.</p>
           </div>
@@ -2143,13 +1805,13 @@
   </div>
 </section>
 <section class="blog-section contain">
-  <img class="blog-orange-circle-big" src="images/img/orange-circle.svg" />
-  <img class="blog-orange-circle-small" src="images/img/orange-circle.svg" />
+  <img class="blog-orange-circle-big" src="images/img/orange-circle.svg" alt="orange circle background" />
+  <img class="blog-orange-circle-small" src="images/img/orange-circle.svg" alt="orange circle background" />
   <h2 class="text-center h1-font">Blog</h2>
   <div class="blog-container">
     <div class="blog" data-aos-anchor=".blog-section" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
       <div class="img-container">
-        <img src="images/img/blog-post-1.png">
+        <img src="images/img/blog-post-1.png" alt="blog post">
         <svg class="wave" viewBox="0 0 500 500">
           <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
         </svg>
@@ -2164,7 +1826,7 @@
     </div>
     <div class="blog" data-aos-anchor=".blog-section" data-aos="zoom-in-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
       <div class="img-container">
-        <img src="images/img/blog-post-2.png">
+        <img src="images/img/blog-post-2.png" alt="blog post">
         <svg class="wave" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
           <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
         </svg>
@@ -2177,7 +1839,7 @@
     </div>
     <div class="blog" data-aos-anchor=".blog-section" data-aos="zoom-in-up" data-aos-offset="300" data-aos-delay="150" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
       <div class="img-container">
-        <img src="images/img/blog-post-1.png">
+        <img src="images/img/blog-post-1.png" alt="blog post">
         <svg class="wave" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
           <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
         </svg>
@@ -2190,7 +1852,7 @@
     </div>
     <div class="blog" data-aos-anchor=".blog-section" data-aos="zoom-in-up" data-aos-offset="400" data-aos-delay="200" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
       <div class="img-container">
-        <img src="images/img/blog-post-2.png">
+        <img src="images/img/blog-post-2.png" alt="blog post">
         <svg class="wave" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
           <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
         </svg>
@@ -2205,8 +1867,8 @@
   <button class="button">Show more</button>
 </section>
 <section class="contact-section">
-  <img class="contact-orange-circle-r" src="images/img/orange-circle.svg" />
-  <img class="contact-orange-circle-l" src="images/img/orange-circle.svg" />
+  <img class="contact-orange-circle-r" src="images/img/orange-circle.svg" alt="background orange circle" />
+  <img class="contact-orange-circle-l" src="images/img/orange-circle.svg" alt="background orange circle" />
   <div class="contact-form-container">
     <h2 class="text-center h1-font">Contact</h2>
     <form class="contact-form">
@@ -2240,7 +1902,7 @@
 </section>
 <footer class="footer">
   <div class="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5754.153583595637!2d18.389259!3d43.854237!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd3b7b0136b05bfe5!2sSmartLab!5e0!3m2!1sen!2sus!4v1557213572662!5m2!1sen!2sus" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5754.153583595637!2d18.389259!3d43.854237!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd3b7b0136b05bfe5!2sSmartLab!5e0!3m2!1sen!2sus!4v1557213572662!5m2!1sen!2sus" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
   </div>
 </footer>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -2248,8 +1910,6 @@
   document.addEventListener("DOMContentLoaded", function(event) {
     AOS.init();
     const aboutUs = document.querySelector("#aboutUs");
-    const displays = document.querySelectorAll(".note-display");
-    const transitionDuration = 900;
     let i = 0;
     let isInViewport = function(elem) {
       let bounding = elem.getBoundingClientRect();
@@ -2260,17 +1920,36 @@
         bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
       );
     };
+    window.addEventListener("scroll", function(event) {
+      if (isInViewport(aboutUs)) {
+        for (i = i; i <= 1; i++) {
+          displays.forEach(display => {
 
-    function strokeTransition(display, note) {
+            let int = Number(display.dataset.note);
+            console.log(int);
+            strokeTransition(display, int)
+            increaseNumber(display, int)
+          });
+        }
+      }
+    });
+    const displays = document.querySelectorAll(".note-display");
+    const transitionDuration = 900;
+
+
+
+    function strokeTransition(display, number) {
       let progress = display.querySelector(".circle__progress--fill");
       let radius = progress.r.baseVal.value;
       let circumference = 2 * Math.PI * radius;
-      let offset = (circumference * (1000 - note)) / 1000;
+      let offset = (circumference * (100 - number)) / 100;
+
       progress.style.setProperty("--initialStroke", circumference);
       progress.style.setProperty(
         "--transitionDuration",
         `${transitionDuration}ms`
       );
+
       setTimeout(() => (progress.style.strokeDashoffset = offset), 100);
     }
 
@@ -2287,19 +1966,6 @@
         counter++;
       }, interval);
     }
-    window.addEventListener("scroll", function(event) {
-      if (isInViewport(aboutUs)) {
-        for (i = i; i <= 1; i++) {
-          displays.forEach(display => {
-            let note = parseFloat(display.dataset.note);
-            let int = Number(display.dataset.note);
-            strokeTransition(display, note);
-            increaseNumber(display, int);
-          });
-        }
-
-      }
-    });
   });
 </script>
 <!--<script src="js/nav.js"></script>
