@@ -432,11 +432,11 @@
   }
 
   .--border-right {
-    border-right: 3px solid grey;
+    border-right: 1px solid var(--shadow-color);
   }
 
   .--border-bottom {
-    border-bottom: 3px solid grey;
+    border-bottom: 1px solid var(--shadow-color);
 
   }
 
@@ -1405,11 +1405,15 @@
   .percent__int {
     font-size: 28px;
     font-family: "Source Sans Pro", sans-serif;
+    color: var(--h2-color);
+    font-weight: 600;
   }
 
-  .percent__dec {
-    font-size: 12px;
+  .percent__sign {
+    font-size: 28px;
     font-family: "Source Sans Pro", sans-serif;
+    font-weight: 600;
+    color: var(--h2-color);
   }
 
   .label {
@@ -1637,7 +1641,7 @@
 
       <div id="aboutUs" class="flex about-us">
         <div class="--border-right --border-bottom">
-          <div class="note-display" data-note="75">
+          <div class="note-display" data-note="98">
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
                 <filter id="dropshadow" height="130%">
@@ -1663,7 +1667,7 @@
           </div>
         </div>
         <div class="--border-right --border-bottom">
-          <div class="note-display" data-note="65">
+          <div class="note-display" data-note="80">
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
                 <filter id="dropshadow" height="130%">
@@ -1689,7 +1693,7 @@
           </div>
         </div>
         <div class="--border-right --border-bottom">
-          <div class="note-display" data-note="95">
+          <div class="note-display" data-note="80">
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
                 <filter id="dropshadow" height="130%">
@@ -1741,7 +1745,7 @@
           </div>
         </div>
         <div class="--border-right ">
-          <div class="note-display" data-note="75">
+          <div class="note-display" data-note="90">
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
                 <filter id="dropshadow" height="130%">
@@ -1767,7 +1771,7 @@
           </div>
         </div>
         <div class="--border-right">
-          <div class="note-display" data-note="95">
+          <div class="note-display" data-note="70">
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
                 <filter id="dropshadow" height="130%">
@@ -1793,7 +1797,7 @@
           </div>
         </div>
         <div class="--border-right">
-          <div class="note-display" data-note="80">
+          <div class="note-display" data-note="65">
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
                 <filter id="dropshadow" height="130%">
