@@ -427,8 +427,11 @@
 
   .about-us div {
     flex-basis: 25%;
-    padding-bottom: 10px;
-    padding-top: 10px;
+
+  }
+
+  .about-us p {
+    margin-top: 25px;
   }
 
   .--border-right {
@@ -1360,7 +1363,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 25px;
+
   }
 
   .circle {
@@ -1404,15 +1407,15 @@
 
   .percent__int {
     font-size: 28px;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: var(--h2-color);
-    font-weight: 600;
+    font-weight: 400;
   }
 
   .percent__sign {
-    font-size: 28px;
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: 600;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
     color: var(--h2-color);
   }
 
@@ -1640,8 +1643,9 @@
       </div>
 
       <div id="aboutUs" class="flex about-us">
-        <div class="--border-right --border-bottom">
-          <div class="note-display" data-note="98">
+        <div>
+          <p>Online Courses</p>
+          <div class="note-display --border-right --border-bottom" data-note="98">
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
                 <filter id="dropshadow" height="130%">
@@ -1666,8 +1670,9 @@
             </div>
           </div>
         </div>
-        <div class="--border-right --border-bottom">
-          <div class="note-display" data-note="80">
+        <div>
+          <p>Moodle LMS Implementation</p>
+          <div class="note-display --border-right --border-bottom" data-note="80">
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
                 <filter id="dropshadow" height="130%">
@@ -1692,8 +1697,9 @@
             </div>
           </div>
         </div>
-        <div class="--border-right --border-bottom">
-          <div class="note-display" data-note="80">
+        <div>
+          <p>Web Design and Development</p>
+          <div class="note-display --border-right --border-bottom" data-note="80">
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
                 <filter id="dropshadow" height="130%">
@@ -1718,8 +1724,9 @@
             </div>
           </div>
         </div>
-        <div class="--border-bottom">
-          <div class="note-display" data-note="85">
+        <div>
+          <p>Educational Video Animation</p>
+          <div class="note-display --border-bottom" data-note="85">
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
                 <filter id="dropshadow" height="130%">
@@ -1745,6 +1752,7 @@
           </div>
         </div>
         <div class="--border-right ">
+          <p>Consulting About eLearning Features</p>
           <div class="note-display" data-note="90">
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
@@ -1771,6 +1779,7 @@
           </div>
         </div>
         <div class="--border-right">
+          <p>Inhouse Training and Seminars</p>
           <div class="note-display" data-note="70">
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
@@ -1797,6 +1806,7 @@
           </div>
         </div>
         <div class="--border-right">
+          <p>Mobile App Development</p>
           <div class="note-display" data-note="65">
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
@@ -1824,6 +1834,7 @@
         </div>
         <div>
           <div class="note-display" data-note="100">
+            <p>Fun at work</p>
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
                 <filter id="dropshadow" height="130%">
