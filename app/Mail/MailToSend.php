@@ -11,14 +11,16 @@ class MailToSend extends Mailable
 {
     use Queueable, SerializesModels;
 
+    private $template;
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($template)
     {
-        //
+        $this->template = $template;
     }
 
     /**
@@ -28,6 +30,9 @@ class MailToSend extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        //return $this->view($this->template);
+        return $this->from('mirzao@smartlab.ba','No Reply')
+            ->view("emaildemo")
+            ->subject('New mail');
     }
 }

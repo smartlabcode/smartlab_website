@@ -4,6 +4,7 @@ namespace App\Jobs;
 
 use App\Http\Services\LogService;
 use App\Http\Services\MailerService;
+use App\Mail\MailToSend;
 use App\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
@@ -15,16 +16,16 @@ class SendEmail implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    private $user;
+    private $mail;
 
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct(User $user)
+    public function __construct(MailToSend $mail)
     {
-        $this->user = $user;
+        $this->mail = $mail;
     }
 
     /**
@@ -34,7 +35,7 @@ class SendEmail implements ShouldQueue
      */
     public function handle()
     {
-        $mailer = new MailerService(new LogService());
-        $mailer->sendEmail('New contact message from website', env('ADMIN_EMAIL'), 'HELLO');
+//        $mailer = new MailerService(new LogService());
+//        $mailer->sendEmail('New contact message from website', env('ADMIN_EMAIL'), "");
     }
 }
