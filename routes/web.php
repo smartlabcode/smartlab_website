@@ -69,6 +69,12 @@ Route::post('outsourcing', 'ContactController@handleOutsourcingInfo');
 // route where careers info is sent
 Route::post('careers', 'ContactController@handleCareersInfo');
 
+Route::get('schedule', function() {
+    \Illuminate\Support\Facades\Artisan::call('schedule:run');
+
+    return "ok";
+});
+
 // route for switching language
 Route::put('language', 'LanguagesController@switchLanguage');
 
