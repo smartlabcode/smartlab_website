@@ -7,20 +7,18 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class SendMailable extends Mailable
+class MailToSend extends Mailable
 {
     use Queueable, SerializesModels;
-
-    //private $viewTemplate;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct() // $viewTemplate
+    public function __construct()
     {
-        //$this->viewTemplate = $viewTemplate;
+        //
     }
 
     /**
@@ -30,6 +28,6 @@ class SendMailable extends Mailable
      */
     public function build()
     {
-        //return $this->view($this->viewTemplate);
+        return $this->view('view.name');
     }
 }

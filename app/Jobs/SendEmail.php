@@ -2,28 +2,29 @@
 
 namespace App\Jobs;
 
-use App\Mail\SendMailable;
+use App\Http\Services\LogService;
+use App\Http\Services\MailerService;
+use App\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use Illuminate\Support\Facades\Mail;
 
-class SendEmailJob implements ShouldQueue
+class SendEmail implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    private $viewTemplate;
+    private $user;
 
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct($viewTemplate) //$schedule->command('queue:work --stop-when-empty --tries=2');
+    public function __construct(User $user)
     {
-        $this->viewTemplate = $viewTemplate;
+        $this->user = $user;
     }
 
     /**
@@ -33,6 +34,7 @@ class SendEmailJob implements ShouldQueue
      */
     public function handle()
     {
-        //Mail::to(env('ADMIN_EMAIL'))->send(new SendMailable($this->viewTemplate));
+        $mailer = new MailerService(new LogService());
+        $mailer->sendEmail('New contact message from website', env('ADMIN_EMAIL'), 'HELLO');
     }
 }

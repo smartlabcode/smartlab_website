@@ -7,8 +7,10 @@ use App\Http\Services\LogService;
 use App\Http\Services\MailerService;
 use App\Http\Services\MailTemplateCreatorService;
 use App\Http\Services\UploadService;
-use App\Jobs\SendEmailJob;
+use App\Jobs\SendEmail;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\Facades\View;
 
 class ContactController extends Controller
@@ -61,7 +63,9 @@ class ContactController extends Controller
         // $this->mailer->sendEmail('New contact message from website', env('ADMIN_EMAIL'), $template);
 
         // TODO push mail to queue
-        dispatch(new SendEmailJob($template));
+        // dispatch(new SendEmailJob($template, null));
+        $user = User::where('id', 1)->first();
+        Queue::push(new SendEmail($user));
 
         // return message
         return back()->with('message', 'Contact message successfully sent.');
