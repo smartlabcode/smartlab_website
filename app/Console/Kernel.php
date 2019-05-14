@@ -24,6 +24,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
+        $schedule->command('queue:work --stop-when-empty --tries=2');
         // $schedule->command('inspire')
         //          ->hourly();
     }

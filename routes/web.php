@@ -60,6 +60,9 @@ Route::get('pages/programming', 'PagesController@showProgrammingPage');
 Route::get('pages/moodle', 'PagesController@showMoodlePage');
 Route::get('pages/xlf', 'PagesController@showXlfPage');
 
+// sending emails
+Route::get('email', 'EmailController@sendEmail');
+
 // route where contact info is sent
 Route::post('contact', 'ContactController@handleContactInfo');
 // route where bussiness info is sent

@@ -7,6 +7,7 @@ use App\Http\Services\LogService;
 use App\Http\Services\MailerService;
 use App\Http\Services\MailTemplateCreatorService;
 use App\Http\Services\UploadService;
+use App\Jobs\SendEmailJob;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 
@@ -57,7 +58,10 @@ class ContactController extends Controller
         ]);
 
         // send mail to Rizah
-        $this->mailer->sendEmail('New contact message from website', env('ADMIN_EMAIL'), $template);
+        // $this->mailer->sendEmail('New contact message from website', env('ADMIN_EMAIL'), $template);
+
+        // TODO push mail to queue
+        dispatch(new SendEmailJob($template));
 
         // return message
         return back()->with('message', 'Contact message successfully sent.');
