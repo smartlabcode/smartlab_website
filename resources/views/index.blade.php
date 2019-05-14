@@ -432,6 +432,7 @@
 
   .about-us p {
     margin-top: 25px;
+    font-family: "Montserrat", sans-serif;
   }
 
   .--border-right {
@@ -1148,9 +1149,7 @@
     .submit {
       font-size: 1em;
     }
-  }
 
-  @media screen and (max-width: 425px) {
     .--border-right {
       border-right: 0;
     }
@@ -1158,6 +1157,14 @@
     .--border-bottom {
       border-bottom: 0;
     }
+
+    .about-us div {
+      flex-basis: 50%;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+
 
     .background-img {
       top: 3%;
@@ -1378,7 +1385,7 @@
     fill: none;
     stroke-width: 10px;
     stroke-opacity: 0.3;
-    stroke-linecap: round;
+    stroke-linecap: butt;
   }
 
   .circle__progress--fill {
@@ -1644,7 +1651,7 @@
 
       <div id="aboutUs" class="flex about-us">
         <div>
-          <p>Online Courses</p>
+          <p>Online<br>Courses</p>
           <div class="note-display --border-right --border-bottom" data-note="98">
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
@@ -1652,7 +1659,7 @@
                   <feGaussianBlur in="SourceAlpha" stdDeviation="3" /> <!-- stdDeviation is how much to blur -->
                   <feOffset dx="0" dy="0" result="offsetblur" /> <!-- how much to offset -->
                   <feComponentTransfer>
-                    <feFuncA type="linear" slope="0.5" /> <!-- slope is the opacity of the shadow -->
+                    <feFuncA type="linear" slope="0.3" /> <!-- slope is the opacity of the shadow -->
                   </feComponentTransfer>
                   <feMerge>
                     <feMergeNode /> <!-- this contains the offset blurred image -->
@@ -1671,21 +1678,11 @@
           </div>
         </div>
         <div>
-          <p>Moodle LMS Implementation</p>
+          <p>Moodle LMS<br>Implementation</p>
           <div class="note-display --border-right --border-bottom" data-note="80">
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
-                <filter id="dropshadow" height="130%">
-                  <feGaussianBlur in="SourceAlpha" stdDeviation="3" /> <!-- stdDeviation is how much to blur -->
-                  <feOffset dx="0" dy="0" result="offsetblur" /> <!-- how much to offset -->
-                  <feComponentTransfer>
-                    <feFuncA type="linear" slope="0.5" /> <!-- slope is the opacity of the shadow -->
-                  </feComponentTransfer>
-                  <feMerge>
-                    <feMergeNode /> <!-- this contains the offset blurred image -->
-                    <feMergeNode in="SourceGraphic" /> <!-- this contains the element that the filter is applied to -->
-                  </feMerge>
-                </filter>
+
                 <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--path"></circle>
                 <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--fill" style="filter:url(#dropshadow)"></circle>
               </svg>
@@ -1698,21 +1695,11 @@
           </div>
         </div>
         <div>
-          <p>Web Design and Development</p>
+          <p>Web Design<br>and Development</p>
           <div class="note-display --border-right --border-bottom" data-note="80">
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
-                <filter id="dropshadow" height="130%">
-                  <feGaussianBlur in="SourceAlpha" stdDeviation="3" /> <!-- stdDeviation is how much to blur -->
-                  <feOffset dx="0" dy="0" result="offsetblur" /> <!-- how much to offset -->
-                  <feComponentTransfer>
-                    <feFuncA type="linear" slope="0.5" /> <!-- slope is the opacity of the shadow -->
-                  </feComponentTransfer>
-                  <feMerge>
-                    <feMergeNode /> <!-- this contains the offset blurred image -->
-                    <feMergeNode in="SourceGraphic" /> <!-- this contains the element that the filter is applied to -->
-                  </feMerge>
-                </filter>
+
                 <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--path"></circle>
                 <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--fill" style="filter:url(#dropshadow)"></circle>
               </svg>
@@ -1725,21 +1712,11 @@
           </div>
         </div>
         <div>
-          <p>Educational Video Animation</p>
+          <p>Educational<br>Video Animation</p>
           <div class="note-display --border-bottom" data-note="85">
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
-                <filter id="dropshadow" height="130%">
-                  <feGaussianBlur in="SourceAlpha" stdDeviation="3" /> <!-- stdDeviation is how much to blur -->
-                  <feOffset dx="0" dy="0" result="offsetblur" /> <!-- how much to offset -->
-                  <feComponentTransfer>
-                    <feFuncA type="linear" slope="0.5" /> <!-- slope is the opacity of the shadow -->
-                  </feComponentTransfer>
-                  <feMerge>
-                    <feMergeNode /> <!-- this contains the offset blurred image -->
-                    <feMergeNode in="SourceGraphic" /> <!-- this contains the element that the filter is applied to -->
-                  </feMerge>
-                </filter>
+
                 <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--path"></circle>
                 <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--fill" style="filter:url(#dropshadow)"></circle>
               </svg>
@@ -1752,21 +1729,11 @@
           </div>
         </div>
         <div class="--border-right ">
-          <p>Consulting About eLearning Features</p>
+          <p>Consulting About<br>eLearning Features</p>
           <div class="note-display" data-note="90">
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
-                <filter id="dropshadow" height="130%">
-                  <feGaussianBlur in="SourceAlpha" stdDeviation="3" /> <!-- stdDeviation is how much to blur -->
-                  <feOffset dx="0" dy="0" result="offsetblur" /> <!-- how much to offset -->
-                  <feComponentTransfer>
-                    <feFuncA type="linear" slope="0.5" /> <!-- slope is the opacity of the shadow -->
-                  </feComponentTransfer>
-                  <feMerge>
-                    <feMergeNode /> <!-- this contains the offset blurred image -->
-                    <feMergeNode in="SourceGraphic" /> <!-- this contains the element that the filter is applied to -->
-                  </feMerge>
-                </filter>
+
                 <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--path"></circle>
                 <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--fill" style="filter:url(#dropshadow)"></circle>
               </svg>
@@ -1779,21 +1746,11 @@
           </div>
         </div>
         <div class="--border-right">
-          <p>Inhouse Training and Seminars</p>
+          <p>Inhouse Training<br>and Seminars</p>
           <div class="note-display" data-note="70">
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
-                <filter id="dropshadow" height="130%">
-                  <feGaussianBlur in="SourceAlpha" stdDeviation="3" /> <!-- stdDeviation is how much to blur -->
-                  <feOffset dx="0" dy="0" result="offsetblur" /> <!-- how much to offset -->
-                  <feComponentTransfer>
-                    <feFuncA type="linear" slope="0.5" /> <!-- slope is the opacity of the shadow -->
-                  </feComponentTransfer>
-                  <feMerge>
-                    <feMergeNode /> <!-- this contains the offset blurred image -->
-                    <feMergeNode in="SourceGraphic" /> <!-- this contains the element that the filter is applied to -->
-                  </feMerge>
-                </filter>
+
                 <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--path"></circle>
                 <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--fill" style="filter:url(#dropshadow)"></circle>
               </svg>
@@ -1806,21 +1763,11 @@
           </div>
         </div>
         <div class="--border-right">
-          <p>Mobile App Development</p>
+          <p>Mobile App<br>Development</p>
           <div class="note-display" data-note="65">
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
-                <filter id="dropshadow" height="130%">
-                  <feGaussianBlur in="SourceAlpha" stdDeviation="3" /> <!-- stdDeviation is how much to blur -->
-                  <feOffset dx="0" dy="0" result="offsetblur" /> <!-- how much to offset -->
-                  <feComponentTransfer>
-                    <feFuncA type="linear" slope="0.5" /> <!-- slope is the opacity of the shadow -->
-                  </feComponentTransfer>
-                  <feMerge>
-                    <feMergeNode /> <!-- this contains the offset blurred image -->
-                    <feMergeNode in="SourceGraphic" /> <!-- this contains the element that the filter is applied to -->
-                  </feMerge>
-                </filter>
+
                 <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--path"></circle>
                 <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--fill" style="filter:url(#dropshadow)"></circle>
               </svg>
@@ -1834,20 +1781,10 @@
         </div>
         <div>
           <div class="note-display" data-note="100">
-            <p>Fun at work</p>
+            <p>Fun<br>at work</p>
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
-                <filter id="dropshadow" height="130%">
-                  <feGaussianBlur in="SourceAlpha" stdDeviation="3" /> <!-- stdDeviation is how much to blur -->
-                  <feOffset dx="0" dy="0" result="offsetblur" /> <!-- how much to offset -->
-                  <feComponentTransfer>
-                    <feFuncA type="linear" slope="0.5" /> <!-- slope is the opacity of the shadow -->
-                  </feComponentTransfer>
-                  <feMerge>
-                    <feMergeNode /> <!-- this contains the offset blurred image -->
-                    <feMergeNode in="SourceGraphic" /> <!-- this contains the element that the filter is applied to -->
-                  </feMerge>
-                </filter>
+
                 <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--path"></circle>
                 <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--fill" style="filter:url(#dropshadow)"></circle>
               </svg>
@@ -2019,11 +1956,9 @@
     let i = 0;
     let isInViewport = function(elem) {
       let bounding = elem.getBoundingClientRect();
+      console.log(bounding.top);
       return (
-        bounding.top >= 0 &&
-        bounding.left >= 0 &&
-        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+        bounding.top < 400
       );
     };
     window.addEventListener("scroll", function(event) {
