@@ -361,6 +361,7 @@
     .xliff-section {
         text-align: center;
         position: relative;
+        top: 250px;
     }
 
     .xliff-section h1 {}
@@ -375,7 +376,7 @@
         position: absolute;
         width: 115vw;
         z-index: -100;
-        transform: translate(-20%, -12%);
+        transform: translate(-20%, -3%);
     }
 
     .xliff-background-container {
@@ -433,6 +434,10 @@
 
         .xliff-background {
             transform: translate(-13%, -12%);
+        }
+
+        .xliff-section {
+            top: 125px;
         }
     }
 
@@ -550,14 +555,32 @@
 
         .xliff-background {
             width: 145vw;
+            top: 13%;
         }
+
+
     }
 
     @media screen and (max-width: 900px) {
         .background-img {
-            top: 1%;
-            right: -93%;
-            transform: rotate(70deg);
+            top: 21%;
+            right: -75%;
+            transform: rotate(61deg);
+        }
+
+        .background-img-orange-circle {
+            right: -16%;
+            top: 38%;
+        }
+
+        .--circle3 {
+            top: 71%;
+
+        }
+
+        .--circle2 {
+
+            right: -21%;
         }
 
         .section-one ul {
@@ -584,6 +607,8 @@
         .xliff-background {
             width: 170vw;
         }
+
+
     }
 
     @media screen and (max-width: 768px) {
@@ -633,6 +658,47 @@
             object-fit: contain;
             width: 100%;
         }
+
+        .background-img-orange-circle {
+            right: -109px;
+            top: 47%;
+            transform: rotate(30deg);
+        }
+
+        .background-img {
+            top: 21%;
+            right: -92%;
+            transform: rotate(61deg);
+        }
+
+        .xliff-background {
+            width: 170vw;
+            top: 18%;
+        }
+
+
+
+        .--circle2 {
+            bottom: 0%;
+            right: 74%;
+        }
+
+        .--circle3 {
+            top: -100px;
+            left: 84%;
+        }
+
+        .xliff-item .p-font {
+            font-size: 1em;
+        }
+
+        .xliff-item {
+            max-width: 200px;
+            flex-basis: 25%;
+            position: relative;
+            padding: 0 10px;
+            font-size: 11px;
+        }
     }
 
     @media screen and (max-width: 600px) {
@@ -642,7 +708,7 @@
         }
 
         .background-img {
-            top: 1%;
+            top: 12%;
             right: -87%;
             transform: rotate(67deg);
             width: 145%;
@@ -691,8 +757,8 @@
         }
 
         .xliff-background {
-            width: 666%;
-            top: 6%;
+            width: 558%;
+            top: 15%;
         }
 
         .xliff-item:nth-child(even) {
@@ -702,6 +768,47 @@
 
         .xliff-background-container {
             margin-bottom: -100px !important;
+        }
+
+        .tools-container {
+            top: 400px;
+        }
+
+        .tools-img {
+            flex-basis: 30%;
+            align-items: center;
+        }
+
+        .tools-img div {
+            flex-basis: 50%;
+            margin-bottom: 0;
+        }
+
+        .tools-info {
+            flex-basis: 60%;
+        }
+
+        .background-img-orange-circle {
+            right: -71px;
+            top: 49%;
+        }
+
+        .--circle2 {
+            bottom: 77%;
+            right: -15%;
+        }
+
+        .--circle3 {
+            top: 74%;
+            left: -9%;
+        }
+
+        .secTwoBg4 {
+
+            left: 89%;
+            /* top: 0; */
+            bottom: 31%;
+            /* top: 192%; */
         }
     }
 
@@ -720,7 +827,7 @@
         }
 
         .tools-container {
-            top: 130px;
+            top: 260px;
             margin-bottom: -100px;
         }
 
@@ -734,8 +841,8 @@
         }
 
         .xliff-background {
-            width: 666%;
-            top: 10%;
+            width: 644%;
+            top: 16%;
         }
 
         #slider>img:last-child {
@@ -757,6 +864,31 @@
             top: 0;
         }
 
+        .background-img {
+            top: 14%;
+        }
+
+        .background-img-orange-circle {
+            right: -25px;
+            /* bottom: -89%; */
+            top: 61%;
+            transform: rotate(-308deg);
+        }
+
+        .--circle1 {
+            top: 60%;
+        }
+
+        .--circle3 {
+            top: 15%;
+            left: 70%;
+        }
+
+        .xliff-background {
+            width: 747%;
+            top: 16%;
+        }
+
         .section-one-animation {
             padding: 0 27px;
         }
@@ -765,10 +897,15 @@
             margin-bottom: 10px;
         }
 
-        .xliff-background {
-            width: 890%;
-            top: 7%;
+        .secTwoBg4 {
+            bottom: 30%;
         }
+
+        .tools-container {
+            top: 330px;
+            margin-bottom: -100px;
+        }
+
     }
 </style>
 @section('content')
