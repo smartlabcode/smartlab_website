@@ -806,6 +806,43 @@
     font-size: 1.5em;
   }
 
+
+
+  @media screen and (min-width: 2000px) {
+    .background-img {
+      top: -250px;
+      right: -500px;
+    }
+
+    .background-img-orange-circle {
+      right: 1210px;
+    }
+
+    .section-two-background-top {
+      right: 105%;
+    }
+
+    .section-two-backgound-top-orange {
+      left: -33vw;
+    }
+
+    .section-two-background-bot {
+      left: 100%;
+    }
+
+    .section-two-background-bot-orange {
+      left: 100%;
+    }
+
+    .team-orange-circle {
+      right: -36vw;
+    }
+
+    .team-orange-circle-bottom {
+      left: -32vw;
+    }
+  }
+
   @media screen and (max-width: 1500px) {
     .partners-images {
       flex-basis: 40%;

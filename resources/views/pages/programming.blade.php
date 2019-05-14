@@ -110,7 +110,7 @@
     }
 
     .--circle2 {
-        bottom: 77%;
+        bottom: -12%;
         right: 39%;
     }
 
@@ -427,6 +427,45 @@
         width: 50%;
     }
 
+    @media screen and (min-width: 2000px) {
+        .background-img {
+            top: -250px;
+            right: -500px;
+        }
+
+        .background-img-orange-circle {
+            right: 1210px;
+        }
+
+        .secTwoBg {
+            left: -117%;
+        }
+
+        .secTwoBg2 {
+            top: -195px;
+            left: -939px;
+        }
+
+        .secTwoBg4 {
+            bottom: 30%;
+            left: 94%;
+        }
+
+        .xliff-background {
+            width: 107vw;
+            transform: translate(-26%, -8%);
+        }
+
+        .xliff-section {
+            top: 325px;
+        }
+
+        .tools-container {
+
+            top: 776px;
+        }
+    }
+
     @media screen and (max-width: 1530px) {
         .xliff-container {
             margin: 30px auto;
@@ -453,7 +492,16 @@
 
         .background-img-orange-circle {
             top: -181px;
-            right: 701px;
+            right: 545px;
+        }
+
+        .secTwoBg4 {
+            left: 94%;
+            bottom: 29%;
+        }
+
+        .secTwoBg2 {
+            top: -225px;
         }
 
     }
@@ -541,7 +589,7 @@
 
     @media screen and (max-width: 1030px) {
         .background-img {
-            right: -65%;
+            right: -54%;
         }
 
         .dashed-line {
@@ -558,6 +606,9 @@
             top: 13%;
         }
 
+        .background-img-orange-circle {
+            right: 302px;
+        }
 
     }
 
