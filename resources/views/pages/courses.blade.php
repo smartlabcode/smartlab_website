@@ -46,13 +46,6 @@
     .bold{
         font-weight: normal;
     }
-
-    .shadow{
-        -webkit-box-shadow: -1px -1px 15px 1px var(--shadow-color);
-        -moz-box-shadow: -1px -1px 15px 1px var(--shadow-color);
-        box-shadow: -1px -1px 15px 1px var(--shadow-color);
-    }
-
     .section1{
         display: flex;
         justify-content: space-evenly;
@@ -102,44 +95,80 @@
         justify-content: center;
     }
 
-    #slider {
-        margin-top: 70px;
-        width: 100%;
-        height: 400px;
+    .sectionTwo{
         display: flex;
-        flex-direction: row;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #slider {
+        width: 100%;
         padding: 10px;
         box-sizing: border-box;
+        position: relative;
     }
 
-    .images {
+    #slider div {
+        display: flex;
+        height: 400px;
+        width: calc(100% + 50px);
+
+    }
+
+    .slider-left {
+        width: 50%;
+        margin-right: 5px;
+
+        border-radius: 15px;
+    }
+
+    .slider-left img {
+        object-fit: cover;
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    .slider-right {
+        width: 50%;
+        margin-left: 5px;
+        border-radius: 15px;
+    }
+
+    .slider-right img {
+        object-fit: cover;
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    #slider>img {
         height: 100%;
-        width: 40%;
         border-radius: 10px;
-        display:inline-block;
+        display: inline-block;
     }
-
-    #slider > img:first-child {
+    #slider>img:first-child {
         margin-right: 5px;
         width: 50px;
         height: 50px;
-        position: relative;
+        position: absolute;
         display: inline-block;
-        top: 160px;
-        left: 30px;
+        top: 45%;
+        left: -15px;
         border-radius: 50%;
+        cursor: pointer;
+        z-index: 100;
     }
 
-    #slider > img:last-child {
+    #slider>img:last-child {
         margin-left: 5px;
         width: 50px;
         height: 50px;
-        position: relative;
+        position: absolute;
         display: inline-block;
-        top: 160px;
-        right: 30px;
+        top: 45%;
+        right: -65px;
         border-radius: 100%;
+        cursor: pointer;
+        z-index: 100;
     }
 
     .button{
@@ -193,22 +222,7 @@
         transform: rotate(25deg);
     }
 
-    .secTwoBg3{
-        width: 400px;
-        position: absolute;
-        transform: rotate(166deg);
-        z-index: -130;
-        left: 84%;
-        top: 110%;
-    }
 
-    .secTwoBg4{
-        width: 400px;
-        position: absolute;
-        z-index: -130;
-        left: 70%;
-        top: 138%;
-    }
 
 
     /* SECTION FOUR CSS*/
@@ -239,19 +253,61 @@
         display: flex;
         justify-content: center;
     }
+
     @media screen and (min-width: 1900px) {
-        #slider{
-            height: 600px;
+        #slider div {
+            height: 500px;
+        }
+        .secTwoBg2{
+            top: 820px;
+        }
+        .section3{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 5%;
+        }
+        .sec3text{
+            font-family: "Montserrat", sans-serif;
+            font-size: 2.2em;
+            color: var(--h2-color);
+        }
+
+        #slider >img:first-child {
+            width: 80px;
+            height: 80px;
+            margin-left: -12px;
+            top:220px;
+        }
+
+        #slider >img:last-child {
+            width: 80px;
+            height: 80px;
+            margin-right: -15px;
+            top: 220px;
         }
 
         .secOneBg2{
             width: 500px;
             top: -23%;
-            left: 30%;
+            left: 45%;
+        }
+
+        .secOneBg{
+            width: 80%;
+            right: -30%;
         }
 
         .h1-font{
             font-size: 3em;
+        }
+
+        #slider >img:last-child {
+            top: 275px;
+        }
+
+        #slider >img:first-child {
+            top: 275px;
         }
 
         .p-font{
@@ -261,8 +317,16 @@
             font-size: 3em;
         }
 
-        .secTwoBg3{
-            display: none;
+        .slider-right img{
+            width: 100%;
+            height: 120%;
+            object-fit: cover;
+        }
+
+        .slider-left img{
+            width: 100%;
+            height: 120%;
+            object-fit: cover;
         }
 
         .pics1-1 img {
@@ -285,18 +349,15 @@
         .section4{
             padding-top: 300px;
         }
+        .button{
+            width: 320px;
+            height: 80px;
+        }
     }
 
 
     @media screen and (max-width: 1900px) {
-        .secTwoBg4 {
-            width: 20%;
-            left: 69%;
-            top: 155%;
-        }
-        .secTwoBg3{
-            display: none;
-        }
+
 
         .pics1-1 img{
             width: 185px;
@@ -317,34 +378,51 @@
         }
         #slider{
             height: 450px;
+            width: 80%;
         }
     }
 
     /*1400*/
 
-    @media screen and (max-width: 1400px){
+    @media screen and (max-width: 1450px){
+
+        .sec3text{
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.8em;
+            color: var(--h2-color);
+        }
+
         .h1-font{
+
             font-size: 2em;
         }
+
         .h2-font{
             font-size: 1.3em;
         }
+
         .p-font{
             font-size: 1.3em;
         }
+
         .button{
             width: 166px;
             height: 45px;
             font-size: 1.2em;
             outline: hidden;
         }
-        #slider img{
-            width: 40%;
-            height: 80%;
+
+        .section3{
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
+
         .button{
             width: 200px;
         }
+
         .secOneBg {
             position: absolute;
             z-index: -100;
@@ -353,6 +431,7 @@
             height: 180%;
             width: 100%;
         }
+
         .secOneBg2{
             width: 300px;
             position: absolute;
@@ -362,20 +441,26 @@
             z-index: -110;
         }
 
-        .images{
-            width: 40%;
-            height: 100%;
-        }
-        .secTwoBg4{
-            left: 66%;
-            top: 146%;
+        #slider{
+            height: 70%;
         }
 
         .secOneImg{
-            padding-right: 0%;
+            padding-right: 0px;
         }
         .h2-secTwo{
             margin-top: 230px;
+        }
+
+        .secTwoBg {
+            left: -1046px;
+            width: 100%;
+            top: 100%;
+        }
+
+        .secTwoBg2{
+            top: 775px;
+            left: -458px;
         }
     }
 
@@ -383,6 +468,12 @@
 
     @media screen and (max-width: 1100px) {
 
+        .sec3text{
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.8em;
+            color: var(--h2-color);
+
+        }
         .h1-font {
             font-size: 1.7em;
         }
@@ -396,41 +487,40 @@
         }
 
         .button{
-            width: 130px;
-            height: 30px;
+            width: 140px;
+            height: 50px;
             font-size: 0.9em;
             outline: hidden;
         }
 
-        .secTwoBg4 {
-            position: absolute;
-            top: 143%;
-            left: 64%;
-            width: 32%;
-        }
-
-        .secTwoBg3{
-            /* position: absolute;
-             top: 120%;
-             */
-            display: none;
-        }
         .section3{
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .secOneBg {
 
             position: absolute;
             z-index: -100;
-            top: -41%;
+            top: -40%;
             right: -40%;
+        }
+        .secTwoBg{
+            left: -70%;
+            width: 105%;
+            top: 100%;
+        }
+
+        .secTwoBg2{
+            top: 730px;
+            left: -435px;
+
         }
 
         .secOneImg{
             flex-basis: 50%;
-            display:inline-block;
-
         }
 
         .section1{
@@ -442,131 +532,161 @@
             top: -25%;
         }
 
-        .images{
-            width: 40%;
-            height: 80%;
+        .pics1-2 img {
+            width: 160px;
+            height: 141%;
+            justify-content: space-around;
+            margin: 10px;
+        }
+
+        .pics1-1 img {
+            width: 160px;
+            height: 141%;
+            justify-content: space-around;
+            margin: 10px;
         }
     }
 
 
-    /*  900*/
-    @media only screen and (max-width: 900px) {
+
+    @media screen and (max-width: 800px){
+        /*section 1 to 320px*/
+        .section1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 0%;
+        }
+
+        .uls {
+            margin-top: 10px;
+        }
+
         .h1-font {
-            font-size: 2em;
+            margin-left: -15px;
         }
 
-        .h2-font{
-            font-size: 1.7em;
-        }
-
-        .p-font{
-            font-size: 1.4em;
-        }
-
-        .secOneImg{
-            flex-basis: 50%;
-            display:inline-block;
-            width: 70%;
-
-        }
-
-        #slider{
-            height: 300px;
-        }
-
-        .section1{
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            align-items: center;
-        }
-
-        .secOneBg2{
-            top: -15%;
-            left: 30%;
-        }
-
-        .secOneBg{
-            top: -71%;
-            right: -40%;
-        }
-
-        .images {
-            width: 50%;
-            height: 100%;
-            margin-right: 5px;
-        }
-
-        .h2-secTwo{
-            margin-top: -85px;
-        }
-
-        .secTwoBg4 {
-            display: none;
-            top: 180%;
-            width: 25%;
-            left: 67%;
-        }
-
-        .secTwoBg3 {
-            display: none;
-        }
-
-        .secTwoBg {
-            width: 77%;
-            top: 142%;
-            left: -52%;
-            transform: rotate(-106deg);
-        }
-        .secTwoBg2{
-            left: -25%;
-            top: 130%;
-            transform: rotate(127deg);
-            width: 50%;
-        }
-        .button{
-            width: 55%;
-            height: 95%;
-            font-size: 1.2em;
-        }
-
-        .section4{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .pics1-1 img{
-            width: 110px;
-            height: 110px;
-            justify-content: space-around;
-            margin: 5px;
-        }
-        .pics1-2 img{
-            width: 110px;
-            height: 110px;
-            justify-content: space-around;
-            margin-top: -25px;
-        }
-
-        .pics{
-            margin-top: 30px;
-        }
-
-    }
-
-
-    /*do 600*/
-    @media screen and (max-width: 600px) {
-        .section1{
-            flex-direction: column;
-            margin-top: -20%;
+        .p-font {
+            font-size: 1em;
+            margin-left: -15px;
         }
 
         .secOneBg {
             position: absolute;
-            top: -25%;
-            right: -101%;
+            top: -11%;
+            right: -83%;
+            transform: rotate(0deg);
+            width: 145%;
+        }
+
+        .secOneBg2 {
+            position: absolute;
+            top: -20%;
+            left: 30%;
+        }
+
+        .secOneImg {
+            flex-basis: 60%;
+        }
+
+        /*section 2 to 320px*/
+
+        .sectionTwo {
+            margin-top: 0px;
+        }
+
+        .secTwoBg {
+            width: 107%;
+            top: 96%;
+            left: -72%;
+        }
+
+        .secTwoBg2 {
+            width: 60%;
+            position: absolute;
+            top: 85%;
+            left: -33%;
+
+        }
+        .h2-secTwo{
+            margin-top: 30px;
+            margin-bottom: 45px;
+        }
+
+        /*slider*/
+
+        /* section3*/
+        .section3{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .sec3text{
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.8em;
+            color: var(--h2-color);
+        }
+
+
+        /*section4*/
+        .section4 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 0px;
+        }
+
+
+        .pics1-1 img {
+            width: 90px;
+            height: 90px;
+            justify-content: space-around;
+            margin: 5px;
+        }
+
+        .pics1-2 img {
+            width: 90px;
+            height: 90px;
+            justify-content: space-around;
+            margin-top: -25px;
+        }
+
+        .pics {
+            margin-top: 15px;
+        }
+
+
+    }
+
+
+
+    @media screen and (max-width: 650px) {
+
+        /*section 1 to 320px*/
+        .section1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: -20%;
+        }
+
+        .uls {
+            margin-top: 10px;
+        }
+
+        .h1-font {
+            margin-left: -15px;
+        }
+
+        .p-font {
+            font-size: 1em;
+            margin-left: -15px;
+        }
+
+        .secOneBg {
+            position: absolute;
+            top: 45%;
+            right: -110%;
             transform: rotate(53deg);
             width: 145%;
 
@@ -575,88 +695,311 @@
         .secOneBg2 {
             position: absolute;
             top: -8%;
-            left: 57%;
+            left: 65%;
         }
 
-        .secOneImg{
+        .secOneImg {
             width: 110%;
 
             margin-right: 8%;
         }
-        .p-font{
-            font-size: 1em;
-            margin-left: -15px;
-        }
-        .sectionTwo{
-            margin-top: -125px;
+
+        /*section 2 to 320px*/
+
+        .sectionTwo {
+            margin-top: -110px;
         }
 
-        .secTwoBg{
+        .secTwoBg {
+            width: 107%;
+            top: 113%;
+            left: -72%;
+        }
+
+        .secTwoBg2 {
+            width: 60%;
             position: absolute;
-            top: 140%;
-            left: -52%;
-        }
-
-        .secTwoBg2{
-            position: absolute;
-            top: 130%;
-            left: -38%;
+            top: 105%;
+            left: -30%;
 
         }
-        .secTwoBg3{
-            display: none;
+        .h2-secTwo{
+            margin-top: 0px;
         }
-        .secTwoBg4 {
-            display: none;
+
+        /*slider*/
+
+        #slider{
+            height: auto;
+            margin-top: 43%;
         }
-        .button{
-            width: 70%;
-            height: 60%;
+
+        #slider div{
+            height: 300px;
+            width: 100%;
         }
-        .uls{
-            margin-top: 10px;
+
+        .slider-right{
+            display: none !important;
         }
-        .section4{
+        .slider-left{
+            width: 110%;
+
+        }
+
+        #slider > img:first-child {
+            width: 35px;
+            height: 35px;
+            position: relative;
+            top: -22px;
+            left: -13px;
+        }
+
+        #slider > img:last-child {
+            width: 35px;
+            height: 35px;
+            position: relative;
+            top: -360px;
+            right: -192px;
+        }
+
+        .slider-left img{
+            object-fit: cover;
+            width: 100%;
+            height: 55%;
+            margin-top: -60%;
+        }
+
+        /* section3*/
+        .section3{
+            margin-top: -85%;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        .pics1-1 img{
+        .sec3text{
+            margin-top: -20%;
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.3em;
+            color: var(--h2-color);
+        }
+
+        .button{
+            height: 53%;
+            margin-top: -68%;
+            display: flex;
+            justify-content: center;
+            font-size: 1rem;
+            width: 98%;
+        }
+
+        /*section4*/
+        .section4 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: -50%;
+        }
+
+
+        .pics1-1 img {
             width: 90px;
             height: 90px;
             justify-content: space-around;
             margin: 5px;
         }
-        .pics1-2 img{
+
+        .pics1-2 img {
             width: 90px;
             height: 90px;
             justify-content: space-around;
             margin-top: -25px;
         }
 
-        #slider > img:first-child{
-            width: 35px;
-            height: 35px;
-            position: relative;
-            top: 172px;
-            left: 21px;
-        }
-        #slider > img:last-child{
-            width: 35px;
-            height: 35px;
-            position: relative;
-            top: 172px;
-            right: 21px;
+        .pics {
+            margin-top: 15px;
         }
 
-        .h1-font{
+
+    }
+
+
+    @media screen and (max-width: 350px){
+        #slider > img:last-child {
+            top: -380px;
+            right: -220px;
+        }
+
+        #slider >img:first-child{
+            top: -42px;
+            left: -13px;
+        }
+    }
+
+    /*do 350*/
+    @media screen and (max-width: 350px) {
+
+        /*section 1 to 320px*/
+        .section1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: -20%;
+        }
+
+        .uls {
+            margin-top: 10px;
+        }
+
+        .h1-font {
             margin-left: -15px;
         }
 
-        .pics{
+        .p-font {
+            font-size: 1em;
+            margin-left: -15px;
+        }
+
+        .secOneBg {
+            position: absolute;
+            top: 30%;
+            right: -110%;
+            transform: rotate(53deg);
+            width: 145%;
+
+        }
+
+        .secOneBg2 {
+            position: absolute;
+            top: -8%;
+            left: 65%;
+        }
+
+        .secOneImg {
+            width: 110%;
+
+            margin-right: 8%;
+        }
+
+        /*section 2 to 320px*/
+
+        .sectionTwo {
+            margin-top: -125px;
+        }
+
+        .secTwoBg {
+            width: 107%;
+            top: 113%;
+            left: -72%;
+        }
+
+        .secTwoBg2 {
+            width: 60%;
+            position: absolute;
+            top: 105%;
+            left: -30%;
+
+        }
+        .h2-secTwo{
+            margin-top: 0px;
+        }
+
+        /*slider*/
+
+        #slider{
+            height: auto;
+            margin-top: 23%;
+        }
+
+        #slider div{
+            height: 300px;
+            width: 100%;
+        }
+
+        .slider-right{
+            display: none !important;
+        }
+        .slider-left{
+            width: 110%;
+
+        }
+
+        #slider > img:first-child {
+            width: 35px;
+            height: 35px;
+            position: relative;
+            top: -17px;
+            left: -16px;
+        }
+
+        #slider > img:last-child {
+            width: 35px;
+            height: 35px;
+            position: relative;
+            top: -360px;
+            right: -155px;
+        }
+
+        .slider-left img{
+            object-fit: cover;
+            width: 100%;
+            height: 55%;
+            margin-top: -70%;
+        }
+
+        /* section3*/
+        .section3{
+            margin-top: -100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sec3text{
+            margin-top: -20%;
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.3em;
+            color: var(--h2-color);
+        }
+
+        .button{
+            height: 53%;
+            margin-top: -68%;
+            display: flex;
+            justify-content: center;
+            font-size: 1rem;
+            width: 98%;
+        }
+
+        /*section4*/
+        .section4 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: -65%;
+        }
+
+
+        .pics1-1 img {
+            width: 90px;
+            height: 90px;
+            justify-content: space-around;
+            margin: 5px;
+        }
+
+        .pics1-2 img {
+            width: 90px;
+            height: 90px;
+            justify-content: space-around;
+            margin-top: -25px;
+        }
+
+        .pics {
             margin-top: 15px;
         }
+
+
     }
 
 </style>
@@ -664,6 +1007,8 @@
 <div class="section1 contain">
     <img class="secOneBg2" src="images/orange-circle.svg">
     <img class="secOneBg" src="images/header-fluid-blue.svg">
+
+
     <div class="section1-1">
         <h3 class="h1-font">
             Online Courses
@@ -696,7 +1041,6 @@
 
 <div class=" sectionTwo contain">
     <img class="secTwoBg2" src="images/orange-circle.svg">
-
     <img class="secTwoBg" src="images/header-fluid-blue.svg">
 
 
@@ -704,20 +1048,20 @@
     <div class="h2-font h2-secTwo">
         <h3>Our Works</h3>
     </div>
-    <div id="slider">
-        <img class="prethodni shadow" onclick="changeImage('previous')" src="images/Picture2.png">
-        <img class="shadow images" style="margin-right: 5px;  height: 100%;" id="firstPart" src="" />
-        <img class="shadow images" style="margin-right: 5px;  height: 100%;" id="secondPart" src="" />
-        <img class="sljedeci shadow" src="images/Picture3.png" onclick="changeImage('next')">
-    </div>
-    <img class="secTwoBg3" src="images/fluid-bright-circle.svg">
-    <img class="secTwoBg4" src="images/orange-circle.svg">
 
+    <div id="slider">
+        <img class="shadow-1" src="images/Picture2.png" onclick="changeImage('previous')" >
+        <div>
+            <div class="slider-left shadow-1"><img id="firstPart" src="" /></div>
+            <div class="slider-right shadow-1"><img id="secondPart" src="" /></div>
+        </div>
+        <img class="shadow-1" src="images/Picture3.png" onclick="changeImage('next')">
+    </div>
 
 
     <div class="section3 contain" >
         <div style="height: 50%">
-            <h5 class="h2-font" style="margin-top: 50px; display: flex; justify-content: center">Want to see more:</h5>
+            <h5 class="sec3text">Want to see more:</h5>
         </div>
         <div style="height: 50%; margin-top: 5%; display: flex; justify-content: center">
             <button class="button">Schedule a demo</button>
@@ -760,27 +1104,39 @@
         "https://static.igre123.net/slike/235049-148875/mala-maca.jpg",  // 2
         "https://static.igre123.net/slike/205865-134729/mala-maca.jpg"   // 3
     ];
-
     changeImage("demo");
+
     function changeImage(par) {
+        if(window.innerWidth>768){
+            if (imgOne < (images.length - 2) && par == "next") {
 
-        if (imgOne < (images.length - 2) && par == "next") {
+                imgOne = imgTwo;
+                imgTwo = imgTwo + 1;
 
-            imgOne = imgTwo;
-            imgTwo = imgTwo + 1;
+            } else if (imgOne !== 0 && par == "previous") {
+                imgOne = imgOne - 1;
+                imgTwo = imgTwo - 1;
+            }
 
-        } else if (imgOne !== 0 && par == "previous") {
-            imgOne = imgOne - 1;
-            imgTwo = imgTwo - 1;
+            var imgOneSrc = images[imgOne];
+            var imgTwoSrc = images[imgTwo];
+
+            document.getElementById("firstPart").src=imgOneSrc;
+
+            document.getElementById("secondPart").src=imgTwoSrc;
+
+        }else{
+            if(imgOne < images.length-1 && par == "next"){
+
+                imgOne++;
+            }else if(imgOne !== 0 && par == "previous"){
+                imgOne--;
+            }
+            imgOneSrc = images[imgOne];
+            document.getElementById("firstPart").src=imgOneSrc;
         }
 
-        var imgOneSrc = images[imgOne];
-        var imgTwoSrc = images[imgTwo];
-
-        document.getElementById("firstPart").src=imgOneSrc;
-        document.getElementById("secondPart").src=imgTwoSrc;
     }
-
 
 </script>
 
