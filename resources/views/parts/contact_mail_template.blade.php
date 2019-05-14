@@ -1,9 +1,11 @@
 
 <!-- Contact person info -->
 <div>
-    <p>Name: {{$name}}</p>
-    <p>Lastname: {{$lastname}}</p>
-    <p>Email: {{$email}}</p>
-    <p>Subject: {{$subject}}</p>
-    <p>Message: {{$message}}</p>
+
+    <p>Name: {{$data['name']}}</p>
+    <p>Lastname: {{$data['lastname']}}</p>
+    <p>Email: {{$data['email']}}</p>
+    <p>Subject: {{$data['subject']}}</p>
+    <p>Message: {{$data['message']}}</p>
+
 </div>

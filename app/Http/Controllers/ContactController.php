@@ -53,22 +53,31 @@ class ContactController extends Controller
         ]);
 
         // get corresponding mail template
-        $template = $this->mailTemplateCreator->createTemplateFromView('parts.contact_mail_template', [
-            'title' => $request->input('title'),
-            'name' => $request->input('name'),
-            'lastname' => $request->input('lastname'),
-            'email' => $request->input('email'),
-            'subject' => $request->input('subject'),
-            'message' => $request->input('message')
-        ]);
+//        $template = $this->mailTemplateCreator->createTemplateFromView('parts.contact_mail_template', [
+//            //'title' => $request->input('title'),
+//            'name' => $request->input('name'),
+//            'lastname' => $request->input('lastname'),
+//            'email' => $request->input('email'),
+//            'subject' => $request->input('subject'),
+//            'message' => $request->input('message')
+//        ]);
 
         // send mail to Rizah
         // $this->mailer->sendEmail('New contact message from website', env('ADMIN_EMAIL'), $template);
 
         // TODO push mail to queue
         //Queue::push(new SendEmail(new MailToSend($template)));
-        $user = User::where('id', 1)->first();
-        Mail::to($user)->queue(new MailToSend($template));
+        // create contact object for mailing queue
+        // $user = User::where('id', 1)->first();
+        $contact = new Contact();
+        $contact->name = $request->input('name');
+        $contact->lastname = $request->input('lastname');
+        $contact->email = $request->input('email');
+        $contact->subject = $request->input('subject');
+        $contact->message = $request->input('message');
+        $contact->save();
+
+        Mail::to(['rizah@smartlab.ba'])->queue(new MailToSend($contact));
 
         // return message
         return back()->with('message', 'Contact message successfully sent.');
