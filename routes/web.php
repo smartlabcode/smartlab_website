@@ -58,6 +58,7 @@ Route::get('pages/courses', 'PagesController@showCoursesPage');
 Route::get('pages/animations', 'PagesController@showAnimationsPage');
 Route::get('pages/programming', 'PagesController@showProgrammingPage');
 Route::get('pages/moodle', 'PagesController@showMoodlePage');
+Route::get('pages/xlf', 'PagesController@showXlfPage');
 
 // route where contact info is sent
 Route::post('contact', 'ContactController@handleContactInfo');

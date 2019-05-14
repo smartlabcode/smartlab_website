@@ -42,7 +42,7 @@ class ContactController extends Controller
             'name' => 'required|max:45',
             'lastname' => 'required|max:45',
             'email' => 'required|max:45|',
-            'title' => 'in:Mr.,Mrs.',
+            'subject' => 'required|max:255',
             'message' => 'required'
         ]);
 
@@ -52,6 +52,7 @@ class ContactController extends Controller
             'name' => $request->input('name'),
             'lastname' => $request->input('lastname'),
             'email' => $request->input('email'),
+            'subject' => $request->input('subject'),
             'message' => $request->input('message')
         ]);
 

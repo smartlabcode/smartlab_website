@@ -110,4 +110,23 @@ class PagesController extends Controller
 
     }
 
+    /**
+     * Display XLF page
+     */
+    public function showXlfPage() {
+
+        try {
+
+            return view('pages.xliff');
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', 'PagesController - showXlfPage: ' . $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+
+    }
+
 }
