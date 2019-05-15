@@ -173,7 +173,6 @@
 
     .button{
         cursor: pointer;
-        border: none;
         border-radius: 35px;
         width: 260px;
         height: 70px;
@@ -365,7 +364,6 @@
 
     }
 
-
     @media screen and (max-width: 1900px) {
 
 
@@ -407,8 +405,6 @@
             left: 50%;
         }
     }
-
-    /*1400*/
 
     @media screen and (max-width: 1450px){
 
@@ -487,8 +483,6 @@
             left: -458px;
         }
     }
-
-    /*110*/
 
     @media screen and (max-width: 1100px) {
 
@@ -571,15 +565,13 @@
         }
     }
 
-
-
     @media screen and (max-width: 800px){
         /*section 1 to 320px*/
         .section1 {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            margin-top: 0%;
+            margin-top: 0;
         }
 
         .uls {
@@ -616,7 +608,7 @@
         /*section 2 to 320px*/
 
         .sectionTwo {
-            margin-top: 0px;
+            margin-top: 0;
         }
 
         .secTwoBg {
@@ -679,11 +671,7 @@
         .pics {
             margin-top: 15px;
         }
-
-
     }
-
-
 
     @media screen and (max-width: 650px) {
 
@@ -748,7 +736,7 @@
             left: -31%;
         }
         .h2-secTwo{
-            margin-top: 0px;
+            margin-top: 0;
         }
 
         /*slider*/
@@ -851,7 +839,6 @@
 
     }
 
-
     @media screen and (max-width: 450px){
         #slider > img:last-child {
             top: -380px;
@@ -944,7 +931,7 @@
 
 
     }
-    /*do 350*/
+
     @media screen and (max-width: 350px) {
 
         /*section 1 to 320px*/
@@ -1002,7 +989,7 @@
         .secTwoBg2 {
             width: 60%;
             position: absolute;
-            top: 140%;
+            top: 100%;
             left: -30%;
         }
         .h2-secTwo{
