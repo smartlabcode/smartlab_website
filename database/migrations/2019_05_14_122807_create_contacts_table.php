@@ -17,6 +17,7 @@ class CreateContactsTable extends Migration
             $table->bigIncrements('id');
             $table->string("name", 100);
             $table->string("lastname", 100);
+            $table->string('file_path', 255)->nullable();
             $table->string("email", 100);
             $table->string("subject", 100);
             $table->text("message");

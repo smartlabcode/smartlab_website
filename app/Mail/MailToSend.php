@@ -42,10 +42,20 @@ class MailToSend extends Mailable
             'message' => $info->message
         ];
 
-        //return $this->view($this->template);
-        return $this->from('noreply@smartlab.ba','No Reply')
-                    ->view("parts.contact_mail_template", ["data" => $d ])
-                    ->subject('New contact mail');
+
+        if (!is_null($info->file_path)) {
+            return $this->from('noreply@smartlab.ba','No Reply')
+                ->view("parts.contact_mail_template", ["data" => $d ])
+                ->attachFromStorage($info->file_path)
+                ->subject('New contact mail');
+        } else {
+            return $this->from('noreply@smartlab.ba','No Reply')
+                ->view("parts.contact_mail_template", ["data" => $d ])
+                ->subject('New contact mail');
         }
+
+    }
+
+
 
 }

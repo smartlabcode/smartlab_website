@@ -78,7 +78,7 @@ class MailerService
      *
      * @param $contactType
      */
-    private function zip($folderName) {
+    public function zip($folderName) {
 
         try {
             // create zip file and store attachments in it
