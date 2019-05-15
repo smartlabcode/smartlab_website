@@ -380,6 +380,12 @@
             height: 450px;
             width: 80%;
         }
+
+        .sec3text{
+            font-family: "Montserrat", sans-serif;
+            font-size: 2.2em;
+            color: var(--h2-color);
+        }
     }
 
     /*1400*/
@@ -406,9 +412,9 @@
         }
 
         .button{
-            width: 166px;
-            height: 45px;
-            font-size: 1.2em;
+            width: 230px;
+            height: 70px;
+            font-size: 1.4em;
             outline: hidden;
         }
 
@@ -419,9 +425,7 @@
             align-items: center;
         }
 
-        .button{
-            width: 200px;
-        }
+
 
         .secOneBg {
             position: absolute;
@@ -573,7 +577,7 @@
 
         .secOneBg {
             position: absolute;
-            top: -11%;
+            top: -30%;
             right: -83%;
             transform: rotate(0deg);
             width: 145%;
@@ -620,6 +624,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-top: -3%;
         }
         .sec3text{
             font-family: "Montserrat", sans-serif;
@@ -633,7 +638,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 0px;
+            margin-top: -10%;
         }
 
 
@@ -712,16 +717,15 @@
 
         .secTwoBg {
             width: 107%;
-            top: 113%;
+            top: 110%;
             left: -72%;
         }
 
         .secTwoBg2 {
             width: 60%;
             position: absolute;
-            top: 105%;
-            left: -30%;
-
+            top: 95%;
+            left: -31%;
         }
         .h2-secTwo{
             margin-top: 0px;
@@ -825,7 +829,7 @@
     }
 
 
-    @media screen and (max-width: 350px){
+    @media screen and (max-width: 450px){
         #slider > img:last-child {
             top: -380px;
             right: -220px;
@@ -835,8 +839,47 @@
             top: -42px;
             left: -13px;
         }
+        .secTwoBg {
+            width: 107%;
+            top: 965px;
+            left: -72%;
+        }
+
+        .secTwoBg2 {
+            width: 60%;
+            position: absolute;
+            top: 140%;
+            left: -30%;
+        }
     }
 
+    @media screen and (max-width: 376px){
+        #slider >img:last-child{
+            top: -365px;
+            right: -186px;            }
+        #slider >img:first-child{
+            top: -25px;
+        }
+
+        #slider{
+            margin-top: 20%;
+        }
+        .section4{
+            margin-top: -70%;
+        }
+        .secTwoBg {
+            width: 107%;
+            top: 965px;
+            left: -72%;
+        }
+
+        .secTwoBg2 {
+            width: 60%;
+            position: absolute;
+            top: 140%;
+            left: -30%;
+        }
+    }
     /*do 350*/
     @media screen and (max-width: 350px) {
 
@@ -863,7 +906,7 @@
 
         .secOneBg {
             position: absolute;
-            top: 30%;
+            top: -30%;
             right: -110%;
             transform: rotate(53deg);
             width: 145%;
@@ -878,8 +921,6 @@
 
         .secOneImg {
             width: 110%;
-
-            margin-right: 8%;
         }
 
         /*section 2 to 320px*/
@@ -890,21 +931,19 @@
 
         .secTwoBg {
             width: 107%;
-            top: 113%;
+            top: 965px;
             left: -72%;
         }
 
         .secTwoBg2 {
             width: 60%;
             position: absolute;
-            top: 105%;
+            top: 140%;
             left: -30%;
-
         }
         .h2-secTwo{
-            margin-top: 0px;
+            margin-top: 1px;
         }
-
         /*slider*/
 
         #slider{
@@ -977,7 +1016,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: -65%;
+            margin-top: -60%;
         }
 
 
@@ -992,7 +1031,7 @@
             width: 90px;
             height: 90px;
             justify-content: space-around;
-            margin-top: -25px;
+            margin: 5px;
         }
 
         .pics {
@@ -1142,4 +1181,6 @@
 
 </body>
 </html>
+
+
 
