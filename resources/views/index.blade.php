@@ -31,7 +31,7 @@
   }
 
   .contain {
-    max-width: 1200px;
+    max-width: 1600px;
     width: 90%;
     margin: 0 auto;
   }
@@ -516,7 +516,7 @@
     background-color: var(--h2-color);
     opacity: 0.5;
   }
-
+  
   .indicator-opacity {
     opacity: 1 !important;
   }
@@ -651,13 +651,34 @@
   }
 
   .blog img {
-    position: relative;
-    left: -25%;
-    top: -10%;
-    object-fit: contain;
-    object-position: 0% 0%;
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    top: -20px;
+    right: 0;
+    z-index: -5;
+    object-fit: cover;
+    filter:grayscale(100%);
   }
-
+  .img-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+  .img-container-overlay{
+    height: 100%;
+    width: 100%;
+    position: aboslute;
+  }
+  .img-container-overlay-blue{
+    background-color: rgba(0,0,255, 0.6);
+  }
+  .img-container-overlay-orange{
+    background-color:rgba(255,140,0, 0.7);
+  }
   .blog span {
     opacity: 0.5;
   }
@@ -671,13 +692,7 @@
     width: 101%;
   }
 
-  .img-container {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    vertical-align: middle;
-    overflow: hidden;
-  }
+  
 
 
 
@@ -1951,7 +1966,8 @@
   <div class="blog-container">
     <div class="blog" data-aos-anchor=".blog-section" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
       <div class="img-container">
-        <img src="images/img/blog-post-1.png" alt="blog post">
+      <div class="img-container-overlay img-container-overlay-blue"></div>
+        <img src="images/blog/augmented-reality-investment-e1473173317384.jpg" alt="blog post">
         <svg class="wave" viewBox="0 0 500 500">
           <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
         </svg>
@@ -1966,6 +1982,7 @@
     </div>
     <div class="blog" data-aos-anchor=".blog-section" data-aos="zoom-in-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
       <div class="img-container">
+        <div class="img-container-overlay img-container-overlay-orange"></div>
         <img src="images/img/blog-post-2.png" alt="blog post">
         <svg class="wave" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
           <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
@@ -1978,8 +1995,9 @@
       </div>
     </div>
     <div class="blog" data-aos-anchor=".blog-section" data-aos="zoom-in-up" data-aos-offset="300" data-aos-delay="150" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
-      <div class="img-container">
-        <img src="images/img/blog-post-1.png" alt="blog post">
+      <div class="img-container ">
+      <div class="img-container-overlay img-container-overlay-blue"></div>
+        <img src="images/blog/webinar-learning-experience-1170x769.jpg" alt="blog post">
         <svg class="wave" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
           <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
         </svg>
@@ -1992,7 +2010,8 @@
     </div>
     <div class="blog" data-aos-anchor=".blog-section" data-aos="zoom-in-up" data-aos-offset="400" data-aos-delay="200" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
       <div class="img-container">
-        <img src="images/img/blog-post-2.png" alt="blog post">
+      <div class="img-container-overlay img-container-overlay-orange"></div>
+        <img src="images/blog/androidpit-youtube-hero-2-1-585x385.jpg" alt="blog post">
         <svg class="wave" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
           <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
         </svg>
@@ -2017,26 +2036,26 @@
       <div class="contact-form-group">
         <div>
           <label for="name">*Name</label>
-          <input type="text" name="name" />
+          <input type="text" name="name" id="name"/>
         </div>
         <div>
           <label for="surnanme">*Surname</label>
-          <input type="text" name="surname" />
+          <input type="text" name="surname" id="surname"/>
         </div>
       </div>
       <div class="contact-form-group">
         <div>
           <label for="subject">*Subject</label>
-          <input type="text" name="subject" />
+          <input type="text" name="subject" id="subject" />
         </div>
         <div>
           <label for="email">*Email</label>
-          <input type="email" name="email" />
+          <input type="email" name="email" id="email"/>
         </div>
       </div>
       <div class="contact-form-group textarea">
         <label for="message">*Message</label>
-        <textarea name="message" rows="7"></textarea>
+        <textarea name="message" rows="7" id="message"></textarea>
       </div>
       <input class="button submit" type="submit" value="Send" />
     </form>
@@ -2112,7 +2131,10 @@
     let partnersName = document.querySelector("#partners-name");
     let partnersCompany = document.querySelector("#partners-company");
     let indicators = document.querySelectorAll(".indicator");
-
+   
+    
+      
+    
 
     let partners = [{
       text: "SmartLab team created a fantastic web based quiz for Afrika Presents with a downloadable badge. Incredible attention to details. Better than anticipated and they had a true understanding and delivered just what we were looking for. We look forward to working together again in future.",
@@ -2142,37 +2164,35 @@
     }];
     console.log(partnersText, partnersImage, partnersName, partnersCompany, indicators, partners);
     let j = 1;
-
+    
     function partnersChange(partners) {
       partnersText.innerText = partners.text;
       partnersImage.src = partners.image;
       partnersName.innerText = partners.name;
       partnersCompany.innerText = partners.company;
     }
+    for(let i=0; i<indicators.length; i++){
+      indicators[i].addEventListener("click", function(){
+        for(let m=0;m<indicators.length;m++){
+          indicators[m].classList.remove("indicator-opacity");
+        }
+        j = i;
+        indicators[i].classList.add("indicator-opacity");
+        partnersChange(partners[j]);
+      })
+    }
     setInterval(function() {
-
-
-
-
-
-      console.log(indicators.length, j);
-
-
+      console.log(j, indicators.length);
+      if(j == indicators.length){
+        indicators[j-1].classList.remove("indicator-opacity");
+        j=0;
+      }
       indicators[j].classList.add("indicator-opacity");
-      if (j == 0) {
-        indicators[indicators.length - 1].classList.remove("indicator-opacity");
+      if(j>0){
+        indicators[j-1].classList.remove("indicator-opacity");
       }
-      if (j > 0) {
-        indicators[j - 1].classList.remove("indicator-opacity");
-      }
-
-      j++;
-      if (j == indicators.length) {
-        j = 0;
-      }
-
-
       partnersChange(partners[j]);
+      j++;
     }, 5000)
 
   });
