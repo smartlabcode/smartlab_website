@@ -82,7 +82,7 @@
     }
 
     .contain{
-        width: 80%;
+        max-width: 1200px;
         margin: 0 auto;
     }
 
@@ -294,8 +294,9 @@
         }
 
         .secOneBg{
-            width: 80%;
-            right: -30%;
+            right: -75%;
+            top: -10%;
+            width: 125%;
         }
 
         .h1-font{
@@ -353,6 +354,15 @@
             width: 320px;
             height: 80px;
         }
+        .pics1-2 img{
+            margin: 5px;
+            width: 230px;
+        }
+        .pics1-1 img{
+            width: 230px;
+            margin: 5px;
+        }
+
     }
 
 
@@ -385,6 +395,16 @@
             font-family: "Montserrat", sans-serif;
             font-size: 2.2em;
             color: var(--h2-color);
+        }
+        .secOneBg{
+            width: 100%;
+            right: -70%;
+            top: -10%;
+        }
+        .secOneBg2{
+            width: 500px;
+            top: -23%;
+            left: 50%;
         }
     }
 
@@ -748,6 +768,9 @@
         }
         .slider-left{
             width: 110%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
         }
 
@@ -755,23 +778,23 @@
             width: 35px;
             height: 35px;
             position: relative;
-            top: -22px;
-            left: -13px;
+            top: -222px;
+            left: 45px;
         }
 
         #slider > img:last-child {
             width: 35px;
             height: 35px;
             position: relative;
-            top: -360px;
-            right: -192px;
+            top: -560px;
+            right: -345px;
         }
 
         .slider-left img{
             object-fit: cover;
-            width: 100%;
-            height: 55%;
-            margin-top: -60%;
+            width: 70%;
+            height: 70%;
+            margin-top: -82%;
         }
 
         /* section3*/
@@ -851,18 +874,47 @@
             top: 140%;
             left: -30%;
         }
+        #slider >img:last-child{
+            top: -485px;
+            right: -288px;
+        }
+        #slider >img:first-child{
+            top: -145px;
+        }
+        .slider-left{
+            margin-top: -10%;
+            width: 300px;
+            height: 220px;
+        }
+
+        .section3{
+            margin-top: -90%;
+        }
+        .section4{
+            margin-top: -70%;
+        }
+        .slider-left img{
+            object-fit: cover;
+            width: 100%;
+            height: 55%;
+            margin-top: -70%;
+        }
     }
 
     @media screen and (max-width: 376px){
         #slider >img:last-child{
-            top: -365px;
-            right: -186px;            }
+            top: -425px;
+            right: -250px;
+        }
         #slider >img:first-child{
-            top: -25px;
+            top: -88px;
         }
 
         #slider{
             margin-top: 20%;
+        }
+        .section3{
+            margin-top: -90%;
         }
         .section4{
             margin-top: -70%;
@@ -872,13 +924,25 @@
             top: 965px;
             left: -72%;
         }
-
+        .slider-left img{
+            object-fit: cover;
+            width: 100%;
+            height: 55%;
+            margin-top: -60%;
+        }
         .secTwoBg2 {
             width: 60%;
             position: absolute;
             top: 140%;
             left: -30%;
         }
+        .slider-left{
+            margin-top: -10%;
+            width: 300px;
+            height: 220px;
+        }
+
+
     }
     /*do 350*/
     @media screen and (max-width: 350px) {
@@ -960,7 +1024,8 @@
             display: none !important;
         }
         .slider-left{
-            width: 110%;
+            width: 300px;
+            height: 200px;
 
         }
 
@@ -968,7 +1033,7 @@
             width: 35px;
             height: 35px;
             position: relative;
-            top: -17px;
+            top: -80px;
             left: -16px;
         }
 
@@ -976,8 +1041,9 @@
             width: 35px;
             height: 35px;
             position: relative;
-            top: -360px;
-            right: -155px;
+            top: -418px;
+            right: -208px;
+
         }
 
         .slider-left img{
@@ -989,7 +1055,7 @@
 
         /* section3*/
         .section3{
-            margin-top: -100%;
+            margin-top: -90%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1113,7 +1179,7 @@
 <div class="section4 contain">
     <div class="sec4text">
         <h1 style="text-align: center" class="h1-font">Tools and <br>Technologies</h1>
-        <p style="margin-top: 50px; text-align: center; margin-left: 13px" class="p-font">We design custom eLearning training that <br>aligns with your strategic corporate objectives<br> using a variety of tools and technologies.</p>
+        <p style="margin-top: 50px; text-align: center; margin-left: 13px" class="p-font">We design custom eLearning <br>training that aligns with your<br> strategic corporate objectives <br>using a variety of tools and<br> technologies.</p>
     </div>
     <div class="pics">
         <div class="pics1-1">
@@ -1181,6 +1247,4 @@
 
 </body>
 </html>
-
-
 
