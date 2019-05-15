@@ -51,17 +51,17 @@ class MailerService
 
             // check if attachment will be set
             if ($attachment) {
-                // zip all files from temp_files folder
+                // zip all files from files folder
                 $this->zip($folderName);
 
                 // add attachment to the email
-                $mail->addAttachment('temp_files/' . $folderName .  '/contact.zip', 'Contact_attachment.zip');
+                $mail->addAttachment('files/' . $folderName .  '/contact.zip', 'Contact_attachment.zip');
             }
 
             // send email
             $mail->send();
 
-            // if mail is sent delete all from temp_files
+            // if mail is sent delete all from files
             if ($attachment) {
                 $this->delete($folderName);
             }
@@ -83,10 +83,10 @@ class MailerService
         try {
             // create zip file and store attachments in it
             $zip = new \ZipArchive();
-            $zip->open('temp_files/' . $folderName . '/contact.zip', \ZipArchive::CREATE);
+            $zip->open('storage/app/' . $folderName . '/contact.zip', \ZipArchive::CREATE);
 
             // loop through specified folder and add all the files to the zip
-            foreach (glob("temp_files/" . $folderName . "/*") as $file) {
+            foreach (glob("files/" . $folderName . "/*") as $file) {
                 if (is_file($file)) {
                     $zip->addFile($file);
                 }
@@ -110,12 +110,12 @@ class MailerService
 
         try {
             // delete all uploaded files
-            foreach (glob("temp_files/" . $folderName . "/*") as $file) {
+            foreach (glob("files/" . $folderName . "/*") as $file) {
                 unlink($file);
             }
 
             // delete folder
-            rmdir("temp_files/" . $folderName);
+            rmdir("files/" . $folderName);
 
         } catch (\Exception $e) {
             // add log

@@ -42,11 +42,11 @@ class MailToSend extends Mailable
             'message' => $info->message
         ];
 
-
         if (!is_null($info->file_path)) {
+            $attachment = $info->file_path;  // storage_path() . '/app' .
             return $this->from('noreply@smartlab.ba','No Reply')
                 ->view("parts.contact_mail_template", ["data" => $d ])
-                ->attachFromStorage($info->file_path)
+                ->attachFromStorage($attachment)
                 ->subject('New contact mail');
         } else {
             return $this->from('noreply@smartlab.ba','No Reply')

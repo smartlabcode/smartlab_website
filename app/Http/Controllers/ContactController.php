@@ -14,6 +14,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Queue;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\View;
 
 class ContactController extends Controller
@@ -104,12 +105,14 @@ class ContactController extends Controller
             $folderName = rand(1,10000);
 
             // make folder where contact files will temporary be located
-            mkdir("temp_files/" . $folderName, 0777, true);
+            //mkdir("storage/app/files/" . $folderName, 0777, true);
+            Storage::makeDirectory("/" .$folderName);
 
-            $path = "/temp_files/" . $folderName;
+
+            $path = storage_path()  ."/app/" . $folderName;
             $this->uploader->uploadFiles($_FILES, $path);
             // $attachment = true;
-            $contact->file_path = $path . '/contact.zip';
+            $contact->file_path = "/" . $folderName . '/contact.zip';
 
             // create zip
             $this->mailer->zip($folderName);
