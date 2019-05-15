@@ -760,10 +760,19 @@
     left: -6%;
     background-image: url(images/img/footer-blue-bg.svg);
     background-repeat: no-repeat;
-    background-size: 215vw;
+    background-size: 234vw;
     background-position-x: 40%;
-    background-position-y: 35%;
+    background-position-y: 40%;
     position: relative;
+    margin-top: 150px;
+    padding-top: 80px;
+  }
+
+  .contact-form-container p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.3em;
+    text-align: center;
+    padding-bottom: 50px;
   }
 
   .button-overlay {
@@ -1609,10 +1618,11 @@
   <div class="section-two-hero">
     <div>
       <h2 class="h1-font">What We Do?</h2>
-      <h3 class="h2-font">
-        SmartLab offers different services with focus on the e-Learning
-        industry.
-      </h3>
+      <p class="p-font">
+        In our everyday work, everything is related to "pure creativity, Articulate design and development, Moodle LMS, custom eLearning
+        solutions and much more". We're ready to take on any challenge! Using our highly collaborative design approach, we'll build your
+        custom solution from the ground up.
+      </p>
       <button id="pinned-element1" class="button submit button-orange">Explore</button>
     </div>
   </div>
@@ -1861,22 +1871,35 @@
     <h2 class="text-center h1-font">Partners</h2>
     <div class="flex">
       <div class="partners-images">
-        <img src="https://via.placeholder.com/200" alt="partner logo" />
-        <img src="https://via.placeholder.com/200" alt="partner logo" />
-        <img src="https://via.placeholder.com/200" alt="partner logo" />
-        <img src="https://via.placeholder.com/200" alt="partner logo" />
-        <img src="https://via.placeholder.com/200" alt="partner logo" />
-        <img src="https://via.placeholder.com/200" alt="partner logo" />
+        <img src="../images/partners-logo/TheTrainingTerminal-2.png" alt="partner logo" />
+        <img src="../images/partners-logo/FKC-2.png" alt="partner logo" />
+        <img src="../images/partners-logo/leanscape-2.png" alt="partner logo" />
+        <img src="../images/partners-logo/WELLS-PARK-2.png" alt="partner logo" />
+        <img src="../images/partners-logo/loop-TV-2.png" alt="partner logo" />
+        <img src="../images/partners-logo/zomppp-2.png" alt="partner logo" />
+        <img src="../images/partners-logo/UAP-QMS-2.png" alt="partner logo" />
+        <img src="../images/partners-logo/tottem-2.png" alt="partner logo" />
+        <img src="../images/partners-logo/safetycourses4u-2.png" alt="partner logo" />
+        <img src="../images/partners-logo/dimenzija_plus-2.png" alt="partner logo" />
+        <img src="../images/partners-logo/TVSA-2.png" alt="partner logo" />
+        <img src="../images/partners-logo/eloomi-4.png" alt="partner logo" />
+        <img src="../images/partners-logo/FIN-2.png" alt="partner logo" />
+        <img src="../images/partners-logo/maisonprive-2.png" alt="partner logo" />
+        <img src="../images/partners-logo/biramoporavak-2.png" alt="partner logo" />
+        <img src="../images/partners-logo/BDfD-2.png" alt="partner logo" />
       </div>
       <div class="partners-text">
         <div>
           <p class="p-font">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rutrum rhoncus massa. Fusce dapibus accumsan volutpat. Pellentesque lobortis ex nibh, ac mattis sapien varius semper. Curabitur congue dui non libero congue, non varius dui iaculis. Nam ut accumsan urna. Curabitur eget mattis tellus, ut euismod turpis.
+            “SmartLab team created a fantastic web based quiz for Afrika Presents with
+            a downloadable badge. Incredible attention to details. Better than
+            anticipated and they had a true understanding and delivered just what we
+            were looking for. We look forward to working together again in future.”
           </p>
           <div>
-            <img src="https://via.placeholder.com/100" alt="partner image" />
-            <p class="h2-font">Joanna Kowalska</p>
-            <p class="p-font">Nike co.</p>
+            <img src="../images/partners-images/Mara.png" alt="partner image" />
+            <p class="h2-font">Mara Menzies</p>
+            <p class="p-font">Afrika Presents Ltd</p>
           </div>
 
         </div>
@@ -1950,6 +1973,8 @@
   <img class="contact-orange-circle-r" src="images/img/orange-circle.svg" alt="background orange circle" />
   <img class="contact-orange-circle-l" src="images/img/orange-circle.svg" alt="background orange circle" />
   <div class="contact-form-container">
+    <p>If our web site didn’t answer to all your questions, feel free to contact us with any specific question,
+      project proposal or just a introduction meeting request.</p>
     <h2 class="text-center h1-font">Contact</h2>
     <form class="contact-form">
       <div class="contact-form-group">
@@ -1980,11 +2005,7 @@
     </form>
   </div>
 </section>
-<footer class="footer">
-  <div class="map">
-    <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5754.153583595637!2d18.389259!3d43.854237!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd3b7b0136b05bfe5!2sSmartLab!5e0!3m2!1sen!2sus!4v1557213572662!5m2!1sen!2sus" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
-  </div>
-</footer>
+
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function(event) {
