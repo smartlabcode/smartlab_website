@@ -488,8 +488,8 @@
 
     .dashed-line {
         position: absolute;
-        top: 27%;
-        right: -56%;
+        top: 30%;
+        right: -83%;
         width: 60%;
     }
 
