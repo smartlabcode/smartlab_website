@@ -500,6 +500,27 @@
     align-items: baseline;
   }
 
+  #indicators {
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    justify-content: space-around;
+    margin-top: 50px;
+  }
+
+  #indicators span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--h2-color);
+    opacity: 0.5;
+  }
+
+  .indicator-opacity {
+    opacity: 1 !important;
+  }
+
   .partners-text {
     flex-basis: 60%;
     background-image: url(images/img/quotation-marks.svg);
@@ -507,6 +528,9 @@
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin-top: 15%;
+
   }
 
   .partners-text div {
@@ -526,8 +550,11 @@
   }
 
   .partners-text img {
-    margin-top: 35px;
+    margin-top: 50px;
     border-radius: 50%;
+    object-fit: contain;
+    width: 85px;
+    height: 85px;
   }
 
   .partners-images img {
@@ -850,6 +877,10 @@
     .team-orange-circle-bottom {
       left: -32vw;
     }
+
+    .contact-section {
+      background-position-y: 36%;
+    }
   }
 
   @media screen and (max-width: 1500px) {
@@ -859,7 +890,7 @@
 
     .contact-section {
       background-size: 230vw;
-      background-position-y: 40%;
+      background-position-y: 47%;
     }
   }
 
@@ -983,7 +1014,7 @@
     }
 
     .contact-section {
-      background-position-y: 40%;
+      background-position-y: 48%;
       background-size: 270vw;
     }
   }
@@ -1091,6 +1122,16 @@
     }
 
     .section-two-bot-item img {}
+  }
+
+  @media screen and (max-width: 776px) {
+    .contact-section {
+      background-size: 376vw;
+    }
+
+    .contact-form-container p {
+      font-size: 1em;
+    }
   }
 
   @media screen and (max-width: 600px) {
@@ -1356,7 +1397,7 @@
     }
 
     .contact-section {
-      background-size: 630vw;
+      background-size: 790vw;
       background-position-y: 45%;
     }
 
@@ -1381,11 +1422,7 @@
     }
   }
 
-  @media screen and (max-width: 360px) {
-    .contact-section {
-      background-size: 645vw;
-    }
-  }
+
 
   @media screen and (max-width: 970px) {
     .button-overlay {
@@ -1871,37 +1908,37 @@
     <h2 class="text-center h1-font">Partners</h2>
     <div class="flex">
       <div class="partners-images">
-        <img src="../images/partners-logo/TheTrainingTerminal-2.png" alt="partner logo" />
-        <img src="../images/partners-logo/FKC-2.png" alt="partner logo" />
-        <img src="../images/partners-logo/leanscape-2.png" alt="partner logo" />
-        <img src="../images/partners-logo/WELLS-PARK-2.png" alt="partner logo" />
-        <img src="../images/partners-logo/loop-TV-2.png" alt="partner logo" />
-        <img src="../images/partners-logo/zomppp-2.png" alt="partner logo" />
-        <img src="../images/partners-logo/UAP-QMS-2.png" alt="partner logo" />
-        <img src="../images/partners-logo/tottem-2.png" alt="partner logo" />
-        <img src="../images/partners-logo/safetycourses4u-2.png" alt="partner logo" />
-        <img src="../images/partners-logo/dimenzija_plus-2.png" alt="partner logo" />
-        <img src="../images/partners-logo/TVSA-2.png" alt="partner logo" />
-        <img src="../images/partners-logo/eloomi-4.png" alt="partner logo" />
-        <img src="../images/partners-logo/FIN-2.png" alt="partner logo" />
-        <img src="../images/partners-logo/maisonprive-2.png" alt="partner logo" />
-        <img src="../images/partners-logo/biramoporavak-2.png" alt="partner logo" />
-        <img src="../images/partners-logo/BDfD-2.png" alt="partner logo" />
+        <img src="../images/partners-logo/TheTrainingTerminal-2.png" alt="TrainingTerminal logo" />
+        <img src="../images/partners-logo/FKC-2.png" alt="Ficher, Knoblauch & co logo" />
+        <img src="../images/partners-logo/leanscape-2.png" alt="leanscape logo" />
+        <img src="../images/partners-logo/WELLS-PARK-2.png" alt="wells park communications logo" />
+        <img src="../images/partners-logo/loop-TV-2.png" alt="loop tv logo" />
+        <img src="../images/partners-logo/zomppp-2.png" alt="zomppp logo" />
+        <img src="../images/partners-logo/UAP-QMS-2.png" alt="uap managment system logo" />
+        <img src="../images/partners-logo/tottem-2.png" alt="totem learning logo" />
+        <img src="../images/partners-logo/safetycourses4u-2.png" alt="safety courses for you logo" />
+        <img src="../images/partners-logo/dimenzija_plus-2.png" alt="dimenzija plus logo" />
+        <img src="../images/partners-logo/TVSA-2.png" alt="televizija sarajevo logo" />
+        <img src="../images/partners-logo/eloomi-4.png" alt="eloomi logo" />
+        <img src="../images/partners-logo/FIN-2.png" alt="fakultet islamskih nauka logo" />
+        <img src="../images/partners-logo/maisonprive-2.png" alt="maison prive logo" />
+        <img src="../images/partners-logo/biramoporavak-2.png" alt="biramo oporavak logo" />
+        <img src="../images/partners-logo/BDfD-2.png" alt="bosnian doctors for disabled logo" />
       </div>
       <div class="partners-text">
         <div>
-          <p class="p-font">
+          <p class="p-font" id="partners-text">
             “SmartLab team created a fantastic web based quiz for Afrika Presents with
             a downloadable badge. Incredible attention to details. Better than
             anticipated and they had a true understanding and delivered just what we
             were looking for. We look forward to working together again in future.”
           </p>
           <div>
-            <img src="../images/partners-images/Mara.png" alt="partner image" />
-            <p class="h2-font">Mara Menzies</p>
-            <p class="p-font">Afrika Presents Ltd</p>
+            <img id="partners-image" src="../images/partners-images/Mara.png" alt="partner image" />
+            <p id="partners-name" class="h2-font">Mara Menzies</p>
+            <p id="partners-company" class="p-font">Afrika Presents Ltd</p>
           </div>
-
+          <div id="indicators"><span class="indicator indicator-opacity"></span><span class="indicator"></span><span class="indicator"></span><span class="indicator"></span><span class="indicator"></span></div>
         </div>
       </div>
     </div>
@@ -2010,6 +2047,8 @@
 <script>
   document.addEventListener("DOMContentLoaded", function(event) {
     AOS.init();
+
+    // about us circle animation start 
     const aboutUs = document.querySelector("#aboutUs");
     let i = 0;
     let isInViewport = function(elem) {
@@ -2065,6 +2104,77 @@
         counter++;
       }, interval);
     }
+    // about us circle animation end
+
+
+    let partnersText = document.querySelector("#partners-text");
+    let partnersImage = document.querySelector("#partners-image");
+    let partnersName = document.querySelector("#partners-name");
+    let partnersCompany = document.querySelector("#partners-company");
+    let indicators = document.querySelectorAll(".indicator");
+
+
+    let partners = [{
+      text: "SmartLab team created a fantastic web based quiz for Afrika Presents with a downloadable badge. Incredible attention to details. Better than anticipated and they had a true understanding and delivered just what we were looking for. We look forward to working together again in future.",
+      image: "../images/partners-images/Mara.png",
+      name: "Mara Menzies",
+      company: "Afrika Presents Ltd"
+    }, {
+      text: "Ima da ih opjevam!",
+      image: "https://www.fokus.ba/wp-content/uploads/2018/12/halid-beslic-1.jpg",
+      name: "Halid Bešlić",
+      company: "Bešlić Inc"
+    }, {
+      text: "I'll be back!",
+      image: "https://cdn1.thr.com/sites/default/files/imagecache/scale_crop_768_433/2018/01/the_terminator_still.jpg",
+      name: "Terminator",
+      company: "Time Traveling Ltd"
+    }, {
+      text: "Ja došao onako",
+      image: "https://pbs.twimg.com/profile_images/727765055132057600/dfF6JL_C_400x400.jpg",
+      name: "Slučajni prolaznik",
+      company: "Prolazništvo"
+    }, {
+      text: "Čisto da se popuni",
+      image: "https://image.shutterstock.com/image-photo/menacing-silhouette-hooded-man-shadow-260nw-137674373.jpg",
+      name: "Niko Nikić",
+      company: "Nema"
+    }];
+    console.log(partnersText, partnersImage, partnersName, partnersCompany, indicators, partners);
+    let j = 1;
+
+    function partnersChange(partners) {
+      partnersText.innerText = partners.text;
+      partnersImage.src = partners.image;
+      partnersName.innerText = partners.name;
+      partnersCompany.innerText = partners.company;
+    }
+    setInterval(function() {
+
+
+
+
+
+      console.log(indicators.length, j);
+
+
+      indicators[j].classList.add("indicator-opacity");
+      if (j == 0) {
+        indicators[indicators.length - 1].classList.remove("indicator-opacity");
+      }
+      if (j > 0) {
+        indicators[j - 1].classList.remove("indicator-opacity");
+      }
+
+      j++;
+      if (j == indicators.length) {
+        j = 0;
+      }
+
+
+      partnersChange(partners[j]);
+    }, 5000)
+
   });
 </script>
 <!--<script src="js/nav.js"></script>
