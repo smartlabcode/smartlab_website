@@ -156,7 +156,7 @@
     }
 
     .contain {
-        max-width: 1200px;
+        max-width: 1500px;
         width: 90%;
         margin: 0 auto;
     }
@@ -311,7 +311,7 @@
         z-index: -130;
         left: 86%;
         /* top: 0; */
-        bottom: 23%;
+        top: 0;
         /* top: 192%; */
     }
 
@@ -319,6 +319,108 @@
         position: relative;
     }
 
+    .contact-form-container {
+        width: 50%;
+        margin: 0 auto;
+
+    }
+
+    .contact-form-container .h1-font {
+        color: var(--h1-color);
+    }
+
+    .contact-form-container {
+        color: var(--h1-color);
+    }
+
+    .contact-form-container h1 {
+        color: var(--h1-color);
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.3em;
+        font-family: "Montserrat", sans-serif;
+        margin-bottom: 0;
+    }
+
+    .contact-form-group {
+        display: flex;
+        flex-basis: 100%;
+        justify-content: space-between;
+        padding-top: 20px;
+    }
+
+    .contact-form-group div {
+        flex-basis: 47%;
+    }
+
+    .contact-form-group input,
+    textarea {
+        padding: 15px 25px;
+        padding-right: 0;
+        border-radius: 10px;
+        border: 1px solid rgba(122, 161, 233, 0.5);
+        resize: none !important;
+    }
+
+    input:focus,
+    textarea:focus {
+        outline: none !important;
+        border: 1px solid rgba(122, 161, 233, 1);
+    }
+
+    .contact-form-group label,
+    .contact-form-group input,
+    .contact-form-group textarea {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .textarea {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button-orange:hover {
+        background-color: white !important;
+        color: var(--button-bg-orange) !important;
+        border: 1px solid var(--button-bg-orange) !important;
+    }
+
+    .submit {
+        align-self: flex-end;
+        margin-top: 20px;
+        margin-bottom: 250px;
+        background-color: var(--button-bg-orange);
+        border: 1px solid var(--button-bg-orange);
+    }
+
+    .submit:hover {
+        background-color: transparent;
+        color: var(--button-bg-orange);
+        border: 1px solid var(--button-bg-orange);
+    }
+
+    .contact-section {
+        width: 112%;
+        left: -6%;
+        position: relative;
+        padding-top: 80px;
+        overflow: hidden;
+        height: 0%;
+        transition: all 0.2s ease-in;
+    }
+
+    .contact-form-container p {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.3em;
+        text-align: center;
+        padding-bottom: 50px;
+    }
 
     /* SECTION THREE*/
     .xliff-container {
@@ -418,13 +520,35 @@
     }
 
     .tools-img div {
-        flex-basis: 33%;
+        flex-basis: 30%;
+        border-radius: 15px;
         text-align: center;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
+        width: 150px;
+        height: 200px;
+        box-shadow: -1px -1px 15px 1px var(--shadow-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tools-img-margin-both {
+        margin: 0 20px;
     }
 
     .tools-img img {
-        width: 50%;
+        width: 125px;
+        margin-top: 1rem;
+        flex-basis: 100%;
+        object-fit: contain;
+    }
+
+    .tools-img p {
+        margin: 1rem 0;
+        font-size: 1.3em;
+        font-family: "Montserrat", sans-serif;
+
     }
 
     @media screen and (min-width: 2000px) {
@@ -447,7 +571,7 @@
         }
 
         .secTwoBg4 {
-            bottom: 30%;
+            top: 0;
             left: 94%;
         }
 
@@ -497,7 +621,7 @@
 
         .secTwoBg4 {
             left: 94%;
-            bottom: 29%;
+            top: 0;
         }
 
         .secTwoBg2 {
@@ -655,6 +779,10 @@
             width: 70%;
         }
 
+        .contact-form-container {
+            width: 80%;
+        }
+
         .xliff-background {
             width: 170vw;
         }
@@ -750,6 +878,19 @@
             padding: 0 10px;
             font-size: 11px;
         }
+
+        .tools {
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .tools-img-margin-both {
+            margin: 0 0;
+        }
+
+        .tools-info {
+            text-align: center;
+        }
     }
 
     @media screen and (max-width: 600px) {
@@ -831,7 +972,7 @@
         }
 
         .tools-img div {
-            flex-basis: 50%;
+
             margin-bottom: 0;
         }
 
@@ -858,7 +999,7 @@
 
             left: 89%;
             /* top: 0; */
-            bottom: 31%;
+            top: 0;
             /* top: 192%; */
         }
     }
@@ -880,6 +1021,10 @@
         .tools-container {
             top: 260px;
             margin-bottom: -100px;
+        }
+
+        .section3 {
+            margin-bottom: 0 !important;
         }
 
         .relative {
@@ -907,6 +1052,10 @@
         .our-works .h1-font {
             margin-top: 30px;
             margin-bottom: 80px;
+        }
+
+        .contact-form-group {
+            flex-direction: column;
         }
     }
 
@@ -949,7 +1098,7 @@
         }
 
         .secTwoBg4 {
-            bottom: 30%;
+            top: 0;
         }
 
         .tools-container {
@@ -1012,16 +1161,55 @@
         <img class="sljedeci shadow-1" src="../images/img/Picture3.png" onclick="changeImage('next')">
     </div>
     <img class="secTwoBg3" src="../images/img/fluid-bright-circle.svg">
-    <img class="secTwoBg4" src="../images/img/orange-circle.svg">
-
-
-
     <div class="section3 contain">
         <div style="height: 50%">
             <p class="p-font" style="margin-top: 50px; display: flex; justify-content: center; font-weight: 500">Want to see more:</p>
         </div>
         <div style="height: 50%; margin-top: 30px; display: flex; justify-content: center">
-            <button class="button">Schedule a demo</button>
+            <button class="button" id="schedule">Schedule a demo</button>
+        </div>
+        <img class="secTwoBg4" src="../images/img/orange-circle.svg">
+    </div>
+    <div class="contact-section" id="contact">
+        <div class="contact-form-container">
+            <h2 class="text-center h1-font">Contact</h2>
+            <form class="contact-form">
+                <div class="contact-form-group">
+                    <div>
+                        <label for="name">*Name and Surname</label>
+                        <input type="text" name="name" id="name" />
+                    </div>
+                    <div>
+                        <label for="company">Company</label>
+                        <input type="text" name="company" id="company" />
+                    </div>
+                </div>
+                <div class="contact-form-group">
+                    <div>
+                        <label for="subject">*Subject</label>
+                        <input type="text" name="subject" id="subject" />
+                    </div>
+                    <div>
+                        <label for="email">*Email</label>
+                        <input type="email" name="email" id="email" />
+                    </div>
+                </div>
+                <div class="contact-form-group">
+                    <div>
+                        <label for="date">*Meeting date</label>
+                        <input type="date" name="date" id="date" />
+                    </div>
+                    <div>
+                        <label for="time">*Meeting time</label>
+                        <input type="time" name="time" id="time" />
+                    </div>
+                </div>
+                <div class="contact-form-group textarea">
+                    <label for="message">*Message</label>
+                    <textarea name="message" rows="7" id="message"></textarea>
+                </div>
+                <input class="button submit" type="submit" value="Send" />
+            </form>
         </div>
     </div>
 </section>
@@ -1085,22 +1273,28 @@
         </div>
         <div class="tools-img">
             <div>
-                <img src="https://via.placeholder.com/150">
+                <img src="../images/tools/php_PNG28.png">
+                <p>PHP Development</p>
+            </div>
+            <div class="tools-img-margin-both">
+                <img src="../images/tools/HTML5CSS3Logos.svg">
+                <p>HTML & CSS3</p>
             </div>
             <div>
-                <img src="https://via.placeholder.com/150">
+                <img src="../images/tools/1200px-Unofficial_JavaScript_logo_2.svg.png">
+                <p>JavaScript</p>
             </div>
             <div>
-                <img src="https://via.placeholder.com/150">
+                <img src="../images/tools/WordPress-logotype-wmark.png">
+                <p>Wordpress</p>
+            </div>
+            <div class="tools-img-margin-both">
+                <img src="../images/tools/github.svg">
+                <p>GitHub</p>
             </div>
             <div>
-                <img src="https://via.placeholder.com/150">
-            </div>
-            <div>
-                <img src="https://via.placeholder.com/150">
-            </div>
-            <div>
-                <img src="https://via.placeholder.com/150">
+                <img src="../images/tools/1280px-Unity_Technologies_logo.svg.png">
+                <p>Unity</p>
             </div>
 
         </div>
@@ -1111,47 +1305,67 @@
     AOS.init();
 </script>
 <script>
-    var imgOne = 0;
-    var imgTwo = 1;
+    document.addEventListener("DOMContentLoaded", function(event) {
+        let schedule = document.querySelector("#schedule");
+        let contact = document.querySelector("#contact");
+        var imgOne = 0;
+        var imgTwo = 1;
 
-    var images = [
-        "https://static.igre123.net/slike/212266-121951/mala-maca.jpg", // 0
-        "https://opusteno.rs/slike/2012/03/smesne-slike-14024/mala-maca.jpg", // 1
-        "https://static.igre123.net/slike/235049-148875/mala-maca.jpg", // 2
-        "https://static.igre123.net/slike/205865-134729/mala-maca.jpg" // 3
-    ];
-    changeImage("demo");
+        var images = [
+            "https://static.igre123.net/slike/212266-121951/mala-maca.jpg", // 0
+            "https://opusteno.rs/slike/2012/03/smesne-slike-14024/mala-maca.jpg", // 1
+            "https://static.igre123.net/slike/235049-148875/mala-maca.jpg", // 2
+            "https://static.igre123.net/slike/205865-134729/mala-maca.jpg" // 3
+        ];
+        changeImage("demo");
 
-    function changeImage(par) {
-        if (window.innerWidth > 768) {
-            if (imgOne < (images.length - 2) && par == "next") {
+        function changeImage(par) {
+            if (window.innerWidth > 768) {
+                if (imgOne < (images.length - 2) && par == "next") {
 
-                imgOne = imgTwo;
-                imgTwo = imgTwo + 1;
+                    imgOne = imgTwo;
+                    imgTwo = imgTwo + 1;
 
-            } else if (imgOne !== 0 && par == "previous") {
-                imgOne = imgOne - 1;
-                imgTwo = imgTwo - 1;
+                } else if (imgOne !== 0 && par == "previous") {
+                    imgOne = imgOne - 1;
+                    imgTwo = imgTwo - 1;
+                }
+
+                var imgOneSrc = images[imgOne];
+                var imgTwoSrc = images[imgTwo];
+
+                document.getElementById("firstPart").src = imgOneSrc;
+
+                document.getElementById("secondPart").src = imgTwoSrc;
+
+            } else {
+                if (imgOne < images.length - 1 && par == "next") {
+
+                    imgOne++;
+                } else if (imgOne !== 0 && par == "previous") {
+                    imgOne--;
+                }
+                imgOneSrc = images[imgOne];
+                document.getElementById("firstPart").src = imgOneSrc;
             }
 
-            var imgOneSrc = images[imgOne];
-            var imgTwoSrc = images[imgTwo];
-
-            document.getElementById("firstPart").src = imgOneSrc;
-
-            document.getElementById("secondPart").src = imgTwoSrc;
-
-        } else {
-            if (imgOne < images.length - 1 && par == "next") {
-
-                imgOne++;
-            } else if (imgOne !== 0 && par == "previous") {
-                imgOne--;
-            }
-            imgOneSrc = images[imgOne];
-            document.getElementById("firstPart").src = imgOneSrc;
         }
 
-    }
+
+        console.log(schedule, contact);
+        schedule.addEventListener("click", function() {
+            console.log("clicked", window.innerWidth);
+            if (contact.clientHeight != 80) {
+                contact.style.height = 0;
+            } else {
+                if (window.innerWidth <= 425) {
+                    contact.style.height = 140 + "%";
+                } else {
+                    contact.style.height = 100 + "%";
+                }
+
+            }
+        });
+    });
 </script>
 @endsection
