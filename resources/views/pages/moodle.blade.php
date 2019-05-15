@@ -1,9 +1,4 @@
-<!-- Extend main layout -->
-@extends('layouts.app')
-
-@section('content')
-
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -87,7 +82,7 @@
     }
 
     .contain{
-        width: 80%;
+        max-width: 1200px;
         margin: 0 auto;
     }
 
@@ -178,7 +173,7 @@
 
     .button{
         cursor: pointer;
-
+        border: none;
         border-radius: 35px;
         width: 260px;
         height: 70px;
@@ -299,8 +294,9 @@
         }
 
         .secOneBg{
-            width: 80%;
-            right: -30%;
+            right: -75%;
+            top: -10%;
+            width: 125%;
         }
 
         .h1-font{
@@ -358,6 +354,15 @@
             width: 320px;
             height: 80px;
         }
+        .pics1-2 img{
+            margin: 5px;
+            width: 230px;
+        }
+        .pics1-1 img{
+            width: 230px;
+            margin: 5px;
+        }
+
     }
 
 
@@ -384,6 +389,22 @@
         #slider{
             height: 450px;
             width: 80%;
+        }
+
+        .sec3text{
+            font-family: "Montserrat", sans-serif;
+            font-size: 2.2em;
+            color: var(--h2-color);
+        }
+        .secOneBg{
+            width: 100%;
+            right: -70%;
+            top: -10%;
+        }
+        .secOneBg2{
+            width: 500px;
+            top: -23%;
+            left: 50%;
         }
     }
 
@@ -414,7 +435,7 @@
             width: 230px;
             height: 70px;
             font-size: 1.4em;
-
+            outline: hidden;
         }
 
         .section3{
@@ -475,17 +496,8 @@
             font-family: "Montserrat", sans-serif;
             font-size: 1.8em;
             color: var(--h2-color);
+
         }
-
-
-        #slider>img:last-child{
-            right: -70px;
-        }
-
-        #slider>img:first-child{
-            left: -15px;
-        }
-
         .h1-font {
             font-size: 1.7em;
         }
@@ -585,7 +597,7 @@
 
         .secOneBg {
             position: absolute;
-            top: -45%;
+            top: -30%;
             right: -83%;
             transform: rotate(0deg);
             width: 145%;
@@ -627,20 +639,6 @@
 
         /*slider*/
 
-        #slider>img:last-child{
-            right: -85px;
-        }
-
-        #slider>img:first-child{
-            left: -40px;
-        }
-
-        #slider div{
-            height: 350px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
         /* section3*/
         .section3{
             display: flex;
@@ -653,21 +651,14 @@
             font-size: 1.8em;
             color: var(--h2-color);
         }
-        .slider-right{
-            display: none !important;
-        }
-        .slider-left{
-            width: 110%;
 
-        }
 
         /*section4*/
         .section4 {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 0px;
-            padding-top: 50px;
+            margin-top: -10%;
         }
 
 
@@ -753,9 +744,8 @@
         .secTwoBg2 {
             width: 60%;
             position: absolute;
-            top: 100%;
-            left: -30%;
-
+            top: 95%;
+            left: -31%;
         }
         .h2-secTwo{
             margin-top: 0px;
@@ -765,7 +755,7 @@
 
         #slider{
             height: auto;
-            margin-top: 40%;
+            margin-top: 43%;
         }
 
         #slider div{
@@ -778,6 +768,9 @@
         }
         .slider-left{
             width: 110%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
         }
 
@@ -785,23 +778,23 @@
             width: 35px;
             height: 35px;
             position: relative;
-            top: -210px;
-            left: -13px;
+            top: -222px;
+            left: 45px;
         }
 
         #slider > img:last-child {
             width: 35px;
             height: 35px;
             position: relative;
-            top: -545px;
-            right: -360px;
+            top: -560px;
+            right: -345px;
         }
 
         .slider-left img{
             object-fit: cover;
-            width: 100%;
-            height: 55%;
-            margin-top: -80%;
+            width: 70%;
+            height: 70%;
+            margin-top: -82%;
         }
 
         /* section3*/
@@ -833,7 +826,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: -25%;
+            margin-top: -50%;
         }
 
 
@@ -861,43 +854,96 @@
 
     @media screen and (max-width: 450px){
         #slider > img:last-child {
-            top: -435px;
-            right: -222px;
-
-
+            top: -380px;
+            right: -220px;
         }
 
         #slider >img:first-child{
-            top: -95px;
+            top: -42px;
             left: -13px;
         }
-
-        .section4{
-            margin-top: -40%;
+        .secTwoBg {
+            width: 107%;
+            top: 965px;
+            left: -72%;
         }
-        .secOneBg{
-            top: -45%;
+
+        .secTwoBg2 {
+            width: 60%;
+            position: absolute;
+            top: 140%;
+            left: -30%;
+        }
+        #slider >img:last-child{
+            top: -485px;
+            right: -288px;
+        }
+        #slider >img:first-child{
+            top: -145px;
+        }
+        .slider-left{
+            margin-top: -10%;
+            width: 300px;
+            height: 220px;
+        }
+
+        .section3{
+            margin-top: -90%;
+        }
+        .section4{
+            margin-top: -70%;
+        }
+        .slider-left img{
+            object-fit: cover;
+            width: 100%;
+            height: 55%;
+            margin-top: -70%;
         }
     }
-
 
     @media screen and (max-width: 376px){
-        #slider > img:last-child {
-            top: -410px;
-            right: -195px;
-
+        #slider >img:last-child{
+            top: -425px;
+            right: -250px;
         }
-
         #slider >img:first-child{
-            top: -70px;
-            left: -13px;
+            top: -88px;
         }
 
+        #slider{
+            margin-top: 20%;
+        }
+        .section3{
+            margin-top: -90%;
+        }
         .section4{
-            margin-top: -40%;
+            margin-top: -70%;
         }
-    }
+        .secTwoBg {
+            width: 107%;
+            top: 965px;
+            left: -72%;
+        }
+        .slider-left img{
+            object-fit: cover;
+            width: 100%;
+            height: 55%;
+            margin-top: -60%;
+        }
+        .secTwoBg2 {
+            width: 60%;
+            position: absolute;
+            top: 140%;
+            left: -30%;
+        }
+        .slider-left{
+            margin-top: -10%;
+            width: 300px;
+            height: 220px;
+        }
 
+
+    }
     /*do 350*/
     @media screen and (max-width: 350px) {
 
@@ -949,21 +995,19 @@
 
         .secTwoBg {
             width: 107%;
-            top: 113%;
+            top: 965px;
             left: -72%;
         }
 
         .secTwoBg2 {
             width: 60%;
             position: absolute;
-            top: 108%;
+            top: 100%;
             left: -30%;
-
         }
         .h2-secTwo{
             margin-top: 1px;
         }
-
         /*slider*/
 
         #slider{
@@ -980,7 +1024,8 @@
             display: none !important;
         }
         .slider-left{
-            width: 110%;
+            width: 300px;
+            height: 200px;
 
         }
 
@@ -988,7 +1033,7 @@
             width: 35px;
             height: 35px;
             position: relative;
-            top: -17px;
+            top: -80px;
             left: -16px;
         }
 
@@ -996,8 +1041,9 @@
             width: 35px;
             height: 35px;
             position: relative;
-            top: -360px;
-            right: -155px;
+            top: -418px;
+            right: -208px;
+
         }
 
         .slider-left img{
@@ -1009,7 +1055,7 @@
 
         /* section3*/
         .section3{
-            margin-top: -100%;
+            margin-top: -90%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1036,7 +1082,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: -40%;
+            margin-top: -60%;
         }
 
 
@@ -1052,7 +1098,6 @@
             height: 90px;
             justify-content: space-around;
             margin: 5px;
-
         }
 
         .pics {
@@ -1201,6 +1246,3 @@
 </body>
 </html>
 
-
-
-@endsection
