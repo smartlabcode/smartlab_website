@@ -31,7 +31,7 @@ class MailToSend extends Mailable
      */
     public function build()
     {
-        //die(print_r(json_decode($this->contact)));
+        // decode contact data
         $info = json_decode($this->contact);
 
         $d = [
@@ -42,20 +42,42 @@ class MailToSend extends Mailable
             'message' => $info->message
         ];
 
-        if (!is_null($info->file_path)) {
-            $attachment = $info->file_path;  // storage_path() . '/app' .
+        // check which type of contact we have and return appropriate data
+        if ($info->type == 'bussiness' && !is_null($info->file_path)) {
+            // set attachment path
+            $attachment = $info->file_path;
+
+            // return data to queue
             return $this->from('noreply@smartlab.ba','No Reply')
-                ->view("parts.contact_mail_template", ["data" => $d ])
+                ->view("parts.bussiness_mail_template", ["data" => $d ])
                 ->attachFromStorage($attachment)
-                ->subject('New contact mail');
-        } else {
+                ->subject('New bussiness contact mail');
+
+        } else if ($info->type == 'bussiness' && is_null($info->file_path)) {
+            // return data to queue
+            return $this->from('noreply@smartlab.ba','No Reply')
+                ->view("parts.bussiness_mail_template", ["data" => $d ])
+                ->subject('New bussiness contact mail');
+
+        } else if ($info->type == 'general') {
+            // return data to queue
             return $this->from('noreply@smartlab.ba','No Reply')
                 ->view("parts.contact_mail_template", ["data" => $d ])
-                ->subject('New contact mail');
+                ->subject('New general contact mail');
         }
 
+//        if (!is_null($info->file_path)) {
+//            $attachment = $info->file_path;
+//            return $this->from('noreply@smartlab.ba','No Reply')
+//                ->view("parts.bussiness_mail_template", ["data" => $d ])
+//                ->attachFromStorage($attachment)
+//                ->subject('New bussiness contact mail');
+//        } else {
+//            return $this->from('noreply@smartlab.ba','No Reply')
+//                ->view("parts.contact_mail_template", ["data" => $d ])
+//                ->subject('New general contact mail');
+//        }
+
     }
-
-
 
 }

@@ -91,24 +91,22 @@ class ContactController extends Controller
 
         // create contact and push mail to queue
         $contact = new Contact();
+        $contact->type = 'bussiness';
         $contact->name = $request->input('bussiness_name');
-        $contact->lastname = $request->input('bussiness_subject');
-        $contact->subject = $request->input('bussiness_email');
+        $contact->subject = $request->input('bussiness_subject');
+        $contact->email = $request->input('bussiness_email');
         $contact->message = $request->input('bussiness_message');
 
 
         // save uploaded file/s if they are sent TODO file sizes and count will be handled in php.ini
-        // $attachment = false;
         if (file_exists($_FILES['files']['tmp_name'][0])) {
 
             // generate new folder name
             $folderName = rand(1,10000);
 
             // make folder where contact files will temporary be located
-            //mkdir("storage/app/files/" . $folderName, 0777, true);
             Storage::makeDirectory("/" .$folderName);
-
-
+            // set path where tou store uploaded files
             $path = storage_path()  ."/app/" . $folderName;
             $this->uploader->uploadFiles($_FILES, $path);
             // $attachment = true;
@@ -121,18 +119,8 @@ class ContactController extends Controller
         // save contact to be used in queue
         $contact->save();
 
+        // set mail to queue
         Mail::to([env('ADMIN_EMAIL')])->queue(new MailToSend($contact));
-
-        // get corresponding mail template
-//        $template = $this->mailTemplateCreator->createTemplateFromView('parts.bussiness_mail_template', [
-//            'name' => $request->input('bussiness_name'),
-//            'subject' => $request->input('bussiness_subject'),
-//            'email' => $request->input('bussiness_email'),
-//            'message' => $request->input('bussiness_message')
-//        ]);
-//
-//        // send email to Rizah
-//        $this->mailer->sendEmail('Bussiness contact', env('ADMIN_EMAIL'), $template, $attachment, $folderName);
 
         // return message
         return back()->with('message', 'Bussiness contact message successfully sent.');

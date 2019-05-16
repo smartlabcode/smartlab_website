@@ -1,6 +1,6 @@
 <div>
-    <p>Bussiness name: {{$name}}</p>
-    <p>Subject: {{$subject}}</p>
-    <p>Email: {{$email}}</p>
-    <p>Message: {{$message}}</p>
+    <p>Bussiness name: {{$data['name']}}</p>
+    <p>Email: {{$data['email']}}</p>
+    <p>Subject: {{$data['subject']}}</p>
+    <p>Message: {{$data['message']}}</p>
 </div>
