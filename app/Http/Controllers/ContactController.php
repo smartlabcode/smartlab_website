@@ -115,7 +115,7 @@ class ContactController extends Controller
             $contact->file_path = "/" . $folderName . '/contact.zip';
 
             // create zip
-            $this->mailer->zip($folderName);
+            $this->mailer->zip($path);
         }
 
         // save contact to be used in queue

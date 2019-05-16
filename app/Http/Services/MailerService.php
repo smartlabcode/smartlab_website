@@ -78,15 +78,15 @@ class MailerService
      *
      * @param $contactType
      */
-    public function zip($folderName) {
+    public function zip($path) {
 
         try {
             // create zip file and store attachments in it
             $zip = new \ZipArchive();
-            $zip->open('storage/app/' . $folderName . '/contact.zip', \ZipArchive::CREATE);
+            $zip->open($path . '/contact.zip', \ZipArchive::CREATE);
 
             // loop through specified folder and add all the files to the zip
-            foreach (glob("files/" . $folderName . "/*") as $file) {
+            foreach (glob($path . "/*") as $file) {
                 if (is_file($file)) {
                     $zip->addFile($file);
                 }
