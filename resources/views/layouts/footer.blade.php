@@ -58,6 +58,7 @@
 
     .footer-button:hover a {
         color: var(--h1-color);
+        text-decoration: none;
     }
 
     .footer-button a {
