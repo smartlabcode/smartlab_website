@@ -73,6 +73,50 @@
 
     </form>
 
+    <h2>Schedule demo</h2>
+
+    <div class="contact-section" id="contact">
+        <div class="contact-form-container">
+            <form class="contact-form">
+                <div class="contact-form-group">
+                    <div>
+                        <label for="name">*Name and Surname</label>
+                        <input type="text" name="name" id="name" />
+                    </div>
+                    <div>
+                        <label for="company">Company</label>
+                        <input type="text" name="company" id="company" />
+                    </div>
+                </div>
+                <div class="contact-form-group">
+                    <div>
+                        <label for="subject">*Subject</label>
+                        <input type="text" name="subject" id="subject" />
+                    </div>
+                    <div>
+                        <label for="email">*Email</label>
+                        <input type="email" name="email" id="email" />
+                    </div>
+                </div>
+                <div class="contact-form-group">
+                    <div>
+                        <label for="date">*Meeting date</label>
+                        <input type="date" name="date" id="date" />
+                    </div>
+                    <div>
+                        <label for="time">*Meeting time</label>
+                        <input type="time" name="time" id="time" />
+                    </div>
+                </div>
+                <div class="contact-form-group textarea">
+                    <label for="message">*Message</label>
+                    <textarea name="message" rows="7" id="message"></textarea>
+                </div>
+                <input class="button submit" type="submit" value="Send" />
+            </form>
+        </div>
+    </div>
+
     <img src="{{ asset('images/blog.jpg') }}"/>
 
 @endsection

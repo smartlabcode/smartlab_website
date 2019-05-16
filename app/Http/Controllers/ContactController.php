@@ -127,14 +127,16 @@ class ContactController extends Controller
     }
 
     /**
-     * Send outsourcing info to super admin
+     * Send demo meeting info to super admin
      *
      * @param Request $request
      */
-    public function handleOutsourcingInfo(Request $request) {
+    public function handleDemoInfo(Request $request) {
 
         try {
-            die("outsourcing info");
+
+
+
         } catch (\Exception $e) {
 
         }

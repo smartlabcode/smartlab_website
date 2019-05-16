@@ -64,6 +64,11 @@ class MailToSend extends Mailable
             return $this->from('noreply@smartlab.ba','No Reply')
                 ->view("parts.contact_mail_template", ["data" => $d ])
                 ->subject('New general contact mail');
+        } else if ($info->type == 'demo') {
+            // return data to queue
+            return $this->from('noreply@smartlab.ba','No Reply')
+                ->view("parts.contact_mail_template", ["data" => $d ])
+                ->subject('New general contact mail');
         }
 
 //        if (!is_null($info->file_path)) {

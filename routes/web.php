@@ -64,8 +64,8 @@ Route::get('pages/xlf', 'PagesController@showXlfPage');
 Route::post('contact', 'ContactController@handleContactInfo');
 // route where bussiness info is sent
 Route::post('bussiness', 'ContactController@handleBussinessInfo');
-// route where outsourcing info is sent
-Route::post('outsourcing', 'ContactController@handleOutsourcingInfo');
+// route where demo meeting is sent
+Route::post('demo', 'ContactController@handleDemoInfo');
 // route where careers info is sent
 Route::post('careers', 'ContactController@handleCareersInfo');
 
