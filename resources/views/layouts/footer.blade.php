@@ -261,7 +261,7 @@
         footer {
             font-size: 0.9em;
             padding-bottom: 0;
-            background-position-y: 30px;
+            background-position-y: 40px;
         }
 
         .footer-bot-icons {
@@ -269,6 +269,7 @@
         }
 
         .footer-button {
+            z-index: 3;
             width: 166px;
             height: 45px;
             font-size: 1.2em;
@@ -299,7 +300,7 @@
         .footer-top-row .--right {
             flex-basis: 100%;
             justify-content: flex-end;
-            margin-top: 5px;
+            margin-top: 25px;
             margin-bottom: 10px;
         }
 
@@ -334,8 +335,78 @@
             order: 1;
             width: 83%;
             position: relative;
-            top: -66px;
+            top: -64px;
             justify-content: flex-start;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .footer-top-row {
+            flex-basis: 90%;
+        }
+
+        .footer-bot-column:nth-child(3) {
+            width: 92%;
+        }
+    }
+
+    @media screen and (max-width: 425px) {
+        footer {
+            background-position-x: 35%;
+        }
+
+        .footer-top-row {
+            flex-basis: 95%;
+        }
+
+        .footer-bot-column:nth-child(3) {
+            width: 97%;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        .footer-bot-column:nth-child(3) {
+            position: static;
+            justify-content: center;
+        }
+
+        .footer-top-row .--right {
+            justify-content: center;
+        }
+    }
+
+    @media screen and (max-width: 365px) {
+        footer {
+            background-position-x: 36%;
+            background-size: 2000px;
+            background-position-y: 0px;
+        }
+
+        .footer-top-column {
+            flex-basis: 55%;
+        }
+
+        .footer-top-row {
+            justify-content: center;
+        }
+
+        .footer-top-row .--center {
+            margin-bottom: 20px;
+            justify-content: flex-start;
+        }
+
+        .footer-top-row .--center img {
+            width: 25px;
+        }
+
+        .footer-top-row .--right {
+            margin-top: 0;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        .footer-top-column {
+            flex-basis: 60%;
         }
     }
 </style>
