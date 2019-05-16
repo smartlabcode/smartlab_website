@@ -500,17 +500,17 @@
 
     .tools-container {
         position: relative;
-        top: 500px;
+        top: 700px;
     }
 
     .tools {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .tools-info {
-        flex-basis: 35%;
+        flex-basis: 30%;
     }
 
     .tools-img {
