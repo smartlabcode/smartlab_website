@@ -88,7 +88,8 @@ class MailerService
             // loop through specified folder and add all the files to the zip
             foreach (glob($path . "/*") as $file) {
                 if (is_file($file)) {
-                    $zip->addFile($file);
+                    $newFilename = substr($file,strrpos($file,'/') + 1);
+                    $zip->addFile($file, $newFilename);
                 }
             }
 
