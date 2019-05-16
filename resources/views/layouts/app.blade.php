@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,20 +26,19 @@
 
     <!-- Wrote some style and move it to app.css later on -->
     <style>
-
         #app {
             width: 90%;
             margin: 0 auto;
         }
-
     </style>
 
 </head>
+
 <body>
 
     <!-- Import menu for including it later -->
     @include('layouts.menu')
-
+    @include('layouts.footer')
     <!-- Main application layout -->
     <div id="app">
 
@@ -70,7 +70,9 @@
             <!-- Include content -->
             @yield('content')
         </main>
+        @yield('footer')
     </div>
 
 </body>
+
 </html>
