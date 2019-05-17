@@ -175,6 +175,10 @@
         text-decoration: none;
     }
 
+    footer a:hover {
+        color: white;
+    }
+
     footer img {
         height: 20px;
         margin-right: 30px;
