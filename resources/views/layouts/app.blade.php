@@ -32,6 +32,8 @@
             margin: 0 auto;
         }
 
+
+
         @media screen and (max-width: 990px) {
             .navbar-brand img {
                 height: 20px;
@@ -56,7 +58,7 @@
     <div id="app">
 
         <!-- Navigation -->
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel navbar-fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="images/smartlab-logo.svg" height="30px">
