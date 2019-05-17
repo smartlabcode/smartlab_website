@@ -31,6 +31,18 @@
             width: 90%;
             margin: 0 auto;
         }
+
+        @media screen and (max-width: 990px) {
+            .navbar-brand img {
+                height: 20px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar-brand img {
+                height: 30px;
+            }
+        }
     </style>
 
 </head>
@@ -47,7 +59,7 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Smartlab') }}
+                    <img src="images/smartlab-logo.svg" height="30px">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

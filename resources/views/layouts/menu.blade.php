@@ -10,6 +10,10 @@
         transform: translateX(50%);
     }
 
+    .dropdown-menu a {
+        font-weight: bold;
+    }
+
     .square::before {
         display: inline-block;
         content: "";
