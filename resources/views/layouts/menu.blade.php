@@ -61,8 +61,8 @@
 @section('menu')
 
 <!-- Available to all users -->
-<li class="nav-item dropdown">
-    <a class="dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">@lang('menu.first_item')</a>
+<li class="nav-item  dropdown">
+    <a class="dropdown-toggle nav-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">@lang('menu.first_item')</a>
     <div class="dropdown-menu square" aria-labelledby="navbarDropdown">
         <a class="dropdown-item py-3" href="#">@lang('menu.online_courses')</a>
         <a class="dropdown-item py-3" href="#">@lang('menu.educational_video')</a>
@@ -71,14 +71,14 @@
     </div>
 </li>
 <li class="nav-item dropdown">
-    <a class="dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">@lang('menu.second_item')</a>
+    <a class="dropdown-toggle nav-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">@lang('menu.second_item')</a>
     <div class="dropdown-menu square">
         <a class="dropdown-item py-3" href="#">@lang('menu.about_us')</a>
         <a class="dropdown-item py-3" href="#">@lang('menu.our_team')</a>
     </div>
 </li>
 <li class="nav-item dropdown join ">
-    <a class="dropdown-toggle " id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">@lang('menu.third_item')</a>
+    <a class="dropdown-toggle nav-link " id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">@lang('menu.third_item')</a>
     <div class="dropdown-menu square ">
         <div>
             <a class="dropdown-item py-3" href="#">@lang('menu.outsourcing')</a>
@@ -91,9 +91,9 @@
 </li>
 <li class="nav-item">
     <!-- Open link in new tab and set its language depending on the current language in main website-->
-    <a href="{{ env("BLOG_DOMAIN")  }}/@if(App::getlocale()){{App::getlocale()}}@else en @endif" target="_blank">@lang('menu.fourth_item')</a>
+    <a class="nav-link" href="{{ env("BLOG_DOMAIN")  }}/@if(App::getlocale()){{App::getlocale()}}@else en @endif" target="_blank">@lang('menu.fourth_item')</a>
 </li>
-<li class="nav-item"><a href="#">@lang('menu.fifth_item')</a></li>
+<li class="nav-item"><a class="nav-link" href="#">@lang('menu.fifth_item')</a></li>
 
 <!-- This menu items are available only to logged in users -->
 @auth
@@ -125,16 +125,16 @@
 @endauth
 
 <!-- Form for sending new language after user clicks on one of the select options - page is refreshed with new language translations -->
-<li>
-    <form id="languageForm" action="/language" method="POST">
-        @csrf
-        @method('PUT')
-        <select name="language" onchange="changeSiteLanguage(this.value)">
-            <option value="en" @if(App::getlocale()=='en' ) selected @endif>@lang('menu.english_language')</option>
-            <option value="de" @if(App::getlocale()=='de' ) selected @endif>@lang('menu.german_language')</option>
-            <option value="bs" @if(App::getlocale()=='bs' ) selected @endif>@lang('menu.bosnian_language')</option>
-        </select>
-    </form>
-</li>
+
+<form class="form-inline" id="languageForm" action="/language" method="POST">
+    @csrf
+    @method('PUT')
+    <select class="form-control-sm" name="language" onchange="changeSiteLanguage(this.value)">
+        <option value="en" @if(App::getlocale()=='en' ) selected @endif>@lang('menu.english_language')</option>
+        <option value="de" @if(App::getlocale()=='de' ) selected @endif>@lang('menu.german_language')</option>
+        <option value="bs" @if(App::getlocale()=='bs' ) selected @endif>@lang('menu.bosnian_language')</option>
+    </select>
+</form>
+
 
 @endsection
