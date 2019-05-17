@@ -466,7 +466,8 @@
         </div>
         <div class="footer-bot-row">
             <div class="footer-bot-column --left ">
-                <img src="images/footer/social-icons/smartlab-white.svg" class="footer-bot-icons" />
+                <a href="#"><img src="images/footer/social-icons/smartlab-white.svg" class="footer-bot-icons" /></a>
+
             </div>
             <div class="footer-bot-column --center">
                 Copyright &copy; 2019 SmartLab
