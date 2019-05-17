@@ -21,7 +21,10 @@ class CreateContactsTable extends Migration
             $table->string('file_path', 255)->nullable();
             $table->string("email", 100);
             $table->string("subject", 100);
-            $table->text("message");
+            $table->text("message")->nullable();
+            $table->string("company", 100)->nullable();
+            $table->string("date", 100)->nullable();
+            $table->string("time", 100)->nullable();
             $table->timestamps();
         });
     }
@@ -36,3 +39,5 @@ class CreateContactsTable extends Migration
         Schema::dropIfExists('contacts');
     }
 }
+
+

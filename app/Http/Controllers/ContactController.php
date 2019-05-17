@@ -48,7 +48,7 @@ class ContactController extends Controller
         $request->validate([
             'name' => 'required|max:45',
             'lastname' => 'required|max:45',
-            'email' => 'required|max:45|',
+            'email' => 'required|max:45',
             'subject' => 'required|max:255',
             'message' => 'required'
         ]);
@@ -130,16 +130,41 @@ class ContactController extends Controller
      * Send demo meeting info to super admin
      *
      * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function handleDemoInfo(Request $request) {
 
-        try {
+        // TODO issues with try/catch block and data validation
+        // set request data to session so that it can be used for old input if neccessary
+        $request->flash();
 
+        // check if neccessary values are entered correctly, if no return error messages
+        $request->validate([
+            'name' => 'required|max:45',
+            'company' => 'required|max:45',
+            'email' => 'required|max:45',
+            'subject' => 'required|max:255',
+            'message' => 'required',
+            'date' => 'required',
+            'time' => 'required'
+        ]);
 
+        // create contact and push mail to queue
+        $contact = new Contact();
+        $contact->type = 'demo';
+        $contact->name = $request->input('name');
+        $contact->company = $request->input('company');
+        $contact->email = $request->input('email');
+        $contact->subject = $request->input('subject');
+        $contact->message = $request->input('message');
+        $contact->date = $request->input('date');
+        $contact->time = $request->input('time');
+        $contact->save();
 
-        } catch (\Exception $e) {
+        Mail::to([env('ADMIN_EMAIL')])->queue(new MailToSend($contact));
 
-        }
+        // return message
+        return back()->with('message', 'Schedule request successfully sent.');
     }
 
     /**
@@ -156,3 +181,4 @@ class ContactController extends Controller
         }
     }
 }
+

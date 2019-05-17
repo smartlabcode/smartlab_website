@@ -4,36 +4,36 @@
 @section('content')
 
     <!-- Heading -->
-   <h1>@lang('index.heading')</h1>
+    <h1>@lang('index.heading')</h1>
 
     <!-- Dummy link -->
-   <a href="{{ env('BLOG_DOMAIN') }}/blog/7/de" target="_blank">Visit some blog</a>
+    <a href="{{ env('BLOG_DOMAIN') }}/blog/7/de" target="_blank">Visit some blog</a>
 
-   <!-- Include error/success messages to be listed if anything goes wrong -->
-   @include('parts.error_success')
+    <!-- Include error/success messages to be listed if anything goes wrong -->
+    @include('parts.error_success')
 
-   <hr/>
+    <hr/>
 
     <!-- Form for sending contact message -->
-   <form action="/contact" method="POST">
+    <form action="/contact" method="POST">
 
-       <!-- Include token -->
-       @csrf
+        <!-- Include token -->
+        @csrf
 
-       Name: <input type="text" name="name" />
-          <br/>
-       Lastname: <input type="text" name="lastname" />
-          <br/>
-       Email: <input type="email" name="email" />
-          <br/>
-       Subject: <input type="text" name="subject" />
-       <br/>
+        Name: <input type="text" name="name" />
+        <br/>
+        Lastname: <input type="text" name="lastname" />
+        <br/>
+        Email: <input type="email" name="email" />
+        <br/>
+        Subject: <input type="text" name="subject" />
+        <br/>
         Message: <textarea name="message"></textarea>
 
-       <!-- Submit form -->
-       <button>Submit</button>
+        <!-- Submit form -->
+        <button>Submit</button>
 
-   </form>
+    </form>
 
     <hr/>
 
@@ -75,9 +75,13 @@
 
     <h2>Schedule demo</h2>
 
-    <div class="contact-section" id="contact">
-        <div class="contact-form-container">
-            <form class="contact-form">
+    <form action="/demo" method="POST">
+
+        <!-- Include token -->
+        @csrf
+        <div class="contact-section" id="contact">
+            <div class="contact-form-container">
+
                 <div class="contact-form-group">
                     <div>
                         <label for="name">*Name and Surname</label>
@@ -113,11 +117,14 @@
                     <textarea name="message" rows="7" id="message"></textarea>
                 </div>
                 <input class="button submit" type="submit" value="Send" />
-            </form>
+
+            </div>
         </div>
-    </div>
+
+    </form>
 
     <img src="{{ asset('images/blog.jpg') }}"/>
 
 @endsection
+
 

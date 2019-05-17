@@ -37,9 +37,12 @@ class MailToSend extends Mailable
         $d = [
             'name' => $info->name,
             'lastname' => $info->lastname,
+            'company' => $info->company,
             'email' => $info->email,
             'subject' => $info->subject,
-            'message' => $info->message
+            'message' => $info->message,
+            'date' => $info->date,
+            'time' => $info->time,
         ];
 
         // check which type of contact we have and return appropriate data
@@ -67,22 +70,11 @@ class MailToSend extends Mailable
         } else if ($info->type == 'demo') {
             // return data to queue
             return $this->from('noreply@smartlab.ba','No Reply')
-                ->view("parts.contact_mail_template", ["data" => $d ])
-                ->subject('New general contact mail');
+                ->view("parts.demo_mail_template", ["data" => $d ])
+                ->subject('New demo contact mail');
         }
-
-//        if (!is_null($info->file_path)) {
-//            $attachment = $info->file_path;
-//            return $this->from('noreply@smartlab.ba','No Reply')
-//                ->view("parts.bussiness_mail_template", ["data" => $d ])
-//                ->attachFromStorage($attachment)
-//                ->subject('New bussiness contact mail');
-//        } else {
-//            return $this->from('noreply@smartlab.ba','No Reply')
-//                ->view("parts.contact_mail_template", ["data" => $d ])
-//                ->subject('New general contact mail');
-//        }
 
     }
 
 }
+
