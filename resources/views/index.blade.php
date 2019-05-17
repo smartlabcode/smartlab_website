@@ -508,13 +508,14 @@
     margin-top: 50px;
   }
 
-  #indicators span {
+  .indicator {
     display: inline-block;
     width: 15px;
     height: 15px;
     border-radius: 50%;
     background-color: var(--h2-color);
     opacity: 0.5;
+    cursor: pointer;
   }
 
   .indicator-opacity {
