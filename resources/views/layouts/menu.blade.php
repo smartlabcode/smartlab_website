@@ -1,39 +1,95 @@
 <style>
+    .join .show {
+        display: flex !important;
+    }
 
+    .dropdown-menu {
+        right: 4px !important;
+        left: auto !important;
+        top: 135% !important;
+        transform: translateX(50%);
+    }
 
+    .square::before {
+        display: inline-block;
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        position: absolute;
+        top: -10px;
+        right: 50%;
+        transform: translateX(50%) rotate(45deg);
+        border-top: 1px solid rgba(0, 0, 0, .15);
+        border-left: 1px solid rgba(0, 0, 0, .15);
+        border-radius: .25rem;
+        z-index: -5;
+    }
+
+    nav a {
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+    }
+
+    #languageForm {
+        font-family: "Montserrat", sans-serif;
+    }
+
+    @media screen and (max-width: 768px) {
+        .square::before {
+            display: none;
+        }
+
+        .dropdown-menu {
+            right: auto !important;
+            left: 0 !important;
+            top: 0 !important;
+            transform: translateX(0%);
+        }
+
+        .join .show {
+            display: block !important;
+        }
+    }
 </style>
+
 @section('menu')
 
 <!-- Available to all users -->
 <li class="nav-item dropdown">
     <a class="dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">@lang('menu.first_item')</a>
-    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="#">@lang('menu.online_courses')</a>
-        <a class="dropdown-item" href="#">@lang('menu.educational_video')</a>
-        <a class="dropdown-item" href="#">@lang('menu.programming')</a>
-        <a class="dropdown-item" href="#">@lang('menu.moodle')</a>
+    <div class="dropdown-menu square" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item py-3" href="#">@lang('menu.online_courses')</a>
+        <a class="dropdown-item py-3" href="#">@lang('menu.educational_video')</a>
+        <a class="dropdown-item py-3" href="#">@lang('menu.programming')</a>
+        <a class="dropdown-item py-3" href="#">@lang('menu.moodle')</a>
     </div>
 </li>
 <li class="nav-item dropdown">
     <a class="dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">@lang('menu.second_item')</a>
-    <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">@lang('menu.about_us')</a>
-        <a class="dropdown-item" href="#">@lang('menu.our_team')</a>
+    <div class="dropdown-menu square">
+        <a class="dropdown-item py-3" href="#">@lang('menu.about_us')</a>
+        <a class="dropdown-item py-3" href="#">@lang('menu.our_team')</a>
     </div>
 </li>
-<li class="nav-item dropdown">
-    <a class="dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">@lang('menu.third_item')</a>
-    <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">@lang('menu.outsourcing')</a>
-        <a class="dropdown-item" href="#">@lang('menu.become_a_partner')</a>
-        <a class="dropdown-item" href="#">@lang('menu.careers')</a>
+<li class="nav-item dropdown join ">
+    <a class="dropdown-toggle " id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">@lang('menu.third_item')</a>
+    <div class="dropdown-menu square ">
+        <div>
+            <a class="dropdown-item py-3" href="#">@lang('menu.outsourcing')</a>
+        </div>
+        <div>
+            <a class="dropdown-item py-3" href="#">@lang('menu.become_a_partner')</a>
+            <a class="dropdown-item py-3" href="#">@lang('menu.careers')</a>
+        </div>
     </div>
 </li>
 <li class="nav-item">
     <!-- Open link in new tab and set its language depending on the current language in main website-->
     <a href="{{ env("BLOG_DOMAIN")  }}/@if(App::getlocale()){{App::getlocale()}}@else en @endif" target="_blank">@lang('menu.fourth_item')</a>
 </li>
-<li class="nav-item">@lang('menu.fifth_item')</li>
+<li class="nav-item"><a href="#">@lang('menu.fifth_item')</a></li>
 
 <!-- This menu items are available only to logged in users -->
 @auth
