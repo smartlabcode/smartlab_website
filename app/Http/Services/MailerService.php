@@ -105,22 +105,30 @@ class MailerService
     /**
      * Delete all files from specified folder
      *
-     * @param $contactType
      */
-    private function delete($folderName) {
+    public function delete() {
 
         try {
             // delete all uploaded files
-            foreach (glob("files/" . $folderName . "/*") as $file) {
-                unlink($file);
-            }
+            foreach (glob(storage_path()."/app/*") as $folder) {
 
-            // delete folder
-            rmdir("files/" . $folderName);
+                if (is_dir($folder)
+                    && strpos($folder, 'images') === false
+                    && strpos($folder, 'public') === false) {
+
+                    foreach (glob($folder . "/*") as $file) {
+                        unlink($file);
+                    }
+
+                    //echo $file . "<br/>";
+                    // delete folder
+                    rmdir($folder);
+                }
+            }
 
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', 'MailchimpService - delete: ' . $e->getMessage());
+            $this->logService->setLog('ERROR', 'MailerService - delete: ' . $e->getMessage());
         }
     }
 

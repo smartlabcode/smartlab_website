@@ -75,6 +75,7 @@ Route::get('schedule', function() {
     return "ok";
 });
 
+
 // route for switching language
 Route::put('language', 'LanguagesController@switchLanguage');
 

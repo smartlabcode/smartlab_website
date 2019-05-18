@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Services\LogService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PagesController extends Controller
 {
@@ -22,7 +23,27 @@ class PagesController extends Controller
 
         try {
 
-            return view('index');
+            // get last 4 blogs which are published
+            $blogs = DB::select(
+                'SELECT 
+                          bt.heading, 
+                          bt.text,
+                          b.image_path,
+                          u.name, 
+                          u.lastname, 
+                          DATE_FORMAT(b.created_at, \'%M %d, %Y\') AS created_at
+                        FROM blogs AS b
+                        LEFT JOIN users AS u ON b.users_id = u.id
+                        LEFT JOIN blog_translations AS bt ON b.id = bt.blogs_id
+                        WHERE b.deleted_at IS NULL
+                        AND b.published = "true"
+                        GROUP BY b.id
+                        ORDER BY b.created_at DESC
+                        LIMIT 4');
+
+            return view('index', [
+                'blogs' => $blogs
+            ]);
 
         } catch (\Exception $e) {
             // add log

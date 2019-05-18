@@ -43,7 +43,8 @@ class BlogsController extends Controller
                         LEFT JOIN users AS u ON b.users_id = u.id
                         LEFT JOIN blog_translations AS bt ON b.id = bt.blogs_id
                         WHERE b.deleted_at IS NULL
-                        GROUP BY b.id');
+                        GROUP BY b.id
+                        ORDER BY b.created_at');
 
             // return blogs list page with its data
             return view('pages.blogs.blogs_list', [
@@ -59,6 +60,7 @@ class BlogsController extends Controller
         }
 
     }
+
 
     /**
      * Show the form for creating a new resource.  --->  /blogs/create
