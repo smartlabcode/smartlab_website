@@ -3,6 +3,9 @@
 @section('content')
 
     <h2>Extract terms to translate from XLF file</h2>
+
+    @include('parts.error_success')
+
     <form action="/exporter" method="post" enctype="multipart/form-data">
 
         @csrf

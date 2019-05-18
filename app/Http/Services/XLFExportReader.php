@@ -17,8 +17,8 @@ class XLFExportReader
     {
         $this->file = $file;
         $this->fileName = $fileName;
-        fopen($this->fileName. "_text_to_translate.xlsx", "w");
-        $this->spreadsheet = \PhpOffice\PhpSpreadsheet\IOFactory::load($this->fileName . "_text_to_translate.xlsx");
+        fopen(storage_path() . '/app/xliff/' .  $this->fileName. "_text_to_translate.xlsx", "w");
+        $this->spreadsheet = \PhpOffice\PhpSpreadsheet\IOFactory::load(storage_path() . '/app/xliff/' . $this->fileName . "_text_to_translate.xlsx");
         $this->spreadsheet->getActiveSheet()->getColumnDimension('B')->setWidth(35);
         $this->writer = new Xlsx($this->spreadsheet);
         $this->writer->setPreCalculateFormulas(false);
@@ -110,7 +110,7 @@ class XLFExportReader
 
         $this->writer->save(storage_path() . '/app/xliff/' . $this->fileName . "_text_to_translate.xlsx");
 
-        $this->downloadFile($this->fileName . "_text_to_translate.xlsx");
+        $this->downloadFile(storage_path() . '/app/xliff/' . $this->fileName . "_text_to_translate.xlsx");
     }
 
 
