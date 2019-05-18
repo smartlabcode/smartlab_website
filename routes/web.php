@@ -75,6 +75,8 @@ Route::get('schedule', function() {
     return "ok";
 });
 
+// TODO user needs to be somehow logged in to use this
+Route::post('/exporter', 'ExtractTermsFromXliffController@export');
 
 // route for switching language
 Route::put('language', 'LanguagesController@switchLanguage');

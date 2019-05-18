@@ -125,14 +125,16 @@
 
     <h2>BLOGS</h2>
 
-    @foreach($blogs as $blog)
+    @if(!empty($blogs))
+        @foreach($blogs as $blog)
 
-        <div>
-            <h2>{{$blog->heading}}</h2>
-            <img style="width: 200px; height: 200px" src="{{$blog->image_path}}"/>
-        </div>
+            <div>
+                <h2>{{$blog->heading}}</h2>
+                <img style="width: 200px; height: 200px" src="{{$blog->image_path}}"/>
+            </div>
 
-    @endforeach
+        @endforeach
+    @endif
 
 @endsection
 

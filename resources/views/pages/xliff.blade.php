@@ -3,9 +3,9 @@
 @section('content')
 
     <h2>Extract terms to translate from XLF file</h2>
-    <form action="http://xlfconvertor:8888/exporter" method="post" enctype="multipart/form-data">
+    <form action="/exporter" method="post" enctype="multipart/form-data">
 
-{{--        @csrf--}}
+        @csrf
 
         <label for="file">Choose XLF file for extracting terms: </label>
         <input id="file" type="file" name="file" accept=".xlf" required />
