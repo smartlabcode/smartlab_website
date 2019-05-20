@@ -172,6 +172,7 @@
     }
 
     .button{
+        z-index: 5;
         cursor: pointer;
         border-radius: 35px;
         width: 260px;
@@ -347,11 +348,12 @@
             margin-top: 3%;
         }
         .section4{
-            padding-top: 300px;
+            padding-top: 100px;
         }
         .button{
             width: 320px;
             height: 80px;
+
         }
         .pics1-2 img{
             margin: 5px;
@@ -366,7 +368,9 @@
 
     @media screen and (max-width: 1900px) {
 
-
+        .section3{
+            align-items: center;
+        }
         .pics1-1 img{
             width: 185px;
             height: 150%;
@@ -396,13 +400,13 @@
         }
         .secOneBg{
             width: 100%;
-            right: -70%;
+            right: -50%;
             top: -10%;
         }
         .secOneBg2{
             width: 500px;
             top: -23%;
-            left: 50%;
+            left: 55%;
         }
     }
 
@@ -447,9 +451,9 @@
             position: absolute;
             z-index: -100;
             top: -37%;
-            right: -34%;
+            right: -24%;
             height: 180%;
-            width: 100%;
+            width: 90%;
         }
 
         .secOneBg2{
@@ -466,7 +470,7 @@
         }
 
         .secOneImg{
-            padding-right: 0px;
+            padding-right: 0;
         }
         .h2-secTwo{
             margin-top: 230px;
@@ -566,7 +570,7 @@
     }
 
     @media screen and (max-width: 800px){
-        /*section 1 to 320px*/
+
         .section1 {
             display: flex;
             flex-direction: row;
@@ -589,12 +593,11 @@
 
         .secOneBg {
             position: absolute;
-            top: -30%;
-            right: -83%;
+            top: -35%;
+            right: -35%;
             transform: rotate(0deg);
-            width: 145%;
+            width: 100%;
         }
-
         .secOneBg2 {
             position: absolute;
             top: -20%;
@@ -604,8 +607,6 @@
         .secOneImg {
             flex-basis: 60%;
         }
-
-        /*section 2 to 320px*/
 
         .sectionTwo {
             margin-top: 0;
@@ -630,7 +631,26 @@
         }
 
         /*slider*/
+        #slider{
+            height: 60%;
+        }
 
+        #slider div{
+            width: calc(100% + 0);
+        }
+
+        .slider-right img{
+            display: flex;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slider-left img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
         /* section3*/
         .section3{
             display: flex;
@@ -854,11 +874,18 @@
             top: 965px;
             left: -72%;
         }
+        .sec4text {
+            margin-top: 100px;
+        }
+
+        #contact {
+            margin-top: -40% !important;
+        }
 
         .secTwoBg2 {
             width: 60%;
             position: absolute;
-            top: 140%;
+            top: 105% ;
             left: -30%;
         }
         #slider >img:last-child{
@@ -875,16 +902,33 @@
         }
 
         .section3{
-            margin-top: -90%;
+            margin-top: -60%;
         }
+
         .section4{
-            margin-top: -70%;
+            margin-top: -45%;
         }
+
+        .sec3text {
+            margin-top: -60%;
+        }
+
         .slider-left img{
             object-fit: cover;
             width: 100%;
             height: 55%;
             margin-top: -70%;
+        }
+        .sectionTwo{
+            margin-top: 30px;
+        }
+        .submit {
+            align-self: center !important;
+        }
+
+        .secOneBg{
+            top: -35%;
+            right: -100%;
         }
     }
 
@@ -901,40 +945,63 @@
             margin-top: 20%;
         }
         .section3{
-            margin-top: -90%;
+            margin-top: -50%;
         }
+
         .section4{
-            margin-top: -70%;
+            margin-top: -47%;
+        }
+
+        .sectionTwo{
+            margin-top: 20%;
         }
         .secTwoBg {
             width: 107%;
-            top: 965px;
+            top: 860px;;
             left: -72%;
         }
+
         .slider-left img{
             object-fit: cover;
             width: 100%;
             height: 55%;
             margin-top: -60%;
         }
+
         .secTwoBg2 {
             width: 60%;
             position: absolute;
-            top: 140%;
+            top: 95% ;
             left: -30%;
         }
+
         .slider-left{
             margin-top: -10%;
             width: 300px;
             height: 220px;
         }
 
+        #contact{
+            margin-top: -50%;
+        }
 
+        .sec3text {
+            margin-top: -60%;
+        }
+
+        .submit {
+            align-self: center !important;
+        }
+
+        .secOneBg{
+            top: -35%;
+            right: -100%;
+        }
     }
 
     @media screen and (max-width: 350px) {
 
-        /*section 1 to 320px*/
+
         .section1 {
             display: flex;
             flex-direction: column;
@@ -961,7 +1028,6 @@
             right: -110%;
             transform: rotate(53deg);
             width: 145%;
-
         }
 
         .secOneBg2 {
@@ -974,10 +1040,8 @@
             width: 110%;
         }
 
-        /*section 2 to 320px*/
-
         .sectionTwo {
-            margin-top: -125px;
+            margin-top: 50px;
         }
 
         .secTwoBg {
@@ -989,13 +1053,13 @@
         .secTwoBg2 {
             width: 60%;
             position: absolute;
-            top: 100%;
+            top: 105%;
             left: -30%;
         }
+
         .h2-secTwo{
             margin-top: 1px;
         }
-        /*slider*/
 
         #slider{
             height: auto;
@@ -1010,6 +1074,7 @@
         .slider-right{
             display: none !important;
         }
+
         .slider-left{
             width: 300px;
             height: 200px;
@@ -1040,16 +1105,15 @@
             margin-top: -70%;
         }
 
-        /* section3*/
         .section3{
-            margin-top: -90%;
+            margin-top: -80%;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
         .sec3text{
-            margin-top: -20%;
+            margin-top: -40%;
             font-family: "Montserrat", sans-serif;
             font-size: 1.3em;
             color: var(--h2-color);
@@ -1057,11 +1121,12 @@
 
         .button{
             height: 53%;
-            margin-top: -68%;
+            margin-top: -50%;
             display: flex;
             justify-content: center;
             font-size: 1rem;
             width: 98%;
+
         }
 
         /*section4*/
@@ -1069,9 +1134,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: -60%;
+            margin-top: -65%;
         }
-
 
         .pics1-1 img {
             width: 90px;
@@ -1091,7 +1155,131 @@
             margin-top: 15px;
         }
 
+        .submit {
+            align-self: center;
+        }
+    }
 
+    @media screen and (max-width: 1000px){
+
+        .contact-form-group{
+            flex-direction: column;
+        }
+    }
+
+    .contact-form-container {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .contact-form-container {
+        color: var(--h1-color);
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.3em;
+        font-family: "Montserrat", sans-serif;
+        margin-bottom: 0;
+    }
+
+    .contact-form-group {
+        display: flex;
+        flex-basis: 100%;
+        justify-content: space-between;
+        padding-top: 20px;
+    }
+
+    .contact-form-group div {
+        flex-basis: 47%;
+    }
+
+    .contact-form-group input,
+    textarea {
+        padding: 15px 25px;
+        border-radius: 10px;
+        /*background-color: rgba(122, 161, 233, 0.5);*/
+        border: 1px solid rgba(122, 161, 233, 0.5);
+        resize: none !important;
+        box-sizing: border-box;
+    }
+
+    input:focus,
+    textarea:focus {
+        outline: none !important;
+        border: 1px solid rgba(122, 161, 233, 1);
+    }
+
+    .contact-form-group label,
+    .contact-form-group input,
+    .contact-form-group textarea {
+        width: 100%;
+
+        margin-top: 5px;
+    }
+
+    .textarea {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button-orange:hover {
+
+        color: var(--button-bg-orange) !important;
+        border: 1px solid var(--button-bg-orange) !important;
+    }
+
+    .submit {
+        align-self: flex-end;
+        margin-top: 20px;
+        background-color: var(--button-bg-orange);
+        border: 1px solid var(--button-bg-orange);
+    }
+
+    .submit:hover {
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+    }
+
+    .contact-section {
+        width: 112%;
+        left: -6%;
+        position: relative;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.2s ease-in-out;
+        margin-top: 5%;
+    }
+
+    .contact-form-container p {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.3em;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+    .button {
+        cursor: pointer;
+        border: none;
+        border-radius: 35px;
+        width: 260px;
+        height: 70px;
+        font-size: 1.4em !important;
+        font-weight: 500;
+        color: white;
+        transition: all 0.2s ease-in;
+    }
+
+    .button:focus {
+        outline: 0;
+    }
+
+    .button:hover {
+        background-color: white;
+        color: var(--button-bg-color);
+        border: 1px solid var(--button-bg-color);
     }
 
 </style>
@@ -1126,7 +1314,6 @@
     <div class="secOneImg">
         <img src="images/online-courses-img.svg">
     </div>
-    <div style="padding-top: 150px"> <hr></div>
 </div>
 
 <!--   SECTION TWO -->
@@ -1134,8 +1321,6 @@
 <div class=" sectionTwo contain">
     <img class="secTwoBg2" src="images/orange-circle.svg">
     <img class="secTwoBg" src="images/header-fluid-blue.svg">
-
-
 
     <div class="h2-font h2-secTwo">
         <h3>Our Works</h3>
@@ -1150,17 +1335,59 @@
         <img class="shadow-1" src="images/Picture3.png" onclick="changeImage('next')">
     </div>
 
-
-    <div class="section3 contain" >
-        <div style="height: 50%">
-            <h5 class="sec3text">Want to see more:</h5>
-        </div>
-        <div style="height: 50%; margin-top: 5%; display: flex; justify-content: center">
-            <button class="button">Schedule a demo</button>
-        </div>
-    </div>
 </div>
 
+<div class="section3 contain" >
+    <div style="height: 50%">
+        <h5 class="sec3text">Want to see more:</h5>
+    </div>
+    <div style="height: 50%; margin-top: 5%; display: flex; justify-content: center">
+        <button id="button" class="button">Schedule a demo</button>
+    </div><br>
+</div><br>
+
+
+<section id="contact" class="contact-section">
+    <div class="contact-form-container">
+        <form class="contact-form">
+            <div class="contact-form-group">
+                <div>
+                    <label for="name">*Name and Surname</label>
+                    <input type="text" name="name" id="name" />
+                </div>
+                <div>
+                    <label for="company">*Company</label>
+                    <input type="text" name="company" id="company" />
+                </div>
+            </div>
+            <div class="contact-form-group">
+                <div>
+                    <label for="subject">*Subject</label>
+                    <input type="text" name="subject" id="subject" />
+                </div>
+                <div>
+                    <label for="email">*Email</label>
+                    <input type="text" name="email" id="email"/>
+                </div>
+            </div>
+            <div class="contact-form-group">
+                <div>
+                    <label for="date">*Meeting date</label>
+                    <input type="date" name="date" id="date" />
+                </div>
+                <div>
+                    <label for="email">*Meeting time</label>
+                    <input type="time" name="time"/>
+                </div>
+            </div>
+            <div class="contact-form-group textarea">
+                <label for="message">*Message</label>
+                <textarea name="message" id="message" rows="7"></textarea>
+            </div>
+            <input class="button submit button-orange" type="submit" value="Send" />
+        </form>
+    </div>
+</section>
 <!-- SECTION FOUUUUURRR-->
 
 <div class="section4 contain">
@@ -1229,6 +1456,18 @@
         }
 
     }
+
+
+    let button = document.querySelector("#button");
+    let form = document.querySelector("#contact");
+    button.addEventListener("click", function(){
+        console.log("clicked", form.clientHeight);
+        if(form.clientHeight != 0){
+            form.style.height = 0;
+        }else{
+            form.style.height = 100 + "%";
+        }
+    });
 
 </script>
 
