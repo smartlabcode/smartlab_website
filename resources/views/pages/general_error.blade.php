@@ -62,21 +62,26 @@
     </style>
 </head>
 <body>
-<div class="container">
-    <div class="h1-font">
-        <p>OOPS</p>
+    <div class="container">
+        <div class="h1-font">
+            <p>OOPS</p>
+        </div>
+
+        <div class="h2-font">
+            <p>There is only a 404 error<br> message ahead!</p>
+        </div>
+
+        <button id="button" class="button" onclick="goHome()">
+            Back to home
+        </button>
     </div>
 
-    <div class="h2-font">
-        <p>There is only a 404 error<br> message ahead!</p>
-    </div>
-
-    <button class="button">
-        Back to home
-    </button>
-</div>
+    <script>
+        function goHome() {
+            document.querySelector(location.href = "/index.php")
+        }
+    </script>
 
 </body>
 </html>
-
 @endsection
