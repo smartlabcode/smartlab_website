@@ -4,7 +4,7 @@
     }
 
     .dropdown-menu {
-        right: 4px !important;
+        right: 12px !important;
         left: auto !important;
         top: 135% !important;
         transform: translateX(50%);
