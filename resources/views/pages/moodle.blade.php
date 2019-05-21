@@ -1334,7 +1334,6 @@
             <div class="slider-left shadow-1"><img id="firstPart" src="" /></div>
             <div class="slider-right shadow-1"><img id="secondPart" src="" /></div>
         </div>
-
         <img class="shadow-1" src="{{'/images/Picture3.png'}}" onclick="changeImage('next')">
     </div>
 
