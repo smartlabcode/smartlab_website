@@ -16,8 +16,6 @@
     overflow-x: hidden;
   }
 
-
-
   * {
     box-sizing: border-box;
   }
@@ -399,7 +397,7 @@
 
   .section-three {
     position: relative;
-    margin-top: 250px;
+    padding-top: 250px;
   }
 
   .about-orange-circle {
@@ -455,7 +453,7 @@
   }
 
   .team {
-    margin-top: 250px;
+    padding-top: 250px;
     position: relative;
   }
 
@@ -488,7 +486,7 @@
   }
 
   .testemonials {
-    margin-top: 250px;
+    padding-top: 250px;
   }
 
   .partners-images {
@@ -566,7 +564,7 @@
   .blog-section {
     position: relative;
     text-align: center;
-    margin-top: 250px;
+    padding-top: 250px;
   }
 
   .blog-section .button {
@@ -804,13 +802,13 @@
   .contact-section {
     width: 112%;
     left: -6%;
+    top: 300px;
     background-image: url(images/img/footer-blue-bg.svg);
     background-repeat: no-repeat;
     background-size: 234vw;
     background-position-x: 40%;
     background-position-y: 40%;
     position: relative;
-    margin-top: 150px;
     padding-top: 80px;
   }
 
@@ -2031,7 +2029,7 @@
   </div>
   <button class="button">Show more</button>
 </section>
-<section class="contact-section">
+<section class="contact-section" id="contact">
   <img class="contact-orange-circle-r" src="images/img/orange-circle.svg" alt="background orange circle" />
   <img class="contact-orange-circle-l" src="images/img/orange-circle.svg" alt="background orange circle" />
   <div class="contact-form-container">
