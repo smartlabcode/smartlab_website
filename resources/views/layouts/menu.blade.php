@@ -55,6 +55,7 @@
         .join .show {
             display: block !important;
         }
+
     }
 </style>
 
@@ -100,27 +101,27 @@
 
 <!-- This menu item is available to super admins only (list of all admins) -->
 {{--@if(\Illuminate\Support\Facades\Auth::user()->roles_id == 1)--}}
-<li class="nav-item">
+<li class="nav-item nav-link">
     <a href="/dashboard">@lang('menu.sixth_item')</a>
 </li>
 {{--@endif--}}
 
-{{--<li class="nav-item">--}}
+{{--<li class="nav-itemnav-link ">--}}
 {{--<a href="{{route('blogs.index')}}">@lang('menu.seventh_item')</a>--}}
 {{--</li>--}}
 
 <!-- This menu item is available to super admins only (list of all subscribers) -->
 {{--@if(\Illuminate\Support\Facades\Auth::user()->roles_id == 1)--}}
-{{--<li class="nav-item">--}}
+{{--<li class="nav-item nav-link">--}}
 {{--<a href="/subscribers">@lang('menu.eight_item')</a>--}}
 {{--</li>--}}
 {{--@endif--}}
 
 <!-- List of all logs in the system -->
-{{--<li class="nav-item"><a href="/logs">@lang('menu.ninth_item')</a></li>--}}
+{{--<li class="nav-item nav-link"><a href="/logs">@lang('menu.ninth_item')</a></li>--}}
 
 <!-- Link for logging out -->
-<li class="nav-item"><a href="{{route('logout')}}">@lang('menu.tenth_item')</a></li>
+<li class="nav-item nav-link"><a href="{{route('logout')}}">@lang('menu.tenth_item')</a></li>
 
 @endauth
 
@@ -129,7 +130,7 @@
 <form class="form-inline" id="languageForm" action="/language" method="POST">
     @csrf
     @method('PUT')
-    <select class="form-control-sm" name="language" onchange="changeSiteLanguage(this.value)">
+    <select class="form-control-sm " name="language" onchange="changeSiteLanguage(this.value)">
         <option value="en" @if(App::getlocale()=='en' ) selected @endif>@lang('menu.english_language')</option>
         <option value="de" @if(App::getlocale()=='de' ) selected @endif>@lang('menu.german_language')</option>
         <option value="bs" @if(App::getlocale()=='bs' ) selected @endif>@lang('menu.bosnian_language')</option>
