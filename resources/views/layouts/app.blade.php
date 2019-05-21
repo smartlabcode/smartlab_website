@@ -27,9 +27,26 @@
 
     <!-- Wrote some style and move it to app.css later on -->
     <style>
+        :root {
+            --shadow-color: rgba(0, 53, 145, 0.15);
+            --button-bg-color: #4885fa;
+            --button-bg-orange: #ff931f;
+            --h2-color: #4885FA;
+            --h1-color: #14213d;
+            --p-color: #c9d6e2;
+            scroll-behavior: smooth;
+        }
+
         #app {
             width: 90%;
             margin: 0 auto;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
         }
 
         .contain {
@@ -41,7 +58,11 @@
         nav .container {
             padding-right: 0 !important;
             padding-left: 0 !important;
+            max-width: 1600px;
+            width: 90%;
+            margin: 0 auto;
         }
+
 
 
 
@@ -70,7 +91,7 @@
 
         <!-- Navigation -->
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel navbar-fixed-top ">
-            <div class="container contain">
+            <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src={{"/images/smartlab-logo.svg"}} height="30px">
                 </a>

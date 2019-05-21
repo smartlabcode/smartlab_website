@@ -1,4 +1,14 @@
 <style>
+    :root {
+        --shadow-color: rgba(0, 53, 145, 0.15);
+        --button-bg-color: #4885fa;
+        --button-bg-orange: #ff931f;
+        --h2-color: #4885FA;
+        --h1-color: #14213d;
+        --p-color: #c9d6e2;
+        scroll-behavior: smooth;
+    }
+
     .join .show {
         display: flex !important;
     }
@@ -34,7 +44,9 @@
         text-transform: uppercase;
         font-family: "Montserrat", sans-serif;
         font-weight: bold;
+
     }
+
 
     #languageForm {
         font-family: "Montserrat", sans-serif;
@@ -101,33 +113,33 @@
 
 <!-- This menu item is available to super admins only (list of all admins) -->
 {{--@if(\Illuminate\Support\Facades\Auth::user()->roles_id == 1)--}}
-<li class="nav-item nav-link">
-    <a href="/dashboard">@lang('menu.sixth_item')</a>
+<li class="nav-item">
+    <a class="nav-link" href="/dashboard">@lang('menu.sixth_item')</a>
 </li>
 {{--@endif--}}
 
-{{--<li class="nav-itemnav-link ">--}}
-{{--<a href="{{route('blogs.index')}}">@lang('menu.seventh_item')</a>--}}
+{{--<li class="nav-item nav-item ">--}}
+{{--<a class="nav-link" href="{{route('blogs.index')}}">@lang('menu.seventh_item')</a>--}}
 {{--</li>--}}
 
 <!-- This menu item is available to super admins only (list of all subscribers) -->
 {{--@if(\Illuminate\Support\Facades\Auth::user()->roles_id == 1)--}}
-{{--<li class="nav-item nav-link">--}}
-{{--<a href="/subscribers">@lang('menu.eight_item')</a>--}}
+{{--<li class="nav-item ">--}}
+{{--<a class="nav-link" href="/subscribers">@lang('menu.eight_item')</a>--}}
 {{--</li>--}}
 {{--@endif--}}
 
 <!-- List of all logs in the system -->
-{{--<li class="nav-item nav-link"><a href="/logs">@lang('menu.ninth_item')</a></li>--}}
+{{--<li class="nav-item "><a class="nav-link" href="/logs">@lang('menu.ninth_item')</a></li>--}}
 
 <!-- Link for logging out -->
-<li class="nav-item nav-link"><a href="{{route('logout')}}">@lang('menu.tenth_item')</a></li>
+<li class="nav-item "><a class="nav-link" href="{{route('logout')}}">@lang('menu.tenth_item')</a></li>
 
 @endauth
 
 <!-- Form for sending new language after user clicks on one of the select options - page is refreshed with new language translations -->
 
-<form class="form-inline" id="languageForm" action="/language" method="POST">
+<form class="form-inline nav-item" id="languageForm" action="/language" method="POST">
     @csrf
     @method('PUT')
     <select class="form-control-sm " name="language" onchange="changeSiteLanguage(this.value)">

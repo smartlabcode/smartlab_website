@@ -358,6 +358,8 @@
     @media screen and (max-width: 425px) {
         footer {
             background-position-x: 35%;
+            background-position-y: -33px;
+            background-size: 1900px;
         }
 
         .footer-top-row {

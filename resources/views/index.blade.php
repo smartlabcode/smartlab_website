@@ -992,6 +992,10 @@
       left: -15%;
     }
 
+    .section-two-hero {
+      margin-top: 0;
+    }
+
     .section-two-bot {
       flex-direction: column;
     }
@@ -1034,6 +1038,36 @@
     .contact-section {
       background-position-y: 48%;
       background-size: 270vw;
+      top: 150px;
+      padding-top: 0;
+    }
+
+    .contact-section .submit {
+      margin-bottom: 150px;
+    }
+
+    .section-three {
+      padding-top: 0;
+    }
+
+    .team {
+      padding-top: 0;
+    }
+
+    .testemonials {
+      padding-top: 0;
+    }
+
+    .blog-section {
+      padding-top: 0;
+    }
+
+    .blog-section {
+      margin-bottom: -0 !important;
+    }
+
+    .submit {
+      margin-bottom: 0;
     }
   }
 
@@ -1149,6 +1183,35 @@
 
     .contact-form-container p {
       font-size: 1em;
+    }
+
+    .section-two-hero {
+      margin-top: 250px;
+    }
+
+    .section-three {
+      margin-top: 250px;
+    }
+
+    .team {
+      margin-top: 250px;
+    }
+
+    .testemonials {
+      margin-top: 250px;
+    }
+
+    .blog-section {
+      margin-top: 250px;
+    }
+
+    .contact-section {
+      top: 120px;
+    }
+
+    .blog-section .button {
+      margin-top: 0;
+      margin-bottom: 0;
     }
   }
 
@@ -1302,15 +1365,15 @@
     }
 
     .section-three {
-      margin-top: 80px;
+      padding-top: 30px;
     }
 
     .blog-section {
-      margin-top: 80px;
+      padding-top: 0px;
     }
 
     .team {
-      padding-top: 0;
+      padding-top: 30px;
       margin-top: 75px;
     }
 
@@ -1319,8 +1382,9 @@
     }
 
     .contact-section {
-      background-size: 605vw;
-      margin-top: 10%;
+      background-size: 696vw;
+      /* margin-top: 10%; */
+      background-position-y: 48%;
     }
 
     .contact-orange-circle-l {
@@ -1364,10 +1428,12 @@
 
     .testemonials .flex {
       flex-direction: column-reverse;
+      margin-top: 0;
     }
 
     .testemonials .h1-font {
       margin-top: 100px;
+      margin-bottom: 0;
     }
 
     .partners-images img {
@@ -1384,6 +1450,11 @@
     .submit {
       margin-bottom: 60px;
     }
+
+    .contain {
+      margin-bottom: 0 !important;
+    }
+
   }
 
   @media screen and (max-width: 375px) {
