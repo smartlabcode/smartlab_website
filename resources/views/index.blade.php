@@ -16,9 +16,7 @@
     overflow-x: hidden;
   }
 
-  nav {
-    display: none !important;
-  }
+
 
   * {
     box-sizing: border-box;
