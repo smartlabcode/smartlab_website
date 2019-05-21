@@ -431,7 +431,7 @@
             </nav>
             <div class="footer-top-column phone --center">
                 <div>
-                    <img src="images/footer/social-icons/phone-receiver.svg" />
+                    <img src={{"/images/footer/social-icons/phone-receiver.svg"}} />
                     <div class="footer-phone-container">
                         <p>
                             <a href="tel: 00387 61 811 394">+387 61 811 394</a>
@@ -442,14 +442,14 @@
                     </div>
                 </div>
                 <div>
-                    <img src="images/footer/social-icons/mail.svg" />
+                    <img src={{"/images/footer/social-icons/mail.svg"}} />
                     <p>
                         <a href="mailto:hello@smartlab.ba">hello@smartlab.ba</a>
                     </p>
                 </div>
             </div>
             <div class="footer-top-column --center">
-                <img src="images/footer/social-icons/location.svg" />
+                <img src={{"/images/footer/social-icons/location.svg" }} />
                 <address>
                     <a href="https://www.google.com/maps/place/SmartLab/@43.8542408,18.3870703,17z/data=!3m1!4b1!4m5!3m4!1s0x4758c8c48c458d13:0xd3b7b0136b05bfe5!8m2!3d43.854237!4d18.389259" target="_blank">
                         <p>Kolodvorska 5,</p>
@@ -466,7 +466,7 @@
         </div>
         <div class="footer-bot-row">
             <div class="footer-bot-column --left ">
-                <a href="#"><img src="images/footer/social-icons/smartlab-white.svg" class="footer-bot-icons" /></a>
+                <a href="#"><img src={{"/images/footer/social-icons/smartlab-white.svg"}} class="footer-bot-icons" /></a>
 
             </div>
             <div class="footer-bot-column --center">
@@ -474,13 +474,13 @@
             </div>
             <div class="footer-bot-column --right">
                 <div class="social-icons-container">
-                    <a href="#" target="_blank"><img src="images/footer/social-icons/fb-icon.svg" class="footer-bot-icons" /></a>
-                    <a href="#" target="_blank"><img src="images/footer/social-icons/linkedin-icon.svg" class="footer-bot-icons" /></a>
+                    <a href="#" target="_blank"><img src={{"/images/footer/social-icons/fb-icon.svg"}} class="footer-bot-icons" /></a>
+                    <a href="#" target="_blank"><img src={{"/images/footer/social-icons/linkedin-icon.svg"}} class="footer-bot-icons" /></a>
                     <a href="#" target="_blank">
-                        <img src="images/footer/social-icons/skype-icon.svg" class="footer-bot-icons" />
+                        <img src={{"/images/footer/social-icons/skype-icon.svg"}} class="footer-bot-icons" />
                     </a>
                     <a href="#" target="_blank">
-                        <img src="images/footer/social-icons/youtube-icon.svg" class="footer-bot-icons no-right-margin" />
+                        <img src={{"/images/footer/social-icons/youtube-icon.svg"}} class="footer-bot-icons no-right-margin" />
                     </a>
                 </div>
             </div>
