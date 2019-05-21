@@ -1,31 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b79028d-cafa-497f-943d-d4c2314226fd" name="Default Changelist" comment="" />
+    <list default="true" id="5b79028d-cafa-497f-943d-d4c2314226fd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/courses.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/courses.blade.php" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/vendor/beyondcode/laravel-dump-server/" />
+    <ignored path="$PROJECT_DIR$/vendor/composer/" />
+    <ignored path="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/inflector/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/instantiator/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/lexer/" />
+    <ignored path="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/" />
+    <ignored path="$PROJECT_DIR$/vendor/egulias/email-validator/" />
+    <ignored path="$PROJECT_DIR$/vendor/erusev/parsedown/" />
+    <ignored path="$PROJECT_DIR$/vendor/fideloper/proxy/" />
+    <ignored path="$PROJECT_DIR$/vendor/filp/whoops/" />
+    <ignored path="$PROJECT_DIR$/vendor/fzaninotto/faker/" />
+    <ignored path="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/" />
+    <ignored path="$PROJECT_DIR$/vendor/guzzlehttp/promises/" />
+    <ignored path="$PROJECT_DIR$/vendor/guzzlehttp/psr7/" />
+    <ignored path="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php/" />
+    <ignored path="$PROJECT_DIR$/vendor/jakub-onderka/php-console-color/" />
+    <ignored path="$PROJECT_DIR$/vendor/jakub-onderka/php-console-highlighter/" />
+    <ignored path="$PROJECT_DIR$/vendor/laravel/framework/" />
+    <ignored path="$PROJECT_DIR$/vendor/laravel/telescope/" />
+    <ignored path="$PROJECT_DIR$/vendor/laravel/tinker/" />
+    <ignored path="$PROJECT_DIR$/vendor/league/flysystem/" />
+    <ignored path="$PROJECT_DIR$/vendor/markbaker/complex/" />
+    <ignored path="$PROJECT_DIR$/vendor/markbaker/matrix/" />
+    <ignored path="$PROJECT_DIR$/vendor/mockery/mockery/" />
+    <ignored path="$PROJECT_DIR$/vendor/monolog/monolog/" />
+    <ignored path="$PROJECT_DIR$/vendor/moontoast/math/" />
+    <ignored path="$PROJECT_DIR$/vendor/myclabs/deep-copy/" />
+    <ignored path="$PROJECT_DIR$/vendor/nesbot/carbon/" />
+    <ignored path="$PROJECT_DIR$/vendor/nikic/php-parser/" />
+    <ignored path="$PROJECT_DIR$/vendor/nunomaduro/collision/" />
+    <ignored path="$PROJECT_DIR$/vendor/opis/closure/" />
+    <ignored path="$PROJECT_DIR$/vendor/paragonie/random_compat/" />
+    <ignored path="$PROJECT_DIR$/vendor/phar-io/manifest/" />
+    <ignored path="$PROJECT_DIR$/vendor/phar-io/version/" />
+    <ignored path="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common/" />
+    <ignored path="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock/" />
+    <ignored path="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver/" />
+    <ignored path="$PROJECT_DIR$/vendor/phpmailer/phpmailer/" />
+    <ignored path="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/" />
+    <ignored path="$PROJECT_DIR$/vendor/phpoption/phpoption/" />
+    <ignored path="$PROJECT_DIR$/vendor/phpspec/prophecy/" />
+    <ignored path="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/" />
+    <ignored path="$PROJECT_DIR$/vendor/phpunit/php-file-iterator/" />
+    <ignored path="$PROJECT_DIR$/vendor/phpunit/php-text-template/" />
+    <ignored path="$PROJECT_DIR$/vendor/phpunit/php-timer/" />
+    <ignored path="$PROJECT_DIR$/vendor/phpunit/php-token-stream/" />
+    <ignored path="$PROJECT_DIR$/vendor/phpunit/phpunit/" />
+    <ignored path="$PROJECT_DIR$/vendor/psr/container/" />
+    <ignored path="$PROJECT_DIR$/vendor/psr/http-message/" />
+    <ignored path="$PROJECT_DIR$/vendor/psr/log/" />
+    <ignored path="$PROJECT_DIR$/vendor/psr/simple-cache/" />
+    <ignored path="$PROJECT_DIR$/vendor/psy/psysh/" />
+    <ignored path="$PROJECT_DIR$/vendor/ralouphie/getallheaders/" />
+    <ignored path="$PROJECT_DIR$/vendor/ramsey/uuid/" />
+    <ignored path="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup/" />
+    <ignored path="$PROJECT_DIR$/vendor/sebastian/comparator/" />
+    <ignored path="$PROJECT_DIR$/vendor/sebastian/diff/" />
+    <ignored path="$PROJECT_DIR$/vendor/sebastian/environment/" />
+    <ignored path="$PROJECT_DIR$/vendor/sebastian/exporter/" />
+    <ignored path="$PROJECT_DIR$/vendor/sebastian/global-state/" />
+    <ignored path="$PROJECT_DIR$/vendor/sebastian/object-enumerator/" />
+    <ignored path="$PROJECT_DIR$/vendor/sebastian/object-reflector/" />
+    <ignored path="$PROJECT_DIR$/vendor/sebastian/recursion-context/" />
+    <ignored path="$PROJECT_DIR$/vendor/sebastian/resource-operations/" />
+    <ignored path="$PROJECT_DIR$/vendor/sebastian/version/" />
+    <ignored path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/console/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/contracts/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/css-selector/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/debug/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/event-dispatcher/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/finder/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/http-foundation/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/http-kernel/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/polyfill-ctype/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/polyfill-iconv/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/polyfill-php72/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/process/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/routing/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/translation/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/var-dumper/" />
+    <ignored path="$PROJECT_DIR$/vendor/theseer/tokenizer/" />
+    <ignored path="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles/" />
+    <ignored path="$PROJECT_DIR$/vendor/vlucas/phpdotenv/" />
+    <ignored path="$PROJECT_DIR$/vendor/webmozart/assert/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FavoritesManager">
     <favorites_list name="smartlab_website" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/general_error.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="227" column="7" selection-start-line="227" selection-start-column="7" selection-end-line="227" selection-end-column="7" />
+            <state relative-caret-position="162">
+              <caret line="90" column="33" lean-forward="true" selection-start-line="90" selection-start-column="33" selection-end-line="90" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="429">
+              <caret line="131" column="40" lean-forward="true" selection-start-line="131" selection-start-column="40" selection-end-line="131" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/courses.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="-988">
+              <caret line="1325" column="63" selection-start-line="1325" selection-start-column="63" selection-end-line="1325" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -40,6 +144,16 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/resources/views/pages/courses.blade.php" />
+      </list>
+    </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -133,7 +247,7 @@
       <path value="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="91" />
     <option name="y" value="145" />
     <option name="width" value="1835" />
@@ -147,6 +261,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -192,12 +307,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -215,18 +331,29 @@
     <configuration />
   </component>
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5b79028d-cafa-497f-943d-d4c2314226fd" name="Default Changelist" comment="" />
+      <created>1558438626671</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1558438626671</updated>
+      <workItem from="1558438628842" duration="241000" />
+    </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="241000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="73" y="116" width="1468" height="715" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50547945" side_tool="true" weight="0.3085622" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49452055" visible="true" weight="0.30042613" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49452055" visible="true" weight="0.30533117" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.051457975" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.043835618" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" />
@@ -243,5 +370,38 @@
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/general_error.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="90" column="33" lean-forward="true" selection-start-line="90" selection-start-column="33" selection-end-line="90" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/server_error.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="131" column="40" lean-forward="true" selection-start-line="131" selection-start-column="40" selection-end-line="131" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/courses.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-988">
+          <caret line="1325" column="63" selection-start-line="1325" selection-start-column="63" selection-end-line="1325" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
