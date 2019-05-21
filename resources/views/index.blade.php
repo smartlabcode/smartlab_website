@@ -2076,7 +2076,6 @@
     let i = 0;
     let isInViewport = function(elem) {
       let bounding = elem.getBoundingClientRect();
-      console.log(bounding.top);
       return (
         bounding.top < 400
       );
@@ -2087,7 +2086,6 @@
           displays.forEach(display => {
 
             let int = Number(display.dataset.note);
-            console.log(int);
             strokeTransition(display, int)
             increaseNumber(display, int)
           });
@@ -2166,7 +2164,6 @@
       name: "Niko Nikić",
       company: "Nema"
     }];
-    console.log(partnersText, partnersImage, partnersName, partnersCompany, indicators, partners);
     let j = 1;
 
 
@@ -2187,7 +2184,7 @@
       })
     }
     setInterval(function() {
-      console.log(j, indicators.length);
+
       if (j == indicators.length) {
         indicators[j - 1].classList.remove("indicator-opacity");
         j = 0;
