@@ -32,6 +32,17 @@
             margin: 0 auto;
         }
 
+        .contain {
+            max-width: 1600px;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        nav .container {
+            padding-right: 0 !important;
+            padding-left: 0 !important;
+        }
+
 
 
         @media screen and (max-width: 990px) {
@@ -58,8 +69,8 @@
     <div id="app">
 
         <!-- Navigation -->
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel navbar-fixed-top">
-            <div class="container">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel navbar-fixed-top ">
+            <div class="container contain">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src={{"/images/smartlab-logo.svg"}} height="30px">
                 </a>
