@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,7 +18,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-
+    <link href="https://fonts.googleapis.com/css?family=Montserrat%7CSource+Sans+Pro" rel="stylesheet" />
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
@@ -25,28 +27,41 @@
 
     <!-- Wrote some style and move it to app.css later on -->
     <style>
-
         #app {
             width: 90%;
             margin: 0 auto;
         }
 
+
+
+        @media screen and (max-width: 990px) {
+            .navbar-brand img {
+                height: 20px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar-brand img {
+                height: 30px;
+            }
+        }
     </style>
 
 </head>
+
 <body>
 
     <!-- Import menu for including it later -->
     @include('layouts.menu')
-
+    @include('layouts.footer')
     <!-- Main application layout -->
     <div id="app">
 
         <!-- Navigation -->
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel navbar-fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Smartlab') }}
+                    <img src="images/smartlab-logo.svg" height="30px">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -65,12 +80,14 @@
         </nav>
 
         <!-- Content container -->
-        <main class="py-4">
+        <main>
 
             <!-- Include content -->
             @yield('content')
         </main>
+        @yield('footer')
     </div>
 
 </body>
+
 </html>
