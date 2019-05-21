@@ -26,9 +26,7 @@
         height: 100%;
     }
 
-    nav {
-        display: none !important;
-    }
+
 
     .bold {
         font-weight: bold;
@@ -317,6 +315,7 @@
 
     .relative {
         position: relative;
+        display: none;
     }
 
     .contact-form-container {
@@ -464,6 +463,7 @@
         text-align: center;
         position: relative;
         top: 250px;
+        display: none;
     }
 
     .xliff-section h1 {}
@@ -484,6 +484,7 @@
     .xliff-background-container {
         position: relative;
         margin-top: 10%;
+        display: none;
     }
 
     .dashed-line {
@@ -501,6 +502,7 @@
     .tools-container {
         position: relative;
         top: 700px;
+        display: none;
     }
 
     .tools {
