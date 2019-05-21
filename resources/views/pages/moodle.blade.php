@@ -1280,6 +1280,8 @@
             border: 1px solid var(--button-bg-color);
         }
 
+        {}
+
     </style>
 </head>
 <body  style="height: 100%; margin: 0 auto">
@@ -1288,8 +1290,8 @@
 <!--   SECTION ONE  -->
 
 <div class="section1 contain">
-    <img class="secOneBg2" src="images/orange-circle.svg">
-    <img class="secOneBg" src="images/header-fluid-blue.svg">
+    <img class="secOneBg2" src="{{'/images/orange-circle.svg'}}">
+    <img class="secOneBg" src="{{'/images/header-fluid-blue.svg'}}">
 
 
     <div class="section1-1">
@@ -1312,27 +1314,28 @@
     </div>
 
     <div class="secOneImg">
-        <img src="images/online-courses-img.svg">
+        <img src="{{'/images/online-courses.svg'}}">
     </div>
 </div>
 
 <!--   SECTION TWO -->
 
 <div class=" sectionTwo contain">
-    <img class="secTwoBg2" src="images/orange-circle.svg">
-    <img class="secTwoBg" src="images/header-fluid-blue.svg">
+    <img class="secTwoBg2" src="{{'/images/orange-circle.svg'}}">
+    <img class="secTwoBg" src="{{'/images/header-fluid-blue.svg'}}">
 
     <div class="h2-font h2-secTwo">
         <h3>Our Works</h3>
     </div>
 
     <div id="slider">
-        <img class="shadow-1" src="images/Picture2.png" onclick="changeImage('previous')" >
+        <img class="shadow-1" src="{{'/images/Picture2.png'}}" onclick="changeImage('previous')" >
         <div>
             <div class="slider-left shadow-1"><img id="firstPart" src="" /></div>
             <div class="slider-right shadow-1"><img id="secondPart" src="" /></div>
         </div>
-        <img class="shadow-1" src="images/Picture3.png" onclick="changeImage('next')">
+
+        <img class="shadow-1" src="{{'/images/Picture3.png'}}" onclick="changeImage('next')">
     </div>
 
 </div>
