@@ -12,7 +12,7 @@
 */
 
 // for all of the routes in the following group user needs to be authenticated to see them
-Route::middleware(['auth'])->group(function() {
+Route::middleware(['auth'])->group(function () {
 
     // route for displaying page after admin logs in
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
@@ -69,7 +69,7 @@ Route::post('demo', 'ContactController@handleDemoInfo');
 // route where careers info is sent
 Route::post('careers', 'ContactController@handleCareersInfo');
 
-Route::get('schedule', function() {
+Route::get('schedule', function () {
     \Illuminate\Support\Facades\Artisan::call('schedule:run');
 
     return "ok";
@@ -90,5 +90,5 @@ Route::post('assets', 'ImagesController@update');
 
 // authorization routes - register option is disabled
 Auth::routes([
-    'register' => false
+    //'register' => false
 ]);
