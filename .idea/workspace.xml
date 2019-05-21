@@ -100,8 +100,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/general_error.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="84" column="7" lean-forward="true" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
+            <state relative-caret-position="420">
+              <caret line="225" column="9" lean-forward="true" selection-start-line="225" selection-start-column="9" selection-end-line="225" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/courses.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/server_error.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -280,10 +298,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="92" />
-    <option name="y" value="20" />
+    <option name="x" value="91" />
+    <option name="y" value="145" />
     <option name="width" value="1835" />
-    <option name="height" value="1018" />
+    <option name="height" value="894" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -345,21 +363,21 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="dashboard&#9;FILE&#9;file:///Users/user/Desktop/Projects/smartlab_website/resources/views/dashboard.blade.php&#10;app.css&#9;FILE&#9;file:///Users/user/Desktop/Projects/smartlab_website/public/css/app.css&#10;app.js&#9;FILE&#9;file:///Users/user/Desktop/Projects/smartlab_website/public/js/app.js&#10;dashb&#9;null&#9;null&#10;web.&#9;FILE&#9;file:///Users/user/Desktop/Projects/smartlab_website/routes/web.php&#10;home&#9;FILE&#9;file:///Users/user/Desktop/Projects/smartlab_website/app/Http/Controllers/HomeController.php&#10;register&#9;null&#9;null&#10;web&#9;FILE&#9;file:///Users/user/Desktop/Projects/smartlab_website/routes/web.php&#10;logout&#9;null&#9;null&#10;appser&#9;FILE&#9;file:///Users/user/Desktop/Projects/smartlab_website/app/Providers/AppServiceProvider.php&#10;appserv&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/pages" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/pages" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\smartlab_website\resources\views\pages" />
       <recent name="$PROJECT_DIR$/public/summernote" />
       <recent name="$PROJECT_DIR$/resources/lang/en" />
       <recent name="$PROJECT_DIR$/resources/lang/de" />
       <recent name="$PROJECT_DIR$/resources/lang/bs" />
-      <recent name="$PROJECT_DIR$/app/Http/Controllers/Auth" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views/pages" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -405,12 +423,13 @@
       <workItem from="1557232856800" duration="8319000" />
       <workItem from="1557733509209" duration="1252000" />
       <workItem from="1557835255743" duration="4185000" />
-      <workItem from="1558356819368" duration="2858000" />
+      <workItem from="1558356819368" duration="3448000" />
+      <workItem from="1558424972323" duration="2786000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="227690000" />
+    <option name="totallyTimeSpent" value="231066000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -422,15 +441,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="74" y="16" width="1468" height="814" extended-state="0" />
+    <frame x="73" y="116" width="1468" height="715" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50547945" side_tool="true" weight="0.3085622" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49452055" visible="true" weight="0.29616478" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49452055" visible="true" weight="0.30042613" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.04398827" />
+      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.051457975" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" />
@@ -462,13 +481,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/parts/summernote.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="14" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21360">
@@ -747,21 +759,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/courses.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="1476" selection-start-line="1476" selection-end-line="1476" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/server_error.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/general_error.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="84" column="7" lean-forward="true" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
+        <state relative-caret-position="420">
+          <caret line="225" column="9" lean-forward="true" selection-start-line="225" selection-start-column="9" selection-end-line="225" selection-end-column="9" />
         </state>
       </provider>
     </entry>

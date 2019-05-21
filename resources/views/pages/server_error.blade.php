@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<!-- Extend main layout -->
+@extends('layouts.app')
+
+@section('content')
+
+        <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,7 +20,7 @@
             scroll-behavior: smooth;
         }
         html {
-            background: url(images/404-illustration.svg) no-repeat center center fixed;
+            background: url(images/error-500.svg) no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
@@ -210,7 +215,7 @@
     </div>
 
     <div class="h2-font">
-        <p>There is only a 404 error<br> message ahead!</p>
+        <p>There is only a 500 error<br> message ahead!</p>
     </div>
 
     <button id="button" class="button" onclick="goHome()">
@@ -226,3 +231,4 @@
 
 </body>
 </html>
+@endsection
