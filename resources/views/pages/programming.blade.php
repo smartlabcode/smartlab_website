@@ -1174,11 +1174,13 @@
     <div class="contact-section" id="contact">
         <div class="contact-form-container">
             <h2 class="text-center h1-font">Contact</h2>
-            <form class="contact-form">
+            <form class="contact-form" action="/demo" method="POST">
+                <!-- Include token -->
+                @csrf
                 <div class="contact-form-group">
                     <div>
                         <label for="name">*Name and Surname</label>
-                        <input type="text" name="name" id="name" />
+                        <input type="text" name="name" id="name" required />
                     </div>
                     <div>
                         <label for="company">Company</label>
@@ -1188,26 +1190,26 @@
                 <div class="contact-form-group">
                     <div>
                         <label for="subject">*Subject</label>
-                        <input type="text" name="subject" id="subject" />
+                        <input type="text" name="subject" id="subject" required />
                     </div>
                     <div>
                         <label for="email">*Email</label>
-                        <input type="email" name="email" id="email" />
+                        <input type="email" name="email" id="email" required />
                     </div>
                 </div>
                 <div class="contact-form-group">
                     <div>
                         <label for="date">*Meeting date</label>
-                        <input type="date" name="date" id="date" />
+                        <input type="date" name="date" id="date" required />
                     </div>
                     <div>
                         <label for="time">*Meeting time</label>
-                        <input type="time" name="time" id="time" />
+                        <input type="time" name="time" id="time" required />
                     </div>
                 </div>
                 <div class="contact-form-group textarea">
                     <label for="message">*Message</label>
-                    <textarea name="message" rows="7" id="message"></textarea>
+                    <textarea name="message" rows="7" id="message" required></textarea>
                 </div>
                 <input class="button submit" type="submit" value="Send" />
             </form>
