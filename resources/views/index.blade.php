@@ -27,7 +27,7 @@
   }
 
   .contain {
-    max-width: 1600px;
+    max-width: 1440px;
     width: 90%;
     margin: 0 auto;
   }
@@ -115,54 +115,9 @@
     text-align: center;
   }
 
-  .language {
-    display: none;
-    text-align: right;
-  }
 
-  .opacity {
-    opacity: 0.5;
-    color: white;
-  }
 
-  .margin-right-25 {
-    margin-right: 25px;
-  }
 
-  #de {
-    margin-right: 0;
-  }
-
-  .language span {
-    padding-right: 10px;
-  }
-
-  .language p {
-    padding-right: 10px;
-  }
-
-  .language-selector-container {
-    display: inline-flex;
-    align-items: center;
-  }
-
-  .language-selector-container span {
-    padding-left: 10px;
-  }
-
-  .language-selector-container img {
-    width: 20px;
-    cursor: pointer;
-    margin-right: 10px;
-  }
-
-  .language p {
-    display: inline-block;
-  }
-
-  .active-language {
-    opacity: 1;
-  }
 
   /*.container {
   max-width: 100%;
@@ -556,8 +511,6 @@
 
   .partners-images img {
     max-width: 45%;
-    margin-right: 10px;
-    margin-bottom: 10px;
     object-fit: contain;
   }
 
@@ -738,6 +691,10 @@
     font-size: 1.3em;
     font-family: "Montserrat", sans-serif;
     margin-bottom: 0;
+  }
+
+  .contact-form input {
+    color: white;
   }
 
   .contact-form-group {
@@ -1487,7 +1444,7 @@
     }
 
     .contact-section {
-      background-size: 790vw;
+      background-size: 927vw;
       background-position-y: 45%;
     }
 
@@ -1709,28 +1666,16 @@
   <img class="background-img-circle --circle1" src="images/img/fluid-bright-circle.svg" alt="bright circle background" />
   <img class="background-img-circle --circle2" src="images/img/fluid-bright-circle.svg" alt="bright circle background" />
   <img class="background-img-circle --circle3" src="images/img/fluid-bright-circle.svg" alt="bright circle background" />
-  <div class="language">
-    <p class="opacity margin-right-25">
-      <span>Call: </span><span>+387 61 811 394</span>
-      <span>+387 33 956 222</span>
-    </p>
-    <div class="language-selector-container">
-      <span class="opacity">Language: </span>
-      <img id="ba" class="opacity active-language" src="images/img/bh-flag.png" alt="Bosnian language" />
-      <img id="gb" class="opacity" src="images/img/gb-flag.png" alt="English language" />
-      <img id="de" class="opacity" src="images/img/de-flag.png" alt="German language" />
-    </div>
-  </div>
+
   <section class="section-one contain">
 
     <div class="section-one-text" data-aos="zoom-in">
-      <h2 class="h2-font">We design and develop</h2>
-      <h1 class="h1-font bold">E-LEARNING SOLUTIONS</h1>
+      <h2 class="h2-font">@lang('index.heading_h2')</h2>
+      <h1 class="h1-font bold">@lang('index.heading_h1')</h1>
       <p class="p-font ">
-        We are here to turn your ideas into high quality learning
-        experience.
+        @lang('index.heading_p')
       </p>
-      <button class="button margin-top-27">Get in touch</button>
+      <button class="button margin-top-27">@lang('index.heading_button')</button>
     </div>
     <img data-aos="zoom-in" class="section-one-animation" src="images/img/header-illustration.svg" alt="header ilustration" />
 
@@ -1745,13 +1690,11 @@
   <img class="section-two-background-bot-orange" src="images/img/orange-circle.svg" alt="orange background circle" />
   <div class="section-two-hero">
     <div>
-      <h2 class="h1-font">What We Do?</h2>
+      <h2 class="h1-font">@lang('index.section_two_h2')</h2>
       <p class="p-font">
-        In our everyday work, everything is related to "pure creativity, Articulate design and development, Moodle LMS, custom eLearning
-        solutions and much more". We're ready to take on any challenge! Using our highly collaborative design approach, we'll build your
-        custom solution from the ground up.
+        @lang('index.section_two_p')
       </p>
-      <button id="pinned-element1" class="button submit button-orange">Explore</button>
+      <button id="pinned-element1" class="button submit button-orange">@lang('index.section_two_button')</button>
     </div>
   </div>
   <div id="anchor">
@@ -1760,24 +1703,22 @@
         <img src="images/img/online-courses-img.svg" alt="online courses" />
       </div>
       <div class="section-two-top-right">
-        <h2 class="h2-font">Online courses</h2>
+        <h2 class="h2-font">@lang('index.section_two_top_right_h2')</h2>
         <p class="p-font">
-          We design and devlop eLearning content from scratch and
-          implement your ideas into high quality, engaging courses.
+          @lang('index.section_two_top_right_p')
         </p>
-        <button class="button">Learn More</button>
+        <button class="button">@lang('index.section_two_top_right_button')</button>
       </div>
     </div>
     <div class="section-two-bot">
       <div class="section-two-bot-item" data-aos-anchor=".section-two-bot" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="100" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
         <img class="--width-margin-top" src="images/img/video-animation-img.svg" alt="video and animation" />
         <div>
-          <h2 class="h2-font">Educational <span>video animation</span></h2>
+          <h2 class="h2-font">@lang('index.section_two_bot_left_h2')</h2>
           <p class="p-font">
-            Entertain and educate your trainees with our
-            attention-grabbing and engaging animated videos.
+            @lang('index.section_two_bot_left_p')
           </p>
-          <button class="button">Learn More</button>
+          <button class="button">@lang('index.section_two_bot_left_button')</button>
         </div>
 
 
@@ -1785,26 +1726,22 @@
       <div class="section-two-bot-item margin-both" data-aos-anchor=".section-two-bot" data-aos="zoom-in-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
         <img src="images/img/development-img.svg" alt="development" />
         <div>
-          <h2 class="h2-font">Development/ <span>programming</span></h2>
+          <h2 class="h2-font">@lang('index.section_two_bot_mid_h2')</h2>
           <p class="p-font">
-            Back and front-end development of custom functions and
-            interacitivty options making your courses compelling and user
-            friendly.
+            @lang('index.section_two_bot_mid_p')
           </p>
-          <button class="button">Learn More</button>
+          <button class="button">@lang('index.section_two_bot_mid_button')</button>
         </div>
 
       </div>
       <div class="section-two-bot-item" data-aos-anchor=".section-two-bot" data-aos="zoom-in-up" data-aos-offset="300" data-aos-delay="300" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
         <img class="--width-margin-top" src="images/img/moodle-img.svg" alt="moodle" />
         <div>
-          <h2 class="h2-font">Moodle <span>LMS Adaptation</span></h2>
+          <h2 class="h2-font">@lang('index.section_two_bot_right_h2')</h2>
           <p class="p-font">
-            We use the leading open source learning mangement system
-            Moodle with customizable features to create private websites
-            with online coursed.
+            @lang('index.section_two_bot_right_p')
           </p>
-          <button class="button">Learn More</button>
+          <button class="button">@lang('index.section_two_bot_right_button')</button>
         </div>
 
 
@@ -1817,16 +1754,15 @@
   <div>
     <div class="about-us">
       <div>
-        <h2 class="h1-font">About Us</h2>
+        <h2 class="h1-font">@lang('index.about_us_h2')</h2>
         <h3 class="h2-font">
-          SmartLab is an eLearning company whose goal is to help customers
-          reach their learning goals
+          @lang('index.about_us_h3')
         </h3>
       </div>
 
       <div id="aboutUs" class="flex about-us">
         <div>
-          <p>Online<br>Courses</p>
+          <p>@lang('index.about_us_circle1')</p>
           <div class="note-display --border-right --border-bottom" data-note="98">
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
@@ -1853,7 +1789,7 @@
           </div>
         </div>
         <div>
-          <p>Moodle LMS<br>Implementation</p>
+          <p>@lang('index.about_us_circle2')</p>
           <div class="note-display --border-right --border-bottom" data-note="80">
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
@@ -1870,7 +1806,7 @@
           </div>
         </div>
         <div>
-          <p>Web Design<br>and Development</p>
+          <p>@lang('index.about_us_circle3')</p>
           <div class="note-display --border-right --border-bottom" data-note="80">
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
@@ -1887,7 +1823,7 @@
           </div>
         </div>
         <div>
-          <p>Educational<br>Video Animation</p>
+          <p>@lang('index.about_us_circle4')</p>
           <div class="note-display --border-bottom" data-note="85">
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
@@ -1904,7 +1840,7 @@
           </div>
         </div>
         <div class="--border-right ">
-          <p>Consulting About<br>eLearning Features</p>
+          <p>@lang('index.about_us_circle5')</p>
           <div class="note-display" data-note="90">
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
@@ -1921,7 +1857,7 @@
           </div>
         </div>
         <div class="--border-right">
-          <p>Inhouse Training<br>and Seminars</p>
+          <p>@lang('index.about_us_circle6')</p>
           <div class="note-display" data-note="70">
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
@@ -1938,7 +1874,7 @@
           </div>
         </div>
         <div class="--border-right">
-          <p>Mobile App<br>Development</p>
+          <p>@lang('index.about_us_circle7')</p>
           <div class="note-display" data-note="65">
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
@@ -1956,7 +1892,7 @@
         </div>
         <div>
           <div class="note-display" data-note="100">
-            <p>Fun<br>at work</p>
+            <p>@lang('index.about_us_circle8')</p>
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
 
@@ -1981,7 +1917,7 @@
   <img class="team-blue-circle" src="images/img/blue-circle.svg" alt="blue background circle" />
   <img class="team-orange-circle-bottom" src="images/img/orange-circle.svg" alt="background orange circle" />
   <div>
-    <h2 class="text-center h1-font">Our Team</h2>
+    <h2 class="text-center h1-font">@lang('index.team_h2')</h2>
     <div class="flex --four">
       <img src="https://via.placeholder.com/200" alt="team members" />
       <img src="https://via.placeholder.com/200" alt="team members" />
@@ -1996,7 +1932,7 @@
 </section>
 <section class="contain testemonials">
   <div>
-    <h2 class="text-center h1-font">Partners</h2>
+    <h2 class="text-center h1-font">@lang('index.partners_h2')</h2>
     <div class="flex">
       <div class="partners-images">
         <img src="../images/partners-logo/TheTrainingTerminal-2.png" alt="TrainingTerminal logo" />
@@ -2038,7 +1974,7 @@
 <section class="blog-section contain">
   <img class="blog-orange-circle-big" src="images/img/orange-circle.svg" alt="orange circle background" />
   <img class="blog-orange-circle-small" src="images/img/orange-circle.svg" alt="orange circle background" />
-  <h2 class="text-center h1-font">Blog</h2>
+  <h2 class="text-center h1-font">@lang('index.blog_h2')</h2>
   <div class="blog-container">
     <div class="blog" data-aos-anchor=".blog-section" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
       <div class="img-container">
@@ -2099,16 +2035,15 @@
       </div>
     </div>
   </div>
-  <button class="button">Show more</button>
+  <button class="button">@lang('index.blog_button')</button>
 </section>
 <section class="contact-section" id="contact">
 
   <img class="contact-orange-circle-r" src="images/img/orange-circle.svg" alt="background orange circle" />
   <img class="contact-orange-circle-l" src="images/img/orange-circle.svg" alt="background orange circle" />
   <div class="contact-form-container">
-    <p>If our web site didn’t answer to all your questions, feel free to contact us with any specific question,
-      project proposal or just a introduction meeting request.</p>
-    <h2 class="text-center h1-font">Contact</h2>
+    <p>@lang('index.contact_p')</p>
+    <h2 class="text-center h1-font">@lang('index.contact_h2')</h2>
     @include('parts.error_success')
     <form class="contact-form" action="/contact" method="POST">
       <!-- Include token -->
