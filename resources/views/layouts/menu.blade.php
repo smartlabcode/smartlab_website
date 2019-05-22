@@ -86,8 +86,8 @@
 <li class="nav-item dropdown">
     <a class="dropdown-toggle nav-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">@lang('menu.second_item')</a>
     <div class="dropdown-menu square">
-        <a class="dropdown-item py-3" href="#about">@lang('menu.about_us')</a>
-        <a class="dropdown-item py-3" href="#team">@lang('menu.our_team')</a>
+        <a class="dropdown-item py-3" href="/#about">@lang('menu.about_us')</a>
+        <a class="dropdown-item py-3" href="/#team">@lang('menu.our_team')</a>
     </div>
 </li>
 <li class="nav-item dropdown join ">
@@ -98,7 +98,7 @@
         </div>
         <div>
             <a class="dropdown-item py-3" href="#">@lang('menu.become_a_partner')</a>
-            <a class="dropdown-item py-3" href="#">@lang('menu.careers')</a>
+            <a class="dropdown-item py-3" href="/#contact">@lang('menu.careers')</a>
         </div>
     </div>
 </li>
@@ -106,7 +106,7 @@
     <!-- Open link in new tab and set its language depending on the current language in main website-->
     <a class="nav-link" href="{{ env("BLOG_DOMAIN")  }}/@if(App::getlocale()){{App::getlocale()}}@else en @endif" target="_blank">@lang('menu.fourth_item')</a>
 </li>
-<li class="nav-item"><a class="nav-link" href="#contact">@lang('menu.fifth_item')</a></li>
+<li class="nav-item"><a class="nav-link" href="#">@lang('menu.fifth_item')</a></li>
 
 <!-- This menu items are available only to logged in users -->
 @auth
