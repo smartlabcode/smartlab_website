@@ -152,7 +152,7 @@
     }
 
     .contain {
-        max-width: 1500px;
+        max-width: 1440px;
         width: 90%;
         margin: 0 auto;
     }
@@ -479,7 +479,7 @@
     }
 
     .xliff-background-container {
-        height: 100%;
+
         position: relative;
         margin-top: 250px !important;
         margin-bottom: 250px !important;
@@ -585,10 +585,7 @@
             top: 325px;
         }
 
-        .tools-container {
-
-            top: 776px;
-        }
+        .tools-container {}
     }
 
     @media screen and (max-width: 1530px) {
@@ -657,9 +654,7 @@
             top: 6%;
         }
 
-        .tools-container {
-            top: 400px;
-        }
+        .tools-container {}
     }
 
     @media screen and (max-width: 1200px) {
@@ -678,9 +673,7 @@
             width: 40%;
         }
 
-        .tools-container {
-            top: 250px;
-        }
+        .tools-container {}
     }
 
     @media screen and (max-width: 1175px) {
@@ -840,23 +833,29 @@
         }
 
         .background-img-orange-circle {
-            right: -109px;
+            right: -67px;
             top: 47%;
             transform: rotate(30deg);
         }
 
         .background-img {
             top: 21%;
-            right: -92%;
+            right: -79%;
             transform: rotate(61deg);
         }
 
         .xliff-background {
             width: 170vw;
-            top: 18%;
+            top: -3%;
         }
 
+        .xliff-background-container {
+            margin-top: 0 !important;
+        }
 
+        .section3 {
+            margin-bottom: 0 !important;
+        }
 
         .--circle2 {
             bottom: 0%;
@@ -959,13 +958,9 @@
 
         }
 
-        .xliff-background-container {
-            margin-bottom: -100px !important;
-        }
+        .xliff-background-container {}
 
-        .tools-container {
-            top: 400px;
-        }
+        .tools-container {}
 
         .tools-img {
             flex-basis: 30%;
@@ -1010,36 +1005,44 @@
             font-size: 1.2em !important;
         }
 
+        .background-img {
+            top: 0;
+        }
+
         .section-one-animation {
             height: 270px;
             padding: 0;
+        }
+
+        .our-works {
+            margin-top: 200px !important;
         }
 
         .section-one {
             margin-bottom: 40px;
         }
 
-        .tools-container {
-            top: 260px;
-            margin-bottom: -100px;
+        .section-one-text {
+            margin-top: 0;
         }
+
+        .tools-container {}
 
         .section3 {
             margin-bottom: 0 !important;
         }
 
-        .relative {
-            top: -180px;
-            margin-bottom: -100px;
-        }
+        .relative {}
 
-        .w-100 {
-            top: -75px;
-        }
+        .w-100 {}
 
         .xliff-background {
             width: 644%;
-            top: 16%;
+            top: 8%;
+        }
+
+        .xliff-background-container {
+            margin-top: 0 !important;
         }
 
         #slider>img:last-child {
@@ -1102,10 +1105,7 @@
             top: 0;
         }
 
-        .tools-container {
-            top: 330px;
-            margin-bottom: -100px;
-        }
+        .tools-container {}
 
     }
 </style>
