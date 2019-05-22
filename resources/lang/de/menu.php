@@ -20,7 +20,7 @@ return [
   'outsourcing' => 'Outsourcing',
   'become_a_partner' => 'Become A Partner',
   'careers' => 'Careers',
-  'english_language' => 'Englisch',
-  'german_language' => 'Deutsch',
-  'bosnian_language' => 'Bosnisch'
+  'english_language' => 'En',
+  'german_language' => 'De',
+  'bosnian_language' => 'Ba'
 ];
