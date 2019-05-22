@@ -22,9 +22,7 @@
         overflow-x: hidden !important;
     }
 
-    main {
-        height: 100%;
-    }
+
 
 
 
@@ -315,7 +313,7 @@
 
     .relative {
         position: relative;
-        display: none;
+
     }
 
     .contact-form-container {
@@ -426,6 +424,7 @@
         display: flex;
         justify-content: space-between;
         margin: 100px auto;
+
     }
 
     .xliff-container .h1-font {
@@ -461,9 +460,7 @@
 
     .xliff-section {
         text-align: center;
-        position: relative;
-        top: 250px;
-        display: none;
+        flex-basis: 100%;
     }
 
     .xliff-section h1 {}
@@ -476,15 +473,18 @@
     .xliff-background {
         object-fit: cover;
         position: absolute;
-        width: 115vw;
+        width: 120vw;
         z-index: -100;
-        transform: translate(-20%, -3%);
+        transform: translate(-12%, 3%);
     }
 
     .xliff-background-container {
+        height: 100%;
         position: relative;
-        margin-top: 10%;
-        display: none;
+        margin-top: 250px !important;
+        margin-bottom: 250px !important;
+        display: flex;
+        align-items: center;
     }
 
     .dashed-line {
@@ -501,8 +501,6 @@
 
     .tools-container {
         position: relative;
-        top: 700px;
-        display: none;
     }
 
     .tools {
@@ -1306,58 +1304,57 @@
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     AOS.init();
+
+    var imgOne = 0;
+    var imgTwo = 1;
+
+    var images = [
+        "https://static.igre123.net/slike/212266-121951/mala-maca.jpg", // 0
+        "https://opusteno.rs/slike/2012/03/smesne-slike-14024/mala-maca.jpg", // 1
+        "https://static.igre123.net/slike/235049-148875/mala-maca.jpg", // 2
+        "https://static.igre123.net/slike/205865-134729/mala-maca.jpg" // 3
+    ];
+
+
+    function changeImage(par) {
+        if (window.innerWidth > 768) {
+            if (imgOne < (images.length - 2) && par == "next") {
+
+                imgOne = imgTwo;
+                imgTwo = imgTwo + 1;
+
+            } else if (imgOne !== 0 && par == "previous") {
+                imgOne = imgOne - 1;
+                imgTwo = imgTwo - 1;
+            }
+
+            var imgOneSrc = images[imgOne];
+            var imgTwoSrc = images[imgTwo];
+
+            document.getElementById("firstPart").src = imgOneSrc;
+            document.getElementById("secondPart").src = imgTwoSrc;
+
+        } else {
+            if (imgOne < images.length - 1 && par == "next") {
+
+                imgOne++;
+            } else if (imgOne !== 0 && par == "previous") {
+                imgOne--;
+            }
+            imgOneSrc = images[imgOne];
+            document.getElementById("firstPart").src = imgOneSrc;
+        }
+
+    }
+    changeImage("demo");
 </script>
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
         let schedule = document.querySelector("#schedule");
         let contact = document.querySelector("#contact");
-        var imgOne = 0;
-        var imgTwo = 1;
-
-        var images = [
-            "https://static.igre123.net/slike/212266-121951/mala-maca.jpg", // 0
-            "https://opusteno.rs/slike/2012/03/smesne-slike-14024/mala-maca.jpg", // 1
-            "https://static.igre123.net/slike/235049-148875/mala-maca.jpg", // 2
-            "https://static.igre123.net/slike/205865-134729/mala-maca.jpg" // 3
-        ];
-        changeImage("demo");
-
-        function changeImage(par) {
-            if (window.innerWidth > 768) {
-                if (imgOne < (images.length - 2) && par == "next") {
-
-                    imgOne = imgTwo;
-                    imgTwo = imgTwo + 1;
-
-                } else if (imgOne !== 0 && par == "previous") {
-                    imgOne = imgOne - 1;
-                    imgTwo = imgTwo - 1;
-                }
-
-                var imgOneSrc = images[imgOne];
-                var imgTwoSrc = images[imgTwo];
-
-                document.getElementById("firstPart").src = imgOneSrc;
-
-                document.getElementById("secondPart").src = imgTwoSrc;
-
-            } else {
-                if (imgOne < images.length - 1 && par == "next") {
-
-                    imgOne++;
-                } else if (imgOne !== 0 && par == "previous") {
-                    imgOne--;
-                }
-                imgOneSrc = images[imgOne];
-                document.getElementById("firstPart").src = imgOneSrc;
-            }
-
-        }
 
 
-        console.log(schedule, contact);
         schedule.addEventListener("click", function() {
-            console.log("clicked", window.innerWidth);
             if (contact.clientHeight != 80) {
                 contact.style.height = 0;
             } else {
