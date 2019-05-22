@@ -791,6 +791,7 @@
     margin-bottom: 250px;
     background-color: var(--button-bg-orange);
     border: 1px solid var(--button-bg-orange);
+    z-index: 10;
   }
 
   .submit:hover {
@@ -2107,7 +2108,9 @@
     <p>If our web site didn’t answer to all your questions, feel free to contact us with any specific question,
       project proposal or just a introduction meeting request.</p>
     <h2 class="text-center h1-font">Contact</h2>
-    <form class="contact-form">
+    <form class="contact-form" action="/contact" method="POST">
+      <!-- Include token -->
+      @csrf
       <div class="contact-form-group">
         <div>
           <label for="name">*Name</label>
@@ -2132,7 +2135,7 @@
         <label for="message">*Message</label>
         <textarea name="message" rows="7" id="message"></textarea>
       </div>
-      <input class="button submit" type="submit" value="Send" />
+      <button class="button submit" value="Send">Send</button>
     </form>
   </div>
 </section>
