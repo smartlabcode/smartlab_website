@@ -1618,7 +1618,7 @@
 <!-- <a href="{{ env('BLOG_DOMAIN') }}/blog/7/de" target="_blank">Visit some blog</a> -->
 
 <!-- Include error/success messages to be listed if anything goes wrong -->
-@include('parts.error_success')
+
 
 <!-- <hr/> -->
 
@@ -2102,38 +2102,40 @@
   <button class="button">Show more</button>
 </section>
 <section class="contact-section" id="contact">
+
   <img class="contact-orange-circle-r" src="images/img/orange-circle.svg" alt="background orange circle" />
   <img class="contact-orange-circle-l" src="images/img/orange-circle.svg" alt="background orange circle" />
   <div class="contact-form-container">
     <p>If our web site didn’t answer to all your questions, feel free to contact us with any specific question,
       project proposal or just a introduction meeting request.</p>
     <h2 class="text-center h1-font">Contact</h2>
+    @include('parts.error_success')
     <form class="contact-form" action="/contact" method="POST">
       <!-- Include token -->
       @csrf
       <div class="contact-form-group">
         <div>
           <label for="name">*Name</label>
-          <input type="text" name="name" id="name" />
+          <input type="text" name="name" id="name" required />
         </div>
         <div>
           <label for="surnanme">*Surname</label>
-          <input type="text" name="surname" id="surname" />
+          <input type="text" name="lastname" id="lastname" required />
         </div>
       </div>
       <div class="contact-form-group">
         <div>
           <label for="subject">*Subject</label>
-          <input type="text" name="subject" id="subject" />
+          <input type="text" name="subject" id="subject" required />
         </div>
         <div>
           <label for="email">*Email</label>
-          <input type="email" name="email" id="email" />
+          <input type="email" name="email" id="email" required />
         </div>
       </div>
       <div class="contact-form-group textarea">
         <label for="message">*Message</label>
-        <textarea name="message" rows="7" id="message"></textarea>
+        <textarea name="message" rows="7" id="message" required></textarea>
       </div>
       <button class="button submit" value="Send">Send</button>
     </form>
