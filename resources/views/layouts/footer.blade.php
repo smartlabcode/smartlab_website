@@ -23,7 +23,7 @@
     }
 
     .contain {
-        max-width: 1500px;
+        max-width: 1440px;
         width: 90%;
         margin: 0 auto;
     }
@@ -384,7 +384,7 @@
 
     @media screen and (max-width: 365px) {
         footer {
-            background-position-x: 36%;
+            background-position-x: 27%;
             background-size: 2000px;
             background-position-y: 0px;
         }
