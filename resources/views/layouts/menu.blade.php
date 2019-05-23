@@ -11,6 +11,15 @@
 
 
 
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    nav .contain {
+        margin-bottom: 0 !important;
+    }
 
     .nav-list {
         list-style-type: none;
@@ -44,7 +53,6 @@
 
     .nav-li:hover .expandable {
         height: auto;
-
     }
 
 
@@ -65,6 +73,7 @@
     }
 
     .nav-li a {
+        z-index: 100;
         color: white;
         display: block;
         padding: 10px 20px 10px 40px;
@@ -214,9 +223,111 @@
         height: 30px;
         position: absolute;
         left: 0;
+        top: 5px;
     }
 
-    @media screen and (max-width: 768px) {}
+    .nav-button {
+        display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+        .nav-button {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 0;
+        }
+
+        .filler {
+            display: none;
+        }
+
+        .nav-list {
+            height: 45px !important;
+        }
+
+        .nav-button-inner {
+            display: inline-block;
+            position: absolute;
+            width: 30px;
+            height: 5px;
+            background-color: var(--h1-color);
+        }
+
+        .nav-button-inner::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 10px;
+            width: 30px;
+            height: 5px;
+            background-color: var(--h1-color);
+        }
+
+        .nav-button-inner::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 20px;
+            width: 30px;
+            height: 5px;
+            background-color: var(--h1-color);
+        }
+
+        .nav-button nav .contain {
+            margin-bottom: 0;
+        }
+
+        .nav-bot {
+            flex-basis: 95%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .nav-top {
+            flex-basis: 95%;
+        }
+
+        .nav-bot li {
+            display: none;
+            flex-basis: 100%;
+        }
+
+        .nav-bot .first {
+            margin-top: 50px;
+            border-radius: 15px 15px 0 0px;
+        }
+
+        .nav-bot .last {
+            border-radius: 0 0px 15px 15px;
+        }
+
+        .visible-js {
+            display: initial !important;
+            background-color: white;
+        }
+
+        .expandable {
+            position: relative;
+            transform: translateX(0);
+            top: 0px !important;
+            margin-left: 50px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border-left: 1px solid var(--shadow-color);
+            border-right: 1px solid var(--shadow-color);
+        }
+
+        .arrow-js::before {
+            left: 97%;
+        }
+
+        .join {
+            display: block;
+
+        }
+    }
 </style>
 
 @section('menu')
@@ -241,9 +352,11 @@
 
     <div class="nav-bot contain">
         <a href="/"><img class="nav-logo" src={{"/images/smartlab-logo.svg"}}></a>
-
-        <li class="nav-li nav-li-js arrow">
-            <a href="#" class="grey">@lang('menu.first_item')</a>
+        <div class="nav-button" id="nav-button">
+            <div class="nav-button-inner"></div>
+        </div>
+        <li class="nav-li nav-li-js arrow first">
+            <a class="grey">@lang('menu.first_item')</a>
             <div class="filler"></div>
             <div class="expandable">
                 <a href="/pages/courses">@lang('menu.online_courses')</a>
@@ -253,7 +366,7 @@
             </div>
         </li>
         <li class="nav-li nav-li-js arrow">
-            <a href="#" class="grey">@lang('menu.second_item')</a>
+            <a class="grey">@lang('menu.second_item')</a>
             <div class="filler"></div>
             <div class="expandable">
                 <a href="/#about">@lang('menu.about_us')</a>
@@ -261,7 +374,7 @@
             </div>
         </li>
         <li class="nav-li nav-li-js arrow">
-            <a href="#" class="grey">@lang('menu.third_item')</a>
+            <a class="grey">@lang('menu.third_item')</a>
             <div class="filler"></div>
             <div class="expandable join">
                 <div class="join-left">
@@ -277,7 +390,7 @@
             <!-- Open link in new tab and set its language depending on the current language in main website-->
             <a class="padding-right-0 grey" href="{{ env("BLOG_DOMAIN")  }}/@if(App::getlocale()){{App::getlocale()}}@else en @endif" target="_blank">@lang('menu.fourth_item')</a>
         </li>
-        <li class="nav-li nav-li-js"><a class="padding-right-0 grey" href="#">@lang('menu.fifth_item')</a></li>
+        <li class="nav-li nav-li-js last"><a class="padding-right-0 grey" href="#">@lang('menu.fifth_item')</a></li>
 
         <!-- This menu items are available only to logged in users -->
         @auth
@@ -316,6 +429,7 @@
 </ul>
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
+        let navButton = document.querySelector("#nav-button");
         let nav = document.querySelector("#nav-list");
         let navTop = document.querySelector("#nav-top");
         let grey = document.querySelectorAll(".grey");
@@ -323,8 +437,13 @@
         let expandable = document.querySelectorAll(".expandable");
         let navLi = document.querySelectorAll(".nav-li");
         console.log(navLi);
+        navButton.addEventListener("click", function(event) {
+            for (let i = 0; i < navLi.length; i++) {
+                navLi[i].classList.toggle("visible-js");
+            }
+        })
         window.addEventListener("scroll", function(event) {
-            console.log(window.pageYOffset);
+
             if (window.pageYOffset > 300) {
                 nav.style.backgroundColor = "white";
                 navTop.style.display = "none";
