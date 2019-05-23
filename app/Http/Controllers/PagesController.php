@@ -25,7 +25,8 @@ class PagesController extends Controller
 
             // get last 4 blogs which are published
             $blogs = DB::select(
-                'SELECT 
+                'SELECT     
+                          b.id,
                           bt.heading, 
                           bt.text,
                           b.image_path,
