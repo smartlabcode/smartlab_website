@@ -888,7 +888,7 @@
         .secTwoBg2 {
             width: 60%;
             position: absolute;
-            top: 105% ;
+            top: 111% ;
             left: -30%;
         }
         #slider >img:last-child{
@@ -960,7 +960,7 @@
         }
         .secTwoBg {
             width: 107%;
-            top: 860px;;
+            top: 940px;
             left: -72%;
         }
 
@@ -974,7 +974,7 @@
         .secTwoBg2 {
             width: 60%;
             position: absolute;
-            top: 95% ;
+            top: 110% ;
             left: -30%;
         }
 
@@ -1056,7 +1056,7 @@
         .secTwoBg2 {
             width: 60%;
             position: absolute;
-            top: 105%;
+            top: 110%;
             left: -30%;
         }
 
@@ -1294,23 +1294,18 @@
 
     <div class="section1-1">
         <h3 class="h1-font">
-            Online Courses
+            @lang('courses.onlineCourses')
         </h3>
 
         <p  class="p-font">
-            We design and develop eLearning content from<br>
-            scratch and implement your ideas into high quality,<br>
-            engaging courses. To help you maximize your revenue on<br>
-            training investment, our courses are built to improve<br>
-            performance of your employees and decrease<br>
-            your training expanditure.
+            @lang('courses.secOneP1')
         </p>
 
         <ul class="p-font bold">
-            <li class="uls">Adaptive and responsive courses</li>
-            <li class="uls">Micro learning animated videos</li>
-            <li class="uls">Scenario based learning paths</li>
-            <li class="uls">Gamified learning <br>experience</li>
+            <li class="uls"> @lang('courses.secOneUlFirst')</li>
+            <li class="uls">@lang('courses.secOneUlSecond')</li>
+            <li class="uls">@lang('courses.secOneUlThird')</li>
+            <li class="uls">@lang('courses.secOneUlFourth')</li>
         </ul>
     </div>
 
@@ -1326,7 +1321,7 @@
     <img class="secTwoBg" src="{{'/images/header-fluid-blue.svg'}}">
 
     <div class="h2-font h2-secTwo">
-        <h3>Our Works</h3>
+        <h3>@lang('courses.sec2h2')</h3>
     </div>
 
     <div id="slider">
@@ -1342,10 +1337,10 @@
 
 <div class="section3 contain" >
     <div style="height: 50%">
-        <h5 class="sec3text">Want to see more:</h5>
+        <h5 class="sec3text">@lang('courses.sec2h22')</h5>
     </div>
     <div style="height: 50%; margin-top: 5%; display: flex; justify-content: center">
-        <button id="button" class="button">Schedule a demo</button>
+        <button id="button" class="button">@lang('courses.buttonSchedule')</button>
     </div><br>
 </div><br>
 
@@ -1355,39 +1350,39 @@
         <form class="contact-form">
             <div class="contact-form-group">
                 <div>
-                    <label for="name">*Name and Surname</label>
+                    <label for="name">@lang('courses.contactName')</label>
                     <input type="text" name="name" id="name" />
                 </div>
                 <div>
-                    <label for="company">*Company</label>
+                    <label for="company">@lang('courses.contactCompany')</label>
                     <input type="text" name="company" id="company" />
                 </div>
             </div>
             <div class="contact-form-group">
                 <div>
-                    <label for="subject">*Subject</label>
+                    <label for="subject">@lang('courses.contactSubject')</label>
                     <input type="text" name="subject" id="subject" />
                 </div>
                 <div>
-                    <label for="email">*Email</label>
+                    <label for="email">@lang('courses.contactEmail')</label>
                     <input type="text" name="email" id="email"/>
                 </div>
             </div>
             <div class="contact-form-group">
                 <div>
-                    <label for="date">*Meeting date</label>
+                    <label for="date">@lang('courses.contactDate')</label>
                     <input type="date" name="date" id="date" />
                 </div>
                 <div>
-                    <label for="email">*Meeting time</label>
+                    <label for="email">@lang('courses.contactTime')</label>
                     <input type="time" name="time"/>
                 </div>
             </div>
             <div class="contact-form-group textarea">
-                <label for="message">*Message</label>
+                <label for="message">@lang('courses.contactMessage')</label>
                 <textarea name="message" id="message" rows="7"></textarea>
             </div>
-            <input class="button submit button-orange" type="submit" value="Send" />
+            <input class="button submit button-orange" type="submit" value="@lang('courses.buttonSend')" />
         </form>
     </div>
 </section>
@@ -1411,9 +1406,7 @@
         </div>
     </div>
 </div>
-<div class="copyright contain">
-    <h1>Copyright © 2019 SmartLab</h1>
-</div>
+
 
 <script>
 
