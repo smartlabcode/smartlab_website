@@ -1995,7 +1995,7 @@
       <div class="img-container">
         <div class="img-container-overlay <?php if ($blog->id % 2 != 0) echo 'img-container-overlay-blue';
                                           else echo 'img-container-overlay-orange' ?> "> </div>
-        <img src={{$blog->image_path}} alt=" blog post">
+        <img src={{$blog->image_path}} alt="blog post">
         <svg class="wave" viewBox="0 0 500 500">
           <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
         </svg>
