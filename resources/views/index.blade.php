@@ -48,14 +48,14 @@
   .h2-font {
     font-family: "Montserrat", sans-serif;
     font-size: 2em;
-    color: var(--h2-color);
+    color: var(--h2-color) !important;
   }
 
   .p-font {
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Source Sans Pro", sans-serif !important;
     font-size: 1.5em;
     font-weight: 300;
-    color: var(--h1-color);
+    color: black !important;
   }
 
   .background-section-one {
@@ -568,6 +568,14 @@
     -webkit-box-shadow: -1px -1px 25px 1px rgba(0, 53, 145, 0.7);
     -moz-box-shadow: -1px -1px 25px 1px rgba(0, 53, 145, 0.7);
     box-shadow: -1px -1px 25px 1px rgba(0, 53, 145, 0.7);
+    text-decoration: none;
+  }
+
+  .blog-text {
+    color: black !important;
+    font-family: "Source Sans Pro", sans-serif !important;
+    height: 100px;
+    overflow: hidden;
   }
 
   .blog .p-font {
@@ -579,21 +587,26 @@
     font-size: 1.4em;
     line-height: 1.4;
     height: 117px;
+    color: var(--p-color) !important;
     /* padding-bottom: 14px; */
   }
 
-  .blog .p-font::after {
+  .blog .blog-text::after {
     position: absolute;
     content: "...";
-    bottom: 0;
-    right: 0;
-    font-size: 1.em;
-    /* line-height: 1em; */
+    bottom: 20px;
+    right: 10px;
+    font-size: 1em;
+    line-height: 1em;
     padding-left: 15px;
-    padding-right: 10px;
+    padding-right: 35px;
     padding-bottom: 4px;
     background-color: white;
     font-weight: 500;
+  }
+
+  .blog-button {
+    flex-basis: 100%;
   }
 
   .blog div:not(.img-container) {
@@ -1976,23 +1989,28 @@
   <img class="blog-orange-circle-small" src="images/img/orange-circle.svg" alt="orange circle background" />
   <h2 class="text-center h1-font">@lang('index.blog_h2')</h2>
   <div class="blog-container">
-    <div class="blog" data-aos-anchor=".blog-section" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
+    @foreach ($blogs as $blog)
+
+    <a href="#{{$blog->id}}" class="blog" data-aos-anchor=".blog-section" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
       <div class="img-container">
-        <div class="img-container-overlay img-container-overlay-blue"></div>
-        <img src="images/blog/augmented-reality-investment-e1473173317384.jpg" alt="blog post">
+        <div class="img-container-overlay <?php if ($blog->id % 2 != 0) echo 'img-container-overlay-blue';
+                                          else echo 'img-container-overlay-orange' ?> "> </div>
+        <img src={{$blog->image_path}} alt=" blog post">
         <svg class="wave" viewBox="0 0 500 500">
           <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
         </svg>
       </div>
-
-
       <div>
-        <h2 class="h2-font">Blog Title</h2>
-        <p><span>05.07.2019.</span> <span>Haris M.</span></p>
-        <p class="p-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc odio, mollis in fringilla at, cursus aliquam felis. Curabitur in cursus orci. Vestibulum convallis lectus risus, at varius nisl egestas vel. Suspendisse laoreet ex quis odio aliquet mollis. Duis quis porta magna. Nam dignissim enim lectus, sit amet porta metus interdum a. Praesent pulvinar justo vel lectus dictum, at fermentum neque lobortis. Sed vitae nisl eget augue convallis convallis nec at nisi. Nullam fermentum lorem metus, sit amet tincidunt velit convallis non. Proin sed finibus mauris. Sed orci metus, fringilla sed sollicitudin at, efficitur in ipsum. Pellentesque egestas ex quis tempor sagittis. Integer at nulla scelerisque, luctus quam vel, feugiat sem. Donec molestie eu lacus ut egestas. Pellentesque urna justo, tempus a est sed, bibendum interdum nisl.</p>
+        <h2 class="h2-font">{{$blog->heading}}</h2>
+        <p><span>{{$blog->created_at}}</span> <span>{{$blog->name}}</span></p>
+        <input class="blog-value" type="hidden" value='{{$blog->text}}'>
+        <p class="blog-text" class="p-font"></p>
       </div>
-    </div>
-    <div class="blog" data-aos-anchor=".blog-section" data-aos="zoom-in-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
+    </a>
+
+    @endforeach
+
+    <!--<div class="blog" data-aos-anchor=".blog-section" data-aos="zoom-in-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
       <div class="img-container">
         <div class="img-container-overlay img-container-overlay-orange"></div>
         <img src="images/img/blog-post-2.png" alt="blog post">
@@ -2034,8 +2052,11 @@
         <p class="p-font">Morbi diam lorem, fermentum sit amet felis non, venenatis eleifend arcu. Vestibulum mauris nulla, aliquam eu consequat eget, mollis non sem. Cras massa enim, lobortis in sodales eu, lobortis a nisi. Fusce sodales accumsan nisl sit amet ullamcorper. Sed vel lorem nec quam luctus pellentesque at nec magna. Pellentesque ac luctus arcu, eu fermentum justo. Nulla pulvinar tellus at auctor tempus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur lobortis bibendum metus id tempus. Nulla convallis tempor mauris, at blandit risus semper ac. Phasellus vel neque id felis tristique viverra. Praesent commodo, nunc eu imperdiet lobortis, quam tortor feugiat tortor, id convallis purus turpis et nibh.</p>
       </div>
     </div>
-  </div>
-  <button class="button">@lang('index.blog_button')</button>
+  </div>-->
+    <div class="blog-button">
+      <button class="button">@lang('index.blog_button')</button>
+    </div>
+
 </section>
 <section class="contact-section" id="contact">
 
@@ -2081,7 +2102,19 @@
 <script>
   document.addEventListener("DOMContentLoaded", function(event) {
     AOS.init();
+    //blogs
 
+    let blogValue = document.querySelectorAll(".blog-value");
+    let blogText = document.querySelectorAll(".blog-text");
+    let temp;
+    console.log(blogValue);
+
+    for (let i = 0; i < blogValue.length; i++) {
+      temp = blogValue[i].value.replace(/<img .*?>/g, " ");
+      blogText[i].innerHTML = temp;
+    }
+
+    //blogs end
     // about us circle animation start 
     const aboutUs = document.querySelector("#aboutUs");
     let i = 0;
