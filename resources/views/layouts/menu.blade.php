@@ -29,15 +29,22 @@
     .expandable {
         height: 0;
         position: absolute;
+        transform: translateX(-12%);
         overflow-y: hidden;
         display: block;
-        width: 300px;
+        width: 400px;
         background-color: white;
+        border-radius: 5px;
     }
 
     .expandable a {
-        color: black !important;
         padding: 20px !important;
+        transition: background-color 0.2s ease-in-out;
+        color: var(--h1-color) !important;
+    }
+
+    .expandable a:hover {
+        background-color: var(--shadow-color);
     }
 
     .nav-li {
@@ -53,6 +60,29 @@
         width: 100%;
         text-transform: uppercase;
         white-space: nowrap;
+        position: relative;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .nav-li a::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 1px;
+        width: 0px;
+        background-color: white;
+        transition: width 0.2s ease-in-out;
+    }
+
+    .nav-li:hover a::before {
+        width: 15px;
+
+    }
+
+    .nav-li a:hover {
+        text-decoration: none;
     }
 
     .nav-li:hover .expandable {
@@ -60,7 +90,7 @@
     }
 
     .arrow:hover:before {
-        transform: rotate(-180deg) translate(90%, -100%);
+        transform: rotate(-180deg) translate(80%, -90%);
     }
 
     .nav-top {
@@ -96,6 +126,29 @@
         transition: 0.2s transform ease-in-out;
     }
 
+    .join {
+        display: flex;
+        transform: translateX(-22%);
+    }
+
+    .join-left {
+        flex-basis: 100%;
+    }
+
+    .join-right {
+        flex-basis: 100%;
+    }
+
+    .padding-right-0 {
+        padding-right: 0 !important;
+    }
+
+    .nav-logo {
+        height: 30px;
+        position: absolute;
+        left: 0;
+    }
+
     @media screen and (max-width: 768px) {}
 </style>
 
@@ -120,6 +173,8 @@
     </div>
 
     <div class="nav-bot">
+        <a href="/"><img class="nav-logo" src={{"/images/smartlab-logo.svg"}}></a>
+
         <li class="nav-li arrow">
             <a href="#">@lang('menu.first_item')</a>
             <div class="expandable">
@@ -138,11 +193,11 @@
         </li>
         <li class="nav-li arrow">
             <a href="#">@lang('menu.third_item')</a>
-            <div class="expandable">
-                <div>
+            <div class="expandable join">
+                <div class="join-left">
                     <a href="#">@lang('menu.outsourcing')</a>
                 </div>
-                <div>
+                <div class="join-right">
                     <a href="#">@lang('menu.become_a_partner')</a>
                     <a href="/#contact">@lang('menu.careers')</a>
                 </div>
@@ -152,7 +207,7 @@
             <!-- Open link in new tab and set its language depending on the current language in main website-->
             <a href="{{ env("BLOG_DOMAIN")  }}/@if(App::getlocale()){{App::getlocale()}}@else en @endif" target="_blank">@lang('menu.fourth_item')</a>
         </li>
-        <li class="nav-li"><a href="#">@lang('menu.fifth_item')</a></li>
+        <li class="nav-li"><a class="padding-right-0" href="#">@lang('menu.fifth_item')</a></li>
 
         <!-- This menu items are available only to logged in users -->
         @auth
