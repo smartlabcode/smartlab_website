@@ -96,7 +96,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FavoritesManager">
@@ -107,17 +107,18 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/courses.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="405" column="7" lean-forward="true" selection-start-line="405" selection-start-column="7" selection-end-line="405" selection-end-column="7" />
+            <state relative-caret-position="390">
+              <caret line="1206" column="18" lean-forward="true" selection-start-line="1206" selection-start-column="18" selection-end-line="1206" selection-end-column="18" />
               <folding>
-                <element signature="e#10989#13409#0#HTML" />
-                <element signature="e#16648#18072#0#HTML" />
-                <element signature="e#18078#19407#0#HTML" />
-                <element signature="e#19301#22384#0#HTML" />
-                <element signature="e#22390#22510#0#HTML" />
-                <element signature="n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="e#5130#7668#0#HTML" />
+                <element signature="e#7674#9009#0#HTML" />
+                <element signature="e#9015#11108#0#HTML" />
+                <element signature="e#13166#15959#0#HTML" />
+                <element signature="e#15965#19552#0#HTML" />
+                <element signature="e#25774#25894#0#HTML" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h1#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -131,6 +132,9 @@
       <find>p-</find>
       <find>p-f</find>
       <find>425</find>
+      <find>section4</find>
+      <find>small</find>
+      <find>button</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -242,10 +246,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1948" />
-    <option name="y" value="61" />
-    <option name="width" value="1092" />
-    <option name="height" value="991" />
+    <option name="x" value="25" />
+    <option name="width" value="1619" />
+    <option name="height" value="1073" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -277,21 +280,6 @@
               <item name="smartlab_website" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smartlab_website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartlab_website" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="footer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smartlab_website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartlab_website" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="footer" type="462c0819:PsiDirectoryNode" />
-              <item name="social-icons" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="smartlab_website" type="b2602c69:ProjectViewProjectNode" />
@@ -356,6 +344,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\smartlab_website\public\images" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -379,21 +372,23 @@
       <option name="presentableId" value="Default" />
       <updated>1558438626671</updated>
       <workItem from="1558438628842" duration="724000" />
+      <workItem from="1558685253941" duration="9110000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23468000" />
+    <option name="totallyTimeSpent" value="32578000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1948" y="61" width="1092" height="991" extended-state="0" />
+    <frame x="20" y="0" width="1295" height="858" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50547945" side_tool="true" weight="0.3085622" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49452055" visible="true" weight="0.15600775" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49452055" visible="true" weight="0.28502023" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.043835618" />
+      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.050964188" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" />
@@ -496,19 +491,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/1200px-Adobe_Animate_CC_icon.svg.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/courses.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="405" column="7" lean-forward="true" selection-start-line="405" selection-start-column="7" selection-end-line="405" selection-end-column="7" />
+        <state relative-caret-position="390">
+          <caret line="1206" column="18" lean-forward="true" selection-start-line="1206" selection-start-column="18" selection-end-line="1206" selection-end-column="18" />
           <folding>
-            <element signature="e#10989#13409#0#HTML" />
-            <element signature="e#16648#18072#0#HTML" />
-            <element signature="e#18078#19407#0#HTML" />
-            <element signature="e#19301#22384#0#HTML" />
-            <element signature="e#22390#22510#0#HTML" />
-            <element signature="n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#5130#7668#0#HTML" />
+            <element signature="e#7674#9009#0#HTML" />
+            <element signature="e#9015#11108#0#HTML" />
+            <element signature="e#13166#15959#0#HTML" />
+            <element signature="e#15965#19552#0#HTML" />
+            <element signature="e#25774#25894#0#HTML" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h1#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

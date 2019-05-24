@@ -231,8 +231,6 @@
         /* SECTION FOUR CSS*/
     .section4{
         padding-top: 0;
-        margin: 10%;
-        padding-left: 6%;
         align-items: center;
         display: flex;
 
@@ -244,7 +242,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-right: 60px;
+
     }
 
     .sec4textP{
@@ -360,9 +358,8 @@
 
         .section4 {
             padding-top: 0;
-            margin-right: 10%;
             margin-top: 5%;
-            margin-left: 10%;
+
         }
 
         .sec4text {
@@ -387,10 +384,12 @@
         .pics1-2 img{
             margin: 5px;
             width: 230px;
+            height: 230px;
         }
 
         .pics1-1 img{
             width: 230px;
+            height: 230px;
             margin: 5px;
         }
 
@@ -404,7 +403,7 @@
 
         .section4{
             padding-top: 0;
-            margin: 10%;
+
             /* padding-left: 425px; */
             align-items: center;
             display: flex;
@@ -437,6 +436,7 @@
             padding-top: 7%;
             text-align: center;
             flex-basis: 40%;
+            padding-right: 10%;
         }
         #slider{
             height: 450px;
@@ -541,7 +541,7 @@
         }
 
         .sec4text {
-            padding-top: 10%;
+            padding-top: 4%;
             flex-basis: 40%;
             text-align: center;
             display: flex;
@@ -556,14 +556,14 @@
 
         .pics1-2 img {
             width: 160px;
-            height: 141%;
+            height: 160px;
             justify-content: space-around;
             margin: 10px;
         }
 
         .pics1-1 img {
             width: 160px;
-            height: 141%;
+            height: 160px;
             justify-content: space-around;
             margin: 10px;
         }
@@ -665,14 +665,14 @@
 
         .pics1-2 img {
             width: 160px;
-            height: 141%;
+            height: 160px;
             justify-content: space-around;
             margin: 10px;
         }
 
         .pics1-1 img {
             width: 160px;
-            height: 141%;
+            height: 160px;
             justify-content: space-around;
             margin: 10px;
         }
@@ -795,7 +795,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: -18%;
+            margin-top: -5%;
         }
         .sec4text{
             width: 70%;
@@ -816,9 +816,11 @@
             margin-top: -25px;
         }
 
+
         .pics {
             margin-top: 15px;
         }
+
     }
 
     @media screen and (max-width: 650px) {
@@ -874,7 +876,7 @@
         /*section 2 to 320px*/
 
         .sectionTwo {
-            margin-top: 0px;
+            margin-top: 0;
         }
 
         .secTwoBg {
@@ -1011,10 +1013,14 @@
             right: -220px;
         }
 
-        #slider >img:first-child{
-            top: -42px;
-            left: -13px;
+        .sec4textP{
+           padding-left: 40px;
         }
+
+        .uls{
+            margin-left: 8px;
+        }
+
         .secTwoBg {
             width: 107%;
             top: 850px;
@@ -1031,15 +1037,16 @@
         .secTwoBg2 {
             width: 60%;
             position: absolute;
-            top: 105% ;
+            top: 100% ;
             left: -30%;
         }
         #slider >img:last-child{
-            top: -482px;
-            right: -300px;
+            top: -111px;
+            right: 28px;
         }
         #slider >img:first-child{
-            top: -141px;
+            top: -110px;
+            left: 24px;
         }
         .slider-left{
             margin-top: -10%;
@@ -1053,11 +1060,11 @@
         }
 
         .section3{
-            margin-top: -60%;
+            margin-top: -35%;
         }
 
         .section4{
-            margin-top: -57%;
+            margin-top: -25%;
         }
 
         .sec3text {
@@ -1091,18 +1098,25 @@
         .p-font{
             margin-left: 24px;
             width: 79%;
+            padding-left: 0;
         }
     }
 
     @media screen and (max-width: 376px){
         #slider >img:last-child{
-            top: -425px;
-            right: -250px;
+            top: -60px;
+            right: 28px;
         }
         #slider >img:first-child{
-            top: -88px;
+            top: -60px;
+        }
+        .sec4textP{
+            width: 125%;
         }
 
+        .sec3text{
+            margin-top: -30%;
+        }
         #slider{
             margin-top: 20%;
         }
@@ -1111,7 +1125,7 @@
         }
 
         .section4{
-            margin-top: -67%;
+            margin-top: -15%;
         }
 
         .secOneImg{
@@ -1119,7 +1133,7 @@
         }
 
         .sectionTwo{
-            margin-top: 20%;
+            margin-top: 10%;
         }
         .secTwoBg {
             width: 107%;
@@ -1151,10 +1165,6 @@
             margin-top: -50%;
         }
 
-        .sec3text {
-            margin-top: -60%;
-        }
-
         .submit {
             align-self: center !important;
         }
@@ -1166,7 +1176,19 @@
         .section1-1 {
             padding-top: 150px;
         }
-    }
+
+        .h1-font{
+            margin-left: 45px
+        }
+        .button{
+            width: 165px;
+            font-size: 1.2em!important;
+            height: 61px;
+            margin-top: -38%;
+        }
+        }
+
+
 
     @media screen and (max-width: 350px) {
 
@@ -1210,7 +1232,7 @@
         }
 
         .secOneImg {
-            width: 110%;
+            width: 90%;
         }
 
         .sectionTwo {
@@ -1219,14 +1241,14 @@
 
         .secTwoBg {
             width: 107%;
-            top: 820px;
+            top: 1025px;
             left: -72%;
         }
 
         .secTwoBg2 {
             width: 60%;
             position: absolute;
-            top: 100%;
+            top: 120%;
             left: -30%;
         }
 
@@ -1248,12 +1270,6 @@
             display: none !important;
         }
 
-        .slider-left{
-            width: 300px;
-            height: 200px;
-
-        }
-
         #slider > img:first-child {
             width: 35px;
             height: 35px;
@@ -1273,13 +1289,13 @@
 
         .slider-left img{
             object-fit: cover;
-            width: 100%;
+            width: 140%;
             height: 55%;
             margin-top: -70%;
         }
 
         .section3{
-            margin-top: -80%;
+            margin-top: -45%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1455,6 +1471,13 @@
         border: 1px solid var(--button-bg-color);
     }
 
+    .small{
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
 </style>
 
 <div class="section1 contain">
@@ -1467,11 +1490,11 @@
             @lang('courses.onlineCourses')
         </h3>
 
-        <p  class="p-font">
+        <p style="text-align: center; margin-left: 15px; font-size: 1.2em;" class="p-font">
             @lang('courses.secOneP1')
         </p>
 
-        <ul class="p-font bold">
+        <ul style="margin-left: 15px; font-size: 1.2em;" class="p-font bold">
             <li class="uls"> @lang('courses.secOneUlFirst')</li>
             <li class="uls">@lang('courses.secOneUlSecond')</li>
             <li class="uls">@lang('courses.secOneUlThird')</li>
@@ -1560,7 +1583,7 @@
 
 <div class="section4 contain">
     <div class="sec4text">
-        <h1 style="text-align: center; width:60%" class="h1-font">@lang('courses.sec3h2')</h1>
+        <h1 style="text-align: center !important;" class="h1-font">@lang('courses.sec3h2')</h1>
         <div class="sec4textP">
             <p style="margin-top: 50px; text-align: center; margin-left: 13px">@lang('courses.sec3p')</p>
         </div>
@@ -1568,14 +1591,20 @@
     </div>
     <div class="pics">
         <div class="pics1-1">
-            <img src="https://via.placeholder.com/120x120">
-            <img src="https://via.placeholder.com/120x120">
-            <img src="https://via.placeholder.com/120x120">
+            <img src="{{'/images/articulate.jpg'}}">
+            <img src="{{'/images/rise.png'}}">
+            <img src="{{'/images/1200px-Adobe_Animate_CC_icon.svg.png'}}">
         </div>
         <div class="pics1-2">
-            <img src="https://via.placeholder.com/120x120">
-            <img src="https://via.placeholder.com/120x120">
-            <img src="https://via.placeholder.com/120x120">
+            <div  class="small">
+                <img src="{{'/images/scorm.png'}}">
+            </div>
+            <div class="small" >
+                <img src="{{'/images/ispring-logo_1640x414.png'}}">
+            </div>
+            <div>
+                <img src="{{'/images/GAMIFICATION-NATION-2-LOGO-e1527579917733.png'}}">
+            </div>
         </div>
     </div>
 </div>
