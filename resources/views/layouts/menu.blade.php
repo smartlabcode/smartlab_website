@@ -9,7 +9,11 @@
         scroll-behavior: smooth;
     }
 
-
+    a:not([href]):not([tabindex]),
+    a:not([href]):not([tabindex]):focus,
+    a:not([href]):not([tabindex]):hover {
+        color: white;
+    }
 
     *,
     *:before,
@@ -143,13 +147,13 @@
     }
 
     .nav-top {
-        flex-basis: 100%;
+
         display: flex;
         justify-content: flex-end;
     }
 
     .nav-bot {
-        flex-basis: 100%;
+
         display: flex;
         justify-content: flex-end;
         position: sticky;
@@ -221,111 +225,112 @@
 
     .nav-logo {
         height: 30px;
-        position: absolute;
-        left: 0;
-        top: 5px;
     }
 
     .nav-button {
         display: none;
     }
 
+    .nav-li-container {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
     @media screen and (max-width: 768px) {
-        .nav-button {
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            position: absolute;
-            right: 0;
-        }
-
-        .filler {
-            display: none;
-        }
-
-        .nav-list {
-            height: 45px !important;
-        }
-
-        .nav-button-inner {
-            display: inline-block;
-            position: absolute;
-            width: 30px;
-            height: 5px;
-            background-color: var(--h1-color);
-        }
-
-        .nav-button-inner::before {
-            content: "";
-            display: inline-block;
-            position: absolute;
-            top: 10px;
-            width: 30px;
-            height: 5px;
-            background-color: var(--h1-color);
-        }
-
-        .nav-button-inner::after {
-            content: "";
-            display: inline-block;
-            position: absolute;
-            top: 20px;
-            width: 30px;
-            height: 5px;
-            background-color: var(--h1-color);
-        }
-
-        .nav-button nav .contain {
-            margin-bottom: 0;
-        }
-
         .nav-bot {
-            flex-basis: 95%;
+            justify-content: space-between;
+        }
+
+        .height-js {
+            height: 100vh !important;
+        }
+
+        .nav-li a {
+            height: auto;
+            color: var(--h1-color) !important;
+        }
+
+        .nav-li-container {
             display: flex;
-            flex-wrap: wrap;
-        }
-
-        .nav-top {
-            flex-basis: 95%;
-        }
-
-        .nav-bot li {
-            display: none;
-            flex-basis: 100%;
-        }
-
-        .nav-bot .first {
-            margin-top: 50px;
-            border-radius: 15px 15px 0 0px;
-        }
-
-        .nav-bot .last {
-            border-radius: 0 0px 15px 15px;
-        }
-
-        .visible-js {
-            display: initial !important;
+            flex-direction: column;
+            justify-content: space-evenly;
+            position: absolute;
+            top: 30px;
+            width: 100vw;
+            right: -2.5vw;
             background-color: white;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .nav-li:hover .expandable {
+            height: 250px;
+
+        }
+
+        .join-left,
+        .join-right {
+            flex-basis: auto;
+        }
+
+        .expandable:hover .expandable a {
+            background-color: var(--shadow-color);
         }
 
         .expandable {
             position: relative;
-            transform: translateX(0);
-            top: 0px !important;
+            display: flex;
+            flex-direction: column;
+            height: 0;
+            top: 0 !important;
+            width: 100%;
             margin-left: 50px;
-            margin-top: 5px;
-            margin-bottom: 5px;
-            border-left: 1px solid var(--shadow-color);
-            border-right: 1px solid var(--shadow-color);
+            transform: translateX(0%);
+        }
+
+        .nav-button {
+            height: 30px;
+            width: 30px;
+            display: inline-block;
+            position: relative;
+        }
+
+        .nav-button-inner {
+            height: 5px;
+            width: 30px;
+            display: inline-block;
+            background-color: var(--h1-color);
+            position: absolute;
+            top: 2.5px;
+        }
+
+        .nav-button-inner::before {
+            content: "";
+            height: 5px;
+            width: 30px;
+            display: inline-block;
+            background-color: var(--h1-color);
+            position: absolute;
+            top: 10px;
+        }
+
+        .nav-button-inner::after {
+            content: "";
+            height: 5px;
+            width: 30px;
+            display: inline-block;
+            background-color: var(--h1-color);
+            position: absolute;
+            top: 20px;
         }
 
         .arrow-js::before {
-            left: 97%;
+            left: 95% !important;
         }
 
-        .join {
-            display: block;
-
+        .nav-li>a::before {
+            right: 5%;
         }
     }
 </style>
@@ -355,71 +360,75 @@
         <div class="nav-button" id="nav-button">
             <div class="nav-button-inner"></div>
         </div>
-        <li class="nav-li nav-li-js arrow first">
-            <a class="grey">@lang('menu.first_item')</a>
-            <div class="filler"></div>
-            <div class="expandable">
-                <a href="/pages/courses">@lang('menu.online_courses')</a>
-                <a href="/pages/animations">@lang('menu.educational_video')</a>
-                <a href="/pages/programming">@lang('menu.programming')</a>
-                <a href="/pages/moodle">@lang('menu.moodle')</a>
-            </div>
-        </li>
-        <li class="nav-li nav-li-js arrow">
-            <a class="grey">@lang('menu.second_item')</a>
-            <div class="filler"></div>
-            <div class="expandable">
-                <a href="/#about">@lang('menu.about_us')</a>
-                <a href="/#team">@lang('menu.our_team')</a>
-            </div>
-        </li>
-        <li class="nav-li nav-li-js arrow">
-            <a class="grey">@lang('menu.third_item')</a>
-            <div class="filler"></div>
-            <div class="expandable join">
-                <div class="join-left">
-                    <a href="#">@lang('menu.outsourcing')</a>
+        <div class="nav-li-container" id="nav-li-container">
+            <li class="nav-li nav-li-js arrow first">
+                <a class="grey">@lang('menu.first_item')</a>
+                <div class="filler"></div>
+                <div class="expandable">
+                    <a href="/pages/courses">@lang('menu.online_courses')</a>
+                    <a href="/pages/animations">@lang('menu.educational_video')</a>
+                    <a href="/pages/programming">@lang('menu.programming')</a>
+                    <a href="/pages/moodle">@lang('menu.moodle')</a>
                 </div>
-                <div class="join-right">
-                    <a href="#">@lang('menu.become_a_partner')</a>
-                    <a href="/#contact">@lang('menu.careers')</a>
+            </li>
+
+            <li class="nav-li nav-li-js arrow">
+                <a class="grey">@lang('menu.second_item')</a>
+                <div class="filler"></div>
+                <div class="expandable">
+                    <a href="/#about">@lang('menu.about_us')</a>
+                    <a href="/#team">@lang('menu.our_team')</a>
                 </div>
-            </div>
-        </li>
-        <li class="nav-li nav-li-js">
-            <!-- Open link in new tab and set its language depending on the current language in main website-->
-            <a class="padding-right-0 grey" href="{{ env("BLOG_DOMAIN")  }}/@if(App::getlocale()){{App::getlocale()}}@else en @endif" target="_blank">@lang('menu.fourth_item')</a>
-        </li>
-        <li class="nav-li nav-li-js last"><a class="padding-right-0 grey" href="#">@lang('menu.fifth_item')</a></li>
+            </li>
+            <li class="nav-li nav-li-js arrow">
+                <a class="grey">@lang('menu.third_item')</a>
+                <div class="filler"></div>
+                <div class="expandable join">
+                    <div class="join-left">
+                        <a href="#">@lang('menu.outsourcing')</a>
+                    </div>
+                    <div class="join-right">
+                        <a href="#">@lang('menu.become_a_partner')</a>
+                        <a href="/#contact">@lang('menu.careers')</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-li nav-li-js">
+                <!-- Open link in new tab and set its language depending on the current language in main website-->
+                <a class="padding-right-0 grey" href="{{ env("BLOG_DOMAIN")  }}/@if(App::getlocale()){{App::getlocale()}}@else en @endif" target="_blank">@lang('menu.fourth_item')</a>
+            </li>
+            <li class="nav-li nav-li-js last"><a class="padding-right-0 grey" href="#">@lang('menu.fifth_item')</a></li>
 
-        <!-- This menu items are available only to logged in users -->
-        @auth
+            <!-- This menu items are available only to logged in users -->
+            @auth
 
-        <!-- This menu item is available to super admins only (list of all admins) -->
-        {{--@if(\Illuminate\Support\Facades\Auth::user()->roles_id == 1)--}}
-        <li class="nav-li nav-li-js">
-            <a class="grey padding-right-0" href="/dashboard">@lang('menu.sixth_item')</a>
-        </li>
-        {{--@endif--}}
+            <!-- This menu item is available to super admins only (list of all admins) -->
+            {{--@if(\Illuminate\Support\Facades\Auth::user()->roles_id == 1)--}}
+            <li class="nav-li nav-li-js">
+                <a class="grey padding-right-0" href="/dashboard">@lang('menu.sixth_item')</a>
+            </li>
+            {{--@endif--}}
 
-        {{--<li class="nav-li nav-li-js">--}}
-        {{--<a class="grey padding-right-0" href="{{route('blogs.index')}}">@lang('menu.seventh_item')</a>--}}
-        {{--</li>--}}
+            {{--<li class="nav-li nav-li-js">--}}
+            {{--<a class="grey padding-right-0" href="{{route('blogs.index')}}">@lang('menu.seventh_item')</a>--}}
+            {{--</li>--}}
 
-        <!-- This menu item is available to super admins only (list of all subscribers) -->
-        {{--@if(\Illuminate\Support\Facades\Auth::user()->roles_id == 1)--}}
-        {{--<li class="nav-li nav-li-js">--}}
-        {{--<a class="grey padding-right-0" href="/subscribers">@lang('menu.eight_item')</a>--}}
-        {{--</li>--}}
-        {{--@endif--}}
+            <!-- This menu item is available to super admins only (list of all subscribers) -->
+            {{--@if(\Illuminate\Support\Facades\Auth::user()->roles_id == 1)--}}
+            {{--<li class="nav-li nav-li-js">--}}
+            {{--<a class="grey padding-right-0" href="/subscribers">@lang('menu.eight_item')</a>--}}
+            {{--</li>--}}
+            {{--@endif--}}
 
-        <!-- List of all logs in the system -->
-        {{--<li class="nav-li nav-li-js"><a class="grey padding-right-0" href="/logs">@lang('menu.ninth_item')</a></li>--}}
+            <!-- List of all logs in the system -->
+            {{--<li class="nav-li nav-li-js"><a class="grey padding-right-0" href="/logs">@lang('menu.ninth_item')</a></li>--}}
 
-        <!-- Link for logging out -->
-        <li class="nav-li nav-li-js"><a class="grey padding-right-0" href="{{route('logout')}}">@lang('menu.tenth_item')</a></li>
+            <!-- Link for logging out -->
+            <li class="nav-li nav-li-js"><a class="grey padding-right-0" href="{{route('logout')}}">@lang('menu.tenth_item')</a></li>
 
-        @endauth
+            @endauth
+        </div>
+
     </div>
 
 
@@ -436,11 +445,14 @@
         let arrow = document.querySelectorAll(".arrow");
         let expandable = document.querySelectorAll(".expandable");
         let navLi = document.querySelectorAll(".nav-li");
+        let navLiContainer = document.querySelector("#nav-li-container");
         console.log(navLi);
         navButton.addEventListener("click", function(event) {
-            for (let i = 0; i < navLi.length; i++) {
-                navLi[i].classList.toggle("visible-js");
-            }
+            navLiContainer.classList.toggle("height-js");
+            navTop.style.display = "none";
+        })
+        window.addEventListener("click", function(event) {
+            console.log(event.target);
         })
         window.addEventListener("scroll", function(event) {
 
