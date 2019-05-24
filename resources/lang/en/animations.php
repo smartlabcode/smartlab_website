@@ -29,7 +29,4 @@ return[
     "contactTime"=>"*Meeting time",
     "contactMessage"=>"*Message",
     "buttonSend"=>"Send"
-
-
-
 ];

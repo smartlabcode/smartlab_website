@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Title</title>
-</head>
-<body  style="height: 100%; margin: 0 auto">
+<!-- Extend main layout -->
+@extends('layouts.app')
+
+
 <style>
-
-
-@section('content')
-
-
     /* SECTION ONE CSS */
     :root {
         --shadow-color: rgba(0, 53, 145, 0.15);
@@ -228,7 +219,7 @@
 
 
 
-        /* SECTION FOUR CSS*/
+    /* SECTION FOUR CSS*/
     .section4{
         padding-top: 0;
         align-items: center;
@@ -746,7 +737,7 @@
         }
 
         .section1-1{
-           /* padding-top: 100px;*/
+            /* padding-top: 100px;*/
         }
 
         /*slider*/
@@ -1014,7 +1005,7 @@
         }
 
         .sec4textP{
-           padding-left: 40px;
+            padding-left: 40px;
         }
 
         .uls{
@@ -1129,7 +1120,7 @@
         }
 
         .secOneImg{
-        margin-top: 10%;
+            margin-top: 10%;
         }
 
         .sectionTwo{
@@ -1186,7 +1177,7 @@
             height: 61px;
             margin-top: -38%;
         }
-        }
+    }
 
 
 
@@ -1480,6 +1471,10 @@
 
 </style>
 
+
+
+@section('content')
+
 <div class="section1 contain">
     <img class="secOneBg2" src="{{'/images/orange-circle.svg'}}">
     <img class="secOneBg" src="{{'/images/header-fluid-blue.svg'}}">
@@ -1669,6 +1664,6 @@
 
 </script>
 
-</body>
-</html>
+
+@endsection
 

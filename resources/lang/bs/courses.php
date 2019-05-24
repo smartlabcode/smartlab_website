@@ -1,4 +1,5 @@
 <?php
+
 return[
     "onlineCourses" => "Online Kursevi",
     "secOneP1" => "Dizajniramo i razvijamo eLearning sadržaj
@@ -29,7 +30,5 @@ return[
     "contactTime"=>"*Vrijeme sastanka",
     "contactMessage"=>"*Poruka",
     "buttonSend"=>"Pošalji"
-
-
 
 ];
