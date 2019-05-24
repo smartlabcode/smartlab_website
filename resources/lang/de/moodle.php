@@ -1,7 +1,31 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: user
- * Date: 22/04/2019
- * Time: 17:01
- */
+return[
+    "MoodleLMS" => "Moodle
+    LMS-Implementierung  ",
+    "secOneP1" => "Wir nutzen das führende Open Source Learning Management.
+    System Moodle, das vollständig anpassbare Funktionen bietet, um
+    private Websites mit Online-Kursen erstellen.",
+    "secOneUlFirst"=> "Starke Community, die ständig neue Wege geht.
+    Lösungen für verschiedene Herausforderungen",
+    "secOneUlSecond"=>"Erstellen Sie Ihr Thema online mit den Produkten Ihres Unternehmens Markenidentität",
+    "secOneUlThird"=>"Starke Berichts- und Verfolgungsoptionen ",
+    "secOneUlFourth"=>"Vollständig anpassbar an verschiedene Geräte",
+    "sec2h2"=>"Unsere Arbeiten",
+    "sec2h22"=>"Ich möchte mehr sehen:",
+    "buttonSchedule" => "Planen Sie eine Demo",
+    "sec3h2"=> "Tools und Technologien",
+    "sec3p"=> "Moodle ist eine Open-Source-Software 
+    und eventuell verschiedene Außenanwendungen 
+    zu integrieren Features ist ein großer Vorteil",
+    "contactName"=>"*Vorname und Nachname",
+    "contactCompany"=>"*Unternehmen",
+    "contactSubject"=>"*Betreff",
+    "contactEmail"=>"*E-mail",
+    "contactDate"=>"*Versammlungstermin",
+    "contactTime"=>"*Besprechungszeit",
+    "contactMessage"=>"*Nachricht",
+    "buttonSend"=>"Senden"
+
+
+
+];

@@ -29,6 +29,4 @@ return[
     "contactMessage"=>"*Nachricht",
     "buttonSend"=>"Senden"
 
-
-
 ];
