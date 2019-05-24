@@ -574,8 +574,12 @@
   .blog-text {
     color: black !important;
     font-family: "Source Sans Pro", sans-serif !important;
-    height: 100px;
+    height: 106px;
     overflow: hidden;
+    line-height: 1.6;
+    font-size: 1.6em;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 
   .blog .p-font {
@@ -596,13 +600,14 @@
     content: "...";
     bottom: 20px;
     right: 10px;
-    font-size: 1em;
-    line-height: 1em;
-    padding-left: 15px;
-    padding-right: 35px;
-    padding-bottom: 4px;
+    font-size: 1.2em;
+    padding-top: 0px;
+    line-height: 0.8em;
+    padding-left: 4px;
+    padding-right: 0px;
+    padding-bottom: 0px;
     background-color: white;
-    font-weight: 500;
+    font-weight: bold;
   }
 
   .blog-button {
