@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b79028d-cafa-497f-943d-d4c2314226fd" name="Default Changelist" comment="" />
+    <list default="true" id="5b79028d-cafa-497f-943d-d4c2314226fd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/resources/lang/bs/programming.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/bs/programming.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/de/programming.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/de/programming.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/courses.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/courses.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/programming.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/programming.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/programming.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/programming.blade.php" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/vendor/beyondcode/laravel-dump-server/" />
     <ignored path="$PROJECT_DIR$/vendor/composer/" />
     <ignored path="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir/" />
@@ -104,29 +110,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/lang/en/programming.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="605">
+              <caret line="45" lean-forward="true" selection-start-line="2" selection-end-line="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/programming.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4675">
+              <caret line="1278" column="42" selection-start-line="1278" selection-start-column="42" selection-end-line="1278" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/lang/de/programming.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/pages/animations.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/lang/bs/programming.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22080">
-              <caret line="1472" selection-start-line="1472" selection-end-line="1472" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/pages/courses.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="1" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="1705" column="24" lean-forward="true" selection-start-line="1705" selection-start-column="24" selection-end-line="1705" selection-end-column="24" />
+            <state relative-caret-position="379">
+              <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -175,12 +190,10 @@
       <list>
         <option value="$PROJECT_DIR$/resources/views/pages/general_error.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/server_error.blade.php" />
-        <option value="$PROJECT_DIR$/resources/lang/en/courses.php" />
         <option value="$PROJECT_DIR$/resources/lang/de/moodle.php" />
         <option value="$PROJECT_DIR$/resources/lang/de/courses.php" />
         <option value="$PROJECT_DIR$/resources/lang/bs/moodle.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/moodle.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/moodle.blade.php" />
         <option value="$PROJECT_DIR$/resources/lang/de/animations.php" />
         <option value="$PROJECT_DIR$/resources/lang/bs/animations.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/animations.php" />
@@ -201,9 +214,15 @@
         <option value="$PROJECT_DIR$/resources/lang/de/footer.php" />
         <option value="$PROJECT_DIR$/resources/lang/bs/footer.php" />
         <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/menu.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/animations.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/moodle.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" />
+        <option value="$PROJECT_DIR$/resources/lang/en/courses.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/programming.blade.php" />
+        <option value="$PROJECT_DIR$/resources/lang/en/programming.php" />
+        <option value="$PROJECT_DIR$/resources/lang/de/programming.php" />
+        <option value="$PROJECT_DIR$/resources/lang/bs/programming.php" />
       </list>
     </option>
   </component>
@@ -442,12 +461,12 @@
       <updated>1558438626671</updated>
       <workItem from="1558438628842" duration="724000" />
       <workItem from="1558685253941" duration="17782000" />
-      <workItem from="1558723614753" duration="10539000" />
+      <workItem from="1558723614753" duration="13575000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51789000" />
+    <option name="totallyTimeSpent" value="54825000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
@@ -517,31 +536,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/moodle.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="1463" column="19" lean-forward="true" selection-start-line="1463" selection-start-column="19" selection-end-line="1463" selection-end-column="19" />
-          <folding>
-            <element signature="e#5055#7587#0#HTML" />
-            <element signature="e#7593#8936#0#HTML" />
-            <element signature="e#8942#11036#0#HTML" />
-            <element signature="e#13096#15890#0#HTML" />
-            <element signature="e#15896#19481#0#HTML" />
-            <element signature="e#25955#26075#0#HTML" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/courses.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="42" lean-forward="true" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/lang/bs/animations.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -567,13 +561,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
           <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/programming.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -699,13 +686,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/footer.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="420" column="8" lean-forward="true" selection-start-line="420" selection-start-column="8" selection-end-line="420" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/lang/de/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -713,24 +693,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/footer.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="1705" column="24" lean-forward="true" selection-start-line="1705" selection-start-column="24" selection-end-line="1705" selection-end-column="24" />
+        <state relative-caret-position="180">
+          <caret line="424" column="49" lean-forward="true" selection-start-line="424" selection-start-column="49" selection-end-line="424" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/courses.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="-22069">
           <caret selection-end-line="1" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/animations.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22080">
-          <caret line="1472" selection-start-line="1472" selection-end-line="1472" />
+        <state relative-caret-position="-23566">
+          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/moodle.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-21749">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="1704" lean-forward="true" selection-start-line="1704" selection-end-line="1704" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/courses.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/programming.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4675">
+          <caret line="1278" column="42" selection-start-line="1278" selection-start-column="42" selection-end-line="1278" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/de/programming.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/programming.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="605">
+          <caret line="45" lean-forward="true" selection-start-line="2" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/bs/programming.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="26" />
         </state>
       </provider>
     </entry>

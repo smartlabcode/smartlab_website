@@ -1,6 +1,8 @@
 <!-- Extend main layout -->
 @extends('layouts.app')
+
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 <style>
     /* SECTION ONE */
     :root {
@@ -1121,15 +1123,15 @@
 
         <div class="section-one-text" data-aos="zoom-in">
 
-            <h1 class="h1-font bold">Development and programming</h1>
+            <h1 class="h1-font bold">@lang('programming.heading')</h1>
             <p class="p-font">
-                Back and front-end development of learning and performance managment systems, as well as custom functions and iteractivity options making your courses compelling and user friendly.
+                @lang('programming.title')
                 <ul class="p-font">
-                    <li>Custom made tracking and reporting features</li>
-                    <li>Flash to HTML5 conversion of existing courses to enable delivery for multiple platforms</li>
-                    <li>Scenario based quizes</li>
-                    <li>Englaging tools for webinars</li>
-                    <li>Augumented reality integrated</li>
+                    <li>@lang('programming.liOne')</li>
+                    <li>@lang('programming.liTwo')</li>
+                    <li>@lang('programming.liThree')</li>
+                    <li>@lang('programming.liFour')</li>
+                    <li>@lang('programming.liFive')</li>
                 </ul>
             </p>
         </div>
@@ -1139,10 +1141,8 @@
     </section>
 </div>
 
+
 <!--   SECTION TWO -->
-
-
-
 <section class="contain relative">
     <img class="secTwoBg2" src="../images/img/orange-circle.svg">
 
@@ -1151,7 +1151,7 @@
 
 
     <div style="margin-top: 280px; display: flex; justify-content: center" class="our-works">
-        <h2 class="h1-font">Our Works</h2>
+        <h2 class="h1-font">@lang('programming.ourWorks')</h2>
     </div>
     <div id="slider">
         <img class="prethodni shadow-1" onclick="changeImage('previous')" src="../images/img/Picture2.png">
@@ -1164,51 +1164,51 @@
     <img class="secTwoBg3" src="../images/img/fluid-bright-circle.svg">
     <div class="section3 contain">
         <div style="height: 50%">
-            <p class="p-font" style="margin-top: 50px; display: flex; justify-content: center; font-weight: 500">Want to see more:</p>
+            <p class="p-font" style="margin-top: 50px; display: flex; justify-content: center; font-weight: 500">@lang('programming.wantSeeMore')</p>
         </div>
         <div style="height: 50%; margin-top: 30px; display: flex; justify-content: center">
-            <button class="button" id="schedule">Schedule a demo</button>
+            <button class="button" id="schedule">@lang('programming.demo')</button>
         </div>
         <img class="secTwoBg4" src="../images/img/orange-circle.svg">
     </div>
     <div class="contact-section" id="contact">
         <div class="contact-form-container">
-            <h2 class="text-center h1-font">Contact</h2>
+            <h2 class="text-center h1-font">@lang('programming.contact')</h2>
             <form class="contact-form" action="/demo" method="POST">
                 <!-- Include token -->
                 @csrf
                 <div class="contact-form-group">
                     <div>
-                        <label for="name">*Name and Surname</label>
+                        <label for="name">*@lang('programming.nameSurname')</label>
                         <input type="text" name="name" id="name" required />
                     </div>
                     <div>
-                        <label for="company">Company</label>
+                        <label for="company">@lang('programming.company')</label>
                         <input type="text" name="company" id="company" />
                     </div>
                 </div>
                 <div class="contact-form-group">
                     <div>
-                        <label for="subject">*Subject</label>
+                        <label for="subject">*@lang('programming.subject')</label>
                         <input type="text" name="subject" id="subject" required />
                     </div>
                     <div>
-                        <label for="email">*Email</label>
+                        <label for="email">*@lang('programming.email')</label>
                         <input type="email" name="email" id="email" required />
                     </div>
                 </div>
                 <div class="contact-form-group">
                     <div>
-                        <label for="date">*Meeting date</label>
+                        <label for="date">*@lang('programming.date')</label>
                         <input type="date" name="date" id="date" required />
                     </div>
                     <div>
-                        <label for="time">*Meeting time</label>
+                        <label for="time">*@lang('programming.time')</label>
                         <input type="time" name="time" id="time" required />
                     </div>
                 </div>
                 <div class="contact-form-group textarea">
-                    <label for="message">*Message</label>
+                    <label for="message">*@lang('programming.time')</label>
                     <textarea name="message" rows="7" id="message" required></textarea>
                 </div>
                 <input class="button submit" type="submit" value="Send" />
@@ -1220,15 +1220,15 @@
     <img class="xliff-background" src="../images/img/light-blue-bg.svg">
     <div class="xliff-section">
 
-        <h1 class="h1-font">XLIFF Translation</h1>
+        <h1 class="h1-font">@lang('programming.xliffTranslation')</h1>
         <div class="xliff-container">
             <div class="xliff-item">
                 <img src="../images/xliff-icons/step1-icon-upload.svg">
                 <img class="dashed-line" src="../images/img/dashed-line.svg">
                 <div>
-                    <h5 class="h1-font">Upload your file<h5>
+                    <h5 class="h1-font">@lang('programming.uploadFile')</h5>
                             <p class="p-font">
-                                Upload XLF and select languages for translation
+                                @lang('programming.uploadFileText')
                             </p>
                 </div>
             </div>
@@ -1237,9 +1237,9 @@
                 <img src="../images/xliff-icons/step2-icon-download.svg">
                 <img class="dashed-line dashed-line-rotate" src="../images/img/dashed-line.svg">
                 <div>
-                    <h5 class="h1-font">Download XLS<h5>
+                    <h5 class="h1-font">@lang('programming.downloadXls')</h5>
                             <p class="p-font">
-                                Download XLS file (excel) which contains all the data from your original XLF and additional columns for selected languages
+                                @lang('programming.downloadXlsText')
                             </p>
                 </div>
             </div>
@@ -1247,57 +1247,57 @@
                 <img src="../images/xliff-icons/step3-icon-trans.svg">
                 <img class="dashed-line" src="../images/img/dashed-line.svg">
                 <div>
-                    <h5 class="h1-font">Translate columns<h5>
+                    <h5 class="h1-font">@lang('programming.translateColumns')</h5>
                             <p class="p-font">
-                                Insert translations in given columns and upload yourfiles (Original XLF and new XLS file with translations)
+                                @lang('programming.translateColumnsText')
                             </p>
                 </div>
             </div>
             <div class="xliff-item">
                 <img src="../images/xliff-icons/step4-icon-ready.svg">
                 <div>
-                    <h5 class="h1-font">Ready for download<h5>
+                    <h5 class="h1-font">@lang('programming.downloadReady')</h5>
                             <p class="p-font">
-                                Now server creates XLF files for all selectedlanguages and then they are reay to download
+                                @lang('programming.explanationText')
                             </p>
                 </div>
             </div>
         </div>
-        <button class="button">See more</button>
+        <button class="button">@lang('programming.seeMore')</button>
     </div>
 </section>
 <section class="contain tools-container">
     <div class="tools">
         <div class="tools-info">
-            <h1 class="h1-font">Tools and Technologies</h1>
+            <h1 class="h1-font">@lang('programming.toolsTechnologies')</h1>
             <p class="p-font">
-                We design custom eLearning training that aligns with your strategic corporate objectives using a vareity of tools and technologies.
+                @lang('programming.toolsTechnologiesText')
             </p>
         </div>
         <div class="tools-img">
             <div>
                 <img src="../images/tools/php_PNG28.png">
-                <p>PHP Development</p>
+                <p>@lang('programming.php')</p>
             </div>
             <div class="tools-img-margin-both">
                 <img src="../images/tools/HTML5CSS3Logos.svg">
-                <p>HTML & CSS3</p>
+                <p>@lang('programming.htmlCss')</p>
             </div>
             <div>
                 <img src="../images/tools/1200px-Unofficial_JavaScript_logo_2.svg.png">
-                <p>JavaScript</p>
+                <p>@lang('programming.js')</p>
             </div>
             <div>
                 <img src="../images/tools/WordPress-logotype-wmark.png">
-                <p>Wordpress</p>
+                <p>@lang('programming.wp')</p>
             </div>
             <div class="tools-img-margin-both">
                 <img src="../images/tools/github.svg">
-                <p>GitHub</p>
+                <p>@lang('programming.github')</p>
             </div>
             <div>
                 <img src="../images/tools/1280px-Unity_Technologies_logo.svg.png">
-                <p>Unity</p>
+                <p>@lang('programming.unity')</p>
             </div>
 
         </div>
