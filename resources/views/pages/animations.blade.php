@@ -1480,7 +1480,7 @@
 
     <div class="section1-1">
         <h3 class="h1-font">
-            @lang('animations.animations')
+            @lang('animations.Animation')
         </h3>
 
         <p style="text-align: center; margin-left: 15px; font-size: 1.2em;" class="p-font">

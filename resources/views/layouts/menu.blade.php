@@ -386,11 +386,11 @@
                 <div class="filler"></div>
                 <div class="expandable join">
                     <div class="join-left">
-                        <a href="#">@lang('menu.outsourcing')</a>
+                        <a href="/pages/outsourcing">@lang('menu.outsourcing')</a>
                     </div>
                     <div class="join-right">
-                        <a href="#">@lang('menu.become_a_partner')</a>
-                        <a href="/#">@lang('menu.careers')</a>
+                        <a href="/pages/partner">@lang('menu.become_a_partner')</a>
+                        <a href="/pages/careers">@lang('menu.careers')</a>
                     </div>
                 </div>
             </li>

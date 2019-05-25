@@ -426,7 +426,7 @@
                 <ul>
                     <li><a href="/#anchor">@lang('menu.first_item')</a></li>
                     <li><a href="/#about">@lang('menu.second_item')</a></li>
-                    <li><a href="#">@lang('menu.third_item')</a></li>  <!-- TODO do we have this page, we need to set link-->
+                    <li><a href="/pages/partner">@lang('menu.third_item')</a></li>  <!-- TODO do we have this page, we need to set link-->
                     <li><a href="{{env('BLOG_DOMAIN')}}/{{App::getlocale()}}" target="_blank">@lang('menu.fourth_item')</a></li>
                     <li><a href="/#contact">@lang('menu.fifth_item')</a></li>
                 </ul>
