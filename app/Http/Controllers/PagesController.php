@@ -189,4 +189,23 @@ class PagesController extends Controller
 
     }
 
+    /**
+     * Display Partner page
+     */
+    public function showOutsourcingPage() {
+
+        try {
+
+            return view('pages.outsourcing');
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', 'PagesController - showOutsourcingPage: ' . $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+
+    }
+
 }
