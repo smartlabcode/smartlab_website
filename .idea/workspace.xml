@@ -104,38 +104,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/animations.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22080">
+              <caret line="1472" selection-start-line="1472" selection-end-line="1472" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/courses.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="1" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="1711" column="23" selection-start-line="1711" selection-start-column="10" selection-end-line="1711" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/lang/de/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="24" column="30" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/footer.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="420" column="8" lean-forward="true" selection-start-line="420" selection-start-column="8" selection-end-line="420" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/menu.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="55">
-              <caret line="342" column="46" lean-forward="true" selection-start-line="342" selection-start-column="46" selection-end-line="342" selection-end-column="46" />
+            <state relative-caret-position="117">
+              <caret line="1705" column="24" lean-forward="true" selection-start-line="1705" selection-start-column="24" selection-end-line="1705" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -144,7 +135,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>p-f</find>
       <find>425</find>
       <find>section4</find>
       <find>small</find>
@@ -170,10 +160,11 @@
       <find>online</find>
       <find>target</find>
       <find>name=&quot;on</find>
-      <find>ber uns</find>
       <find>about_us_h2</find>
-      <find>ref=&quot;#contact</find>
+      <find>padding-right-0</find>
       <find>footer-bot-icons</find>
+      <find>ber uns</find>
+      <find>ref=&quot;#contact</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -191,7 +182,6 @@
         <option value="$PROJECT_DIR$/resources/lang/en/moodle.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/moodle.blade.php" />
         <option value="$PROJECT_DIR$/resources/lang/de/animations.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/animations.blade.php" />
         <option value="$PROJECT_DIR$/resources/lang/bs/animations.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/animations.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/courses.blade.php" />
@@ -213,6 +203,7 @@
         <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/menu.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/animations.blade.php" />
       </list>
     </option>
   </component>
@@ -451,12 +442,12 @@
       <updated>1558438626671</updated>
       <workItem from="1558438628842" duration="724000" />
       <workItem from="1558685253941" duration="17782000" />
-      <workItem from="1558723614753" duration="10275000" />
+      <workItem from="1558723614753" duration="10539000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51525000" />
+    <option name="totallyTimeSpent" value="51789000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
@@ -572,13 +563,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/animations.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="1674" selection-start-line="1674" selection-end-line="1674" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
@@ -590,13 +574,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="1" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/courses.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="1472" selection-start-line="1472" selection-end-line="1472" />
         </state>
       </provider>
     </entry>
@@ -715,17 +692,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/de/index.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/menu.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="24" column="30" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="1711" column="23" selection-start-line="1711" selection-start-column="10" selection-end-line="1711" selection-end-column="23" />
+        <state relative-caret-position="227">
+          <caret line="359" column="82" lean-forward="true" selection-start-line="359" selection-start-column="82" selection-end-line="359" selection-end-column="82" />
         </state>
       </provider>
     </entry>
@@ -736,10 +706,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/menu.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/lang/de/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="342" column="46" lean-forward="true" selection-start-line="342" selection-start-column="46" selection-end-line="342" selection-end-column="46" />
+        <state relative-caret-position="207">
+          <caret line="24" column="30" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="1705" column="24" lean-forward="true" selection-start-line="1705" selection-start-column="24" selection-end-line="1705" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/courses.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="1" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/animations.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22080">
+          <caret line="1472" selection-start-line="1472" selection-end-line="1472" />
         </state>
       </provider>
     </entry>
