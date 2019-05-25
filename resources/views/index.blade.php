@@ -2005,22 +2005,22 @@
   <div class="blog-container">
     @foreach ($blogs as $blog)
 
-    <a href="#{{$blog->id}}" class="blog" data-aos-anchor=".blog-section" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
-      <div class="img-container">
-        <div class="img-container-overlay @if ($blog->id % 2 != 0) img-container-overlay-blue @else img-container-overlay-orange @endif">
+      <a href="{{env('BLOG_DOMAIN')}}/blog/{{$blog->id}}/{{App::getlocale()}}" target="_blank" class="blog" data-aos-anchor=".blog-section" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
+        <div class="img-container">
+          <div class="img-container-overlay @if ($blog->id % 2 != 0) img-container-overlay-blue @else img-container-overlay-orange @endif">
+          </div>
+          <img src={{$blog->image_path}} alt="blog" />
+          <svg class="wave" viewBox="0 0 500 500">
+            <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
+          </svg>
         </div>
-        <img src={{$blog->image_path}} alt="blog" />
-        <svg class="wave" viewBox="0 0 500 500">
-          <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
-        </svg>
-      </div>
-      <div>
-        <h2 class="h2-font">{{$blog->heading}}</h2>
-        <p><span>{{$blog->created_at}}</span> <span>{{$blog->name}}</span></p>
-        <input class="blog-value" type="hidden" value='{{$blog->text}}'>
-        <p class="blog-text" class="p-font"></p>
-      </div>
-    </a>
+        <div>
+          <h2 class="h2-font">{{$blog->heading}}</h2>
+          <p><span>{{$blog->created_at}}</span> <span>{{$blog->name}}</span></p>
+          <input class="blog-value" type="hidden" value='{{$blog->text}}'>
+          <p class="blog-text" class="p-font"></p>
+        </div>
+      </a>
 
     @endforeach
 
