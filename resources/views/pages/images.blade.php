@@ -9,7 +9,17 @@
     #imagesContainer {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-around;
+    }
+
+    #imagesContainer > div {
+        margin: 10px;
+        box-shadow: 1px 2px 1px rgba(150,150,150, 0.5);
+    }
+
+    #imagesContainer > div:hover {
+        box-shadow: 3px 3px 3px rgba(150,150,150, 0.5);
     }
 
     #inputFile {
@@ -20,31 +30,39 @@
 
 @section('content')
 
-    @include('parts.error_success')
+    @include('parts.break_space')
 
-    <div id="imagesContainer">
+    <div class="listTable">
 
-        @foreach($links as $link)
+        <h2>Website images</h2>
 
-            <div id="{{$link['name']}}" class="card" style="width: 18rem;">
-                <img src="{{env('APP_BASE_URL')}}/{{$link['path']}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{$link['name']}}</h5>
-                    <button class="btn btn-primary" onclick="setImageElement(this)">Change</button>
+        @include('parts.error_success')
+
+        <div id="imagesContainer">
+
+            @foreach($links as $link)
+
+                <div id="{{$link['name']}}" class="card" style="width: 18rem;">
+                    <img src="{{env('APP_BASE_URL')}}/{{$link['path']}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{$link['name']}}</h5>
+                        <button class="btn btn-primary" onclick="setImageElement(this)">Change</button>
+                    </div>
                 </div>
-            </div>
 
-        @endforeach
+            @endforeach
+
+        </div>
+
+        <form id="imageForm" action="/assets" method="POST" enctype="multipart/form-data">
+
+            @csrf
+
+            <input id="image_name" type="hidden" name="image_name"/>
+            <input id="inputFile" type="file" accept="image/jpg,image/png,image/jpeg" name="files[]" onchange="showUploadedImage()" />
+        </form>
 
     </div>
-
-    <form id="imageForm" action="/assets" method="POST" enctype="multipart/form-data">
-
-        @csrf
-
-        <input id="image_name" type="hidden" name="image_name"/>
-        <input id="inputFile" type="file" accept="image/jpg,image/png,image/jpeg" name="files[]" onchange="showUploadedImage()" />
-    </form>
 
 
     <script>

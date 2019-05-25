@@ -27,6 +27,8 @@
 
 @section('content')
 
+    @include('parts.break_space')
+
     <!-- dashboard content -->
     <div class="container">
 

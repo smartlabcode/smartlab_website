@@ -179,3 +179,11 @@
     left: 16px;
     color: #fff;
 }
+
+
+/* Table list in general */
+.listTable {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}

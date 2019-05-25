@@ -1,57 +1,64 @@
 <!-- Extend main layout -->
 @extends('layouts.app')
 
+
 @section('content')
 
-    <!-- Heading -->
-    <h1>Admin list</h1>
+    @include('parts.break_space')
 
-    <!-- Include error/success messages to be listed if anything goes wrong -->
-    @include('parts.error_success')
+    <div class="listTable">
 
-    <!-- Include modal and set fneccessary data -->
-    @include('parts.modal', [
-        'title' => 'Delete admin',
-        'message' => 'Are you sure?',
-        'action' => 'deleteAction()'
-    ])
+        <!-- Heading -->
+        <h1>Admin list</h1>
 
-    <!-- List of admins -->
-    <table class="table table-striped table-light">
-        <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Lastname</th>
-            <th scope="col">Email</th>
-            <th scope="col">Role</th>
-            <th scope="col">Edit</th>
-            <th scope="col">Delete</th>
-        </tr>
-        </thead>
-        <tbody>
+        <!-- Include error/success messages to be listed if anything goes wrong -->
+        @include('parts.error_success')
 
-        <!-- Loop through admins data and create new rows -->
-        @foreach($admins as $key => $admin)
+        <!-- Include modal and set fneccessary data -->
+        @include('parts.modal', [
+            'title' => 'Delete admin',
+            'message' => 'Are you sure?',
+            'action' => 'deleteAction()'
+        ])
 
+        <!-- List of admins -->
+        <table class="table table-striped table-light">
+            <thead>
             <tr>
-                <th scope="row">{{++$key}}</th>
-                <td>{{$admin->name}}</td>
-                <td>{{$admin->lastname}}</td>
-                <td>{{$admin->email}}</td>
-                <td>@if($admin->roles_id == 1) Superadmin @else Admin @endif</td>
-                <td><a href="admins/{{$admin->id}}/edit" class="btn btn-primary btn-sm">Edit</a></td>
-                <td>
-                    @if($admin->roles_id !== 1)
-                        <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" onclick="updateId({{$admin->id}})">Delete</button>
-                    @endif
-                </td>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Lastname</th>
+                <th scope="col">Email</th>
+                <th scope="col">Role</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
             </tr>
+            </thead>
+            <tbody>
 
-        @endforeach
+            <!-- Loop through admins data and create new rows -->
+            @foreach($admins as $key => $admin)
 
-        </tbody>
-    </table>
+                <tr>
+                    <th scope="row">{{++$key}}</th>
+                    <td>{{$admin->name}}</td>
+                    <td>{{$admin->lastname}}</td>
+                    <td>{{$admin->email}}</td>
+                    <td>@if($admin->roles_id == 1) Superadmin @else Admin @endif</td>
+                    <td><a href="admins/{{$admin->id}}/edit" class="btn btn-primary btn-sm">Edit</a></td>
+                    <td>
+                        @if($admin->roles_id !== 1)
+                            <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" onclick="updateId({{$admin->id}})">Delete</button>
+                        @endif
+                    </td>
+                </tr>
+
+            @endforeach
+
+            </tbody>
+        </table>
+
+    </div>
 
     <!-- Buton for redirecting to create admin page -->
     <div id="paperFab" onclick="redirectTocreatePage()">

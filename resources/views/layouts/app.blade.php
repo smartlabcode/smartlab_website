@@ -61,7 +61,13 @@
             <!-- Include content -->
             @yield('content')
         </main>
-        @yield('footer')
+
+        <!-- Generate footer only if page is not asking for authorization  -->
+        @auth()
+        @elseauth()
+            @yield('footer')
+        @endauth
+
     </div>
 </body>
 
