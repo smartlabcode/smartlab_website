@@ -390,7 +390,7 @@
                     </div>
                     <div class="join-right">
                         <a href="#">@lang('menu.become_a_partner')</a>
-                        <a href="/#contact">@lang('menu.careers')</a>
+                        <a href="/#">@lang('menu.careers')</a>
                     </div>
                 </div>
             </li>
@@ -398,7 +398,7 @@
                 <!-- Open link in new tab and set its language depending on the current language in main website-->
                 <a class="padding-right-0 grey" href="{{ env("BLOG_DOMAIN")  }}/@if(App::getlocale()){{App::getlocale()}}@else en @endif" target="_blank">@lang('menu.fourth_item')</a>
             </li>
-            <li class="nav-li nav-li-js last"><a class="padding-right-0 grey" href="#">@lang('menu.fifth_item')</a></li>
+            <li class="nav-li nav-li-js last"><a class="padding-right-0 grey" href="/#contact">@lang('menu.fifth_item')</a></li>
 
             <!-- This menu items are available only to logged in users -->
             @auth

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b79028d-cafa-497f-943d-d4c2314226fd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/menu.blade.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/beyondcode/laravel-dump-server/" />
     <ignored path="$PROJECT_DIR$/vendor/composer/" />
@@ -109,8 +109,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="1789" column="8" selection-start-line="1789" selection-start-column="8" selection-end-line="1789" selection-end-column="8" />
+            <state relative-caret-position="207">
+              <caret line="1711" column="23" selection-start-line="1711" selection-start-column="10" selection-end-line="1711" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -124,11 +124,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/footer.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="429" column="74" selection-start-line="429" selection-start-column="74" selection-end-line="429" selection-end-column="74" />
+            <state relative-caret-position="120">
+              <caret line="420" column="8" lean-forward="true" selection-start-line="420" selection-start-column="8" selection-end-line="420" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/menu.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="448" column="22" selection-start-line="448" selection-start-column="22" selection-end-line="448" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -137,7 +146,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>p-</find>
       <find>p-f</find>
       <find>425</find>
       <find>section4</find>
@@ -165,8 +173,9 @@
       <find>target</find>
       <find>name=&quot;on</find>
       <find>ber uns</find>
-      <find>footer-bot-icons</find>
       <find>about_us_h2</find>
+      <find>ref=&quot;#contact</find>
+      <find>footer-bot-icons</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -194,7 +203,6 @@
         <option value="$PROJECT_DIR$/app/Http/Middleware/CheckClientLanguage.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/menu.blade.php" />
         <option value="$PROJECT_DIR$/resources/lang/bs/index.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/index.php" />
         <option value="$PROJECT_DIR$/resources/lang/de/index.php" />
@@ -206,6 +214,7 @@
         <option value="$PROJECT_DIR$/resources/lang/bs/footer.php" />
         <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/menu.blade.php" />
       </list>
     </option>
   </component>
@@ -444,12 +453,12 @@
       <updated>1558438626671</updated>
       <workItem from="1558438628842" duration="724000" />
       <workItem from="1558685253941" duration="17782000" />
-      <workItem from="1558723614753" duration="9514000" />
+      <workItem from="1558723614753" duration="10076000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50764000" />
+    <option name="totallyTimeSpent" value="51326000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
@@ -642,13 +651,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/menu.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="340" column="164" selection-start-line="340" selection-start-column="164" selection-end-line="340" selection-end-column="164" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/lang/bs/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -724,15 +726,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="1789" column="8" selection-start-line="1789" selection-start-column="8" selection-end-line="1789" selection-end-column="8" />
+        <state relative-caret-position="207">
+          <caret line="1711" column="23" selection-start-line="1711" selection-start-column="10" selection-end-line="1711" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/footer.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="429" column="74" selection-start-line="429" selection-start-column="74" selection-end-line="429" selection-end-column="74" />
+        <state relative-caret-position="120">
+          <caret line="420" column="8" lean-forward="true" selection-start-line="420" selection-start-column="8" selection-end-line="420" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/menu.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="448" column="22" selection-start-line="448" selection-start-column="22" selection-end-line="448" selection-end-column="22" />
         </state>
       </provider>
     </entry>
