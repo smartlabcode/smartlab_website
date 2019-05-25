@@ -39,5 +39,10 @@ return [
     'blog_button' => 'Mehr anzeigen',
     'contact_h2' => 'Kontakt',
     'contact_p' => 'Wenn unsere Website nicht alle Ihre Fragen beantwortet hat, zögern Sie nicht, uns mit einer spezifischen Frage zu kontaktieren,
-    Projektvorschlag oder nur eine Anfrage für ein Vorstellungsgespräch.'
+    Projektvorschlag oder nur eine Anfrage für ein Vorstellungsgespräch.',
+    'formName' => 'Vorname',
+    'formSurname' => 'Nachname',
+    'formSubject' => 'Betreff',
+    'formEmail' => 'Email',
+    'formMessage' => 'Nachricht'
 ];

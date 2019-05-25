@@ -2100,26 +2100,26 @@
       @csrf
       <div class="contact-form-group">
         <div>
-          <label for="name">*Name</label>
+          <label for="name">*@lang('index.formName')</label>
           <input type="text" name="name" id="name" required />
         </div>
         <div>
-          <label for="surnanme">*Surname</label>
+          <label for="surnanme">*@lang('index.formSurname')</label>
           <input type="text" name="lastname" id="lastname" required />
         </div>
       </div>
       <div class="contact-form-group">
         <div>
-          <label for="subject">*Subject</label>
+          <label for="subject">*@lang('index.formSubject')</label>
           <input type="text" name="subject" id="subject" required />
         </div>
         <div>
-          <label for="email">*Email</label>
+          <label for="email">*@lang('index.formEmail')</label>
           <input type="email" name="email" id="email" required />
         </div>
       </div>
       <div class="contact-form-group textarea">
-        <label for="message">*Message</label>
+        <label for="message">*@lang('index.formMessage')</label>
         <textarea name="message" rows="7" id="message" required></textarea>
       </div>
       <button class="button submit" value="Send">Send</button>

@@ -39,5 +39,10 @@ return [
     'blog_button' => 'Prikaži više',
     'contact_h2' => 'Kontakt',
     'contact_p' => 'Ako naša web-lokacija nije odgovorila na sva vaša pitanja, slobodno nam se obratite s bilo kojim specifičnim pitanjem,
-     projektni prijedlog ili samo uvodni zahtjev za sastanak.'
+     projektni prijedlog ili samo uvodni zahtjev za sastanak.',
+    'formName' => 'Ime',
+    'formSurname' => 'Prezime',
+    'formSubject' => 'Predmet',
+    'formEmail' => 'Email',
+    'formMessage' => 'Poruka'
 ];
