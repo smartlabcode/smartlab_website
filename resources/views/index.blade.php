@@ -776,9 +776,17 @@
   }
 
   .submit:hover {
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
+    background-color: var(--button-bg-orange);
+    border: 1px solid var(--button-bg-orange);
+    color: #fff;
+    box-shadow: 2px 2px 2px rgba(150,150,150, 0.5);
+  }
+
+  .submit:active {
+    background-color: var(--button-bg-orange);
+    border: 1px solid var(--button-bg-orange);
+    color: #fff;
+    box-shadow: none;
   }
 
   .contact-section {
@@ -2085,6 +2093,8 @@
     <p>@lang('index.contact_p')</p>
     <h2 class="text-center h1-font">@lang('index.contact_h2')</h2>
     @include('parts.error_success')
+
+    <!-- TODO after empty form is submitted empty fields should be marked somehow (maybe red border) -->
     <form class="contact-form" action="/contact" method="POST">
       <!-- Include token -->
       @csrf
