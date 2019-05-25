@@ -118,10 +118,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="2068" column="45" selection-start-line="2068" selection-start-column="45" selection-end-line="2068" selection-end-column="45" />
+            <state relative-caret-position="191">
+              <caret line="1732" column="8" lean-forward="true" selection-start-line="1732" selection-start-column="8" selection-end-line="1732" selection-end-column="33" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/lang/en/index.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -155,6 +160,11 @@
       <find>button</find>
       <find>#</find>
       <find>margin-top-2</find>
+      <find>id=&quot;cont</find>
+      <find>contact-section</find>
+      <find>contact-form-co</find>
+      <find>#contact</find>
+      <find>online</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -180,6 +190,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/LanguagesController.php" />
         <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/CheckClientLanguage.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
       </list>
     </option>
@@ -419,12 +430,12 @@
       <updated>1558438626671</updated>
       <workItem from="1558438628842" duration="724000" />
       <workItem from="1558685253941" duration="17782000" />
-      <workItem from="1558723614753" duration="1548000" />
+      <workItem from="1558723614753" duration="2570000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42798000" />
+    <option name="totallyTimeSpent" value="43820000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
@@ -627,10 +638,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="2068" column="45" selection-start-line="2068" selection-start-column="45" selection-end-line="2068" selection-end-column="45" />
+        <state relative-caret-position="191">
+          <caret line="1732" column="8" lean-forward="true" selection-start-line="1732" selection-start-column="8" selection-end-line="1732" selection-end-column="33" />
         </state>
       </provider>
     </entry>

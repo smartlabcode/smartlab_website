@@ -781,9 +781,10 @@
     width: 112%;
     left: -6%;
     top: 300px;
+    //height: 300px;
     background-image: url(images/img/footer-blue-bg.svg);
     background-repeat: no-repeat;
-    background-size: 234vw;
+    //background-size: 234vw;
     background-position-x: 40%;
     background-position-y: 40%;
     position: relative;
@@ -1718,6 +1719,7 @@
       <button id="pinned-element1" class="button submit button-orange">@lang('index.section_two_button')</button>
     </div>
   </div>
+
   <div id="anchor">
     <div class="section-two-top" data-aos-anchor="#anchor" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
       <div class="section-two-top-left">
@@ -1728,7 +1730,7 @@
         <p class="p-font">
           @lang('index.section_two_top_right_p')
         </p>
-        <button class="button">@lang('index.section_two_top_right_button')</button>
+        <a href="/pages/courses"><button class="button">@lang('index.section_two_top_right_button')</button></a>
       </div>
     </div>
     <div class="section-two-bot">
@@ -1739,7 +1741,7 @@
           <p class="p-font">
             @lang('index.section_two_bot_left_p')
           </p>
-          <button class="button">@lang('index.section_two_bot_left_button')</button>
+          <a href="/pages/animations"><button class="button">@lang('index.section_two_bot_left_button')</button></a>
         </div>
 
 
@@ -1751,7 +1753,7 @@
           <p class="p-font">
             @lang('index.section_two_bot_mid_p')
           </p>
-          <button class="button">@lang('index.section_two_bot_mid_button')</button>
+          <a href="/pages/programming"><button class="button">@lang('index.section_two_bot_mid_button')</button></a>
         </div>
 
       </div>
@@ -1762,7 +1764,7 @@
           <p class="p-font">
             @lang('index.section_two_bot_right_p')
           </p>
-          <button class="button">@lang('index.section_two_bot_right_button')</button>
+          <a href="/pages/moodle"><button class="button">@lang('index.section_two_bot_right_button')</button></a>
         </div>
 
 
@@ -2065,7 +2067,12 @@
       <button class="button">@lang('index.blog_button')</button>
     </div>
 
+  </div>
+
 </section>
+
+
+<!-- TODO this isnt good -->
 <section class="contact-section" id="contact" name="contact">
 
   <img class="contact-orange-circle-r" src="images/img/orange-circle.svg" alt="background orange circle" />
