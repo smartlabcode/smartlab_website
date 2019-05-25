@@ -551,6 +551,10 @@
     padding-top: 25px;
   }
 
+  .blog-container > * {
+    margin: 10px;
+  }
+
   .blog {
     -webkit-box-shadow: -1px -1px 25px 1px var(--shadow-color);
     -moz-box-shadow: -1px -1px 25px 1px var(--shadow-color);
