@@ -109,8 +109,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="2007" column="77" lean-forward="true" selection-start-line="2007" selection-start-column="77" selection-end-line="2007" selection-end-column="77" />
+            <state relative-caret-position="193">
+              <caret line="2067" column="10" lean-forward="true" selection-start-line="2067" selection-start-column="10" selection-end-line="2067" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -428,12 +428,12 @@
       <updated>1558438626671</updated>
       <workItem from="1558438628842" duration="724000" />
       <workItem from="1558685253941" duration="17782000" />
-      <workItem from="1558723614753" duration="3954000" />
+      <workItem from="1558723614753" duration="4150000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45204000" />
+    <option name="totallyTimeSpent" value="45400000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
@@ -659,8 +659,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="2007" column="77" lean-forward="true" selection-start-line="2007" selection-start-column="77" selection-end-line="2007" selection-end-column="77" />
+        <state relative-caret-position="193">
+          <caret line="2067" column="10" lean-forward="true" selection-start-line="2067" selection-start-column="10" selection-end-line="2067" selection-end-column="10" />
         </state>
       </provider>
     </entry>

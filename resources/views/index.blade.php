@@ -2068,7 +2068,7 @@
     </div>
   </div>-->
     <div class="blog-button">
-      <button class="button">@lang('index.blog_button')</button>
+      <a href="{{env('BLOG_DOMAIN')}}/{{App::getlocale()}}" target="_blank"><button class="button">@lang('index.blog_button')</button></a>
     </div>
 
   </div>
