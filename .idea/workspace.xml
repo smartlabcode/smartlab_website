@@ -109,26 +109,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="2102" column="28" lean-forward="true" selection-start-line="2102" selection-start-column="28" selection-end-line="2102" selection-end-column="28" />
+            <state relative-caret-position="177">
+              <caret line="1789" column="8" selection-start-line="1789" selection-start-column="8" selection-end-line="1789" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/lang/en/menu.php">
+        <entry file="file://$PROJECT_DIR$/resources/lang/de/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/lang/bs/menu.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+            <state relative-caret-position="207">
+              <caret line="24" column="30" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -136,8 +127,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/footer.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="483" column="125" selection-start-line="483" selection-start-column="125" selection-end-line="483" selection-end-column="125" />
+            <state relative-caret-position="255">
+              <caret line="429" column="74" selection-start-line="429" selection-start-column="74" selection-end-line="429" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -146,7 +137,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>picture</find>
       <find>p-</find>
       <find>p-f</find>
       <find>425</find>
@@ -159,7 +149,6 @@
       <find>contact-section</find>
       <find>contact-form-co</find>
       <find>#contact</find>
-      <find>online</find>
       <find>blogs</find>
       <find>.blog-container</find>
       <find>ph</find>
@@ -172,7 +161,12 @@
       <find>find us</find>
       <find>&quot;contact&quot;</find>
       <find>no-right</find>
+      <find>online</find>
+      <find>target</find>
+      <find>name=&quot;on</find>
+      <find>ber uns</find>
       <find>footer-bot-icons</find>
+      <find>about_us_h2</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -204,13 +198,13 @@
         <option value="$PROJECT_DIR$/resources/lang/bs/index.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/index.php" />
         <option value="$PROJECT_DIR$/resources/lang/de/index.php" />
-        <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/menu.php" />
         <option value="$PROJECT_DIR$/resources/lang/bs/menu.php" />
         <option value="$PROJECT_DIR$/resources/lang/de/menu.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/footer.php" />
         <option value="$PROJECT_DIR$/resources/lang/de/footer.php" />
         <option value="$PROJECT_DIR$/resources/lang/bs/footer.php" />
+        <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" />
       </list>
     </option>
@@ -450,12 +444,12 @@
       <updated>1558438626671</updated>
       <workItem from="1558438628842" duration="724000" />
       <workItem from="1558685253941" duration="17782000" />
-      <workItem from="1558723614753" duration="8994000" />
+      <workItem from="1558723614753" duration="9514000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50244000" />
+    <option name="totallyTimeSpent" value="50764000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
@@ -669,13 +663,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/de/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="46" column="32" lean-forward="true" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/parts/modal.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -683,13 +670,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="2102" column="28" lean-forward="true" selection-start-line="2102" selection-start-column="28" selection-end-line="2102" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -735,10 +715,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/de/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="24" column="30" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="1789" column="8" selection-start-line="1789" selection-start-column="8" selection-end-line="1789" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/footer.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="483" column="125" selection-start-line="483" selection-start-column="125" selection-end-line="483" selection-end-column="125" />
+        <state relative-caret-position="255">
+          <caret line="429" column="74" selection-start-line="429" selection-start-column="74" selection-end-line="429" selection-end-column="74" />
         </state>
       </provider>
     </entry>
