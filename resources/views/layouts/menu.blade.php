@@ -338,6 +338,7 @@
 @section('menu')
 
 <!-- Available to all users -->
+<!-- TODO some menu items are not visible on white background, language switch and phone numbers  needs to be restyled, problems with menu on tablet/mobile devices -->
 <ul class="nav-list " id="nav-list">
     <div class="nav-top contain" id="nav-top">
 
