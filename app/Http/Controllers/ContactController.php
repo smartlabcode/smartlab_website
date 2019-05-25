@@ -84,18 +84,24 @@ class ContactController extends Controller
         // validate form
         $request->validate([
             'bussiness_name' => 'required',
-            'bussiness_subject' => 'required',
+            'bussiness_website' => 'required',
+            'bussiness_person' => 'required',
+            'bussiness_phone_number' => 'required',
             'bussiness_email' => 'required|email',
-            'bussiness_message' => 'required'
+            'bussiness_message' => 'required',
+            'bussiness_category' => 'required'
         ]);
 
         // create contact and push mail to queue
         $contact = new Contact();
         $contact->type = 'bussiness';
-        $contact->name = $request->input('bussiness_name');
-        $contact->subject = $request->input('bussiness_subject');
+        $contact->company = $request->input('bussiness_name');
+        $contact->bussiness_website = $request->input('bussiness_website');
+        $contact->bussiness_person = $request->input('bussiness_person');
+        $contact->phone_number = $request->input('bussiness_phone_number');
         $contact->email = $request->input('bussiness_email');
         $contact->message = $request->input('bussiness_message');
+        $contact->category = $request->input('bussiness_category');
 
 
         // save uploaded file/s if they are sent TODO file sizes and count will be handled in php.ini

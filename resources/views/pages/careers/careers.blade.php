@@ -6,7 +6,7 @@
     @include('parts.break_space')
     @include('parts.error_success')
 
-    <h2>Bussiness contact</h2>
+    <h2>Career contact</h2>
 
     <form action="/careers" method="POST" enctype="multipart/form-data">
 

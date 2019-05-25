@@ -16,8 +16,10 @@ class CreateContactsTable extends Migration
         Schema::create('contacts', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->enum('type', ['general', 'demo', 'bussiness', 'career'])->default('general');
-            $table->string("name", 100);
+            $table->string("name", 100)->nullable();
             $table->string("lastname", 100)->nullable();
+            $table->string("bussiness_website", 100)->nullable();
+            $table->string("bussiness_person", 100)->nullable();
             $table->string("phone_number", 100)->nullable();
             $table->string('file_path', 255)->nullable();
             $table->string("email", 100);

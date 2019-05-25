@@ -170,4 +170,23 @@ class PagesController extends Controller
 
     }
 
+    /**
+     * Display Partner page
+     */
+    public function showPartnerPage() {
+
+        try {
+
+            return view('pages.become_partner');
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', 'PagesController - showPartnerPage: ' . $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+
+    }
+
 }
