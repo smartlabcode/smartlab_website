@@ -1,6 +1,8 @@
 <!-- Extend main layout -->
 @extends('layouts.app')
+
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 <style>
   :root {
     --shadow-color: rgba(0, 53, 145, 0.15);
@@ -1586,6 +1588,7 @@
 
 
 @section('content')
+
 <!-- Heading -->
 <!-- <h1>@lang('index.heading')</h1> -->
 
@@ -1693,7 +1696,7 @@
       <p class="p-font ">
         @lang('index.heading_p')
       </p>
-      <button class="button margin-top-27">@lang('index.heading_button')</button>
+      <a href="#contact"><button class="button margin-top-27">@lang('index.heading_button')</button></a>
     </div>
     <img data-aos="zoom-in" class="section-one-animation" src="images/img/header-illustration.svg" alt="header ilustration" />
 
@@ -2063,7 +2066,7 @@
     </div>
 
 </section>
-<section class="contact-section" id="contact">
+<section class="contact-section" id="contact" name="contact">
 
   <img class="contact-orange-circle-r" src="images/img/orange-circle.svg" alt="background orange circle" />
   <img class="contact-orange-circle-l" src="images/img/orange-circle.svg" alt="background orange circle" />
