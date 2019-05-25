@@ -424,11 +424,11 @@
         <div class="footer-top-row">
             <nav class="footer-top-column --left">
                 <ul>
-                    <li><a href="#">What We Do</a></li>
-                    <li><a href="#">Who We Are</a></li>
-                    <li><a href="#">Join Us</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">@lang('menu.first_item')</a></li>
+                    <li><a href="#">@lang('menu.second_item')</a></li>
+                    <li><a href="#">@lang('menu.third_item')</a></li>
+                    <li><a href="#">@lang('menu.fourth_item')</a></li>
+                    <li><a href="#">@lang('menu.fifth_item')</a></li>
                 </ul>
             </nav>
             <div class="footer-top-column phone --center">
