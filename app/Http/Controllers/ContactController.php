@@ -65,7 +65,7 @@ class ContactController extends Controller
         Mail::to([env('ADMIN_EMAIL')])->queue(new MailToSend($contact));
 
         // return message
-        return back()->with('message', 'Contact message successfully sent.');
+        return redirect('/#contact')->with('message', 'Contact message successfully sent.');
     }
 
 
