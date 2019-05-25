@@ -35,11 +35,26 @@ class ImagesController extends Controller
 
             // go to images folder and get all images links
             foreach (glob("images/*") as $file) {
+
                 if (is_file($file)) {
                     array_push($links, [
                         'path' => $file,
                         'name' => substr($file, strpos($file, '/') + 1)
                     ]);
+                }
+
+                // if there is folder inside /images folder
+                if(is_dir($file)) {
+                    //echo $file . "<br/>";
+                    foreach (glob($file . "/*") as $fileIn) {
+                        if(is_file($fileIn)) {
+                           // echo "file" . "<br/>";
+                            array_push($links, [
+                                'path' => $fileIn,
+                                'name' => substr($fileIn, strpos($fileIn, '/') + 1)
+                            ]);
+                        }
+                    }
                 }
             }
 

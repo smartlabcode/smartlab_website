@@ -174,11 +174,55 @@ class ContactController extends Controller
      */
     public function handleCareersInfo(Request $request) {
 
-        try {
-            die("careers info");
-        } catch (\Exception $e) {
+        // TODO issues with try/catch block and data validation
+        // set request data to session so that it can be used for old input if neccessary
+        $request->flash();
 
+        // check if neccessary values are entered correctly, if no return error messages
+        $request->validate([
+            'name' => 'required|max:45',
+            'lastname' => 'required|max:45',
+            'email' => 'required|email',
+            'phone_number' => 'required|max:45',
+            'message' => 'required',
+            'category' => 'required'
+        ]);
+
+        // create contact and push mail to queue
+        $contact = new Contact();
+        $contact->type = 'career';
+        $contact->name = $request->input('name');
+        $contact->lastname = $request->input('lastname');
+        $contact->email = $request->input('email');
+        $contact->phone_number = $request->input('phone_number');
+        $contact->subject = $request->input('subject');
+        $contact->message = $request->input('message');
+        $contact->category = $request->input('category');
+
+        // save uploaded file/s if they are sent TODO file sizes and count will be handled in php.ini
+        if (file_exists($_FILES['files']['tmp_name'][0])) {
+
+            // generate new folder name
+            $folderName = rand(1,10000);
+
+            // make folder where contact files will temporary be located
+            Storage::makeDirectory("/" .$folderName);
+            // set path where tou store uploaded files
+            $path = storage_path()  ."/app/" . $folderName;
+            $this->uploader->uploadFiles($_FILES, $path);
+            // $attachment = true;
+            $contact->file_path = "/" . $folderName . '/contact.zip';
+
+            // create zip
+            $this->mailer->zip($path);
         }
+
+        $contact->save();
+
+        Mail::to([env('ADMIN_EMAIL')])->queue(new MailToSend($contact));
+
+        // return message
+        return back()->with('message', 'Career request successfully sent.');
     }
 }
 

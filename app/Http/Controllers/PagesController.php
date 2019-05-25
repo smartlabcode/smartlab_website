@@ -151,4 +151,23 @@ class PagesController extends Controller
 
     }
 
+    /**
+     * Display Careers page
+     */
+    public function showCareersPage() {
+
+        try {
+
+            return view('pages.careers.careers');
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', 'PagesController - showCareersPage: ' . $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+
+    }
+
 }
