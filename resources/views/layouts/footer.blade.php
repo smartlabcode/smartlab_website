@@ -475,8 +475,8 @@
             </div>
             <div class="footer-bot-column --right">
                 <div class="social-icons-container">
-                    <a href="#" target="_blank"><img src={{"/images/footer/social-icons/fb-icon.svg"}} class="footer-bot-icons" /></a>
-                    <a href="#" target="_blank"><img src={{"/images/footer/social-icons/linkedin-icon.svg"}} class="footer-bot-icons" /></a>
+                    <a href="https://www.facebook.com/smartlabsarajevo/" target="_blank"><img src={{"/images/footer/social-icons/fb-icon.svg"}} class="footer-bot-icons" /></a>
+                    <a href="https://www.linkedin.com/company/smartlab-sarajevo" target="_blank"><img src={{"/images/footer/social-icons/linkedin-icon.svg"}} class="footer-bot-icons" /></a>
                     <a href="#" target="_blank">
                         <img src={{"/images/footer/social-icons/skype-icon.svg"}} class="footer-bot-icons" />
                     </a>
