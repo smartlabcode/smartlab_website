@@ -12,7 +12,7 @@
 */
 
 // for all of the routes in the following group user needs to be authenticated to see them
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth', 'is_not_xlf_user'])->group(function () {
 
     // route for displaying page after admin logs in
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');

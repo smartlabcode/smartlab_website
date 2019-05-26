@@ -5,21 +5,24 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
-class RedirectIfAuthenticated
+class CheckIfXlfUser
 {
     /**
      * Handle an incoming request.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure  $next
-     * @param  string|null  $guard
      * @return mixed
      */
-    public function handle($request, Closure $next, $guard = null)
+    public function handle($request, Closure $next)
     {
+        // disable any page, regarding admins management, if user isnt superadmin
+        if (isset(Auth::user()->roles_id)) {
 
-        if (Auth::guard($guard)->check()) {
-            return redirect('/dashboard');
+            if (Auth::user()->roles_id == 3) {
+                return redirect('/');
+            }
+
         }
 
         return $next($request);

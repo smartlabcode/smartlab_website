@@ -21,9 +21,11 @@ class CheckIfSuperAdmin
 
         // disable any page, regarding admins management, if user isnt superadmin
         if (isset(Auth::user()->roles_id)) {
+
             if (Auth::user()->roles_id != 1) {
                 return redirect('/dashboard');
             }
+
         }
 
         return $next($request);
