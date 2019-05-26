@@ -37,16 +37,19 @@ Route::middleware(['auth', 'is_not_xlf_user'])->group(function () {
     Route::put('translations', 'TranslationsController@update');
 
     // following routes are only accessible by the superadmin/s
-    Route::get('subscribers', 'SubscribeController@listSubscribers')->middleware(['is_superadmin']);
-    Route::resource('admins', 'UsersController')->except([
-        'show',
-        'store'
-    ])->middleware(['is_superadmin']);
-    Route::post('admins/add', 'UsersController@store')->middleware(['is_superadmin'])->name('admins.store');
+    Route::middleware(['is_superadmin'])->group(function () {
+        Route::get('subscribers', 'SubscribeController@listSubscribers');
+        Route::resource('admins', 'UsersController')->except([
+            'show',
+            'store'
+        ]);
+        Route::post('admins/add', 'UsersController@store')->name('admins.store');
 
-    // routes for careers
-    Route::resource('careers', 'CareersController');
-    Route::post('careers/store', 'CareersController@storeJob'); // TODO store route is not defined in resource at all
+        // routes for careers
+        Route::resource('careers', 'CareersController');
+        Route::post('careers/store', 'CareersController@storeJob'); // TODO store route is not defined in resource at all - check this
+    });
+
 });
 
 // logout route

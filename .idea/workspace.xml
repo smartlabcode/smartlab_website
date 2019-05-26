@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b79028d-cafa-497f-943d-d4c2314226fd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/CheckIfSuperAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckIfSuperAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/xliff.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/xliff.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/beyondcode/laravel-dump-server/" />
@@ -116,7 +111,7 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/XlfUserController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="95">
-              <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
               <folding>
                 <element signature="e#40#53#0#PHP" expanded="true" />
               </folding>
@@ -127,8 +122,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/menu.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-564">
-              <caret line="408" column="49" lean-forward="true" selection-start-line="408" selection-start-column="49" selection-end-line="408" selection-end-column="49" />
+            <state relative-caret-position="78">
+              <caret line="386" column="18" lean-forward="true" selection-start-line="386" selection-start-column="18" selection-end-line="386" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -136,8 +131,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="49" column="36" lean-forward="true" selection-start-line="49" selection-start-column="2" selection-end-line="49" selection-end-column="36" />
+            <state relative-caret-position="217">
+              <caret line="54" column="9" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="9" />
               <folding>
                 <element signature="e#7#389#0#PHP" expanded="true" />
               </folding>
@@ -155,10 +150,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Middleware/CheckIfSuperAdmin.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Middleware/CheckIfXlfUser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="28" selection-end-column="9" />
+            <state relative-caret-position="285">
+              <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="25" selection-end-column="9" />
               <folding>
                 <element signature="e#39#51#0#PHP" expanded="true" />
               </folding>
@@ -167,13 +162,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Middleware/CheckIfXlfUser.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
-              <folding>
-                <element signature="e#39#51#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="425">
+              <caret line="49" column="83" selection-start-line="49" selection-start-column="83" selection-end-line="49" selection-end-column="83" />
             </state>
           </provider>
         </entry>
@@ -182,7 +174,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>#contact</find>
       <find>blogs</find>
       <find>.blog-container</find>
       <find>ph</find>
@@ -210,8 +201,9 @@
       <find>conta</find>
       <find>subs</find>
       <find>regis</find>
-      <find>Aut</find>
       <find>is_</find>
+      <find>Aut</find>
+      <find>logout</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -220,7 +212,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/public/css/app.css" />
         <option value="$PROJECT_DIR$/resources/views/pages/admins/admins_list.blade.php" />
@@ -268,9 +259,10 @@
         <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authorize.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" />
         <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/CheckIfSuperAdmin.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/CheckIfXlfUser.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" />
       </list>
     </option>
   </component>
@@ -478,12 +470,12 @@
       <updated>1558438626671</updated>
       <workItem from="1558438628842" duration="724000" />
       <workItem from="1558685253941" duration="17782000" />
-      <workItem from="1558723614753" duration="30847000" />
+      <workItem from="1558723614753" duration="31486000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72097000" />
+    <option name="totallyTimeSpent" value="72736000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -503,7 +495,7 @@
       <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49285713" weight="0.24394184" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.3958904" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.3958904" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" />
@@ -780,13 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-163">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/xliff_signup_signin.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="410">
@@ -804,17 +789,10 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/XlfUserController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
-          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
           <folding>
             <element signature="e#40#53#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/menu.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-564">
-          <caret line="408" column="49" lean-forward="true" selection-start-line="408" selection-start-column="49" selection-end-line="408" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -870,16 +848,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="49" column="36" lean-forward="true" selection-start-line="49" selection-start-column="2" selection-end-line="49" selection-end-column="36" />
-          <folding>
-            <element signature="e#7#389#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -897,13 +865,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/menu.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="386" column="18" lean-forward="true" selection-start-line="386" selection-start-column="18" selection-end-line="386" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="54" column="9" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="9" />
+          <folding>
+            <element signature="e#7#389#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Middleware/CheckIfXlfUser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        <state relative-caret-position="285">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="25" selection-end-column="9" />
           <folding>
             <element signature="e#39#51#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="49" column="83" selection-start-line="49" selection-start-column="83" selection-end-line="49" selection-end-column="83" />
         </state>
       </provider>
     </entry>

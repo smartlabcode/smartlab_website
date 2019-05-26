@@ -400,18 +400,20 @@
             </li>
             <li class="nav-li nav-li-js last"><a class="padding-right-0 grey" href="/#contact">@lang('menu.fifth_item')</a></li>
 
-            <!-- This menu items are available only to logged in users (not xlf user) -->
+            <!-- This menu items are available only to logged in users -->
             @auth
 
+                <!-- not available for xlf users -->
                 @if(\Illuminate\Support\Facades\Auth::user()->roles_id != 3)
 
                     <li class="nav-li nav-li-js">
                         <a class="grey padding-right-0" href="/dashboard">@lang('menu.sixth_item')</a>
                     </li>
 
-                    <!-- Link for logging out -->
-                    <li class="nav-li nav-li-js"><a class="grey padding-right-0" href="{{route('logout')}}">@lang('menu.tenth_item')</a></li>
                 @endif
+
+                <!-- Link for logging out -->
+                <li class="nav-li nav-li-js"><a class="grey padding-right-0" href="{{route('logout')}}">@lang('menu.tenth_item')</a></li>
 
             @endauth
         </div>
