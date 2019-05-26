@@ -64,7 +64,36 @@
 
         <!-- Generate footer only if page is not asking for authorization  -->
 
-        @yield('footer')
+        @php
+
+            // admin routes
+            $adminRoutes = [
+                'dashboard',
+                'admins',
+                'admins/*',
+                'subscribers',
+                'careers',
+                'blogs',
+                'blogs/*',
+                'logs',
+                'assets',
+                'translations',
+            ];
+
+            $adminRoute = false;
+
+            foreach ($adminRoutes as $route) {
+                if(Request::is($route)) {
+                    $adminRoute = true;
+                    break;
+                }
+            }
+
+        @endphp
+
+        @if(!$adminRoute)
+            @yield('footer')
+        @endif
 
 {{--        @auth--}}
 {{--        @elseauth--}}
