@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class XlfUserController extends Controller
@@ -34,5 +35,14 @@ class XlfUserController extends Controller
 
     public function login(Request $request) {
 
+        // set request data to session so that it can be used for old input if neccessary
+        $request->flash();
+
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::attempt($credentials)) {
+            // if authentication passed
+            return redirect()->intended('pages/xlf');
+        }
     }
 }

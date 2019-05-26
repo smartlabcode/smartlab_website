@@ -19,12 +19,22 @@
         <input type="password" name="password" /><br/>
         <input type="password" name="password_confirmation" /><br/>
 
-        <button type="submit">Submit</button>
+        <button type="submit">Register</button>
     </form>
 
     <br/>
 
     <h3>Sign in</h3>
+
+    <form action="/xlf/signin" method="POST">
+
+        @csrf
+
+        <input type="email" name="email" /><br/>
+        <input type="password" name="password" /><br/>
+
+        <button type="submit">Login</button>
+    </form>
 
 
 
