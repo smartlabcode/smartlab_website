@@ -58,11 +58,16 @@ Route::get('pages/courses', 'PagesController@showCoursesPage');
 Route::get('pages/animations', 'PagesController@showAnimationsPage');
 Route::get('pages/programming', 'PagesController@showProgrammingPage');
 Route::get('pages/moodle', 'PagesController@showMoodlePage');
+
 // TODO new routes
 Route::get('pages/careers', 'PagesController@showCareersPage');
 Route::get('pages/partner', 'PagesController@showPartnerPage');
 Route::get('pages/outsourcing', 'PagesController@showOutsourcingPage');
 Route::get('pages/xlf', 'PagesController@showXlfPage');
+Route::get('pages/xlf_signin', 'PagesController@showXlfSignInPage');
+Route::post('xlf/signup', 'XlfUserController@register');
+Route::post('xlf/signin', 'XlfUserController@login');
+
 
 // route where contact info is sent
 Route::post('contact', 'ContactController@handleContactInfo');

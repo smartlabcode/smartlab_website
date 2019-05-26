@@ -208,4 +208,23 @@ class PagesController extends Controller
 
     }
 
+    /**
+     * Display Partner page
+     */
+    public function showXlfSignInPage() {
+
+        try {
+
+            return view('pages.xliff_signup_signin');
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', 'PagesController - showXlfSignInPage: ' . $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+
+    }
+
 }

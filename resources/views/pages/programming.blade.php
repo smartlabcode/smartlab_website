@@ -1263,7 +1263,7 @@
                 </div>
             </div>
         </div>
-        <button class="button">@lang('programming.seeMore')</button>
+        <a href="/pages/xlf"><button class="button">@lang('programming.seeMore')</button></a>
     </div>
 </section>
 <section class="contain tools-container">
