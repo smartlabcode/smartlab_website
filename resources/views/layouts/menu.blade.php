@@ -153,7 +153,6 @@
     }
 
     .nav-bot {
-
         display: flex;
         justify-content: flex-end;
         position: sticky;
@@ -240,6 +239,8 @@
     @media screen and (max-width: 768px) {
         .nav-bot {
             justify-content: space-between;
+            padding-top: 10px;
+            padding-bottom: 10px;
         }
 
         .height-js {
@@ -256,7 +257,7 @@
             flex-direction: column;
             justify-content: space-evenly;
             position: absolute;
-            top: 30px;
+            top: 50px;
             width: 100vw;
             right: -2.5vw;
             background-color: white;
@@ -302,43 +303,90 @@
             display: inline-block;
             background-color: var(--h1-color);
             position: absolute;
-            top: 2.5px;
+            top: 0;
+            animation-duration: 0.2s;
+            animation-timing-function: ease-in;
+
+            animation-fill-mode: forwards;
+
         }
 
-        .nav-button-inner::before {
-            content: "";
+        .nav-button-inner-before {
             height: 5px;
             width: 30px;
             display: inline-block;
             background-color: var(--h1-color);
             position: absolute;
             top: 10px;
+            animation-duration: 0.2s;
+            animation-timing-function: ease-in;
+
+            animation-fill-mode: forwards;
         }
 
-        .nav-button-inner {
+        .nav-button-inner-after {
 
-            width: 0;
-        }
-
-        .nav-button-inner::before {
-            transform: rotate(45deg);
-            top: 10px !important;
-        }
-
-        .nav-button-inner::after {
-            transform: rotate(-45deg);
-            top: 10px !important;
-        }
-
-        .nav-button-inner::after {
-            content: "";
             height: 5px;
             width: 30px;
             display: inline-block;
             background-color: var(--h1-color);
             position: absolute;
             top: 20px;
+            animation-duration: 0.2s;
+            animation-timing-function: ease-in;
+
+            animation-fill-mode: forwards;
         }
+
+        @keyframes navBtn {
+            from {
+                width: 30px;
+            }
+
+            to {
+                width: 0px;
+            }
+        }
+
+        @keyframes navBtnAfter {
+            from {
+                transform: rotate(0deg);
+                top: 20px;
+            }
+
+            to {
+                transform: rotate(-45deg);
+                top: 10px;
+            }
+        }
+
+        @keyframes navBtnBefore {
+            from {
+                transform: rotate(0deg);
+                top: 10px;
+            }
+
+            to {
+                transform: rotate(45deg);
+                top: 10px;
+            }
+        }
+
+        /*.nav-button-inner {
+            width: 0;
+        }*/
+
+        /*.nav-button-inner::before {
+            transform: rotate(45deg);
+            top: 10px !important;
+        }*/
+
+        /*.nav-button-inner::after {
+            transform: rotate(-45deg);
+            top: 10px !important;
+        }*/
+
+
 
         .arrow-js::before {
             left: 95% !important;
@@ -374,7 +422,9 @@
     <div class="nav-bot contain">
         <a href="/"><img class="nav-logo" src={{"/images/smartlab-logo.svg"}}></a>
         <div class="nav-button" id="nav-button">
-            <div class="nav-button-inner"></div>
+            <div class="nav-button-inner" id="nav-button-inner"></div>
+            <div class="nav-button-inner-before" id="nav-button-inner-before"></div>
+            <div class="nav-button-inner-after" id="nav-button-inner-after"></div>
         </div>
         <div class="nav-li-container" id="nav-li-container">
             <li class="nav-li nav-li-js arrow first">
@@ -418,17 +468,17 @@
             <!-- This menu items are available only to logged in users -->
             @auth
 
-                <!-- not available for xlf users -->
-                @if(\Illuminate\Support\Facades\Auth::user()->roles_id != 3)
+            <!-- not available for xlf users -->
+            @if(\Illuminate\Support\Facades\Auth::user()->roles_id != 3)
 
-                    <li class="nav-li nav-li-js">
-                        <a class="grey padding-right-0" href="/dashboard">@lang('menu.sixth_item')</a>
-                    </li>
+            <li class="nav-li nav-li-js">
+                <a class="grey padding-right-0" href="/dashboard">@lang('menu.sixth_item')</a>
+            </li>
 
-                @endif
+            @endif
 
-                <!-- Link for logging out -->
-                <li class="nav-li nav-li-js"><a class="grey padding-right-0" href="{{route('logout')}}">@lang('menu.tenth_item')</a></li>
+            <!-- Link for logging out -->
+            <li class="nav-li nav-li-js"><a class="grey padding-right-0" href="{{route('logout')}}">@lang('menu.tenth_item')</a></li>
 
             @endauth
         </div>
@@ -443,6 +493,9 @@
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
         let navButton = document.querySelector("#nav-button");
+        let navButtonInner = document.querySelector("#nav-button-inner");
+        let navButtonInnerAfter = document.querySelector("#nav-button-inner-after");
+        let navButtonInnerBefore = document.querySelector("#nav-button-inner-before");
         let nav = document.querySelector("#nav-list");
         let navTop = document.querySelector("#nav-top");
         let grey = document.querySelectorAll(".grey");
@@ -450,13 +503,13 @@
         let expandable = document.querySelectorAll(".expandable");
         let navLi = document.querySelectorAll(".nav-li");
         let navLiContainer = document.querySelector("#nav-li-container");
-        console.log(navLi);
         navButton.addEventListener("click", function(event) {
             navLiContainer.classList.toggle("height-js");
             navTop.style.display = "none";
-        })
-        window.addEventListener("click", function(event) {
-            console.log(event.target);
+            navButtonInner.style.animationName = "navBtn";
+            navButtonInnerAfter.style.animationName = "navBtnAfter";
+            navButtonInnerBefore.style.animationName = "navBtnBefore";
+            console.log(navButtonInner, navButtonInnerAfter, navButtonInnerBefore);
         })
         window.addEventListener("scroll", function(event) {
 
