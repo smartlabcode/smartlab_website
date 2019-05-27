@@ -236,7 +236,7 @@
 
   .section-two-top {
     display: flex;
-    min-height: 500px;
+    height: 500px;
     background-color: white;
     border-radius: 15px;
     -webkit-box-shadow: -1px -1px 15px 1px var(--shadow-color);
@@ -289,13 +289,12 @@
   }
 
   .section-two-bot {
-    min-height: 500px;
     display: flex;
     margin-top: 20px;
   }
 
   .section-two-bot-item {
-    min-height: 400px;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
