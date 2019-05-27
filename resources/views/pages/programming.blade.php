@@ -393,7 +393,6 @@
     .submit {
         align-self: flex-end;
         margin-top: 20px;
-        margin-bottom: 250px;
         background-color: var(--button-bg-orange);
         border: 1px solid var(--button-bg-orange);
     }
@@ -475,15 +474,15 @@
     .xliff-background {
         object-fit: cover;
         position: absolute;
-        width: 120vw;
+        right: -28%;
+        width: 110vw;
         z-index: -100;
-        transform: translate(-12%, 3%);
     }
 
     .xliff-background-container {
 
         position: relative;
-        margin-top: 250px !important;
+        margin-top: 360px !important;
         margin-bottom: 250px !important;
         display: flex;
         align-items: center;
@@ -1227,9 +1226,9 @@
                 <img class="dashed-line" src="../images/img/dashed-line.svg">
                 <div>
                     <h5 class="h1-font">@lang('programming.uploadFile')</h5>
-                            <p class="p-font">
-                                @lang('programming.uploadFileText')
-                            </p>
+                    <p class="p-font">
+                        @lang('programming.uploadFileText')
+                    </p>
                 </div>
             </div>
 
@@ -1238,9 +1237,9 @@
                 <img class="dashed-line dashed-line-rotate" src="../images/img/dashed-line.svg">
                 <div>
                     <h5 class="h1-font">@lang('programming.downloadXls')</h5>
-                            <p class="p-font">
-                                @lang('programming.downloadXlsText')
-                            </p>
+                    <p class="p-font">
+                        @lang('programming.downloadXlsText')
+                    </p>
                 </div>
             </div>
             <div class="xliff-item">
@@ -1248,18 +1247,18 @@
                 <img class="dashed-line" src="../images/img/dashed-line.svg">
                 <div>
                     <h5 class="h1-font">@lang('programming.translateColumns')</h5>
-                            <p class="p-font">
-                                @lang('programming.translateColumnsText')
-                            </p>
+                    <p class="p-font">
+                        @lang('programming.translateColumnsText')
+                    </p>
                 </div>
             </div>
             <div class="xliff-item">
                 <img src="../images/xliff-icons/step4-icon-ready.svg">
                 <div>
                     <h5 class="h1-font">@lang('programming.downloadReady')</h5>
-                            <p class="p-font">
-                                @lang('programming.explanationText')
-                            </p>
+                    <p class="p-font">
+                        @lang('programming.explanationText')
+                    </p>
                 </div>
             </div>
         </div>
@@ -1363,7 +1362,7 @@
                 if (window.innerWidth <= 425) {
                     contact.style.height = 140 + "%";
                 } else {
-                    contact.style.height = 100 + "%";
+                    contact.style.height = 90 + "%";
                 }
 
             }

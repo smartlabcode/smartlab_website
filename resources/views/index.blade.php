@@ -377,7 +377,7 @@
     justify-content: space-between;
   }
 
-  .about-us div {
+  .about-us>div {
     flex-basis: 25%;
 
   }
@@ -723,7 +723,7 @@
 
   .contact-form-group {
     display: flex;
-    flex-basis: 100%;
+
     justify-content: space-between;
     padding-top: 20px;
   }
