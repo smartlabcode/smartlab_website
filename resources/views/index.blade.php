@@ -149,7 +149,7 @@
     position: relative;
     top: 100px;
     display: flex;
-    padding-bottom: 100px;
+
     justify-content: space-between;
   }
 
@@ -354,7 +354,7 @@
 
   .section-three {
     position: relative;
-    padding-top: 250px;
+    padding-top: 150px;
   }
 
   .about-orange-circle {
@@ -410,7 +410,7 @@
   }
 
   .team {
-    padding-top: 250px;
+    padding-top: 100px;
     position: relative;
   }
 
@@ -443,11 +443,11 @@
   }
 
   .testemonials {
-    padding-top: 250px;
+    padding-top: 100px;
   }
 
   .partners-images {
-    flex-basis: 35%;
+    flex-basis: 40%;
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
@@ -476,14 +476,14 @@
   }
 
   .partners-text {
-    flex-basis: 60%;
+    flex-basis: 50%;
     background-image: url(images/img/quotation-marks.svg);
     background-size: 50%;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 15%;
+
 
   }
 
@@ -512,14 +512,15 @@
   }
 
   .partners-images img {
-    max-width: 45%;
+    max-width: 32%;
+    height: 100px;
     object-fit: contain;
   }
 
   .blog-section {
     position: relative;
     text-align: center;
-    padding-top: 250px;
+    padding-top: 100px;
   }
 
   .blog-section .button {
@@ -769,7 +770,7 @@
   .submit {
     align-self: flex-end;
     margin-top: 20px;
-    margin-bottom: 250px;
+    margin-bottom: 100px;
     background-color: var(--button-bg-orange);
     border: 1px solid var(--button-bg-orange);
     z-index: 10;
@@ -792,8 +793,6 @@
   .contact-section {
     width: 112%;
     left: -6%;
-    top: 300px;
-    //height: 300px;
     background-image: url(images/img/footer-blue-bg.svg);
     background-repeat: no-repeat;
     background-size: 234vw;
@@ -801,6 +800,8 @@
     background-position-y: 40%;
     position: relative;
     padding-top: 80px;
+    top: 300px;
+    padding-bottom: 100px;
   }
 
   .contact-form-container p {
