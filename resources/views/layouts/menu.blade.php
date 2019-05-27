@@ -315,6 +315,21 @@
             top: 10px;
         }
 
+        .nav-button-inner {
+
+            width: 0;
+        }
+
+        .nav-button-inner::before {
+            transform: rotate(45deg);
+            top: 10px !important;
+        }
+
+        .nav-button-inner::after {
+            transform: rotate(-45deg);
+            top: 10px !important;
+        }
+
         .nav-button-inner::after {
             content: "";
             height: 5px;
