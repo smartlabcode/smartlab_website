@@ -3,6 +3,10 @@
 
 @section('content')
 
+    @include('parts.break_space')
+
+    <div class="listTable">
+
     <!-- Heading -->
     <h1>Blogs list</h1>
 
@@ -111,6 +115,8 @@
 
         </tbody>
     </table>
+
+    </div>
 
     <!-- Buton for redirecting to create blog page -->
     <div id="paperFabBlogList" onclick="redirectToCreatePage()">

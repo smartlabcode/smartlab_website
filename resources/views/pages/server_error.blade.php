@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>Something went wrong</title>
+    <title>500 Server Error</title>
     <style>
         :root {
             --shadow-color: rgba(0, 53, 145, 0.15);
@@ -374,7 +374,7 @@
 </div>
 <script>
     function goHome() {
-        document.querySelector(location.href = "/index.php")
+        document.querySelector(location.href = "/")
     }
 </script>
 

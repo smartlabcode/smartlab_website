@@ -424,11 +424,11 @@
         <div class="footer-top-row">
             <nav class="footer-top-column --left">
                 <ul>
-                    <li><a href="#">What We Do</a></li>
-                    <li><a href="#">Who We Are</a></li>
-                    <li><a href="#">Join Us</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="/#anchor">@lang('menu.first_item')</a></li>
+                    <li><a href="/#about">@lang('menu.second_item')</a></li>
+                    <li><a href="/pages/partner">@lang('menu.third_item')</a></li>  <!-- TODO do we have this page, we need to set link-->
+                    <li><a href="{{env('BLOG_DOMAIN')}}/{{App::getlocale()}}" target="_blank">@lang('menu.fourth_item')</a></li>
+                    <li><a href="/#contact">@lang('menu.fifth_item')</a></li>
                 </ul>
             </nav>
             <div class="footer-top-column phone --center">
@@ -455,14 +455,13 @@
                 <address>
                     <a href="https://www.google.com/maps/place/SmartLab/@43.8542408,18.3870703,17z/data=!3m1!4b1!4m5!3m4!1s0x4758c8c48c458d13:0xd3b7b0136b05bfe5!8m2!3d43.854237!4d18.389259" target="_blank">
                         <p>Kolodvorska 5,</p>
-                        <p><span class="wrap">Sarajevo,</span> Bosna i Hercegovina</p>
+                        <p><span class="wrap">Sarajevo,</span> @lang('footer.state')</p>
                     </a>
-
                 </address>
             </div>
             <div class="footer-top-column --right">
                 <button class="footer-button">
-                    <a href="https://www.google.com/maps/place/SmartLab/@43.8542408,18.3870703,17z/data=!3m1!4b1!4m5!3m4!1s0x4758c8c48c458d13:0xd3b7b0136b05bfe5!8m2!3d43.854237!4d18.389259" target="_blank">Find us</a>
+                    <a href="https://www.google.com/maps/place/SmartLab/@43.8542408,18.3870703,17z/data=!3m1!4b1!4m5!3m4!1s0x4758c8c48c458d13:0xd3b7b0136b05bfe5!8m2!3d43.854237!4d18.389259" target="_blank">@lang('footer.findUs')</a>
                 </button>
             </div>
         </div>
@@ -476,8 +475,8 @@
             </div>
             <div class="footer-bot-column --right">
                 <div class="social-icons-container">
-                    <a href="#" target="_blank"><img src={{"/images/footer/social-icons/fb-icon.svg"}} class="footer-bot-icons" /></a>
-                    <a href="#" target="_blank"><img src={{"/images/footer/social-icons/linkedin-icon.svg"}} class="footer-bot-icons" /></a>
+                    <a href="https://www.facebook.com/smartlabsarajevo/" target="_blank"><img src={{"/images/footer/social-icons/fb-icon.svg"}} class="footer-bot-icons" /></a>
+                    <a href="https://www.linkedin.com/company/smartlab-sarajevo" target="_blank"><img src={{"/images/footer/social-icons/linkedin-icon.svg"}} class="footer-bot-icons" /></a>
                     <a href="#" target="_blank">
                         <img src={{"/images/footer/social-icons/skype-icon.svg"}} class="footer-bot-icons" />
                     </a>

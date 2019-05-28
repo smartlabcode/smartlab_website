@@ -153,7 +153,6 @@
     }
 
     .nav-bot {
-
         display: flex;
         justify-content: flex-end;
         position: sticky;
@@ -240,6 +239,8 @@
     @media screen and (max-width: 768px) {
         .nav-bot {
             justify-content: space-between;
+            padding-top: 10px;
+            padding-bottom: 10px;
         }
 
         .height-js {
@@ -256,7 +257,7 @@
             flex-direction: column;
             justify-content: space-evenly;
             position: absolute;
-            top: 30px;
+            top: 50px;
             width: 100vw;
             right: -2.5vw;
             background-color: white;
@@ -302,28 +303,90 @@
             display: inline-block;
             background-color: var(--h1-color);
             position: absolute;
-            top: 2.5px;
+            top: 0;
+            animation-duration: 0.2s;
+            animation-timing-function: ease-in;
+
+            animation-fill-mode: forwards;
+
         }
 
-        .nav-button-inner::before {
-            content: "";
+        .nav-button-inner-before {
             height: 5px;
             width: 30px;
             display: inline-block;
             background-color: var(--h1-color);
             position: absolute;
             top: 10px;
+            animation-duration: 0.2s;
+            animation-timing-function: ease-in;
+
+            animation-fill-mode: forwards;
         }
 
-        .nav-button-inner::after {
-            content: "";
+        .nav-button-inner-after {
+
             height: 5px;
             width: 30px;
             display: inline-block;
             background-color: var(--h1-color);
             position: absolute;
             top: 20px;
+            animation-duration: 0.2s;
+            animation-timing-function: ease-in;
+
+            animation-fill-mode: forwards;
         }
+
+        @keyframes navBtn {
+            from {
+                width: 30px;
+            }
+
+            to {
+                width: 0px;
+            }
+        }
+
+        @keyframes navBtnAfter {
+            from {
+                transform: rotate(0deg);
+                top: 20px;
+            }
+
+            to {
+                transform: rotate(-45deg);
+                top: 10px;
+            }
+        }
+
+        @keyframes navBtnBefore {
+            from {
+                transform: rotate(0deg);
+                top: 10px;
+            }
+
+            to {
+                transform: rotate(45deg);
+                top: 10px;
+            }
+        }
+
+        /*.nav-button-inner {
+            width: 0;
+        }*/
+
+        /*.nav-button-inner::before {
+            transform: rotate(45deg);
+            top: 10px !important;
+        }*/
+
+        /*.nav-button-inner::after {
+            transform: rotate(-45deg);
+            top: 10px !important;
+        }*/
+
+
 
         .arrow-js::before {
             left: 95% !important;
@@ -338,6 +401,7 @@
 @section('menu')
 
 <!-- Available to all users -->
+<!-- TODO some menu items are not visible on white background, language switch and phone numbers  needs to be restyled, problems with menu on tablet/mobile devices -->
 <ul class="nav-list " id="nav-list">
     <div class="nav-top contain" id="nav-top">
 
@@ -358,7 +422,9 @@
     <div class="nav-bot contain">
         <a href="/"><img class="nav-logo" src={{"/images/smartlab-logo.svg"}}></a>
         <div class="nav-button" id="nav-button">
-            <div class="nav-button-inner"></div>
+            <div class="nav-button-inner" id="nav-button-inner"></div>
+            <div class="nav-button-inner-before" id="nav-button-inner-before"></div>
+            <div class="nav-button-inner-after" id="nav-button-inner-after"></div>
         </div>
         <div class="nav-li-container" id="nav-li-container">
             <li class="nav-li nav-li-js arrow first">
@@ -385,43 +451,31 @@
                 <div class="filler"></div>
                 <div class="expandable join">
                     <div class="join-left">
-                        <a href="#">@lang('menu.outsourcing')</a>
+                        <a href="/pages/outsourcing">@lang('menu.outsourcing')</a>
                     </div>
                     <div class="join-right">
-                        <a href="#">@lang('menu.become_a_partner')</a>
-                        <a href="/#contact">@lang('menu.careers')</a>
+                        <a href="/pages/partner">@lang('menu.become_a_partner')</a>
+                        <a href="/pages/careers">@lang('menu.careers')</a>
                     </div>
                 </div>
             </li>
             <li class="nav-li nav-li-js">
-                <!-- Open link in new tab and set its language depending on the current language in main website-->
+                <!-- Open link in new tab and set its language depending on the current language in main website -->
                 <a class="padding-right-0 grey" href="{{ env("BLOG_DOMAIN")  }}/@if(App::getlocale()){{App::getlocale()}}@else en @endif" target="_blank">@lang('menu.fourth_item')</a>
             </li>
-            <li class="nav-li nav-li-js last"><a class="padding-right-0 grey" href="#">@lang('menu.fifth_item')</a></li>
+            <li class="nav-li nav-li-js last"><a class="padding-right-0 grey" href="/#contact">@lang('menu.fifth_item')</a></li>
 
             <!-- This menu items are available only to logged in users -->
             @auth
 
-            <!-- This menu item is available to super admins only (list of all admins) -->
-            {{--@if(\Illuminate\Support\Facades\Auth::user()->roles_id == 1)--}}
+            <!-- not available for xlf users -->
+            @if(\Illuminate\Support\Facades\Auth::user()->roles_id != 3)
+
             <li class="nav-li nav-li-js">
                 <a class="grey padding-right-0" href="/dashboard">@lang('menu.sixth_item')</a>
             </li>
-            {{--@endif--}}
 
-            {{--<li class="nav-li nav-li-js">--}}
-            {{--<a class="grey padding-right-0" href="{{route('blogs.index')}}">@lang('menu.seventh_item')</a>--}}
-            {{--</li>--}}
-
-            <!-- This menu item is available to super admins only (list of all subscribers) -->
-            {{--@if(\Illuminate\Support\Facades\Auth::user()->roles_id == 1)--}}
-            {{--<li class="nav-li nav-li-js">--}}
-            {{--<a class="grey padding-right-0" href="/subscribers">@lang('menu.eight_item')</a>--}}
-            {{--</li>--}}
-            {{--@endif--}}
-
-            <!-- List of all logs in the system -->
-            {{--<li class="nav-li nav-li-js"><a class="grey padding-right-0" href="/logs">@lang('menu.ninth_item')</a></li>--}}
+            @endif
 
             <!-- Link for logging out -->
             <li class="nav-li nav-li-js"><a class="grey padding-right-0" href="{{route('logout')}}">@lang('menu.tenth_item')</a></li>
@@ -439,6 +493,9 @@
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
         let navButton = document.querySelector("#nav-button");
+        let navButtonInner = document.querySelector("#nav-button-inner");
+        let navButtonInnerAfter = document.querySelector("#nav-button-inner-after");
+        let navButtonInnerBefore = document.querySelector("#nav-button-inner-before");
         let nav = document.querySelector("#nav-list");
         let navTop = document.querySelector("#nav-top");
         let grey = document.querySelectorAll(".grey");
@@ -446,13 +503,13 @@
         let expandable = document.querySelectorAll(".expandable");
         let navLi = document.querySelectorAll(".nav-li");
         let navLiContainer = document.querySelector("#nav-li-container");
-        console.log(navLi);
         navButton.addEventListener("click", function(event) {
             navLiContainer.classList.toggle("height-js");
             navTop.style.display = "none";
-        })
-        window.addEventListener("click", function(event) {
-            console.log(event.target);
+            navButtonInner.style.animationName = "navBtn";
+            navButtonInnerAfter.style.animationName = "navBtnAfter";
+            navButtonInnerBefore.style.animationName = "navBtnBefore";
+            console.log(navButtonInner, navButtonInnerAfter, navButtonInnerBefore);
         })
         window.addEventListener("scroll", function(event) {
 

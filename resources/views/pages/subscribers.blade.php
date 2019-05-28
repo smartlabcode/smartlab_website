@@ -11,29 +11,38 @@
 
 @section('content')
 
-    <div id="subscribersContainer">
-        <!-- List of subscribers -->
-        <table class="table table-striped table-light">
+    @include('parts.break_space')
 
-            <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Subscriber email</th>
-            </tr>
-            </thead>
+    <div class="listTable">
 
-            <tbody>
+        <div id="subscribersContainer">
 
-            <!-- Loop through subscribers and create rows -->
-            @foreach($subscribers as $key => $subscriber)
+            <h2>Subscribers list</h2>
+
+            <!-- List of subscribers -->
+            <table class="table table-striped table-light">
+
+                <thead>
                 <tr>
-                    <td>{{++$key}}</td>
-                    <td>{{$subscriber}}</td>
+                    <th scope="col">#</th>
+                    <th scope="col">Subscriber email</th>
                 </tr>
-            @endforeach
+                </thead>
 
-            </tbody>
-        </table>
+                <tbody>
+
+                <!-- Loop through subscribers and create rows -->
+                @foreach($subscribers as $key => $subscriber)
+                    <tr>
+                        <td>{{++$key}}</td>
+                        <td>{{$subscriber}}</td>
+                    </tr>
+                @endforeach
+
+                </tbody>
+            </table>
+        </div>
+
     </div>
 
 

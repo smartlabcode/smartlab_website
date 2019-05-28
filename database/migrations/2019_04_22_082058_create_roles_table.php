@@ -15,7 +15,7 @@ class CreateRolesTable extends Migration
     {
         Schema::create('roles', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->enum('name', ['admin', 'superadmin'])->default('admin');
+            $table->enum('name', ['admin', 'superadmin', 'xlf_user'])->default('admin');
             $table->softDeletes();
             //$table->timestamps();
         });

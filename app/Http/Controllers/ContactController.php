@@ -65,7 +65,7 @@ class ContactController extends Controller
         Mail::to([env('ADMIN_EMAIL')])->queue(new MailToSend($contact));
 
         // return message
-        return back()->with('message', 'Contact message successfully sent.');
+        return redirect('/#contact')->with('message', 'Contact message successfully sent.');
     }
 
 
@@ -84,18 +84,24 @@ class ContactController extends Controller
         // validate form
         $request->validate([
             'bussiness_name' => 'required',
-            'bussiness_subject' => 'required',
+            'bussiness_website' => 'required',
+            'bussiness_person' => 'required',
+            'bussiness_phone_number' => 'required',
             'bussiness_email' => 'required|email',
-            'bussiness_message' => 'required'
+            'bussiness_message' => 'required',
+            'bussiness_category' => 'required'
         ]);
 
         // create contact and push mail to queue
         $contact = new Contact();
         $contact->type = 'bussiness';
-        $contact->name = $request->input('bussiness_name');
-        $contact->subject = $request->input('bussiness_subject');
+        $contact->company = $request->input('bussiness_name');
+        $contact->bussiness_website = $request->input('bussiness_website');
+        $contact->bussiness_person = $request->input('bussiness_person');
+        $contact->phone_number = $request->input('bussiness_phone_number');
         $contact->email = $request->input('bussiness_email');
         $contact->message = $request->input('bussiness_message');
+        $contact->category = $request->input('bussiness_category');
 
 
         // save uploaded file/s if they are sent TODO file sizes and count will be handled in php.ini
@@ -174,11 +180,55 @@ class ContactController extends Controller
      */
     public function handleCareersInfo(Request $request) {
 
-        try {
-            die("careers info");
-        } catch (\Exception $e) {
+        // TODO issues with try/catch block and data validation
+        // set request data to session so that it can be used for old input if neccessary
+        $request->flash();
 
+        // check if neccessary values are entered correctly, if no return error messages
+        $request->validate([
+            'name' => 'required|max:45',
+            'lastname' => 'required|max:45',
+            'email' => 'required|email',
+            'phone_number' => 'required|max:45',
+            'message' => 'required',
+            'category' => 'required'
+        ]);
+
+        // create contact and push mail to queue
+        $contact = new Contact();
+        $contact->type = 'career';
+        $contact->name = $request->input('name');
+        $contact->lastname = $request->input('lastname');
+        $contact->email = $request->input('email');
+        $contact->phone_number = $request->input('phone_number');
+        $contact->subject = $request->input('subject');
+        $contact->message = $request->input('message');
+        $contact->category = $request->input('category');
+
+        // save uploaded file/s if they are sent TODO file sizes and count will be handled in php.ini
+        if (file_exists($_FILES['files']['tmp_name'][0])) {
+
+            // generate new folder name
+            $folderName = rand(1,10000);
+
+            // make folder where contact files will temporary be located
+            Storage::makeDirectory("/" .$folderName);
+            // set path where tou store uploaded files
+            $path = storage_path()  ."/app/" . $folderName;
+            $this->uploader->uploadFiles($_FILES, $path);
+            // $attachment = true;
+            $contact->file_path = "/" . $folderName . '/contact.zip';
+
+            // create zip
+            $this->mailer->zip($path);
         }
+
+        $contact->save();
+
+        Mail::to([env('ADMIN_EMAIL')])->queue(new MailToSend($contact));
+
+        // return message
+        return back()->with('message', 'Career request successfully sent.');
     }
 }
 

@@ -414,6 +414,9 @@
         <button>Upload XLF & XLS</button><span>Uploading.... progress bar</span>
     </div>
 </section> -->
+
+
+
 <section class="contain xliff-background-container w-100">
     <img class="xliff-background" src="../images/img/light-blue-bg.svg">
     <div class="xliff-section">
@@ -463,5 +466,10 @@
         </div>
     </div>
 </section>
+
+    <!-- TODO somewhere here will appear form for xliff translations if user is loggged in -->
+    @auth
+        <h1>XLIFF TRANSLATION FORM</h1>
+    @endauth
 
 @endsection

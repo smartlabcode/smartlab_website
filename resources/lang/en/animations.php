@@ -1,7 +1,6 @@
 <?php
 return[
-    "Animation" => "Educational Video
-    Animation",
+    "Animation" => "Educational Video Animation",
     "secOneP1" => "Entertain and educate your trainees with our
     attention-grabbing and engaging animated videos.
     Present your products, teach your learners and explain
@@ -29,7 +28,4 @@ return[
     "contactTime"=>"*Meeting time",
     "contactMessage"=>"*Message",
     "buttonSend"=>"Send"
-
-
-
 ];

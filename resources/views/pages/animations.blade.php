@@ -1,18 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Title</title>
-</head>
-<body  style="height: 100%; margin: 0 auto">
+<!-- Extend main layout -->
+@extends('layouts.app')
+
 <style>
-
-
-    @section('content')
-
-
-/* SECTION ONE CSS */
+    /* SECTION ONE CSS */
     :root {
         --shadow-color: rgba(0, 53, 145, 0.15);
         --button-bg-color: #4885fa;
@@ -1480,6 +1470,9 @@
 
 </style>
 
+
+@section('content')
+
 <div class="section1 contain">
     <img class="secOneBg2" src="{{'/images/orange-circle.svg'}}">
     <img class="secOneBg" src="{{'/images/header-fluid-blue.svg'}}">
@@ -1487,7 +1480,7 @@
 
     <div class="section1-1">
         <h3 class="h1-font">
-            @lang('animations.animations')
+            @lang('animations.Animation')
         </h3>
 
         <p style="text-align: center; margin-left: 15px; font-size: 1.2em;" class="p-font">
@@ -1669,6 +1662,4 @@
 
 </script>
 
-</body>
-</html>
-
+@endsection

@@ -151,4 +151,80 @@ class PagesController extends Controller
 
     }
 
+    /**
+     * Display Careers page
+     */
+    public function showCareersPage() {
+
+        try {
+
+            return view('pages.careers.careers');
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', 'PagesController - showCareersPage: ' . $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+
+    }
+
+    /**
+     * Display Partner page
+     */
+    public function showPartnerPage() {
+
+        try {
+
+            return view('pages.become_partner');
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', 'PagesController - showPartnerPage: ' . $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+
+    }
+
+    /**
+     * Display Partner page
+     */
+    public function showOutsourcingPage() {
+
+        try {
+
+            return view('pages.outsourcing');
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', 'PagesController - showOutsourcingPage: ' . $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+
+    }
+
+    /**
+     * Display Partner page
+     */
+    public function showXlfSignInPage() {
+
+        try {
+
+            return view('pages.xliff_signup_signin');
+
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', 'PagesController - showXlfSignInPage: ' . $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+
+    }
+
 }

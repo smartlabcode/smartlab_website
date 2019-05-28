@@ -369,7 +369,7 @@
 </div>
 <script>
     function goHome() {
-        document.querySelector(location.href = "/index.php")
+        document.querySelector(location.href = "/")
     }
 </script>
 

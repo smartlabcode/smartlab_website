@@ -19,6 +19,7 @@ class Kernel extends HttpKernel
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
         \App\Http\Middleware\TrustProxies::class,
+
     ];
 
     /**
@@ -31,10 +32,10 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
-            // \Illuminate\Session\Middleware\AuthenticateSession::class,
+             \Illuminate\Session\Middleware\AuthenticateSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-            //\App\Http\Middleware\VerifyCsrfToken::class,  // disable during Postman testing
-           // \App\Http\Middleware\CheckClientLanguage::class,
+            \App\Http\Middleware\VerifyCsrfToken::class,  // disable during Postman testing
+            \App\Http\Middleware\CheckClientLanguage::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             //\App\Http\Middleware\CheckIfSuperAdmin::class
         ],
@@ -63,7 +64,8 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
-        'is_superadmin' => \App\Http\Middleware\CheckIfSuperAdmin::class
+        'is_superadmin' => \App\Http\Middleware\CheckIfSuperAdmin::class,
+        'is_not_xlf_user' => \App\Http\Middleware\CheckIfXlfUser::class
     ];
 
     /**

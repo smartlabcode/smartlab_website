@@ -41,5 +41,10 @@ return [
     'blog_button' => 'Show more',
     'contact_h2' => 'Contact',
     'contact_p' => 'If our web site didn’t answer to all your questions, feel free to contact us with any specific question,
-    project proposal or just a introduction meeting request.'
+    project proposal or just a introduction meeting request.',
+    'formName' => 'Name',
+    'formSurname' => 'Surname',
+    'formSubject' => 'Subject',
+    'formEmail' => 'Email',
+    'formMessage' => 'Message'
 ];

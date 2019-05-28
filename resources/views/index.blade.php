@@ -1,6 +1,8 @@
 <!-- Extend main layout -->
 @extends('layouts.app')
+
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 <style>
   :root {
     --shadow-color: rgba(0, 53, 145, 0.15);
@@ -147,7 +149,7 @@
     position: relative;
     top: 100px;
     display: flex;
-    padding-bottom: 100px;
+
     justify-content: space-between;
   }
 
@@ -234,7 +236,7 @@
 
   .section-two-top {
     display: flex;
-    min-height: 500px;
+    height: 500px;
     background-color: white;
     border-radius: 15px;
     -webkit-box-shadow: -1px -1px 15px 1px var(--shadow-color);
@@ -287,13 +289,12 @@
   }
 
   .section-two-bot {
-    min-height: 500px;
     display: flex;
     margin-top: 20px;
   }
 
   .section-two-bot-item {
-    min-height: 400px;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -352,7 +353,7 @@
 
   .section-three {
     position: relative;
-    padding-top: 250px;
+    padding-top: 150px;
   }
 
   .about-orange-circle {
@@ -376,7 +377,7 @@
     justify-content: space-between;
   }
 
-  .about-us div {
+  .about-us>div {
     flex-basis: 25%;
 
   }
@@ -408,7 +409,7 @@
   }
 
   .team {
-    padding-top: 250px;
+    padding-top: 100px;
     position: relative;
   }
 
@@ -441,11 +442,11 @@
   }
 
   .testemonials {
-    padding-top: 250px;
+    padding-top: 100px;
   }
 
   .partners-images {
-    flex-basis: 35%;
+    flex-basis: 40%;
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
@@ -474,14 +475,14 @@
   }
 
   .partners-text {
-    flex-basis: 60%;
+    flex-basis: 50%;
     background-image: url(images/img/quotation-marks.svg);
     background-size: 50%;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 15%;
+
 
   }
 
@@ -510,14 +511,15 @@
   }
 
   .partners-images img {
-    max-width: 45%;
+    max-width: 32%;
+    height: 100px;
     object-fit: contain;
   }
 
   .blog-section {
     position: relative;
     text-align: center;
-    padding-top: 250px;
+    padding-top: 100px;
   }
 
   .blog-section .button {
@@ -545,8 +547,12 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     padding-top: 25px;
+  }
+
+  .blog-container>* {
+    margin: 10px;
   }
 
   .blog {
@@ -717,7 +723,7 @@
 
   .contact-form-group {
     display: flex;
-    flex-basis: 100%;
+
     justify-content: space-between;
     padding-top: 20px;
   }
@@ -763,22 +769,29 @@
   .submit {
     align-self: flex-end;
     margin-top: 20px;
-    margin-bottom: 250px;
+    margin-bottom: 100px;
     background-color: var(--button-bg-orange);
     border: 1px solid var(--button-bg-orange);
     z-index: 10;
   }
 
   .submit:hover {
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
+    background-color: var(--button-bg-orange);
+    border: 1px solid var(--button-bg-orange);
+    color: #fff;
+    box-shadow: 2px 2px 2px rgba(150, 150, 150, 0.5);
+  }
+
+  .submit:active {
+    background-color: var(--button-bg-orange);
+    border: 1px solid var(--button-bg-orange);
+    color: #fff;
+    box-shadow: none;
   }
 
   .contact-section {
     width: 112%;
     left: -6%;
-    top: 300px;
     background-image: url(images/img/footer-blue-bg.svg);
     background-repeat: no-repeat;
     background-size: 234vw;
@@ -786,6 +799,8 @@
     background-position-y: 40%;
     position: relative;
     padding-top: 80px;
+    top: 300px;
+    padding-bottom: 100px;
   }
 
   .contact-form-container p {
@@ -1586,6 +1601,7 @@
 
 
 @section('content')
+
 <!-- Heading -->
 <!-- <h1>@lang('index.heading')</h1> -->
 
@@ -1693,7 +1709,7 @@
       <p class="p-font ">
         @lang('index.heading_p')
       </p>
-      <button class="button margin-top-27">@lang('index.heading_button')</button>
+      <a href="#contact"><button class="button margin-top-27">@lang('index.heading_button')</button></a>
     </div>
     <img data-aos="zoom-in" class="section-one-animation" src="images/img/header-illustration.svg" alt="header ilustration" />
 
@@ -1712,9 +1728,11 @@
       <p class="p-font">
         @lang('index.section_two_p')
       </p>
+      <!-- TODO where should explore button lead -->
       <button id="pinned-element1" class="button submit button-orange">@lang('index.section_two_button')</button>
     </div>
   </div>
+
   <div id="anchor">
     <div class="section-two-top" data-aos-anchor="#anchor" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
       <div class="section-two-top-left">
@@ -1725,7 +1743,7 @@
         <p class="p-font">
           @lang('index.section_two_top_right_p')
         </p>
-        <button class="button">@lang('index.section_two_top_right_button')</button>
+        <a href="/pages/courses"><button class="button">@lang('index.section_two_top_right_button')</button></a>
       </div>
     </div>
     <div class="section-two-bot">
@@ -1736,7 +1754,7 @@
           <p class="p-font">
             @lang('index.section_two_bot_left_p')
           </p>
-          <button class="button">@lang('index.section_two_bot_left_button')</button>
+          <a href="/pages/animations"><button class="button">@lang('index.section_two_bot_left_button')</button></a>
         </div>
 
 
@@ -1748,7 +1766,7 @@
           <p class="p-font">
             @lang('index.section_two_bot_mid_p')
           </p>
-          <button class="button">@lang('index.section_two_bot_mid_button')</button>
+          <a href="/pages/programming"><button class="button">@lang('index.section_two_bot_mid_button')</button></a>
         </div>
 
       </div>
@@ -1759,9 +1777,8 @@
           <p class="p-font">
             @lang('index.section_two_bot_right_p')
           </p>
-          <button class="button">@lang('index.section_two_bot_right_button')</button>
+          <a href="/pages/moodle"><button class="button">@lang('index.section_two_bot_right_button')</button></a>
         </div>
-
 
       </div>
     </div>
@@ -1996,11 +2013,11 @@
   <div class="blog-container">
     @foreach ($blogs as $blog)
 
-    <a href="#{{$blog->id}}" class="blog" data-aos-anchor=".blog-section" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
+    <a href="{{env('BLOG_DOMAIN')}}/blog/{{$blog->id}}/{{App::getlocale()}}" target="_blank" class="blog" data-aos-anchor=".blog-section" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
       <div class="img-container">
-        <div class="img-container-overlay <?php if ($blog->id % 2 != 0) echo 'img-container-overlay-blue';
-                                          else echo 'img-container-overlay-orange' ?> "> </div>
-        <img src={{$blog->image_path}} alt="blog post">
+        <div class="img-container-overlay @if ($blog->id % 2 != 0) img-container-overlay-blue @else img-container-overlay-orange @endif">
+        </div>
+        <img src={{$blog->image_path}} alt="blog" />
         <svg class="wave" viewBox="0 0 500 500">
           <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
         </svg>
@@ -2059,11 +2076,16 @@
     </div>
   </div>-->
     <div class="blog-button">
-      <button class="button">@lang('index.blog_button')</button>
+      <a href="{{env('BLOG_DOMAIN')}}/{{App::getlocale()}}" target="_blank"><button class="button">@lang('index.blog_button')</button></a>
     </div>
 
+  </div>
+
 </section>
-<section class="contact-section" id="contact">
+
+
+<!-- TODO this isnt good, there is too much space among form elements -->
+<section class="contact-section" id="contact" name="contact">
 
   <img class="contact-orange-circle-r" src="images/img/orange-circle.svg" alt="background orange circle" />
   <img class="contact-orange-circle-l" src="images/img/orange-circle.svg" alt="background orange circle" />
@@ -2071,31 +2093,33 @@
     <p>@lang('index.contact_p')</p>
     <h2 class="text-center h1-font">@lang('index.contact_h2')</h2>
     @include('parts.error_success')
+
+    <!-- TODO after empty form is submitted empty fields should be marked somehow (maybe red border) -->
     <form class="contact-form" action="/contact" method="POST">
       <!-- Include token -->
       @csrf
       <div class="contact-form-group">
         <div>
-          <label for="name">*Name</label>
+          <label for="name">*@lang('index.formName')</label>
           <input type="text" name="name" id="name" required />
         </div>
         <div>
-          <label for="surnanme">*Surname</label>
+          <label for="surnanme">*@lang('index.formSurname')</label>
           <input type="text" name="lastname" id="lastname" required />
         </div>
       </div>
       <div class="contact-form-group">
         <div>
-          <label for="subject">*Subject</label>
+          <label for="subject">*@lang('index.formSubject')</label>
           <input type="text" name="subject" id="subject" required />
         </div>
         <div>
-          <label for="email">*Email</label>
+          <label for="email">*@lang('index.formEmail')</label>
           <input type="email" name="email" id="email" required />
         </div>
       </div>
       <div class="contact-form-group textarea">
-        <label for="message">*Message</label>
+        <label for="message">*@lang('index.formMessage')</label>
         <textarea name="message" rows="7" id="message" required></textarea>
       </div>
       <button class="button submit" value="Send">Send</button>

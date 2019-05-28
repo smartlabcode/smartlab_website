@@ -25,7 +25,11 @@
 
 @section('content')
 
+    @include('parts.break_space')
+
     @include('parts.error_success')
+
+    <div class="listTable">
 
     <div id="translationsContainer">
 
@@ -63,6 +67,8 @@
             <button id="saveTranslationsButton" type="submit" class="btn btn-primary">Save</button>
 
         </form>
+
+    </div>
 
     </div>
 
