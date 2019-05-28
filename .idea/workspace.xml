@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b79028d-cafa-497f-943d-d4c2314226fd" name="Default Changelist" comment="" />
+    <list default="true" id="5b79028d-cafa-497f-943d-d4c2314226fd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/courses.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/courses.blade.php" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/vendor/beyondcode/laravel-dump-server/" />
     <ignored path="$PROJECT_DIR$/vendor/composer/" />
     <ignored path="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir/" />
@@ -104,11 +108,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/courses.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="1475" column="22" lean-forward="true" selection-start-line="1475" selection-start-column="22" selection-end-line="1475" selection-end-column="22" />
+            <state relative-caret-position="192">
+              <caret line="1472" lean-forward="true" selection-start-line="1472" selection-end-line="1472" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PagesController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="44" column="47" selection-start-line="44" selection-start-column="47" selection-end-line="44" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -133,7 +146,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/resources/lang/en/courses.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/courses.blade.php" />
         <option value="$PROJECT_DIR$/resources/lang/de/moodle.php" />
         <option value="$PROJECT_DIR$/resources/lang/de/courses.php" />
         <option value="$PROJECT_DIR$/resources/lang/bs/moodle.php" />
@@ -148,6 +160,8 @@
         <option value="$PROJECT_DIR$/resources/lang/bs/general-error.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/server_error.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/general_error.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/courses.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" />
       </list>
     </option>
   </component>
@@ -243,11 +257,11 @@
       <path value="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1945" />
-    <option name="y" value="124" />
-    <option name="width" value="1439" />
-    <option name="height" value="858" />
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="x" value="160" />
+    <option name="y" value="100" />
+    <option name="width" value="960" />
+    <option name="height" value="600" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -257,7 +271,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -342,12 +355,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/lang/de" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -385,22 +399,23 @@
       <workItem from="1558438628842" duration="724000" />
       <workItem from="1558685253941" duration="18423000" />
       <workItem from="1559027494247" duration="2204000" />
+      <workItem from="1559039832900" duration="249000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44095000" />
+    <option name="totallyTimeSpent" value="44344000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1945" y="124" width="1439" height="858" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50547945" side_tool="true" weight="0.3085622" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49452055" visible="true" weight="0.25888324" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49452055" visible="true" weight="0.2625202" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.049655173" />
+      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.04931507" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" />
@@ -555,20 +570,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/de/general_error.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/de/general-error.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/de/general_error.blade.php" />
+    <entry file="file://$PROJECT_DIR$/resources/lang/de/general-error.php" />
     <entry file="file://$PROJECT_DIR$/resources/lang/en/server-error.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -592,8 +595,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/courses.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="1475" column="22" lean-forward="true" selection-start-line="1475" selection-start-column="22" selection-end-line="1475" selection-end-column="22" />
+        <state relative-caret-position="192">
+          <caret line="1472" lean-forward="true" selection-start-line="1472" selection-end-line="1472" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PagesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="44" column="47" selection-start-line="44" selection-start-column="47" selection-end-line="44" selection-end-column="47" />
         </state>
       </provider>
     </entry>

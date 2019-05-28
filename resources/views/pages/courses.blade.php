@@ -1490,7 +1490,7 @@
         </p>
 
         <ul style="margin-left: 15px; font-size: 1.2em;" class="p-font bold">
-            <li class="uls"> @lang('courses.secOneUlFirst')</li>
+            <li class="uls">@lang('courses.secOneUlFirst')</li>
             <li class="uls">@lang('courses.secOneUlSecond')</li>
             <li class="uls">@lang('courses.secOneUlThird')</li>
             <li class="uls">@lang('courses.secOneUlFourth')</li>
