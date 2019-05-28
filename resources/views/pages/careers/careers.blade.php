@@ -142,7 +142,7 @@
     <div id="secondSection">
 
         <div class="jobOffer">
-            <img src="{{ asset('images/web.jpg') }}" class="jobImage"/>
+            <img src="{{ asset('images/careers/designer-page-img.svg') }}" class="jobImage"/>
 
             <div class="jobInfo">
 
@@ -163,7 +163,7 @@
         </div>
 
         <div class="jobOffer">
-            <img src="{{ asset('images/web.jpg') }}" class="jobImage"/>
+            <img src="{{ asset('images/careers/developer-page-img.svg') }}" class="jobImage"/>
 
             <div class="jobInfo">
 
