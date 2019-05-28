@@ -75,10 +75,10 @@
 
   .background-img {
     position: absolute;
-    /*width: calc(75vw - 100px);*/
-    height: 113vh;
-    top: -150px;
-    right: -200px;
+    width: 87vw;
+    max-height: 180%;
+    top: -250px;
+    right: -250px;
     z-index: -10;
   }
 
@@ -904,9 +904,8 @@
 
   @media screen and (max-width: 1400px) {
     .background-img {
-      height: 125%;
-      top: -25%;
-      right: -25%;
+      width: 97vw;
+      max-height: 180%;
     }
 
     .section-one {
@@ -977,6 +976,10 @@
     .background-img-orange-circle {
       top: -95px;
       right: 588px;
+    }
+
+    .background-img {
+      width: 110vw;
     }
 
     .--circle3 {
@@ -1695,8 +1698,7 @@
 <!-- <link href="{{ asset('css/index/styles.css') }}" rel="stylesheet"> -->
 
 <div class="background-section-one">
-  <img class="background-img" src="images/img/header-fluid-blue.svg" alt="blue background image" />
-  <img class="background-img-orange-circle" src="images/img/orange-circle.svg" alt="orange background circle" />
+  <img class="background-img" src="images/img/header-illustration-group.svg" alt="blue background image" />
   <img class="background-img-circle --circle1" src="images/img/fluid-bright-circle.svg" alt="bright circle background" />
   <img class="background-img-circle --circle2" src="images/img/fluid-bright-circle.svg" alt="bright circle background" />
   <img class="background-img-circle --circle3" src="images/img/fluid-bright-circle.svg" alt="bright circle background" />
