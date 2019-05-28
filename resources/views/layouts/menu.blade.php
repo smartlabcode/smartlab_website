@@ -40,23 +40,33 @@
     }
 
     .expandable {
-        height: 0;
+        display: none;
         position: absolute;
         transform: translateX(-12%);
         overflow-y: hidden;
-        display: block;
         width: 400px;
         background-color: white;
         border-radius: 5px;
+        -webkit-box-shadow: -1px -1px 15px 1px var(--shadow-color);
+        -moz-box-shadow: -1px -1px 15px 1px var(--shadow-color);
+        box-shadow: -1px -1px 15px 1px var(--shadow-color);
         transition: height 0.2s ease-in-out;
     }
 
     .expandable:hover {
-        height: auto;
+        display: block;
+    }
+
+    .join:hover {
+        display: flex !important;
+    }
+
+    .nav-li:hover .join {
+        display: flex !important;
     }
 
     .nav-li:hover .expandable {
-        height: auto;
+        display: block;
     }
 
 
@@ -99,6 +109,7 @@
         width: 0px;
         background-color: var(--h1-color) !important;
         transition: width 0.2s ease-in-out;
+
     }
 
     .nav-li>a::before {
@@ -111,6 +122,7 @@
         width: 0px;
         background-color: white;
         transition: width 0.2s ease-in-out;
+
     }
 
     .nav-li:hover a::before {
@@ -186,7 +198,7 @@
         -webkit-clip-path: polygon(0 50%, 50% 100%, 100% 50%);
         clip-path: polygon(0 50%, 50% 100%, 100% 50%);
         transition: 0.2s transform ease-in-out;
-
+        z-index: 10;
     }
 
     .arrow::before {
@@ -202,11 +214,11 @@
         -webkit-clip-path: polygon(0 50%, 50% 100%, 100% 50%);
         clip-path: polygon(0 50%, 50% 100%, 100% 50%);
         transition: 0.2s transform ease-in-out;
-
+        z-index: 10;
     }
 
     .join {
-        display: flex;
+        display: none;
         transform: translateX(-22%);
     }
 
@@ -243,6 +255,13 @@
             padding-bottom: 10px;
         }
 
+        .expandable {
+
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+        }
+
         .height-js {
             height: 100vh !important;
         }
@@ -265,9 +284,25 @@
             overflow: hidden;
         }
 
-        .nav-li:hover .expandable {
-            height: 250px;
+        .nav-li:hover .expandable-first {
+            height: 252px;
+            -webkit-box-shadow: -1px -1px 15px 1px var(--shadow-color);
+            -moz-box-shadow: -1px -1px 15px 1px var(--shadow-color);
+            box-shadow: -1px -1px 15px 1px var(--shadow-color);
+        }
 
+        .nav-li:hover .expandable-second {
+            height: 126px;
+            -webkit-box-shadow: -1px -1px 15px 1px var(--shadow-color);
+            -moz-box-shadow: -1px -1px 15px 1px var(--shadow-color);
+            box-shadow: -1px -1px 15px 1px var(--shadow-color);
+        }
+
+        .nav-li:hover .expandable-third {
+            height: 189px;
+            -webkit-box-shadow: -1px -1px 15px 1px var(--shadow-color);
+            -moz-box-shadow: -1px -1px 15px 1px var(--shadow-color);
+            box-shadow: -1px -1px 15px 1px var(--shadow-color);
         }
 
         .join-left,
@@ -304,9 +339,9 @@
             background-color: var(--h1-color);
             position: absolute;
             top: 0;
+            border-radius: 2px;
             animation-duration: 0.2s;
             animation-timing-function: ease-in;
-
             animation-fill-mode: forwards;
 
         }
@@ -318,9 +353,9 @@
             background-color: var(--h1-color);
             position: absolute;
             top: 10px;
+            border-radius: 2px;
             animation-duration: 0.2s;
             animation-timing-function: ease-in;
-
             animation-fill-mode: forwards;
         }
 
@@ -332,11 +367,13 @@
             background-color: var(--h1-color);
             position: absolute;
             top: 20px;
+            border-radius: 2px;
             animation-duration: 0.2s;
             animation-timing-function: ease-in;
-
             animation-fill-mode: forwards;
         }
+
+
 
         @keyframes navBtn {
             from {
@@ -345,6 +382,16 @@
 
             to {
                 width: 0px;
+            }
+        }
+
+        @keyframes navBtnReverse {
+            from {
+                width: 0px;
+            }
+
+            to {
+                width: 30px;
             }
         }
 
@@ -360,6 +407,18 @@
             }
         }
 
+        @keyframes navBtnAfterReverse {
+            from {
+                transform: rotate(-45deg);
+                top: 10px;
+            }
+
+            to {
+                transform: rotate(0deg);
+                top: 20px;
+            }
+        }
+
         @keyframes navBtnBefore {
             from {
                 transform: rotate(0deg);
@@ -368,6 +427,18 @@
 
             to {
                 transform: rotate(45deg);
+                top: 10px;
+            }
+        }
+
+        @keyframes navBtnBeforeReverse {
+            from {
+                transform: rotate(45deg);
+                top: 10px;
+            }
+
+            to {
+                transform: rotate(2deg);
                 top: 10px;
             }
         }
@@ -430,7 +501,7 @@
             <li class="nav-li nav-li-js arrow first">
                 <a class="grey">@lang('menu.first_item')</a>
                 <div class="filler"></div>
-                <div class="expandable">
+                <div class="expandable expandable-first">
                     <a href="/pages/courses">@lang('menu.online_courses')</a>
                     <a href="/pages/animations">@lang('menu.educational_video')</a>
                     <a href="/pages/programming">@lang('menu.programming')</a>
@@ -441,7 +512,7 @@
             <li class="nav-li nav-li-js arrow">
                 <a class="grey">@lang('menu.second_item')</a>
                 <div class="filler"></div>
-                <div class="expandable">
+                <div class="expandable expandable-second">
                     <a href="/#about">@lang('menu.about_us')</a>
                     <a href="/#team">@lang('menu.our_team')</a>
                 </div>
@@ -449,7 +520,7 @@
             <li class="nav-li nav-li-js arrow">
                 <a class="grey">@lang('menu.third_item')</a>
                 <div class="filler"></div>
-                <div class="expandable join">
+                <div class="expandable join expandable-third">
                     <div class="join-left">
                         <a href="/pages/outsourcing">@lang('menu.outsourcing')</a>
                     </div>
@@ -492,6 +563,7 @@
 </ul>
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
+
         let navButton = document.querySelector("#nav-button");
         let navButtonInner = document.querySelector("#nav-button-inner");
         let navButtonInnerAfter = document.querySelector("#nav-button-inner-after");
@@ -503,13 +575,22 @@
         let expandable = document.querySelectorAll(".expandable");
         let navLi = document.querySelectorAll(".nav-li");
         let navLiContainer = document.querySelector("#nav-li-container");
+        let clicked = 0;
         navButton.addEventListener("click", function(event) {
+            clicked++
+
+            if (clicked % 2 != 0) {
+                navButtonInner.style.animationName = "navBtn";
+                navButtonInnerAfter.style.animationName = "navBtnAfter";
+                navButtonInnerBefore.style.animationName = "navBtnBefore";
+
+            } else {
+                navButtonInner.style.animationName = "navBtnReverse";
+                navButtonInnerAfter.style.animationName = "navBtnAfterReverse";
+                navButtonInnerBefore.style.animationName = "navBtnBeforeReverse";
+            }
             navLiContainer.classList.toggle("height-js");
             navTop.style.display = "none";
-            navButtonInner.style.animationName = "navBtn";
-            navButtonInnerAfter.style.animationName = "navBtnAfter";
-            navButtonInnerBefore.style.animationName = "navBtnBefore";
-            console.log(navButtonInner, navButtonInnerAfter, navButtonInnerBefore);
         })
         window.addEventListener("scroll", function(event) {
 
