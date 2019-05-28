@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b79028d-cafa-497f-943d-d4c2314226fd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/careers/careers.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/careers/careers.blade.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/beyondcode/laravel-dump-server/" />
@@ -128,8 +127,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/careers/careers.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="278" column="83" selection-start-line="278" selection-start-column="83" selection-end-line="278" selection-end-column="83" />
+            <state relative-caret-position="257">
+              <caret line="166" column="18" selection-start-line="166" selection-start-column="18" selection-end-line="166" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -378,15 +377,16 @@
       <workItem from="1558438628842" duration="724000" />
       <workItem from="1558685253941" duration="18423000" />
       <workItem from="1559027494247" duration="2204000" />
-      <workItem from="1559039832900" duration="9124000" />
+      <workItem from="1559039832900" duration="10415000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53219000" />
+    <option name="totallyTimeSpent" value="54510000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50547945" side_tool="true" weight="0.3085622" />
       <window_info id="npm" order="1" side_tool="true" />
@@ -610,8 +610,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/careers/careers.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="278" column="83" selection-start-line="278" selection-start-column="83" selection-end-line="278" selection-end-column="83" />
+        <state relative-caret-position="257">
+          <caret line="166" column="18" selection-start-line="166" selection-start-column="18" selection-end-line="166" selection-end-column="18" />
         </state>
       </provider>
     </entry>
