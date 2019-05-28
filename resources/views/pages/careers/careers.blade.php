@@ -83,11 +83,6 @@
     }
 
 
-    .jobText {
-
-    }
-
-
     .jobButton {
         position: relative;
         left: 50%;
@@ -99,7 +94,7 @@
         color: #fff;
         cursor: pointer;
         box-shadow: 2px 2px 2px rgba(150,150,150, 0.5);
-        outline: none;
+        outline: none !important;
     }
 
 
@@ -108,13 +103,48 @@
         width: 620px;
         padding: 10px;
         margin: 0 auto;
-        outline: 1px dashed red;
     }
 
 
     #sectionThree > h1 {
         width: 100%;
         text-align: center;
+    }
+
+
+    #careerForm {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+
+    #careerForm > div {
+        width: 48%;
+    }
+
+    #careerForm textarea {
+        height: 200px;
+        resize: none;
+    }
+
+
+    #uploadFileArea {
+        width: 100%;
+        height: 108px;
+        cursor: pointer;
+    }
+
+
+    #uploadFileArea > p {
+        font-size: 16px;
+        padding-top: 22px;
+        text-align: center;
+    }
+
+    #inputFile {
+        display: none;
     }
 
 </style>
@@ -124,8 +154,6 @@
 
     <!-- TODO dont delete this-->
     @include('parts.break_space')
-
-
 
 
     <!-- Join our team section -->
@@ -141,7 +169,7 @@
 
             <br/>
 
-            <a href="#careerForm"><button id="applyButton">Apply</button></a>
+            <a href="#aboveSectionThree"><button id="applyButton">Apply</button></a>
         </div>
 
         <div></div>
@@ -201,9 +229,12 @@
 
 
 
-    @include('parts.error_success')
+    <br/><br/><br/>
 
-    <br/><br/><br/><br/><br/>
+
+    <div id="aboveSectionThree"></div>
+
+    <br/><br/>
 
     <div id="sectionThree">
 
@@ -211,42 +242,82 @@
 
         <br/><br/>
 
+        @include('parts.error_success')
+
         <form id="careerForm" action="/careers" method="POST" enctype="multipart/form-data">
 
             <!-- Include token -->
             @csrf
 
-            Name: <input type="text" name="name" />
-            <br/>
-            Lastname: <input type="text" name="lastname" />
-            <br/>
-            Subject: <input type="text" name="subject" />
-            <br/>
+            <div class="form-group">
+                <label for="name">*Name</label>
+                <input type="text" name="name" class="form-control" id="name" placeholder="" required>
+            </div>
 
-            <select name="category">
-                <option selected disabled>Choose category</option>
-                <option value="designer">Designer</option>
-                <option value="developer">Developer</option>
-                <option value="ux-ui-designer">UX/UI Designer</option>
-                <option value="practitioner">Practitioner</option>
-            </select>
+            <div class="form-group">
+                <label for="surname">*Surname</label>
+                <input type="text" name="lastname" class="form-control" id="surname" placeholder="" required>
+            </div>
 
-            Email: <input type="email" name="email" />
-            <br/>
+            <div class="form-group">
+                <label for="phone">*Phone number</label>
+                <input type="number" name="phone_number" class="form-control" id="phone" placeholder="" required>
+            </div>
 
-            Phone number: <input type="number" name="phone_number" />
-            <br/>
+            <div class="form-group">
+                <label for="name">*Email</label>
+                <input type="email" name="email" class="form-control" id="email" placeholder="" required>
+            </div>
 
-            Message: <textarea name="message"></textarea>
-            <br/>
-            Files: <input type="file" name="files[]" multiple />
+            <div class="form-group">
+                <label for="name">*Note/Short Brief</label>
+                <textarea name="message" class="form-control" id="name" placeholder="" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="category">*Category</label>
+                <select class="form-control" name="category" id="category" required>
+                    <option selected disabled>Choose category</option>
+                    <option value="designer">Designer</option>
+                    <option value="developer">Developer</option>
+                    <option value="ux-ui-designer">UX/UI Designer</option>
+                    <option value="practitioner">Practitioner</option>
+                </select>
+
+
+                <br/>
+
+                <label for="uploadFileArea">Place for your files (optional)</label>
+                <div id="uploadFileArea" class="form-control" onclick="openUploadWindow()">
+                    <p id="uploadText">Click to <br/> upload file/s</p>
+                    <input id="inputFile" type="file" name="files[]" onchange="fileUploaded()" multiple />
+                </div>
+
+            </div>
+
+
+{{--            Subject: <input type="text" name="subject" />--}}
 
             <!-- Submit form -->
-            <button>Submit</button>
+            <button>Send</button>
 
         </form>
 
     </div>
 
+
+    <script>
+
+        function openUploadWindow() {
+            document.getElementById("inputFile").click();
+        }
+
+
+        function fileUploaded() {
+            // TODO check if file is selected
+            document.getElementById("uploadText").innerHTML = "File uploaded";
+        }
+
+    </script>
 
 @endsection
