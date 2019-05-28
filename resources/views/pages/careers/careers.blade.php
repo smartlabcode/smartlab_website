@@ -147,6 +147,27 @@
         display: none;
     }
 
+    #sendCareerButton {
+        border-radius: 50px;
+        padding: 10px;
+        background-color: #14213d;
+        width: 140px;
+        color: #fff;
+        cursor: pointer;
+        box-shadow: 2px 2px 2px rgba(150,150,150, 0.5);
+        outline: none !important;
+        position: relative;
+        left: 225px;
+    }
+
+    .policyText {
+        font-size: 12px;
+        color: #aaa;
+        position: relative;
+        left: 4px;
+    }
+
+
 </style>
 
 
@@ -296,10 +317,13 @@
             </div>
 
 
+            <p class="policyText">We're commited to your privacy. SmartLab uses the information you provide to us to contact you about our relevant content,
+            product and services. You may unsubscribe from these communications at any time.
+                For more information check out our <a href="#">Privacy Policy</a>.</p>
 {{--            Subject: <input type="text" name="subject" />--}}
 
             <!-- Submit form -->
-            <button>Send</button>
+            <button id="sendCareerButton">Send</button>
 
         </form>
 
