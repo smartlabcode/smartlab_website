@@ -358,15 +358,15 @@
     <img class="image" id="image" src="{{'/images/error-500.svg'}}">
     <div class="container">
         <div class="h1-font">
-            <p>OOPS</p>
+            <p>@lang('general-error.back')</p>
         </div>
 
         <div class="h2-font">
-            <p>There is only a 404 error<br> message ahead!</p>
+            <p>@lang('general-error.back')</p>
         </div>
 
         <button id="button" class="button" onclick="goHome()">
-            Back to home
+            @lang('general-error.back')
         </button>
     </div>
 </div>
