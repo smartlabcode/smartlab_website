@@ -283,6 +283,11 @@
     }
 
     @media screen and (max-width: 900px) {
+        .nav-top {
+            display: flex;
+            justify-content: space-between;
+        }
+
         .nav-bot {
             justify-content: space-between;
             padding-top: 10px;
@@ -634,9 +639,9 @@
             navLiContainer.classList.toggle("height-js");
             navTop.style.display = "none";
         })
-        window.addEventListener("scroll", function(event) {
 
-            if (window.pageYOffset > 300) {
+        function navTopHide() {
+            if (window.pageYOffset > 200) {
                 nav.style.backgroundColor = "white";
                 navTop.style.display = "none";
                 for (let i = 0; i < arrow.length; i++) {
@@ -670,6 +675,10 @@
 
                 }
             }
+        }
+        navTopHide();
+        window.addEventListener("scroll", function(event) {
+            navTopHide();
         })
     });
 </script>
