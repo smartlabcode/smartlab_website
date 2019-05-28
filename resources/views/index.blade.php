@@ -78,7 +78,7 @@
     width: 87vw;
     max-height: 180%;
     top: -250px;
-    right: -250px;
+    right: -300px;
     z-index: -10;
   }
 
