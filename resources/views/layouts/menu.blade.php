@@ -159,9 +159,20 @@
     }
 
     .nav-top {
-
         display: flex;
         justify-content: flex-end;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .nav-top p {
+        opacity: 0.5;
+        color: white;
+        margin-right: 50px;
+    }
+
+    .nav-top p span {
+
+        margin-right: 20px;
     }
 
     .nav-bot {
@@ -248,11 +259,42 @@
         justify-content: flex-end;
     }
 
+    .nav-top label {
+        text-transform: uppercase;
+        position: relative;
+        right: 20px;
+        color: white;
+        opacity: 0.5;
+        cursor: pointer;
+    }
+
+    #languageForm {
+        position: relative;
+        left: 20px;
+    }
+
+    .nav-top input {
+        visibility: hidden;
+    }
+
+    .language-selected {
+        opacity: 1 !important;
+        font-weight: bold;
+    }
+
     @media screen and (max-width: 768px) {
         .nav-bot {
             justify-content: space-between;
             padding-top: 10px;
             padding-bottom: 10px;
+        }
+
+        .nav-top span {
+            color: var(--h1-color);
+        }
+
+        .nav-top label {
+            color: var(--h1-color);
         }
 
         .expandable {
@@ -476,15 +518,15 @@
 <ul class="nav-list " id="nav-list">
     <div class="nav-top contain" id="nav-top">
 
-        <p>Call: <span>+387 61 811 394</span> <span>+387 33 956 222</span></p>
+        <p><span>Call: </span><span>+387 61 811 394</span> <span>+387 33 956 222</span></p>
         <form id="languageForm" action="/language" method="POST">
             <!-- Form for sending new language after user clicks on one of the select options - page is refreshed with new language translations -->
             @csrf
             @method('PUT')
 
-            <input type="radio" name="language" value="en" onclick="changeSiteLanguage(this.value)" @if(App::getlocale()=='en' ) checked @endif>@lang('menu.english_language')
-            <input type="radio" name="language" value="de" onclick="changeSiteLanguage(this.value)" @if(App::getlocale()=='de' ) checked @endif>@lang('menu.german_language')
-            <input type="radio" name="language" value="bs" onclick="changeSiteLanguage(this.value)" @if(App::getlocale()=='bs' ) checked @endif>@lang('menu.bosnian_language')
+            <input type="radio" name="language" id="en" value="en" onclick="changeSiteLanguage(this.value)" @if(App::getlocale()=='en' ) checked @endif><label for="en" @if(App::getlocale()=='en' ) class="language-selected" @endif>@lang('menu.english_language')</label>
+            <input type="radio" name="language" id="de" value="de" onclick="changeSiteLanguage(this.value)" @if(App::getlocale()=='de' ) checked @endif><label for="de" @if(App::getlocale()=='de' ) class="language-selected" @endif>@lang('menu.german_language')</label>
+            <input type="radio" name="language" id="bs" value="bs" onclick="changeSiteLanguage(this.value)" @if(App::getlocale()=='bs' ) checked @endif><label for="bs" @if(App::getlocale()=='bs' ) class="language-selected" @endif>@lang('menu.bosnian_language')</label>
 
         </form>
 
@@ -608,7 +650,6 @@
                     expandable[i].style.top = "54px";
                 }
                 for (let i = 0; i < navLi.length; i++) {
-
                     navLi[i].classList.add("nav-li-js");
                 }
             } else {
