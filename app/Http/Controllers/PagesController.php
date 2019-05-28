@@ -42,7 +42,6 @@ class PagesController extends Controller
                         ORDER BY b.created_at DESC
                         LIMIT 4');
 
-            return view('pages.general_error');
             return view('index', [
                 'blogs' => $blogs
             ]);
