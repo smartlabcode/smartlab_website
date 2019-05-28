@@ -282,7 +282,7 @@
         font-weight: bold;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 900px) {
         .nav-bot {
             justify-content: space-between;
             padding-top: 10px;
