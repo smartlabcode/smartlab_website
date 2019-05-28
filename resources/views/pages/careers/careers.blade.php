@@ -103,6 +103,19 @@
     }
 
 
+    /* Section three */
+    #sectionThree {
+        width: 620px;
+        padding: 10px;
+        margin: 0 auto;
+        outline: 1px dashed red;
+    }
+
+
+    #sectionThree > h1 {
+        width: 100%;
+        text-align: center;
+    }
 
 </style>
 
@@ -127,7 +140,8 @@
             We offer a great energy, a lot of knowledge, lot of socializing and an opportunity for long-term contract!</p>
 
             <br/>
-            <button id="applyButton">Apply</button>
+
+            <a href="#careerForm"><button id="applyButton">Apply</button></a>
         </div>
 
         <div></div>
@@ -189,44 +203,50 @@
 
     @include('parts.error_success')
 
-    <br/><br/><br/>
+    <br/><br/><br/><br/><br/>
 
-    <h2>Career contact</h2>
+    <div id="sectionThree">
 
-    <form action="/careers" method="POST" enctype="multipart/form-data">
+        <h1>Apply to Be a Part of SmartLab Team</h1>
 
-        <!-- Include token -->
-        @csrf
+        <br/><br/>
 
-        Name: <input type="text" name="name" />
-        <br/>
-        Lastname: <input type="text" name="lastname" />
-        <br/>
-        Subject: <input type="text" name="subject" />
-        <br/>
+        <form id="careerForm" action="/careers" method="POST" enctype="multipart/form-data">
 
-        <select name="category">
-            <option selected disabled>Choose category</option>
-            <option value="designer">Designer</option>
-            <option value="developer">Developer</option>
-            <option value="ux-ui-designer">UX/UI Designer</option>
-            <option value="practitioner">Practitioner</option>
-        </select>
+            <!-- Include token -->
+            @csrf
 
-        Email: <input type="email" name="email" />
-        <br/>
+            Name: <input type="text" name="name" />
+            <br/>
+            Lastname: <input type="text" name="lastname" />
+            <br/>
+            Subject: <input type="text" name="subject" />
+            <br/>
 
-        Phone number: <input type="number" name="phone_number" />
-        <br/>
+            <select name="category">
+                <option selected disabled>Choose category</option>
+                <option value="designer">Designer</option>
+                <option value="developer">Developer</option>
+                <option value="ux-ui-designer">UX/UI Designer</option>
+                <option value="practitioner">Practitioner</option>
+            </select>
 
-        Message: <textarea name="message"></textarea>
-        <br/>
-        Files: <input type="file" name="files[]" multiple />
+            Email: <input type="email" name="email" />
+            <br/>
 
-        <!-- Submit form -->
-        <button>Submit</button>
+            Phone number: <input type="number" name="phone_number" />
+            <br/>
 
-    </form>
+            Message: <textarea name="message"></textarea>
+            <br/>
+            Files: <input type="file" name="files[]" multiple />
+
+            <!-- Submit form -->
+            <button>Submit</button>
+
+        </form>
+
+    </div>
 
 
 @endsection
