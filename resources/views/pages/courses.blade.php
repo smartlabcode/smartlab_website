@@ -20,7 +20,7 @@
         overflow-x: hidden;
     }
     .h1-font {
-        font-family: "Montserrat", sans-serif;
+        font-family: "Source Sans Pro", sans-serif;
         font-size: 2em;
         margin-top: 0;
         margin-bottom: 25px;
@@ -185,7 +185,7 @@
     }
 
     .h2-font {
-        font-family: "Montserrat", sans-serif;
+        font-family: "Source Sans Pro", sans-serif;
         font-size: 1.8em;
         color: var(--h2-color);
     }
@@ -257,10 +257,14 @@
         padding-top: 50px;
     }
 
-    @media screen and (min-width: 1900px) {
+   @media screen and (min-width: 1900px) {
         #slider div {
             height: 500px;
         }
+       .secOneImg {
+           position: relative;
+           top: 121px;
+       }
         .secTwoBg2{
             top: 820px;
         }
@@ -271,8 +275,8 @@
             padding-top: 5%;
         }
         .sec3text{
-            font-family: "Montserrat", sans-serif;
-            font-size: 2.2em;
+            font-family: "Source Sans Pro", sans-serif;
+            font-size: 1.5em;
             color: var(--h2-color);
         }
 
@@ -315,10 +319,13 @@
         }
 
         .p-font{
-            font-size: 2.2em;
+            font-size: 1.5em;
         }
         .h2-font{
             font-size: 3em;
+        }
+        .secOneImg{
+            width: 80%!important;
         }
 
         .slider-right img{
@@ -386,7 +393,7 @@
 
     }
 
-    @media screen and (max-width: 1900px) {
+    /*@media screen and (max-width: 1900px) {
 
         .section3{
             align-items: center;
@@ -395,7 +402,7 @@
         .section4{
             padding-top: 0;
 
-            /* padding-left: 425px; */
+            /* padding-left: 425px;
             align-items: center;
             display: flex;
         }
@@ -436,7 +443,7 @@
         }
 
         .sec3text{
-            font-family: "Montserrat", sans-serif;
+            font-family: "Source Sans Pro", sans-serif;
             font-size: 2.2em;
             color: var(--h2-color);
         }
@@ -455,7 +462,7 @@
     @media screen and (max-width: 1450px){
 
         .sec3text{
-            font-family: "Montserrat", sans-serif;
+            font-family: "Source Sans Pro", sans-serif;
             font-size: 1.8em;
             color: var(--h2-color);
         }
@@ -563,8 +570,8 @@
     @media screen and (max-width: 1100px) {
 
         .sec3text{
-            font-family: "Montserrat", sans-serif;
-            font-size: 1.8em;
+            font-family: "Source Sans Pro", sans-serif;
+            font-size: 1.5em;
             color: var(--h2-color);
 
         }
@@ -588,7 +595,7 @@
         }
 
         .h1-font {
-            font-size: 1.7em;
+            font-size: 3em;
         }
 
         .h2-font{
@@ -645,9 +652,7 @@
             padding-right: 75px;
         }
 
-        .section1{
-            padding-left: 10%;
-        }
+
 
         .secOneBg2 {
             left: 40%;
@@ -691,7 +696,7 @@
         }
 
         .p-font {
-            font-size: 1.3em;
+            font-size: 1.5em;
             margin-left: -15px;
         }
 
@@ -736,12 +741,10 @@
             margin-bottom: 45px;
         }
 
-        .section1-1{
-            /* padding-top: 100px;*/
-        }
+
 
         /*slider*/
-        #slider{
+       /* #slider{
             height: 60%;
             display: flex;
         }
@@ -766,14 +769,14 @@
             object-fit: cover;
         }
         /* section3*/
-        .section3{
+        /*.section3{
             display: flex;
             flex-direction: column;
             align-items: center;
             margin-top: 0;
         }
         .sec3text{
-            font-family: "Montserrat", sans-serif;
+            font-family: "Source Sans Pro", sans-serif;
             font-size: 1.8em;
             color: var(--h2-color);
         }
@@ -782,7 +785,7 @@
         }
 
         /*section4*/
-        .section4 {
+       /* .section4 {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -817,7 +820,7 @@
     @media screen and (max-width: 650px) {
 
         /*section 1 to 320px*/
-        .section1 {
+       /* .section1 {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -836,7 +839,7 @@
         }
 
         .p-font {
-            font-size: 1.3em;
+            font-size: 1.2em;
             margin-left: 18px;
             width: 88%;
             padding-left: 6%;
@@ -866,7 +869,7 @@
 
         /*section 2 to 320px*/
 
-        .sectionTwo {
+       /* .sectionTwo {
             margin-top: 0;
         }
 
@@ -888,7 +891,7 @@
 
         /*slider*/
 
-        #slider{
+        /*#slider{
             height: auto;
             margin-top: 50%;
         }
@@ -933,7 +936,7 @@
         }
 
         /* section3*/
-        .section3{
+       /* .section3{
             margin-top: -50%;
             display: flex;
             flex-direction: column;
@@ -942,7 +945,7 @@
 
         .sec3text{
             margin-top: -70%;
-            font-family: "Montserrat", sans-serif;
+            font-family: "Source Sans Pro", sans-serif;
             font-size: 1.3em;
             color: var(--h2-color);
         }
@@ -957,7 +960,7 @@
         }
 
         /*section4*/
-        .section4 {
+       /* .section4 {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1200,7 +1203,7 @@
         }
 
         .p-font {
-            font-size: 1em;
+            font-size: 1.2em;
             margin-left: -15px;
         }
 
@@ -1294,7 +1297,7 @@
 
         .sec3text{
             margin-top: -40%;
-            font-family: "Montserrat", sans-serif;
+            font-family: "Source Sans Pro", sans-serif;
             font-size: 1.3em;
             color: var(--h2-color);
         }
@@ -1310,7 +1313,7 @@
         }
 
         /*section4*/
-        .section4 {
+     /*   .section4 {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1338,7 +1341,7 @@
         .submit {
             align-self: center;
         }
-    }
+    }*/
 
     @media screen and (max-width: 1000px){
 
@@ -1360,7 +1363,7 @@
         display: flex;
         flex-direction: column;
         font-size: 1.3em;
-        font-family: "Montserrat", sans-serif;
+        font-family: "Source Sans Pro", sans-serif;
         margin-bottom: 0;
     }
 
@@ -1434,7 +1437,7 @@
     }
 
     .contact-form-container p {
-        font-family: "Montserrat", sans-serif;
+        font-family: "Source Sans Pro", sans-serif;
         font-size: 1.3em;
         text-align: center;
         padding-bottom: 50px;
@@ -1485,11 +1488,11 @@
             @lang('courses.onlineCourses')
         </h3>
 
-        <p style="text-align: center; margin-left: 15px; font-size: 1.2em;" class="p-font">
+        <p style=" margin-left: 15px;" class="p-font">
             @lang('courses.secOneP1')
         </p>
 
-        <ul style="margin-left: 15px; font-size: 1.2em;" class="p-font bold">
+        <ul style="margin-left: 15px;" class="p-font bold">
             <li class="uls">@lang('courses.secOneUlFirst')</li>
             <li class="uls">@lang('courses.secOneUlSecond')</li>
             <li class="uls">@lang('courses.secOneUlThird')</li>
