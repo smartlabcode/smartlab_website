@@ -1,0 +1,30 @@
+<?php
+
+return[
+    "h1"=>"Werden Sie Teil unseres Teams",
+    "paragraph" => "Bewerben Sie sich auf unsere offenen Stellen oder unser Praktikumsprogramm, das Ausbildung und Praxis in der digitalen Industrie umfasst. Wir bieten eine große Energie,
+     viel Wissen, viel Soziales und eine Möglichkeit für einen langfristigen Vertrag!",
+    "button"=>"Anwenden",
+    "availablePositions"=>"Verfügbare Positionen",
+    "eL-h1"=>"eLearning-Designerin (m/w)",
+    "opisEL"=>"Wenn Ihnen die Kreativbranche gefällt, Sie mögen Grafiken, Sie lernen gerne Neues und schätzen die Perspektive, bewerben Sie sich auf die Position des Content-Designers für Online-Lernen.",
+    "readMore"=>"Mehr erfahren",
+    "Dev-h1"=>"Fullstack Web Webentwickler (m/f)",
+    "opisDev"=>"Wenn Sie die kreative IT-Industrie mögen, Sie sind in der Web-Programmierung, Sie wollen an Projekten großer europäischer und internationaler Unternehmen arbeiten, bewerben Sie sich für die Position des Fullstack Web Developers.",
+    "apply-h1"=>"Bewerben Sie sich als Teil des SmartLab-Teams.",
+    "name"=>"*Name",
+    "prezime"=>"*Nachname",
+    "broj"=>"*Telefonnummer",
+    "email"=>"*E-mail",
+    "napomena"=>"*Hinweis/Kurze Kurzanleitung",
+    "kategorija"=>"*Kategorie",
+    "choose-kategorija"=>"Kategorie auswählen",
+    "dizajner"=>"Designer",
+    "developer"=>"Entwickler",
+    "dizajner-uxui"=>"UX/UI Designer",
+    "praktikant"=>"Praktiker",
+    "files"=>"Platz für Ihre Dateien (freiwillig)",
+    "click-to"=>"Klicken Sie hier",
+    "upload-files"=>"Datei/en hochladen",
+    "policy"=>"Wir verpflichten uns zu Ihrer Privatsphäre. SmartLab verwendet die von Ihnen zur Verfügung gestellten Informationen, um Sie über unsere relevanten Inhalte, Produkte und Dienstleistungen zu informieren. Sie können diese Mitteilungen jederzeit abbestellen. Weitere Informationen finden Sie in unserer Datenschutzerklärung."
+];

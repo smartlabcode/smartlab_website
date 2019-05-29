@@ -19,7 +19,7 @@ return[
     "sec3h2"=> "Alati i tehnologije",
     "sec3p"=> "Dizajniramo prilagođeno e-učenje
     trening koji se slaže sa vašim
-    strateški korporativni ciljevi
+    strateški korporativni  ciljevi
     koristeći razne alate i
     tehnologije.",
     "contactName"=>"*Ime i Prezime",

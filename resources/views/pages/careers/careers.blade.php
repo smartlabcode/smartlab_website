@@ -181,16 +181,15 @@
     <div id="firstSection">
 
         <div id="joinTextSection">
-            <h1>Join Our Team</h1>
+            <h1>@lang('careers.h1')</h1>
 
             <br/>
 
-            <p>Apply to our opened positions or our internship program that includes training and practice in the digital industry.
-            We offer a great energy, a lot of knowledge, lot of socializing and an opportunity for long-term contract!</p>
+            <p>@lang('careers.paragraph')</p>
 
             <br/>
 
-            <a href="#aboveSectionThree"><button id="applyButton">Apply</button></a>
+            <a href="#aboveSectionThree"><button id="applyButton">@lang('careers.button')</button></a>
         </div>
 
         <div></div>
@@ -198,7 +197,7 @@
 
 
 
-    <h1 id="availablePositions">Available Positions</h1>
+    <h1 id="availablePositions">@lang('careers.availablePositions')</h1>
 
     <br/><br/>
 
@@ -209,18 +208,17 @@
 
             <div class="jobInfo">
 
-                <h2 class="jobHeading">eLearning Designer (m/f)</h2>
+                <h2 class="jobHeading">@lang('careers.eL-h1')</h2>
 
                 <br/>
 
                 <p class="jobText">
-                    Ako volis kreativnu industriju, bavis se grafikom, volis da ucis nove stvari i cijenis perspektivu,
-                    prijavi se na poziciju dizajnera sadrzaja za online ucenje.
+                    @lang('careers.opisEL')
                 </p>
 
                 <br/>
 
-                <button class="jobButton">Read more</button>
+                <button class="jobButton">@lang('careers.readMore')</button>
 
             </div>
         </div>
@@ -230,18 +228,17 @@
 
             <div class="jobInfo">
 
-                <h2 class="jobHeading">Fullstack Web Developer (m/f)</h2>
+                <h2 class="jobHeading">@lang('careers.Dev-h1')</h2>
 
                 <br/>
 
                 <p class="jobText">
-                    Ako volis kreativnu IT industriju, bavis se web programiranjem, zelis raditi na projektima velikih evropskih
-                    i svjetskih kompanija, prijavi se na poziciju Fullstack Web Developera.
+                    @lang('careers.opisDev')
                 </p>
 
                 <br/>
 
-                <button class="jobButton">Read more</button>
+                <button class="jobButton">@lang('careers.readMore')</button>
 
             </div>
         </div>
@@ -259,7 +256,7 @@
 
     <div id="sectionThree">
 
-        <h1>Apply to Be a Part of SmartLab Team</h1>
+        <h1>@lang('careers.apply-h1')</h1>
 
         <br/><br/>
 
@@ -271,55 +268,53 @@
             @csrf
 
             <div class="form-group">
-                <label for="name">*Name</label>
+                <label for="name">@lang('careers.name')</label>
                 <input type="text" name="name" class="form-control" id="name" placeholder="" required>
             </div>
 
             <div class="form-group">
-                <label for="surname">*Surname</label>
+                <label for="surname">@lang('careers.prezime')</label>
                 <input type="text" name="lastname" class="form-control" id="surname" placeholder="" required>
             </div>
 
             <div class="form-group">
-                <label for="phone">*Phone number</label>
+                <label for="phone">@lang('careers.broj')</label>
                 <input type="number" name="phone_number" class="form-control" id="phone" placeholder="" required>
             </div>
 
             <div class="form-group">
-                <label for="name">*Email</label>
+                <label for="name">@lang('careers.email')</label>
                 <input type="email" name="email" class="form-control" id="email" placeholder="" required>
             </div>
 
             <div class="form-group">
-                <label for="name">*Note/Short Brief</label>
+                <label for="name">@lang('careers.napomena')</label>
                 <textarea name="message" class="form-control" id="name" placeholder="" required></textarea>
             </div>
 
             <div class="form-group">
-                <label for="category">*Category</label>
+                <label for="category">@lang('careers.kategorija')</label>
                 <select class="form-control" name="category" id="category" required>
-                    <option selected disabled>Choose category</option>
-                    <option value="designer">Designer</option>
-                    <option value="developer">Developer</option>
-                    <option value="ux-ui-designer">UX/UI Designer</option>
-                    <option value="practitioner">Practitioner</option>
+                    <option selected disabled>@lang('careers.choose-kategorija')</option>
+                    <option value="designer">@lang('careers.dizajner')</option>
+                    <option value="developer">@lang('careers.developer')</option>
+                    <option value="ux-ui-designer">@lang('careers.dizajner-uxui')</option>
+                    <option value="practitioner">@lang('careers.praktikant')</option>
                 </select>
 
 
                 <br/>
 
-                <label for="uploadFileArea">Place for your files (optional)</label>
+                <label for="uploadFileArea">@lang('careers.files')</label>
                 <div id="uploadFileArea" class="form-control" onclick="openUploadWindow()">
-                    <p id="uploadText">Click to <br/> upload file/s</p>
+                    <p id="uploadText">@lang('careers.click-to')<br/>@lang('careers.upload-files')</p>
                     <input id="inputFile" type="file" name="files[]" onchange="fileUploaded()" multiple />
                 </div>
 
             </div>
 
 
-            <p class="policyText">We're commited to your privacy. SmartLab uses the information you provide to us to contact you about our relevant content,
-            product and services. You may unsubscribe from these communications at any time.
-                For more information check out our <a href="#">Privacy Policy</a>.</p>
+            <p class="policyText"> <a href="#">Privacy Policy</a>@lang('careers.privacy') </p>
 {{--            Subject: <input type="text" name="subject" />--}}
 
             <!-- Submit form -->
