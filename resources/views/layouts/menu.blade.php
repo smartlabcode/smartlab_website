@@ -246,7 +246,8 @@
     }
 
     .nav-logo {
-        height: 30px;
+        height: 35px;
+        padding-top: 5px;
     }
 
     .nav-button {
@@ -283,6 +284,14 @@
     }
 
     @media screen and (max-width: 900px) {
+        .nav-top p {
+            margin-right: 0;
+        }
+
+        .nav-top p span {
+            margin-right: 5px;
+        }
+
         .nav-top {
             display: flex;
             justify-content: space-between;
@@ -641,7 +650,7 @@
         })
 
         function navTopHide() {
-            if (window.pageYOffset > 200) {
+            if (window.pageYOffset > 100) {
                 nav.style.backgroundColor = "white";
                 navTop.style.display = "none";
                 for (let i = 0; i < arrow.length; i++) {
