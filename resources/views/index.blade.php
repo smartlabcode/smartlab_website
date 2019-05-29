@@ -739,6 +739,7 @@
     background-color: rgba(122, 161, 233, 0.5);
     border: 2px solid rgba(255, 255, 255, 0);
     resize: none !important;
+    color: white;
   }
 
   input:focus,
