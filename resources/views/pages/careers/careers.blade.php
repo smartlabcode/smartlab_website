@@ -230,13 +230,13 @@
 
             <div class="jobInfo">
 
-                <h2 class="jobHeading">eLearning Designer (m/f)</h2>
+                <h2 class="jobHeading">Fullstack Web Developer (m/f)</h2>
 
                 <br/>
 
                 <p class="jobText">
-                    Ako volis kreativnu industriju, bavis se grafikom, volis da ucis nove stvari i cijenis perspektivu,
-                    prijavi se na poziciju dizajnera sadrzaja za online ucenje.
+                    Ako volis kreativnu IT industriju, bavis se web programiranjem, zelis raditi na projektima velikih evropskih
+                    i svjetskih kompanija, prijavi se na poziciju Fullstack Web Developera.
                 </p>
 
                 <br/>

@@ -218,4 +218,40 @@ class PagesController extends Controller
             return view('pages.general_error');
         }
     }
+
+    /**
+     * Display careers elearning job page
+     */
+    public function showCareersElearningPage()
+    {
+
+        try {
+
+            return view('pages.careers.elearning_job');
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', 'PagesController - showCareersElearningPage: ' . $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+    }
+
+    /**
+     * Display careers developer job page
+     */
+    public function showCareersDeveloperPage()
+    {
+
+        try {
+
+            return view('pages.careers.developer_job');
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', 'PagesController - showCareersDeveloperPage: ' . $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+    }
 }
