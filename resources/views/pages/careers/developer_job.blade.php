@@ -168,6 +168,7 @@
             cursor: pointer;
             box-shadow: 2px 2px 2px rgba(150,150,150, 0.5);
             outline: none !important;
+            display: block;
             margin: 0 auto;
         }
 
@@ -236,10 +237,12 @@
 
         <button id="applyDeveloperButton">Apply</button>
 
-        <br/><br/><br/>
+        <br/><br/>
 
         @include('parts.error_success')
 
+        <div id="targetPoint"></div>
+        <br/>
         <form id="careerForm" action="/careers" method="POST" enctype="multipart/form-data">
 
             <!-- Include token -->
