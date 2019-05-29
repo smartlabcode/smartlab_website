@@ -512,7 +512,7 @@
 
   .partners-images img {
     max-width: 32%;
-    height: 100px;
+    height: 90px;
     object-fit: contain;
   }
 
@@ -561,7 +561,7 @@
     box-shadow: -1px -1px 25px 1px var(--shadow-color);
     flex-basis: 24%;
     text-align: center;
-    max-height: 515px;
+    max-height: 580px;
     overflow: hidden;
     text-overflow: ellipsis;
     border-radius: 10px;
@@ -578,12 +578,12 @@
   }
 
   .blog-text {
-    color: black !important;
+    color: black;
     font-family: "Source Sans Pro", sans-serif !important;
-    height: 106px;
     overflow: hidden;
-    line-height: 1.6;
-    font-size: 1.6em;
+
+    line-height: 23px;
+    font-size: 1.1em;
     padding-right: 10px;
     padding-left: 10px;
   }
@@ -604,11 +604,11 @@
   .blog .blog-text::after {
     position: absolute;
     content: "...";
-    bottom: 20px;
-    right: 10px;
-    font-size: 1.2em;
+    bottom: 4px;
+    right: 16px;
+    font-size: 1.1em;
     padding-top: 0px;
-    line-height: 0.8em;
+    line-height: 1.5em;
     padding-left: 4px;
     padding-right: 0px;
     padding-bottom: 0px;
@@ -2138,10 +2138,11 @@
     let blogValue = document.querySelectorAll(".blog-value");
     let blogText = document.querySelectorAll(".blog-text");
     let temp;
-    console.log(blogValue);
+
 
     for (let i = 0; i < blogValue.length; i++) {
-      temp = blogValue[i].value.replace(/<img .*?>/g, " ");
+      temp = blogValue[i].value.replace(/<img .*?>| style/g, " ");
+      console.log(temp)
       blogText[i].innerHTML = temp;
     }
 
