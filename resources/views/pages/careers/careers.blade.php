@@ -307,18 +307,18 @@
 
                 <label for="uploadFileArea">@lang('careers.files')</label>
                 <div id="uploadFileArea" class="form-control" onclick="openUploadWindow()">
-                    <p id="uploadText">@lang('careers.click-to')<br/>@lang('careers.upload-files')</p>
+                    <p id="uploadText">@lang('careers.click-to') <br/>@lang('careers.upload-files')</p>
                     <input id="inputFile" type="file" name="files[]" onchange="fileUploaded()" multiple />
                 </div>
 
             </div>
 
 
-            <p class="policyText"> <a href="#">Privacy Policy</a>@lang('careers.privacy') </p>
+            <p class="policyText">@lang('careers.we-are-commited')  <a href="#">@lang('careers.privacy')</a>.</p>
 {{--            Subject: <input type="text" name="subject" />--}}
 
             <!-- Submit form -->
-            <button id="sendCareerButton">Send</button>
+            <button id="sendCareerButton">@lang('careers.send') </button>
 
         </form>
 

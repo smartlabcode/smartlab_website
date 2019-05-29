@@ -26,5 +26,6 @@ return[
     "files"=>"Platz für Ihre Dateien (freiwillig)",
     "click-to"=>"Klicken Sie hier",
     "upload-files"=>"Datei/en hochladen",
-    "policy"=>"Wir verpflichten uns zu Ihrer Privatsphäre. SmartLab verwendet die von Ihnen zur Verfügung gestellten Informationen, um Sie über unsere relevanten Inhalte, Produkte und Dienstleistungen zu informieren. Sie können diese Mitteilungen jederzeit abbestellen. Weitere Informationen finden Sie in unserer Datenschutzerklärung."
+    "we-are-commited"=>"Wir verpflichten uns zu Ihrer Privatsphäre. SmartLab verwendet die von Ihnen zur Verfügung gestellten Informationen, um Sie über unsere relevanten Inhalte, Produkte und Dienstleistungen zu informieren. Sie können diese Mitteilungen jederzeit abbestellen. Weitere Informationen finden Sie in unserer",
+    "privacy"=>"Datenschutzerklärung."
 ];

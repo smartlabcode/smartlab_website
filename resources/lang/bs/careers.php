@@ -25,7 +25,6 @@ return[
     "files"=>"Mjesto za vaše datoteke (opcionalno)",
     "click-to"=>"Klikni za",
     "upload-files"=>" učitavanje datoteke",
-    "privacy"=>"
-Posvećeni smo vašoj privatnosti. SmartLab koristi informacije koje nam dostavljate kako bismo Vas kontaktirali o našem relevantnom sadržaju, proizvodima i uslugama. Možete se odjaviti sa ovih komunikacija u bilo kom trenutku. Za više informacija pogledajte našu Politiku privatnosti."
-
+    "we-are-commited"=>"Posvećeni smo vašoj privatnosti. SmartLab koristi informacije koje nam dostavljate kako bismo Vas kontaktirali o našem relevantnom sadržaju, proizvodima i uslugama. Možete se odjaviti sa ovih komunikacija u bilo kom trenutku. Za više informacija pogledajte našu",
+    "privacy"=>" Politiku Privatnosti."
 ];
