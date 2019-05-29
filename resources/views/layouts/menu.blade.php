@@ -284,31 +284,52 @@
     }
 
     @media screen and (max-width: 900px) {
-        .nav-top p {
-            margin-right: 0;
-        }
-
-        .nav-top p span {
-            margin-right: 5px;
-        }
-
         .nav-top {
+            display: none;
+        }
+
+        .nav-top-mobile {
             display: flex;
-            justify-content: space-between;
+            color: var(--h1-color);
+        }
+
+        .nav-top-mobile p {
+            opacity: 0.5;
+            color: var(--h1-color);
+            margin-right: 50px;
+        }
+
+        .nav-top-mobile p span {
+            margin-right: 20px;
+        }
+
+        .nav-top-mobile label {
+            text-transform: uppercase;
+            position: relative;
+            right: 20px;
+            color: var(--h1-color);
+            opacity: 0.5;
+            cursor: pointer;
+        }
+
+        #languageForm {
+            position: relative;
+            left: 20px;
+        }
+
+        .nav-top-mobile input {
+            visibility: hidden;
+        }
+
+        .language-selected {
+            opacity: 1 !important;
+            font-weight: bold;
         }
 
         .nav-bot {
             justify-content: space-between;
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-
-        .nav-top span {
-            color: var(--h1-color);
-        }
-
-        .nav-top label {
-            color: var(--h1-color);
+            padding-top: 30px;
+            padding-bottom: 30px;
         }
 
         .expandable {
@@ -325,14 +346,19 @@
         .nav-li a {
             height: auto;
             color: var(--h1-color) !important;
+
+        }
+
+        .nav-li>a {
+            font-weight: bold;
         }
 
         .nav-li-container {
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
+            justify-content: flex-start;
             position: absolute;
-            top: 50px;
+            top: 95px;
             width: 100vw;
             right: -2.5vw;
             background-color: white;
@@ -342,23 +368,17 @@
 
         .nav-li:hover .expandable-first {
             height: 252px;
-            -webkit-box-shadow: -1px -1px 15px 1px var(--shadow-color);
-            -moz-box-shadow: -1px -1px 15px 1px var(--shadow-color);
-            box-shadow: -1px -1px 15px 1px var(--shadow-color);
+
         }
 
         .nav-li:hover .expandable-second {
             height: 126px;
-            -webkit-box-shadow: -1px -1px 15px 1px var(--shadow-color);
-            -moz-box-shadow: -1px -1px 15px 1px var(--shadow-color);
-            box-shadow: -1px -1px 15px 1px var(--shadow-color);
+
         }
 
         .nav-li:hover .expandable-third {
             height: 189px;
-            -webkit-box-shadow: -1px -1px 15px 1px var(--shadow-color);
-            -moz-box-shadow: -1px -1px 15px 1px var(--shadow-color);
-            box-shadow: -1px -1px 15px 1px var(--shadow-color);
+
         }
 
         .join-left,
@@ -386,6 +406,7 @@
             width: 30px;
             display: inline-block;
             position: relative;
+            top: 5px;
         }
 
         .nav-button-inner {
@@ -608,6 +629,21 @@
             <li class="nav-li nav-li-js"><a class="grey padding-right-0" href="{{route('logout')}}">@lang('menu.tenth_item')</a></li>
 
             @endauth
+            <div class="nav-top-mobile contain">
+
+                <p><span>Call: </span><span>+387 61 811 394</span> <span>+387 33 956 222</span></p>
+                <form action="/language" method="POST">
+                    <!-- Form for sending new language after user clicks on one of the select options - page is refreshed with new language translations -->
+                    @csrf
+                    @method('PUT')
+
+                    <input type="radio" name="language" id="en" value="en" onclick="changeSiteLanguage(this.value)" @if(App::getlocale()=='en' ) checked @endif><label for="en" @if(App::getlocale()=='en' ) class="language-selected" @endif>@lang('menu.english_language')</label>
+                    <input type="radio" name="language" id="de" value="de" onclick="changeSiteLanguage(this.value)" @if(App::getlocale()=='de' ) checked @endif><label for="de" @if(App::getlocale()=='de' ) class="language-selected" @endif>@lang('menu.german_language')</label>
+                    <input type="radio" name="language" id="bs" value="bs" onclick="changeSiteLanguage(this.value)" @if(App::getlocale()=='bs' ) checked @endif><label for="bs" @if(App::getlocale()=='bs' ) class="language-selected" @endif>@lang('menu.bosnian_language')</label>
+
+                </form>
+
+            </div>
         </div>
 
     </div>
@@ -685,10 +721,19 @@
                 }
             }
         }
-        navTopHide();
-        window.addEventListener("scroll", function(event) {
+        if (window.innerWidth > 900) {
             navTopHide();
-        })
+        }
+
+        if (window.innerWidth > 900) {
+            window.addEventListener("scroll", function(event) {
+                console.log(window.innerWidth);
+                navTopHide();
+            });
+        }
+
+
+
     });
 </script>
 @endsection
