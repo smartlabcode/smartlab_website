@@ -2,7 +2,6 @@
 
 
 <style>
-
     #firstSection {
         width: 90%;
         height: calc(100vh - 80px); /* TODO Check height of menu */
@@ -67,34 +66,6 @@
         display: inline-block;
         width: 100%;
         height: 300px;
-    }
-
-
-    .jobHeading {
-        color: orange;
-        width: 100%;
-        text-align: center;
-    }
-
-
-    .jobInfo {
-        box-sizing: border-box;
-        padding: 30px;
-    }
-
-
-    .jobButton {
-        position: relative;
-        left: 50%;
-        margin-left: -80px;
-        border-radius: 50px;
-        padding: 10px;
-        background-color: #007bff;
-        width: 140px;
-        color: #fff;
-        cursor: pointer;
-        box-shadow: 2px 2px 2px rgba(150,150,150, 0.5);
-        outline: none !important;
     }
 
 
@@ -168,7 +139,42 @@
     }
 
 
+    /* New style */
+    #careerImage {
+        height: 400px;
+        background-image: url('{{ asset("images/careers/developer-page-img.svg") }}');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .jobParameters {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+
+    .jobDetails {
+        font-weight: 900 !important;
+        line-height: 1em;
+    }
+
+
+    #applyDeveloperButton {
+        border-radius: 50px;
+        padding: 10px;
+        background-color: #4885FA;
+        width: 140px;
+        color: #fff;
+        cursor: pointer;
+        box-shadow: 2px 2px 2px rgba(150,150,150, 0.5);
+        outline: none !important;
+        display: block;
+        margin: 0 auto;
+    }
+
 </style>
+
+
 
 
 @section('content')
@@ -181,90 +187,68 @@
     <div id="firstSection">
 
         <div id="joinTextSection">
-            <h1>Join Our Team</h1>
 
-            <br/>
-
-            <p>Apply to our opened positions or our internship program that includes training and practice in the digital industry.
-            We offer a great energy, a lot of knowledge, lot of socializing and an opportunity for long-term contract!</p>
-
-            <br/>
-
-            <a href="#aboveSectionThree"><button id="applyButton">Apply</button></a>
         </div>
 
-        <div></div>
+        <div id="careerImage">
+
+        </div>
     </div>
 
 
 
-    <h1 id="availablePositions">Available Positions</h1>
+    <div class="jobParameters">
 
-    <br/><br/>
+        <h1 id="availablePositions">eLearning Designer (m/f)</h1>
 
-    <div id="secondSection">
+        <br/><br/>
 
-        <div class="jobOffer">
-            <img src="{{ asset('images/careers/designer-page-img.svg') }}" class="jobImage"/>
+        <p>Ako volis kreativnu industriju, bavis se grafikom, volis da ucis nove stvari i cijenis perspektivu,
+            prijavi se na poziciju dizajnera sadrzaja za online ucenje.</p>
 
-            <div class="jobInfo">
+        <br/><br/>
 
-                <h2 class="jobHeading">eLearning Designer (m/f)</h2>
+        <h5>Potrebne strucne karakteristike kandidata</h5>
+        <ul>
+            <li>dobro poznavanje Adobe alata (psd, ai, ae)</li>
+            <li>poznavanje web tehnologije (pozeljno iskustvo sa web developmentom)</li>
+            <li>mogućnost komunikacije na engleskom jeziku</li>
+            <li>status nezaposlenog lica prijavljenog u Zavodu za zapošljavanje KS (minimalno 3 mjeseca)</li>
+            <li>komunkativnost i spremnost na timski rad</li>
+        </ul>
 
-                <br/>
+        <br/>
 
-                <p class="jobText">
-                    Ako volis kreativnu industriju, bavis se grafikom, volis da ucis nove stvari i cijenis perspektivu,
-                    prijavi se na poziciju dizajnera sadrzaja za online ucenje.
-                </p>
+        <h5>Pozeljne karakteristike</h5>
+        <ul>
+            <li>njemački jezik</li>
+            <li>osnovno poznavanje front-end programiranja</li>
+        </ul>
 
-                <br/>
+        <br/><br/>
+        <p>Ako pronalazis sebe u opisanim karakteristikama, zelis ugodnu atmosferu rada kao i stimulativna primanja,
+            posalji svoj CV i motivaciono pismo na <a href="mailto:hello@smartlab.ba" target="_blank">hello@smartlab.ba.</a></p>
 
-                <button class="jobButton">Read more</button>
+        <br/>
 
-            </div>
-        </div>
-
-        <div class="jobOffer">
-            <img src="{{ asset('images/careers/developer-page-img.svg') }}" class="jobImage"/>
-
-            <div class="jobInfo">
-
-                <h2 class="jobHeading">Fullstack Web Developer (m/f)</h2>
-
-                <br/>
-
-                <p class="jobText">
-                    Ako volis kreativnu IT industriju, bavis se web programiranjem, zelis raditi na projektima velikih evropskih
-                    i svjetskih kompanija, prijavi se na poziciju Fullstack Web Developera.
-                </p>
-
-                <br/>
-
-                <button class="jobButton">Read more</button>
-
-            </div>
-        </div>
+        <p class="jobDetails">Lokacija: Sarajevo</p>
+        <p class="jobDetails">Broj pozicija: 2</p>
+        <p class="jobDetails">Datum objave: 20.05.2019</p>
 
     </div>
 
 
-
-    <br/><br/><br/>
-
-
-    <div id="aboveSectionThree"></div>
-
-    <br/><br/>
 
     <div id="sectionThree">
 
-        <h1>Apply to Be a Part of SmartLab Team</h1>
+        <a href="#targetPoint"><button id="applyDeveloperButton">Apply</button></a>
 
         <br/><br/>
 
         @include('parts.error_success')
 
+        <div id="targetPoint"></div>
+        <br/>
         <form id="careerForm" action="/careers" method="POST" enctype="multipart/form-data">
 
             <!-- Include token -->
@@ -318,11 +302,11 @@
 
 
             <p class="policyText">We're commited to your privacy. SmartLab uses the information you provide to us to contact you about our relevant content,
-            product and services. You may unsubscribe from these communications at any time.
+                product and services. You may unsubscribe from these communications at any time.
                 For more information check out our <a href="#">Privacy Policy</a>.</p>
-{{--            Subject: <input type="text" name="subject" />--}}
+        {{--            Subject: <input type="text" name="subject" />--}}
 
-            <!-- Submit form -->
+        <!-- Submit form -->
             <button id="sendCareerButton">Send</button>
 
         </form>
@@ -330,18 +314,6 @@
     </div>
 
 
-    <script>
 
-        function openUploadWindow() {
-            document.getElementById("inputFile").click();
-        }
-
-
-        function fileUploaded() {
-            // TODO check if file is selected
-            document.getElementById("uploadText").innerHTML = "File uploaded";
-        }
-
-    </script>
 
 @endsection

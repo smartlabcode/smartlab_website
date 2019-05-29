@@ -201,7 +201,7 @@ class ContactController extends Controller
         $contact->lastname = $request->input('lastname');
         $contact->email = $request->input('email');
         $contact->phone_number = $request->input('phone_number');
-        $contact->subject = $request->input('subject');
+       // $contact->subject = $request->input('subject');
         $contact->message = $request->input('message');
         $contact->category = $request->input('category');
 
@@ -228,7 +228,7 @@ class ContactController extends Controller
         Mail::to([env('ADMIN_EMAIL')])->queue(new MailToSend($contact));
 
         // return message
-        return back()->with('message', 'Career request successfully sent.');
+        return redirect('/pages/careers#aboveSectionThree')->with('message', 'Career request successfully sent.');
     }
 }
 

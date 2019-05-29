@@ -19,7 +19,8 @@ class PagesController extends Controller
     /**
      * Display index page
      */
-    public function index() {
+    public function index()
+    {
 
         try {
 
@@ -40,51 +41,49 @@ class PagesController extends Controller
                         AND b.published = "true"
                         GROUP BY b.id
                         ORDER BY b.created_at DESC
-                        LIMIT 4');
+                        LIMIT 4'
+            );
 
-            return view('pages.general_error');
+
             return view('index', [
                 'blogs' => $blogs
             ]);
-
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', 'PagesController - index: '. $e->getMessage());
+            $this->logService->setLog('ERROR', 'PagesController - index: ' . $e->getMessage());
 
             // return error view
             return view('pages.general_error');
         }
-
     }
 
     /**
      * Display courses page
      */
-    public function showCoursesPage() {
+    public function showCoursesPage()
+    {
 
         try {
 
             return view('pages.courses');
-
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', 'PagesController - showCoursesPage: '. $e->getMessage());
+            $this->logService->setLog('ERROR', 'PagesController - showCoursesPage: ' . $e->getMessage());
 
             // return error view
             return view('pages.general_error');
         }
-
     }
 
     /**
      * Display animations page
      */
-    public function showAnimationsPage() {
+    public function showAnimationsPage()
+    {
 
         try {
 
             return view('pages.animations');
-
         } catch (\Exception $e) {
             // add log
             $this->logService->setLog('ERROR', 'PagesController - showAnimationsPage: ' . $e->getMessage());
@@ -92,18 +91,17 @@ class PagesController extends Controller
             // return error view
             return view('pages.general_error');
         }
-
     }
 
     /**
      * Display programming page
      */
-    public function showProgrammingPage() {
+    public function showProgrammingPage()
+    {
 
         try {
 
             return view('pages.programming');
-
         } catch (\Exception $e) {
             // add log
             $this->logService->setLog('ERROR', 'PagesController - showProgrammingPage: ' . $e->getMessage());
@@ -111,18 +109,17 @@ class PagesController extends Controller
             // return error view
             return view('pages.general_error');
         }
-
     }
 
     /**
      * Display moodle page
      */
-    public function showMoodlePage() {
+    public function showMoodlePage()
+    {
 
         try {
 
             return view('pages.moodle');
-
         } catch (\Exception $e) {
             // add log
             $this->logService->setLog('ERROR', 'PagesController - showMoodlePage: ' . $e->getMessage());
@@ -130,18 +127,17 @@ class PagesController extends Controller
             // return error view
             return view('pages.general_error');
         }
-
     }
 
     /**
      * Display XLF page
      */
-    public function showXlfPage() {
+    public function showXlfPage()
+    {
 
         try {
 
             return view('pages.xliff');
-
         } catch (\Exception $e) {
             // add log
             $this->logService->setLog('ERROR', 'PagesController - showXlfPage: ' . $e->getMessage());
@@ -149,18 +145,17 @@ class PagesController extends Controller
             // return error view
             return view('pages.general_error');
         }
-
     }
 
     /**
      * Display Careers page
      */
-    public function showCareersPage() {
+    public function showCareersPage()
+    {
 
         try {
 
             return view('pages.careers.careers');
-
         } catch (\Exception $e) {
             // add log
             $this->logService->setLog('ERROR', 'PagesController - showCareersPage: ' . $e->getMessage());
@@ -168,18 +163,17 @@ class PagesController extends Controller
             // return error view
             return view('pages.general_error');
         }
-
     }
 
     /**
      * Display Partner page
      */
-    public function showPartnerPage() {
+    public function showPartnerPage()
+    {
 
         try {
 
             return view('pages.become_partner');
-
         } catch (\Exception $e) {
             // add log
             $this->logService->setLog('ERROR', 'PagesController - showPartnerPage: ' . $e->getMessage());
@@ -187,18 +181,17 @@ class PagesController extends Controller
             // return error view
             return view('pages.general_error');
         }
-
     }
 
     /**
      * Display Partner page
      */
-    public function showOutsourcingPage() {
+    public function showOutsourcingPage()
+    {
 
         try {
 
             return view('pages.outsourcing');
-
         } catch (\Exception $e) {
             // add log
             $this->logService->setLog('ERROR', 'PagesController - showOutsourcingPage: ' . $e->getMessage());
@@ -206,18 +199,17 @@ class PagesController extends Controller
             // return error view
             return view('pages.general_error');
         }
-
     }
 
     /**
      * Display Partner page
      */
-    public function showXlfSignInPage() {
+    public function showXlfSignInPage()
+    {
 
         try {
 
             return view('pages.xliff_signup_signin');
-
         } catch (\Exception $e) {
             // add log
             $this->logService->setLog('ERROR', 'PagesController - showXlfSignInPage: ' . $e->getMessage());
@@ -225,7 +217,41 @@ class PagesController extends Controller
             // return error view
             return view('pages.general_error');
         }
-
     }
 
+    /**
+     * Display careers elearning job page
+     */
+    public function showCareersElearningPage()
+    {
+
+        try {
+
+            return view('pages.careers.elearning_job');
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', 'PagesController - showCareersElearningPage: ' . $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+    }
+
+    /**
+     * Display careers developer job page
+     */
+    public function showCareersDeveloperPage()
+    {
+
+        try {
+
+            return view('pages.careers.developer_job');
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', 'PagesController - showCareersDeveloperPage: ' . $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+    }
 }

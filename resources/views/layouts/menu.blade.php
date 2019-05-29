@@ -40,23 +40,33 @@
     }
 
     .expandable {
-        height: 0;
+        display: none;
         position: absolute;
         transform: translateX(-12%);
         overflow-y: hidden;
-        display: block;
         width: 400px;
         background-color: white;
         border-radius: 5px;
+        -webkit-box-shadow: -1px -1px 15px 1px var(--shadow-color);
+        -moz-box-shadow: -1px -1px 15px 1px var(--shadow-color);
+        box-shadow: -1px -1px 15px 1px var(--shadow-color);
         transition: height 0.2s ease-in-out;
     }
 
     .expandable:hover {
-        height: auto;
+        display: block;
+    }
+
+    .join:hover {
+        display: flex !important;
+    }
+
+    .nav-li:hover .join {
+        display: flex !important;
     }
 
     .nav-li:hover .expandable {
-        height: auto;
+        display: block;
     }
 
 
@@ -99,6 +109,7 @@
         width: 0px;
         background-color: var(--h1-color) !important;
         transition: width 0.2s ease-in-out;
+
     }
 
     .nav-li>a::before {
@@ -111,6 +122,7 @@
         width: 0px;
         background-color: white;
         transition: width 0.2s ease-in-out;
+
     }
 
     .nav-li:hover a::before {
@@ -147,9 +159,20 @@
     }
 
     .nav-top {
-
         display: flex;
         justify-content: flex-end;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .nav-top p {
+        opacity: 0.5;
+        color: white;
+        margin-right: 50px;
+    }
+
+    .nav-top p span {
+
+        margin-right: 20px;
     }
 
     .nav-bot {
@@ -186,7 +209,7 @@
         -webkit-clip-path: polygon(0 50%, 50% 100%, 100% 50%);
         clip-path: polygon(0 50%, 50% 100%, 100% 50%);
         transition: 0.2s transform ease-in-out;
-
+        z-index: 10;
     }
 
     .arrow::before {
@@ -202,11 +225,11 @@
         -webkit-clip-path: polygon(0 50%, 50% 100%, 100% 50%);
         clip-path: polygon(0 50%, 50% 100%, 100% 50%);
         transition: 0.2s transform ease-in-out;
-
+        z-index: 10;
     }
 
     .join {
-        display: flex;
+        display: none;
         transform: translateX(-22%);
     }
 
@@ -223,7 +246,8 @@
     }
 
     .nav-logo {
-        height: 30px;
+        height: 35px;
+        padding-top: 5px;
     }
 
     .nav-button {
@@ -236,11 +260,62 @@
         justify-content: flex-end;
     }
 
-    @media screen and (max-width: 768px) {
+    .nav-top label {
+        text-transform: uppercase;
+        position: relative;
+        right: 20px;
+        color: white;
+        opacity: 0.5;
+        cursor: pointer;
+    }
+
+    #languageForm {
+        position: relative;
+        left: 20px;
+    }
+
+    .nav-top input {
+        visibility: hidden;
+    }
+
+    .language-selected {
+        opacity: 1 !important;
+        font-weight: bold;
+    }
+
+    @media screen and (max-width: 900px) {
+        .nav-top p {
+            margin-right: 0;
+        }
+
+        .nav-top p span {
+            margin-right: 5px;
+        }
+
+        .nav-top {
+            display: flex;
+            justify-content: space-between;
+        }
+
         .nav-bot {
             justify-content: space-between;
             padding-top: 10px;
             padding-bottom: 10px;
+        }
+
+        .nav-top span {
+            color: var(--h1-color);
+        }
+
+        .nav-top label {
+            color: var(--h1-color);
+        }
+
+        .expandable {
+
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
         }
 
         .height-js {
@@ -265,9 +340,25 @@
             overflow: hidden;
         }
 
-        .nav-li:hover .expandable {
-            height: 250px;
+        .nav-li:hover .expandable-first {
+            height: 252px;
+            -webkit-box-shadow: -1px -1px 15px 1px var(--shadow-color);
+            -moz-box-shadow: -1px -1px 15px 1px var(--shadow-color);
+            box-shadow: -1px -1px 15px 1px var(--shadow-color);
+        }
 
+        .nav-li:hover .expandable-second {
+            height: 126px;
+            -webkit-box-shadow: -1px -1px 15px 1px var(--shadow-color);
+            -moz-box-shadow: -1px -1px 15px 1px var(--shadow-color);
+            box-shadow: -1px -1px 15px 1px var(--shadow-color);
+        }
+
+        .nav-li:hover .expandable-third {
+            height: 189px;
+            -webkit-box-shadow: -1px -1px 15px 1px var(--shadow-color);
+            -moz-box-shadow: -1px -1px 15px 1px var(--shadow-color);
+            box-shadow: -1px -1px 15px 1px var(--shadow-color);
         }
 
         .join-left,
@@ -304,9 +395,9 @@
             background-color: var(--h1-color);
             position: absolute;
             top: 0;
+            border-radius: 2px;
             animation-duration: 0.2s;
             animation-timing-function: ease-in;
-
             animation-fill-mode: forwards;
 
         }
@@ -318,9 +409,9 @@
             background-color: var(--h1-color);
             position: absolute;
             top: 10px;
+            border-radius: 2px;
             animation-duration: 0.2s;
             animation-timing-function: ease-in;
-
             animation-fill-mode: forwards;
         }
 
@@ -332,11 +423,13 @@
             background-color: var(--h1-color);
             position: absolute;
             top: 20px;
+            border-radius: 2px;
             animation-duration: 0.2s;
             animation-timing-function: ease-in;
-
             animation-fill-mode: forwards;
         }
+
+
 
         @keyframes navBtn {
             from {
@@ -345,6 +438,16 @@
 
             to {
                 width: 0px;
+            }
+        }
+
+        @keyframes navBtnReverse {
+            from {
+                width: 0px;
+            }
+
+            to {
+                width: 30px;
             }
         }
 
@@ -360,6 +463,18 @@
             }
         }
 
+        @keyframes navBtnAfterReverse {
+            from {
+                transform: rotate(-45deg);
+                top: 10px;
+            }
+
+            to {
+                transform: rotate(0deg);
+                top: 20px;
+            }
+        }
+
         @keyframes navBtnBefore {
             from {
                 transform: rotate(0deg);
@@ -368,6 +483,18 @@
 
             to {
                 transform: rotate(45deg);
+                top: 10px;
+            }
+        }
+
+        @keyframes navBtnBeforeReverse {
+            from {
+                transform: rotate(45deg);
+                top: 10px;
+            }
+
+            to {
+                transform: rotate(2deg);
                 top: 10px;
             }
         }
@@ -405,15 +532,15 @@
 <ul class="nav-list " id="nav-list">
     <div class="nav-top contain" id="nav-top">
 
-        <p>Call: <span>+387 61 811 394</span> <span>+387 33 956 222</span></p>
+        <p><span>Call: </span><span>+387 61 811 394</span> <span>+387 33 956 222</span></p>
         <form id="languageForm" action="/language" method="POST">
             <!-- Form for sending new language after user clicks on one of the select options - page is refreshed with new language translations -->
             @csrf
             @method('PUT')
 
-            <input type="radio" name="language" value="en" onclick="changeSiteLanguage(this.value)" @if(App::getlocale()=='en' ) checked @endif>@lang('menu.english_language')
-            <input type="radio" name="language" value="de" onclick="changeSiteLanguage(this.value)" @if(App::getlocale()=='de' ) checked @endif>@lang('menu.german_language')
-            <input type="radio" name="language" value="bs" onclick="changeSiteLanguage(this.value)" @if(App::getlocale()=='bs' ) checked @endif>@lang('menu.bosnian_language')
+            <input type="radio" name="language" id="en" value="en" onclick="changeSiteLanguage(this.value)" @if(App::getlocale()=='en' ) checked @endif><label for="en" @if(App::getlocale()=='en' ) class="language-selected" @endif>@lang('menu.english_language')</label>
+            <input type="radio" name="language" id="de" value="de" onclick="changeSiteLanguage(this.value)" @if(App::getlocale()=='de' ) checked @endif><label for="de" @if(App::getlocale()=='de' ) class="language-selected" @endif>@lang('menu.german_language')</label>
+            <input type="radio" name="language" id="bs" value="bs" onclick="changeSiteLanguage(this.value)" @if(App::getlocale()=='bs' ) checked @endif><label for="bs" @if(App::getlocale()=='bs' ) class="language-selected" @endif>@lang('menu.bosnian_language')</label>
 
         </form>
 
@@ -430,7 +557,7 @@
             <li class="nav-li nav-li-js arrow first">
                 <a class="grey">@lang('menu.first_item')</a>
                 <div class="filler"></div>
-                <div class="expandable">
+                <div class="expandable expandable-first">
                     <a href="/pages/courses">@lang('menu.online_courses')</a>
                     <a href="/pages/animations">@lang('menu.educational_video')</a>
                     <a href="/pages/programming">@lang('menu.programming')</a>
@@ -441,7 +568,7 @@
             <li class="nav-li nav-li-js arrow">
                 <a class="grey">@lang('menu.second_item')</a>
                 <div class="filler"></div>
-                <div class="expandable">
+                <div class="expandable expandable-second">
                     <a href="/#about">@lang('menu.about_us')</a>
                     <a href="/#team">@lang('menu.our_team')</a>
                 </div>
@@ -449,7 +576,7 @@
             <li class="nav-li nav-li-js arrow">
                 <a class="grey">@lang('menu.third_item')</a>
                 <div class="filler"></div>
-                <div class="expandable join">
+                <div class="expandable join expandable-third">
                     <div class="join-left">
                         <a href="/pages/outsourcing">@lang('menu.outsourcing')</a>
                     </div>
@@ -492,6 +619,7 @@
 </ul>
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
+
         let navButton = document.querySelector("#nav-button");
         let navButtonInner = document.querySelector("#nav-button-inner");
         let navButtonInnerAfter = document.querySelector("#nav-button-inner-after");
@@ -503,17 +631,26 @@
         let expandable = document.querySelectorAll(".expandable");
         let navLi = document.querySelectorAll(".nav-li");
         let navLiContainer = document.querySelector("#nav-li-container");
+        let clicked = 0;
         navButton.addEventListener("click", function(event) {
+            clicked++
+
+            if (clicked % 2 != 0) {
+                navButtonInner.style.animationName = "navBtn";
+                navButtonInnerAfter.style.animationName = "navBtnAfter";
+                navButtonInnerBefore.style.animationName = "navBtnBefore";
+
+            } else {
+                navButtonInner.style.animationName = "navBtnReverse";
+                navButtonInnerAfter.style.animationName = "navBtnAfterReverse";
+                navButtonInnerBefore.style.animationName = "navBtnBeforeReverse";
+            }
             navLiContainer.classList.toggle("height-js");
             navTop.style.display = "none";
-            navButtonInner.style.animationName = "navBtn";
-            navButtonInnerAfter.style.animationName = "navBtnAfter";
-            navButtonInnerBefore.style.animationName = "navBtnBefore";
-            console.log(navButtonInner, navButtonInnerAfter, navButtonInnerBefore);
         })
-        window.addEventListener("scroll", function(event) {
 
-            if (window.pageYOffset > 300) {
+        function navTopHide() {
+            if (window.pageYOffset > 100) {
                 nav.style.backgroundColor = "white";
                 navTop.style.display = "none";
                 for (let i = 0; i < arrow.length; i++) {
@@ -527,7 +664,6 @@
                     expandable[i].style.top = "54px";
                 }
                 for (let i = 0; i < navLi.length; i++) {
-
                     navLi[i].classList.add("nav-li-js");
                 }
             } else {
@@ -548,6 +684,10 @@
 
                 }
             }
+        }
+        navTopHide();
+        window.addEventListener("scroll", function(event) {
+            navTopHide();
         })
     });
 </script>

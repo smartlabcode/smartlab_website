@@ -64,6 +64,8 @@ Route::get('pages/moodle', 'PagesController@showMoodlePage');
 
 // TODO new routes
 Route::get('pages/careers', 'PagesController@showCareersPage');
+Route::get('pages/careers/elearning', 'PagesController@showCareersElearningPage');
+Route::get('pages/careers/developer', 'PagesController@showCareersDeveloperPage');
 Route::get('pages/partner', 'PagesController@showPartnerPage');
 Route::get('pages/outsourcing', 'PagesController@showOutsourcingPage');
 Route::get('pages/xlf', 'PagesController@showXlfPage');
