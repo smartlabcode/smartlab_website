@@ -765,6 +765,7 @@
     background-color: white !important;
     color: var(--button-bg-orange) !important;
     border: 1px solid var(--button-bg-orange) !important;
+    box-shadow: none !important;
   }
 
   .submit {
@@ -2125,7 +2126,7 @@
         <label for="message">*@lang('index.formMessage')</label>
         <textarea name="message" rows="7" id="message" required></textarea>
       </div>
-      <button class="button submit" value="Send">Send</button>
+      <button class="button submit button-orange" value="Send">Send</button>
     </form>
   </div>
 </section>
