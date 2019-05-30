@@ -224,7 +224,7 @@
         transform: translate(-100%, -75%);
         -webkit-clip-path: polygon(0 50%, 50% 100%, 100% 50%);
         clip-path: polygon(0 50%, 50% 100%, 100% 50%);
-        transition: 0.2s transform ease-in-out;
+        transition: 0.2s all ease-in-out;
         z-index: 10;
     }
 
@@ -283,38 +283,55 @@
         font-weight: bold;
     }
 
+    .nav-top-mobile {
+        display: none !important;
+    }
+
     @media screen and (max-width: 900px) {
         .nav-top {
             display: none;
         }
 
         .nav-top-mobile {
-            display: flex;
+            display: flex !important;
+            flex-direction: column-reverse;
+            align-items: center;
             color: var(--h1-color);
+            flex-basis: 100%;
+        }
+
+
+
+        .margin-right {
+            margin-right: 0 !important;
         }
 
         .nav-top-mobile p {
             opacity: 0.5;
             color: var(--h1-color);
-            margin-right: 50px;
+            margin-right: 0px;
         }
 
         .nav-top-mobile p span {
             margin-right: 20px;
         }
 
+        .nav-top-mobile p span:first-child {
+            display: none;
+        }
+
         .nav-top-mobile label {
             text-transform: uppercase;
             position: relative;
-            right: 20px;
+            right: 17px;
             color: var(--h1-color);
             opacity: 0.5;
             cursor: pointer;
         }
 
-        #languageForm {
+        .mobile-language-form {
             position: relative;
-            left: 20px;
+            left: 10px;
         }
 
         .nav-top-mobile input {
@@ -330,6 +347,10 @@
             justify-content: space-between;
             padding-top: 30px;
             padding-bottom: 30px;
+            background-color: white;
+            width: 100vw !important;
+            padding-left: 5%;
+            padding-right: 5%;
         }
 
         .expandable {
@@ -340,17 +361,35 @@
         }
 
         .height-js {
-            height: 100vh !important;
+            height: calc(100vh - 95px) !important;
         }
 
         .nav-li a {
             height: auto;
             color: var(--h1-color) !important;
-
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 5%;
         }
 
         .nav-li>a {
             font-weight: bold;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .arrow:hover:before {
+            transform: rotateX(-180deg) translate(-100%, -95%);
+            opacity: 0;
+        }
+
+        .arrow::before {
+            background-color: var(--h1-color);
+            left: 95%;
         }
 
         .nav-li-container {
@@ -360,10 +399,11 @@
             position: absolute;
             top: 95px;
             width: 100vw;
-            right: -2.5vw;
+            right: 0;
             background-color: white;
             height: 0;
             overflow: hidden;
+            transition: height 0.2s ease-in-out;
         }
 
         .nav-li:hover .expandable-first {
@@ -397,7 +437,8 @@
             height: 0;
             top: 0 !important;
             width: 100%;
-            margin-left: 50px;
+            margin-left: 5%;
+            border-left: 1px solid var(--shadow-color);
             transform: translateX(0%);
         }
 
@@ -631,8 +672,8 @@
             @endauth
             <div class="nav-top-mobile contain">
 
-                <p><span>Call: </span><span>+387 61 811 394</span> <span>+387 33 956 222</span></p>
-                <form action="/language" method="POST">
+                <p><span>Call: </span><span>+387 61 811 394</span> <span class="margin-right">+387 33 956 222</span></p>
+                <form action="/language" method="POST" class="mobile-language-form">
                     <!-- Form for sending new language after user clicks on one of the select options - page is refreshed with new language translations -->
                     @csrf
                     @method('PUT')
