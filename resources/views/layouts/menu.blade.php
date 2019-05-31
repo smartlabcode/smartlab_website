@@ -631,8 +631,8 @@
                 <a class="grey">@lang('menu.second_item')</a>
                 <div class="filler"></div>
                 <div class="expandable expandable-second">
-                    <a href="/#about">@lang('menu.about_us')</a>
-                    <a href="/#team">@lang('menu.our_team')</a>
+                    <a href="/#about" class="same-page-link">@lang('menu.about_us')</a>
+                    <a href="/#team" class="same-page-link">@lang('menu.our_team')</a>
                 </div>
             </li>
             <li class="nav-li nav-li-js arrow">
@@ -652,7 +652,7 @@
                 <!-- Open link in new tab and set its language depending on the current language in main website -->
                 <a class="padding-right-0 grey" href="{{ env("BLOG_DOMAIN")  }}/@if(App::getlocale()){{App::getlocale()}}@else en @endif" target="_blank">@lang('menu.fourth_item')</a>
             </li>
-            <li class="nav-li nav-li-js last"><a class="padding-right-0 grey" href="/#contact">@lang('menu.fifth_item')</a></li>
+            <li class="nav-li nav-li-js last same-page-link"><a class="padding-right-0 grey" href="/#contact">@lang('menu.fifth_item')</a></li>
 
             <!-- This menu items are available only to logged in users -->
             @auth
@@ -708,10 +708,22 @@
         let expandable = document.querySelectorAll(".expandable");
         let navLi = document.querySelectorAll(".nav-li");
         let navLiContainer = document.querySelector("#nav-li-container");
+        let samePageLinks = document.querySelectorAll(".same-page-link");
         let clicked = 0;
+        console.log(samePageLinks);
+        for (let i = 0; i < samePageLinks.length; i++) {
+            console.log(i);
+            samePageLinks[i].addEventListener("click", function(event) {
+                console.log("clicked");
+                navLiContainer.classList.toggle("height-js");
+                navButtonInner.style.animationName = "navBtnReverse";
+                navButtonInnerAfter.style.animationName = "navBtnAfterReverse";
+                navButtonInnerBefore.style.animationName = "navBtnBeforeReverse";
+                clicked = 0;
+            });
+        }
         navButton.addEventListener("click", function(event) {
             clicked++
-
             if (clicked % 2 != 0) {
                 navButtonInner.style.animationName = "navBtn";
                 navButtonInnerAfter.style.animationName = "navBtnAfter";
@@ -768,7 +780,6 @@
 
         if (window.innerWidth > 900) {
             window.addEventListener("scroll", function(event) {
-                console.log(window.innerWidth);
                 navTopHide();
             });
         }
