@@ -224,7 +224,7 @@
         transform: translate(-100%, -75%);
         -webkit-clip-path: polygon(0 50%, 50% 100%, 100% 50%);
         clip-path: polygon(0 50%, 50% 100%, 100% 50%);
-        transition: 0.2s transform ease-in-out;
+        transition: 0.2s all ease-in-out;
         z-index: 10;
     }
 
@@ -283,32 +283,74 @@
         font-weight: bold;
     }
 
+    .nav-top-mobile {
+        display: none !important;
+    }
+
     @media screen and (max-width: 900px) {
-        .nav-top p {
-            margin-right: 0;
-        }
-
-        .nav-top p span {
-            margin-right: 5px;
-        }
-
         .nav-top {
-            display: flex;
-            justify-content: space-between;
+            display: none;
+        }
+
+        .nav-top-mobile {
+            display: flex !important;
+            flex-direction: column-reverse;
+            align-items: center;
+            color: var(--h1-color);
+            flex-basis: 100%;
+        }
+
+
+
+        .margin-right {
+            margin-right: 0 !important;
+        }
+
+        .nav-top-mobile p {
+            opacity: 0.5;
+            color: var(--h1-color);
+            margin-right: 0px;
+        }
+
+        .nav-top-mobile p span {
+            margin-right: 20px;
+        }
+
+        .nav-top-mobile p span:first-child {
+            display: none;
+        }
+
+        .nav-top-mobile label {
+            text-transform: uppercase;
+            position: relative;
+            right: 17px;
+            color: var(--h1-color);
+            opacity: 0.5;
+            cursor: pointer;
+        }
+
+        .mobile-language-form {
+            position: relative;
+            left: 10px;
+        }
+
+        .nav-top-mobile input {
+            visibility: hidden;
+        }
+
+        .language-selected {
+            opacity: 1 !important;
+            font-weight: bold;
         }
 
         .nav-bot {
             justify-content: space-between;
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-
-        .nav-top span {
-            color: var(--h1-color);
-        }
-
-        .nav-top label {
-            color: var(--h1-color);
+            padding-top: 30px;
+            padding-bottom: 30px;
+            background-color: white;
+            width: 100vw !important;
+            padding-left: 5%;
+            padding-right: 5%;
         }
 
         .expandable {
@@ -319,46 +361,64 @@
         }
 
         .height-js {
-            height: 100vh !important;
+            height: calc(100vh - 95px) !important;
         }
 
         .nav-li a {
             height: auto;
             color: var(--h1-color) !important;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 5%;
+        }
+
+        .nav-li>a {
+            font-weight: bold;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .arrow:hover:before {
+            transform: rotateX(-180deg) translate(-100%, -95%);
+            opacity: 0;
+        }
+
+        .arrow::before {
+            background-color: var(--h1-color);
+            left: 95%;
         }
 
         .nav-li-container {
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
+            justify-content: flex-start;
             position: absolute;
-            top: 50px;
+            top: 95px;
             width: 100vw;
-            right: -2.5vw;
+            right: 0;
             background-color: white;
             height: 0;
             overflow: hidden;
+            transition: height 0.2s ease-in-out;
         }
 
         .nav-li:hover .expandable-first {
             height: 252px;
-            -webkit-box-shadow: -1px -1px 15px 1px var(--shadow-color);
-            -moz-box-shadow: -1px -1px 15px 1px var(--shadow-color);
-            box-shadow: -1px -1px 15px 1px var(--shadow-color);
+
         }
 
         .nav-li:hover .expandable-second {
             height: 126px;
-            -webkit-box-shadow: -1px -1px 15px 1px var(--shadow-color);
-            -moz-box-shadow: -1px -1px 15px 1px var(--shadow-color);
-            box-shadow: -1px -1px 15px 1px var(--shadow-color);
+
         }
 
         .nav-li:hover .expandable-third {
             height: 189px;
-            -webkit-box-shadow: -1px -1px 15px 1px var(--shadow-color);
-            -moz-box-shadow: -1px -1px 15px 1px var(--shadow-color);
-            box-shadow: -1px -1px 15px 1px var(--shadow-color);
+
         }
 
         .join-left,
@@ -377,7 +437,8 @@
             height: 0;
             top: 0 !important;
             width: 100%;
-            margin-left: 50px;
+            margin-left: 5%;
+            border-left: 1px solid var(--shadow-color);
             transform: translateX(0%);
         }
 
@@ -386,6 +447,7 @@
             width: 30px;
             display: inline-block;
             position: relative;
+            top: 5px;
         }
 
         .nav-button-inner {
@@ -569,8 +631,8 @@
                 <a class="grey">@lang('menu.second_item')</a>
                 <div class="filler"></div>
                 <div class="expandable expandable-second">
-                    <a href="/#about">@lang('menu.about_us')</a>
-                    <a href="/#team">@lang('menu.our_team')</a>
+                    <a href="/#about" class="same-page-link">@lang('menu.about_us')</a>
+                    <a href="/#team" class="same-page-link">@lang('menu.our_team')</a>
                 </div>
             </li>
             <li class="nav-li nav-li-js arrow">
@@ -590,7 +652,7 @@
                 <!-- Open link in new tab and set its language depending on the current language in main website -->
                 <a class="padding-right-0 grey" href="{{ env("BLOG_DOMAIN")  }}/@if(App::getlocale()){{App::getlocale()}}@else en @endif" target="_blank">@lang('menu.fourth_item')</a>
             </li>
-            <li class="nav-li nav-li-js last"><a class="padding-right-0 grey" href="/#contact">@lang('menu.fifth_item')</a></li>
+            <li class="nav-li nav-li-js last same-page-link"><a class="padding-right-0 grey" href="/#contact">@lang('menu.fifth_item')</a></li>
 
             <!-- This menu items are available only to logged in users -->
             @auth
@@ -608,6 +670,21 @@
             <li class="nav-li nav-li-js"><a class="grey padding-right-0" href="{{route('logout')}}">@lang('menu.tenth_item')</a></li>
 
             @endauth
+            <div class="nav-top-mobile contain">
+
+                <p><span>Call: </span><span>+387 61 811 394</span> <span class="margin-right">+387 33 956 222</span></p>
+                <form action="/language" method="POST" class="mobile-language-form">
+                    <!-- Form for sending new language after user clicks on one of the select options - page is refreshed with new language translations -->
+                    @csrf
+                    @method('PUT')
+
+                    <input type="radio" name="language" id="en" value="en" onclick="changeSiteLanguage(this.value)" @if(App::getlocale()=='en' ) checked @endif><label for="en" @if(App::getlocale()=='en' ) class="language-selected" @endif>@lang('menu.english_language')</label>
+                    <input type="radio" name="language" id="de" value="de" onclick="changeSiteLanguage(this.value)" @if(App::getlocale()=='de' ) checked @endif><label for="de" @if(App::getlocale()=='de' ) class="language-selected" @endif>@lang('menu.german_language')</label>
+                    <input type="radio" name="language" id="bs" value="bs" onclick="changeSiteLanguage(this.value)" @if(App::getlocale()=='bs' ) checked @endif><label for="bs" @if(App::getlocale()=='bs' ) class="language-selected" @endif>@lang('menu.bosnian_language')</label>
+
+                </form>
+
+            </div>
         </div>
 
     </div>
@@ -631,10 +708,22 @@
         let expandable = document.querySelectorAll(".expandable");
         let navLi = document.querySelectorAll(".nav-li");
         let navLiContainer = document.querySelector("#nav-li-container");
+        let samePageLinks = document.querySelectorAll(".same-page-link");
         let clicked = 0;
+        console.log(samePageLinks);
+        for (let i = 0; i < samePageLinks.length; i++) {
+            console.log(i);
+            samePageLinks[i].addEventListener("click", function(event) {
+                console.log("clicked");
+                navLiContainer.classList.toggle("height-js");
+                navButtonInner.style.animationName = "navBtnReverse";
+                navButtonInnerAfter.style.animationName = "navBtnAfterReverse";
+                navButtonInnerBefore.style.animationName = "navBtnBeforeReverse";
+                clicked = 0;
+            });
+        }
         navButton.addEventListener("click", function(event) {
             clicked++
-
             if (clicked % 2 != 0) {
                 navButtonInner.style.animationName = "navBtn";
                 navButtonInnerAfter.style.animationName = "navBtnAfter";
@@ -685,10 +774,18 @@
                 }
             }
         }
-        navTopHide();
-        window.addEventListener("scroll", function(event) {
+        if (window.innerWidth > 900) {
             navTopHide();
-        })
+        }
+
+        if (window.innerWidth > 900) {
+            window.addEventListener("scroll", function(event) {
+                navTopHide();
+            });
+        }
+
+
+
     });
 </script>
 @endsection
