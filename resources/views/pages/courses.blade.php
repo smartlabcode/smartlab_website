@@ -27,14 +27,15 @@
         color: var(--h1-color);
     }
     .uls{
-        margin-top: 20px;
         margin-left: -15px;
+        margin-top: 10px;
+        box-sizing: border-box;
     }
 
     .p-font {
         font-family: "Source Sans Pro", sans-serif;
         font-size: 1.5em;
-        font-weight: lighter;
+        font-weight: 300;
         color: var(--h1-color);
     }
     .bold{
@@ -45,6 +46,7 @@
         justify-content: space-evenly;
         position: relative;
         align-items: flex-end;
+        padding-top: 120px;
     }
 
     .section1-1{
@@ -67,11 +69,10 @@
     }
 
     .secOneBg2{
-        width: 300px;
         position: absolute;
-        top: -25%;
-        left: 30%;
-        transform: rotate(197deg);
+        width: 550px;
+        top: -28%;
+        left: 13%;
         z-index: -110;
     }
 
@@ -104,7 +105,7 @@
 
     #slider div {
         display: flex;
-        height: 400px;
+        height: 300px;
         width: calc(100% + 50px);
 
     }
@@ -184,12 +185,6 @@
         border: 1px solid var(--button-bg-color);
     }
 
-    .h2-font {
-        font-family: "Source Sans Pro", sans-serif;
-        font-size: 1.8em;
-        color: var(--h2-color);
-    }
-
     .section3{
         margin-top: 50px;
         display: flex;
@@ -235,13 +230,12 @@
         align-items: center;
 
     }
-
     .sec4textP{
         margin-top: -32px;
         font-size: 1.5em;
     }
     .pics{
-        flex-basis: 50%;
+        width: 60%;
 
     }
     .pics1-1{
@@ -259,20 +253,44 @@
 
    @media screen and (min-width: 1900px) {
         #slider div {
-            height: 500px;
+            height: 300px;
         }
+       .oblak1{
+           position: absolute;
+           width: 250px;
+           z-index: -15;
+           top: 100px;
+           left: -610px;
+       }
+       .oblak2{
+           position: absolute;
+           width: 250px;
+           z-index: -15;
+           top: -65px;
+           left: -290px;
+       }
        .secOneImg {
            position: relative;
            top: 121px;
        }
         .secTwoBg2{
-            top: 820px;
+            left: -1000px;
+            transform: rotate(-174deg);
+            top: 264px;
+        }
+        .secTwoBg{
+            left: -1477px;
+            width: 1375px;
+        }
+        .sectionTwo{
+            position: relative;
+            padding-top: 18%;
         }
         .section3{
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-top: 5%;
+            padding-top: 3%;
         }
         .sec3text{
             font-family: "Source Sans Pro", sans-serif;
@@ -284,45 +302,36 @@
             width: 80px;
             height: 80px;
             margin-left: -12px;
-            top:220px;
+            top:125px;
         }
 
         #slider >img:last-child {
             width: 80px;
             height: 80px;
             margin-right: -15px;
-            top: 220px;
+            top: 125px;
         }
 
         .secOneBg2{
-            width: 500px;
-            top: -23%;
-            left: 45%;
+            width: 550px;
+            top: -28%;
+            left: 13%;
         }
 
-        .secOneBg{
-            right: -75%;
-            top: -10%;
-            width: 125%;
-        }
+       .secOneBg {
+           right: -68%;
+           top: -35%;
+           width: 90%;
+       }
 
         .h1-font{
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
             font-size: 3em;
-        }
+            margin-top: 0;
+            margin-bottom: 25px;
+            color: var(--h1-color);
 
-        #slider >img:last-child {
-            top: 275px;
-        }
-
-        #slider >img:first-child {
-            top: 275px;
-        }
-
-        .p-font{
-            font-size: 1.5em;
-        }
-        .h2-font{
-            font-size: 3em;
         }
         .secOneImg{
             width: 80%!important;
@@ -330,32 +339,41 @@
 
         .slider-right img{
             width: 100%;
-            height: 120%;
-            object-fit: cover;
+            height: 100%;
+            object-fit: contain;
+            box-shadow: -1px -1px 15px 1px var(--shadow-color);
+            background-color: white;
+
         }
 
         .slider-left img{
             width: 100%;
-            height: 120%;
-            object-fit: cover;
+            height: 100%;
+            object-fit: contain;
+            box-shadow: -1px -1px 15px 1px var(--shadow-color);
+            background-color: white;
         }
 
-        .pics1-2 img {
-            width: 160px;
-            height: 141%;
-            justify-content: space-around;
-            margin: 10px;
-        }
 
-        .pics1-1 img {
-            width: 160px;
-            height: 141%;
-            justify-content: space-around;
-            margin: 10px;
-        }
+
+        .img{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: -1px -1px 15px 1px var(--shadow-color);
+            width: 230px;
+            height: 200px;
+            margin: 1rem 0;
+            border-radius: 25px;
+
+   }
+       .img img{
+           width: 65%;
+       }
+
 
         .section4 {
-            padding-top: 0;
+            padding-top: 70px;
             margin-top: 5%;
 
         }
@@ -381,13 +399,14 @@
         }
         .pics1-2 img{
             margin: 5px;
-            width: 230px;
-            height: 230px;
+            width: 150px;
+            height: 150px;
+            padding-top: 10px;
         }
 
         .pics1-1 img{
-            width: 230px;
-            height: 230px;
+            width: 150px;
+            height: 150px;
             margin: 5px;
         }
 
@@ -1481,6 +1500,10 @@
 <div class="section1 contain">
     <img class="secOneBg2" src="{{'/images/orange-circle.svg'}}">
     <img class="secOneBg" src="{{'/images/header-fluid-blue.svg'}}">
+    <img class="oblak1" src="{{'/images/fluid-bright-circle.svg'}}">
+    <img class="oblak2" src="{{'/images/fluid-bright-circle.svg'}}">
+    <img class="oblak3" src="{{'/images/fluid-bright-circle.svg'}}">
+
 
 
     <div class="section1-1">
@@ -1511,7 +1534,7 @@
     <img class="secTwoBg2" src="{{'/images/orange-circle.svg'}}">
     <img class="secTwoBg" src="{{'/images/header-fluid-blue.svg'}}">
 
-    <div class="h2-font h2-secTwo">
+    <div class="h1-font h2-secTwo">
         <h3>@lang('courses.sec2h2')</h3>
     </div>
 
@@ -1589,19 +1612,38 @@
     </div>
     <div class="pics">
         <div class="pics1-1">
-            <img src="{{'/images/articulate.jpg'}}">
-            <img src="{{'/images/rise.png'}}">
-            <img src="{{'/images/1200px-Adobe_Animate_CC_icon.svg.png'}}">
+            <div class="img">
+                <img src="{{'/images/articulate.jpg'}}">
+                <p class="p-font">Articulate Storyline</p>
+            </div>
+            <div class="img">
+                <img src="{{'/images/rise.png'}}">
+                <p class="p-font">Articulate Rise</p>
+
+            </div>
+            <div class="img">
+                <img src="{{'/images/1200px-Adobe_Animate_CC_icon.svg.png'}}">
+                <p class="p-font">Adobe Animate</p>
+
+            </div>
+
+
         </div>
         <div class="pics1-2">
-            <div  class="small">
+            <div  class="img">
                 <img src="{{'/images/scorm.png'}}">
+                <p class="p-font">Scorm</p>
+
             </div>
-            <div class="small" >
+            <div class="img" >
                 <img src="{{'/images/ispring-logo_1640x414.png'}}">
+                <p class="p-font">iSpring Solutions</p>
+
             </div>
-            <div>
+            <div class="img">
                 <img src="{{'/images/GAMIFICATION-NATION-2-LOGO-e1527579917733.png'}}">
+                <p class="p-font">Gamification Nation</p>
+
             </div>
         </div>
     </div>
