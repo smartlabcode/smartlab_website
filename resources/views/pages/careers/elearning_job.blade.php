@@ -198,42 +198,39 @@
 
 
     <div class="jobParameters">
-
-        <h1 id="availablePositions">eLearning Designer (m/f)</h1>
-
-        <br/><br/>
-
-        <p>Ako volis kreativnu industriju, bavis se grafikom, volis da ucis nove stvari i cijenis perspektivu,
-            prijavi se na poziciju dizajnera sadrzaja za online ucenje.</p>
+        <h1 id="availablePositions">@lang('careers-elearning.EL-h1')</h1>
 
         <br/><br/>
 
-        <h5>Potrebne strucne karakteristike kandidata</h5>
+        <p>@lang('careers-elearning.opisEL')</p>
+
+        <br/><br/>
+
+        <h5>@lang('careers-elearning.strucne-karakteristike')</h5>
         <ul>
-            <li>dobro poznavanje Adobe alata (psd, ai, ae)</li>
-            <li>poznavanje web tehnologije (pozeljno iskustvo sa web developmentom)</li>
-            <li>mogućnost komunikacije na engleskom jeziku</li>
-            <li>status nezaposlenog lica prijavljenog u Zavodu za zapošljavanje KS (minimalno 3 mjeseca)</li>
-            <li>komunkativnost i spremnost na timski rad</li>
+            <li>@lang('careers-elearning.karakteristika1')</li>
+            <li>@lang('careers-elearning.karakteristika2')</li>
+            <li>@lang('careers-elearning.karakteristika3')</li>
+            <li>@lang('careers-elearning.karakteristika4')</li>
+            <li>@lang('careers-elearning.karakteristika5')</li>
         </ul>
 
         <br/>
 
-        <h5>Pozeljne karakteristike</h5>
+        <h5>@lang('careers-elearning.pozeljno')</h5>
         <ul>
-            <li>njemački jezik</li>
-            <li>osnovno poznavanje front-end programiranja</li>
+            <li>@lang('careers-elearning.njemacki')</li>
+            <li>@lang('careers-elearning.frontend')</li>
         </ul>
 
         <br/><br/>
-        <p>Ako pronalazis sebe u opisanim karakteristikama, zelis ugodnu atmosferu rada kao i stimulativna primanja,
-            posalji svoj CV i motivaciono pismo na <a href="mailto:hello@smartlab.ba" target="_blank">hello@smartlab.ba.</a></p>
+        <p>@lang('careers-elearning.hello') <a href="mailto:hello@smartlab.ba" target="_blank">hello@smartlab.ba.</a></p>
 
         <br/>
 
-        <p class="jobDetails">Lokacija: Sarajevo</p>
-        <p class="jobDetails">Broj pozicija: 2</p>
-        <p class="jobDetails">Datum objave: 20.05.2019</p>
+        <p class="jobDetails">@lang('careers-elearning.lokacija')</p>
+        <p class="jobDetails">@lang('careers-elearning.pozicije')</p>
+        <p class="jobDetails">@lang('careers-elearning.datum')</p>
 
     </div>
 
@@ -241,7 +238,7 @@
 
     <div id="sectionThree">
 
-        <a href="#targetPoint"><button id="applyDeveloperButton">Apply</button></a>
+        <a href="#targetPoint"><button id="applyDeveloperButton">@lang('careers-elearning.button')</button></a>
 
         <br/><br/>
 
@@ -255,59 +252,57 @@
             @csrf
 
             <div class="form-group">
-                <label for="name">*Name</label>
+                <label for="name">@lang('careers-elearning.name')</label>
                 <input type="text" name="name" class="form-control" id="name" placeholder="" required>
             </div>
 
             <div class="form-group">
-                <label for="surname">*Surname</label>
+                <label for="surname">@lang('careers-elearning.prezime')</label>
                 <input type="text" name="lastname" class="form-control" id="surname" placeholder="" required>
             </div>
 
             <div class="form-group">
-                <label for="phone">*Phone number</label>
+                <label for="phone">@lang('careers-elearning.broj')</label>
                 <input type="number" name="phone_number" class="form-control" id="phone" placeholder="" required>
             </div>
 
             <div class="form-group">
-                <label for="name">*Email</label>
+                <label for="name">@lang('careers-elearning.email')</label>
                 <input type="email" name="email" class="form-control" id="email" placeholder="" required>
             </div>
 
             <div class="form-group">
-                <label for="name">*Note/Short Brief</label>
+                <label for="name">@lang('careers-elearning.napomena')</label>
                 <textarea name="message" class="form-control" id="name" placeholder="" required></textarea>
             </div>
 
             <div class="form-group">
-                <label for="category">*Category</label>
+                <label for="category">@lang('careers-elearning.kategorija')</label>
                 <select class="form-control" name="category" id="category" required>
-                    <option selected disabled>Choose category</option>
-                    <option value="designer">Designer</option>
-                    <option value="developer">Developer</option>
-                    <option value="ux-ui-designer">UX/UI Designer</option>
-                    <option value="practitioner">Practitioner</option>
+                    <option selected disabled>@lang('careers-elearning.choose-kategorija')</option>
+                    <option value="designer">@lang('careers-elearning.dizajner')</option>
+                    <option value="developer">@lang('careers-elearning.developer')</option>
+                    <option value="ux-ui-designer">@lang('careers-elearning.dizajner-uxui')</option>
+                    <option value="practitioner">@lang('careers-elearning.praktikant')</option>
                 </select>
 
 
                 <br/>
 
-                <label for="uploadFileArea">Place for your files (optional)</label>
+                <label for="uploadFileArea">@lang('careers-elearning.files')</label>
                 <div id="uploadFileArea" class="form-control" onclick="openUploadWindow()">
-                    <p id="uploadText">Click to <br/> upload file/s</p>
+                    <p id="uploadText">@lang('careers-elearning.click-to') <br/> @lang('careers-elearning.upload-files')</p>
                     <input id="inputFile" type="file" name="files[]" onchange="fileUploaded()" multiple />
                 </div>
 
             </div>
 
 
-            <p class="policyText">We're commited to your privacy. SmartLab uses the information you provide to us to contact you about our relevant content,
-                product and services. You may unsubscribe from these communications at any time.
-                For more information check out our <a href="#">Privacy Policy</a>.</p>
+            <p class="policyText">@lang('careers-elearning.we-are-commited') <a href="#">@lang('careers-elearning.privacy')</a>.</p>
         {{--            Subject: <input type="text" name="subject" />--}}
 
         <!-- Submit form -->
-            <button id="sendCareerButton">Send</button>
+            <button id="sendCareerButton">@lang('careers-elearning.send')</button>
 
         </form>
 

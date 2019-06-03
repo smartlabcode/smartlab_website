@@ -199,35 +199,33 @@
 
     <div class="jobParameters">
 
-        <h1 id="availablePositions">Fullstack Web Developer (m/f)</h1>
+        <h1 id="availablePositions">@lang('careers-developer.Dev-h1')</h1>
 
         <br/><br/>
 
-        <p>Ako volis kreativnu IT industriju, bavis se web programiranjem, zelis raditi na projektima velikih evropskih
-            i svjetskih kompanija, prijavi se na poziciju Fullstack Web Developera.</p>
+        <p>@lang('careers-developer.opisDev')</p>
 
         <br/><br/>
 
-        <h5>Potrebne strucne karakteristike kandidata</h5>
+        <h5>@lang('careers-developer.strucne-karakteristike')</h5>
         <ul>
-            <li>PHP 7</li>
-            <li>OOP(Object oriented programming)</li>
-            <li>MySQL 5.6+</li>
-            <li>MVC arhitektura</li>
-            <li>JavaScript/jQuery</li>
-            <li>CSS3 & HTML5</li>
-            <li>GIT Version control</li>
+            <li>@lang('careers-developer.karakteristika1')</li>
+            <li>@lang('careers-developer.karakteristika2')</li>
+            <li>@lang('careers-developer.karakteristika3')</li>
+            <li>@lang('careers-developer.karakteristika4')</li>
+            <li>@lang('careers-developer.karakteristika5')</li>
+            <li>@lang('careers-developer.karakteristika6')</li>
+            <li>@lang('careers-developer.karakteristika7')</li>
         </ul>
 
         <br/><br/>
-        <p>Ako pronalazis sebe u opisanim karakteristikama, zelis ugodnu atmosferu rada kao i stimulativna primanja,
-        posalji svoj CV i motivaciono pismo na <a href="mailto:hello@smartlab.ba" target="_blank">hello@smartlab.ba.</a></p>
+        <p> @lang('careers-developer.hello')<a href="mailto:hello@smartlab.ba" target="_blank">hello@smartlab.ba.</a></p>
 
         <br/>
 
-        <p class="jobDetails">Lokacija: Sarajevo</p>
-        <p class="jobDetails">Broj pozicija: 2</p>
-        <p class="jobDetails">Datum objave: 20.05.2019</p>
+        <p class="jobDetails">@lang('careers-developer.lokacija')</p>
+        <p class="jobDetails">@lang('careers-developer.pozicije')</p>
+        <p class="jobDetails">@lang('careers-developer.datum')</p>
 
     </div>
 
@@ -235,7 +233,7 @@
 
     <div id="sectionThree">
 
-        <button id="applyDeveloperButton">Apply</button>
+        <button id="applyDeveloperButton">@lang('careers-developer.button')</button>
 
         <br/><br/>
 
@@ -249,59 +247,57 @@
             @csrf
 
             <div class="form-group">
-                <label for="name">*Name</label>
+                <label for="name">@lang('careers-developer.name')</label>
                 <input type="text" name="name" class="form-control" id="name" placeholder="" required>
             </div>
 
             <div class="form-group">
-                <label for="surname">*Surname</label>
+                <label for="surname">@lang('careers-developer.prezime')</label>
                 <input type="text" name="lastname" class="form-control" id="surname" placeholder="" required>
             </div>
 
             <div class="form-group">
-                <label for="phone">*Phone number</label>
+                <label for="phone">@lang('careers-developer.broj')</label>
                 <input type="number" name="phone_number" class="form-control" id="phone" placeholder="" required>
             </div>
 
             <div class="form-group">
-                <label for="name">*Email</label>
+                <label for="name">@lang('careers-developer.email')</label>
                 <input type="email" name="email" class="form-control" id="email" placeholder="" required>
             </div>
 
             <div class="form-group">
-                <label for="name">*Note/Short Brief</label>
+                <label for="name">@lang('careers-developer.napomena')</label>
                 <textarea name="message" class="form-control" id="name" placeholder="" required></textarea>
             </div>
 
             <div class="form-group">
-                <label for="category">*Category</label>
+                <label for="category">@lang('careers-developer.kategorija')</label>
                 <select class="form-control" name="category" id="category" required>
-                    <option selected disabled>Choose category</option>
-                    <option value="designer">Designer</option>
-                    <option value="developer">Developer</option>
-                    <option value="ux-ui-designer">UX/UI Designer</option>
-                    <option value="practitioner">Practitioner</option>
+                    <option selected disabled>@lang('careers-developer.choose-kategorija')</option>
+                    <option value="designer">@lang('careers-developer.dizajner')</option>
+                    <option value="developer">@lang('careers-developer.developer')</option>
+                    <option value="ux-ui-designer">@lang('careers-developer.dizajner-uxui')r</option>
+                    <option value="practitioner">@lang('careers-developer.praktikant')</option>
                 </select>
 
 
                 <br/>
 
-                <label for="uploadFileArea">Place for your files (optional)</label>
+                <label for="uploadFileArea">@lang('careers-developer.files')</label>
                 <div id="uploadFileArea" class="form-control" onclick="openUploadWindow()">
-                    <p id="uploadText">Click to <br/> upload file/s</p>
+                    <p id="uploadText">@lang('careers-developer.click-to')<br/> @lang('careers-developer.upload-files')</p>
                     <input id="inputFile" type="file" name="files[]" onchange="fileUploaded()" multiple />
                 </div>
 
             </div>
 
 
-            <p class="policyText">We're commited to your privacy. SmartLab uses the information you provide to us to contact you about our relevant content,
-                product and services. You may unsubscribe from these communications at any time.
-                For more information check out our <a href="#">Privacy Policy</a>.</p>
+            <p class="policyText">@lang('careers-developer.we-are-commited') <a href="#">@lang('careers-developer.privacy')</a>.</p>
         {{--            Subject: <input type="text" name="subject" />--}}
 
         <!-- Submit form -->
-            <button id="sendCareerButton">Send</button>
+            <button id="sendCareerButton">@lang('careers-developer.send')</button>
 
         </form>
 
