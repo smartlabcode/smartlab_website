@@ -46,7 +46,7 @@
         justify-content: space-evenly;
         position: relative;
         align-items: flex-end;
-        padding-top: 120px;
+        padding-top: 90px;
     }
 
     .section1-1{
@@ -77,7 +77,7 @@
     }
 
     .contain{
-        max-width: 1200px;
+        max-width: 1400px;
         margin: 0 auto;
     }
 
@@ -248,26 +248,39 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding-top: 50px;
     }
 
-   @media screen and (min-width: 1900px) {
+    @media screen and (min-width: 2000px) {
         #slider div {
             height: 300px;
         }
+       .desni{
+           position: relative;
+           right: -20px;
+       }
+       .lijevi{
+           position: relative;
+           left: -20px;
+       }
+       .oblak3{
+           position: absolute;
+           z-index: -10;
+           width: 250px;
+           bottom: -40%;
+       }
        .oblak1{
            position: absolute;
            width: 250px;
            z-index: -15;
-           top: 100px;
-           left: -610px;
+           top: 15%;
+           left: -45%;
        }
        .oblak2{
            position: absolute;
            width: 250px;
            z-index: -15;
-           top: -65px;
-           left: -290px;
+           top: -5%;
+           left: -13%;
        }
        .secOneImg {
            position: relative;
@@ -313,7 +326,7 @@
         }
 
         .secOneBg2{
-            width: 550px;
+            width: 450px;
             top: -28%;
             left: 13%;
         }
@@ -346,12 +359,29 @@
 
         }
 
+       .orangeSec2{
+           position: absolute;
+           z-index: -120;
+           width: 250px;
+           left: 75%;
+           bottom: -50%;
+       }
+
         .slider-left img{
             width: 100%;
             height: 100%;
             object-fit: contain;
             box-shadow: -1px -1px 15px 1px var(--shadow-color);
             background-color: white;
+        }
+
+        .oblak4{
+            position: absolute;
+            z-index: -100;
+            width: 300px;
+            transform: rotate(180deg);
+            left: 80%;
+            top: 90%;
         }
 
 
@@ -411,182 +441,418 @@
         }
 
     }
-
-    /*@media screen and (max-width: 1900px) {
-
-        .section3{
-            align-items: center;
+    @media screen and (max-width: 2000px){
+        #slider div {
+            height: 300px;
         }
-
-        .section4{
-            padding-top: 0;
-
-            /* padding-left: 425px;
-            align-items: center;
-            display: flex;
+        .desni{
+            position: relative;
+            right: -20px;
         }
-
-        .pics1-1{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+        .lijevi{
+            position: relative;
+            left: -20px;
         }
-
-        .pics1-1 img{
-            width: 190px;
-            height: 190px;
+        .oblak3{
+            position: absolute;
+            z-index: -10;
+            width: 250px;
+            bottom: -40%;
         }
-
-        .pics1-2 img{
-            width: 190px;
-            height: 190px;
+        .oblak1{
+            position: absolute;
+            width: 250px;
+            z-index: -15;
+            top: 15%;
+            left: -45%;
         }
-
-        .pics1-2{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            padding-top: 50px;
+        .oblak2{
+            position: absolute;
+            width: 250px;
+            z-index: -15;
+            top: -5%;
+            left: -13%;
         }
-
-        .sec4text{
-            padding-top: 7%;
-            text-align: center;
-            flex-basis: 40%;
-            padding-right: 10%;
-        }
-        #slider{
-            height: 450px;
+        .secOneImg {
+            position: relative;
+            top: 121px;
             width: 80%;
-            display: flex;
+            flex-basis: 45%;
         }
-
-        .sec3text{
-            font-family: "Source Sans Pro", sans-serif;
-            font-size: 2.2em;
-            color: var(--h2-color);
+        .secTwoBg2{
+            left: -1000px;
+            transform: rotate(-174deg);
+            top: 264px;
         }
-        .secOneBg{
-            width: 100%;
-            right: -50%;
-            top: -10%;
+        .secTwoBg{
+            left: -85%;
+            width: 1375px;
         }
-        .secOneBg2{
-            width: 500px;
-            top: -30%;
-            left: 38%;
+        .sectionTwo{
+            position: relative;
+            padding-top: 22%;
         }
-    }
-
-    @media screen and (max-width: 1450px){
-
-        .sec3text{
-            font-family: "Source Sans Pro", sans-serif;
-            font-size: 1.8em;
-            color: var(--h2-color);
-        }
-
-        .h1-font{
-
-            font-size: 2.2em;
-        }
-
-        .h2-font{
-            font-size: 1.7em;
-        }
-
-        .p-font{
-            font-size: 1.5em;
-        }
-
-        .button{
-            width: 230px;
-            height: 70px;
-            font-size: 1.4em;
-            outline: hidden;
-        }
-
         .section3{
-            padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding-top: 3%;
+        }
+        .sec3text{
+            font-family: "Source Sans Pro", sans-serif;
+            font-size: 1.5em;
+            color: var(--h1-color);
+        }
+
+        #slider >img:first-child {
+            width: 80px;
+            height: 80px;
+            margin-left: -12px;
+            top:125px;
+        }
+
+        #slider >img:last-child {
+            width: 80px;
+            height: 80px;
+            margin-right: -15px;
+            top: 125px;
+        }
+
+        .secOneBg2{
+            width: 450px;
+            top: -28%;
+            left: 30%;
         }
 
         .secOneBg {
-            position: absolute;
-            z-index: -100;
-            top: -37%;
-            right: -24%;
-            height: 180%;
+            right: -35%;
+            top: -35%;
             width: 90%;
         }
 
-        .secOneBg2{
-            width: 300px;
-            position: absolute;
-            top: -25%;
-            left: 30%;
-            transform: rotate(197deg);
-            z-index: -110;
+        .h1-font{
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+            font-size: 3em;
+            margin-top: 0;
+            margin-bottom: 25px;
+            color: var(--h1-color);
+
+        }
+        #slider {
+            width: 85%;
         }
 
-        #slider{
-            height: 60%;
-        }
-
-        .secOneImg{
-            padding-right: 0;
-        }
-        .h2-secTwo{
-            margin-top: 230px;
-        }
-
-        .secTwoBg {
-            left: -1046px;
+        .slider-right img{
             width: 100%;
-            top: 100%;
+            height: 100%;
+            object-fit: contain;
+            box-shadow: -1px -1px 15px 1px var(--shadow-color);
+            background-color: white;
+
         }
 
-        .secTwoBg2{
-            top: 660px;
-            left: -458px;
+        .orangeSec2{
+            position: absolute;
+            z-index: -120;
+            width: 250px;
+            left: 75%;
+            bottom: -50%;
         }
 
-        .section1-1 {
-            padding-top: 150px;
+        .slider-left img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            box-shadow: -1px -1px 15px 1px var(--shadow-color);
+            background-color: white;
+        }
+
+        .oblak4{
+            position: absolute;
+            z-index: -100;
+            width: 300px;
+            transform: rotate(180deg);
+            left: 80%;
+            top: 90%;
+        }
+
+        .img{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: -1px -1px 15px 1px var(--shadow-color);
+            width: 230px;
+            height: 200px;
+            margin: 1rem 0;
+            border-radius: 25px;
+
+        }
+        .img img{
+            width: 65%;
+        }
+
+        .section4 {
+            padding-top: 70px;
+            margin-top: 5%;
         }
 
         .sec4text {
-            padding-top: 4%;
-            flex-basis: 40%;
+            padding-top: 7%;
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding-right: 60px;
         }
 
         .sec4textP{
             margin-top: -32px;
-            font-size: 1.7em;
+            font-size: 1.5em;
         }
 
-        .pics1-2 img {
-            width: 160px;
-            height: 160px;
-            justify-content: space-around;
-            margin: 10px;
+        .button{
+            width: 320px;
+            height: 80px;
+
+        }
+        .TTText{
+            font-size: 1.3em;
+            font-family: "Montserrat", sans-serif;
+        }
+        .pics1-2 img{
+            margin: 5px;
+            width: 150px;
+            height: 150px;
+            padding-top: 10px;
         }
 
-        .pics1-1 img {
-            width: 160px;
-            height: 160px;
-            justify-content: space-around;
-            margin: 10px;
+        .pics1-1 img{
+            width: 140px;
+            height: 140px;
+            margin: 5px;
+            padding-top: 15px;
         }
+        .pics1-2{
+            padding-top: 0;
+        }
+        .smallPic img{
+            height: auto!important;
+            padding-top: 30%;
+        }
+        .tttsmallPic{
+            padding-top: 35px;
+        }
+
+    }
+    @media screen and (max-width: 1450px){
+        #slider div {
+            height: 300px;
+        }
+        .desni{
+            position: relative;
+            right: -20px;
+        }
+        .lijevi{
+            position: relative;
+            left: -20px;
+        }
+        .oblak3{
+            position: absolute;
+            z-index: -10;
+            width: 250px;
+            bottom: -40%;
+        }
+        .oblak1{
+            position: absolute;
+            width: 250px;
+            z-index: -15;
+            top: 15%;
+            left: -45%;
+        }
+        .oblak2{
+            position: absolute;
+            width: 250px;
+            z-index: -15;
+            top: -5%;
+            left: -13%;
+        }
+        .secOneImg {
+            position: relative;
+            top: 121px;
+            width: 80%;
+            flex-basis: 45%;
+        }
+        .secTwoBg2{
+            left: -25%;
+            transform: rotate(-174deg);
+            top: 195px;
+            width: 30%;
+        }
+        .secTwoBg{
+            left: -67%;
+            width: 85%;
+
+        }
+        .sectionTwo{
+            position: relative;
+            padding-top: 22%;
+        }
+        .section3{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 3%;
+        }
+        .sec3text{
+            font-family: "Source Sans Pro", sans-serif;
+            font-size: 1.5em;
+            color: var(--h1-color);
+        }
+
+        #slider >img:first-child {
+            width: 80px;
+            height: 80px;
+            margin-left: -12px;
+            top:125px;
+        }
+
+        #slider >img:last-child {
+            width: 80px;
+            height: 80px;
+            margin-right: -15px;
+            top: 125px;
+        }
+
+        .secOneBg2{
+            width: 450px;
+            top: -30%;
+            left: 35%;
+        }
+
+        .secOneBg {
+            right: -30%;
+            top: -35%;
+            width: 90%;
+        }
+
+        .h1-font{
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+            font-size: 3em;
+            margin-top: 0;
+            margin-bottom: 25px;
+            color: var(--h1-color);
+
+        }
+        #slider {
+            width: 85%;
+        }
+
+        .slider-right img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            box-shadow: -1px -1px 15px 1px var(--shadow-color);
+            background-color: white;
+
+        }
+
+        .orangeSec2{
+            position: absolute;
+            z-index: -120;
+            width: 250px;
+            left: 82%;
+            bottom: -75%;
+        }
+
+        .slider-left img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            box-shadow: -1px -1px 15px 1px var(--shadow-color);
+            background-color: white;
+        }
+
+        .oblak4{
+            position: absolute;
+            z-index: -100;
+            width: 300px;
+            transform: rotate(180deg);
+            left: 80%;
+            top: 110%;
+        }
+
+        .img{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: -1px -1px 15px 1px var(--shadow-color);
+            width: 230px;
+            height: 200px;
+            margin: 1rem 0;
+            border-radius: 25px;
+
+        }
+        .img img{
+            width: 65%;
+        }
+
+        .section4 {
+            padding-top: 70px;
+            margin-top: 5%;
+        }
+
+        .sec4text {
+            padding-top: 7%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-right: 60px;
+        }
+
+        .sec4textP{
+            margin-top: -32px;
+            font-size: 1.5em;
+        }
+
+        .button{
+            width: 320px;
+            height: 80px;
+
+        }
+        .TTText{
+            font-size: 1.3em;
+            font-family: "Montserrat", sans-serif;
+        }
+        .pics1-2 img{
+            margin: 5px;
+            width: 150px;
+            height: 150px;
+            padding-top: 10px;
+        }
+
+        .pics1-1 img{
+            width: 140px;
+            height: 140px;
+            margin: 5px;
+            padding-top: 15px;
+        }
+        .pics1-2{
+            padding-top: 0;
+        }
+        .smallPic img{
+            height: auto!important;
+            padding-top: 30%;
+        }
+        .tttsmallPic{
+            padding-top: 35px;
+        }
+
     }
 
-    @media screen and (max-width: 1100px) {
+   /* @media screen and (max-width: 1100px) {
 
         .sec3text{
             font-family: "Source Sans Pro", sans-serif;
@@ -1484,12 +1750,6 @@
         border: 1px solid var(--button-bg-color);
     }
 
-    .small{
-
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
 
 </style>
 
@@ -1558,6 +1818,11 @@
     </div><br>
 </div><br>
 
+<img class="orangeSec2" src="{{'/images/orange-circle.svg'}}">
+<img class="oblak4" src="{{'/images/fluid-bright-circle.svg'}}">
+
+
+
 
 <section id="contact" class="contact-section">
     <div class="contact-form-container">
@@ -1612,37 +1877,37 @@
     </div>
     <div class="pics">
         <div class="pics1-1">
-            <div class="img">
+            <div class="img lijevi">
                 <img src="{{'/images/articulate.jpg'}}">
-                <p class="p-font">Articulate Storyline</p>
+                <p class="TTText">Articulate Storyline</p>
             </div>
             <div class="img">
                 <img src="{{'/images/rise.png'}}">
-                <p class="p-font">Articulate Rise</p>
+                <p class="TTText">Articulate Rise</p>
 
             </div>
-            <div class="img">
+            <div class="img desni">
                 <img src="{{'/images/1200px-Adobe_Animate_CC_icon.svg.png'}}">
-                <p class="p-font">Adobe Animate</p>
+                <p class="TTText">Adobe Animate</p>
 
             </div>
 
 
         </div>
         <div class="pics1-2">
-            <div  class="img">
+            <div  class="img smallPic lijevi">
                 <img src="{{'/images/scorm.png'}}">
-                <p class="p-font">Scorm</p>
+                <p class="TTText tttsmallPic">Scorm</p>
 
             </div>
-            <div class="img" >
+            <div class="img smallPic" >
                 <img src="{{'/images/ispring-logo_1640x414.png'}}">
-                <p class="p-font">iSpring Solutions</p>
+                <p class="TTText tttsmallPic">iSpring Solutions</p>
 
             </div>
-            <div class="img">
+            <div class="img desni">
                 <img src="{{'/images/GAMIFICATION-NATION-2-LOGO-e1527579917733.png'}}">
-                <p class="p-font">Gamification Nation</p>
+                <p class="TTText ">Gamification Nation</p>
 
             </div>
         </div>
