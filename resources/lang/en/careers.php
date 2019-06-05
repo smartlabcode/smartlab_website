@@ -27,7 +27,8 @@ return[
     "click-to"=>"Click to",
     "upload-files"=>" upload file/s",
     "we-are-commited"=>"We're commited to your privacy. SmartLab uses the information you provide to us to contact you about our relevant content, product and services. You may unsubscribe from these communications at any time. For more information check out our Privacy Policy.",
-    "privacy"=>" Privacy Policy."
+    "privacy"=>" Privacy Policy.",
+    "send"=>"Send"
 
 
 ];

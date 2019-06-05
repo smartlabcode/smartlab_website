@@ -6,10 +6,10 @@ return[
      viel Wissen, viel Soziales und eine Möglichkeit für einen langfristigen Vertrag!",
     "button"=>"Anwenden",
     "availablePositions"=>"Verfügbare Positionen",
-    "eL-h1"=>"eLearning-Designerin (m/w)",
+    "eL-h1"=>"eLearning-Designer (m/w)",
     "opisEL"=>"Wenn Ihnen die Kreativbranche gefällt, Sie mögen Grafiken, Sie lernen gerne Neues und schätzen die Perspektive, bewerben Sie sich auf die Position des Content-Designers für Online-Lernen.",
     "readMore"=>"Mehr erfahren",
-    "Dev-h1"=>"Fullstack Web Webentwickler (m/f)",
+    "Dev-h1"=>"Fullstack Webentwickler (m/f)",
     "opisDev"=>"Wenn Sie die kreative IT-Industrie mögen, Sie sind in der Web-Programmierung, Sie wollen an Projekten großer europäischer und internationaler Unternehmen arbeiten, bewerben Sie sich für die Position des Fullstack Web Developers.",
     "apply-h1"=>"Bewerben Sie sich als Teil des SmartLab-Teams.",
     "name"=>"*Name",
@@ -27,5 +27,6 @@ return[
     "click-to"=>"Klicken Sie hier",
     "upload-files"=>"Datei/en hochladen",
     "we-are-commited"=>"Wir verpflichten uns zu Ihrer Privatsphäre. SmartLab verwendet die von Ihnen zur Verfügung gestellten Informationen, um Sie über unsere relevanten Inhalte, Produkte und Dienstleistungen zu informieren. Sie können diese Mitteilungen jederzeit abbestellen. Weitere Informationen finden Sie in unserer",
-    "privacy"=>"Datenschutzerklärung."
+    "privacy"=>"Datenschutzerklärung.",
+    "send"=>"Senden"
 ];

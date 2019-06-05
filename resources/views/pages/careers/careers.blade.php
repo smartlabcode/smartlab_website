@@ -218,7 +218,7 @@
 
                 <br/>
 
-                <button class="jobButton">@lang('careers.readMore')</button>
+                <a href="/pages/careers/elearning"><button class="jobButton">@lang('careers.readMore')</button></a>
 
             </div>
         </div>
@@ -238,7 +238,7 @@
 
                 <br/>
 
-                <button class="jobButton">@lang('careers.readMore')</button>
+                <a href="/pages/careers/developer"><button class="jobButton">@lang('careers.readMore')</button></a>
 
             </div>
         </div>
@@ -315,7 +315,6 @@
 
 
             <p class="policyText">@lang('careers.we-are-commited')  <a href="#">@lang('careers.privacy')</a>.</p>
-{{--            Subject: <input type="text" name="subject" />--}}
 
             <!-- Submit form -->
             <button id="sendCareerButton">@lang('careers.send') </button>
