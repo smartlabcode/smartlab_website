@@ -172,6 +172,13 @@
         margin: 0 auto;
     }
 
+    #verifiedIcon {
+        width: 60px;
+        height: 60px;
+        position: relative;
+        bottom: 5px;
+    }
+
 </style>
 
 
@@ -308,6 +315,21 @@
 
     </div>
 
+
+    <script>
+
+        function openUploadWindow() {
+            document.getElementById("inputFile").click();
+        }
+
+
+        function fileUploaded() {
+            // TODO check if file is selected
+            let uploadText = document.getElementById("uploadText");
+            uploadText.innerHTML = "<img id='verifiedIcon' src='/images/icons/verified.svg' />";
+        }
+
+    </script>
 
 
 

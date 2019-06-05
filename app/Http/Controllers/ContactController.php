@@ -177,6 +177,7 @@ class ContactController extends Controller
      * Send careers info to super admin
      *
      * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function handleCareersInfo(Request $request) {
 

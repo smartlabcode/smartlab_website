@@ -167,6 +167,12 @@
         left: 4px;
     }
 
+    #verifiedIcon {
+        width: 60px;
+        height: 60px;
+        position: relative;
+        bottom: 5px;
+    }
 
 </style>
 
@@ -295,7 +301,7 @@
             <div class="form-group">
                 <label for="category">@lang('careers.kategorija')</label>
                 <select class="form-control" name="category" id="category" required>
-                    <option selected disabled>@lang('careers.choose-kategorija')</option>
+                    <option disabled>@lang('careers.choose-kategorija')</option>
                     <option value="designer">@lang('careers.dizajner')</option>
                     <option value="developer">@lang('careers.developer')</option>
                     <option value="ux-ui-designer">@lang('careers.dizajner-uxui')</option>
@@ -333,7 +339,8 @@
 
         function fileUploaded() {
             // TODO check if file is selected
-            document.getElementById("uploadText").innerHTML = "File uploaded";
+            let uploadText = document.getElementById("uploadText");
+            uploadText.innerHTML = "<img id='verifiedIcon' src='/images/icons/verified.svg' />";
         }
 
     </script>

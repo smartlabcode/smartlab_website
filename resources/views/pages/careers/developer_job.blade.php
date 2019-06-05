@@ -172,6 +172,13 @@
             margin: 0 auto;
         }
 
+        #verifiedIcon {
+            width: 60px;
+            height: 60px;
+            position: relative;
+            bottom: 5px;
+        }
+
     </style>
 
 
@@ -294,15 +301,29 @@
 
 
             <p class="policyText">@lang('careers-developer.we-are-commited') <a href="#">@lang('careers-developer.privacy')</a>.</p>
-        {{--            Subject: <input type="text" name="subject" />--}}
 
-        <!-- Submit form -->
+            <!-- Submit form -->
             <button id="sendCareerButton">@lang('careers-developer.send')</button>
 
         </form>
 
     </div>
 
+
+    <script>
+
+        function openUploadWindow() {
+            document.getElementById("inputFile").click();
+        }
+
+
+        function fileUploaded() {
+            // TODO check if file is selected
+            let uploadText = document.getElementById("uploadText");
+            uploadText.innerHTML = "<img id='verifiedIcon' src='/images/icons/verified.svg' />";
+        }
+
+    </script>
 
 
 
