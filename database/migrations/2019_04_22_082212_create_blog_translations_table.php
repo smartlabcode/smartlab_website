@@ -15,11 +15,12 @@ class CreateBlogTranslationsTable extends Migration
     {
         Schema::create('blog_translations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('heading', 255);
+            $table->string('heading', 255)->nullable();
             $table->longText('text');
             //$table->timestamps();
             $table->enum('language', ['en', 'de', 'bs'])->default('en');
-            $table->integer('users_id');
+            $table->integer('blogs_id');
+            $table->softDeletes();
         });
     }
 
