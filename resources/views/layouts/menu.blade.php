@@ -289,7 +289,7 @@
 
     @media screen and (max-width: 900px) {
         .nav-top {
-            display: none;
+            display: none !important;
         }
 
         .nav-top-mobile {
