@@ -166,8 +166,10 @@
   .section-one-animation {
     object-fit: contain;
     height: 75vh;
-    width: 50%;
+    width: 60%;
     min-width: 350px;
+    margin-left: -10%;
+    margin-right: -10%;
   }
 
   .button {
@@ -1202,8 +1204,8 @@
 
     .background-img {
       top: -13%;
-      right: -108%;
-      transform: rotate(70deg);
+      right: -61%;
+      transform: rotate(62deg);
     }
 
     .section-two-hero h2,
@@ -1220,12 +1222,11 @@
     .section-one-text {
       width: 100%;
       text-align: center;
-      margin-bottom: 100px;
-      margin-top: 100px;
+
     }
 
     .section-one-animation {
-      height: auto;
+      height: 45vh;
       width: 70%;
     }
 
@@ -1843,7 +1844,10 @@
       </p>
       <a href="#contact"><button class="button margin-top-27">@lang('index.heading_button')</button></a>
     </div>
-    <img data-aos="zoom-in" class="section-one-animation" src="images/img/header-illustration.svg" alt="header ilustration" />
+    <!--<img data-aos="zoom-in" class="section-one-animation" src="images/img/header-illustration.svg" alt="header ilustration" />-->
+    <object class="section-one-animation" data="images/home/demo.html"></object>
+
+
 
 
   </section>
