@@ -26,6 +26,7 @@
     margin: 0 auto;
     overflow-x: hidden;
     background-color: white !important;
+    overflow-y: hidden !important;
   }
 
   .contain {
@@ -76,7 +77,7 @@
   .background-img {
     position: absolute;
     width: 95vw;
-    max-height: 180%;
+    max-height: 145vh;
     top: -250px;
     right: -300px;
     z-index: -10;
@@ -1735,98 +1736,6 @@
 
 
 @section('content')
-
-<!-- Heading -->
-<!-- <h1>@lang('index.heading')</h1> -->
-
-<!-- Dummy link -->
-<!-- <a href="{{ env('BLOG_DOMAIN') }}/blog/7/de" target="_blank">Visit some blog</a> -->
-
-<!-- Include error/success messages to be listed if anything goes wrong -->
-
-
-<!-- <hr/> -->
-
-<!-- Form for sending contact message -->
-<!-- <form action="/contact" method="POST"> -->
-
-<!-- Include token -->
-<!-- @csrf 
-
-       Title: <select name="title">
-                  <option value="Mr." selected>Mr.</option>
-                  <option value="Mrs.">Mrs.</option>
-                </select>
-          <br/>
-       Name: <input type="text" name="name" />
-          <br/>
-       Lastname: <input type="text" name="lastname" />
-          <br/>
-       Email: <input type="email" name="email" />
-          <br/>
-        Message: <textarea name="message"></textarea> -->
-
-<!-- Submit form -->
-<!-- <button>Submit</button> 
-        
-  </form>
-
-    <hr/> -->
-
-
-<!-- Form for sending subscription email -->
-<!-- <form action="/subscribe" method="POST"> -->
-
-<!-- Include token -->
-<!-- @csrf
-
-        Email: <input name="email" type="email"/>
-        <input name="language" type="hidden" value="{{App::getlocale()}}"/>
-        <button>Subscribe</button>
-
-    </form>
-
-    <hr/>
-
-    <h2>Bussiness contact</h2>
- 
-    <form action="/bussiness" method="POST" enctype="multipart/form-data"> -->
-
-<!-- Include token -->
-<!-- @csrf
-
-        Bussiness name: <input type="text" name="bussiness_name" />
-        <br/>
-        Subject: <input type="text" name="bussiness_subject" />
-        <br/>
-        Email: <input type="email" name="bussiness_email" />
-        <br/>
-        Message: <textarea name="bussiness_message"></textarea>
-        <br/>
-        Files: <input type="file" name="files[]" multiple /> -->
-
-<!-- Submit form -->
-<!-- <button>Submit</button>
-
-    </form>
-
-    <img src="{{ asset('images/blog.jpg') }}"/> -->
-<!-- main page -->
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="css/style.css" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat|Source+Sans+Pro"
-      rel="stylesheet"
-    />
-    <title>Novi Web</title>
-  </head>
-  <body> -->
-<!-- <link href="{{ asset('css/index/styles.css') }}" rel="stylesheet"> -->
 
 <div class="background-section-one">
   <img class="background-img" src="images/img/header-illustration-group.svg" alt="blue background image" />

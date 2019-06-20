@@ -18,6 +18,7 @@
     body {
         background: white !important;
         overflow-x: hidden !important;
+        overflow-y: hidden !important;
     }
 
     html {
@@ -79,10 +80,10 @@
 
     .background-img {
         position: absolute;
-        /*width: calc(75vw - 100px);*/
-        height: 113vh;
-        top: -150px;
-        right: -200px;
+        width: 95vw;
+        max-height: 145vh;
+        top: -250px;
+        right: -300px;
         z-index: -10;
     }
 
@@ -160,7 +161,13 @@
     }
 
     /* SECTION TWO*/
+    .section-two {
+        margin-top: 300px !important;
+    }
 
+    .center {
+        text-align: center;
+    }
 
     #slider {
         width: 100%;
@@ -172,8 +179,6 @@
     #slider div {
         display: flex;
         height: 300px;
-        width: calc(100% + 50px);
-
     }
 
     .slider-left {
@@ -181,6 +186,25 @@
         margin-right: 5px;
         background-color: white;
         border-radius: 15px;
+        position: relative;
+    }
+
+    #prev {
+        position: absolute;
+        left: -25px;
+        top: calc(50% - 25px);
+        width: 50px;
+        border-radius: 50%;
+        z-index: 100;
+    }
+
+    #next {
+        position: absolute;
+        right: -25px;
+        top: calc(50% - 25px);
+        width: 50px;
+        border-radius: 50%;
+        z-index: 100;
     }
 
     .slider-left img {
@@ -194,6 +218,7 @@
         margin-left: 5px;
         background-color: white;
         border-radius: 15px;
+        position: relative;
     }
 
     .slider-right img {
@@ -266,7 +291,6 @@
         flex-direction: column;
         height: 200px;
         width: 100%;
-        "
 
     }
 
@@ -474,7 +498,7 @@
     .xliff-background {
         object-fit: cover;
         position: absolute;
-        right: -28%;
+        left: -10%;
         width: 110vw;
         z-index: -100;
     }
@@ -482,7 +506,7 @@
     .xliff-background-container {
 
         position: relative;
-        margin-top: 360px !important;
+        margin-top: 225px !important;
         margin-bottom: 250px !important;
         display: flex;
         align-items: center;
@@ -595,7 +619,7 @@
         }
 
         .xliff-background {
-            transform: translate(-13%, -12%);
+            transform: translate(3%, -3%);
         }
 
         .xliff-section {
@@ -605,8 +629,8 @@
 
     @media screen and (max-width: 1400px) {
         .background-img {
-            top: -9%;
-            right: -25%;
+            width: 97vw;
+            max-height: 180%;
         }
 
         .section-one {
@@ -630,9 +654,7 @@
     }
 
     @media screen and (max-width: 1320px) {
-        .background-img {
-            right: -45%;
-        }
+
 
         .background-img-orange-circle {
             top: -181px;
@@ -674,13 +696,13 @@
             width: 40%;
         }
 
-        .tools-container {}
+        .xliff-background-container {
+            margin-top: 0 !important;
+        }
     }
 
     @media screen and (max-width: 1175px) {
-        .background-img {
-            right: -50%;
-        }
+
 
         .background-img-orange-circle {
             right: 530px;
@@ -695,9 +717,7 @@
 
     @media screen and (max-width: 1065px) {
 
-        .background-img {
-            right: -55%;
-        }
+
 
         .dashed-line {
             right: -23%;
@@ -707,8 +727,10 @@
 
 
     @media screen and (max-width: 1030px) {
+
+
         .background-img {
-            right: -54%;
+            width: 110vw;
         }
 
         .dashed-line {
@@ -733,9 +755,9 @@
 
     @media screen and (max-width: 900px) {
         .background-img {
-            top: 21%;
-            right: -75%;
-            transform: rotate(61deg);
+            top: -13%;
+            right: -61%;
+            transform: rotate(62deg);
         }
 
         .background-img-orange-circle {
@@ -787,7 +809,13 @@
 
     @media screen and (max-width: 768px) {
         .slider-right {
-            display: none !important;
+            width: 0 !important;
+            height: 0 !important;
+        }
+
+        #next {
+            right: -20px;
+            top: 125px;
         }
 
         .slider-left {
@@ -839,11 +867,7 @@
             transform: rotate(30deg);
         }
 
-        .background-img {
-            top: 21%;
-            right: -79%;
-            transform: rotate(61deg);
-        }
+
 
         .xliff-background {
             width: 170vw;
@@ -901,7 +925,7 @@
         }
 
         .background-img {
-            top: 12%;
+            top: 1%;
             right: -87%;
             transform: rotate(67deg);
             width: 145%;
@@ -1007,7 +1031,7 @@
         }
 
         .background-img {
-            top: 0;
+            top: 3%;
         }
 
         .section-one-animation {
@@ -1069,9 +1093,7 @@
             top: 0;
         }
 
-        .background-img {
-            top: 14%;
-        }
+
 
         .background-img-orange-circle {
             right: -25px;
@@ -1113,8 +1135,7 @@
 @section('content')
 
 <div class="background-section-one">
-    <img class="background-img" src="../images/img/header-fluid-blue.svg" />
-    <img class="background-img-orange-circle" src="../images/img/orange-circle.svg" />
+    <img class="background-img" src="../images/img/header-illustration-group.svg" alt="blue background image" />
     <img class="background-img-circle --circle1" src="../images/img/fluid-bright-circle.svg" />
     <img class="background-img-circle --circle2" src="../images/img/fluid-bright-circle.svg" />
     <img class="background-img-circle --circle3" src="../images/img/fluid-bright-circle.svg" />
@@ -1134,7 +1155,7 @@
                 </ul>
             </p>
         </div>
-        <img data-aos="zoom-in" class="section-one-animation" src="../images/img/dev-page-illustration.svg" />
+        <object class="section-one-animation" data="../images/dev-img-1/demo.html"></object>
 
 
     </section>
@@ -1142,23 +1163,21 @@
 
 
 <!--   SECTION TWO -->
-<section class="contain relative">
+<section class="contain relative section-two">
     <img class="secTwoBg2" src="../images/img/orange-circle.svg">
-
     <img class="secTwoBg" src="../images/img/header-fluid-blue.svg">
-
-
-
-    <div style="margin-top: 280px; display: flex; justify-content: center" class="our-works">
-        <h2 class="h1-font">@lang('programming.ourWorks')</h2>
-    </div>
+    <h2 class="h1-font center">@lang('programming.ourWorks')</h2>
     <div id="slider">
-        <img class="prethodni shadow-1" onclick="changeImage('previous')" src="../images/img/Picture2.png">
+
         <div>
-            <div class="slider-left shadow-1"><img id="firstPart" src="" /></div>
-            <div class="slider-right shadow-1"><img id="secondPart" src="" /></div>
+            <div class="slider-left shadow-1"><img id="firstPart" src="" />
+                <img id="prev" class="prethodni shadow-1" src="../images/img/Picture2.png">
+            </div>
+            <div class="slider-right shadow-1"><img id="secondPart" src="" />
+                <img id="next" class="sljedeci shadow-1" src="../images/img/Picture3.png">
+            </div>
         </div>
-        <img class="sljedeci shadow-1" src="../images/img/Picture3.png" onclick="changeImage('next')">
+
     </div>
     <img class="secTwoBg3" src="../images/img/fluid-bright-circle.svg">
     <div class="section3 contain">
@@ -1304,53 +1323,62 @@
 </section>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-    AOS.init();
-
-    var imgOne = 0;
-    var imgTwo = 1;
-
-    var images = [
-        "https://static.igre123.net/slike/212266-121951/mala-maca.jpg", // 0
-        "https://opusteno.rs/slike/2012/03/smesne-slike-14024/mala-maca.jpg", // 1
-        "https://static.igre123.net/slike/235049-148875/mala-maca.jpg", // 2
-        "https://static.igre123.net/slike/205865-134729/mala-maca.jpg" // 3
-    ];
-
-
-    function changeImage(par) {
-        if (window.innerWidth > 768) {
-            if (imgOne < (images.length - 2) && par == "next") {
-
-                imgOne = imgTwo;
-                imgTwo = imgTwo + 1;
-
-            } else if (imgOne !== 0 && par == "previous") {
-                imgOne = imgOne - 1;
-                imgTwo = imgTwo - 1;
-            }
-
-            var imgOneSrc = images[imgOne];
-            var imgTwoSrc = images[imgTwo];
-
-            document.getElementById("firstPart").src = imgOneSrc;
-            document.getElementById("secondPart").src = imgTwoSrc;
-
-        } else {
-            if (imgOne < images.length - 1 && par == "next") {
-
-                imgOne++;
-            } else if (imgOne !== 0 && par == "previous") {
-                imgOne--;
-            }
-            imgOneSrc = images[imgOne];
-            document.getElementById("firstPart").src = imgOneSrc;
-        }
-
-    }
-    changeImage("demo");
-</script>
-<script>
     document.addEventListener("DOMContentLoaded", function(event) {
+        AOS.init();
+
+        var imgOne = 0;
+        var imgTwo = 1;
+
+        var images = [
+            "https://static.igre123.net/slike/212266-121951/mala-maca.jpg", // 0
+            "https://opusteno.rs/slike/2012/03/smesne-slike-14024/mala-maca.jpg", // 1
+            "https://static.igre123.net/slike/235049-148875/mala-maca.jpg", // 2
+            "https://static.igre123.net/slike/205865-134729/mala-maca.jpg" // 3
+        ];
+
+        let prev = document.querySelector("#prev");
+        let next = document.querySelector("#next");
+
+        prev.addEventListener("click", function() {
+            changeImage("previous")
+        });
+        next.addEventListener("click", function() {
+            changeImage("next")
+        });
+
+        function changeImage(par) {
+            console.log("clicked")
+            if (window.innerWidth > 768) {
+                if (imgOne < (images.length - 2) && par == "next") {
+
+                    imgOne = imgTwo;
+                    imgTwo = imgTwo + 1;
+
+                } else if (imgOne !== 0 && par == "previous") {
+                    imgOne = imgOne - 1;
+                    imgTwo = imgTwo - 1;
+                }
+
+                var imgOneSrc = images[imgOne];
+                var imgTwoSrc = images[imgTwo];
+
+                document.getElementById("firstPart").src = imgOneSrc;
+                document.getElementById("secondPart").src = imgTwoSrc;
+
+            } else {
+                if (imgOne < images.length - 1 && par == "next") {
+
+                    imgOne++;
+                } else if (imgOne !== 0 && par == "previous") {
+                    imgOne--;
+                }
+                imgOneSrc = images[imgOne];
+                document.getElementById("firstPart").src = imgOneSrc;
+            }
+
+        }
+        changeImage("demo");
+
         let schedule = document.querySelector("#schedule");
         let contact = document.querySelector("#contact");
 
