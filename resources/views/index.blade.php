@@ -923,16 +923,14 @@
   }
 
   .contact-section {
-    width: 112%;
-    left: -6%;
+    position: relative;
     background-image: url(images/img/footer-blue-bg.svg);
     background-repeat: no-repeat;
     background-size: 234vw;
     background-position-x: 40%;
     background-position-y: 40%;
-    position: relative;
+
     padding-top: 80px;
-    top: 300px;
     padding-bottom: 100px;
   }
 
@@ -967,6 +965,10 @@
     width: 112%;
     left: -6%;
     position: relative;
+  }
+
+  footer {
+    margin-top: -350px;
   }
 
   .footer p {
@@ -2336,7 +2338,7 @@
 
 
     for (let i = 0; i < blogValue.length; i++) {
-      temp = blogValue[i].value.replace(/<img .*?>| style/g, " ");
+      temp = blogValue[i].value.replace(/(<([^>]+)>)/ig, "");;
       console.log(temp)
       blogText[i].innerHTML = temp;
     }
@@ -2345,28 +2347,33 @@
     // about us circle animation start 
     const aboutUs = document.querySelector("#aboutUs");
     let i = 0;
-    let isInViewport = function(elem) {
-      let bounding = elem.getBoundingClientRect();
-      return (
-        bounding.top < 400
-      );
-    };
-    window.addEventListener("scroll", function(event) {
-      if (isInViewport(aboutUs)) {
-        for (i = i; i <= 1; i++) {
-          displays.forEach(display => {
-
-            let int = Number(display.dataset.note);
-            strokeTransition(display, int)
-            increaseNumber(display, int)
-          });
-        }
-      }
-    });
     const displays = document.querySelectorAll(".note-display");
     const transitionDuration = 900;
+    const options = {
+      root: null, //it is the viewport
+      threshold: 0,
+      rootMargin: "0px"
+    };
+    const observer = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        console.log(entry);
+
+        if (entry.isIntersecting) {
+          for (i = i; i <= 1; i++) {
+            displays.forEach(display => {
+
+              let int = Number(display.dataset.note);
+              strokeTransition(display, int)
+              increaseNumber(display, int)
+            });
+          }
+        }
 
 
+      });
+    }, options);
+
+    observer.observe(aboutUs);
 
     function strokeTransition(display, number) {
       let progress = display.querySelector(".circle__progress--fill");
@@ -2404,7 +2411,7 @@
     let partnersName = document.querySelector("#partners-name");
     let partnersCompany = document.querySelector("#partners-company");
     let indicators = document.querySelectorAll(".indicator");
-
+    let partnersTextContainer = document.querySelector(".partners-text");
 
 
 
@@ -2437,6 +2444,32 @@
     }];
     let j = 1;
 
+    function testemonialsChange() {
+
+      if (j == indicators.length) {
+        indicators[j - 1].classList.remove("indicator-opacity");
+        j = 0;
+      }
+      indicators[j].classList.add("indicator-opacity");
+      if (j > 0) {
+        indicators[j - 1].classList.remove("indicator-opacity");
+      }
+      partnersChange(partners[j]);
+      j++;
+    }
+    let interval;
+    const observer2 = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            console.log(entry);
+            interval = setInterval(testemonialsChange, 5000);
+          } else {
+            clearInterval(interval, 5000);
+          }
+        });
+      },
+      options);
+    observer2.observe(partnersTextContainer);
 
     function partnersChange(partners) {
       partnersText.innerText = partners.text;
@@ -2454,19 +2487,7 @@
         partnersChange(partners[j]);
       })
     }
-    setInterval(function() {
 
-      if (j == indicators.length) {
-        indicators[j - 1].classList.remove("indicator-opacity");
-        j = 0;
-      }
-      indicators[j].classList.add("indicator-opacity");
-      if (j > 0) {
-        indicators[j - 1].classList.remove("indicator-opacity");
-      }
-      partnersChange(partners[j]);
-      j++;
-    }, 5000)
 
 
   });

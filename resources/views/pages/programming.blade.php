@@ -152,6 +152,8 @@
         height: 75vh;
         width: 50%;
         min-width: 350px;
+        margin-left: -10%;
+        margin-right: -10%;
     }
 
     .contain {
