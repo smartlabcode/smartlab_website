@@ -25,7 +25,7 @@
                 </ul>
             </p>
         </div>
-        <object class="section-one-animation" data="../images/online-courses/demo.html"></object>
+        <div class="section-one-animation"></div>
 
 
     </section>
@@ -144,6 +144,25 @@
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
         AOS.init();
+
+        const animation = document.querySelector(".section-one-animation");
+        lottie.loadAnimation({
+            container: animation, // the dom element that will contain the animation
+            renderer: 'canvas',
+            loop: true,
+            autoplay: false,
+            path: "{{'/images/online-courses-animation'}}" // the path to the animation json
+
+        });
+        const animationObserver = new IntersectionObserver(function(entries, animationObserver) {
+            entries.forEach(entry => {
+                console.log(entry);
+                if (entry.isIntersecting) {
+                    lottie.play();
+                } else lottie.pause();
+            })
+        });
+        animationObserver.observe(animation);
 
         var imgOne = 0;
         var imgTwo = 1;

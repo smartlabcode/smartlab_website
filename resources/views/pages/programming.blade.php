@@ -297,7 +297,7 @@
     }
 
     .secTwoBg {
-        top: 0%;
+        top: -23%;
         transform: rotate(242deg);
         position: absolute;
         left: -97%;
@@ -312,10 +312,9 @@
         width: 50%;
         /* width: 800px; */
         position: absolute;
-        top: -145px;
+        top: -41%;
         z-index: -130;
-        left: -589px;
-        /* transform: rotate(25deg); */
+        left: -43%;
     }
 
     .secTwoBg3 {
@@ -500,7 +499,7 @@
     .xliff-background {
         object-fit: cover;
         position: absolute;
-        left: -10%;
+        left: -20%;
         width: 110vw;
         z-index: -100;
     }
@@ -1157,7 +1156,7 @@
                 </ul>
             </p>
         </div>
-        <object class="section-one-animation" data="../images/dev-img-1/demo.html"></object>
+        <div class="section-one-animation"></div>
 
 
     </section>
@@ -1327,7 +1326,24 @@
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
         AOS.init();
+        const animation = document.querySelector(".section-one-animation");
+        lottie.loadAnimation({
+            container: animation, // the dom element that will contain the animation
+            renderer: 'svg',
+            loop: true,
+            autoplay: false,
+            path: "{{'/images/dev-animation'}}" // the path to the animation json
 
+        });
+        const animationObserver = new IntersectionObserver(function(entries, animationObserver) {
+            entries.forEach(entry => {
+                console.log(entry);
+                if (entry.isIntersecting) {
+                    lottie.play();
+                } else lottie.pause();
+            })
+        });
+        animationObserver.observe(animation);
         var imgOne = 0;
         var imgTwo = 1;
 

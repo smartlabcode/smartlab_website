@@ -13,7 +13,7 @@
     <title>{{ config('app.name', 'Smartlab') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <!--<script src="{{ asset('js/app.js') }}" defer></script>-->
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -66,41 +66,42 @@
 
         @php
 
-            // admin routes
-            $adminRoutes = [
-                'dashboard',
-                'admins',
-                'admins/*',
-                'subscribers',
-                'careers',
-                'blogs',
-                'blogs/*',
-                'logs',
-                'assets',
-                'translations',
-            ];
+        // admin routes
+        $adminRoutes = [
+        'dashboard',
+        'admins',
+        'admins/*',
+        'subscribers',
+        'careers',
+        'blogs',
+        'blogs/*',
+        'logs',
+        'assets',
+        'translations',
+        ];
 
-            $adminRoute = false;
+        $adminRoute = false;
 
-            foreach ($adminRoutes as $route) {
-                if(Request::is($route)) {
-                    $adminRoute = true;
-                    break;
-                }
-            }
+        foreach ($adminRoutes as $route) {
+        if(Request::is($route)) {
+        $adminRoute = true;
+        break;
+        }
+        }
 
         @endphp
 
         @if(!$adminRoute)
-            @yield('footer')
+        @yield('footer')
         @endif
 
-{{--        @auth--}}
-{{--        @elseauth--}}
-{{--            @yield('footer')--}}
-{{--        @endauth--}}
+        {{-- @auth--}}
+        {{-- @elseauth--}}
+        {{-- @yield('footer')--}}
+        {{-- @endauth--}}
 
     </div>
+    <script src="{{ asset('/js/lottie.js') }}"></script>
 </body>
 
 </html>

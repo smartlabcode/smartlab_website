@@ -489,8 +489,9 @@
 
   .team-blue3 {
     position: absolute;
-    top: -6px;
-    width: 70%;
+    bottom: 6px;
+    width: 31%;
+    right: 8px;
     transform: rotate(242deg);
     z-index: 10;
   }
@@ -1756,8 +1757,8 @@
       <a href="#contact"><button class="button margin-top-27">@lang('index.heading_button')</button></a>
     </div>
     <!--<img data-aos="zoom-in" class="section-one-animation" src="images/img/header-illustration.svg" alt="header ilustration" />-->
-    <object class="section-one-animation" data="images/home/demo.html"></object>
-
+    <!--<object class="section-one-animation" data="images/home/demo.html"></object>-->
+    <div class="section-one-animation"></div>
 
 
 
@@ -2331,7 +2332,25 @@
   document.addEventListener("DOMContentLoaded", function(event) {
     AOS.init();
     //blogs
+    const animation = document.querySelector(".section-one-animation");
+    lottie.loadAnimation({
+      container: animation, // the dom element that will contain the animation
+      renderer: 'svg',
+      loop: true,
+      autoplay: false,
+      path: "{{'/images/home-animation'}}" // the path to the animation json
 
+    });
+
+    const animationObserver = new IntersectionObserver(function(entries, animationObserver) {
+      entries.forEach(entry => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+          lottie.play();
+        } else lottie.pause();
+      })
+    });
+    animationObserver.observe(animation);
     let blogValue = document.querySelectorAll(".blog-value");
     let blogText = document.querySelectorAll(".blog-text");
     let temp;
@@ -2458,13 +2477,13 @@
       j++;
     }
     let interval;
-    const observer2 = new IntersectionObserver(function(entries, observer) {
+    const observer2 = new IntersectionObserver(function(entries, observer2) {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             console.log(entry);
             interval = setInterval(testemonialsChange, 5000);
           } else {
-            clearInterval(interval, 5000);
+            window.clearInterval(interval, 5000);
           }
         });
       },
@@ -2488,7 +2507,20 @@
       })
     }
 
+    const sectionOneAnimation = document.querySelector(".section-one-animation");
+    const sectionOneAnimationData = sectionOneAnimation.data;
+    const observer3 = new IntersectionObserver(function(entries, observer3) {
 
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.data = sectionOneAnimationData;
+
+        } else {
+          entry.target.data = " ";
+        }
+      });
+    });
+    observer3.observe(sectionOneAnimation);
 
   });
 </script>
