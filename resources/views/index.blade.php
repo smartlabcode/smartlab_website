@@ -76,9 +76,9 @@
 
   .background-img {
     position: absolute;
-    width: 95vw;
-    max-height: 145vh;
-    top: -250px;
+    width: 85vw;
+    /* max-height: 124vh; */
+    top: -406px;
     right: -300px;
     z-index: -10;
   }
@@ -169,8 +169,8 @@
     height: 75vh;
     width: 60%;
     min-width: 350px;
-    margin-left: -10%;
-    margin-right: -10%;
+    margin-left: 0;
+    margin-right: -8%;
   }
 
   .button {
@@ -703,9 +703,9 @@
   }
 
   .blog:hover {
-    -webkit-box-shadow: -1px -1px 25px 1px rgba(0, 53, 145, 0.7);
-    -moz-box-shadow: -1px -1px 25px 1px rgba(0, 53, 145, 0.7);
-    box-shadow: -1px -1px 25px 1px rgba(0, 53, 145, 0.7);
+    -webkit-box-shadow: -1px -1px 25px 1px rgba(0, 53, 145, 0.5);
+    -moz-box-shadow: -1px -1px 25px 1px rgba(0, 53, 145, 0.5);
+    box-shadow: -1px -1px 25px 1px rgba(0, 53, 145, 0.5);
     text-decoration: none;
   }
 
@@ -1315,7 +1315,7 @@
     }
 
     .section-two-hero {
-      margin-top: 250px;
+      margin-top: 80px;
     }
 
     .section-three {
@@ -1467,11 +1467,6 @@
       top: 3%;
     }
 
-    .section-one-animation {
-      height: 270px;
-      padding: 0;
-      margin-top: 50px;
-    }
 
     .section-two-bot-item button {
       margin-top: 25px;
@@ -1561,8 +1556,8 @@
     }
 
     .testemonials .h1-font {
-      margin-top: 100px;
-      margin-bottom: 0;
+      margin-top: 40px;
+      margin-bottom: 15px;
     }
 
     .partners-images img {
@@ -1572,7 +1567,7 @@
 
     .partners-images {
       margin-top: 50px;
-      margin-bottom: 50px;
+
       justify-content: center;
     }
 
@@ -1584,6 +1579,9 @@
       margin-bottom: 0 !important;
     }
 
+    .team-member {
+      flex-basis: 100%;
+    }
   }
 
   @media screen and (max-width: 375px) {
@@ -1603,7 +1601,13 @@
     }
 
     .section-one-animation {
-      padding: 0 27px;
+      margin-top: 0;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .background-section-one {
+      margin-top: 125px;
     }
 
     .section-one-text {
@@ -1616,7 +1620,9 @@
 
     .contact-section {
       background-size: 927vw;
-      background-position-y: 45%;
+      background-position-y: 50%;
+      margin-bottom: 200px;
+      background-color: white;
     }
 
     .footer {
@@ -1637,6 +1643,29 @@
 
     .margin-both {
       margin-bottom: 10px;
+    }
+
+    .blog-text {
+      max-height: 184px;
+    }
+
+    .section-two-bot-item p,
+    .section-two-bot-item h2 {
+      padding: 0;
+    }
+
+    .section-two-bot-item img {
+      height: auto;
+    }
+
+    .blog .blog-text::after {
+      bottom: 14px;
+      padding-left: 10px;
+      padding-right: 40px;
+    }
+
+    .team-member {
+      flex-basis: 100%;
     }
   }
 

@@ -70,9 +70,9 @@ html {
 
 .background-img {
     position: absolute;
-    width: 95vw;
-    max-height: 145vh;
-    top: -250px;
+    width: 85vw;
+    /* max-height: 124vh; */
+    top: -406px;
     right: -300px;
     z-index: -10;
 }
@@ -140,10 +140,10 @@ html {
 .section-one-animation {
     object-fit: contain;
     height: 75vh;
-    width: 50%;
+    width: 60%;
     min-width: 350px;
-    margin-left: -10%;
-    margin-right: -10%;
+    margin-left: 0;
+    margin-right: -8%;
 }
 
 .contain {
@@ -219,13 +219,13 @@ html {
     border-radius: 15px;
 }
 
-#slider > img {
+#slider>img {
     height: 100%;
     border-radius: 10px;
     display: inline-block;
 }
 
-#slider > img:first-child {
+#slider>img:first-child {
     margin-right: 5px;
     width: 50px;
     height: 50px;
@@ -238,7 +238,7 @@ html {
     z-index: 100;
 }
 
-#slider > img:last-child {
+#slider>img:last-child {
     margin-left: 5px;
     width: 50px;
     height: 50px;
@@ -754,7 +754,7 @@ textarea:focus {
     }
 
     .section-one-animation {
-        height: auto;
+        max-height: 350px;
         width: 70%;
     }
 
@@ -791,7 +791,7 @@ textarea:focus {
         width: 100%;
     }
 
-    #slider > img:last-child {
+    #slider>img:last-child {
         margin-left: 5px;
         width: 50px;
         height: 50px;
@@ -803,7 +803,7 @@ textarea:focus {
         transform: translate(-20%, -50%);
     }
 
-    #slider > img:first-child {
+    #slider>img:first-child {
         margin-right: 5px;
         width: 50px;
         height: 50px;
@@ -980,14 +980,19 @@ textarea:focus {
         font-size: 1.2em !important;
     }
 
+    .contain {
+        margin-bottom: 0 !important;
+    }
+
+    .section-two {
+        margin-top: 80px !important;
+    }
+
     .background-img {
         top: 3%;
     }
 
-    .section-one-animation {
-        height: 270px;
-        padding: 0;
-    }
+
 
     .our-works {
         margin-top: 200px !important;
@@ -1014,11 +1019,11 @@ textarea:focus {
         margin-top: 0 !important;
     }
 
-    #slider > img:last-child {
+    #slider>img:last-child {
         right: -14px;
     }
 
-    #slider > img:first-child {
+    #slider>img:first-child {
         left: 5px;
     }
 
@@ -1044,6 +1049,10 @@ textarea:focus {
         transform: rotate(-308deg);
     }
 
+    .background-section-one {
+        margin-top: 125px;
+    }
+
     .--circle1 {
         top: 60%;
     }
@@ -1059,7 +1068,9 @@ textarea:focus {
     }
 
     .section-one-animation {
-        padding: 0 27px;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .section-one-text {

@@ -80,9 +80,9 @@
 
     .background-img {
         position: absolute;
-        width: 95vw;
-        max-height: 145vh;
-        top: -250px;
+        width: 85vw;
+        /* max-height: 124vh; */
+        top: -406px;
         right: -300px;
         z-index: -10;
     }
@@ -150,10 +150,10 @@
     .section-one-animation {
         object-fit: contain;
         height: 75vh;
-        width: 50%;
+        width: 60%;
         min-width: 350px;
-        margin-left: -10%;
-        margin-right: -10%;
+        margin-left: 0;
+        margin-right: -8%;
     }
 
     .contain {
@@ -793,7 +793,7 @@
         }
 
         .section-one-animation {
-            height: auto;
+            max-height: 350px;
             width: 70%;
         }
 
@@ -1035,10 +1035,7 @@
             top: 3%;
         }
 
-        .section-one-animation {
-            height: 270px;
-            padding: 0;
-        }
+
 
         .our-works {
             margin-top: 200px !important;
@@ -1046,6 +1043,10 @@
 
         .section-one {
             margin-bottom: 40px;
+        }
+
+        .section-two {
+            margin-top: 80px !important;
         }
 
         .section-one-text {
@@ -1058,9 +1059,9 @@
             margin-bottom: 0 !important;
         }
 
-        .relative {}
-
-        .w-100 {}
+        .contain {
+            margin-bottom: 0 !important;
+        }
 
         .xliff-background {
             width: 644%;
@@ -1094,6 +1095,9 @@
             top: 0;
         }
 
+        .background-section-one {
+            margin-top: 125px;
+        }
 
 
         .background-img-orange-circle {
@@ -1118,7 +1122,9 @@
         }
 
         .section-one-animation {
-            padding: 0 27px;
+            margin-top: 0;
+            margin-left: 0;
+            margin-right: 0;
         }
 
         .section-one-text {
@@ -1406,7 +1412,7 @@
                 contact.style.height = 0;
             } else {
                 if (window.innerWidth <= 425) {
-                    contact.style.height = 140 + "%";
+                    contact.style.height = 160 + "%";
                 } else {
                     contact.style.height = 90 + "%";
                 }

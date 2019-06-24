@@ -227,7 +227,7 @@
                 contact.style.height = 0;
             } else {
                 if (window.innerWidth <= 425) {
-                    contact.style.height = 140 + "%";
+                    contact.style.height = 160 + "%";
                 } else {
                     contact.style.height = 90 + "%";
                 }
