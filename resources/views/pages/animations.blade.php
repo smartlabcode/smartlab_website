@@ -1,7 +1,6 @@
 <!-- Extend main layout -->
 @extends('layouts.app')
 
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <link href="{{ asset('css/coursesMoodleAnimations.css') }}" rel="stylesheet">
 
 @section('content')
@@ -13,7 +12,7 @@
     <img class="background-img-circle --circle3" src="../images/img/fluid-bright-circle.svg" />
     <section class="section-one contain">
 
-        <div class="section-one-text" data-aos="zoom-in">
+        <div class="section-one-text">
 
             <h1 class="h1-font bold">@lang('animations.Animation')</h1>
             <p class="p-font">
@@ -141,10 +140,10 @@
 
         </div>
 </section>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
-        AOS.init();
+
 
         const animation = document.querySelector(".section-one-animation");
         lottie.loadAnimation({

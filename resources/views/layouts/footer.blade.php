@@ -381,6 +381,11 @@
         .footer-top-row .--right {
             justify-content: center;
         }
+
+        .footer-top-column:nth-child(3) {
+            display: flex;
+            flex-wrap: nowrap;
+        }
     }
 
     @media screen and (max-width: 365px) {
@@ -456,7 +461,7 @@
                 <address>
                     <a href="https://www.google.com/maps/place/SmartLab/@43.8542408,18.3870703,17z/data=!3m1!4b1!4m5!3m4!1s0x4758c8c48c458d13:0xd3b7b0136b05bfe5!8m2!3d43.854237!4d18.389259" target="_blank">
                         <p>Kolodvorska 5,</p>
-                        <p><span class="wrap">Sarajevo,</span> @lang('footer.state')</p>
+                        <p><span class="wrap">Sarajevo,</span> <span>@lang('footer.state')<span></p>
                     </a>
                 </address>
             </div>

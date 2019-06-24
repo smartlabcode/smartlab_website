@@ -694,6 +694,19 @@ textarea:focus {
 }
 
 @media screen and (max-width: 1030px) {
+    .section-one {
+        position: relative;
+        top: 0px;
+    }
+
+    .section-one-animation {
+        margin-right: 0;
+        height: 70vh;
+        width: 80%;
+        margin: 0;
+    }
+
+
     .background-img {
         width: 110vw;
     }

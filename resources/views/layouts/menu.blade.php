@@ -21,6 +21,10 @@
         box-sizing: border-box;
     }
 
+    .black {
+        color: rgb(20, 33, 61) !important;
+    }
+
     nav .contain {
         margin-bottom: 0 !important;
     }
@@ -617,7 +621,7 @@
         </div>
         <div class="nav-li-container" id="nav-li-container">
             <li class="nav-li nav-li-js arrow first">
-                <a class="grey">@lang('menu.first_item')</a>
+                <a class="grey" id="whatWeDo">@lang('menu.first_item')</a>
                 <div class="filler"></div>
                 <div class="expandable expandable-first">
                     <a href="/pages/courses">@lang('menu.online_courses')</a>
@@ -688,14 +692,20 @@
         </div>
 
     </div>
-
-
-
-
-
 </ul>
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
+        const firstNavItem = document.querySelector(".first");
+        const backgroundImg = document.querySelector(".background-img");
+        const whatWeDo = document.querySelector("#whatWeDo");
+        console.log(firstNavItem.getBoundingClientRect().left, backgroundImg.getBoundingClientRect().left + 100);
+        if (window.innerWidth > 768) {
+            if (firstNavItem.getBoundingClientRect().left < backgroundImg.getBoundingClientRect().left + 100) {
+                console.log("out of background");
+
+                backgroundImg.style.right = "-200px";
+            }
+        }
 
         let navButton = document.querySelector("#nav-button");
         let navButtonInner = document.querySelector("#nav-button-inner");

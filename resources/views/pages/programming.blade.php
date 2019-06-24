@@ -1,7 +1,7 @@
 <!-- Extend main layout -->
 @extends('layouts.app')
 
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 
 <style>
     /* SECTION ONE */
@@ -728,7 +728,19 @@
 
 
     @media screen and (max-width: 1030px) {
+        .section-one {
+            position: relative;
+            top: 0px;
+        }
 
+
+
+        .section-one-animation {
+            margin-right: 0;
+            height: 70vh;
+            width: 80%;
+            margin: 0;
+        }
 
         .background-img {
             width: 110vw;
@@ -1148,7 +1160,7 @@
     <img class="background-img-circle --circle3" src="../images/img/fluid-bright-circle.svg" />
     <section class="section-one contain">
 
-        <div class="section-one-text" data-aos="zoom-in">
+        <div class="section-one-text">
 
             <h1 class="h1-font bold">@lang('programming.heading')</h1>
             <p class="p-font">
@@ -1328,10 +1340,10 @@
         </div>
 
 </section>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
-        AOS.init();
+
         const animation = document.querySelector(".section-one-animation");
         lottie.loadAnimation({
             container: animation, // the dom element that will contain the animation

@@ -1,7 +1,6 @@
 <!-- Extend main layout -->
 @extends('layouts.app')
 
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 <style>
   :root {
@@ -235,7 +234,6 @@
     margin-top: 300px;
   }
 
-  .section-two-hero p {}
 
   .section-two-top {
     display: flex;
@@ -343,6 +341,11 @@
     object-fit: contain;
     width: 100%;
     height: 300px;
+  }
+
+  .section-two-item {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
   }
 
   .--width-margin-top {
@@ -614,7 +617,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    padding: 15px;
 
   }
 
@@ -700,6 +703,8 @@
     background-color: white;
     cursor: pointer;
     transition: box-shadow 0.2s ease-in;
+    position: relative;
+    z-index: 0;
   }
 
   .blog:hover {
@@ -713,7 +718,7 @@
     color: black;
     font-family: "Source Sans Pro", sans-serif !important;
     overflow: hidden;
-
+    max-height: 160px;
     line-height: 23px;
     font-size: 1.1em;
     padding-right: 10px;
@@ -736,13 +741,13 @@
   .blog .blog-text::after {
     position: absolute;
     content: "...";
-    bottom: 4px;
-    right: 16px;
+    bottom: 24px;
+    right: 14px;
     font-size: 1.1em;
     padding-top: 0px;
     line-height: 1.5em;
-    padding-left: 4px;
-    padding-right: 0px;
+    padding-left: 10px;
+    padding-right: 47px;
     padding-bottom: 0px;
     background-color: white;
     font-weight: bold;
@@ -1070,6 +1075,9 @@
       padding-top: 0 !important;
     }
 
+    .blog .blog-text::after {
+      bottom: 8px;
+    }
   }
 
   @media screen and (max-width: 1175px) {
@@ -1106,9 +1114,24 @@
     .blog-orange-circle-small {
       bottom: 22%;
     }
+
+    .blog .blog-text::after {
+      bottom: 8px;
+    }
   }
 
   @media screen and (max-width: 1026px) {
+    .section-one {
+      position: relative;
+      top: 0px;
+    }
+
+    .section-one-animation {
+      height: 70vh;
+      width: 80%;
+      margin: 0;
+    }
+
     .background-img-orange-circle {
       top: -95px;
       right: 588px;
@@ -1166,10 +1189,11 @@
     }
 
     .contact-section {
-      background-position-y: 48%;
-      background-size: 270vw;
-      top: 150px;
-      padding-top: 0;
+      background-size: 250%;
+      background-position-y: 50%;
+      margin-bottom: 200px;
+      background-color: white;
+
     }
 
     .contact-section .submit {
@@ -1342,6 +1366,16 @@
       margin-top: 0;
       margin-bottom: 0;
     }
+
+    .blog-text {
+      max-height: 157px;
+    }
+
+    .blog .blog-text::after {
+      bottom: 8px;
+      padding-left: 10px;
+      padding-right: 60px;
+    }
   }
 
   @media screen and (max-width: 600px) {
@@ -1506,9 +1540,10 @@
     }
 
     .contact-section {
-      background-size: 696vw;
-      /* margin-top: 10%; */
-      background-position-y: 48%;
+      background-size: 927vw;
+      background-position-y: 42%;
+      margin-bottom: 200px;
+      background-color: white;
     }
 
     .contact-orange-circle-l {
@@ -1591,7 +1626,10 @@
     }
 
     .contact-section {
-      background-size: 645vw;
+      background-size: 927vw;
+      background-position-y: 45%;
+      margin-bottom: 200px;
+      background-color: white;
     }
   }
 
@@ -1618,12 +1656,7 @@
       margin-top: -160px;
     }
 
-    .contact-section {
-      background-size: 927vw;
-      background-position-y: 50%;
-      margin-bottom: 200px;
-      background-color: white;
-    }
+
 
     .footer {
       background-position-y: -360%;
@@ -1656,6 +1689,13 @@
 
     .section-two-bot-item img {
       height: auto;
+    }
+
+    .contact-section {
+      background-size: 927vw;
+      background-position-y: 54%;
+      margin-bottom: 200px;
+      background-color: white;
     }
 
     .blog .blog-text::after {
@@ -1777,7 +1817,7 @@
 
   <section class="section-one contain">
 
-    <div class="section-one-text" data-aos="zoom-in">
+    <div class="section-one-text">
       <h2 class="h2-font">@lang('index.heading_h2')</h2>
       <h1 class="h1-font bold">@lang('index.heading_h1')</h1>
       <p class="p-font ">
@@ -1785,8 +1825,7 @@
       </p>
       <a href="#contact"><button class="button margin-top-27">@lang('index.heading_button')</button></a>
     </div>
-    <!--<img data-aos="zoom-in" class="section-one-animation" src="images/img/header-illustration.svg" alt="header ilustration" />-->
-    <!--<object class="section-one-animation" data="images/home/demo.html"></object>-->
+
     <div class="section-one-animation"></div>
 
 
@@ -1811,7 +1850,7 @@
   </div>
 
   <div id="anchor">
-    <div class="section-two-top" data-aos-anchor="#anchor" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
+    <div class="section-two-top section-two-item">
       <div class="section-two-top-left">
         <img src="images/img/online-courses-img.svg" alt="online courses" />
       </div>
@@ -1824,7 +1863,7 @@
       </div>
     </div>
     <div class="section-two-bot">
-      <div class="section-two-bot-item" data-aos-anchor=".section-two-bot" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="100" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
+      <div class="section-two-bot-item section-two-item">
         <img class="--width-margin-top" src="images/img/video-animation-img.svg" alt="video and animation" />
         <div>
           <h2 class="h2-font">@lang('index.section_two_bot_left_h2')</h2>
@@ -1836,7 +1875,7 @@
 
 
       </div>
-      <div class="section-two-bot-item margin-both" data-aos-anchor=".section-two-bot" data-aos="zoom-in-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
+      <div class="section-two-bot-item margin-both section-two-item">
         <img src="images/img/development-img.svg" alt="development" />
         <div>
           <h2 class="h2-font">@lang('index.section_two_bot_mid_h2')</h2>
@@ -1847,7 +1886,7 @@
         </div>
 
       </div>
-      <div class="section-two-bot-item" data-aos-anchor=".section-two-bot" data-aos="zoom-in-up" data-aos-offset="300" data-aos-delay="300" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
+      <div class="section-two-bot-item section-two-item">
         <img class="--width-margin-top" src="images/img/moodle-img.svg" alt="moodle" />
         <div>
           <h2 class="h2-font">@lang('index.section_two_bot_right_h2')</h2>
@@ -2242,7 +2281,7 @@
   <div class="blog-container">
     @foreach ($blogs as $blog)
 
-    <a href="{{env('BLOG_DOMAIN')}}/blog/{{$blog->id}}/{{App::getlocale()}}" target="_blank" class="blog" data-aos-anchor=".blog-section" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
+    <a href="{{env('BLOG_DOMAIN')}}/blog/{{$blog->id}}/{{App::getlocale()}}" target="_blank" class="blog">
       <div class="img-container">
         <div class="img-container-overlay @if ($blog->id % 2 != 0) img-container-overlay-blue @else img-container-overlay-orange @endif">
         </div>
@@ -2261,49 +2300,6 @@
 
     @endforeach
 
-    <!--<div class="blog" data-aos-anchor=".blog-section" data-aos="zoom-in-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
-      <div class="img-container">
-        <div class="img-container-overlay img-container-overlay-orange"></div>
-        <img src="images/img/blog-post-2.png" alt="blog post">
-        <svg class="wave" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
-          <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
-        </svg>
-      </div>
-      <div>
-        <h2 class="h2-font">Blog Title</h2>
-        <p><span>05.07.2019.</span> <span>Haris M.</span></p>
-        <p class="p-font ">Sed scelerisque vulputate dui at mattis. Donec porta, lorem in vehicula efficitur, est libero suscipit est, id sollicitudin urna diam non sapien. Quisque porttitor, dui non porttitor efficitur, ante magna pulvinar purus, sit amet pretium nunc ipsum vel libero. Suspendisse venenatis lacus hendrerit, porttitor massa ac, consequat lectus. Praesent tempor congue nulla, nec dictum purus viverra nec. Mauris at felis metus. Vivamus egestas libero ac lectus consequat ullamcorper. Vestibulum ullamcorper ornare quam, eget ullamcorper sem malesuada sit amet. Aliquam tincidunt eleifend nulla, non dignissim odio suscipit id. Praesent quis quam leo.</p>
-      </div>
-    </div>
-    <div class="blog" data-aos-anchor=".blog-section" data-aos="zoom-in-up" data-aos-offset="300" data-aos-delay="150" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
-      <div class="img-container ">
-        <div class="img-container-overlay img-container-overlay-blue"></div>
-        <img src="images/blog/webinar-learning-experience-1170x769.jpg" alt="blog post">
-        <svg class="wave" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
-          <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
-        </svg>
-      </div>
-      <div>
-        <h2 class="h2-font">Blog Title</h2>
-        <p><span>05.07.2019.</span> <span>Haris M.</span></p>
-        <p class="p-font ">Quisque a nisi iaculis, finibus neque quis, consectetur nisi. Nam id sollicitudin orci. Sed interdum, ante sed condimentum laoreet, augue sem tempor ligula, sed viverra lorem purus sit amet turpis. Duis odio tortor, fermentum a leo a, tempus bibendum nisl. Nunc aliquet dui ut arcu pulvinar, a mollis orci porta. Suspendisse interdum nulla est. Curabitur eget metus congue, accumsan velit quis, lobortis arcu. Phasellus et dignissim erat. Sed quis est in magna suscipit pretium id eget leo. Mauris scelerisque pellentesque odio, id porta ligula efficitur a. Fusce in fermentum nulla. Etiam cursus enim non nisi sollicitudin posuere. Phasellus malesuada tempus magna ut varius. Quisque posuere ut metus in mattis. Duis molestie dui eget odio fringilla, sed porta enim venenatis.</p>
-      </div>
-    </div>
-    <div class="blog" data-aos-anchor=".blog-section" data-aos="zoom-in-up" data-aos-offset="400" data-aos-delay="200" data-aos-duration="300" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true" data-aos-anchor-placement="top">
-      <div class="img-container">
-        <div class="img-container-overlay img-container-overlay-orange"></div>
-        <img src="images/blog/androidpit-youtube-hero-2-1-585x385.jpg" alt="blog post">
-        <svg class="wave" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
-          <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
-        </svg>
-      </div>
-      <div>
-        <h2 class="h2-font">Blog Title</h2>
-        <p><span>05.07.2019.</span> <span>Haris M.</span></p>
-        <p class="p-font">Morbi diam lorem, fermentum sit amet felis non, venenatis eleifend arcu. Vestibulum mauris nulla, aliquam eu consequat eget, mollis non sem. Cras massa enim, lobortis in sodales eu, lobortis a nisi. Fusce sodales accumsan nisl sit amet ullamcorper. Sed vel lorem nec quam luctus pellentesque at nec magna. Pellentesque ac luctus arcu, eu fermentum justo. Nulla pulvinar tellus at auctor tempus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur lobortis bibendum metus id tempus. Nulla convallis tempor mauris, at blandit risus semper ac. Phasellus vel neque id felis tristique viverra. Praesent commodo, nunc eu imperdiet lobortis, quam tortor feugiat tortor, id convallis purus turpis et nibh.</p>
-      </div>
-    </div>
-  </div>-->
     <div class="blog-button">
       <a href="{{env('BLOG_DOMAIN')}}/{{App::getlocale()}}" target="_blank"><button class="button">@lang('index.blog_button')</button></a>
     </div>
@@ -2356,10 +2352,9 @@
   </div>
 </section>
 
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
 <script>
   document.addEventListener("DOMContentLoaded", function(event) {
-    AOS.init();
     //blogs
     const animation = document.querySelector(".section-one-animation");
     lottie.loadAnimation({
@@ -2535,28 +2530,25 @@
         partnersChange(partners[j]);
       })
     }
+    const sectionTwoItems = document.querySelectorAll(".section-two-item");
+    const options2 = {
+      root: null, //it is the viewport
+      threshold: 0.5,
+      rootMargin: "0px"
+    };
+    const sectionTwoItemsObserver = new IntersectionObserver(function(entries, sectionTwoItemsObserver) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            console.log(entry.target);
+            entry.target.style.opacity = 1;
+          }
 
-    const sectionOneAnimation = document.querySelector(".section-one-animation");
-    const sectionOneAnimationData = sectionOneAnimation.data;
-    const observer3 = new IntersectionObserver(function(entries, observer3) {
-
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.data = sectionOneAnimationData;
-
-        } else {
-          entry.target.data = " ";
-        }
-      });
+        });
+      },
+      options2);
+    sectionTwoItems.forEach(item => {
+      sectionTwoItemsObserver.observe(item);
     });
-    observer3.observe(sectionOneAnimation);
-
   });
 </script>
-<!--<script src="js/nav.js"></script>
-     -->
-<!-- </body>
-</html> -->
-
-
 @endsection
