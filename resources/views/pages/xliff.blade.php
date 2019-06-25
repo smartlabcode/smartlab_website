@@ -467,9 +467,9 @@
     </div>
 </section>
 
-    <!-- TODO somewhere here will appear form for xliff translations if user is loggged in -->
-    @auth
-        <h1>XLIFF TRANSLATION FORM</h1>
-    @endauth
+<!-- TODO somewhere here will appear form for xliff translations if user is loggged in -->
+@auth
+<h1>XLIFF TRANSLATION FORM</h1>
+@endauth
 
 @endsection

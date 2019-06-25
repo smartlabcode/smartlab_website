@@ -139,12 +139,14 @@ html {
 }*/
 .section-one-animation {
     object-fit: contain;
-    height: 75vh;
+    height: 85vh;
     width: 60%;
     min-width: 350px;
     margin-left: 0;
     margin-right: -8%;
+    transform: translateX(-1%);
 }
+
 
 .contain {
     max-width: 1440px;
@@ -695,15 +697,15 @@ textarea:focus {
 
 @media screen and (max-width: 1030px) {
     .section-one {
-        position: relative;
-        top: 0px;
+        /*position: relative;
+        top: 0px;*/
     }
 
     .section-one-animation {
-        margin-right: 0;
         height: 70vh;
         width: 80%;
         margin: 0;
+        transform: translateX(15%);
     }
 
 
@@ -767,8 +769,9 @@ textarea:focus {
     }
 
     .section-one-animation {
-        max-height: 350px;
+        height: 70vw;
         width: 70%;
+        transform: translateX(0%);
     }
 
     .contact-form-container {

@@ -153,7 +153,7 @@
         width: 60%;
         min-width: 350px;
         margin-left: 0;
-        margin-right: -8%;
+        margin-right: -3%;
     }
 
     .contain {
@@ -628,11 +628,19 @@
         }
     }
 
+    @media screen and (max-width: 1440px) {
+        .section-one-animation {
+            margin-right: -8%;
+        }
+    }
+
     @media screen and (max-width: 1400px) {
         .background-img {
             width: 97vw;
             max-height: 180%;
         }
+
+
 
         .section-one {
             justify-content: space-around;
@@ -729,18 +737,17 @@
 
     @media screen and (max-width: 1030px) {
         .section-one {
-            position: relative;
-            top: 0px;
+            /*position: relative;
+            top: 0px;*/
         }
-
-
 
         .section-one-animation {
-            margin-right: 0;
             height: 70vh;
-            width: 80%;
-            margin: 0;
+            width: 59%;
+            margin: 0px;
+            transform: translateX(5%);
         }
+
 
         .background-img {
             width: 110vw;
@@ -805,8 +812,9 @@
         }
 
         .section-one-animation {
-            max-height: 350px;
+            height: 70vw;
             width: 70%;
+            transform: translateX(0%);
         }
 
         .contact-form-container {

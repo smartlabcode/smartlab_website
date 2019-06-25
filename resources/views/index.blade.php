@@ -165,11 +165,12 @@
 }*/
   .section-one-animation {
     object-fit: contain;
-    height: 75vh;
+    height: 85vh;
     width: 60%;
     min-width: 350px;
     margin-left: 0;
     margin-right: -8%;
+    transform: translateX(-1%);
   }
 
   .button {
@@ -1130,6 +1131,7 @@
       height: 70vh;
       width: 80%;
       margin: 0;
+      transform: translateX(15%);
     }
 
     .background-img-orange-circle {
@@ -1254,8 +1256,9 @@
     }
 
     .section-one-animation {
-      height: 45vh;
+      height: 70vw;
       width: 70%;
+      transform: translateX(0%);
     }
 
     .section-two-top-orange-img {
@@ -1334,12 +1337,14 @@
       background-size: 376vw;
     }
 
+
+
     .contact-form-container p {
       font-size: 1em;
     }
 
     .section-two-hero {
-      margin-top: 80px;
+      /*margin-top: 80px;*/
     }
 
     .section-three {
@@ -1382,6 +1387,14 @@
     #app {
       width: 100% !important;
       margin: 0 !important;
+    }
+
+    .background-section-one {
+      margin-top: 125px;
+    }
+
+    .blog .blog-text::after {
+      bottom: 25px;
     }
 
     .background-img {
@@ -1511,7 +1524,7 @@
     }
 
     .section-one-text {
-      margin-bottom: 50px;
+      /*margin-bottom: 50px;*/
     }
 
     .section-one {
@@ -1616,6 +1629,10 @@
 
     .team-member {
       flex-basis: 100%;
+    }
+
+    .blog .blog-text::after {
+      bottom: 22px;
     }
   }
 

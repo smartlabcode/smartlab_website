@@ -148,7 +148,7 @@
         const animation = document.querySelector(".section-one-animation");
         lottie.loadAnimation({
             container: animation, // the dom element that will contain the animation
-            renderer: 'canvas',
+            renderer: 'svg',
             loop: true,
             autoplay: false,
             path: "{{'/images/edu-video-animation'}}" // the path to the animation json

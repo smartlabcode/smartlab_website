@@ -699,7 +699,7 @@
         const backgroundImg = document.querySelector(".background-img");
         const whatWeDo = document.querySelector("#whatWeDo");
         console.log(firstNavItem.getBoundingClientRect().left, backgroundImg.getBoundingClientRect().left + 100);
-        if (window.innerWidth > 768) {
+        if (window.innerWidth > 900) {
             if (firstNavItem.getBoundingClientRect().left < backgroundImg.getBoundingClientRect().left + 100) {
                 console.log("out of background");
 
