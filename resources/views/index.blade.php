@@ -2386,7 +2386,7 @@
     const animationObserver = new IntersectionObserver(function(entries, animationObserver) {
       entries.forEach(entry => {
         console.log(entry);
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && window.innerWidth > 768) {
           lottie.play();
         } else lottie.pause();
       })
