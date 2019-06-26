@@ -582,10 +582,10 @@
   }
 
   .partners-images {
-    flex-basis: 40%;
+    flex-basis: 100%;
     display: flex;
     flex-wrap: wrap;
-    align-items: baseline;
+    justify-content: space-around;
   }
 
   #indicators {
@@ -611,15 +611,20 @@
   }
 
   .partners-text {
-    flex-basis: 50%;
+    flex-basis: 80%;
+    margin: 0 auto;
     background-image: url(images/img/quotation-marks.svg);
-    background-size: 50%;
+    background-size: 25%;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 15px;
 
+  }
+
+  .partners-text>div {
+    padding: 100px;
   }
 
   .partners-text div {
@@ -647,9 +652,8 @@
   }
 
   .partners-images img {
-    max-width: 32%;
-    height: 90px;
     object-fit: contain;
+    flex-basis: 20%;
   }
 
   .blog-section {
@@ -1034,9 +1038,9 @@
   }
 
   @media screen and (max-width: 1500px) {
-    .partners-images {
+    /*.partners-images {
       flex-basis: 40%;
-    }
+    }*/
 
     .contact-section {
       background-size: 230vw;
@@ -1608,14 +1612,13 @@
       margin-bottom: 15px;
     }
 
-    .partners-images img {
+    /*.partners-images img {
       max-width: 25%;
       margin: 10px;
-    }
+    }*/
 
     .partners-images {
       margin-top: 50px;
-
       justify-content: center;
     }
 
@@ -1923,7 +1926,7 @@
     <div class="about-us">
       <div>
         <h2 class="h1-font">@lang('index.about_us_h2')</h2>
-        <h3 class="h2-font">
+        <h3 class="p-font">
           @lang('index.about_us_h3')
         </h3>
       </div>
@@ -2254,6 +2257,23 @@
   <div>
     <h2 class="text-center h1-font">@lang('index.partners_h2')</h2>
     <div class="flex">
+
+      <div class="partners-text">
+        <div>
+          <p class="p-font" id="partners-text">
+            “SmartLab team created a fantastic web based quiz for Afrika Presents with
+            a downloadable badge. Incredible attention to details. Better than
+            anticipated and they had a true understanding and delivered just what we
+            were looking for. We look forward to working together again in future.”
+          </p>
+          <div>
+            <img id="partners-image" src="../images/partners-images/Mara.png" alt="partner image" />
+            <p id="partners-name" class="h2-font">Mara Menzies</p>
+            <p id="partners-company" class="p-font">Afrika Presents Ltd</p>
+          </div>
+          <div id="indicators"><span class="indicator indicator-opacity"></span><span class="indicator"></span><span class="indicator"></span><span class="indicator"></span><span class="indicator"></span></div>
+        </div>
+      </div>
       <div class="partners-images">
         <img src="../images/partners-logo/TheTrainingTerminal-2.png" alt="TrainingTerminal logo" />
         <img src="../images/partners-logo/FKC-2.png" alt="Ficher, Knoblauch & co logo" />
@@ -2271,22 +2291,6 @@
         <img src="../images/partners-logo/maisonprive-2.png" alt="maison prive logo" />
         <img src="../images/partners-logo/biramoporavak-2.png" alt="biramo oporavak logo" />
         <img src="../images/partners-logo/BDfD-2.png" alt="bosnian doctors for disabled logo" />
-      </div>
-      <div class="partners-text">
-        <div>
-          <p class="p-font" id="partners-text">
-            “SmartLab team created a fantastic web based quiz for Afrika Presents with
-            a downloadable badge. Incredible attention to details. Better than
-            anticipated and they had a true understanding and delivered just what we
-            were looking for. We look forward to working together again in future.”
-          </p>
-          <div>
-            <img id="partners-image" src="../images/partners-images/Mara.png" alt="partner image" />
-            <p id="partners-name" class="h2-font">Mara Menzies</p>
-            <p id="partners-company" class="p-font">Afrika Presents Ltd</p>
-          </div>
-          <div id="indicators"><span class="indicator indicator-opacity"></span><span class="indicator"></span><span class="indicator"></span><span class="indicator"></span><span class="indicator"></span></div>
-        </div>
       </div>
     </div>
   </div>
@@ -2477,7 +2481,7 @@
 
 
     let partners = [{
-      text: "SmartLab team created a fantastic web based quiz for Afrika Presents with a downloadable badge. Incredible attention to details. Better than anticipated and they had a true understanding and delivered just what we were looking for. We look forward to working together again in future.",
+      text: "“SmartLab team created a fantastic web-based quiz for Afrika Presents with a downloadable badge. Incredible attention to details. Better than anticipated and they had a true understanding and delivered just what we were looking for. We look forward to working together again in the future.”",
       image: "../images/partners-images/Mara.png",
       name: "Mara Menzies",
       company: "Afrika Presents Ltd"
