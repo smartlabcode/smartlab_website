@@ -101,6 +101,7 @@
         {{-- @endauth--}}
 
     </div>
+    <script src="{{ asset('/js/app.js') }}"></script>
     <script src="{{ asset('/js/lottie.js') }}"></script>
 </body>
 
