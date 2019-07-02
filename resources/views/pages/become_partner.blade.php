@@ -381,39 +381,9 @@
         margin-bottom: 20px;
     }
 
-    .file-input {
-        position: relative;
-
-    }
-
-    .file-input::after {
-        position: absolute;
-        content: " ";
-        width: 99%;
-        height: 30px;
-        top: 1px;
-        left: 1px;
-        background-color: white;
-        border-radius: 10px 10px 0 0;
-    }
-
-    .file-input::before {
-        position: absolute;
-        background-image: url(../images/partner/drag-and-drop.svg);
-        background-repeat: no-repeat;
-        background-size: 80px;
-        background-position-x: 50%;
-        background-position-y: 31px;
-        content: "";
-        top: 0;
-        width: 100%;
-        height: 150px;
-        z-index: -10;
-    }
-
-    .file-input input {
-        height: 150px;
-        cursor: pointer;
+    #inputFile {
+        height: 0.1px;
+        width: 0.1px;
     }
 
     .nav-list {
@@ -708,9 +678,10 @@
                     <textarea name="bussiness_message" id="bussiness_message" required></textarea>
                 </div>
                 <div>
-                    <label class="inputfileLabel p-font" for="files[]">Place for Your Files (Optional) <span class="fileNames p-font"></span></label>
-                    <div class="file-input">
-                        <input type="file" name="files[]" id="files[]" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+                    <label for="uploadFileArea">@lang('careers.files')</label>
+                    <div id="uploadFileArea" class="form-control" onclick="openUploadWindow()">
+                        <p id="uploadText">@lang('careers.click-to') <br />@lang('careers.upload-files')</p>
+                        <input id="inputFile" type="file" name="files[]" onchange="fileUploaded()" multiple />
                     </div>
 
                 </div>
@@ -726,23 +697,15 @@
     </section>
 </div>
 <script>
-    document.addEventListener("DOMContentLoaded", function(event) {
-        var input = document.querySelector('.inputfile');
+    function openUploadWindow() {
+        document.getElementById("inputFile").click();
+    }
 
-        var label = document.querySelector(".inputfileLabel"),
-            labelVal = label.innerHTML;
-        count = document.querySelector(".count");
 
-        input.addEventListener('change', function(e) {
-            var fileName = e.target.value.split('\\').pop();
-
-            if (fileName)
-                label.querySelector('.fileNames').innerHTML += fileName + "; ";
-            else
-                label.innerHTML = labelVal;
-        });
-
-    });
+    function fileUploaded() {
+        // TODO check if file is selected
+        let uploadText = document.getElementById("uploadText");
+        uploadText.innerHTML = "<img id='verifiedIcon' src='/images/icons/verified.svg' />";
+    }
 </script>
-
 @endsection
