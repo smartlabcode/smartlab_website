@@ -46,8 +46,10 @@
 </head>
 
 <body>
+
     <!-- Import menu for including it later -->
     @include('layouts.menu')
+
     @include('layouts.footer')
     <!-- Main application layout -->
     <div id="app">

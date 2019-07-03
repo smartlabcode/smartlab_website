@@ -203,6 +203,12 @@
         display: inline-block;
         max-width: 350px;
         padding: 20px;
+        background-color: white;
+        font-size: 0.9em;
+    }
+
+    .partnership-usecase-step p {
+        margin-bottom: 0 !important;
     }
 
     .--step1 {
@@ -243,6 +249,25 @@
         position: absolute;
         bottom: 22%;
         left: -13%;
+    }
+
+    .partnership-container {
+        position: relative;
+        margin-top: 300px !important;
+        margin-bottom: 300px !important;
+    }
+
+    .partnership-container>img {
+        position: absolute;
+        width: 110vw;
+        top: -25%;
+        left: -5vw;
+        transform: scaleY(0.8);
+        z-index: -100;
+    }
+
+    .partnership-usecase-container {
+        margin-top: 25%;
     }
 
     .partnership-steps-container {
@@ -307,6 +332,13 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-top: 35%;
+        flex-wrap: wrap;
+    }
+
+    .partner-experience h2 {
+        flex-basis: 100%;
+        color: white;
     }
 
     .partner-experience-logo {
@@ -321,6 +353,11 @@
         background-size: 25%;
     }
 
+    .partner-experience-content p {
+        color: white !important;
+        font-style: italic;
+    }
+
     .partner-experience-image {
         display: flex;
         align-items: center;
@@ -328,6 +365,17 @@
 
     .partner-experience-image p span {
         display: block;
+    }
+
+    .partner-experience-container {
+        position: relative;
+    }
+
+    .partner-experience-bg {
+        position: absolute;
+        z-index: -100;
+        width: 120vw;
+        transform: translateX(-20%) scaleY(1);
     }
 
     .partner-form {
@@ -347,6 +395,10 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+    }
+
+    .partner-form-section {
+        margin-top: 20% !important;
     }
 
     .partner-form-group input,
@@ -384,6 +436,28 @@
     #inputFile {
         height: 0.1px;
         width: 0.1px;
+        border: none;
+    }
+
+    #uploadFileArea {
+        height: 150px;
+    }
+
+    #uploadText {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: hand;
+    }
+
+    #uploadText span {
+        pointer-events: none;
+    }
+
+    #verifiedIcon {
+        height: 75%;
     }
 
     .nav-list {
@@ -403,6 +477,26 @@
         animation: arrow 0.2s ease-in-out forwards !important;
     }
 
+    .margin-t-50 {
+        margin-top: 50px !important;
+    }
+
+    .margin-b-50 {
+        margin-bottom: 50px !important;
+    }
+
+    .margin-b-150 {
+        margin-bottom: 150px !important;
+    }
+
+    .nav-top p {
+        color: rgb(20, 33, 61) !important;
+    }
+
+    .nav-top label {
+        color: rgb(20, 33, 61) !important;
+    }
+
     @keyframes arrow {
         0% {
             background-color: var(--h1-color);
@@ -419,7 +513,7 @@
 </style>
 @section('content')
 <div>
-    <section class="header-container">
+    <section class="header-container margin-b-150 ">
         <img src="../images/partner/join-us-header-img.svg" alt="header background" class="header-background background-img">
         <div class="header-content contain">
             <div class="header-content-left">
@@ -436,7 +530,7 @@
         </div>
 
     </section>
-    <section class="partner-container contain">
+    <section class="partner-container contain margin-b-150 ">
         <div class="partner-item">
             <img src="../images/partner/partner-1-collumn.svg">
             <div>
@@ -496,42 +590,47 @@
 
         </div>
     </section>
-    <section class="partnership-usecase-container contain">
-        <div class=" partnership-usecase">
-            <h2 class="centar h1-font">Use Case Partnership</h2>
-            <img class="partnership-usecase-img" src="../images/partner/use-case-partnership.svg" />
+    <div class="partnership-container">
+        <img src="../images/partner/partner-body-bg.svg">
+        <section class="partnership-usecase-container contain">
 
-            <h3 class="company p-font">Company
-                from Germany</h3>
-            <h3 class="smartlab"><img src="../images/smartlab-logo.svg" /> </h3>
-            <div class="partnership-usecase-step --step1 centar">
-                <p class="p-font">Company from Germany reached SmartLab asking
-                    to support them in articulate e-learning production</p>
-            </div>
-            <div class="partnership-usecase-step --step2 centar">
-                <p class="p-font">We arranged a meeting, defined needs and
-                    created an action plan.</p>
-            </div>
-            <div class="partnership-usecase-step --step3 centar">
-                <p class="p-font">The design and development has been
-                    implemented according to Partners
-                    budget.</p>
-            </div>
-            <div class="partnership-usecase-step --step4 centar">
-                <p class="p-font">During the production, both partners
-                    communicated vary often to make sure that
-                    everything is aligned to clients expectation.</p>
-            </div>
-            <div class="partnership-usecase-step --step5 centar">
-                <p class="p-font">At the end of production, we deployed
-                    Master version of e-learning courses
-                    and started with establishing
-                    longterm partnership</p>
-            </div>
+            <div class=" partnership-usecase">
+                <h2 class="centar h1-font">Use Case Partnership</h2>
+                <img class="partnership-usecase-img" src="../images/partner/use-case-partnership.svg" />
 
-        </div>
-    </section>
-    <section class="contain">
+                <h3 class="company p-font">Company
+                    from Germany</h3>
+                <h3 class="smartlab"><img src="../images/smartlab-logo.svg" /> </h3>
+                <div class="partnership-usecase-step --step1 centar">
+                    <p class="p-font">Company from Germany reached SmartLab asking
+                        to support them in articulate e-learning production</p>
+                </div>
+                <div class="partnership-usecase-step --step2 centar">
+                    <p class="p-font">We arranged a meeting, defined needs and
+                        created an action plan.</p>
+                </div>
+                <div class="partnership-usecase-step --step3 centar">
+                    <p class="p-font">The design and development has been
+                        implemented according to Partners
+                        budget.</p>
+                </div>
+                <div class="partnership-usecase-step --step4 centar">
+                    <p class="p-font">During the production, both partners
+                        communicated vary often to make sure that
+                        everything is aligned to clients expectation.</p>
+                </div>
+                <div class="partnership-usecase-step --step5 centar">
+                    <p class="p-font">At the end of production, we deployed
+                        Master version of e-learning courses
+                        and started with establishing
+                        longterm partnership</p>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <section class="contain margin-b-150 ">
+
         <div class="partnership-steps-container">
             <h2 class="centar h1-font">
                 Partnership can be arranged in 6 steps
@@ -604,14 +703,16 @@
             </div>
         </div>
     </section>
-    <section class="contain">
-        <h2 class="centar h1-font">Partner experience</h2>
+    <section class="contain margin-b-150  partner-experience-container">
+        <img class="partner-experience-bg" src="../images/partner/partnership-experience-bg.svg">
+
         <div class="partner-experience">
+            <h2 class="centar h1-font margin-b-50">Partner experience</h2>
             <div class="partner-experience-logo">
                 <img src="" alt="partner logo" />
             </div>
             <div class="partner-experience-content">
-                <p class="p-font">“We found SmartLab very professional to work with. They quickly understood the brief, were proactive and
+                <p class="p-font margin-b-150">“We found SmartLab very professional to work with. They quickly understood the brief, were proactive and
                     easy to communicate with during the build phase and delivered a final product that met fully with our
                     expectations.”</p>
                 <div class="partner-experience-image">
@@ -626,7 +727,7 @@
         </div>
     </section>
     <!-- TODO dont delete this-->
-    <section class="partner-form-section contain">
+    <section class="partner-form-section contain margin-b-150 ">
         @include('parts.break_space')
         @include('parts.error_success')
 
@@ -651,6 +752,7 @@
                     <label for="bussiness_person" class="p-font">*Responsible Person:</label>
                     <input type="text" name="bussiness_person" id="bussiness_person" required />
                 </div>
+
                 <div>
                     <label for="bussiness_email" class="p-font">*Email:</label>
                     <input type="email" name="bussiness_email" id="bussiness_email" required />
@@ -678,14 +780,12 @@
                     <textarea name="bussiness_message" id="bussiness_message" required></textarea>
                 </div>
                 <div>
-                    <label for="uploadFileArea">@lang('careers.files')</label>
+                    <label for="uploadFileArea" class="p-font">@lang('careers.files')</label>
                     <div id="uploadFileArea" class="form-control" onclick="openUploadWindow()">
-                        <p id="uploadText">@lang('careers.click-to') <br />@lang('careers.upload-files')</p>
+                        <p id="uploadText"><span>@lang('careers.click-to') <br />@lang('careers.upload-files')</span></p>
                         <input id="inputFile" type="file" name="files[]" onchange="fileUploaded()" multiple />
                     </div>
-
                 </div>
-
             </div>
 
             <!-- Submit form -->
