@@ -19,6 +19,95 @@ html {
     overflow-x: hidden !important;
 }
 
+.iframe-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.popup-click {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 99;
+}
+
+.popup {
+    max-width: 1440px;
+    width: 90vw;
+    /* height: calc(100vh - 75px); */
+    /* height: 90vh; */
+    position: fixed;
+    margin: 0 auto;
+    top: 10%;
+    padding: 20px;
+    left: 50%;
+    z-index: 10;
+    transform: translateX(-50%);
+    border-radius: 30px;
+}
+
+.shadow-2 {
+    -webkit-box-shadow: -1px -1px 15px 1px var(--shadow-color);
+    -moz-box-shadow: -1px -1px 15px 1px var(--shadow-color);
+    box-shadow: -1px -1px 15px 1px var(--shadow-color);
+    background-color: white;
+    z-index: 110;
+}
+
+.popup-content {
+    width: 100%;
+    height: 100%;
+    z-index: 110;
+}
+
+.popup-container {
+    width: 100%;
+    height: 0%;
+    margin: 0 auto;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0vw;
+    height: 0vh;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.close {
+    position: absolute;
+    right: -25px;
+    top: -25px;
+    display: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--button-bg-orange);
+    color: white !important;
+    opacity: 1 !important;
+    padding-top: 16px;
+    padding-left: 18px;
+    transition: 0.2s transform ease-in-out;
+
+}
+
+.close:hover {
+    transform: scale(1.2);
+}
+
 .bold {
     font-weight: bold;
 }
@@ -170,16 +259,13 @@ html {
     position: relative;
 }
 
-#slider div {
-    display: flex;
-    height: 300px;
-}
+
 
 .slider-left {
-    width: 50%;
-    margin-right: 5px;
+    flex-basis: 49%;
     background-color: white;
     border-radius: 15px;
+    padding: 10px;
     position: relative;
 }
 
@@ -190,6 +276,7 @@ html {
     width: 50px;
     border-radius: 50%;
     z-index: 100;
+    cursor: pointer;
 }
 
 #next {
@@ -199,26 +286,27 @@ html {
     width: 50px;
     border-radius: 50%;
     z-index: 100;
-}
-
-.slider-left img {
-    object-fit: contain;
-    width: 100%;
-    border-radius: 15px;
+    cursor: pointer;
 }
 
 .slider-right {
-    width: 50%;
-    margin-left: 5px;
+    flex-basis: 49%;
     background-color: white;
     border-radius: 15px;
     position: relative;
+    padding: 10px;
 }
 
 .slider-right img {
     object-fit: cover;
     width: 100%;
     border-radius: 15px;
+}
+
+#slider>div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 #slider>img {

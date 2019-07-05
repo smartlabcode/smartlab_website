@@ -38,12 +38,33 @@
     <img class="secTwoBg" src="../images/img/header-fluid-blue.svg">
     <h2 class="h1-font center">@lang('animations.sec2h2')</h2>
     <div id="slider">
+        <div class="popup-overlay"></div>
+        <div class="popup">
+            <span class="close"> X </span>
+            <div class="popup-container">
+                <div class="iframe-container popup-content">
 
+                </div>
+            </div>
+
+        </div>
         <div>
-            <div class="slider-left shadow-1"><img id="firstPart" src="" />
+            <div class="slider-left shadow-1">
+                <div class="popup-click popup-click-left">
+
+                </div>
+                <div class="iframe-container" id="left-iframe">
+                    <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/Q3cZOOmbJdE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+                </div>
                 <img id="prev" class="prethodni shadow-1" src="../images/img/Picture2.png">
             </div>
-            <div class="slider-right shadow-1"><img id="secondPart" src="" />
+            <div class="slider-right shadow-1">
+                <div class="popup-click popup-click-right">
+
+                </div>
+                <div class="iframe-container" id="right-iframe">
+                    <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/s5xDYxh2SAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+                </div>
                 <img id="next" class="sljedeci shadow-1" src="../images/img/Picture3.png">
             </div>
         </div>
@@ -156,7 +177,7 @@
         });
         const animationObserver = new IntersectionObserver(function(entries, animationObserver) {
             entries.forEach(entry => {
-                console.log(entry);
+
                 if (entry.isIntersecting) {
                     lottie.play();
                 } else lottie.pause();
@@ -168,12 +189,40 @@
         var imgTwo = 1;
 
         var images = [
-            "https://static.igre123.net/slike/212266-121951/mala-maca.jpg", // 0
-            "https://opusteno.rs/slike/2012/03/smesne-slike-14024/mala-maca.jpg", // 1
-            "https://static.igre123.net/slike/235049-148875/mala-maca.jpg", // 2
-            "https://static.igre123.net/slike/205865-134729/mala-maca.jpg" // 3
+            '<iframe width="560" height="315" src="https://www.youtube.com/embed/Q3cZOOmbJdE" modestbranding=1 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', // 0
+            '<iframe width="560" height="315" src="https://www.youtube.com/embed/s5xDYxh2SAw" modestbranding=1 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', // 1
+            '<iframe width="560" height="315" src="https://www.youtube.com/embed/V25yh0oI_y8" modestbranding=1 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', // 2
+            '<iframe width="560" height="315" src="https://www.youtube.com/embed/xN1Uf4GtwIs" modestbranding=1 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', // 3
+            '<iframe width="560" height="315" src="https://www.youtube.com/embed/Vh49p4JyE9s" modestbranding=1 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+            '<iframe width="560" height="315" src="https://www.youtube.com/embed/W65Ywt3a04c" modestbranding=1 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+            '<iframe width="560" height="315" src="https://www.youtube.com/embed/yoY-Hba4sZk" modestbranding=1 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
         ];
+        let popupClickLeft = document.querySelector(".popup-click-left");
+        let popupClickRight = document.querySelector(".popup-click-right");
+        let popupVideo = document.querySelector(".popup-content");
+        let closePopup = document.querySelector(".close");
+        let popup = document.querySelector(".popup");
+        let popupOverlay = document.querySelector(".popup-overlay");
+        closePopup.addEventListener("click", popupClose);
 
+        function popupClose() {
+            popupVideo.innerHTML = "";
+            closePopup.style.display = "none";
+            popup.classList.remove("shadow-2");
+            popupOverlay.style.width = "0vw";
+            popupOverlay.style.height = "0vh";
+
+        }
+
+        function popupContent(imgIndex) {
+            popupVideo.innerHTML = images[imgIndex];
+            closePopup.style.display = "inline-block";
+            popup.classList.add("shadow-2");
+            popupOverlay.style.width = "100vw";
+            popupOverlay.style.height = "100vh";
+        }
+        popupClickLeft.addEventListener("click", () => popupContent(imgOne));
+        popupClickRight.addEventListener("click", () => popupContent(imgTwo));
         let prev = document.querySelector("#prev");
         let next = document.querySelector("#next");
 
@@ -185,12 +234,16 @@
         });
 
         function changeImage(par) {
-            console.log("clicked")
-            if (window.innerWidth > 768) {
-                if (imgOne < (images.length - 2) && par == "next") {
 
+            console.log(imgOne, imgTwo)
+            if (window.innerWidth > 768) {
+                if (par == "next") {
                     imgOne = imgTwo;
                     imgTwo = imgTwo + 1;
+                    if (imgTwo == images.length - 1) {
+                        imgOne = imgTwo;
+                        imgTwo = 0;
+                    }
 
                 } else if (imgOne !== 0 && par == "previous") {
                     imgOne = imgOne - 1;
@@ -200,8 +253,8 @@
                 var imgOneSrc = images[imgOne];
                 var imgTwoSrc = images[imgTwo];
 
-                document.getElementById("firstPart").src = imgOneSrc;
-                document.getElementById("secondPart").src = imgTwoSrc;
+                document.getElementById("left-iframe").innerHTML = imgOneSrc;
+                document.getElementById("right-iframe").innerHTML = imgTwoSrc;
 
             } else {
                 if (imgOne < images.length - 1 && par == "next") {
