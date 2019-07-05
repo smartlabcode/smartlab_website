@@ -2100,6 +2100,86 @@
             </defs>
           </svg>
           <div class="team-img">
+            <img src="images/team/irfo-k.png">
+          </div>
+          <img src="images/img/blue-circle.svg" class="team-blue1">
+          <img src="images/img/orange-circle.svg" class="team-orange1">
+        </div>
+        <div class="team-description">
+          <h3>Irfan K.</h3>
+          <p>eLearning Designer</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <div class="team-img-container">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
+            <defs>
+              <clipPath id="clipPath">
+                <path d="M94.773,4.745c75.489-25.516,161.5,56.6,172.423,133.442,13.424,94.574-90.134,153.618-147.957,167.637C59.091,320.363,11.322,268.811.8,154.877-6.4,77.363,35.671,24.773,94.773,4.745Z" />
+              </clipPath>
+            </defs>
+          </svg>
+          <div class="team-img">
+            <img src="images/team/ibro.png">
+          </div>
+          <img src="images/img/blue-circle.svg" class="team-blue2">
+          <img src="images/img/orange-circle.svg" class="team-orange2">
+        </div>
+        <div class="team-description">
+          <h3>Ibrahim Z.</h3>
+          <p>eLearning /wordpress Developer</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <div class="team-img-container">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
+            <defs>
+              <clipPath id="clipPath">
+                <path d="M94.773,4.745c75.489-25.516,161.5,56.6,172.423,133.442,13.424,94.574-90.134,153.618-147.957,167.637C59.091,320.363,11.322,268.811.8,154.877-6.4,77.363,35.671,24.773,94.773,4.745Z" />
+              </clipPath>
+            </defs>
+          </svg>
+          <div class="team-img">
+            <img src="images/team/hare.png">
+          </div>
+          <img src="images/img/blue-circle.svg" class="team-blue3">
+          <img src="images/img/orange-circle.svg" class="team-orange3">
+        </div>
+        <div class="team-description">
+          <h3>Haris M.</h3>
+          <p>eLearning/JS Developer</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <div class="team-img-container">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
+            <defs>
+              <clipPath id="clipPath">
+                <path d="M94.773,4.745c75.489-25.516,161.5,56.6,172.423,133.442,13.424,94.574-90.134,153.618-147.957,167.637C59.091,320.363,11.322,268.811.8,154.877-6.4,77.363,35.671,24.773,94.773,4.745Z" />
+              </clipPath>
+            </defs>
+          </svg>
+          <div class="team-img">
+            <img src="images/team/rizah.png">
+          </div>
+          <img src="images/img/blue-circle.svg" class="team-blue4">
+          <img src="images/img/orange-circle.svg" class="team-orange4">
+        </div>
+        <div class="team-description">
+          <h3>Rizah K.</h3>
+          <p>Founder & CEO</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <div class="team-img-container">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
+            <defs>
+              <clipPath id="clipPath">
+                <path d="M94.773,4.745c75.489-25.516,161.5,56.6,172.423,133.442,13.424,94.574-90.134,153.618-147.957,167.637C59.091,320.363,11.322,268.811.8,154.877-6.4,77.363,35.671,24.773,94.773,4.745Z" />
+              </clipPath>
+            </defs>
+          </svg>
+          <div class="team-img">
             <img src="images/team/amer.png">
           </div>
           <img src="images/img/blue-circle.svg" class="team-blue1">
@@ -2107,7 +2187,7 @@
         </div>
         <div class="team-description">
           <h3>Amer M.</h3>
-          <p>eLearning Designer</p>
+          <p>eLearning/multimedia Designer</p>
         </div>
       </div>
       <div class="team-member">
@@ -2120,13 +2200,13 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img src="images/team/amer.png">
+            <img src="images/team/irfo-s.png">
           </div>
           <img src="images/img/blue-circle.svg" class="team-blue2">
           <img src="images/img/orange-circle.svg" class="team-orange2">
         </div>
         <div class="team-description">
-          <h3>Amer M.</h3>
+          <h3>Irfan S.</h3>
           <p>eLearning Designer</p>
         </div>
       </div>
@@ -2140,14 +2220,14 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img src="images/team/amer.png">
+            <img src="images/team/aida.png">
           </div>
           <img src="images/img/blue-circle.svg" class="team-blue3">
           <img src="images/img/orange-circle.svg" class="team-orange3">
         </div>
         <div class="team-description">
-          <h3>Amer M.</h3>
-          <p>eLearning Designer</p>
+          <h3>Aida R.</h3>
+          <p>eLearning/instructional Designer</p>
         </div>
       </div>
       <div class="team-member">
@@ -2160,14 +2240,14 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img src="images/team/amer.png">
+            <img src="images/team/emir.png">
           </div>
           <img src="images/img/blue-circle.svg" class="team-blue4">
           <img src="images/img/orange-circle.svg" class="team-orange4">
         </div>
         <div class="team-description">
-          <h3>Amer M.</h3>
-          <p>eLearning Designer</p>
+          <h3>Emir M.</h3>
+          <p>Front-End/moodle developer</p>
         </div>
       </div>
       <div class="team-member">
@@ -2180,74 +2260,74 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img src="images/team/amer.png">
-          </div>
-          <img src="images/img/blue-circle.svg" class="team-blue1">
-          <img src="images/img/orange-circle.svg" class="team-orange1">
-        </div>
-        <div class="team-description">
-          <h3>Amer M.</h3>
-          <p>eLearning Designer</p>
-        </div>
-      </div>
-      <div class="team-member">
-        <div class="team-img-container">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
-            <defs>
-              <clipPath id="clipPath">
-                <path d="M94.773,4.745c75.489-25.516,161.5,56.6,172.423,133.442,13.424,94.574-90.134,153.618-147.957,167.637C59.091,320.363,11.322,268.811.8,154.877-6.4,77.363,35.671,24.773,94.773,4.745Z" />
-              </clipPath>
-            </defs>
-          </svg>
-          <div class="team-img">
-            <img src="images/team/amer.png">
-          </div>
-          <img src="images/img/blue-circle.svg" class="team-blue2">
-          <img src="images/img/orange-circle.svg" class="team-orange2">
-        </div>
-        <div class="team-description">
-          <h3>Amer M.</h3>
-          <p>eLearning Designer</p>
-        </div>
-      </div>
-      <div class="team-member">
-        <div class="team-img-container">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
-            <defs>
-              <clipPath id="clipPath">
-                <path d="M94.773,4.745c75.489-25.516,161.5,56.6,172.423,133.442,13.424,94.574-90.134,153.618-147.957,167.637C59.091,320.363,11.322,268.811.8,154.877-6.4,77.363,35.671,24.773,94.773,4.745Z" />
-              </clipPath>
-            </defs>
-          </svg>
-          <div class="team-img">
-            <img src="images/team/amer.png">
-          </div>
-          <img src="images/img/blue-circle.svg" class="team-blue3">
-          <img src="images/img/orange-circle.svg" class="team-orange3">
-        </div>
-        <div class="team-description">
-          <h3>Amer M.</h3>
-          <p>eLearning Designer</p>
-        </div>
-      </div>
-      <div class="team-member">
-        <div class="team-img-container">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
-            <defs>
-              <clipPath id="clipPath">
-                <path d="M94.773,4.745c75.489-25.516,161.5,56.6,172.423,133.442,13.424,94.574-90.134,153.618-147.957,167.637C59.091,320.363,11.322,268.811.8,154.877-6.4,77.363,35.671,24.773,94.773,4.745Z" />
-              </clipPath>
-            </defs>
-          </svg>
-          <div class="team-img">
-            <img src="images/team/amer.png">
+            <img src="images/team/florin.png">
           </div>
           <img src="images/img/blue-circle.svg" class="team-blue4">
           <img src="images/img/orange-circle.svg" class="team-orange4">
         </div>
         <div class="team-description">
-          <h3>Amer M.</h3>
-          <p>eLearning Designer</p>
+          <h3>Florin B.</h3>
+          <p>Front-End Developer</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <div class="team-img-container">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
+            <defs>
+              <clipPath id="clipPath">
+                <path d="M94.773,4.745c75.489-25.516,161.5,56.6,172.423,133.442,13.424,94.574-90.134,153.618-147.957,167.637C59.091,320.363,11.322,268.811.8,154.877-6.4,77.363,35.671,24.773,94.773,4.745Z" />
+              </clipPath>
+            </defs>
+          </svg>
+          <div class="team-img">
+            <img src="images/team/mirza.png">
+          </div>
+          <img src="images/img/blue-circle.svg" class="team-blue4">
+          <img src="images/img/orange-circle.svg" class="team-orange4">
+        </div>
+        <div class="team-description">
+          <h3>Mirza O.</h3>
+          <p>Full Stack/DevOps</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <div class="team-img-container">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
+            <defs>
+              <clipPath id="clipPath">
+                <path d="M94.773,4.745c75.489-25.516,161.5,56.6,172.423,133.442,13.424,94.574-90.134,153.618-147.957,167.637C59.091,320.363,11.322,268.811.8,154.877-6.4,77.363,35.671,24.773,94.773,4.745Z" />
+              </clipPath>
+            </defs>
+          </svg>
+          <div class="team-img">
+            <img src="images/team/emina.png">
+          </div>
+          <img src="images/img/blue-circle.svg" class="team-blue4">
+          <img src="images/img/orange-circle.svg" class="team-orange4">
+        </div>
+        <div class="team-description">
+          <h3>Emina K.</h3>
+          <p>PR/Administration Manager</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <div class="team-img-container">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
+            <defs>
+              <clipPath id="clipPath">
+                <path d="M94.773,4.745c75.489-25.516,161.5,56.6,172.423,133.442,13.424,94.574-90.134,153.618-147.957,167.637C59.091,320.363,11.322,268.811.8,154.877-6.4,77.363,35.671,24.773,94.773,4.745Z" />
+              </clipPath>
+            </defs>
+          </svg>
+          <div class="team-img">
+            <img src="images/team/you.png">
+          </div>
+          <img src="images/img/blue-circle.svg" class="team-blue4">
+          <img src="images/img/orange-circle.svg" class="team-orange4">
+        </div>
+        <div class="team-description">
+          <h3>You?</h3>
+          <p>Feel Free to Join Us</p>
         </div>
       </div>
     </div>
