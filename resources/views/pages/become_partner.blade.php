@@ -219,12 +219,49 @@
         left: 26.5%;
     }
 
+    .--step1::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        background-color: white;
+        display: inline-block;
+        position: absolute;
+        left: 15px;
+        bottom: -7px;
+        transform: rotateZ(45deg);
+
+    }
+
+    .--step1::after {
+        content: "";
+        width: 15px;
+        height: 15px;
+        background-color: white;
+        display: inline-block;
+        position: absolute;
+        right: 15px;
+        bottom: -7px;
+        transform: rotateZ(45deg);
+    }
+
     .--step2 {
         position: absolute;
         bottom: 43%;
         left: 2%;
         min-width: 35%;
         max-width: 35%;
+    }
+
+    .--step2::after {
+        content: "";
+        width: 15px;
+        height: 15px;
+        background-color: white;
+        display: inline-block;
+        position: absolute;
+        right: -7px;
+        bottom: 15px;
+        transform: rotateZ(45deg);
     }
 
     .--step3 {
@@ -235,6 +272,18 @@
         max-width: 35%;
     }
 
+    .--step3::after {
+        content: "";
+        width: 15px;
+        height: 15px;
+        background-color: white;
+        display: inline-block;
+        position: absolute;
+        left: 15px;
+        bottom: -7px;
+        transform: rotateZ(45deg);
+    }
+
     .--step4 {
         max-width: 35%;
         min-width: 35%;
@@ -243,12 +292,36 @@
         right: -3%;
     }
 
+    .--step4::after {
+        content: "";
+        width: 15px;
+        height: 15px;
+        background-color: white;
+        display: inline-block;
+        position: absolute;
+        left: -7px;
+        top: 15px;
+        transform: rotateZ(45deg);
+    }
+
     .--step5 {
         min-width: 35%;
         max-width: 35%;
         position: absolute;
         bottom: 22%;
         left: -13%;
+    }
+
+    .--step5::after {
+        content: "";
+        width: 15px;
+        height: 15px;
+        background-color: white;
+        display: inline-block;
+        position: absolute;
+        bottom: -7px;
+        right: 15px;
+        transform: rotateZ(45deg);
     }
 
     .partnership-container {
