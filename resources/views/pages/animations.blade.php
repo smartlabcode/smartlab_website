@@ -204,6 +204,7 @@
         let popup = document.querySelector(".popup");
         let popupOverlay = document.querySelector(".popup-overlay");
         closePopup.addEventListener("click", popupClose);
+        popupOverlay.addEventListener("click", popupClose);
 
         function popupClose() {
             popupVideo.innerHTML = "";
@@ -211,7 +212,6 @@
             popup.classList.remove("shadow-2");
             popupOverlay.style.width = "0vw";
             popupOverlay.style.height = "0vh";
-
         }
 
         function popupContent(imgIndex) {

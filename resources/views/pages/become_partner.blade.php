@@ -27,7 +27,7 @@
 
     .p-font {
         font-family: "Source Sans Pro", sans-serif !important;
-        font-size: 1.5em;
+        font-size: 1.4em;
         font-weight: 300;
         color: black !important;
     }
@@ -143,6 +143,7 @@
     .partner-item img {
         flex-basis: 25%;
         margin-top: 20px;
+        min-height: 200px;
     }
 
     .partner-item h2 {
@@ -186,13 +187,15 @@
     .company {
         position: absolute;
         left: 15%;
-        top: 80px;
+        top: 160px;
+        text-align: right;
+        font-weight: bold;
     }
 
     .smartlab {
         position: absolute;
         right: 8%;
-        top: 80px;
+        top: 160px;
     }
 
     .partnership-usecase-step {
@@ -405,7 +408,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 35%;
+        padding-top: 30%;
         flex-wrap: wrap;
     }
 
@@ -418,12 +421,18 @@
         flex-basis: 20%;
     }
 
+    .partner-experience-logo img {
+        width: 90%;
+        border-radius: 50%;
+    }
+
     .partner-experience-content {
-        flex-basis: 80%;
-        padding: 150px 0 150px 150px;
+        flex-basis: 77%;
+        padding: 150px 0 0px 100px;
+        /* margin-left: 50px; */
         background-image: url(../images/img/quotation-marks.svg);
         background-repeat: no-repeat;
-        background-size: 25%;
+        background-size: 30%;
     }
 
     .partner-experience-content p {
@@ -434,6 +443,12 @@
     .partner-experience-image {
         display: flex;
         align-items: center;
+    }
+
+    .partner-experience-image img {
+        border-radius: 50%;
+        width: 75px;
+        margin-right: 25px;
     }
 
     .partner-experience-image p span {
@@ -449,6 +464,18 @@
         z-index: -100;
         width: 120vw;
         transform: translateX(-20%) scaleY(1);
+    }
+
+    .partner-experience-name {
+        color: var(--h2-color);
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    .partner-experience-company {
+        font-style: normal;
+        font-size: 1.3rem;
     }
 
     .partner-form {
@@ -471,7 +498,7 @@
     }
 
     .partner-form-section {
-        margin-top: 20% !important;
+        margin-top: 27% !important
     }
 
     .partner-form-group input,
@@ -550,8 +577,12 @@
         animation: arrow 0.2s ease-in-out forwards !important;
     }
 
-    .margin-t-50 {
-        margin-top: 50px !important;
+    .margin-t-400 {
+        margin-top: 400px !important;
+    }
+
+    .margin-b-100 {
+        margin-bottom: 150px !important;
     }
 
     .margin-b-50 {
@@ -559,7 +590,7 @@
     }
 
     .margin-b-150 {
-        margin-bottom: 150px !important;
+        margin-bottom: 250px !important;
     }
 
     .nav-top p {
@@ -605,7 +636,7 @@
     </section>
     <section class="partner-container contain margin-b-150 ">
         <div class="partner-item">
-            <img src="../images/partner/partner-1-collumn.svg">
+            <img src="../images/partner/course-production-icon.svg">
             <div>
                 <h2 class="h2-font">Course Production
                     Partnership</h2>
@@ -624,7 +655,7 @@
 
         </div>
         <div class="partner-item">
-            <img src="../images/partner/partner-2-collumn.svg">
+            <img src="../images/partner/moodle-support-icon.svg">
             <div>
                 <h2 class="h2-font">Moodle Support
                     Partnership</h2>
@@ -644,7 +675,7 @@
 
         </div>
         <div class="partner-item">
-            <img src="../images/partner/partner-3-collumn.svg">
+            <img src="../images/partner/service-resseller-icon.svg">
             <div>
                 <h2 class="h2-font">Service Reseller
                     Partnership</h2>
@@ -668,7 +699,7 @@
         <section class="partnership-usecase-container contain">
 
             <div class=" partnership-usecase">
-                <h2 class="centar h1-font">Use Case Partnership</h2>
+                <h2 class="centar h1-font margin-b-50">Use Case Partnership</h2>
                 <img class="partnership-usecase-img" src="../images/partner/use-case-partnership.svg" />
 
                 <h3 class="company p-font">Company
@@ -702,10 +733,10 @@
             </div>
         </section>
     </div>
-    <section class="contain margin-b-150 ">
+    <section class="contain margin-b-150 margin-t-400">
 
         <div class="partnership-steps-container">
-            <h2 class="centar h1-font">
+            <h2 class="centar h1-font margin-b-100">
                 Partnership can be arranged in 6 steps
             </h2>
             <div class="partnership-steps-item">
@@ -782,17 +813,17 @@
         <div class="partner-experience">
             <h2 class="centar h1-font margin-b-50">Partner experience</h2>
             <div class="partner-experience-logo">
-                <img src="" alt="partner logo" />
+                <img src="../images/partner/logo.png" alt="partner logo" />
             </div>
             <div class="partner-experience-content">
-                <p class="p-font margin-b-150">“We found SmartLab very professional to work with. They quickly understood the brief, were proactive and
+                <p class="p-font margin-b-100">“We found SmartLab very professional to work with. They quickly understood the brief, were proactive and
                     easy to communicate with during the build phase and delivered a final product that met fully with our
                     expectations.”</p>
                 <div class="partner-experience-image">
-                    <img src="" alt="partner">
+                    <img src="../images/partner/nick.jpg" alt="partner">
                     <p>
-                        <span>Nick Roberts</span>
-                        <span>Risk Crew</span>
+                        <span class="partner-experience-name">Nick Roberts</span>
+                        <span class="partner-experience-company">Risk Crew</span>
                     </p>
 
                 </div>
@@ -800,7 +831,7 @@
         </div>
     </section>
     <!-- TODO dont delete this-->
-    <section class="partner-form-section contain margin-b-150 ">
+    <section class="partner-form-section contain">
         @include('parts.break_space')
         @include('parts.error_success')
 
