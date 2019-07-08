@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3798 1303 352.8 290.936">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff931f;
+      }
+
+      .cls-13, .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        font-size: 41.34px;
+      }
+
+      .cls-2, .cls-3 {
+        font-family: Roboto-Bold, Roboto;
+        font-weight: 700;
+      }
+
+      .cls-3 {
+        font-size: 43.09px;
+      }
+
+      .cls-4 {
+        fill: #c9d7e4;
+      }
+
+      .cls-5 {
+        fill: #f58a1f;
+      }
+
+      .cls-6 {
+        fill: url(#pattern);
+      }
+
+      .cls-7 {
+        fill: #cc6f1b;
+      }
+
+      .cls-8 {
+        fill: #2b3e55;
+      }
+
+      .cls-9 {
+        fill: #e53320;
+      }
+
+      .cls-10 {
+        fill: #1b2f44;
+      }
+
+      .cls-11 {
+        fill: #d7a185;
+      }
+
+      .cls-12 {
+        fill: #c99781;
+      }
+
+      .cls-14 {
+        fill: #567dbe;
+      }
+
+      .cls-15 {
+        fill: #333854;
+      }
+
+      .cls-16 {
+        fill: #cfffff;
+      }
+    </style>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 158 113">
+      <image width="158" height="113" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJ4AAABxCAYAAAAklxosAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAxBJREFUeNrs3d1x2zAQRlEtxlUkbSRtxbUkbSVtJG0oozfN2LJoCT8L4NwCJHJx8S1BUeDpBAAAGhJKcJvfP76cqxQ54vTt51+1Jl4bwT4S73x++xXff/0L4pGsfbFvCLijiLGTbPcGPouAO8gYq8v26IATkHjVWmk28R49rhUkjNVlm0G8HQWM1WVbXb5ZBYxdhJtFvGePcxYJYxfhZhPv2XPMfsO67CTdLlwmVvaaBeHWJ2P7DdKRj3iE20bAIB35thWPcPvJF6Qj4IjvHXo75c/rV9JtOvFjpHSr38iVfMkST3uVfDHiBHf42UryJUq8jEl3mQToP0al9wlJO/J1a7XXJzLz4+e1W1L2a92WbTd2lu7IMY24z5VJyFbnH72KN0OLzfoQ5WdEbFHnFnWJXoXKKt6Mj42P+ENT7Tp1ES+bdCv9VbDnJK9Zt+g5G8k297V0zUfqY3XpdtyfpPVN+ho1bSreyBa784Y4PYLg2fq+rJZ2hHtbi5S/GK0iHeH6j9MzNZ/+7jvh5pTvZdYCEm7u9huZZg/p5kzAR8YjZpKOcDnlW1o80uUW8LPjE6TDCPkis3SEm0u+JcQj3ZwCHh23lNuUkW7ecTgqa2k9A0i3n3zTJR7p9pHv8Ae2TjvSrXXNd288y6ozCrnHKWqbTjrJd2RsyyozCHONW6llN+nIl35VS7o95PsotArpMGI8S4s2e2sHJtJZiHRPPNJJvUPi2bUTLeUrWWcE1pHvvRArpMMImohnx0+pN6zVXla20o58t9ptabWwyP6iXizYaoEhj0VpsbjnQSEdUrRaN47RKoiu3SqtvgSwuECK1Lt+eKTU/nBA4iHtCrfUWFhIO0g8pOX616ynxZN2kHggHtBMPG0WEg97iCftIPFAPKCZeNosJB6IBxAPa4nn+g4SD8QDiIe5xHP9hpSJR0xotSAeQDwQDzgsngUEJB6IJwkh8UA8oJp42iokHvYS79arPwGJh/XEu+xlJvUg8UA8oKl42i0kHvYUz6um0FU8753FsMRznYdhaLUApue/AAMAhHDZKL6VuQ4AAAAASUVORK5CYII="/>
+    </pattern>
+  </defs>
+  <g id="Group_1376" data-name="Group 1376" transform="translate(-3980)">
+    <g id="Group_1214" data-name="Group 1214" transform="translate(305 1303)">
+      <g id="Group_1195" data-name="Group 1195">
+        <path id="Path_3236" data-name="Path 3236" class="cls-1" d="M169.9,119.9H59.9A59.962,59.962,0,0,1,0,59.9H0A59.877,59.877,0,0,1,59.9,0h110a59.877,59.877,0,0,1,59.9,59.9h0A59.962,59.962,0,0,1,169.9,119.9Z"/>
+        <g id="Group_1194" data-name="Group 1194">
+          <path id="Path_3237" data-name="Path 3237" class="cls-1" d="M120.6,118.9,85,140.3l5.4-40.9Z"/>
+        </g>
+      </g>
+      <g id="Group">
+        <text id="WE_ARE" data-name="WE ARE" class="cls-2" transform="translate(41.337 54.166)"><tspan x="0" y="0">WE ARE</tspan></text>
+        <text id="HIRING_" data-name="HIRING!" class="cls-3" transform="translate(37.637 93.166)"><tspan x="0" y="0">HIRING!</tspan></text>
+      </g>
+    </g>
+    <g id="Group_1212" data-name="Group 1212" transform="translate(182.028 1447.963)">
+      <g id="XMLID_29_">
+        <path id="XMLID_34_" class="cls-4" d="M142.1,31.1,160,14.6a2.19,2.19,0,0,0,0-3.3h0a2.272,2.272,0,0,0-3.3.2L141,30a.792.792,0,0,0,.1,1.1h0A.668.668,0,0,0,142.1,31.1Z"/>
+        <path id="XMLID_33_" class="cls-4" d="M141.8.1h0A2.267,2.267,0,0,0,139,1.9l-4.4,23.9a.779.779,0,0,0,.6.9h0a.715.715,0,0,0,.9-.5L143.5,3A2.351,2.351,0,0,0,141.8.1Z"/>
+        <path id="XMLID_32_" class="cls-4" d="M170.9,30.1a2.424,2.424,0,0,0-3.2-1.6l-10.3,4.1-12.2,4.1a.906.906,0,0,0-.6,1.1h0a.887.887,0,0,0,1,.6L169,33.2a2.3,2.3,0,0,0,1.9-3.1Z"/>
+        <path id="XMLID_31_" class="cls-4" d="M145.8,46.9,169,54.2a2.262,2.262,0,0,0,2.9-1.6h0a2.311,2.311,0,0,0-1.8-2.8l-23.9-4.4a.779.779,0,0,0-.9.6h0A.811.811,0,0,0,145.8,46.9Z"/>
+        <path id="XMLID_30_" class="cls-4" d="M142.8,54.4l16.4,17.9a2.19,2.19,0,0,0,3.3,0h0a2.272,2.272,0,0,0-.2-3.3L143.8,53.2a.792.792,0,0,0-1.1.1h0A.909.909,0,0,0,142.8,54.4Z"/>
+      </g>
+      <g id="Group_1211" data-name="Group 1211">
+        <g id="Group_1204" data-name="Group 1204">
+          <g id="Group_1198" data-name="Group 1198">
+            <circle id="XMLID_28_" class="cls-5" cx="18.4" cy="18.4" r="18.4" transform="translate(96.557 32.53) rotate(-15.89)"/>
+            <g id="XMLID_26_">
+              <rect id="XMLID_27_" class="cls-6" width="36.72" height="26.16" transform="translate(100.775 26.781)"/>
+            </g>
+          </g>
+          <g id="XMLID_24_">
+            <g id="Group_1200" data-name="Group 1200">
+              <g id="Group_1199" data-name="Group 1199">
+                <path id="Path_3238" data-name="Path 3238" class="cls-5" d="M72.8,96.9s1.5-.1,3.9-.5l-1.6-5.5c-.6.1-1.2.2-1.7.3A29.1,29.1,0,0,1,72.8,96.9Z"/>
+                <path id="Path_3239" data-name="Path 3239" class="cls-5" d="M59.6,63.6l7.3,25.8c.5-6.3-1.8-8.2,1.2-9.1,2.9-.9,5.5,4.1,5.4,10.9.6-.1,1.1-.2,1.7-.3L66.9,61.6Z"/>
+              </g>
+              <path id="Path_3240" data-name="Path 3240" class="cls-5" d="M76.9,124.3l.9,3a4.077,4.077,0,0,0,5,2.8l2.6-.7a4.875,4.875,0,0,0,.7-.3l-1.8-6.2a25.454,25.454,0,0,1-3.2.7C79.6,123.8,78.2,124,76.9,124.3Z"/>
+              <path id="Path_3241" data-name="Path 3241" class="cls-7" d="M72.8,96.9c2-9.6-1.1-17.7-4.7-16.6-3,.9-.7,2.8-1.2,9.1l9.9,34.9c1.4-.2,2.8-.5,4.3-.7a30.055,30.055,0,0,0,3.2-.7L76.8,96.4C74.3,96.8,72.8,96.9,72.8,96.9Z"/>
+            </g>
+            <path id="XMLID_25_" class="cls-7" d="M66.8,61.5,86.1,129a3.938,3.938,0,0,0,2-4.7L70,60.6Z"/>
+          </g>
+          <g id="Group_1202" data-name="Group 1202">
+            <g id="XMLID_21_">
+              <path id="XMLID_23_" class="cls-8" d="M42.2,52.2c-.1,0-.2.1-.3.1a1.449,1.449,0,0,0-.4,1.6L45,66.4l3.5,12.5A1.482,1.482,0,0,0,49.7,80H50a208.2,208.2,0,0,1,28.4-2.6L67.7,39.5A216.278,216.278,0,0,1,42.2,52.2Z"/>
+              <path id="XMLID_22_" class="cls-5" d="M90.9,23.9A213.7,213.7,0,0,1,67.7,39.5L78.5,77.3a216.954,216.954,0,0,1,27.9,1.1l24.8,2.5L120.9,44.8,110.6,8.7Z"/>
+            </g>
+            <g id="Group_1201" data-name="Group 1201">
+              <path id="Path_3242" data-name="Path 3242" class="cls-7" d="M107.3,71.7c-9.7.9-19.5,2-29.4,3.4l.6,2.1a216.954,216.954,0,0,1,27.9,1.1l24.8,2.5-3.2-11Z"/>
+              <path id="Path_3243" data-name="Path 3243" class="cls-9" d="M49.8,80h-.2C49.7,79.9,49.7,80,49.8,80Z"/>
+              <path id="Path_3244" data-name="Path 3244" class="cls-10" d="M68.8,76.5c-6.4,1-12.9,2.1-19.3,3.4.1,0,.1,0,.2.1h.5a208.2,208.2,0,0,1,28.4-2.6L78,75.3C74.8,75.6,71.8,76,68.8,76.5Z"/>
+            </g>
+          </g>
+          <path id="XMLID_20_" class="cls-8" d="M133,84.6l-1.4.4a2.086,2.086,0,0,1-2.6-1.5l-21.6-76a2.086,2.086,0,0,1,1.5-2.6l1.4-.4A2.086,2.086,0,0,1,112.9,6l21.6,76A2.165,2.165,0,0,1,133,84.6Z"/>
+          <g id="Group_1203" data-name="Group 1203">
+            <path id="XMLID_19_" class="cls-5" d="M47.8,75.9l-6.6,1.9a2.44,2.44,0,0,1-3.1-1.7l-4-14.2a2.44,2.44,0,0,1,1.7-3.1l6.6-1.9Z"/>
+            <rect id="XMLID_18_" class="cls-7" width="1.2" height="19.8" transform="translate(41.208 57.138) rotate(-15.89)"/>
+          </g>
+        </g>
+        <g id="Group_1210" data-name="Group 1210">
+          <g id="Group_1205" data-name="Group 1205">
+            <path id="XMLID_17_" class="cls-11" d="M54.4,126.6l-5.5-19.5s1.2-.3,2.3-.7c1.1-.3,8.6-3.5,11.1-13.8,2.6-10.3-1.7-12.8,2-13.9,3.6-1.1,6.8,7,4.7,16.6,0,0,7.3-.4,17.2-4.7a1.313,1.313,0,0,1,1.8.9l.7,2.4a1.637,1.637,0,0,1-.2,1.2,13.287,13.287,0,0,1-3.6,3l2.8-.3a1.246,1.246,0,0,1,1.4,1l.8,2.8a1.442,1.442,0,0,1-.3,1.3,14.95,14.95,0,0,1-3.6,2.8l2.7-.8a1.391,1.391,0,0,1,1.7.9l.8,2.7a1.592,1.592,0,0,1-.3,1.3,19.361,19.361,0,0,1-3.8,3.3l3.8-1.1a.618.618,0,0,1,.8.5l.5,1.6a.661.661,0,0,1-.1.6c-.9,1.2-5,5.5-14.7,7.2C66.2,124,59,125.3,54.4,126.6Z"/>
+            <g id="XMLID_12_">
+              <path id="XMLID_16_" class="cls-12" d="M87.2,113.3A14.773,14.773,0,0,0,91,110a1.442,1.442,0,0,0,.3-1.3,24.6,24.6,0,0,1-5.2,4.6Z"/>
+              <path id="XMLID_15_" class="cls-12" d="M73.1,121.8a130.091,130.091,0,0,0-18.6,4.8c4.5-1.3,11.7-2.6,22.9-4.6,9.7-1.7,13.8-6,14.7-7.2a.661.661,0,0,0,.1-.6l-.1-.3C92.1,114,85.3,119.4,73.1,121.8Z"/>
+              <path id="XMLID_14_" class="cls-12" d="M86.1,105.9a13.145,13.145,0,0,0,3.6-2.8,1.26,1.26,0,0,0,.3-1.3,19.024,19.024,0,0,1-5.6,4.2Z"/>
+              <path id="XMLID_13_" class="cls-12" d="M88.8,94A34.756,34.756,0,0,1,83,98.3l2-.1a13.287,13.287,0,0,0,3.6-3A1.637,1.637,0,0,0,88.8,94Z"/>
+            </g>
+          </g>
+          <g id="Group_1209" data-name="Group 1209">
+            <g id="Group_1206" data-name="Group 1206">
+              <rect id="XMLID_11_" class="cls-13" width="3.7" height="25.7" transform="translate(44.669 105.901) rotate(-15.89)"/>
+              <rect id="XMLID_10_" class="cls-4" width="1" height="25.7" transform="matrix(0.962, -0.274, 0.274, 0.962, 44.595, 105.849)"/>
+            </g>
+            <g id="Group_1208" data-name="Group 1208">
+              <g id="XMLID_7_">
+                <rect id="XMLID_9_" class="cls-14" width="45.6" height="23.4" transform="translate(-0.028 115.392) rotate(-15.89)"/>
+                <rect id="XMLID_8_" class="cls-15" width="45.6" height="8.4" transform="translate(6.424 137.894) rotate(-15.89)"/>
+              </g>
+              <g id="Group_1207" data-name="Group 1207">
+                <circle id="XMLID_6_" class="cls-16" cx="2.1" cy="2.1" r="2.1" transform="translate(35.092 130.856) rotate(-15.89)"/>
+                <circle id="XMLID_5_" class="cls-16" cx="2.1" cy="2.1" r="2.1" transform="translate(41.508 129.07) rotate(-15.89)"/>
+                <circle id="XMLID_4_" class="cls-8" cx="0.4" cy="0.4" r="0.4" transform="translate(37.002 131.322) rotate(-15.89)"/>
+                <circle id="XMLID_3_" class="cls-8" cx="0.4" cy="0.4" r="0.4" transform="matrix(0.962, -0.274, 0.274, 0.962, 37.408, 132.823)"/>
+                <circle id="XMLID_2_" class="cls-8" cx="0.4" cy="0.4" r="0.4" transform="translate(43.415 129.538) rotate(-15.89)"/>
+                <circle id="XMLID_1_" class="cls-8" cx="0.4" cy="0.4" r="0.4" transform="translate(43.889 130.92) rotate(-15.89)"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
