@@ -84,7 +84,8 @@ html {
     left: 0;
     width: 0vw;
     height: 0vh;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 53, 145, 0.9);
+    z-index: 110;
 }
 
 .close {
