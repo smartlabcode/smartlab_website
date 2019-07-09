@@ -200,7 +200,20 @@ class PagesController extends Controller
             return view('pages.general_error');
         }
     }
+    public function showOutsourcingProfilePage()
+    {
 
+        try {
+
+            return view('pages.outsourcing_profile');
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', 'PagesController - showOutsourcingProfilePage: ' . $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+    }
     /**
      * Display Partner page
      */
