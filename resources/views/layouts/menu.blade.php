@@ -698,14 +698,18 @@
         const firstNavItem = document.querySelector(".first");
         const backgroundImg = document.querySelector(".background-img");
         const whatWeDo = document.querySelector("#whatWeDo");
-        console.log(firstNavItem.getBoundingClientRect().left, backgroundImg.getBoundingClientRect().left + 100);
-        if (window.innerWidth > 900) {
-            if (firstNavItem.getBoundingClientRect().left < backgroundImg.getBoundingClientRect().left + 100) {
-                console.log("out of background");
+        try {
+            if (window.innerWidth > 900) {
+                if (firstNavItem.getBoundingClientRect().left < backgroundImg.getBoundingClientRect().left + 100) {
 
-                backgroundImg.style.right = "-200px";
+
+                    backgroundImg.style.right = "-200px";
+                }
             }
+        } catch {
+            console.log("");
         }
+
 
         let navButton = document.querySelector("#nav-button");
         let navButtonInner = document.querySelector("#nav-button-inner");
@@ -720,11 +724,11 @@
         let navLiContainer = document.querySelector("#nav-li-container");
         let samePageLinks = document.querySelectorAll(".same-page-link");
         let clicked = 0;
-        console.log(samePageLinks);
+
         for (let i = 0; i < samePageLinks.length; i++) {
-            console.log(i);
+
             samePageLinks[i].addEventListener("click", function(event) {
-                console.log("clicked");
+
                 navLiContainer.classList.toggle("height-js");
                 navButtonInner.style.animationName = "navBtnReverse";
                 navButtonInnerAfter.style.animationName = "navBtnAfterReverse";
