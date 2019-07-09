@@ -278,6 +278,7 @@
         background-color: var(--button-bg-color);
         border: 1px solid var(--button-bg-color);
         transition: all 0.2s ease-in;
+        outline: none !important;
     }
 
     .button:hover {
