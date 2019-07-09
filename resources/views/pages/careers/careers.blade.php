@@ -15,7 +15,7 @@
     .h1-font {
         font-family: "Montserrat", sans-serif;
         font-weight: bold;
-        font-size: 3em;
+        font-size: 3rem;
         margin-top: 0;
         margin-bottom: 25px;
         color: var(--h1-color);
@@ -23,15 +23,14 @@
 
     .h2-font {
         font-family: "Montserrat", sans-serif;
-        font-size: 2em;
+        font-size: 2rem;
         color: var(--h2-color) !important;
     }
 
     .p-font {
         font-family: "Source Sans Pro", sans-serif !important;
-        font-size: 1.4em;
-        font-weight: 300;
-        color: black !important;
+        font-size: 1.4rem;
+        color: #354144 !important;
     }
 
     .contain {
@@ -139,7 +138,7 @@
 
     /* Section three */
     #sectionThree {
-        width: 620px;
+        width: 840px;
         padding: 10px;
         margin: 0 auto;
     }
@@ -186,18 +185,6 @@
         display: none;
     }
 
-    #sendCareerButton {
-        border-radius: 50px;
-        padding: 10px;
-        background-color: #14213d;
-        width: 140px;
-        color: #fff;
-        cursor: pointer;
-        box-shadow: 2px 2px 2px rgba(150, 150, 150, 0.5);
-        outline: none !important;
-        position: relative;
-        left: 225px;
-    }
 
     .policyText {
         font-size: 12px;
@@ -300,13 +287,14 @@
     }
 
     .--gray {
-        background-color: #969696;
-        border-color: #969696;
+        background-color: #C9D6E2;
+        border-color: #C9D6E2;
+        color: var(--h1-color) !important;
     }
 
     .--gray:hover {
-        color: #14213d !important;
-        border: 1px solid #14213d !important;
+        color: var(--h1-color) !important;
+        border: 1px solid var(--h1-color) !important;
     }
 
     .header-content-right {
@@ -336,11 +324,12 @@
 
     .careers-positions-image {
         width: 50%;
+        padding: 20px;
     }
 
     .--left-10px {
         position: relative;
-        left: -10px;
+        left: -30px;
     }
 
     .careers-positions-info {
@@ -349,6 +338,15 @@
         flex-direction: column;
         align-items: center;
         padding: 50px;
+    }
+
+    .careers-positions-info p {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .careers-positions-info a {
+        margin-top: .5rem;
     }
 
     .button-orange {
@@ -361,6 +359,61 @@
         color: var(--button-bg-orange) !important;
         border: 1px solid var(--button-bg-orange) !important;
         box-shadow: none !important;
+    }
+
+    form input,
+    form textarea,
+    form select,
+    #uploadFileArea {
+        padding: 20px 20px !important;
+        height: auto !important;
+        box-sizing: border-box;
+        border: 3px solid #c9d6e2 !important;
+        border-radius: 10px !important;
+        font-family: "Source Sans Pro", sans-serif !important;
+        font-size: 1.4em !important;
+    }
+
+    form textarea {
+        height: 274px !important;
+        font-family: "Source Sans Pro", sans-serif !important;
+        font-size: 1.4em !important;
+    }
+
+    form input:focus,
+    form textarea:focus,
+    form select:focus,
+    #uploadFileArea:focus {
+        -webkit-box-shadow: -1px 1px 15px 0px rgba(0, 53, 145, 0) !important;
+        -moz-box-shadow: -1px 1px 15px 0px rgba(0, 53, 145, 0) !important;
+        box-shadow: -1px 1px 15px 0px rgba(0, 53, 145, 0) !important;
+        border: 3px solid rgba(0, 53, 145, 1) !important;
+        font-size: 1.4em !important;
+    }
+
+    #uploadFileArea:active {
+        -webkit-box-shadow: -1px 1px 15px 0px rgba(0, 53, 145, 0) !important;
+        -moz-box-shadow: -1px 1px 15px 0px rgba(0, 53, 145, 0) !important;
+        box-shadow: -1px 1px 15px 0px rgba(0, 53, 145, 0) !important;
+        border: 3px solid rgba(0, 53, 145, 1) !important;
+    }
+
+    form button {
+        position: relative;
+        left: 49%;
+        transform: translateX(-49%);
+        background-color: var(--h1-color) !important;
+        border: 1px solid var(--h1-color) !important;
+    }
+
+    form button:hover {
+        background-color: white !important;
+        color: var(--h1-color) !important;
+        border: 1px solid var(--h1-color) !important;
+    }
+
+    .centar {
+        text-align: center;
     }
 </style>
 
@@ -387,7 +440,7 @@
 
 </section>
 <section>
-    <h1>@lang('careers.availablePositions')</h1>
+    <h1 class="h1-font centar">@lang('careers.availablePositions')</h1>
     <div class="careers-positions-container contain">
         <div class="careers-positions">
             <div class="carrers-positions-image-container">
@@ -432,7 +485,7 @@
 
     <div id="sectionThree">
 
-        <h1>@lang('careers.apply-h1')</h1>
+        <h1 class="h1-font">@lang('careers.apply-h1')</h1>
 
         <br /><br />
 
@@ -444,32 +497,32 @@
             @csrf
 
             <div class="form-group">
-                <label for="name">@lang('careers.name')</label>
+                <label class="p-font" for="name">@lang('careers.name')</label>
                 <input type="text" name="name" class="form-control" id="name" placeholder="" required>
             </div>
 
             <div class="form-group">
-                <label for="surname">@lang('careers.prezime')</label>
+                <label class="p-font" for="surname">@lang('careers.prezime')</label>
                 <input type="text" name="lastname" class="form-control" id="surname" placeholder="" required>
             </div>
 
             <div class="form-group">
-                <label for="phone">@lang('careers.broj')</label>
+                <label class="p-font" for="phone">@lang('careers.broj')</label>
                 <input type="number" name="phone_number" class="form-control" id="phone" placeholder="" required>
             </div>
 
             <div class="form-group">
-                <label for="name">@lang('careers.email')</label>
+                <label class="p-font" for="name">@lang('careers.email')</label>
                 <input type="email" name="email" class="form-control" id="email" placeholder="" required>
             </div>
 
             <div class="form-group">
-                <label for="name">@lang('careers.napomena')</label>
+                <label class="p-font" for="name">@lang('careers.napomena')</label>
                 <textarea name="message" class="form-control" id="name" placeholder="" required></textarea>
             </div>
 
             <div class="form-group">
-                <label for="category">@lang('careers.kategorija')</label>
+                <label class="p-font" for="category">@lang('careers.kategorija')</label>
                 <select class="form-control" name="category" id="category" required>
                     <option disabled>@lang('careers.choose-kategorija')</option>
                     <option value="designer">@lang('careers.dizajner')</option>
@@ -481,7 +534,7 @@
 
                 <br />
 
-                <label for="uploadFileArea">@lang('careers.files')</label>
+                <label class="p-font" for="uploadFileArea">@lang('careers.files')</label>
                 <div id="uploadFileArea" class="form-control" onclick="openUploadWindow()">
                     <p id="uploadText">@lang('careers.click-to') <br />@lang('careers.upload-files')</p>
                     <input id="inputFile" type="file" name="files[]" onchange="fileUploaded()" multiple />
@@ -493,7 +546,7 @@
             <p class="policyText">@lang('careers.we-are-commited') <a href="#">@lang('careers.privacy')</a>.</p>
 
             <!-- Submit form -->
-            <button id="sendCareerButton">@lang('careers.send') </button>
+            <button id="sendCareerButton" class="button">@lang('careers.send') </button>
 
         </form>
 
