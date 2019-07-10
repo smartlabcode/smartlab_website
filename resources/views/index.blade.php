@@ -456,6 +456,10 @@
     object-position: 0px 50px;
   }
 
+  .blank img {
+    width: 127% !important;
+    object-position: 29px 44px !important;
+  }
 
   .team-blue1 {
     position: absolute;
@@ -2319,8 +2323,8 @@
               </clipPath>
             </defs>
           </svg>
-          <div class="team-img">
-            <img src="images/team/you.png">
+          <div class="team-img blank">
+            <img src="images/team/team-blank.svg">
           </div>
           <img src="images/img/blue-circle.svg" class="team-blue4">
           <img src="images/img/orange-circle.svg" class="team-orange4">
