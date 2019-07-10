@@ -186,16 +186,16 @@
 
     .company {
         position: absolute;
-        left: 15%;
-        top: 160px;
+        right: 66%;
+        top: 10%;
         text-align: right;
         font-weight: bold;
     }
 
     .smartlab {
         position: absolute;
-        right: 8%;
-        top: 160px;
+        left: 70%;
+        top: 10%;
     }
 
     .partnership-usecase-step {
@@ -408,7 +408,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 30%;
+        padding-top: 25%;
         flex-wrap: wrap;
     }
 
@@ -462,8 +462,8 @@
     .partner-experience-bg {
         position: absolute;
         z-index: -100;
-        width: 120vw;
-        transform: translateX(-20%) scaleY(1);
+        width: 150%;
+        transform: translateX(-16%) scaleY(1);
     }
 
     .partner-experience-name {
@@ -612,6 +612,354 @@
 
         100% {
             background-color: white;
+        }
+    }
+
+    @media only screen and (max-width: 1835px) {
+        .partnership-container>img {
+
+            width: 113%;
+            top: -16%;
+
+            transform: scaleY(0.9);
+
+        }
+    }
+
+    @media only screen and (max-width: 1300px) {
+        .company {
+
+            right: 68%;
+        }
+
+    }
+
+    @media only screen and (max-width: 1200px) {
+        .partnership-container>img {
+            width: 131%;
+            top: -21%;
+            transform: scaleY(0.9);
+        }
+
+        .--step1 {
+
+            bottom: 68%;
+
+        }
+
+        .--step4 {
+            max-width: 45%;
+            min-width: 45%;
+            position: absolute;
+            bottom: -1%;
+            right: -10%;
+        }
+
+        .partner-experience-content {
+            padding: 100px 0 0px 100px;
+        }
+
+        .margin-b-100 {
+            margin-bottom: 100px !important;
+        }
+    }
+
+    @media only screen and (max-width: 1100px) {
+        .--step1 {
+            min-width: 65%;
+            max-width: 65%;
+            position: absolute;
+            bottom: 68%;
+            left: 19.5%;
+        }
+
+        .--step1::before {
+            left: 65px;
+        }
+
+        .--step1::after {
+            right: 75px;
+        }
+
+        .--step2 {
+            position: absolute;
+            bottom: 40%;
+            left: -4%;
+            min-width: 45%;
+            max-width: 45%;
+        }
+
+        .--step3 {
+            position: absolute;
+            bottom: 32%;
+            right: -15%;
+            min-width: 45%;
+            max-width: 45%;
+        }
+
+        .--step3::after {
+
+            left: 74px;
+
+        }
+
+        .--step5 {
+            min-width: 45%;
+            max-width: 45%;
+            position: absolute;
+            bottom: 21%;
+            left: -9%;
+        }
+
+        .--step5::after {
+
+            right: 123px;
+        }
+
+
+
+        .company {
+            top: 12%;
+        }
+
+        .smartlab {
+            top: 12%;
+        }
+    }
+
+    @media only screen and (max-width: 1066px) {
+        .--step4 {
+            bottom: -5%;
+            right: -13%;
+
+        }
+    }
+
+    @media only screen and (max-width: 900px) {
+        .--step3::after {
+            left: 58px;
+        }
+
+        .--step1 {
+
+            bottom: 66%;
+
+        }
+
+        .--step1::after {
+            right: 70px;
+        }
+
+        .--step5 {
+            min-width: 55%;
+            max-width: 55%;
+
+        }
+
+        .--step5::after {
+            right: 166px;
+        }
+    }
+
+    @media only screen and (max-width: 900px) {
+        .--step1 {
+            min-width: 90%;
+            max-width: 90%;
+            left: 5%;
+        }
+
+        .--step1::before {
+            left: 143px;
+        }
+
+        .--step1::after {
+            right: 126px;
+        }
+
+        .--step2 {
+            position: absolute;
+            bottom: 39%;
+            left: -10%;
+            min-width: 50%;
+            max-width: 50%;
+        }
+
+        .--step4 {
+            max-width: 50%;
+            min-width: 50%;
+            position: absolute;
+            bottom: -9%;
+            right: -13%
+        }
+
+        .--step5 {
+            min-width: 60%;
+            max-width: 60%;
+            bottom: 19%;
+            left: -13%;
+        }
+
+        .--step5::after {
+            right: 161px;
+        }
+
+        .partner-experience {
+
+            padding-top: 20%;
+
+        }
+
+        .partner-experience-content {
+            padding: 50px 0 0px 20px
+        }
+
+        .margin-b-100 {
+            margin-bottom: 80px !important;
+        }
+
+        .partnership-steps-item {
+            flex-basis: 100%;
+        }
+
+        .margin-t-400 {
+            margin-top: 250px !important;
+        }
+
+        .partner-container {
+            flex-wrap: wrap;
+        }
+
+        .partner-item {
+            flex-basis: 100%;
+            margin-bottom: 25px;
+        }
+
+        .partner-form {
+
+            width: 95%;
+        }
+
+        .header-content-right img {
+            width: 90vw;
+        }
+
+        .header-content {
+            flex-direction: column-reverse;
+        }
+
+        .header-content-right {
+            flex-basis: 100%;
+        }
+
+        .header-content-left {
+            flex-basis: 100%;
+            padding-right: 0px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .header-background {
+            position: absolute;
+            z-index: -100;
+            transform: rotate(17deg);
+            top: -29%;
+            right: -41vw;
+            width: 157vw;
+        }
+
+        @media only screen and (max-width: 800px) {
+            .partner-experience-logo img {
+                width: 100%;
+                border-radius: 50%;
+            }
+
+            .partner-experience-content {
+                padding: 0px 0 0px 0px;
+                flex-basis: 100%;
+            }
+
+            .partner-experience-content p {
+                margin-bottom: 50px !important;
+            }
+
+            .partner-experience {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 15%;
+                flex-wrap: wrap;
+            }
+
+            .partner-experience-image {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .margin-b-150 {
+                margin-bottom: 150px !important;
+            }
+        }
+
+        @media only screen and (max-width: 800px) {
+            .partner-experience-bg {
+                width: 175%;
+            }
+
+        }
+
+        @media only screen and (max-width: 600px) {
+            .partner-experience {
+
+                padding-top: 20%;
+
+            }
+
+            .partner-experience-bg {
+                width: 200%;
+            }
+
+            .partner-experience-content p {
+                font-size: 1.2em;
+            }
+
+            .partner-form-group div {
+                flex-basis: 100%;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .partner-experience-bg {
+                width: 250%;
+            }
+
+            .partner-experience {
+                padding-top: 25%;
+            }
+        }
+
+        @media only screen and (max-width: 450px) {
+            .partner-experience-bg {
+                width: 290%;
+            }
+
+
+        }
+
+        @media only screen and (max-width: 400px) {
+            .partner-experience-bg {
+                width: 340%;
+            }
+
+
+        }
+
+        @media only screen and (max-width: 350px) {
+            .partner-experience-bg {
+                width: 400%;
+            }
+
+
         }
     }
 </style>
