@@ -411,6 +411,14 @@
     .button a:hover {
         text-decoration: none;
     }
+
+    .team-description-long {
+        display: none;
+    }
+
+    .team-skills {
+        display: none;
+    }
 </style>
 @section('content')
 
@@ -430,11 +438,97 @@
         </div>
         <img class="section-one-img-right" src="{{ asset('images/partner/outsourcing-header-img.svg') }}" />
     </div>
-
-
 </section>
 <section>
     <div class="team-member contain">
+        <!-- team skills Irfan K.-->
+        <div class="team-skills">
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="80">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="80">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Adobe Photoshop</p>
+                    <span class="counter h2-font" data-note="70">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="70">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Wordpress</p>
+                    <span class="counter h2-font" data-note="80">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="80">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">HTML/CSS</p>
+                    <span class="counter h2-font" data-note="90">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="90">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <div class="team-description-long">
+            <!-- Opširan tekst za outsourcing_profile page Irfan K.-->
+            <div class="p-font">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+                    praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+                    praesent luptatum zzril delenit augue duis
+                </p>
+            </div>
+            <button class="button">Hire me</button>
+        </div>
         <div class="team-img-container">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
                 <defs>
@@ -489,6 +583,94 @@
         </div>
     </div>
     <div class="team-member contain">
+        <div class="team-skills">
+            <!-- team skills Ibrahim Z.-->
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="50">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="50">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Adobe Photoshop</p>
+                    <span class="counter h2-font" data-note="68">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="68">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">HTML/CSS</p>
+                    <span class="counter h2-font" data-note="80">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="80">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Wordpress</p>
+                    <span class="counter h2-font" data-note="90">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="90">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <div class="team-description-long">
+            <!-- Opširan tekst za outsourcing_profile page Ibrahim Z.-->
+            <div class="p-font">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+                    praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+                    praesent luptatum zzril delenit augue duis
+                </p>
+            </div>
+            <button class="button">Hire me</button>
+        </div>
         <div class="team-img-container">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
                 <defs>
@@ -543,6 +725,96 @@
         </div>
     </div>
     <div class="team-member contain">
+        <div class="team-skills">
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="50">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="50">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="68">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="68">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="80">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="80">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="90">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="90">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <div class="team-description-long">
+            <!-- Opširan tekst za outsourcing_profile page Haris M.-->
+            <div class="p-font">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+                    praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+                    praesent luptatum zzril delenit augue duis
+                </p>
+            </div>
+            <button class="button">Hire me</button>
+        </div>
         <div class="team-img-container">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
                 <defs>
@@ -597,6 +869,96 @@
         </div>
     </div>
     <div class="team-member contain">
+        <div class="team-skills">
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="50">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="50">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="68">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="68">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="80">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="80">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="90">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="90">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <div class="team-description-long">
+            <!-- Opširan tekst za outsourcing_profile page Amer M.-->
+            <div class="p-font">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+                    praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+                    praesent luptatum zzril delenit augue duis
+                </p>
+            </div>
+            <button class="button">Hire me</button>
+        </div>
         <div class="team-img-container">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
                 <defs>
@@ -651,6 +1013,96 @@
         </div>
     </div>
     <div class="team-member contain">
+        <div class="team-skills">
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="50">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="50">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="68">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="68">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="80">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="80">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="90">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="90">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <div class="team-description-long">
+            <!-- Opširan tekst za outsourcing_profile page Irfan S.-->
+            <div class="p-font">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+                    praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+                    praesent luptatum zzril delenit augue duis
+                </p>
+            </div>
+            <button class="button">Hire me</button>
+        </div>
         <div class="team-img-container">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
                 <defs>
@@ -705,6 +1157,96 @@
         </div>
     </div>
     <div class="team-member contain">
+        <div class="team-skills">
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="50">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="50">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="68">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="68">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="80">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="80">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="90">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="90">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <div class="team-description-long">
+            <!-- Opširan tekst za outsourcing_profile page Aida R.-->
+            <div class="p-font">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+                    praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+                    praesent luptatum zzril delenit augue duis
+                </p>
+            </div>
+            <button class="button">Hire me</button>
+        </div>
         <div class="team-img-container">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
                 <defs>
@@ -759,6 +1301,96 @@
         </div>
     </div>
     <div class="team-member contain">
+        <div class="team-skills">
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="50">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="50">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="68">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="68">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="80">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="80">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="90">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="90">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <div class="team-description-long">
+            <!-- Opširan tekst za outsourcing_profile page Emir M.-->
+            <div class="p-font">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+                    praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+                    praesent luptatum zzril delenit augue duis
+                </p>
+            </div>
+            <button class="button">Hire me</button>
+        </div>
         <div class="team-img-container">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
                 <defs>
@@ -813,6 +1445,96 @@
         </div>
     </div>
     <div class="team-member contain">
+        <div class="team-skills">
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="50">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="50">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="68">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="68">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="80">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="80">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="90">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="90">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <div class="team-description-long">
+            <!-- Opširan tekst za outsourcing_profile page Florin B.-->
+            <div class="p-font">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+                    praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+                    praesent luptatum zzril delenit augue duis
+                </p>
+            </div>
+            <button class="button">Hire me</button>
+        </div>
         <div class="team-img-container">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
                 <defs>
@@ -867,6 +1589,96 @@
         </div>
     </div>
     <div class="team-member contain">
+        <div class="team-skills">
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="50">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="50">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="68">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="68">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="80">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="80">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="90">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="90">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <div class="team-description-long">
+            <!-- Opširan tekst za outsourcing_profile page Mirza O.-->
+            <div class="p-font">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+                    praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+                    praesent luptatum zzril delenit augue duis
+                </p>
+            </div>
+            <button class="button">Hire me</button>
+        </div>
         <div class="team-img-container">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
                 <defs>
@@ -921,6 +1733,96 @@
         </div>
     </div>
     <div class="team-member contain">
+        <div class="team-skills">
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="50">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="50">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="68">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="68">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="80">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="80">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate
+                        Storyline</p>
+                    <span class="counter h2-font" data-note="90">0</span><span class="h2-font">%</span>
+                </div>
+                <svg class="line-overlay" height="80" width="230" data-note="90">
+                    <g fill="none">
+                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+                <svg class="line-main" height="80" width="230">
+                    <g fill="none">
+                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <div class="team-description-long">
+            <!-- Opširan tekst za outsourcing_profile page Emina K.-->
+            <div class="p-font">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+                    praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+                    praesent luptatum zzril delenit augue duis
+                </p>
+            </div>
+            <button class="button">Hire me</button>
+        </div>
         <div class="team-img-container">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
                 <defs>
