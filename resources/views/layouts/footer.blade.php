@@ -245,6 +245,12 @@
         }
     }
 
+    @media screen and (max-width: 1024px) {
+        .nowrap {
+            flex-wrap: nowrap !important;
+        }
+    }
+
     @media screen and (max-width: 768px) {
         footer {
             background-position-y: 25%;
@@ -456,7 +462,7 @@
                     </p>
                 </div>
             </div>
-            <div class="footer-top-column --center">
+            <div class="footer-top-column --center nowrap">
                 <img src={{"/images/footer/social-icons/location.svg" }} />
                 <address>
                     <a href="https://www.google.com/maps/place/SmartLab/@43.8542408,18.3870703,17z/data=!3m1!4b1!4m5!3m4!1s0x4758c8c48c458d13:0xd3b7b0136b05bfe5!8m2!3d43.854237!4d18.389259" target="_blank">
