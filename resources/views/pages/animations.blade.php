@@ -6,10 +6,10 @@
 @section('content')
 
 <div class="background-section-one">
-    <img class="background-img" src="../images/img/header-illustration-group.svg" alt="blue background image" />
-    <img class="background-img-circle --circle1" src="../images/img/fluid-bright-circle.svg" />
-    <img class="background-img-circle --circle2" src="../images/img/fluid-bright-circle.svg" />
-    <img class="background-img-circle --circle3" src="../images/img/fluid-bright-circle.svg" />
+    <img class="background-img" src="{{asset('/images/img/header-illustration-group.svg')}}" alt="blue background image" />
+    <img class="background-img-circle --circle1" src="{{asset('/images/img/fluid-bright-circle.svg')}}" alt="blue circle background image" />
+    <img class="background-img-circle --circle2" src="{{asset('/images/img/fluid-bright-circle.svg')}}" alt="blue circle background image" />
+    <img class="background-img-circle --circle3" src="{{asset('/images/img/fluid-bright-circle.svg')}}" alt="blue circle background image" />
     <section class="section-one contain">
 
         <div class="section-one-text">
@@ -34,8 +34,8 @@
 
 <!--   SECTION TWO -->
 <section class="contain relative section-two">
-    <img class="secTwoBg2" src="../images/img/orange-circle.svg">
-    <img class="secTwoBg" src="../images/img/header-fluid-blue.svg">
+    <img class="secTwoBg2" src="{{asset('/images/img/orange-circle.svg')}}">
+    <img class="secTwoBg" src="{{asset('/images/img/header-fluid-blue.svg')}}">
     <h2 class="h1-font center">@lang('animations.sec2h2')</h2>
     <div id="slider">
         <div class="popup-overlay"></div>
@@ -56,7 +56,7 @@
                 <div class="iframe-container" id="left-iframe">
                     <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/Q3cZOOmbJdE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
                 </div>
-                <img id="prev" class="prethodni shadow-1" src="../images/img/Picture2.png">
+                <img id="prev" class="prethodni shadow-1" src="{{asset('/images/img/Picture2.png')}}" alt="previuos slide">
             </div>
             <div class="slider-right shadow-1">
                 <div class="popup-click popup-click-right">
@@ -65,12 +65,12 @@
                 <div class="iframe-container" id="right-iframe">
                     <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/s5xDYxh2SAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
                 </div>
-                <img id="next" class="sljedeci shadow-1" src="../images/img/Picture3.png">
+                <img id="next" class="sljedeci shadow-1" src="{{asset('/images/img/Picture3.png')}}" alt="next slide">
             </div>
         </div>
 
     </div>
-    <img class="secTwoBg3" src="../images/img/fluid-bright-circle.svg">
+    <img class="secTwoBg3" src="{{asset('/images/img/fluid-bright-circle.svg')}}" alt="circle background image">
     <div class="section3 contain">
         <div style="height: 50%">
             <p class="p-font" style="margin-top: 50px; display: flex; justify-content: center; font-weight: 500">@lang('animations.sec2h22')</p>
@@ -78,7 +78,7 @@
         <div style="height: 50%; margin-top: 30px; display: flex; justify-content: center">
             <button class="button" id="schedule">@lang('animations.buttonSchedule')</button>
         </div>
-        <img class="secTwoBg4" src="../images/img/orange-circle.svg">
+        <img class="secTwoBg4" src="{{asset('/images/img/orange-circle.svg')}}" alt="orange circle">
     </div>
     <div class="contact-section" id="contact">
         <div class="contact-form-container">
@@ -135,27 +135,27 @@
         </div>
         <div class="tools-img">
             <div>
-                <img src="../images/tools/php_PNG28.png">
+                <img src="{{asset('/images/tools/php_PNG28.png')}}" alt="php logo">
                 <p>@lang('programming.php')</p>
             </div>
             <div class="tools-img-margin-both">
-                <img src="../images/tools/HTML5CSS3Logos.svg">
+                <img src="{{asset('/images/tools/HTML5CSS3Logos.svg')}}" alt="HTML & CSS logo">
                 <p>@lang('programming.htmlCss')</p>
             </div>
             <div>
-                <img src="../images/tools/1200px-Unofficial_JavaScript_logo_2.svg.png">
+                <img src="{{asset('/images/tools/1200px-Unofficial_JavaScript_logo_2.svg.png')}}" alt="javascript logo">
                 <p>@lang('programming.js')</p>
             </div>
             <div>
-                <img src="../images/tools/WordPress-logotype-wmark.png">
+                <img src="{{asset('/images/tools/WordPress-logotype-wmark.png')}}" alt="wordpress logo">
                 <p>@lang('programming.wp')</p>
             </div>
             <div class="tools-img-margin-both">
-                <img src="../images/tools/github.svg">
+                <img src="{{asset('/images/tools/github.svg')}}" alt="github logo">
                 <p>@lang('programming.github')</p>
             </div>
             <div>
-                <img src="../images/tools/1280px-Unity_Technologies_logo.svg.png">
+                <img src="{{asset('/images/tools/1280px-Unity_Technologies_logo.svg.png')}}" alt="unity logo">
                 <p>@lang('programming.unity')</p>
             </div>
 
@@ -172,7 +172,7 @@
             renderer: 'svg',
             loop: true,
             autoplay: false,
-            path: "{{'/images/edu-video-animation'}}" // the path to the animation json
+            path: "{{asset('/images/edu-video-animation')}}" // the path to the animation json
 
         });
         const animationObserver = new IntersectionObserver(function(entries, animationObserver) {

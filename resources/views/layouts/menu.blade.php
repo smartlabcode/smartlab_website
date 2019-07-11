@@ -613,7 +613,7 @@
     </div>
 
     <div class="nav-bot contain">
-        <a href="/"><img class="nav-logo" src={{"/images/smartlab-logo.svg"}}></a>
+        <a href="{{asset('/')}}"><img class="nav-logo" src="{{asset('/images/smartlab-logo.svg')}}"></a>
         <div class="nav-button" id="nav-button">
             <div class="nav-button-inner" id="nav-button-inner"></div>
             <div class="nav-button-inner-before" id="nav-button-inner-before"></div>
@@ -624,10 +624,10 @@
                 <a class="grey" id="whatWeDo">@lang('menu.first_item')</a>
                 <div class="filler"></div>
                 <div class="expandable expandable-first">
-                    <a href="/pages/courses">@lang('menu.online_courses')</a>
-                    <a href="/pages/animations">@lang('menu.educational_video')</a>
-                    <a href="/pages/programming">@lang('menu.programming')</a>
-                    <a href="/pages/moodle">@lang('menu.moodle')</a>
+                    <a href="{{asset('/pages/courses')}}">@lang('menu.online_courses')</a>
+                    <a href="{{asset('/pages/animations')}}">@lang('menu.educational_video')</a>
+                    <a href="{{asset('/pages/programming')}}">@lang('menu.programming')</a>
+                    <a href="{{asset('/pages/moodle')}}">@lang('menu.moodle')</a>
                 </div>
             </li>
 
@@ -635,8 +635,8 @@
                 <a class="grey">@lang('menu.second_item')</a>
                 <div class="filler"></div>
                 <div class="expandable expandable-second">
-                    <a href="/#about" class="same-page-link">@lang('menu.about_us')</a>
-                    <a href="/#team" class="same-page-link">@lang('menu.our_team')</a>
+                    <a href="{{asset('/#about')}}" class="same-page-link">@lang('menu.about_us')</a>
+                    <a href="{{asset('/#team')}}" class="same-page-link">@lang('menu.our_team')</a>
                 </div>
             </li>
             <li class="nav-li nav-li-js arrow">
@@ -644,11 +644,11 @@
                 <div class="filler"></div>
                 <div class="expandable join expandable-third">
                     <div class="join-left">
-                        <a href="/pages/outsourcing">@lang('menu.outsourcing')</a>
+                        <a href="{{asset('/pages/outsourcing')}}">@lang('menu.outsourcing')</a>
                     </div>
                     <div class="join-right">
-                        <a href="/pages/partner">@lang('menu.become_a_partner')</a>
-                        <a href="/pages/careers">@lang('menu.careers')</a>
+                        <a href="{{asset('/pages/partner')}}">@lang('menu.become_a_partner')</a>
+                        <a href="{{asset('/pages/careers')}}">@lang('menu.careers')</a>
                     </div>
                 </div>
             </li>
@@ -656,7 +656,7 @@
                 <!-- Open link in new tab and set its language depending on the current language in main website -->
                 <a class="padding-right-0 grey" href="{{ env("BLOG_DOMAIN")  }}/@if(App::getlocale()){{App::getlocale()}}@else en @endif" target="_blank">@lang('menu.fourth_item')</a>
             </li>
-            <li class="nav-li nav-li-js last same-page-link"><a class="padding-right-0 grey" href="/#contact">@lang('menu.fifth_item')</a></li>
+            <li class="nav-li nav-li-js last same-page-link"><a class="padding-right-0 grey" href="{{asset('/#contact')}}">@lang('menu.fifth_item')</a></li>
 
             <!-- This menu items are available only to logged in users -->
             @auth
@@ -665,7 +665,7 @@
             @if(\Illuminate\Support\Facades\Auth::user()->roles_id != 3)
 
             <li class="nav-li nav-li-js">
-                <a class="grey padding-right-0" href="/dashboard">@lang('menu.sixth_item')</a>
+                <a class="grey padding-right-0" href="{{asset('/dashboard')}}">@lang('menu.sixth_item')</a>
             </li>
 
             @endif

@@ -439,7 +439,7 @@
 </style>
 @section('content')
 <section class="section-one">
-    <img class="section-one-bg" src="{{ asset('images/partner/designer-developer-header-bg.svg') }}" />
+    <img class="section-one-bg" src="{{ asset('images/partner/designer-developer-header-bg.svg') }}" alt="header background" />
 </section>
 <section class="team-member contain">
     <div class="team-img-container">
@@ -451,10 +451,10 @@
             </defs>
         </svg>
         <div class="team-img">
-            <img class="profile-image" src="{{ asset('images/team/team-blank.svg') }}">
+            <img class="profile-image" src="{{ asset('images/team/team-blank.svg') }}" alt="profile picture">
         </div>
-        <img src="{{ asset('images/img/blue-circle.svg') }}" class="team-blue2">
-        <img src="{{ asset('images/img/orange-circle.svg') }}" class="team-orange2">
+        <img src="{{ asset('images/img/blue-circle.svg') }}" class="team-blue2" alt="blue circle">
+        <img src="{{ asset('images/img/orange-circle.svg') }}" class="team-orange2" alt="orange circle">
     </div>
     <div class="team-description">
 

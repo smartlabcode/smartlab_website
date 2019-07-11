@@ -381,7 +381,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: 50px 0;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   .about-us>div {
@@ -1240,6 +1240,10 @@
       margin: 28px 0;
     }
 
+    .partners-text>div {
+      padding: 0;
+    }
+
     .background-img {
       top: -13%;
       right: -61%;
@@ -1335,6 +1339,10 @@
     .section-two-bot-item .p-font,
     .section-two-bot-item .h2-font {
       padding-left: 0;
+    }
+
+    .partners-images img {
+      width: 25%;
     }
 
     .section-two-bot-item img {}
@@ -1513,6 +1521,11 @@
     .about-us div {
       flex-basis: 50%;
     }
+
+    .partners-images img {
+      width: 32%;
+    }
+
   }
 
   @media screen and (max-width: 425px) {
@@ -1623,6 +1636,7 @@
 
     .partners-images {
       margin-top: 50px;
+      margin-bottom: 25px;
       justify-content: center;
     }
 
@@ -1834,10 +1848,10 @@
 @section('content')
 
 <div class="background-section-one">
-  <img class="background-img" src="images/img/header-illustration-group.svg" alt="blue background image" />
-  <img class="background-img-circle --circle1" src="images/img/fluid-bright-circle.svg" alt="bright circle background" />
-  <img class="background-img-circle --circle2" src="images/img/fluid-bright-circle.svg" alt="bright circle background" />
-  <img class="background-img-circle --circle3" src="images/img/fluid-bright-circle.svg" alt="bright circle background" />
+  <img class="background-img" src="{{asset('images/img/header-illustration-group.svg')}}" alt="blue background image" />
+  <img class="background-img-circle --circle1" src="{{asset('images/img/fluid-bright-circle.svg')}}" alt="bright circle background" />
+  <img class="background-img-circle --circle2" src="{{asset('images/img/fluid-bright-circle.svg')}}" alt="bright circle background" />
+  <img class="background-img-circle --circle3" src="{{asset('images/img/fluid-bright-circle.svg')}}" alt="bright circle background" />
 
   <section class="section-one contain">
 
@@ -1857,11 +1871,11 @@
   </section>
 </div>
 <section class="section-two contain">
-  <img class="section-two-top-orange-img" src="images/img/orange-circle.svg" alt="orange background circle" />
-  <img class="section-two-background-top" src="images/img/header-fluid-blue.svg" alt="header blue background" />
-  <img class="section-two-backgound-top-orange" src="images/img/orange-circle.svg" alt="orange background circle" />
-  <img class="section-two-background-bot" src="images/img/blue-circle.svg" alt="blue background circle" />
-  <img class="section-two-background-bot-orange" src="images/img/orange-circle.svg" alt="orange background circle" />
+  <img class="section-two-top-orange-img" src="{{asset('/images/img/orange-circle.svg')}}" alt="orange background circle" />
+  <img class="section-two-background-top" src="{{asset('/images/img/header-fluid-blue.svg')}}" alt="header blue background" />
+  <img class="section-two-backgound-top-orange" src="{{asset('/images/img/orange-circle.svg')}}" alt="orange background circle" />
+  <img class="section-two-background-bot" src="{{asset('/images/img/blue-circle.svg')}}" alt="blue background circle" />
+  <img class="section-two-background-bot-orange" src="{{asset('/images/img/orange-circle.svg')}}" alt="orange background circle" />
   <div class="section-two-hero">
     <div>
       <h2 class="h1-font">@lang('index.section_two_h2')</h2>
@@ -1876,48 +1890,48 @@
   <div id="anchor">
     <div class="section-two-top section-two-item">
       <div class="section-two-top-left">
-        <img src="images/img/online-courses-img.svg" alt="online courses" />
+        <img src="{{asset('/images/img/online-courses-img.svg')}}" alt="online courses" />
       </div>
       <div class="section-two-top-right">
         <h2 class="h2-font">@lang('index.section_two_top_right_h2')</h2>
         <p class="p-font">
           @lang('index.section_two_top_right_p')
         </p>
-        <a href="/pages/courses"><button class="button">@lang('index.section_two_top_right_button')</button></a>
+        <a href="{{asset('/pages/courses')}}"><button class="button">@lang('index.section_two_top_right_button')</button></a>
       </div>
     </div>
     <div class="section-two-bot">
       <div class="section-two-bot-item section-two-item">
-        <img class="--width-margin-top" src="images/img/video-animation-img.svg" alt="video and animation" />
+        <img class="--width-margin-top" src="{{asset('/images/img/video-animation-img.svg')}}" alt="video and animation" />
         <div>
           <h2 class="h2-font">@lang('index.section_two_bot_left_h2')</h2>
           <p class="p-font">
             @lang('index.section_two_bot_left_p')
           </p>
-          <a href="/pages/animations"><button class="button">@lang('index.section_two_bot_left_button')</button></a>
+          <a href="{{asset('/pages/animations')}}"><button class=" button">@lang('index.section_two_bot_left_button')</button></a>
         </div>
 
 
       </div>
       <div class="section-two-bot-item margin-both section-two-item">
-        <img src="images/img/development-img.svg" alt="development" />
+        <img src="{{asset('/images/img/development-img.svg')}}" alt="development" />
         <div>
           <h2 class="h2-font">@lang('index.section_two_bot_mid_h2')</h2>
           <p class="p-font">
             @lang('index.section_two_bot_mid_p')
           </p>
-          <a href="/pages/programming"><button class="button">@lang('index.section_two_bot_mid_button')</button></a>
+          <a href="{{asset('/pages/programming')}}"><button class="button">@lang('index.section_two_bot_mid_button')</button></a>
         </div>
 
       </div>
       <div class="section-two-bot-item section-two-item">
-        <img class="--width-margin-top" src="images/img/moodle-img.svg" alt="moodle" />
+        <img class="--width-margin-top" src="{{asset('/images/img/moodle-img.svg')}}" alt="moodle" />
         <div>
           <h2 class="h2-font">@lang('index.section_two_bot_right_h2')</h2>
           <p class="p-font">
             @lang('index.section_two_bot_right_p')
           </p>
-          <a href="/pages/moodle"><button class="button">@lang('index.section_two_bot_right_button')</button></a>
+          <a href="{{asset('/pages/moodle')}}"><button class="button">@lang('index.section_two_bot_right_button')</button></a>
         </div>
 
       </div>
@@ -1925,7 +1939,7 @@
   </div>
 </section>
 <section id="about" class="section-three contain">
-  <img class="about-orange-circle" src="images/img/orange-circle.svg" alt="orange background circle" />
+  <img class="about-orange-circle" src="{{asset('/images/img/orange-circle.svg')}}" alt="orange background circle" />
   <div>
     <div class="about-us">
       <div>
@@ -2088,9 +2102,9 @@
   </div>
 </section>
 <section id="team" class="team contain">
-  <img class="team-orange-circle" src="images/img/orange-circle.svg" alt="orange background circle" />
-  <img class="team-blue-circle" src="images/img/blue-circle.svg" alt="blue background circle" />
-  <img class="team-orange-circle-bottom" src="images/img/orange-circle.svg" alt="background orange circle" />
+  <img class="team-orange-circle" src="{{asset('/images/img/orange-circle.svg')}}" alt="orange background circle" />
+  <img class="team-blue-circle" src="{{asset('/images/img/blue-circle.svg')}}" alt="blue background circle" />
+  <img class="team-orange-circle-bottom" src="{{asset('/images/img/orange-circle.svg')}}" alt="background orange circle" />
   <div>
     <h2 class="text-center h1-font">@lang('index.team_h2')</h2>
     <div class="flex --four">
@@ -2104,10 +2118,10 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img src="images/team/irfo-k.png">
+            <img src="{{asset('/images/team/irfo-k.png')}}" alt="Irfan K photo">
           </div>
-          <img src="images/img/blue-circle.svg" class="team-blue1">
-          <img src="images/img/orange-circle.svg" class="team-orange1">
+          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1">
+          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1">
         </div>
         <div class="team-description">
           <h3>Irfan K.</h3>
@@ -2124,10 +2138,10 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img src="images/team/ibro.png">
+            <img src="{{asset('/images/team/ibro.png')}}" alt="Ibrahim Z photo">
           </div>
-          <img src="images/img/blue-circle.svg" class="team-blue2">
-          <img src="images/img/orange-circle.svg" class="team-orange2">
+          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue2">
+          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange2">
         </div>
         <div class="team-description">
           <h3>Ibrahim Z.</h3>
@@ -2144,10 +2158,10 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img src="images/team/hare.png">
+            <img src="{{asset('/images/team/hare.png')}}" alt="Haris M photo">
           </div>
-          <img src="images/img/blue-circle.svg" class="team-blue3">
-          <img src="images/img/orange-circle.svg" class="team-orange3">
+          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue3">
+          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange3">
         </div>
         <div class="team-description">
           <h3>Haris M.</h3>
@@ -2164,10 +2178,10 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img src="images/team/rizah.png">
+            <img src="{{asset('/images/team/rizah.png')}}" alt="Rizah K photo">
           </div>
-          <img src="images/img/blue-circle.svg" class="team-blue4">
-          <img src="images/img/orange-circle.svg" class="team-orange4">
+          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue4">
+          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange4">
         </div>
         <div class="team-description">
           <h3>Rizah K.</h3>
@@ -2184,10 +2198,10 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img src="images/team/amer.png">
+            <img src="{{asset('/images/team/amer.png')}}" alt="Amer M photo">
           </div>
-          <img src="images/img/blue-circle.svg" class="team-blue1">
-          <img src="images/img/orange-circle.svg" class="team-orange1">
+          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1">
+          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1">
         </div>
         <div class="team-description">
           <h3>Amer M.</h3>
@@ -2204,10 +2218,10 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img src="images/team/irfo-s.png">
+            <img src="{{asset('/images/team/irfo-s.png')}}" alt="Irfan S photo">
           </div>
-          <img src="images/img/blue-circle.svg" class="team-blue2">
-          <img src="images/img/orange-circle.svg" class="team-orange2">
+          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue2">
+          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange2">
         </div>
         <div class="team-description">
           <h3>Irfan S.</h3>
@@ -2224,10 +2238,10 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img src="images/team/aida.png">
+            <img src="{{asset('/images/team/aida.png')}}" alt="Aida R photo">
           </div>
-          <img src="images/img/blue-circle.svg" class="team-blue3">
-          <img src="images/img/orange-circle.svg" class="team-orange3">
+          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue3">
+          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange3">
         </div>
         <div class="team-description">
           <h3>Aida R.</h3>
@@ -2244,10 +2258,10 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img src="images/team/emir.png">
+            <img src="{{asset('/images/team/emir.png')}}" alt="Emir M photo">
           </div>
-          <img src="images/img/blue-circle.svg" class="team-blue4">
-          <img src="images/img/orange-circle.svg" class="team-orange4">
+          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue4">
+          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange4">
         </div>
         <div class="team-description">
           <h3>Emir M.</h3>
@@ -2264,10 +2278,10 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img src="images/team/florin.png">
+            <img src="{{asset('/images/team/florin.png')}}" alt="Florin B photo">
           </div>
-          <img src="images/img/blue-circle.svg" class="team-blue4">
-          <img src="images/img/orange-circle.svg" class="team-orange4">
+          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue4">
+          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange4">
         </div>
         <div class="team-description">
           <h3>Florin B.</h3>
@@ -2284,10 +2298,10 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img src="images/team/mirza.png">
+            <img src="{{asset('/images/team/mirza.png')}}" alt="Mirza O photo">
           </div>
-          <img src="images/img/blue-circle.svg" class="team-blue4">
-          <img src="images/img/orange-circle.svg" class="team-orange4">
+          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue4">
+          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange4">
         </div>
         <div class="team-description">
           <h3>Mirza O.</h3>
@@ -2304,10 +2318,10 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img src="images/team/emina.png">
+            <img src="{{asset('/images/team/emina.png')}}" alt="Emina K photo">
           </div>
-          <img src="images/img/blue-circle.svg" class="team-blue4">
-          <img src="images/img/orange-circle.svg" class="team-orange4">
+          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue4">
+          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange4">
         </div>
         <div class="team-description">
           <h3>Emina K.</h3>
@@ -2324,10 +2338,10 @@
             </defs>
           </svg>
           <div class="team-img blank">
-            <img src="images/team/team-blank.svg">
+            <img src="{{asset('/images/team/team-blank.svg')}}" alt="Blank photo, could be you">
           </div>
-          <img src="images/img/blue-circle.svg" class="team-blue4">
-          <img src="images/img/orange-circle.svg" class="team-orange4">
+          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue4">
+          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange4">
         </div>
         <div class="team-description">
           <h3>You?</h3>
@@ -2351,7 +2365,7 @@
             were looking for. We look forward to working together again in future.”
           </p>
           <div>
-            <img id="partners-image" src="../images/partners-images/Mara.png" alt="partner image" />
+            <img id="partners-image" src="{{asset('/images/partners-images/Mara.png')}}" alt="partner image" />
             <p id="partners-name" class="h2-font">Mara Menzies</p>
             <p id="partners-company" class="p-font">Afrika Presents Ltd</p>
           </div>
@@ -2359,29 +2373,29 @@
         </div>
       </div>
       <div class="partners-images">
-        <img src="../images/partners-logo/TheTrainingTerminal-2.png" alt="TrainingTerminal logo" />
-        <img src="../images/partners-logo/FKC-2.png" alt="Ficher, Knoblauch & co logo" />
-        <img src="../images/partners-logo/leanscape-2.png" alt="leanscape logo" />
-        <img src="../images/partners-logo/WELLS-PARK-2.png" alt="wells park communications logo" />
-        <img src="../images/partners-logo/loop-TV-2.png" alt="loop tv logo" />
-        <img src="../images/partners-logo/zomppp-2.png" alt="zomppp logo" />
-        <img src="../images/partners-logo/UAP-QMS-2.png" alt="uap managment system logo" />
-        <img src="../images/partners-logo/tottem-2.png" alt="totem learning logo" />
-        <img src="../images/partners-logo/safetycourses4u-2.png" alt="safety courses for you logo" />
-        <img src="../images/partners-logo/dimenzija_plus-2.png" alt="dimenzija plus logo" />
-        <img src="../images/partners-logo/TVSA-2.png" alt="televizija sarajevo logo" />
-        <img src="../images/partners-logo/eloomi-4.png" alt="eloomi logo" />
-        <img src="../images/partners-logo/FIN-2.png" alt="fakultet islamskih nauka logo" />
-        <img src="../images/partners-logo/maisonprive-2.png" alt="maison prive logo" />
-        <img src="../images/partners-logo/biramoporavak-2.png" alt="biramo oporavak logo" />
-        <img src="../images/partners-logo/BDfD-2.png" alt="bosnian doctors for disabled logo" />
+        <img src="{{asset('/images/partners-logo/TheTrainingTerminal-2.png')}}" alt="TrainingTerminal logo" />
+        <img src="{{asset('/images/partners-logo/FKC-2.png')}}" alt="Ficher, Knoblauch & co logo" />
+        <img src="{{asset('/images/partners-logo/leanscape-2.png')}}" alt="leanscape logo" />
+        <img src="{{asset('/images/partners-logo/WELLS-PARK-2.png')}}" alt="wells park communications logo" />
+        <img src="{{asset('/images/partners-logo/loop-TV-2.png')}}" alt="loop tv logo" />
+        <img src="{{asset('/images/partners-logo/zomppp-2.png')}}" alt="zomppp logo" />
+        <img src="{{asset('/images/partners-logo/UAP-QMS-2.png')}}" alt="uap managment system logo" />
+        <img src="{{asset('/images/partners-logo/tottem-2.png')}}" alt="totem learning logo" />
+        <img src="{{asset('/images/partners-logo/safetycourses4u-2.png')}}" alt="safety courses for you logo" />
+        <img src="{{asset('images/partners-logo/dimenzija_plus-2.png')}}/" alt="dimenzija plus logo" />
+        <img src="{{asset('/images/partners-logo/TVSA-2.png')}}" alt="televizija sarajevo logo" />
+        <img src="{{asset('/images/partners-logo/eloomi-4.png')}}" alt="eloomi logo" />
+        <img src="{{asset('/images/partners-logo/FIN-2.png')}}" alt="fakultet islamskih nauka logo" />
+        <img src="{{asset('/images/partners-logo/maisonprive-2.png')}}" alt="maison prive logo" />
+        <img src="{{asset('/images/partners-logo/biramoporavak-2.png')}}" alt="biramo oporavak logo" />
+        <img src="{{asset('/images/partners-logo/BDfD-2.png')}}" alt="bosnian doctors for disabled logo" />
       </div>
     </div>
   </div>
 </section>
 <section class="blog-section contain">
-  <img class="blog-orange-circle-big" src="images/img/orange-circle.svg" alt="orange circle background" />
-  <img class="blog-orange-circle-small" src="images/img/orange-circle.svg" alt="orange circle background" />
+  <img class="blog-orange-circle-big" src="{{asset('/images/img/orange-circle.svg')}}" alt="orange circle background" />
+  <img class="blog-orange-circle-small" src="{{asset('/images/img/orange-circle.svg')}}" alt="orange circle background" />
   <h2 class="text-center h1-font">@lang('index.blog_h2')</h2>
   <div class="blog-container">
     @foreach ($blogs as $blog)
@@ -2390,7 +2404,7 @@
       <div class="img-container">
         <div class="img-container-overlay @if ($blog->id % 2 != 0) img-container-overlay-blue @else img-container-overlay-orange @endif">
         </div>
-        <img src={{$blog->image_path}} alt="blog" />
+        <img src='{{asset("$blog->image_path")}}' alt="blog" />
         <svg class="wave" viewBox="0 0 500 500">
           <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
         </svg>
@@ -2417,8 +2431,8 @@
 <!-- TODO this isnt good, there is too much space among form elements -->
 <section class="contact-section" id="contact" name="contact">
 
-  <img class="contact-orange-circle-r" src="images/img/orange-circle.svg" alt="background orange circle" />
-  <img class="contact-orange-circle-l" src="images/img/orange-circle.svg" alt="background orange circle" />
+  <img class="contact-orange-circle-r" src="{{asset('/images/img/orange-circle.svg')}}" alt="background orange circle" />
+  <img class="contact-orange-circle-l" src="{{asset('/images/img/orange-circle.svg')}}" alt="background orange circle" />
   <div class="contact-form-container">
     <p>@lang('index.contact_p')</p>
     <h2 class="text-center h1-font">@lang('index.contact_h2')</h2>
@@ -2467,7 +2481,7 @@
       renderer: 'svg',
       loop: true,
       autoplay: false,
-      path: "{{'/images/home-animation'}}" // the path to the animation json
+      path: "{{asset('/images/home-animation')}}" // the path to the animation json
 
     });
 
@@ -2566,7 +2580,7 @@
 
     let partners = [{
       text: "“SmartLab team created a fantastic web-based quiz for Afrika Presents with a downloadable badge. Incredible attention to details. Better than anticipated and they had a true understanding and delivered just what we were looking for. We look forward to working together again in the future.”",
-      image: "../images/partners-images/Mara.png",
+      image: "{{asset('/images/partners-images/Mara.png')}}",
       name: "Mara Menzies",
       company: "Afrika Presents Ltd"
     }, {

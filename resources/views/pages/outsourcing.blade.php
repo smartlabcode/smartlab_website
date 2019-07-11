@@ -13,7 +13,7 @@
     .h1-font {
         font-family: "Montserrat", sans-serif;
         font-weight: bold;
-        font-size: 3rem;
+        font-size: 3em;
         margin-top: 0;
         margin-bottom: 25px;
         color: var(--h1-color);
@@ -21,14 +21,14 @@
 
     .h2-font {
         font-family: "Montserrat", sans-serif;
-        font-size: 2rem;
+        font-size: 2em;
         color: var(--h2-color) !important;
     }
 
     .h3-font {
         font-family: "Montserrat", sans-serif;
         font-weight: bold;
-        font-size: 1.4rem;
+        font-size: 1.4em;
         margin-top: 0;
         margin-bottom: 0;
         color: var(--h1-color);
@@ -37,7 +37,7 @@
     .h4-font {
         font-family: "Montserrat", sans-serif;
         font-weight: bold;
-        font-size: 1.4rem;
+        font-size: 1.4em;
         margin-top: 0;
         margin-bottom: 15px;
         color: var(--h2-color);
@@ -46,7 +46,7 @@
     .h5-font {
         font-family: "Montserrat", sans-serif;
         font-weight: bold;
-        font-size: 1.4rem;
+        font-size: 1.4em;
         margin-top: 0;
         margin-bottom: 25px;
         color: var(--h1-color);
@@ -54,7 +54,7 @@
 
     .p-font {
         font-family: "Source Sans Pro", sans-serif !important;
-        font-size: 1.4rem;
+        font-size: 1.4em;
         color: #354144 !important;
     }
 
@@ -124,14 +124,17 @@
     }
 
     .section-one {
-        height: 100%;
+        height: 75%;
+        position: relative;
     }
 
     .section-one-bg {
         position: absolute;
-        width: 200vw;
-        top: -160%;
-        left: -68%;
+        width: 3000px;
+        top: -184%;
+        /* bottom: -80%; */
+        /* left: -25vw; */
+        right: -30%;
         z-index: -100;
     }
 
@@ -180,7 +183,6 @@
 
     .team-member {
         display: flex;
-        flex-wrap: wrap;
         justify-content: left;
         align-items: center;
         margin-bottom: 50px !important;
@@ -419,10 +421,144 @@
     .team-skills {
         display: none;
     }
+
+    .team-description h3 {
+        font-size: 3rem;
+    }
+
+    @media only screen and (max-width: 1400px) {
+        .section-one-img-container {
+            display: flex;
+        }
+
+        .section-one-bg {
+            position: absolute;
+            width: 2500px;
+            top: -130%;
+            /* bottom: -80%; */
+            /* left: -25vw; */
+            right: -46%;
+            z-index: -100;
+        }
+    }
+
+    @media only screen and (max-width: 1330px) {
+        .section-one-bg {
+            right: -60%;
+        }
+
+        .section-one-img-left-container {
+
+            width: 60%;
+
+        }
+    }
+
+    @media only screen and (max-width: 1200px) {
+        .team-member {
+            padding: 40px 50px;
+        }
+
+        .team-description {
+            margin-left: 50px;
+        }
+
+        .section-one-img-left-container {
+            margin-top: 0%;
+        }
+
+        .section-one-img-right {
+            position: static;
+        }
+    }
+
+    @media only screen and (max-width: 1140px) {
+        .section-one-bg {
+            right: -80%;
+        }
+    }
+
+    @media only screen and (max-width: 900px) {
+        .team-description {
+            margin-left: 0;
+            margin-top: 50px;
+            width: 100%;
+        }
+
+        .section-one {
+            height: 100%;
+        }
+
+        .team-description h3,
+        .team-description h4,
+        .team-description h5 {
+            text-align: center;
+        }
+
+        .team-description-bottom {
+            justify-content: space-between;
+        }
+
+        .team-member {
+            flex-direction: column;
+        }
+
+        .section-one-img-container {
+            max-height: 750px;
+            height: 750px;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .section-one-img-left-container {
+            width: 100%;
+            text-align: center;
+        }
+
+        .section-one-img-right {
+            max-height: unset;
+            height: unset;
+            position: static;
+            width: 100%;
+        }
+
+        .section-one-bg {
+            top: -56%;
+            right: -50%;
+            width: 1500px
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .section-one-bg {
+            top: -59%;
+        }
+
+        .team-description-bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .team-description-bottom .button {
+            margin-bottom: 25px;
+        }
+    }
+
+    @media only screen and (max-width: 425px) {
+        .section-one {
+            height: 120%;
+        }
+
+        .section-one-bg {
+            top: -52%;
+            width: 1000px;
+        }
+    }
 </style>
 @section('content')
 
-@include('parts.break_space')
+<!--@include('parts.break_space')-->
 <section class="section-one">
     <img class="section-one-bg" src="{{ asset('images/partner/designer-developer-header-bg.svg') }}" />
     <div class="section-one-img-container contain">
@@ -538,7 +674,7 @@
                 </defs>
             </svg>
             <div class="team-img">
-                <img class="profile-image" src="{{ asset('images/team/irfo-k.png') }}">
+                <img class="profile-image" src="{{ asset('images/team/irfo-k.png') }}" alt="Irfan K">
             </div>
             <img src="{{ asset('images/img/blue-circle.svg') }}" class="team-blue1">
             <img src="{{ asset('images/img/orange-circle.svg') }}" class="team-orange1">
@@ -554,7 +690,7 @@
                 </p>
             </div>
             <div class="team-description-bottom">
-                <button class="button"><a href="/pages/outsourcing_profile?0">Read More</a></button>
+                <button class="button"><a href="{{asset('/pages/outsourcing_profile?0')}}">Read More</a></button>
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
                         <a href="#">
@@ -680,7 +816,7 @@
                 </defs>
             </svg>
             <div class="team-img">
-                <img class="profile-image" src="{{ asset('images/team/ibro.png') }}">
+                <img class="profile-image" src="{{ asset('images/team/ibro.png') }}" alt="Ibrahim Z">
             </div>
             <img src="{{ asset('images/img/blue-circle.svg') }}" class="team-blue2">
             <img src="{{ asset('images/img/orange-circle.svg') }}" class="team-orange2">
@@ -696,7 +832,7 @@
                 </p>
             </div>
             <div class="team-description-bottom">
-                <button class="button"><a href="/pages/outsourcing_profile?1">Read More</a></button>
+                <button class="button"><a href="{{asset('/pages/outsourcing_profile?1')}}">Read More</a></button>
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
                         <a href="#">
@@ -824,7 +960,7 @@
                 </defs>
             </svg>
             <div class="team-img">
-                <img class="profile-image" src="{{ asset('images/team/hare.png') }}">
+                <img class="profile-image" src="{{ asset('images/team/hare.png') }}" alt="Haris M">
             </div>
             <img src="{{ asset('images/img/blue-circle.svg') }}" class="team-blue3">
             <img src="{{ asset('images/img/orange-circle.svg') }}" class="team-orange3">
@@ -840,7 +976,7 @@
                 </p>
             </div>
             <div class="team-description-bottom">
-                <button class="button"><a href="/pages/outsourcing_profile?2">Read More</a></button>
+                <button class="button"><a href="{{asset('/pages/outsourcing_profile?2')}}">Read More</a></button>
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
                         <a href="#">
@@ -968,7 +1104,7 @@
                 </defs>
             </svg>
             <div class="team-img">
-                <img class="profile-image" src="{{ asset('images/team/amer.png') }}">
+                <img class="profile-image" src="{{ asset('images/team/amer.png') }}" alt="Amer M">
             </div>
             <img src="{{ asset('images/img/blue-circle.svg') }}" class="team-blue4">
             <img src="{{ asset('images/img/orange-circle.svg') }}" class="team-orange4">
@@ -984,7 +1120,7 @@
                 </p>
             </div>
             <div class="team-description-bottom">
-                <button class="button"><a href="/pages/outsourcing_profile?3">Read More</a></button>
+                <button class="button"><a href="{{asset('/pages/outsourcing_profile?3')}}">Read More</a></button>
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
                         <a href="#">
@@ -1112,7 +1248,7 @@
                 </defs>
             </svg>
             <div class="team-img">
-                <img class="profile-image" src="{{ asset('images/team/irfo-s.png') }}">
+                <img class="profile-image" src="{{ asset('images/team/irfo-s.png') }}" alt="Irfan S">
             </div>
             <img src="{{ asset('images/img/blue-circle.svg') }}" class="team-blue1">
             <img src="{{ asset('images/img/orange-circle.svg') }}" class="team-orange1">
@@ -1128,7 +1264,7 @@
                 </p>
             </div>
             <div class="team-description-bottom">
-                <button class="button"><a href="/pages/outsourcing_profile?4">Read More</a></button>
+                <button class="button"><a href="{{asset('/pages/outsourcing_profile?4')}}">Read More</a></button>
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
                         <a href="#">
@@ -1256,7 +1392,7 @@
                 </defs>
             </svg>
             <div class="team-img">
-                <img class="profile-image" src="{{ asset('images/team/aida.png') }}">
+                <img class="profile-image" src="{{ asset('images/team/aida.png') }}" alt="Aida R">
             </div>
             <img src="{{ asset('images/img/blue-circle.svg') }}" class="team-blue2">
             <img src="{{ asset('images/img/orange-circle.svg') }}" class="team-orange2">
@@ -1272,7 +1408,7 @@
                 </p>
             </div>
             <div class="team-description-bottom">
-                <button class="button"><a href="/pages/outsourcing_profile?5">Read More</a></button>
+                <button class="button"><a href="{{asset('/pages/outsourcing_profile?5')}}">Read More</a></button>
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
                         <a href="#">
@@ -1400,7 +1536,7 @@
                 </defs>
             </svg>
             <div class="team-img">
-                <img class="profile-image" src="{{ asset('images/team/emir.png') }}">
+                <img class="profile-image" src="{{ asset('images/team/emir.png') }}" alt="Emir M">
             </div>
             <img src="{{ asset('images/img/blue-circle.svg') }}" class="team-blue3">
             <img src="{{ asset('images/img/orange-circle.svg') }}" class="team-orange3">
@@ -1416,7 +1552,7 @@
                 </p>
             </div>
             <div class="team-description-bottom">
-                <button class="button"><a href="/pages/outsourcing_profile?6">Read More</a></button>
+                <button class="button"><a href="{{asset('/pages/outsourcing_profile?6')}}">Read More</a></button>
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
                         <a href="#">
@@ -1544,7 +1680,7 @@
                 </defs>
             </svg>
             <div class="team-img">
-                <img class="profile-image" src="{{ asset('images/team/florin.png') }}">
+                <img class="profile-image" src="{{ asset('images/team/florin.png') }}" alt="Florin B">
             </div>
             <img src="{{ asset('images/img/blue-circle.svg') }}" class="team-blue4">
             <img src="{{ asset('images/img/orange-circle.svg') }}" class="team-orange4">
@@ -1560,7 +1696,7 @@
                 </p>
             </div>
             <div class="team-description-bottom">
-                <button class="button"><a href="/pages/outsourcing_profile?7">Read More</a></button>
+                <button class="button"><a href="{{asset('/pages/outsourcing_profile?7')}}">Read More</a></button>
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
                         <a href="#">
@@ -1688,7 +1824,7 @@
                 </defs>
             </svg>
             <div class="team-img">
-                <img class="profile-image" src="{{ asset('images/team/mirza.png') }}">
+                <img class="profile-image" src="{{ asset('images/team/mirza.png') }}" alt="Mirza O">
             </div>
             <img src="{{ asset('images/img/blue-circle.svg') }}" class="team-blue2">
             <img src="{{ asset('images/img/orange-circle.svg') }}" class="team-orange2">
@@ -1704,7 +1840,7 @@
                 </p>
             </div>
             <div class="team-description-bottom">
-                <button class="button"><a href="/pages/outsourcing_profile?8">Read More</a></button>
+                <button class="button"><a href="{{asset('/pages/outsourcing_profile?8')}}">Read More</a></button>
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
                         <a href="#">
@@ -1732,7 +1868,7 @@
             </div>
         </div>
     </div>
-    <div class="team-member contain">
+    <!--<div class="team-member contain">
         <div class="team-skills">
             <div class="line-container">
                 <div>
@@ -1802,10 +1938,10 @@
                     </g>
                 </svg>
             </div>
-        </div>
-        <div class="team-description-long">
-            <!-- Opširan tekst za outsourcing_profile page Emina K.-->
-            <div class="p-font">
+        </div> -->
+    <!--<div class="team-description-long"> -->
+    <!-- Opširan tekst za outsourcing_profile page Emina K.-->
+    <!--<div class="p-font">
                 <p>
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
                     enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
@@ -1832,7 +1968,7 @@
                 </defs>
             </svg>
             <div class="team-img">
-                <img class="profile-image" src="{{ asset('images/team/emina.png') }}">
+                <img class="profile-image" src="{{ asset('images/team/emina.png') }}" alt="Emina K">
             </div>
             <img src="{{ asset('images/img/blue-circle.svg') }}" class="team-blue3">
             <img src="{{ asset('images/img/orange-circle.svg') }}" class="team-orange3">
@@ -1848,7 +1984,7 @@
                 </p>
             </div>
             <div class="team-description-bottom">
-                <button class="button"><a href="/pages/outsourcing_profile?9">Read More</a></button>
+                <button class="button"><a href="{{asset('/pages/outsourcing_profile?9')}}">Read More</a></button>
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
                         <a href="#">
@@ -1874,7 +2010,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
     </div>
 </section>
 <script type="module" src=" {{ asset('/js/test.js') }}"></script>
