@@ -315,17 +315,23 @@
         -webkit-box-shadow: -1px -1px 15px 1px var(--shadow-color);
         -moz-box-shadow: -1px -1px 15px 1px var(--shadow-color);
         box-shadow: -1px -1px 15px 1px var(--shadow-color);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+
     }
 
     .carrers-positions-image-container {
         display: flex;
         background-color: var(--shadow-color);
         max-height: 300px;
+        flex-basis: 100%;
     }
 
     .careers-positions-image {
         width: 50%;
         padding: 20px;
+        height: 300px;
     }
 
     .--left-10px {
@@ -334,11 +340,11 @@
     }
 
     .careers-positions-info {
-        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 50px;
+        flex-basis: 100%
     }
 
     .careers-positions-info p {
@@ -416,6 +422,71 @@
     .centar {
         text-align: center;
     }
+
+    @media only screen and (max-width: 850px) {
+        .header-background {
+            position: absolute;
+            z-index: -100;
+            transform: rotate(17deg);
+            top: -29%;
+            right: -41vw;
+            width: 157vw;
+        }
+
+        #careerForm {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        #careerForm>div {
+            width: 100%;
+        }
+
+        form button {
+            position: static;
+            /* left: 49%; */
+            transform: translateX(0);
+        }
+
+        #sectionThree {
+            width: 100%;
+        }
+
+        .careers-positions-container {
+            flex-direction: column;
+
+        }
+
+        .careers-positions {
+            margin-bottom: 25px;
+        }
+
+        .header-content {
+            flex-direction: column-reverse;
+        }
+
+        .header-content-right {
+            margin-top: 50px;
+            /* height: 100vw; */
+            width: 70vw;
+        }
+
+        .header-content-left {
+            padding-right: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .header-content-left .button {
+            margin-top: 25px;
+        }
+
+        .margin-b-150 {
+            margin-bottom: 150px !important;
+        }
+    }
 </style>
 
 
@@ -427,7 +498,7 @@
 
 <!-- Join our team section -->
 <section class="header-container margin-b-150 ">
-    <img src="../images/partner/join-us-header-img.svg" alt="header background" class="header-background background-img">
+    <img src="{{asset('/images/partner/join-us-header-img.svg')}}" alt="header background" class="header-background background-img">
     <div class="header-content contain">
         <div class="header-content-left">
             <h1 class="h1-font">@lang('careers.h1')</h1>
@@ -435,7 +506,7 @@
             <button class="button --gray">@lang('careers.button')</button>
         </div>
         <div class="header-content-right">
-            <img src="../images/partner/join-us-header.svg">
+            <img src="{{asset('/images/partner/join-us-header.svg')}}" alt="Join us header background">
         </div>
     </div>
 
@@ -445,8 +516,8 @@
     <div class="careers-positions-container contain">
         <div class="careers-positions">
             <div class="carrers-positions-image-container">
-                <img class="careers-positions-image --left-10px" src="{{ asset('images/careers/megaphone-orange.svg') }}" />
-                <img class="careers-positions-image " src="{{ asset('images/careers/designer-page-img.svg') }}" />
+                <img class="careers-positions-image --left-10px" src="{{ asset('images/careers/megaphone-orange.svg') }}" alt="orange megaphone" />
+                <img class="careers-positions-image " src="{{ asset('images/careers/designer-page-img.svg') }}" alt="designer wanted" />
             </div>
 
             <div class="careers-positions-info">
@@ -454,14 +525,14 @@
                 <p>
                     @lang('careers.opisEL')
                 </p>
-                <a href="/pages/careers/elearning"><button class="button button-orange">@lang('careers.readMore')</button></a>
+                <a href="{{asset('/pages/careers/elearning')}}"><button class="button button-orange">@lang('careers.readMore')</button></a>
             </div>
         </div>
 
         <div class="careers-positions">
             <div class="carrers-positions-image-container">
-                <img class="careers-positions-image --left-10px" src="{{ asset('images/careers/megaphone-blue.svg') }}" />
-                <img class="careers-positions-image" src="{{ asset('images/careers/developer-page-img.svg') }}" />
+                <img class="careers-positions-image --left-10px" src="{{ asset('images/careers/megaphone-blue.svg') }}" alt="blue megaphone" />
+                <img class="careers-positions-image" src="{{ asset('images/careers/developer-page-img.svg') }}" alt="developer wanted" />
             </div>
 
             <div class="careers-positions-info">
@@ -469,7 +540,7 @@
                 <p>
                     @lang('careers.opisDev')
                 </p>
-                <a href="/pages/careers/developer"><button class="button">@lang('careers.readMore')</button></a>
+                <a href="{{asset('/pages/careers/developer')}}"><button class="button">@lang('careers.readMore')</button></a>
             </div>
         </div>
     </div>
@@ -563,7 +634,7 @@
         function fileUploaded() {
             // TODO check if file is selected
             let uploadText = document.getElementById("uploadText");
-            uploadText.innerHTML = "<img id='verifiedIcon' src='/images/icons/verified.svg' />";
+            uploadText.innerHTML = "<img id='verifiedIcon' src='../images/icons/verified.svg' />";
         }
     </script>
 
