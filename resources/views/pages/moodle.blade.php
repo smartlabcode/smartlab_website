@@ -38,12 +38,35 @@
     <img class="secTwoBg" src="{{asset('/images/img/header-fluid-blue.svg')}}" alt="header blue background">
     <h2 class="h1-font center">@lang('moodle.sec2h2')</h2>
     <div id="slider">
+        <div class="popup-overlay"></div>
+        <div class="popup">
+            <span class="close"> X </span>
+            <div class="popup-container">
+                <div class="popup-content">
+                    <img id="popup-image" src="">
+                </div>
+            </div>
 
+        </div>
         <div>
-            <div class="slider-left shadow-1"><img id="firstPart" src="" />
+            <div class="slider-left shadow-1">
+                <div class="popup-click popup-click-left">
+
+                </div>
+                <div id="left-iframe">
+                    <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/Q3cZOOmbJdE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+                    <img id="left-img" src="">
+                </div>
                 <img id="prev" class="prethodni shadow-1" src="{{asset('/images/img/Picture2.png')}}" alt="previuos slide">
             </div>
-            <div class="slider-right shadow-1"><img id="secondPart" src="" />
+            <div class="slider-right shadow-1">
+                <div class="popup-click popup-click-right">
+
+                </div>
+                <div id="right-iframe">
+                    <img id="right-img" src="">
+                    <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/s5xDYxh2SAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+                </div>
                 <img id="next" class="sljedeci shadow-1" src="{{asset('/images/img/Picture3.png')}}" alt="next slide">
             </div>
         </div>
@@ -168,12 +191,43 @@
         var imgTwo = 1;
 
         var images = [
-            "https://static.igre123.net/slike/212266-121951/mala-maca.jpg", // 0
-            "https://opusteno.rs/slike/2012/03/smesne-slike-14024/mala-maca.jpg", // 1
-            "https://static.igre123.net/slike/235049-148875/mala-maca.jpg", // 2
-            "https://static.igre123.net/slike/205865-134729/mala-maca.jpg" // 3
-        ];
 
+            "{{asset('/images/mockups/ar-aplikacija-dev.png')}}",
+            '{{asset("/images/mockups/dl-fin-unsa-ba.png")}}',
+            '{{asset("/images/mockups/ar-aplikacija-dev.png")}}',
+            '{{asset("/images/mockups/edu-smartlab-ba.png")}}',
+            '{{asset("/images/mockups/fin-unsa-ba.png")}}',
+            '{{asset("/images/mockups/xliff-mockup.png")}}'
+        ];
+        let popupClickLeft = document.querySelector(".popup-click-left");
+        let popupClickRight = document.querySelector(".popup-click-right");
+        let popupVideo = document.querySelector(".popup-content");
+        let popupImage = document.querySelector("#popup-image");
+        let closePopup = document.querySelector(".close");
+        let popup = document.querySelector(".popup");
+        let popupOverlay = document.querySelector(".popup-overlay");
+
+        closePopup.addEventListener("click", popupClose);
+        popupOverlay.addEventListener("click", popupClose);
+
+        function popupClose() {
+            popupImage.src = "";
+            closePopup.style.display = "none";
+            popup.classList.remove("shadow-2");
+            popupOverlay.style.width = "0vw";
+            popupOverlay.style.height = "0vh";
+        }
+
+        function popupContent(imgIndex) {
+            popupImage.src = images[imgIndex];
+            console.log(images[imgIndex])
+            closePopup.style.display = "inline-block";
+            popup.classList.add("shadow-2");
+            popupOverlay.style.width = "100vw";
+            popupOverlay.style.height = "100vh";
+        }
+        popupClickLeft.addEventListener("click", () => popupContent(imgOne));
+        popupClickRight.addEventListener("click", () => popupContent(imgTwo));
         let prev = document.querySelector("#prev");
         let next = document.querySelector("#next");
 
@@ -185,34 +239,28 @@
         });
 
         function changeImage(par) {
-            console.log("clicked")
-            if (window.innerWidth > 768) {
-                if (imgOne < (images.length - 2) && par == "next") {
 
+
+            if (par == "next") {
+                imgOne = imgTwo;
+                imgTwo = imgTwo + 1;
+                if (imgTwo == images.length - 1) {
                     imgOne = imgTwo;
-                    imgTwo = imgTwo + 1;
-
-                } else if (imgOne !== 0 && par == "previous") {
-                    imgOne = imgOne - 1;
-                    imgTwo = imgTwo - 1;
+                    imgTwo = 0;
                 }
 
-                var imgOneSrc = images[imgOne];
-                var imgTwoSrc = images[imgTwo];
-
-                document.getElementById("firstPart").src = imgOneSrc;
-                document.getElementById("secondPart").src = imgTwoSrc;
-
-            } else {
-                if (imgOne < images.length - 1 && par == "next") {
-
-                    imgOne++;
-                } else if (imgOne !== 0 && par == "previous") {
-                    imgOne--;
-                }
-                imgOneSrc = images[imgOne];
-                document.getElementById("firstPart").src = imgOneSrc;
+            } else if (imgOne !== 0 && par == "previous") {
+                imgOne = imgOne - 1;
+                imgTwo = imgTwo - 1;
             }
+
+            var imgOneSrc = images[imgOne];
+            var imgTwoSrc = images[imgTwo];
+
+            document.getElementById("left-img").src = imgOneSrc;
+            document.getElementById("right-img").src = imgTwoSrc;
+
+
 
         }
         changeImage("demo");
@@ -225,8 +273,8 @@
             if (contact.clientHeight != 80) {
                 contact.style.height = 0;
             } else {
-                if (window.innerWidth <= 425) {
-                    contact.style.height = 160 + "%";
+                if (window.innerWidth <= 600) {
+                    contact.style.height = 115 + "%";
                 } else {
                     contact.style.height = 90 + "%";
                 }

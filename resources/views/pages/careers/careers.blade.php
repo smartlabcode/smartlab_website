@@ -15,7 +15,7 @@
     .h1-font {
         font-family: "Montserrat", sans-serif;
         font-weight: bold;
-        font-size: 3rem;
+        font-size: 3em;
         margin-top: 0;
         margin-bottom: 25px;
         color: var(--h1-color);
@@ -23,13 +23,13 @@
 
     .h2-font {
         font-family: "Montserrat", sans-serif;
-        font-size: 2rem;
+        font-size: 2em;
         color: var(--h2-color) !important;
     }
 
     .p-font {
         font-family: "Source Sans Pro", sans-serif !important;
-        font-size: 1.4rem;
+        font-size: 1.4em;
         color: #354144 !important;
     }
 
@@ -372,17 +372,17 @@
     form textarea,
     form select,
     #uploadFileArea {
-        padding: 20px 20px !important;
+        padding: 15px 20px !important;
         height: auto !important;
         box-sizing: border-box;
-        border: 3px solid #c9d6e2 !important;
+        border: 2px solid #c9d6e2 !important;
         border-radius: 10px !important;
         font-family: "Source Sans Pro", sans-serif !important;
         font-size: 1.4em !important;
     }
 
     form textarea {
-        height: 274px !important;
+        height: 247px !important;
         font-family: "Source Sans Pro", sans-serif !important;
         font-size: 1.4em !important;
     }
@@ -394,7 +394,7 @@
         -webkit-box-shadow: -1px 1px 15px 0px rgba(0, 53, 145, 0) !important;
         -moz-box-shadow: -1px 1px 15px 0px rgba(0, 53, 145, 0) !important;
         box-shadow: -1px 1px 15px 0px rgba(0, 53, 145, 0) !important;
-        border: 3px solid rgba(0, 53, 145, 1) !important;
+        border: 2px solid rgba(0, 53, 145, 1) !important;
         font-size: 1.4em !important;
     }
 

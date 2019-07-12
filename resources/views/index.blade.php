@@ -1848,10 +1848,10 @@
 @section('content')
 
 <div class="background-section-one">
-  <img class="background-img" src="{{asset('images/img/header-illustration-group.svg')}}" alt="blue background image" />
-  <img class="background-img-circle --circle1" src="{{asset('images/img/fluid-bright-circle.svg')}}" alt="bright circle background" />
-  <img class="background-img-circle --circle2" src="{{asset('images/img/fluid-bright-circle.svg')}}" alt="bright circle background" />
-  <img class="background-img-circle --circle3" src="{{asset('images/img/fluid-bright-circle.svg')}}" alt="bright circle background" />
+  <img class="background-img" src="{{asset('/images/img/header-illustration-group.svg')}}" alt="blue background image" />
+  <img class="background-img-circle --circle1" src="{{asset('/images/img/fluid-bright-circle.svg')}}" alt="bright circle background" />
+  <img class="background-img-circle --circle2" src="{{asset('/images/img/fluid-bright-circle.svg')}}" alt="bright circle background" />
+  <img class="background-img-circle --circle3" src="{{asset('/images/img/fluid-bright-circle.svg')}}" alt="bright circle background" />
 
   <section class="section-one contain">
 
@@ -2429,11 +2429,11 @@
 
 
 <!-- TODO this isnt good, there is too much space among form elements -->
-<section class="contact-section" id="contact" name="contact">
+<section class="contact-section" name="contact">
 
   <img class="contact-orange-circle-r" src="{{asset('/images/img/orange-circle.svg')}}" alt="background orange circle" />
   <img class="contact-orange-circle-l" src="{{asset('/images/img/orange-circle.svg')}}" alt="background orange circle" />
-  <div class="contact-form-container">
+  <div class="contact-form-container " id="contact">
     <p>@lang('index.contact_p')</p>
     <h2 class="text-center h1-font">@lang('index.contact_h2')</h2>
     @include('parts.error_success')

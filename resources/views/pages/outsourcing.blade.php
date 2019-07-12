@@ -486,7 +486,7 @@
         }
 
         .section-one {
-            height: 100%;
+            /*height: 100%;*/
         }
 
         .team-description h3,
@@ -523,7 +523,7 @@
         }
 
         .section-one-bg {
-            top: -56%;
+            top: -95%;
             right: -50%;
             width: 1500px
         }
@@ -531,7 +531,7 @@
 
     @media only screen and (max-width: 600px) {
         .section-one-bg {
-            top: -59%;
+            top: -82%;
         }
 
         .team-description-bottom {
@@ -547,11 +547,11 @@
 
     @media only screen and (max-width: 425px) {
         .section-one {
-            height: 120%;
+            /*height: 120%;*/
         }
 
         .section-one-bg {
-            top: -52%;
+            top: -48%;
             width: 1000px;
         }
     }
@@ -585,64 +585,75 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="80">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="80">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="80">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
             </div>
             <div class="line-container">
                 <div>
                     <p class="skill-name p-font">Adobe Photoshop</p>
                     <span class="counter h2-font" data-note="70">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="70">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="70">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
             <div class="line-container">
                 <div>
                     <p class="skill-name p-font">Wordpress</p>
                     <span class="counter h2-font" data-note="80">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="80">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="80">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
             <div class="line-container">
                 <div>
                     <p class="skill-name p-font">HTML/CSS</p>
                     <span class="counter h2-font" data-note="90">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="90">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="90">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
         </div>
         <div class="team-description-long">
@@ -727,64 +738,76 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="50">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="50">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="50">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
             <div class="line-container">
                 <div>
                     <p class="skill-name p-font">Adobe Photoshop</p>
                     <span class="counter h2-font" data-note="68">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="68">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="68">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
             <div class="line-container">
                 <div>
                     <p class="skill-name p-font">HTML/CSS</p>
                     <span class="counter h2-font" data-note="80">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="80">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="80">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
             <div class="line-container">
                 <div>
                     <p class="skill-name p-font">Wordpress</p>
                     <span class="counter h2-font" data-note="90">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="90">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="90">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
         </div>
         <div class="team-description-long">
@@ -868,16 +891,19 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="50">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="50">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="50">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
             <div class="line-container">
                 <div>
@@ -885,16 +911,19 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="68">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="68">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="68">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
             <div class="line-container">
                 <div>
@@ -902,16 +931,19 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="80">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="80">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="80">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
             <div class="line-container">
                 <div>
@@ -919,16 +951,18 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="90">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="90">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="90">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
             </div>
         </div>
         <div class="team-description-long">
@@ -1012,16 +1046,19 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="50">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="50">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="50">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
             <div class="line-container">
                 <div>
@@ -1029,16 +1066,19 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="68">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="68">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="68">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
             <div class="line-container">
                 <div>
@@ -1046,16 +1086,19 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="80">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="80">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="80">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
             <div class="line-container">
                 <div>
@@ -1063,16 +1106,19 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="90">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="90">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="90">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
         </div>
         <div class="team-description-long">
@@ -1156,16 +1202,19 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="50">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="50">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="50">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
             <div class="line-container">
                 <div>
@@ -1173,16 +1222,19 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="68">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="68">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="68">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
             <div class="line-container">
                 <div>
@@ -1190,16 +1242,19 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="80">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="80">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="80">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
             <div class="line-container">
                 <div>
@@ -1207,16 +1262,19 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="90">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="90">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="90">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
         </div>
         <div class="team-description-long">
@@ -1300,16 +1358,19 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="50">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="50">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="50">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
             <div class="line-container">
                 <div>
@@ -1317,16 +1378,19 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="68">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="68">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="68">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
             <div class="line-container">
                 <div>
@@ -1334,16 +1398,19 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="80">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="80">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="80">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
             <div class="line-container">
                 <div>
@@ -1351,16 +1418,19 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="90">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="90">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="90">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
         </div>
         <div class="team-description-long">
@@ -1444,16 +1514,19 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="50">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="50">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="50">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
             <div class="line-container">
                 <div>
@@ -1461,16 +1534,19 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="68">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="68">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="68">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
             <div class="line-container">
                 <div>
@@ -1478,16 +1554,19 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="80">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="80">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="80">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
             <div class="line-container">
                 <div>
@@ -1495,16 +1574,19 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="90">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="90">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="90">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
         </div>
         <div class="team-description-long">
@@ -1588,16 +1670,19 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="50">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="50">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="50">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
             <div class="line-container">
                 <div>
@@ -1605,16 +1690,19 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="68">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="68">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="68">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
             <div class="line-container">
                 <div>
@@ -1622,16 +1710,19 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="80">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="80">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="80">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
             <div class="line-container">
                 <div>
@@ -1639,16 +1730,19 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="90">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="90">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="90">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
         </div>
         <div class="team-description-long">
@@ -1732,16 +1826,19 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="50">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="50">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="50">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
             <div class="line-container">
                 <div>
@@ -1749,16 +1846,19 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="68">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="68">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="68">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
             <div class="line-container">
                 <div>
@@ -1766,16 +1866,19 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="80">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="80">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="80">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
             <div class="line-container">
                 <div>
@@ -1783,16 +1886,19 @@
                         Storyline</p>
                     <span class="counter h2-font" data-note="90">0</span><span class="h2-font">%</span>
                 </div>
-                <svg class="line-overlay" height="80" width="230" data-note="90">
-                    <g fill="none">
-                        <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
-                    </g>
-                </svg>
-                <svg class="line-main" height="80" width="230">
-                    <g fill="none">
-                        <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
-                    </g>
-                </svg>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="90">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0" />
+                        </g>
+                    </svg>
+                </div>
+
             </div>
         </div>
         <div class="team-description-long">

@@ -50,12 +50,13 @@ html {
     /* height: 90vh; */
     position: fixed;
     margin: 0 auto;
-    top: 10%;
+    top: 50%;
     padding: 20px;
     left: 50%;
     z-index: 10;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(-50%);
     border-radius: 30px;
+    display: none !important;
 }
 
 .shadow-2 {
@@ -64,6 +65,7 @@ html {
     box-shadow: -1px -1px 15px 1px var(--shadow-color);
     background-color: white;
     z-index: 110;
+    display: block !important;
 }
 
 .popup-content {
@@ -246,7 +248,7 @@ html {
 
 /* SECTION TWO*/
 .section-two {
-    margin-top: 300px !important;
+    /*margin-top: 300px !important;*/
 }
 
 .center {
@@ -267,6 +269,8 @@ html {
     background-color: white;
     border-radius: 15px;
     padding: 10px;
+    max-height: 370px;
+    cursor: pointer;
     position: relative;
 }
 
@@ -275,6 +279,7 @@ html {
     left: -25px;
     top: calc(50% - 25px);
     width: 50px;
+    height: 50px;
     border-radius: 50%;
     z-index: 100;
     cursor: pointer;
@@ -285,23 +290,38 @@ html {
     right: -25px;
     top: calc(50% - 25px);
     width: 50px;
+    height: 50px;
     border-radius: 50%;
     z-index: 100;
     cursor: pointer;
 }
 
 .slider-right {
+    cursor: pointer;
     flex-basis: 49%;
     background-color: white;
     border-radius: 15px;
     position: relative;
     padding: 10px;
+    max-height: 370px;
+}
+
+#popup-image {
+    width: 100%;
 }
 
 .slider-right img {
     object-fit: cover;
     width: 100%;
     border-radius: 15px;
+    height: 350px;
+}
+
+.slider-left img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 15px;
+    height: 350px;
 }
 
 #slider>div {
@@ -623,8 +643,8 @@ textarea:focus {
     border-radius: 15px;
     text-align: center;
     margin-bottom: 20px;
-    width: 150px;
-    height: 200px;
+    width: 140px;
+    height: 140px;
     box-shadow: -1px -1px 15px 1px var(--shadow-color);
     display: flex;
     flex-direction: column;
@@ -633,11 +653,11 @@ textarea:focus {
 }
 
 .tools-img-margin-both {
-    margin: 0 20px;
+    margin: 0 0px;
 }
 
 .tools-img img {
-    width: 125px;
+    width: 90px;
     margin-top: 1rem;
     flex-basis: 100%;
     object-fit: contain;
@@ -873,56 +893,26 @@ textarea:focus {
 }
 
 @media screen and (max-width: 768px) {
-    .slider-right {
-        width: 0 !important;
-        height: 0 !important;
+    .popup-click-right {
+        display: none;
     }
 
-    #next {
-        right: -20px;
-        top: 125px;
+    .slider-right {
+        position: absolute;
+        background-color: transparent;
+        width: 97%;
     }
 
     .slider-left {
-        width: 100%;
+        flex-basis: 100%;
     }
 
-    #slider {
-        height: auto;
+    #right-iframe img {
+        opacity: 0;
     }
 
-    #slider div {
-        height: 300px;
-        width: 100%;
-    }
-
-    #slider>img:last-child {
-        margin-left: 5px;
-        width: 50px;
-        height: 50px;
-        position: absolute;
-        display: inline-block;
-        top: 50%;
-        right: -25px;
-        border-radius: 100%;
-        transform: translate(-20%, -50%);
-    }
-
-    #slider>img:first-child {
-        margin-right: 5px;
-        width: 50px;
-        height: 50px;
-        position: absolute;
-        display: inline-block;
-        top: 50%;
-        left: -5px;
-        border-radius: 50%;
-        transform: translate(-20%, -50%);
-    }
-
-    .slider-left img {
-        object-fit: contain;
-        width: 100%;
+    #right-iframe {
+        opacity: 0;
     }
 
     .background-img-orange-circle {
@@ -977,6 +967,7 @@ textarea:focus {
 
     .tools-info {
         text-align: center;
+        margin-bottom: 50px;
     }
 }
 
@@ -1006,8 +997,8 @@ textarea:focus {
     }
 
     .button {
-        width: 166px;
-        height: 45px;
+        /*width: 166px;*/
+        /* height: 45px;*/
         font-size: 1.2em;
         outline: hidden;
     }
@@ -1049,9 +1040,7 @@ textarea:focus {
         align-items: center;
     }
 
-    .tools-img div {
-        margin-bottom: 0;
-    }
+
 
     .tools-info {
         flex-basis: 60%;
@@ -1077,6 +1066,16 @@ textarea:focus {
         /* top: 0; */
         top: 0;
         /* top: 192%; */
+    }
+
+    .contact-form-group {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .tools-img div {
+        flex-basis: 45%;
     }
 }
 
@@ -1137,9 +1136,7 @@ textarea:focus {
         margin-bottom: 80px;
     }
 
-    .contact-form-group {
-        flex-direction: column;
-    }
+
 }
 
 @media screen and (max-width: 360px) {

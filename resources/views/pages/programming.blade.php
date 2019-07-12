@@ -1,8 +1,6 @@
 <!-- Extend main layout -->
 @extends('layouts.app')
 
-
-
 <style>
     /* SECTION ONE */
     :root {
@@ -163,9 +161,9 @@
     }
 
     /* SECTION TWO*/
-    .section-two {
+    /*.section-two {
         margin-top: 300px !important;
-    }
+    }*/
 
     .center {
         text-align: center;
@@ -178,16 +176,132 @@
         position: relative;
     }
 
-    #slider div {
+    #slider>div {
         display: flex;
-        height: 300px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #slider>img {
+        height: 100%;
+        border-radius: 10px;
+        display: inline-block;
+    }
+
+    #slider>img:first-child {
+        margin-right: 5px;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        display: inline-block;
+        top: 45%;
+        left: -15px;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    #slider>img:last-child {
+        margin-left: 5px;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        display: inline-block;
+        top: 45%;
+        right: -65px;
+        border-radius: 100%;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    .popup-click {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        z-index: 99;
+    }
+
+    .popup {
+        max-width: 1440px;
+        width: 90vw;
+        /* height: calc(100vh - 75px); */
+        /* height: 90vh; */
+        position: fixed;
+        margin: 0 auto;
+        top: 50%;
+        padding: 20px;
+        left: 50%;
+        z-index: 10;
+        transform: translateX(-50%) translateY(-50%);
+        border-radius: 30px;
+        display: none !important;
+    }
+
+    .shadow-2 {
+        -webkit-box-shadow: -1px -1px 15px 1px var(--shadow-color);
+        -moz-box-shadow: -1px -1px 15px 1px var(--shadow-color);
+        box-shadow: -1px -1px 15px 1px var(--shadow-color);
+        background-color: white;
+        z-index: 110;
+        display: block !important;
+    }
+
+    .popup-content {
+        width: 100%;
+        height: 100%;
+        z-index: 110;
+    }
+
+    .popup-container {
+        width: 100%;
+        height: 0%;
+        margin: 0 auto;
+    }
+
+    .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0vw;
+        height: 0vh;
+        background-color: rgba(0, 53, 145, 0.9);
+        z-index: 110;
+    }
+
+    .close {
+        position: absolute;
+        right: -25px;
+        top: -25px;
+        display: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: var(--button-bg-orange);
+        color: white !important;
+        opacity: 1 !important;
+        padding-top: 16px;
+        padding-left: 18px;
+        transition: 0.2s transform ease-in-out;
+
+    }
+
+    .close:hover {
+        transform: scale(1.2);
+    }
+
+    #popup-image {
+        width: 100%;
     }
 
     .slider-left {
-        width: 50%;
-        margin-right: 5px;
+        flex-basis: 49%;
         background-color: white;
         border-radius: 15px;
+        padding: 10px;
+        max-height: 370px;
+        cursor: pointer;
         position: relative;
     }
 
@@ -196,23 +310,46 @@
         left: -25px;
         top: calc(50% - 25px);
         width: 50px;
+        height: 50px;
         border-radius: 50%;
         z-index: 100;
+        cursor: pointer;
     }
+
 
     #next {
         position: absolute;
         right: -25px;
         top: calc(50% - 25px);
         width: 50px;
+        height: 50px;
         border-radius: 50%;
         z-index: 100;
+        cursor: pointer;
+    }
+
+    .slider-right {
+        cursor: pointer;
+        flex-basis: 49%;
+        background-color: white;
+        border-radius: 15px;
+        position: relative;
+        padding: 10px;
+        max-height: 370px;
     }
 
     .slider-left img {
-        object-fit: contain;
+        object-fit: cover;
         width: 100%;
         border-radius: 15px;
+        height: 350px;
+    }
+
+    .slider-right img {
+        object-fit: cover;
+        width: 100%;
+        border-radius: 15px;
+        height: 350px;
     }
 
     .slider-right {
@@ -551,8 +688,8 @@
         border-radius: 15px;
         text-align: center;
         margin-bottom: 20px;
-        width: 150px;
-        height: 200px;
+        width: 140px;
+        height: 140px;
         box-shadow: -1px -1px 15px 1px var(--shadow-color);
         display: flex;
         flex-direction: column;
@@ -561,11 +698,11 @@
     }
 
     .tools-img-margin-both {
-        margin: 0 20px;
+        margin: 0 0;
     }
 
     .tools-img img {
-        width: 125px;
+        width: 90px;
         margin-top: 1rem;
         flex-basis: 100%;
         object-fit: contain;
@@ -829,57 +966,26 @@
     }
 
     @media screen and (max-width: 768px) {
-        .slider-right {
-            width: 0 !important;
-            height: 0 !important;
+        .popup-click-right {
+            display: none;
         }
 
-        #next {
-            right: -20px;
-            top: 125px;
+        .slider-right {
+            position: absolute;
+            background-color: transparent;
+            width: 97%;
         }
 
         .slider-left {
-            width: 100%;
-
+            flex-basis: 100%;
         }
 
-        #slider {
-            height: auto;
+        #right-iframe img {
+            opacity: 0;
         }
 
-        #slider div {
-            height: 300px;
-            width: 100%;
-        }
-
-        #slider>img:last-child {
-            margin-left: 5px;
-            width: 50px;
-            height: 50px;
-            position: absolute;
-            display: inline-block;
-            top: 50%;
-            right: -25px;
-            border-radius: 100%;
-            transform: translate(-20%, -50%);
-        }
-
-        #slider>img:first-child {
-            margin-right: 5px;
-            width: 50px;
-            height: 50px;
-            position: absolute;
-            display: inline-block;
-            top: 50%;
-            left: -5px;
-            border-radius: 50%;
-            transform: translate(-20%, -50%);
-        }
-
-        .slider-left img {
-            object-fit: contain;
-            width: 100%;
+        #right-iframe {
+            opacity: 0;
         }
 
         .background-img-orange-circle {
@@ -936,6 +1042,7 @@
 
         .tools-info {
             text-align: center;
+            margin-bottom: 50px;
         }
     }
 
@@ -965,8 +1072,6 @@
         }
 
         .button {
-            width: 166px;
-            height: 45px;
             font-size: 1.2em;
             outline: hidden;
         }
@@ -1013,10 +1118,7 @@
             align-items: center;
         }
 
-        .tools-img div {
 
-            margin-bottom: 0;
-        }
 
         .tools-info {
             flex-basis: 60%;
@@ -1043,6 +1145,16 @@
             /* top: 0; */
             top: 0;
             /* top: 192%; */
+        }
+
+        .contact-form-group {
+            flex-direction: column;
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        .tools-img div {
+            flex-basis: 45%;
         }
     }
 
@@ -1105,9 +1217,7 @@
             margin-bottom: 80px;
         }
 
-        .contact-form-group {
-            flex-direction: column;
-        }
+
     }
 
     @media screen and (max-width: 360px) {
@@ -1195,12 +1305,35 @@
     <img class="secTwoBg" src="{{asset('/images/img/header-fluid-blue.svg')}}">
     <h2 class="h1-font center">@lang('programming.ourWorks')</h2>
     <div id="slider">
-
-        <div>
-            <div class="slider-left shadow-1"><img id="firstPart" src="" />
-                <img id="prev" class="prethodni shadow-1" src="{{asset('/images/img/Picture2.png')}}" alt="previous slide">
+        <div class="popup-overlay"></div>
+        <div class="popup">
+            <span class="close"> X </span>
+            <div class="popup-container">
+                <div class="popup-content">
+                    <img id="popup-image" src="">
+                </div>
             </div>
-            <div class="slider-right shadow-1"><img id="secondPart" src="" />
+
+        </div>
+        <div>
+            <div class="slider-left shadow-1">
+                <div class="popup-click popup-click-left">
+
+                </div>
+                <div id="left-iframe">
+                    <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/Q3cZOOmbJdE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+                    <img id="left-img" src="">
+                </div>
+                <img id="prev" class="prethodni shadow-1" src="{{asset('/images/img/Picture2.png')}}" alt="previuos slide">
+            </div>
+            <div class="slider-right shadow-1">
+                <div class="popup-click popup-click-right">
+
+                </div>
+                <div id="right-iframe">
+                    <img id="right-img" src="">
+                    <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/s5xDYxh2SAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+                </div>
                 <img id="next" class="sljedeci shadow-1" src="{{asset('/images/img/Picture3.png')}}" alt="next slide">
             </div>
         </div>
@@ -1374,12 +1507,43 @@
         var imgTwo = 1;
 
         var images = [
-            "https://static.igre123.net/slike/212266-121951/mala-maca.jpg", // 0
-            "https://opusteno.rs/slike/2012/03/smesne-slike-14024/mala-maca.jpg", // 1
-            "https://static.igre123.net/slike/235049-148875/mala-maca.jpg", // 2
-            "https://static.igre123.net/slike/205865-134729/mala-maca.jpg" // 3
-        ];
 
+            "{{asset('/images/mockups/ar-aplikacija-dev.png')}}",
+            '{{asset("/images/mockups/dl-fin-unsa-ba.png")}}',
+            '{{asset("/images/mockups/ar-aplikacija-dev.png")}}',
+            '{{asset("/images/mockups/edu-smartlab-ba.png")}}',
+            '{{asset("/images/mockups/fin-unsa-ba.png")}}',
+            '{{asset("/images/mockups/xliff-mockup.png")}}'
+        ];
+        let popupClickLeft = document.querySelector(".popup-click-left");
+        let popupClickRight = document.querySelector(".popup-click-right");
+        let popupVideo = document.querySelector(".popup-content");
+        let popupImage = document.querySelector("#popup-image");
+        let closePopup = document.querySelector(".close");
+        let popup = document.querySelector(".popup");
+        let popupOverlay = document.querySelector(".popup-overlay");
+
+        closePopup.addEventListener("click", popupClose);
+        popupOverlay.addEventListener("click", popupClose);
+
+        function popupClose() {
+            popupImage.src = "";
+            closePopup.style.display = "none";
+            popup.classList.remove("shadow-2");
+            popupOverlay.style.width = "0vw";
+            popupOverlay.style.height = "0vh";
+        }
+
+        function popupContent(imgIndex) {
+            popupImage.src = images[imgIndex];
+            console.log(images[imgIndex])
+            closePopup.style.display = "inline-block";
+            popup.classList.add("shadow-2");
+            popupOverlay.style.width = "100vw";
+            popupOverlay.style.height = "100vh";
+        }
+        popupClickLeft.addEventListener("click", () => popupContent(imgOne));
+        popupClickRight.addEventListener("click", () => popupContent(imgTwo));
         let prev = document.querySelector("#prev");
         let next = document.querySelector("#next");
 
@@ -1391,36 +1555,28 @@
         });
 
         function changeImage(par) {
-            console.log("clicked")
-            if (window.innerWidth > 768) {
-                if (imgOne < (images.length - 2) && par == "next") {
 
+            if (par == "next") {
+                imgOne = imgTwo;
+                imgTwo = imgTwo + 1;
+                if (imgTwo == images.length - 1) {
                     imgOne = imgTwo;
-                    imgTwo = imgTwo + 1;
-
-                } else if (imgOne !== 0 && par == "previous") {
-                    imgOne = imgOne - 1;
-                    imgTwo = imgTwo - 1;
+                    imgTwo = 0;
                 }
 
-                var imgOneSrc = images[imgOne];
-                var imgTwoSrc = images[imgTwo];
-
-                document.getElementById("firstPart").src = imgOneSrc;
-                document.getElementById("secondPart").src = imgTwoSrc;
-
-            } else {
-                if (imgOne < images.length - 1 && par == "next") {
-
-                    imgOne++;
-                } else if (imgOne !== 0 && par == "previous") {
-                    imgOne--;
-                }
-                imgOneSrc = images[imgOne];
-                document.getElementById("firstPart").src = imgOneSrc;
+            } else if (imgOne !== 0 && par == "previous") {
+                imgOne = imgOne - 1;
+                imgTwo = imgTwo - 1;
             }
 
+            var imgOneSrc = images[imgOne];
+            var imgTwoSrc = images[imgTwo];
+
+            document.getElementById("left-img").src = imgOneSrc;
+            document.getElementById("right-img").src = imgTwoSrc;
+
         }
+
         changeImage("demo");
 
         let schedule = document.querySelector("#schedule");
@@ -1431,8 +1587,8 @@
             if (contact.clientHeight != 80) {
                 contact.style.height = 0;
             } else {
-                if (window.innerWidth <= 425) {
-                    contact.style.height = 160 + "%";
+                if (window.innerWidth <= 600) {
+                    contact.style.height = 115 + "%";
                 } else {
                     contact.style.height = 90 + "%";
                 }

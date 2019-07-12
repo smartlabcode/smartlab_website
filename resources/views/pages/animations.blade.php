@@ -236,36 +236,26 @@
         function changeImage(par) {
 
             console.log(imgOne, imgTwo)
-            if (window.innerWidth > 768) {
-                if (par == "next") {
+            if (par == "next") {
+                imgOne = imgTwo;
+                imgTwo = imgTwo + 1;
+                if (imgTwo == images.length - 1) {
                     imgOne = imgTwo;
-                    imgTwo = imgTwo + 1;
-                    if (imgTwo == images.length - 1) {
-                        imgOne = imgTwo;
-                        imgTwo = 0;
-                    }
-
-                } else if (imgOne !== 0 && par == "previous") {
-                    imgOne = imgOne - 1;
-                    imgTwo = imgTwo - 1;
+                    imgTwo = 0;
                 }
 
-                var imgOneSrc = images[imgOne];
-                var imgTwoSrc = images[imgTwo];
-
-                document.getElementById("left-iframe").innerHTML = imgOneSrc;
-                document.getElementById("right-iframe").innerHTML = imgTwoSrc;
-
-            } else {
-                if (imgOne < images.length - 1 && par == "next") {
-
-                    imgOne++;
-                } else if (imgOne !== 0 && par == "previous") {
-                    imgOne--;
-                }
-                imgOneSrc = images[imgOne];
-                document.getElementById("firstPart").src = imgOneSrc;
+            } else if (imgOne !== 0 && par == "previous") {
+                imgOne = imgOne - 1;
+                imgTwo = imgTwo - 1;
             }
+
+            var imgOneSrc = images[imgOne];
+            var imgTwoSrc = images[imgTwo];
+
+            document.getElementById("left-iframe").innerHTML = imgOneSrc;
+            document.getElementById("right-iframe").innerHTML = imgTwoSrc;
+
+
 
         }
         changeImage("demo");
@@ -278,8 +268,8 @@
             if (contact.clientHeight != 80) {
                 contact.style.height = 0;
             } else {
-                if (window.innerWidth <= 425) {
-                    contact.style.height = 160 + "%";
+                if (window.innerWidth <= 600) {
+                    contact.style.height = 115 + "%";
                 } else {
                     contact.style.height = 90 + "%";
                 }

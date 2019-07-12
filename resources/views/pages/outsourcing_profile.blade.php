@@ -13,7 +13,7 @@
     .h1-font {
         font-family: "Montserrat", sans-serif;
         font-weight: bold;
-        font-size: 3rem;
+        font-size: 3em;
         margin-top: 0;
         margin-bottom: 25px;
         color: var(--h1-color);
@@ -21,14 +21,14 @@
 
     .h2-font {
         font-family: "Montserrat", sans-serif;
-        font-size: 2rem;
+        font-size: 2em;
         color: var(--h2-color) !important;
     }
 
     .h3-font {
         font-family: "Montserrat", sans-serif;
         font-weight: bold;
-        font-size: 3rem;
+        font-size: 3em;
         margin-top: 0;
         margin-bottom: 0;
         color: var(--h1-color);
@@ -37,7 +37,7 @@
     .h4-font {
         font-family: "Montserrat", sans-serif;
         font-weight: bold;
-        font-size: 1.4rem;
+        font-size: 1.4em;
         margin-top: 0;
         margin-bottom: 15px;
         color: var(--h2-color);
@@ -46,7 +46,7 @@
     .h5-font {
         font-family: "Montserrat", sans-serif;
         font-weight: bold;
-        font-size: 1.4rem;
+        font-size: 1.4em;
         margin-top: 0;
         margin-bottom: 25px;
         color: var(--h1-color);
@@ -54,7 +54,7 @@
 
     .p-font {
         font-family: "Source Sans Pro", sans-serif !important;
-        font-size: 1.4rem;
+        font-size: 1.4em;
         color: #354144 !important;
     }
 
@@ -122,6 +122,10 @@
         100% {
             background-color: white;
         }
+    }
+
+    #app {
+        position: relative;
     }
 
     .team-member {
@@ -370,20 +374,21 @@
 
     .section-one-bg {
         position: absolute;
-        width: 200vw;
-        top: -220%;
-        left: -60%;
+        width: 3000px;
+        top: -96%;
+        left: -30%;
         z-index: -100;
+        transform: rotate(7deg);
     }
 
     .line-overlay {
-        position: absolute;
+
         z-index: 10;
     }
 
     .line-main {
         position: absolute;
-
+        left: 0;
     }
 
     .line-container {
@@ -392,10 +397,15 @@
         height: 100px;
     }
 
-    .line-container>div {
+    .line-container>div:first-of-type {
         text-align: center;
+    }
+
+    .line-container div {
+
         position: relative;
         top: 40px;
+        width: 230px;
     }
 
     /*.counter {
@@ -408,7 +418,8 @@
 
     .skills-container {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
+        flex-wrap: wrap;
     }
 
     .path {
@@ -435,6 +446,175 @@
     .outsourcing-about .button {
         margin: 100 auto;
         display: block;
+    }
+
+    @media only screen and (max-width: 1500px) {
+
+        .section-one-bg {
+            top: -91%;
+            transform: rotate(15deg);
+        }
+    }
+
+
+
+    @media only screen and (max-width: 1400px) {
+        .section-one-bg {
+            position: absolute;
+            width: 2500px;
+            top: -74%;
+            left: -30%;
+        }
+    }
+
+    @media only screen and (max-width: 1250px) {
+        .section-one-bg {
+
+            left: -44%;
+
+        }
+    }
+
+    @media only screen and (max-width: 1024px) {
+        .line-container {
+            flex-basis: 50%;
+            margin-bottom: 80px;
+            display: flex;
+            /* flex-wrap: wrap; */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .line-container>div:first-of-type {
+            text-align: center;
+            position: relative;
+            top: 85px;
+        }
+
+        .team-member {
+            padding-right: 25px;
+        }
+
+        .team-description {
+            width: 60%;
+            margin-top: 25px;
+        }
+
+        .team-description .h3-font,
+        .team-description .h4-font {
+            text-align: center;
+        }
+
+        .section-one-bg {
+            width: 2000px;
+            top: -50%;
+            left: -30%;
+            transform: rotate(23deg);
+        }
+    }
+
+    @media only screen and (max-width: 925px) {
+        .team-member {
+            flex-direction: column;
+            padding: 0;
+        }
+
+        .team-img-container {
+            margin-right: 0;
+        }
+
+        .team-description {
+            width: 80%;
+            min-width: 425px;
+            margin-top: 25px;
+            position: relative;
+        }
+
+        .team-description-bottom {
+            right: 0%;
+            top: -173px;
+        }
+
+        .section-one-bg {
+            width: 1500px;
+            top: -32%;
+            left: -30%;
+            transform: rotate(17deg);
+        }
+    }
+
+    @media only screen and (max-width: 725px) {
+        .section-one-bg {
+            width: 1500px;
+            top: -27%;
+        }
+    }
+
+    @media only screen and (max-width: 501px) {
+        .line-container {
+            flex-basis: 100%;
+        }
+
+        .section-one-bg {
+            width: 1500px;
+            top: -22%;
+        }
+    }
+
+    @media only screen and (max-width: 470px) {
+        .team-description-bottom-social {
+            flex-direction: row;
+        }
+
+        .team-description-bottom {
+            position: static;
+            justify-content: center;
+        }
+
+        .team-description>div:first-of-type {
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        .team-description {
+            min-width: unset;
+        }
+
+
+        .team-blue2 {
+            bottom: 30px;
+        }
+
+        .team-img {
+            margin: 0 auto;
+            z-index: 20;
+            width: 270px;
+            /* position: relative; */
+            /* padding-top: 0 !important; */
+            /* position: relative; */
+            /* padding-top: 0 !important; */
+            transform: rotate(0deg);
+            clip-path: url(#clipPath);
+            /* height: 325px; */
+            /* width: 100%; */
+            /* display: flex; */
+            /* margin: 0 auto; */
+            justify-content: baseline;
+        }
+
+        .team-img img {
+            transform: rotate(0deg);
+            object-fit: contain;
+            /* position: absolute; */
+            top: 0;
+            padding-top: 0 !important;
+            height: auto;
+            /* width: auto; */
+            object-position: 0px 0px;
+            /* margin: 0 auto; */
+            /* display: block; */
+        }
     }
 </style>
 @section('content')
