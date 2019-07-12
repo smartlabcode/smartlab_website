@@ -232,6 +232,10 @@
         object-position: 0px 50px;
     }
 
+    .mirza img {
+        object-position: 0px 10px !important;
+    }
+
     .team-blue1 {
         position: absolute;
         top: -6px;
@@ -1929,7 +1933,7 @@
                     </clipPath>
                 </defs>
             </svg>
-            <div class="team-img">
+            <div class="team-img mirza">
                 <img class="profile-image" src="{{ asset('images/team/mirza.png') }}" alt="Mirza O">
             </div>
             <img src="{{ asset('images/img/blue-circle.svg') }}" class="team-blue2">

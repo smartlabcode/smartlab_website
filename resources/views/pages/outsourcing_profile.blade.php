@@ -448,6 +448,10 @@
         display: block;
     }
 
+    .mirza {
+        object-position: 0px 10px !important;
+    }
+
     @media only screen and (max-width: 1500px) {
 
         .section-one-bg {

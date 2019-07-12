@@ -5,13 +5,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let sessionGetDescLong = [];
     let sessionGetSkills = [];
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 9; i++) {
         sessionGetImg[i] = sessionStorage.getItem("teamImg" + i);
         sessionGetDesc[i] = sessionStorage.getItem("teamDesc" + i);
         sessionGetDescLong[i] = sessionStorage.getItem("teamDescLong" + i);
         sessionGetSkills[i] = sessionStorage.getItem("teamSkills" + i);
     }
-    console.log(sessionGetSkills[0]);
 
     let description = document.querySelector(".team-description");
     let profileImg = document.querySelector(".profile-image");
@@ -20,12 +19,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
     if (location.search.substr(1) < sessionGetImg.length) {
         description.innerHTML = sessionGetDesc[location.search.substr(1)];
         profileImg.src = sessionGetImg[location.search.substr(1)];
+        if (location.search.substr(1) == 8) {
+            profileImg.classList.add("mirza");
+        }
         descriptionLong.innerHTML = sessionGetDescLong[location.search.substr(1)];
         skills.innerHTML = sessionGetSkills[location.search.substr(1)];
     } else {
         description.innerHTML = "<h5 class='h5-font'>These are not the Droids you are looking for</h5>";
         profileImg.parentElement.classList.toggle("blank");
-        profileImg.src = "../images/team/team-blank.svg";
+        profileImg.src = "{{asset('/images/team/team-blank.svg')}}";
     }
 
     let line = document.querySelectorAll(".line-overlay");

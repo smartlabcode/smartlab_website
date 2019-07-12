@@ -22,11 +22,10 @@ class Team {
 }
 
 
-for (let i = 0; i < profileImg.length - 1; i++) {
+for (let i = 0; i < profileImg.length; i++) {
     team[i] = new Team(profileImg[i].src, description[i].innerHTML, descriptionLong[i].innerHTML, skills[i]);
     sessionImg[i] = sessionStorage.setItem("teamImg" + i, team[i].image);
     sessionDesc[i] = sessionStorage.setItem("teamDesc" + i, team[i].description);
     sessionDescLong[i] = sessionStorage.setItem("teamDescLong" + i, team[i].descriptionLong);
     sessionSkills[i] = sessionStorage.setItem("teamSkills" + i, team[i].skills.innerHTML);
-    console.log(skills[i].innerHTML)
 }
