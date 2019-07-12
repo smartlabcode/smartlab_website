@@ -334,6 +334,10 @@
         height: 300px;
     }
 
+    .carrers-positions-mobile {
+        display: none;
+    }
+
     .--left-10px {
         position: relative;
         left: -30px;
@@ -421,6 +425,32 @@
 
     .centar {
         text-align: center;
+    }
+
+    @media only screen and (max-width: 1024px) {
+        .careers-positions-image {
+            display: none;
+        }
+
+        .carrers-positions-image-container {
+
+            background-color: var(--shadow-color);
+            max-height: 300px;
+            display: block;
+            overflow: hidden;
+        }
+
+        .carrers-positions-mobile {
+
+            display: inline-block;
+            width: 100%;
+            transform: translate(-12%, -25%);
+
+        }
+
+        .careers-positions {
+            display: block;
+        }
     }
 
     @media only screen and (max-width: 850px) {
@@ -518,6 +548,7 @@
             <div class="carrers-positions-image-container">
                 <img class="careers-positions-image --left-10px" src="{{ asset('images/careers/megaphone-orange.svg') }}" alt="orange megaphone" />
                 <img class="careers-positions-image " src="{{ asset('images/careers/designer-page-img.svg') }}" alt="designer wanted" />
+                <img class="carrers-positions-mobile" src="{{ asset('images/careers/we-are-hiring-des.svg') }}" alt="designer wanted" />
             </div>
 
             <div class="careers-positions-info">
@@ -533,6 +564,7 @@
             <div class="carrers-positions-image-container">
                 <img class="careers-positions-image --left-10px" src="{{ asset('images/careers/megaphone-blue.svg') }}" alt="blue megaphone" />
                 <img class="careers-positions-image" src="{{ asset('images/careers/developer-page-img.svg') }}" alt="developer wanted" />
+                <img class="carrers-positions-mobile" src="{{ asset('images/careers/we-are-hiring-dev.svg') }}" alt="developer wanted" />
             </div>
 
             <div class="careers-positions-info">
