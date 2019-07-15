@@ -1,23 +1,4 @@
 /* SECTION ONE */
-:root {
-    --shadow-color: rgba(0, 53, 145, 0.15);
-    --button-bg-color: #4885fa;
-    --button-bg-orange: #ff931f;
-    --h2-color: #4885fa;
-    --h1-color: #14213d;
-    --p-color: #c9d6e2;
-    scroll-behavior: smooth;
-}
-
-body {
-    background: white !important;
-    overflow-x: hidden !important;
-    overflow-y: hidden !important;
-}
-
-html {
-    overflow-x: hidden !important;
-}
 
 .iframe-container {
     position: relative;
@@ -119,27 +100,6 @@ html {
     outline: 0;
 }
 
-.h1-font {
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-    font-size: 3em;
-    margin-top: 0;
-    margin-bottom: 25px;
-    color: var(--h1-color);
-}
-
-.h2-font {
-    font-family: "Montserrat", sans-serif;
-    font-size: 2em;
-    color: var(--h2-color);
-}
-
-.p-font {
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 1.5em;
-    font-weight: 300;
-    color: var(--h1-color);
-}
 
 .shadow-1 {
     -webkit-box-shadow: -1px -1px 15px 1px var(--shadow-color);
@@ -164,9 +124,10 @@ html {
     position: absolute;
     width: 85vw;
     /* max-height: 124vh; */
-    top: -406px;
-    right: -300px;
+    top: -505px;
+    right: -330px;
     z-index: -10;
+    transform: rotate(-17deg);
 }
 
 .background-img-orange-circle {
@@ -240,11 +201,6 @@ html {
 }
 
 
-.contain {
-    max-width: 1440px;
-    width: 90%;
-    margin: 0 auto;
-}
 
 /* SECTION TWO*/
 .section-two {
@@ -269,7 +225,7 @@ html {
     background-color: white;
     border-radius: 15px;
     padding: 10px;
-    max-height: 370px;
+    /*max-height: 370px;*/
     cursor: pointer;
     position: relative;
 }
@@ -303,8 +259,29 @@ html {
     border-radius: 15px;
     position: relative;
     padding: 10px;
-    max-height: 370px;
+    /*max-height: 370px;*/
 }
+
+/*.fade-anim {
+    animation-name: opacity-out;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.iframe-container {
+    padding-top: 0;
+}
+
+@keyframes opacity-out {
+    0% {
+        padding-top: 0;
+    }
+
+    100% {
+        padding-top: 56.25%;
+    }
+}
+*/
 
 #popup-image {
     width: 100%;
@@ -382,11 +359,6 @@ html {
     border: 1px solid var(--button-bg-color);
 }
 
-.h2-font {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.8em;
-    color: var(--h2-color);
-}
 
 .section3 {
     margin-top: 50px;
@@ -984,17 +956,6 @@ textarea:focus {
         width: 145%;
     }
 
-    .h1-font {
-        font-size: 1.5em;
-    }
-
-    .h2-font {
-        font-size: 1.3em;
-    }
-
-    .p-font {
-        font-size: 1.2em;
-    }
 
     .button {
         /*width: 166px;*/

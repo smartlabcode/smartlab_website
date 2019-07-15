@@ -2,43 +2,6 @@
 
 
 <style>
-    :root {
-        --shadow-color: rgba(0, 53, 145, 0.15);
-        --button-bg-color: #4885fa;
-        --button-bg-orange: #ff931f;
-        --h2-color: #4885FA;
-        --h1-color: #14213d;
-        --p-color: #c9d6e2;
-        scroll-behavior: smooth;
-    }
-
-    .h1-font {
-        font-family: "Montserrat", sans-serif;
-        font-weight: bold;
-        font-size: 3em;
-        margin-top: 0;
-        margin-bottom: 25px;
-        color: var(--h1-color);
-    }
-
-    .h2-font {
-        font-family: "Montserrat", sans-serif;
-        font-size: 2em;
-        color: var(--h2-color) !important;
-    }
-
-    .p-font {
-        font-family: "Source Sans Pro", sans-serif !important;
-        font-size: 1.4em;
-        color: #354144 !important;
-    }
-
-    .contain {
-        max-width: 1440px;
-        width: 90%;
-        margin: 0 auto;
-    }
-
     #firstSection {
         width: 90%;
         height: calc(100vh - 80px);
@@ -519,7 +482,7 @@
     }
 </style>
 
-
+<link href="{{ asset('css/font.css') }}" rel="stylesheet">
 @section('content')
 
 <!-- TODO dont delete this-->

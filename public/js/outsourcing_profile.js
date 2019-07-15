@@ -19,9 +19,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     if (location.search.substr(1) < sessionGetImg.length) {
         description.innerHTML = sessionGetDesc[location.search.substr(1)];
         profileImg.src = sessionGetImg[location.search.substr(1)];
-        if (location.search.substr(1) == 8) {
-            profileImg.classList.add("mirza");
-        }
         descriptionLong.innerHTML = sessionGetDescLong[location.search.substr(1)];
         skills.innerHTML = sessionGetSkills[location.search.substr(1)];
     } else {

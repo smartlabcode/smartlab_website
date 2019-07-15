@@ -300,7 +300,7 @@
         background-color: white;
         border-radius: 15px;
         padding: 10px;
-        max-height: 370px;
+        /*max-height: 370px;*/
         cursor: pointer;
         position: relative;
     }
@@ -335,7 +335,7 @@
         border-radius: 15px;
         position: relative;
         padding: 10px;
-        max-height: 370px;
+        /*max-height: 370px;*/
     }
 
     .slider-left img {

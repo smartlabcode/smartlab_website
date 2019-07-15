@@ -2,6 +2,7 @@
 @extends('layouts.app')
 
 <link href="{{ asset('css/coursesMoodleAnimations.css') }}" rel="stylesheet">
+<link href="{{ asset('css/font.css') }}" rel="stylesheet">
 @section('content')
 
 <div class="background-section-one">

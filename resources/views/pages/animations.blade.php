@@ -2,7 +2,7 @@
 @extends('layouts.app')
 
 <link href="{{ asset('css/coursesMoodleAnimations.css') }}" rel="stylesheet">
-
+<link href="{{ asset('css/font.css') }}" rel="stylesheet">
 @section('content')
 
 <div class="background-section-one">
@@ -239,6 +239,7 @@
             if (par == "next") {
                 imgOne = imgTwo;
                 imgTwo = imgTwo + 1;
+
                 if (imgTwo == images.length - 1) {
                     imgOne = imgTwo;
                     imgTwo = 0;
@@ -253,9 +254,11 @@
             var imgTwoSrc = images[imgTwo];
 
             document.getElementById("left-iframe").innerHTML = imgOneSrc;
+            //document.getElementById("left-iframe").classList.remove("fade-anim");
+            // document.getElementById("left-iframe").classList.add("fade-anim");
             document.getElementById("right-iframe").innerHTML = imgTwoSrc;
-
-
+            // document.getElementById("right-iframe").classList.remove("fade-anim");
+            // document.getElementById("right-iframe").classList.add("fade-anim");
 
         }
         changeImage("demo");

@@ -1,30 +1,5 @@
 @extends('layouts.app')
 <style>
-    :root {
-        --shadow-color: rgba(0, 53, 145, 0.15);
-        --button-bg-color: #4885fa;
-        --button-bg-orange: #ff931f;
-        --h2-color: #4885FA;
-        --h1-color: #14213d;
-        --p-color: #c9d6e2;
-        scroll-behavior: smooth;
-    }
-
-    .h1-font {
-        font-family: "Montserrat", sans-serif;
-        font-weight: bold;
-        font-size: 3em;
-        margin-top: 0;
-        margin-bottom: 25px;
-        color: var(--h1-color);
-    }
-
-    .h2-font {
-        font-family: "Montserrat", sans-serif;
-        font-size: 2em;
-        color: var(--h2-color) !important;
-    }
-
     .h3-font {
         font-family: "Montserrat", sans-serif;
         font-weight: bold;
@@ -52,17 +27,7 @@
         color: var(--h1-color);
     }
 
-    .p-font {
-        font-family: "Source Sans Pro", sans-serif !important;
-        font-size: 1.4em;
-        color: #354144 !important;
-    }
 
-    .contain {
-        max-width: 1440px;
-        width: 90%;
-        margin: 0 auto;
-    }
 
     .button {
         cursor: pointer;
@@ -124,14 +89,14 @@
     }
 
     .section-one {
-        height: 75%;
+        /*height: 75%;*/
         position: relative;
     }
 
     .section-one-bg {
         position: absolute;
         width: 3000px;
-        top: -184%;
+        top: -270%;
         /* bottom: -80%; */
         /* left: -25vw; */
         right: -30%;
@@ -229,7 +194,7 @@
         top: 0;
         padding-top: 0 !important;
         width: 100%;
-        object-position: 0px 50px;
+        object-position: 0px 10px;
     }
 
     .mirza img {
@@ -535,7 +500,7 @@
 
     @media only screen and (max-width: 600px) {
         .section-one-bg {
-            top: -82%;
+            top: -90%;
         }
 
         .team-description-bottom {
@@ -551,15 +516,16 @@
 
     @media only screen and (max-width: 425px) {
         .section-one {
-            /*height: 120%;*/
+            /*height: 100%;*/
         }
 
         .section-one-bg {
-            top: -48%;
+            top: -55%;
             width: 1000px;
         }
     }
 </style>
+<link href="{{ asset('css/font.css') }}" rel="stylesheet">
 @section('content')
 
 <!--@include('parts.break_space')-->
@@ -583,6 +549,7 @@
     <div class="team-member contain">
         <!-- team skills Irfan K.-->
         <div class="team-skills">
+
             <div class="line-container">
                 <div>
                     <p class="skill-name p-font">Articulate

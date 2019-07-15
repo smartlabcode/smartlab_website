@@ -3,63 +3,6 @@
 
 
 <style>
-  :root {
-    --shadow-color: rgba(0, 53, 145, 0.15);
-    --button-bg-color: #4885fa;
-    --button-bg-orange: #ff931f;
-    --h2-color: #4885FA;
-    --h1-color: #14213d;
-    --p-color: #c9d6e2;
-    scroll-behavior: smooth;
-  }
-
-  html {
-    overflow-x: hidden;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-    margin: 0 auto;
-    overflow-x: hidden;
-    background-color: white !important;
-    overflow-y: hidden !important;
-  }
-
-  .contain {
-    max-width: 1440px;
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .bold {
-    font-weight: bold;
-  }
-
-  .h1-font {
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-    font-size: 3em;
-    margin-top: 0;
-    margin-bottom: 25px;
-    color: var(--h1-color);
-  }
-
-  .h2-font {
-    font-family: "Montserrat", sans-serif;
-    font-size: 2em;
-    color: var(--h2-color) !important;
-  }
-
-  .p-font {
-    font-family: "Source Sans Pro", sans-serif !important;
-    font-size: 1.5em;
-    font-weight: 300;
-    color: black !important;
-  }
-
   .background-section-one {
     /*background-image: url("/img/header-fluid-blue.svg");
   background-repeat: no-repeat;
@@ -77,9 +20,10 @@
     position: absolute;
     width: 85vw;
     /* max-height: 124vh; */
-    top: -406px;
-    right: -300px;
+    top: -505px;
+    right: -330px;
     z-index: -10;
+    transform: rotate(-17deg);
   }
 
   .background-img-orange-circle {
@@ -453,7 +397,7 @@
     top: 0;
     padding-top: 0 !important;
     width: 100%;
-    object-position: 0px 50px;
+    object-position: 0px 10px;
   }
 
   .mirza img {
@@ -662,6 +606,12 @@
   .partners-images img {
     object-fit: contain;
     flex-basis: 20%;
+    cursor: pointer;
+    transition: 0.2s transform ease-in-out;
+  }
+
+  .partners-images img:hover {
+    transform: scale(0.9);
   }
 
   .blog-section {
@@ -1847,8 +1797,7 @@
   /* about us animation ends */
 </style>
 
-
-
+<link href="{{ asset('css/font.css') }}" rel="stylesheet">
 @section('content')
 
 <div class="background-section-one">
@@ -2284,8 +2233,8 @@
           <div class="team-img">
             <img src="{{asset('/images/team/florin.png')}}" alt="Florin B photo">
           </div>
-          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue4">
-          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange4">
+          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1">
+          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1">
         </div>
         <div class="team-description">
           <h3>Florin B.</h3>
@@ -2304,8 +2253,8 @@
           <div class="team-img mirza">
             <img src="{{asset('/images/team/mirza.png')}}" alt="Mirza O photo">
           </div>
-          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue4">
-          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange4">
+          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue2">
+          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange2">
         </div>
         <div class="team-description">
           <h3>Mirza O.</h3>
@@ -2324,8 +2273,8 @@
           <div class="team-img">
             <img src="{{asset('/images/team/emina.png')}}" alt="Emina K photo">
           </div>
-          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue4">
-          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange4">
+          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue3">
+          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange3">
         </div>
         <div class="team-description">
           <h3>Emina K.</h3>
