@@ -229,7 +229,15 @@
         padding-right: 50px;
     }
 
+    .header-content-left p {
+
+        margin-top: 35px;
+        margin-bottom: 30px;
+
+    }
+
     .button {
+        font-family: "Montserrat", sans-serif;
         cursor: pointer;
         border: none;
         border-radius: 35px;

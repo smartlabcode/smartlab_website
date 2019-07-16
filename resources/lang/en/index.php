@@ -21,7 +21,7 @@ return [
     'section_two_bot_right_p' => 'We use Moodle as a leading open source management system with customizable features and endless adaption possibilities.',
     'section_two_bot_right_button' => 'Learn More',
     'about_us_h2' => 'About Us',
-    'about_us_h3' => 'We are a team of creative professionals and designers who are dedicated to graphics, websites and educational solutions. We have the will, skills and commitment to help our customers to stand out from the crowd of other organisations and companies. Creation of online and oﬀline content is our specialty. Regardless of which type and size of projects we do, they are extremely important to us and we do our best that the results of our work contribute to your success.',
+    'about_us_h3' => 'We are a team of creative professionals and designers who are dedicated to graphics, websites and educational solutions. We have the will, skills and commitment to help our customers to stand out from the crowd of other organisations and companies. Creation of online and offline content is our specialty. Regardless of which type and size of projects we do, they are extremely important to us and we do our best that the results of our work contribute to your success.',
     'about_us_circle1' => 'Online<br>Courses',
     'about_us_circle2' => 'Moodle LMS<br>Implementation',
     'about_us_circle3' => 'Web Design<br>and Development',

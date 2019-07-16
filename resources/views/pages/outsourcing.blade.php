@@ -30,6 +30,7 @@
 
 
     .button {
+        font-family: "Montserrat", sans-serif;
         cursor: pointer;
         border: none;
         border-radius: 35px;
@@ -41,6 +42,11 @@
         background-color: var(--button-bg-color);
         border: 1px solid var(--button-bg-color);
         transition: all 0.2s ease-in;
+
+    }
+
+    .button:focus {
+        outline: none;
     }
 
     .button:hover {
@@ -120,6 +126,11 @@
         flex-direction: column;
         justify-content: center;
         margin-top: 10%;
+    }
+
+    .section-one-img-left-container p {
+        margin-top: 35px;
+        margin-bottom: 30px;
     }
 
     .section-one-img-left {

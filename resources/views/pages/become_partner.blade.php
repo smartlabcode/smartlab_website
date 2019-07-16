@@ -1,6 +1,7 @@
 @extends('layouts.app')
 <style>
     .button {
+        font-family: "Montserrat", sans-serif;
         cursor: pointer;
         border: none;
         border-radius: 35px;
@@ -20,19 +21,21 @@
 
     .button:hover {
         background-color: white;
-        color: var(--button-bg-color);
-        border: 1px solid var(--button-bg-color);
+        color: var(--button-bg-color) !important;
+        border: 1px solid var(--button-bg-color) !important;
     }
 
     .--gray {
-        background-color: #969696;
-        border-color: #969696;
+        background-color: #C9D6E2;
+        border-color: #C9D6E2;
+        color: var(--h1-color) !important;
     }
 
     .--gray:hover {
-        color: #969696 !important;
-        border: 1px solid #969696 !important;
+        color: var(--h1-color) !important;
+        border: 1px solid var(--h1-color) !important;
     }
+
 
     .--dark-blue {
         background-color: #14213d;
@@ -42,10 +45,16 @@
         transform: translateX(-100%);
     }
 
-    .button:hover {
+    .--dark-blue:hover {
+        color: #14213d !important;
+        border-color: #14213d !important;
+        background-color: white !important;
+    }
+
+    /*.button:hover {
         color: #14213d !important;
         border: 1px solid #14213d !important;
-    }
+    }*/
 
     .header-container {
         position: relative;
@@ -68,6 +77,13 @@
     .header-content-left {
         flex-basis: 50%;
         padding-right: 50px;
+    }
+
+    .header-content-left p {
+
+        margin-top: 35px;
+        margin-bottom: 30px;
+
     }
 
     .header-content-right {

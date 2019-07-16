@@ -1,4 +1,19 @@
 /* SECTION ONE */
+.circle {
+    animation: circle-clip-path 1s ease-in;
+    animation-fill-mode: forwards;
+    /*clip-path: circle(10%);*/
+}
+
+@keyframes circle-clip-path {
+    from {
+        clip-path: circle(10%);
+    }
+
+    to {
+        clip-path: circle(85%);
+    }
+}
 
 .iframe-container {
     position: relative;
@@ -239,6 +254,7 @@
     border-radius: 50%;
     z-index: 100;
     cursor: pointer;
+    transition: transform 0.2s ease-in-out;
 }
 
 #next {
@@ -250,6 +266,12 @@
     border-radius: 50%;
     z-index: 100;
     cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+#next:hover,
+#prev:hover {
+    transform: scale(1.1);
 }
 
 .slider-right {
@@ -340,6 +362,7 @@
 }
 
 .button {
+    font-family: "Montserrat", sans-serif;
     cursor: pointer;
     border: none;
     border-radius: 35px;

@@ -55,7 +55,7 @@
                 </div>
                 <div id="left-iframe">
                     <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/Q3cZOOmbJdE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-                    <img id="left-img" src="">
+                    <img id="left-img" src="" class="circle">
                 </div>
                 <img id="prev" class="prethodni shadow-1" src="{{asset('/images/img/Picture2.png')}}" alt="previuos slide">
             </div>
@@ -64,7 +64,7 @@
 
                 </div>
                 <div id="right-iframe">
-                    <img id="right-img" src="">
+                    <img id="right-img" src="" class="circle">
                     <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/s5xDYxh2SAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
                 </div>
                 <img id="next" class="sljedeci shadow-1" src="{{asset('/images/img/Picture3.png')}}" alt="next slide">
@@ -231,12 +231,24 @@
         popupClickRight.addEventListener("click", () => popupContent(imgTwo));
         let prev = document.querySelector("#prev");
         let next = document.querySelector("#next");
+        let rightImg = document.querySelector("#right-img");
+        let leftImg = document.querySelector("#left-img");
 
+        function clipPath(elem1, elem2) {
+            elem1.classList.remove("circle");
+            elem2.classList.remove("circle");
+            void elem1.offsetWidth;
+            void elem2.offsetWidth;
+            elem1.classList.add("circle");
+            elem2.classList.add("circle");
+        }
         prev.addEventListener("click", function() {
-            changeImage("previous")
+            changeImage("previous");
+            clipPath(leftImg, rightImg);
         });
         next.addEventListener("click", function() {
-            changeImage("next")
+            changeImage("next");
+            clipPath(leftImg, rightImg);
         });
 
         function changeImage(par) {
@@ -244,18 +256,25 @@
             console.log(imgOne, imgTwo)
 
             if (par == "next") {
-                imgOne = imgTwo;
-                imgTwo = imgTwo + 1;
+
                 if (imgTwo == images.length - 1) {
                     imgOne = imgTwo;
                     imgTwo = 0;
+                } else {
+                    imgOne = imgTwo;
+                    imgTwo = imgTwo + 1;
                 }
 
-            } else if (imgOne !== 0 && par == "previous") {
-                imgOne = imgOne - 1;
-                imgTwo = imgTwo - 1;
-            }
+            } else if (par == "previous") {
+                if (imgOne == 0) {
+                    imgOne = images.length - 1;
+                    imgTwo = imgOne - 1;
+                } else {
+                    imgTwo = imgOne;
+                    imgOne = imgTwo - 1;
+                }
 
+            }
             var imgOneSrc = images[imgOne];
             var imgTwoSrc = images[imgTwo];
 

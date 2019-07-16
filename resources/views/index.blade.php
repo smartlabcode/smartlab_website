@@ -118,6 +118,7 @@
   }
 
   .button {
+    font-family: "Montserrat", sans-serif;
     cursor: pointer;
     border: none;
     border-radius: 35px;
@@ -372,6 +373,10 @@
     justify-content: center;
     margin-bottom: 50px;
   }
+
+  /*a[class=".team-member"] {
+    color: red !important;
+  }*/
 
   .team-img-container {
     position: relative;
@@ -681,9 +686,9 @@
     color: black;
     font-family: "Source Sans Pro", sans-serif !important;
     overflow: hidden;
-    max-height: 160px;
-    line-height: 23px;
-    font-size: 1.1em;
+    max-height: 155px;
+    line-height: 1.2;
+    font-size: 1.3em;
     padding-right: 10px;
     padding-left: 10px;
   }
@@ -706,12 +711,12 @@
     content: "...";
     bottom: 24px;
     right: 14px;
-    font-size: 1.1em;
+    font-size: 1.2em;
     padding-top: 0px;
-    line-height: 1.5em;
+    line-height: 1.2em;
     padding-left: 10px;
     padding-right: 47px;
-    padding-bottom: 0px;
+    padding-bottom: 4px;
     background-color: white;
     font-weight: bold;
   }
@@ -870,7 +875,7 @@
 
   .submit {
     align-self: flex-end;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 100px;
     background-color: var(--button-bg-orange);
     border: 1px solid var(--button-bg-orange);
@@ -954,11 +959,14 @@
     font-size: 1.5em;
   }
 
-
+  #contact {
+    top: 330px;
+    position: absolute;
+  }
 
   @media screen and (min-width: 2000px) {
     .background-img {
-      top: -250px;
+      top: -700px;
       right: -500px;
     }
 
@@ -1836,7 +1844,7 @@
         @lang('index.section_two_p')
       </p>
       <!-- TODO where should explore button lead -->
-      <button id="pinned-element1" class="button submit button-orange">@lang('index.section_two_button')</button>
+      <a href="#anchor"><button id="pinned-element1" class="button submit button-orange">@lang('index.section_two_button')</button></a>
     </div>
   </div>
 
@@ -2071,7 +2079,7 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img src="{{asset('/images/team/irfo-k.png')}}" alt="Irfan K photo">
+            <img data-src="{{asset('/images/team/irfo-k.png')}}" alt="Irfan K photo">
           </div>
           <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1">
           <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1">
@@ -2091,7 +2099,7 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img src="{{asset('/images/team/ibro.png')}}" alt="Ibrahim Z photo">
+            <img data-src="{{asset('/images/team/ibro.png')}}" alt="Ibrahim Z photo">
           </div>
           <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue2">
           <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange2">
@@ -2111,7 +2119,7 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img src="{{asset('/images/team/hare.png')}}" alt="Haris M photo">
+            <img data-src="{{asset('/images/team/hare.png')}}" alt="Haris M photo">
           </div>
           <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue3">
           <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange3">
@@ -2131,7 +2139,7 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img src="{{asset('/images/team/rizah.png')}}" alt="Rizah K photo">
+            <img data-src="{{asset('/images/team/rizah.png')}}" alt="Rizah K photo">
           </div>
           <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue4">
           <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange4">
@@ -2151,7 +2159,7 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img src="{{asset('/images/team/amer.png')}}" alt="Amer M photo">
+            <img data-src="{{asset('/images/team/amer.png')}}" alt="Amer M photo">
           </div>
           <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1">
           <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1">
@@ -2171,7 +2179,7 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img src="{{asset('/images/team/irfo-s.png')}}" alt="Irfan S photo">
+            <img data-src="{{asset('/images/team/irfo-s.png')}}" alt="Irfan S photo">
           </div>
           <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue2">
           <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange2">
@@ -2191,7 +2199,7 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img src="{{asset('/images/team/aida.png')}}" alt="Aida R photo">
+            <img data-src="{{asset('/images/team/aida.png')}}" alt="Aida R photo">
           </div>
           <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue3">
           <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange3">
@@ -2211,7 +2219,7 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img src="{{asset('/images/team/emir.png')}}" alt="Emir M photo">
+            <img data-src="{{asset('/images/team/emir.png')}}" alt="Emir M photo">
           </div>
           <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue4">
           <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange4">
@@ -2231,7 +2239,7 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img src="{{asset('/images/team/florin.png')}}" alt="Florin B photo">
+            <img data-src="{{asset('/images/team/florin.png')}}" alt="Florin B photo">
           </div>
           <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1">
           <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1">
@@ -2251,7 +2259,7 @@
             </defs>
           </svg>
           <div class="team-img mirza">
-            <img src="{{asset('/images/team/mirza.png')}}" alt="Mirza O photo">
+            <img data-src="{{asset('/images/team/mirza.png')}}" alt="Mirza O photo">
           </div>
           <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue2">
           <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange2">
@@ -2262,6 +2270,7 @@
         </div>
       </div>
       <div class="team-member">
+
         <div class="team-img-container">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
             <defs>
@@ -2271,7 +2280,7 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img src="{{asset('/images/team/emina.png')}}" alt="Emina K photo">
+            <img data-src="{{asset('/images/team/emina.png')}}" alt="Emina K photo">
           </div>
           <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue3">
           <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange3">
@@ -2281,7 +2290,8 @@
           <p>PR/Administration Manager</p>
         </div>
       </div>
-      <div class="team-member">
+
+      <a class="team-member" href="{{asset('/pages/careers')}}">
         <div class="team-img-container">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
             <defs>
@@ -2291,7 +2301,7 @@
             </defs>
           </svg>
           <div class="team-img blank">
-            <img src="{{asset('/images/team/team-blank.svg')}}" alt="Blank photo, could be you">
+            <img data-src="{{asset('/images/team/team-blank.svg')}}" alt="Blank photo, could be you">
           </div>
           <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue4">
           <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange4">
@@ -2300,7 +2310,8 @@
           <h3>You?</h3>
           <p>Feel Free to Join Us</p>
         </div>
-      </div>
+      </a>
+
     </div>
   </div>
 </section>
@@ -2386,7 +2397,8 @@
 
   <img class="contact-orange-circle-r" src="{{asset('/images/img/orange-circle.svg')}}" alt="background orange circle" />
   <img class="contact-orange-circle-l" src="{{asset('/images/img/orange-circle.svg')}}" alt="background orange circle" />
-  <div class="contact-form-container " id="contact">
+  <div class="contact-form-container ">
+    <div id="contact"></div>
     <p>@lang('index.contact_p')</p>
     <h2 class="text-center h1-font">@lang('index.contact_h2')</h2>
     @include('parts.error_success')
@@ -2437,15 +2449,19 @@
       path: "{{asset('/images/home-animation')}}" // the path to the animation json
 
     });
-
+    const options = {
+      root: null,
+      threshold: 0,
+      rootMargin: "0px"
+    };
     const animationObserver = new IntersectionObserver(function(entries, animationObserver) {
       entries.forEach(entry => {
-        console.log(entry);
         if (entry.isIntersecting && window.innerWidth > 768) {
           lottie.play();
         } else lottie.pause();
       })
     });
+
     animationObserver.observe(animation);
     let blogValue = document.querySelectorAll(".blog-value");
     let blogText = document.querySelectorAll(".blog-text");
@@ -2454,8 +2470,19 @@
 
     for (let i = 0; i < blogValue.length; i++) {
       temp = blogValue[i].value.replace(/(<([^>]+)>)/ig, "");;
-      console.log(temp)
       blogText[i].innerHTML = temp;
+    }
+    let teamImages = document.querySelectorAll(".team-img img");
+    const teamImagesObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.src = entry.target.dataset.src;
+          teamImagesObserver.unobserve(entry.target);
+        }
+      });
+    }, options);
+    for (let i = 0; i < teamImages.length; i++) {
+      teamImagesObserver.observe(teamImages[i]);
     }
 
     //blogs end
@@ -2464,11 +2491,7 @@
     let i = 0;
     const displays = document.querySelectorAll(".note-display");
     const transitionDuration = 900;
-    const options = {
-      root: null, //it is the viewport
-      threshold: 0,
-      rootMargin: "0px"
-    };
+
     const observer = new IntersectionObserver(function(entries, observer) {
       entries.forEach(entry => {
         console.log(entry);
@@ -2576,7 +2599,6 @@
     const observer2 = new IntersectionObserver(function(entries, observer2) {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            console.log(entry);
             interval = setInterval(testemonialsChange, 5000);
           } else {
             window.clearInterval(interval, 5000);
@@ -2604,17 +2626,15 @@
     }
     const sectionTwoItems = document.querySelectorAll(".section-two-item");
     const options2 = {
-      root: null, //it is the viewport
+      root: null,
       threshold: 0.5,
       rootMargin: "0px"
     };
     const sectionTwoItemsObserver = new IntersectionObserver(function(entries, sectionTwoItemsObserver) {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            console.log(entry.target);
             entry.target.style.opacity = 1;
           }
-
         });
       },
       options2);

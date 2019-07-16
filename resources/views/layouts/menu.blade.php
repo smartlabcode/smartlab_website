@@ -140,11 +140,11 @@
 
 
     .arrow:hover:before {
-        transform: rotateX(-180deg) translate(-100%, -95%);
+        transform: rotateX(-180deg) translate(-100%, -115%);
     }
 
     .arrow-js:hover:before {
-        transform: rotateX(-180deg) translate(-100%, -170%);
+        transform: rotateX(-180deg) translate(-100%, -200%);
         animation: arrow 0.2s ease-in-out forwards;
     }
 
@@ -160,6 +160,10 @@
         100% {
             background-color: white;
         }
+    }
+
+    #nav-list {
+        transition: all 0.5s ease-in-out;
     }
 
     .nav-top {
@@ -179,11 +183,17 @@
         margin-right: 20px;
     }
 
+    #nav-top {
+        height: 30px;
+        margin-top: 15px;
+    }
+
     .nav-bot {
         display: flex;
         justify-content: flex-end;
         position: sticky;
         top: 0;
+        transition: all 0.5s ease-in-out;
     }
 
     .arrow {
@@ -205,11 +215,11 @@
         position: absolute;
         content: "";
         background-color: #14213d;
-        width: 15px;
-        height: 15px;
+        width: 13px;
+        height: 13px;
         left: 100%;
         top: 50%;
-        transform: translate(-100%, -75%);
+        transform: translate(-100%, -80%);
         -webkit-clip-path: polygon(0 50%, 50% 100%, 100% 50%);
         clip-path: polygon(0 50%, 50% 100%, 100% 50%);
         transition: 0.2s transform ease-in-out;
@@ -221,11 +231,11 @@
         position: absolute;
         content: "";
         background-color: white;
-        width: 15px;
-        height: 15px;
+        width: 13px;
+        height: 13px;
         left: 100%;
         top: 50%;
-        transform: translate(-100%, -75%);
+        transform: translate(-100%, -80%);
         -webkit-clip-path: polygon(0 50%, 50% 100%, 100% 50%);
         clip-path: polygon(0 50%, 50% 100%, 100% 50%);
         transition: 0.2s all ease-in-out;
@@ -349,12 +359,12 @@
 
         .nav-bot {
             justify-content: space-between;
-            padding-top: 30px;
-            padding-bottom: 30px;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
             background-color: white;
             width: 100vw !important;
-            padding-left: 5%;
-            padding-right: 5%;
+            padding-left: 2.5% !important;
+            padding-right: 2.5% !important;
         }
 
         .expandable {
@@ -401,7 +411,7 @@
             flex-direction: column;
             justify-content: flex-start;
             position: absolute;
-            top: 95px;
+            top: 55px;
             width: 100vw;
             right: 0;
             background-color: white;
@@ -724,7 +734,7 @@
         let navLiContainer = document.querySelector("#nav-li-container");
         let samePageLinks = document.querySelectorAll(".same-page-link");
         let clicked = 0;
-
+        let navBot = document.querySelector(".nav-bot");
         for (let i = 0; i < samePageLinks.length; i++) {
 
             samePageLinks[i].addEventListener("click", function(event) {
@@ -756,6 +766,10 @@
             if (window.pageYOffset > 100) {
                 nav.style.backgroundColor = "white";
                 navTop.style.display = "none";
+
+                navBot.style.padding = "10px 0";
+
+
                 for (let i = 0; i < arrow.length; i++) {
                     arrow[i].classList.remove("arrow");
                     arrow[i].classList.add("arrow-js");
@@ -772,6 +786,7 @@
             } else {
                 nav.style.backgroundColor = "transparent";
                 navTop.style.display = "flex";
+                navBot.style.padding = "0 0";
                 for (let i = 0; i < arrow.length; i++) {
                     arrow[i].classList.add("arrow");
                     arrow[i].classList.remove("arrow-js");

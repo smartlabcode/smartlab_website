@@ -189,13 +189,13 @@
         var imgTwo = 1;
 
         var images = [
-            '<iframe width="560" height="315" src="https://www.youtube.com/embed/Q3cZOOmbJdE" modestbranding=1 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', // 0
-            '<iframe width="560" height="315" src="https://www.youtube.com/embed/s5xDYxh2SAw" modestbranding=1 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', // 1
-            '<iframe width="560" height="315" src="https://www.youtube.com/embed/V25yh0oI_y8" modestbranding=1 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', // 2
-            '<iframe width="560" height="315" src="https://www.youtube.com/embed/xN1Uf4GtwIs" modestbranding=1 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', // 3
-            '<iframe width="560" height="315" src="https://www.youtube.com/embed/Vh49p4JyE9s" modestbranding=1 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+            '<iframe class="circle" width="560" height="315" src="https://www.youtube.com/embed/Q3cZOOmbJdE" modestbranding=1 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', // 0
+            '<iframe class="circle" width="560" height="315" src="https://www.youtube.com/embed/s5xDYxh2SAw" modestbranding=1 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', // 1
+            '<iframe class="circle" width="560" height="315" src="https://www.youtube.com/embed/V25yh0oI_y8" modestbranding=1 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', // 2
+            '<iframe class="circle" width="560" height="315" src="https://www.youtube.com/embed/xN1Uf4GtwIs" modestbranding=1 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', // 3
+            '<iframe class="circle" width="560" height="315" src="https://www.youtube.com/embed/Vh49p4JyE9s" modestbranding=1 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
             '<iframe width="560" height="315" src="https://www.youtube.com/embed/W65Ywt3a04c" modestbranding=1 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
-            '<iframe width="560" height="315" src="https://www.youtube.com/embed/yoY-Hba4sZk" modestbranding=1 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            '<iframe class="circle" width="560" height="315" src="https://www.youtube.com/embed/yoY-Hba4sZk" modestbranding=1 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
         ];
         let popupClickLeft = document.querySelector(".popup-click-left");
         let popupClickRight = document.querySelector(".popup-click-right");
@@ -225,7 +225,17 @@
         popupClickRight.addEventListener("click", () => popupContent(imgTwo));
         let prev = document.querySelector("#prev");
         let next = document.querySelector("#next");
+        let rightImg = document.querySelector("#right-img");
+        let leftImg = document.querySelector("#left-img");
 
+        function clipPath(elem1, elem2) {
+            elem1.classList.remove("circle");
+            elem2.classList.remove("circle");
+            void elem1.offsetWidth;
+            void elem2.offsetWidth;
+            elem1.classList.add("circle");
+            elem2.classList.add("circle");
+        }
         prev.addEventListener("click", function() {
             changeImage("previous")
         });
@@ -235,19 +245,31 @@
 
         function changeImage(par) {
 
-            console.log(imgOne, imgTwo)
+
             if (par == "next") {
-                imgOne = imgTwo;
-                imgTwo = imgTwo + 1;
 
                 if (imgTwo == images.length - 1) {
                     imgOne = imgTwo;
                     imgTwo = 0;
+                } else {
+                    imgOne = imgTwo;
+                    imgTwo = imgTwo + 1;
                 }
 
-            } else if (imgOne !== 0 && par == "previous") {
-                imgOne = imgOne - 1;
-                imgTwo = imgTwo - 1;
+            } else if (par == "previous") {
+                //console.log(imgOne, imgTwo)
+                if (imgOne == 0) {
+                    imgOne = images.length - 1;
+                    imgTwo = imgOne - 1;
+                } else {
+                    imgOne = imgTwo;
+                    if (imgOne != 0) {
+                        imgTwo = imgOne - 1;
+                    } else imgTwo = images.length - 1;
+
+
+                }
+
             }
 
             var imgOneSrc = images[imgOne];

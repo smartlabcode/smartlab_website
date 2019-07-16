@@ -49,6 +49,7 @@
     }
 
     .button {
+        font-family: "Montserrat", sans-serif;
         cursor: pointer;
         border: none;
         border-radius: 35px;
