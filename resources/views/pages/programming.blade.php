@@ -307,12 +307,14 @@
 
     #left-img-overlay {
         position: absolute;
-        width: 97%;
+        left: 10px;
+        width: calc(100% - 20px)
     }
 
     #right-img-overlay {
         position: absolute;
-        width: 97%;
+        right: 10px;
+        width: calc(100% - 20px)
     }
 
     #prev {
@@ -768,7 +770,7 @@
         }
 
         to {
-            clip-path: circle(85%);
+            clip-path: circle(75% at 50% 50%);
         }
     }
 
@@ -778,7 +780,7 @@
         }
 
         to {
-            clip-path: circle(85%);
+            clip-path: circle(75% at 50% 50%);
         }
     }
 
