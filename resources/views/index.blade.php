@@ -902,7 +902,7 @@
     background-repeat: no-repeat;
     background-size: 234vw;
     background-position-x: 40%;
-    background-position-y: 40%;
+    background-position-y: 38%;
 
     padding-top: 80px;
     padding-bottom: 100px;
@@ -960,7 +960,7 @@
   }
 
   #contact {
-    top: 330px;
+    top: 300px;
     position: absolute;
   }
 

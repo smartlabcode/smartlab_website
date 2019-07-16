@@ -97,7 +97,7 @@
     background-color: var(--button-bg-orange);
     color: white !important;
     opacity: 1 !important;
-    padding-top: 16px;
+    padding-top: 14px;
     padding-left: 18px;
     transition: 0.2s transform ease-in-out;
 
@@ -527,7 +527,7 @@ textarea:focus {
     padding-top: 80px;
     overflow: hidden;
     height: 0%;
-    transition: all 0.2s ease-in;
+    transition: all 0.5s ease-in;
 }
 
 .contact-form-container p {

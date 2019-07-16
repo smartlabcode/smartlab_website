@@ -55,6 +55,7 @@
         -moz-box-shadow: -1px -1px 15px 1px var(--shadow-color);
         box-shadow: -1px -1px 15px 1px var(--shadow-color);
         transition: height 0.2s ease-in-out;
+        top: 40px;
     }
 
     .expandable:hover {
@@ -140,11 +141,11 @@
 
 
     .arrow:hover:before {
-        transform: rotateX(-180deg) translate(-100%, -115%);
+        transform: rotateX(-180deg) translate(-100%, -160%);
     }
 
     .arrow-js:hover:before {
-        transform: rotateX(-180deg) translate(-100%, -200%);
+        transform: rotateX(-180deg) translate(-100%, -225%);
         animation: arrow 0.2s ease-in-out forwards;
     }
 
@@ -194,6 +195,7 @@
         position: sticky;
         top: 0;
         transition: all 0.5s ease-in-out;
+
     }
 
     .arrow {
@@ -215,8 +217,8 @@
         position: absolute;
         content: "";
         background-color: #14213d;
-        width: 13px;
-        height: 13px;
+        width: 10px;
+        height: 10px;
         left: 100%;
         top: 50%;
         transform: translate(-100%, -80%);
@@ -231,8 +233,8 @@
         position: absolute;
         content: "";
         background-color: white;
-        width: 13px;
-        height: 13px;
+        width: 10px;
+        height: 10px;
         left: 100%;
         top: 50%;
         transform: translate(-100%, -80%);
@@ -778,7 +780,7 @@
                     grey[i].style.color = "#14213d";
                 }
                 for (let i = 0; i < expandable.length; i++) {
-                    expandable[i].style.top = "54px";
+                    expandable[i].style.top = "46px";
                 }
                 for (let i = 0; i < navLi.length; i++) {
                     navLi[i].classList.add("nav-li-js");
@@ -795,7 +797,7 @@
                     grey[i].style.color = "white";
                 }
                 for (let i = 0; i < expandable.length; i++) {
-                    expandable[i].style.top = "auto";
+                    expandable[i].style.top = "40px";
                 }
                 for (let i = 0; i < navLi.length; i++) {
                     navLi[i].classList.remove("nav-li-js");

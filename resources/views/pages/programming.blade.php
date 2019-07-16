@@ -281,7 +281,7 @@
         background-color: var(--button-bg-orange);
         color: white !important;
         opacity: 1 !important;
-        padding-top: 16px;
+        padding-top: 14px;
         padding-left: 18px;
         transition: 0.2s transform ease-in-out;
 
@@ -303,6 +303,16 @@
         /*max-height: 370px;*/
         cursor: pointer;
         position: relative;
+    }
+
+    #left-img-overlay {
+        position: absolute;
+        width: 97%;
+    }
+
+    #right-img-overlay {
+        position: absolute;
+        width: 97%;
     }
 
     #prev {
@@ -580,7 +590,7 @@
         padding-top: 80px;
         overflow: hidden;
         height: 0%;
-        transition: all 0.2s ease-in;
+        transition: all 0.5s ease-in;
     }
 
     .contact-form-container p {
@@ -678,6 +688,7 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+        margin-top: 400px;
     }
 
     .tools-info {
@@ -723,15 +734,47 @@
 
     }
 
-    .circle {
-        animation: circle-clip-path 1s ease-in;
+    .circle-r {
+        animation: circle-clip-path-r 0.5s ease-in;
         animation-fill-mode: forwards;
         /*clip-path: circle(10%);*/
     }
 
-    @keyframes circle-clip-path {
+    .circle-l {
+        animation: circle-clip-path-l 0.5s ease-in;
+        animation-fill-mode: forwards;
+        /*clip-path: circle(10%);*/
+    }
+
+    .slider-indicator {
+        justify-content: center !important;
+    }
+
+    .slider-indicator span {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: var(--h2-color);
+    }
+
+    .active-indicator {
+        background-color: var(--h1-color) !important;
+    }
+
+    @keyframes circle-clip-path-r {
         from {
-            clip-path: circle(10%);
+            clip-path: circle(10% at 100% 50%);
+        }
+
+        to {
+            clip-path: circle(85%);
+        }
+    }
+
+    @keyframes circle-clip-path-l {
+        from {
+            clip-path: circle(10% at 0% 50%);
         }
 
         to {
@@ -1346,7 +1389,8 @@
                 </div>
                 <div id="left-iframe">
                     <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/Q3cZOOmbJdE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-                    <img id="left-img" src="" class="circle">
+                    <img id="left-img-overlay" src="">
+                    <img id="left-img" src="" class="circle-l">
                 </div>
                 <img id="prev" class="prethodni shadow-1" src="{{asset('/images/img/Picture2.png')}}" alt="previuos slide">
             </div>
@@ -1355,13 +1399,14 @@
 
                 </div>
                 <div id="right-iframe">
-                    <img id="right-img" class="circle" src="">
+                    <img id="right-img-overlay" src="">
+                    <img id="right-img" class="circle-r" src="">
                     <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/s5xDYxh2SAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
                 </div>
                 <img id="next" class="sljedeci shadow-1" src="{{asset('/images/img/Picture3.png')}}" alt="next slide">
             </div>
         </div>
-
+        <div class="slider-indicator"></div>
     </div>
     <img class="secTwoBg3" src="{{asset('/images/img/fluid-bright-circle.svg')}}" alt="circle background">
     <div class="section3 contain">
@@ -1568,14 +1613,16 @@
         }
         let rightImg = document.querySelector("#right-img");
         let leftImg = document.querySelector("#left-img");
+        let leftImgOverlay = document.querySelector("#left-img-overlay");
+        let rightImgOverlay = document.querySelector("#right-img-overlay");
 
         function clipPath(elem1, elem2) {
-            elem1.classList.remove("circle");
-            elem2.classList.remove("circle");
+            elem1.classList.remove("circle-r");
+            elem2.classList.remove("circle-l");
             void elem1.offsetWidth;
             void elem2.offsetWidth;
-            elem1.classList.add("circle");
-            elem2.classList.add("circle");
+            elem1.classList.add("circle-r");
+            elem2.classList.add("circle-l");
         }
         popupClickLeft.addEventListener("click", () => popupContent(imgOne));
         popupClickRight.addEventListener("click", () => popupContent(imgTwo));
@@ -1591,11 +1638,29 @@
             changeImage("next");
             clipPath(rightImg, leftImg);
         });
+        let sliderIndicator = document.querySelector(".slider-indicator");
+        for (let i = 0; i < images.length; i++) {
+            let span = document.createElement("span");
+            sliderIndicator.appendChild(span);
+
+
+
+        }
+
+        console.log(imgOne, imgTwo)
 
         function changeImage(par) {
+            var currentLeft, currentRight;
+            console.log("left: ", imgOne, "right: ", imgTwo);
+            leftImgOverlay.src = images[imgOne];
+            rightImgOverlay.src = images[imgTwo];
+            for (let i = 0; i < images.length; i++) {
+                sliderIndicator.childNodes[i].classList.remove("active-indicator");
+                sliderIndicator.childNodes[imgOne].classList.add("active-indicator");
+                sliderIndicator.childNodes[imgTwo].classList.add("active-indicator");
+            }
 
             if (par == "next") {
-
                 if (imgTwo == images.length - 1) {
                     imgOne = imgTwo;
                     imgTwo = 0;
@@ -1603,7 +1668,6 @@
                     imgOne = imgTwo;
                     imgTwo = imgTwo + 1;
                 }
-
             } else if (par == "previous") {
                 if (imgOne == 0) {
                     imgOne = images.length - 1;
@@ -1620,6 +1684,8 @@
 
             document.getElementById("left-img").src = imgOneSrc;
             document.getElementById("right-img").src = imgTwoSrc;
+            //leftImgOverlay.style.width = document.querySelector(".slider-left").offsetWidth - 20;
+
 
         }
 
