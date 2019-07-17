@@ -1,19 +1,4 @@
 /* SECTION ONE */
-.circle {
-    animation: circle-clip-path 1s ease-in;
-    animation-fill-mode: forwards;
-    /*clip-path: circle(10%);*/
-}
-
-@keyframes circle-clip-path {
-    from {
-        clip-path: circle(10%);
-    }
-
-    to {
-        clip-path: circle(85%);
-    }
-}
 
 .iframe-container {
     position: relative;
@@ -100,7 +85,6 @@
     padding-top: 14px;
     padding-left: 18px;
     transition: 0.2s transform ease-in-out;
-
 }
 
 .close:hover {
@@ -114,7 +98,6 @@
 .button:focus {
     outline: 0;
 }
-
 
 .shadow-1 {
     -webkit-box-shadow: -1px -1px 15px 1px var(--shadow-color);
@@ -215,12 +198,7 @@
     transform: translateX(-1%);
 }
 
-
-
 /* SECTION TWO*/
-.section-two {
-    /*margin-top: 300px !important;*/
-}
 
 .center {
     text-align: center;
@@ -232,8 +210,6 @@
     box-sizing: border-box;
     position: relative;
 }
-
-
 
 .slider-left {
     flex-basis: 49%;
@@ -307,6 +283,8 @@
 
 #popup-image {
     width: 100%;
+    max-height: 70vh;
+    object-fit: cover;
 }
 
 .slider-right img {
@@ -323,19 +301,19 @@
     height: 350px;
 }
 
-#slider>div {
+#slider > div {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-#slider>img {
+#slider > img {
     height: 100%;
     border-radius: 10px;
     display: inline-block;
 }
 
-#slider>img:first-child {
+#slider > img:first-child {
     margin-right: 5px;
     width: 50px;
     height: 50px;
@@ -348,7 +326,7 @@
     z-index: 100;
 }
 
-#slider>img:last-child {
+#slider > img:last-child {
     margin-left: 5px;
     width: 50px;
     height: 50px;
@@ -381,7 +359,6 @@
     color: var(--button-bg-color);
     border: 1px solid var(--button-bg-color);
 }
-
 
 .section3 {
     margin-top: 50px;
@@ -666,7 +643,7 @@ textarea:focus {
 
 @media screen and (min-width: 2000px) {
     .background-img {
-        top: -250px;
+        top: -700px;
         right: -500px;
     }
 
@@ -800,18 +777,12 @@ textarea:focus {
 }
 
 @media screen and (max-width: 1030px) {
-    .section-one {
-        /*position: relative;
-        top: 0px;*/
-    }
-
     .section-one-animation {
         height: 70vh;
         width: 80%;
         margin: 0;
         transform: translateX(15%);
     }
-
 
     .background-img {
         width: 110vw;
@@ -979,7 +950,6 @@ textarea:focus {
         width: 145%;
     }
 
-
     .button {
         /*width: 166px;*/
         /* height: 45px;*/
@@ -1023,8 +993,6 @@ textarea:focus {
         flex-basis: 30%;
         align-items: center;
     }
-
-
 
     .tools-info {
         flex-basis: 60%;
@@ -1080,8 +1048,6 @@ textarea:focus {
         top: 3%;
     }
 
-
-
     .our-works {
         margin-top: 200px !important;
     }
@@ -1107,11 +1073,11 @@ textarea:focus {
         margin-top: 0 !important;
     }
 
-    #slider>img:last-child {
+    #slider > img:last-child {
         right: -14px;
     }
 
-    #slider>img:first-child {
+    #slider > img:first-child {
         left: 5px;
     }
 
@@ -1119,8 +1085,6 @@ textarea:focus {
         margin-top: 30px;
         margin-bottom: 80px;
     }
-
-
 }
 
 @media screen and (max-width: 360px) {

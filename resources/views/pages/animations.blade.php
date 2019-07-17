@@ -3,6 +3,96 @@
 
 <link href="{{ asset('css/coursesMoodleAnimations.css') }}" rel="stylesheet">
 <link href="{{ asset('css/font.css') }}" rel="stylesheet">
+<style>
+    #left-img-overlay {
+        position: absolute;
+
+        width: calc(100% - 20px);
+
+
+    }
+
+    #right-img-overlay {
+        position: absolute;
+
+        width: calc(100% - 20px);
+
+    }
+
+    .slider-indicator {
+        justify-content: center !important;
+    }
+
+    .slider-indicator span {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        margin: 5px;
+        margin-top: 20px;
+        background-color: var(--h2-color);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .active-indicator {
+        background-color: var(--h1-color) !important;
+        transition: all 0.5s ease-in-out;
+        width: 17px !important;
+        height: 17px !important;
+    }
+
+
+    .circle-r {
+        animation: circle-clip-path-r 0.5s ease-in;
+        animation-fill-mode: forwards;
+        /*clip-path: circle(10%);*/
+    }
+
+    .circle-l {
+        animation: circle-clip-path-l 0.5s ease-in;
+        animation-fill-mode: forwards;
+        /*clip-path: circle(10%);*/
+    }
+
+
+    @keyframes circle-clip-path-r {
+        from {
+            clip-path: circle(10% at 100% 50%);
+        }
+
+        to {
+            clip-path: circle(75% at 50% 50%);
+        }
+    }
+
+    @keyframes circle-clip-path-l {
+        from {
+            clip-path: circle(10% at 0% 50%);
+        }
+
+        to {
+            clip-path: circle(75% at 50% 50%);
+        }
+    }
+
+    .popup-click svg {
+        width: 50px !important;
+        height: auto !important;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+    }
+
+    .youtube-fill {
+        transition: fill 0.2s ease-in-out;
+    }
+
+    .popup-click:hover .youtube-fill {
+        fill: #f00 !important;
+
+    }
+</style>
 @section('content')
 
 <div class="background-section-one">
@@ -42,8 +132,8 @@
         <div class="popup">
             <span class="close"> X </span>
             <div class="popup-container">
-                <div class="iframe-container popup-content">
-
+                <div class="popup-content iframe-container">
+                    <iframe id="popup-image" src=""></iframe>
                 </div>
             </div>
 
@@ -51,25 +141,42 @@
         <div>
             <div class="slider-left shadow-1">
                 <div class="popup-click popup-click-left">
-
+                    <svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;" version="1.1" viewBox="0 0 24 24" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect height="24" id="Artboard15" style="fill:none;" width="24" x="0" y="0" />
+                        <g>
+                            <path class="youtube-fill" d="M2.093,9.075c0.125,-1.941 1.629,-3.509 3.562,-3.716c2.005,-0.202 4.136,-0.311 6.345,-0.311c2.209,0 4.34,0.109 6.345,0.312c1.933,0.206 3.437,1.774 3.562,3.715c0.061,0.956 0.093,1.933 0.093,2.925c0,0.992 -0.032,1.969 -0.093,2.925c-0.125,1.941 -1.629,3.509 -3.562,3.716c-2.005,0.202 -4.136,0.311 -6.345,0.311c-2.209,0 -4.34,-0.109 -6.345,-0.312c-1.933,-0.206 -3.437,-1.774 -3.562,-3.715c-0.061,-0.956 -0.093,-1.933 -0.093,-2.925c0,-0.992 0.032,-1.969 0.093,-2.925Z" style="fill:#4d4d4d;" />
+                            <path d="M15.055,12l-4.909,2.995l0,-5.99l4.909,2.995Z" style="fill:#fff;" />
+                        </g>
+                    </svg>
                 </div>
-                <div class="iframe-container" id="left-iframe">
+                <div id="left-iframe">
                     <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/Q3cZOOmbJdE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+                    <img id="left-img-overlay" src="">
+                    <img id="left-img" src="" class="circle-l">
                 </div>
                 <img id="prev" class="prethodni shadow-1" src="{{asset('/images/img/Picture2.png')}}" alt="previuos slide">
             </div>
             <div class="slider-right shadow-1">
                 <div class="popup-click popup-click-right">
-
+                    <svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;" version="1.1" viewBox="0 0 24 24" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect height="24" id="Artboard15" style="fill:none;" width="24" x="0" y="0" />
+                        <g>
+                            <path class="youtube-fill" d="M2.093,9.075c0.125,-1.941 1.629,-3.509 3.562,-3.716c2.005,-0.202 4.136,-0.311 6.345,-0.311c2.209,0 4.34,0.109 6.345,0.312c1.933,0.206 3.437,1.774 3.562,3.715c0.061,0.956 0.093,1.933 0.093,2.925c0,0.992 -0.032,1.969 -0.093,2.925c-0.125,1.941 -1.629,3.509 -3.562,3.716c-2.005,0.202 -4.136,0.311 -6.345,0.311c-2.209,0 -4.34,-0.109 -6.345,-0.312c-1.933,-0.206 -3.437,-1.774 -3.562,-3.715c-0.061,-0.956 -0.093,-1.933 -0.093,-2.925c0,-0.992 0.032,-1.969 0.093,-2.925Z" style="fill:#4d4d4d;" />
+                            <path d="M15.055,12l-4.909,2.995l0,-5.99l4.909,2.995Z" style="fill:#fff;" />
+                        </g>
+                    </svg>
                 </div>
-                <div class="iframe-container" id="right-iframe">
+                <div id="right-iframe">
+                    <img id="right-img-overlay" src="">
+                    <img id="right-img" class="circle-r" src="">
                     <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/s5xDYxh2SAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
                 </div>
                 <img id="next" class="sljedeci shadow-1" src="{{asset('/images/img/Picture3.png')}}" alt="next slide">
             </div>
         </div>
-
+        <div class="slider-indicator"></div>
     </div>
+
     <img class="secTwoBg3" src="{{asset('/images/img/fluid-bright-circle.svg')}}" alt="circle background image">
     <div class="section3 contain">
         <div style="height: 50%">
@@ -189,17 +296,27 @@
         var imgTwo = 1;
 
         var images = [
-            '<iframe class="circle" width="560" height="315" src="https://www.youtube.com/embed/Q3cZOOmbJdE" modestbranding=1 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', // 0
-            '<iframe class="circle" width="560" height="315" src="https://www.youtube.com/embed/s5xDYxh2SAw" modestbranding=1 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', // 1
-            '<iframe class="circle" width="560" height="315" src="https://www.youtube.com/embed/V25yh0oI_y8" modestbranding=1 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', // 2
-            '<iframe class="circle" width="560" height="315" src="https://www.youtube.com/embed/xN1Uf4GtwIs" modestbranding=1 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', // 3
-            '<iframe class="circle" width="560" height="315" src="https://www.youtube.com/embed/Vh49p4JyE9s" modestbranding=1 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
-            '<iframe width="560" height="315" src="https://www.youtube.com/embed/W65Ywt3a04c" modestbranding=1 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
-            '<iframe class="circle" width="560" height="315" src="https://www.youtube.com/embed/yoY-Hba4sZk" modestbranding=1 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            'https://www.youtube.com/embed/Q3cZOOmbJdE', // 0
+            'https://www.youtube.com/embed/s5xDYxh2SAw', // 1
+            'https://www.youtube.com/embed/V25yh0oI_y8', // 2
+            'https://www.youtube.com/embed/xN1Uf4GtwIs', // 3
+            'https://www.youtube.com/embed/Vh49p4JyE9s',
+            'https://www.youtube.com/embed/W65Ywt3a04c',
+            'https://www.youtube.com/embed/yoY-Hba4sZk'
         ];
+        let youtube_video_id = [];
+        let video_thumbnail = [];
+        for (let i = 0; i < images.length; i++) {
+            youtube_video_id[i] = images[i].match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/).pop();
+            if (youtube_video_id[i].length == 11) {
+                video_thumbnail[i] = '//img.youtube.com/vi/' + youtube_video_id[i] + '/0.jpg';
+            }
+        }
+        console.log(video_thumbnail);
+
         let popupClickLeft = document.querySelector(".popup-click-left");
         let popupClickRight = document.querySelector(".popup-click-right");
-        let popupVideo = document.querySelector(".popup-content");
+        let popupVideo = document.querySelector("#popup-image");
         let closePopup = document.querySelector(".close");
         let popup = document.querySelector(".popup");
         let popupOverlay = document.querySelector(".popup-overlay");
@@ -207,7 +324,7 @@
         popupOverlay.addEventListener("click", popupClose);
 
         function popupClose() {
-            popupVideo.innerHTML = "";
+            popupVideo.src = "";
             closePopup.style.display = "none";
             popup.classList.remove("shadow-2");
             popupOverlay.style.width = "0vw";
@@ -215,7 +332,7 @@
         }
 
         function popupContent(imgIndex) {
-            popupVideo.innerHTML = images[imgIndex];
+            popupVideo.src = images[imgIndex];
             closePopup.style.display = "inline-block";
             popup.classList.add("shadow-2");
             popupOverlay.style.width = "100vw";
@@ -227,23 +344,44 @@
         let next = document.querySelector("#next");
         let rightImg = document.querySelector("#right-img");
         let leftImg = document.querySelector("#left-img");
+        let leftImgOverlay = document.querySelector("#left-img-overlay");
+        let rightImgOverlay = document.querySelector("#right-img-overlay");
 
         function clipPath(elem1, elem2) {
-            elem1.classList.remove("circle");
-            elem2.classList.remove("circle");
+            elem1.classList.remove("circle-r");
+            elem2.classList.remove("circle-l");
             void elem1.offsetWidth;
             void elem2.offsetWidth;
-            elem1.classList.add("circle");
-            elem2.classList.add("circle");
+            elem1.classList.add("circle-r");
+            elem2.classList.add("circle-l");
         }
         prev.addEventListener("click", function() {
-            changeImage("previous")
+            changeImage("previous");
+            clipPath(rightImg, leftImg);
         });
         next.addEventListener("click", function() {
-            changeImage("next")
+            changeImage("next");
+            clipPath(rightImg, leftImg);
         });
 
+        function addIndicator(left, right) {
+            for (let i = 0; i < images.length; i++) {
+                sliderIndicator.childNodes[i].classList.remove("active-indicator");
+                sliderIndicator.childNodes[left].classList.add("active-indicator");
+                sliderIndicator.childNodes[right].classList.add("active-indicator");
+            }
+        }
+        let sliderIndicator = document.querySelector(".slider-indicator");
+        for (let i = 0; i < images.length; i++) {
+            let span = document.createElement("span");
+            sliderIndicator.appendChild(span);
+        }
+
         function changeImage(par) {
+            let currentLeft, currentRight;
+            console.log("left: ", imgOne, "right: ", imgTwo);
+            leftImgOverlay.src = video_thumbnail[imgOne];
+            rightImgOverlay.src = video_thumbnail[imgTwo];
 
 
             if (par == "next") {
@@ -255,32 +393,26 @@
                     imgOne = imgTwo;
                     imgTwo = imgTwo + 1;
                 }
-
-            } else if (par == "previous") {
-                //console.log(imgOne, imgTwo)
+            }
+            if (par == "previous") {
                 if (imgOne == 0) {
+                    imgTwo = imgOne;
                     imgOne = images.length - 1;
-                    imgTwo = imgOne - 1;
+
                 } else {
-                    imgOne = imgTwo;
-                    if (imgOne != 0) {
-                        imgTwo = imgOne - 1;
-                    } else imgTwo = images.length - 1;
-
-
+                    imgTwo = imgOne;
+                    imgOne = imgOne - 1;
                 }
 
             }
+            addIndicator(imgOne, imgTwo);
+            var imgOneSrc = video_thumbnail[imgOne];
+            var imgTwoSrc = video_thumbnail[imgTwo];
 
-            var imgOneSrc = images[imgOne];
-            var imgTwoSrc = images[imgTwo];
+            document.getElementById("left-img").src = imgOneSrc;
+            document.getElementById("right-img").src = imgTwoSrc;
+            //leftImgOverlay.style.width = document.querySelector(".slider-left").offsetWidth - 20;
 
-            document.getElementById("left-iframe").innerHTML = imgOneSrc;
-            //document.getElementById("left-iframe").classList.remove("fade-anim");
-            // document.getElementById("left-iframe").classList.add("fade-anim");
-            document.getElementById("right-iframe").innerHTML = imgTwoSrc;
-            // document.getElementById("right-iframe").classList.remove("fade-anim");
-            // document.getElementById("right-iframe").classList.add("fade-anim");
 
         }
         changeImage("demo");

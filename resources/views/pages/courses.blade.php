@@ -3,6 +3,74 @@
 
 <link href="{{ asset('css/coursesMoodleAnimations.css') }}" rel="stylesheet">
 <link href="{{ asset('css/font.css') }}" rel="stylesheet">
+<style>
+    #left-img-overlay {
+        position: absolute;
+        left: 10px;
+        width: calc(100% - 20px);
+    }
+
+    #right-img-overlay {
+        position: absolute;
+        right: 10px;
+        width: calc(100% - 20px);
+    }
+
+
+    .circle-r {
+        animation: circle-clip-path-r 0.5s ease-in;
+        animation-fill-mode: forwards;
+        /*clip-path: circle(10%);*/
+    }
+
+    .circle-l {
+        animation: circle-clip-path-l 0.5s ease-in;
+        animation-fill-mode: forwards;
+        /*clip-path: circle(10%);*/
+    }
+
+    .slider-indicator {
+        justify-content: center !important;
+    }
+
+    .slider-indicator span {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        margin: 5px;
+        margin-top: 20px;
+        background-color: var(--h2-color);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .active-indicator {
+        background-color: var(--h1-color) !important;
+        transition: all 0.5s ease-in-out;
+        width: 17px !important;
+        height: 17px !important;
+    }
+
+    @keyframes circle-clip-path-r {
+        from {
+            clip-path: circle(10% at 100% 50%);
+        }
+
+        to {
+            clip-path: circle(75% at 50% 50%);
+        }
+    }
+
+    @keyframes circle-clip-path-l {
+        from {
+            clip-path: circle(10% at 0% 50%);
+        }
+
+        to {
+            clip-path: circle(75% at 50% 50%);
+        }
+    }
+</style>
 @section('content')
 
 <div class="background-section-one">
@@ -55,7 +123,8 @@
                 </div>
                 <div id="left-iframe">
                     <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/Q3cZOOmbJdE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-                    <img id="left-img" src="" class="circle">
+                    <img id="left-img-overlay" src="">
+                    <img id="left-img" src="" class="circle-l">
                 </div>
                 <img id="prev" class="prethodni shadow-1" src="{{asset('/images/img/Picture2.png')}}" alt="previuos slide">
             </div>
@@ -64,13 +133,14 @@
 
                 </div>
                 <div id="right-iframe">
-                    <img id="right-img" src="" class="circle">
+                    <img id="right-img-overlay" src="">
+                    <img id="right-img" class="circle-r" src="">
                     <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/s5xDYxh2SAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
                 </div>
                 <img id="next" class="sljedeci shadow-1" src="{{asset('/images/img/Picture3.png')}}" alt="next slide">
             </div>
         </div>
-
+        <div class="slider-indicator"></div>
     </div>
 
     <img class="secTwoBg3" src="{{asset('/images/img/fluid-bright-circle.svg')}}">
@@ -231,29 +301,48 @@
         popupClickRight.addEventListener("click", () => popupContent(imgTwo));
         let prev = document.querySelector("#prev");
         let next = document.querySelector("#next");
+
         let rightImg = document.querySelector("#right-img");
         let leftImg = document.querySelector("#left-img");
+        let leftImgOverlay = document.querySelector("#left-img-overlay");
+        let rightImgOverlay = document.querySelector("#right-img-overlay");
 
         function clipPath(elem1, elem2) {
-            elem1.classList.remove("circle");
-            elem2.classList.remove("circle");
+            elem1.classList.remove("circle-r");
+            elem2.classList.remove("circle-l");
             void elem1.offsetWidth;
             void elem2.offsetWidth;
-            elem1.classList.add("circle");
-            elem2.classList.add("circle");
+            elem1.classList.add("circle-r");
+            elem2.classList.add("circle-l");
         }
         prev.addEventListener("click", function() {
             changeImage("previous");
-            clipPath(leftImg, rightImg);
+            clipPath(rightImg, leftImg);
         });
         next.addEventListener("click", function() {
             changeImage("next");
-            clipPath(leftImg, rightImg);
+            clipPath(rightImg, leftImg);
         });
 
-        function changeImage(par) {
+        function addIndicator(left, right) {
+            for (let i = 0; i < images.length; i++) {
+                sliderIndicator.childNodes[i].classList.remove("active-indicator");
+                sliderIndicator.childNodes[left].classList.add("active-indicator");
+                sliderIndicator.childNodes[right].classList.add("active-indicator");
+            }
+        }
+        let sliderIndicator = document.querySelector(".slider-indicator");
+        for (let i = 0; i < images.length; i++) {
+            let span = document.createElement("span");
+            sliderIndicator.appendChild(span);
+        }
 
-            console.log(imgOne, imgTwo)
+        function changeImage(par) {
+            let currentLeft, currentRight;
+            console.log("left: ", imgOne, "right: ", imgTwo);
+            leftImgOverlay.src = images[imgOne];
+            rightImgOverlay.src = images[imgTwo];
+
 
             if (par == "next") {
 
@@ -264,23 +353,25 @@
                     imgOne = imgTwo;
                     imgTwo = imgTwo + 1;
                 }
-
-            } else if (par == "previous") {
+            }
+            if (par == "previous") {
                 if (imgOne == 0) {
+                    imgTwo = imgOne;
                     imgOne = images.length - 1;
-                    imgTwo = imgOne - 1;
+
                 } else {
                     imgTwo = imgOne;
-                    imgOne = imgTwo - 1;
+                    imgOne = imgOne - 1;
                 }
 
             }
+            addIndicator(imgOne, imgTwo);
             var imgOneSrc = images[imgOne];
             var imgTwoSrc = images[imgTwo];
 
             document.getElementById("left-img").src = imgOneSrc;
             document.getElementById("right-img").src = imgTwoSrc;
-
+            //leftImgOverlay.style.width = document.querySelector(".slider-left").offsetWidth - 20;
 
 
         }

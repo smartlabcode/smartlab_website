@@ -999,7 +999,7 @@
     }
 
     .contact-section {
-      background-position-y: 36%;
+      background-position-y: 35%;
     }
   }
 

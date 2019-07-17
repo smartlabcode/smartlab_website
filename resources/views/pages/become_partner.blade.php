@@ -1,4 +1,5 @@
 @extends('layouts.app')
+<link href="{{ asset('css/font.css') }}" rel="stylesheet">
 <style>
     .button {
         font-family: "Montserrat", sans-serif;
@@ -122,6 +123,7 @@
         flex-basis: 25%;
         margin-top: 20px;
         min-height: 200px;
+        width: 40%;
     }
 
     .partner-item h2 {
@@ -159,6 +161,7 @@
     }
 
     .partnership-usecase h3 {
+        font-size: 1.4em;
         width: 200px;
     }
 
@@ -386,7 +389,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 25%;
+        padding-top: 15%;
         flex-wrap: wrap;
     }
 
@@ -440,8 +443,9 @@
     .partner-experience-bg {
         position: absolute;
         z-index: -100;
-        width: 150%;
-        transform: translateX(-16%) scaleY(1);
+        width: 160%;
+        transform: translateX(-16%) scaleY(0.8);
+        top: -35%;
     }
 
     .partner-experience-name {
@@ -560,7 +564,7 @@
     }
 
     .margin-b-100 {
-        margin-bottom: 150px !important;
+        margin-bottom: 100px !important;
     }
 
     .margin-b-50 {
@@ -590,6 +594,22 @@
 
         100% {
             background-color: white;
+        }
+    }
+
+    @media screen and (min-width: 2000px) {
+        .background-img {
+            top: -700px;
+            right: -500px;
+        }
+
+        .partnership-container>img {
+            position: absolute;
+            width: 110vw;
+            top: -54%;
+            left: -2vw;
+            transform: scaleY(0.6);
+            z-index: -100;
         }
     }
 
@@ -1029,7 +1049,7 @@
                 <h2 class="centar h1-font margin-b-50">Use Case Partnership</h2>
                 <img class="partnership-usecase-img" src="../images/partner/use-case-partnership.svg" />
 
-                <h3 class="company p-font">Company
+                <h3 class="company h1-font">Company
                     from Germany</h3>
                 <h3 class="smartlab"><img src="../images/smartlab-logo.svg" /> </h3>
                 <div class="partnership-usecase-step --step1 centar">
@@ -1163,7 +1183,7 @@
         @include('parts.error_success')
 
 
-
+        <h2 class="text-center h1-font margin-b-100">Contact us and become our partner</h2>
         <form action="/bussiness" method="POST" enctype="multipart/form-data" class="partner-form">
 
             <!-- Include token -->

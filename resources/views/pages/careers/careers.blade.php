@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-
+<link href="{{ asset('css/font.css') }}" rel="stylesheet">
 <style>
     #firstSection {
         width: 90%;
@@ -357,7 +357,7 @@
     }
 
     form textarea {
-        height: 247px !important;
+        height: 221px !important;
         font-family: "Source Sans Pro", sans-serif !important;
         font-size: 1.4em !important;
     }
@@ -396,6 +396,13 @@
 
     .centar {
         text-align: center;
+    }
+
+    @media screen and (min-width: 2000px) {
+        .background-img {
+            top: -700px;
+            right: -500px;
+        }
     }
 
     @media only screen and (max-width: 1024px) {
@@ -524,7 +531,7 @@
 
             <div class="careers-positions-info">
                 <h2>@lang('careers.eL-h1')</h2>
-                <p>
+                <p class="p-font">
                     @lang('careers.opisEL')
                 </p>
                 <a href="{{asset('/pages/careers/elearning')}}"><button class="button button-orange">@lang('careers.readMore')</button></a>
@@ -540,7 +547,7 @@
 
             <div class="careers-positions-info">
                 <h2>@lang('careers.Dev-h1')</h2>
-                <p>
+                <p class="p-font">
                     @lang('careers.opisDev')
                 </p>
                 <a href="{{asset('/pages/careers/developer')}}"><button class="button">@lang('careers.readMore')</button></a>

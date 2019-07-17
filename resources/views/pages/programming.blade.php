@@ -83,6 +83,7 @@
         top: -406px;
         right: -300px;
         z-index: -10;
+        transform: rotate(-17deg);
     }
 
     .background-img-orange-circle {
@@ -293,6 +294,8 @@
 
     #popup-image {
         width: 100%;
+        max-height: 70vh;
+        object-fit: cover;
     }
 
     .slider-left {
@@ -757,11 +760,17 @@
         width: 15px;
         height: 15px;
         border-radius: 50%;
+        margin: 5px;
+        margin-top: 20px;
         background-color: var(--h2-color);
+        transition: all 0.5s ease-in-out;
     }
 
     .active-indicator {
         background-color: var(--h1-color) !important;
+        transition: all 0.5s ease-in-out;
+        width: 17px !important;
+        height: 17px !important;
     }
 
     @keyframes circle-clip-path-r {
@@ -786,13 +795,15 @@
 
     @media screen and (min-width: 2000px) {
         .background-img {
-            top: -250px;
+            top: -700px;
             right: -500px;
         }
 
         .background-img-orange-circle {
             right: 1210px;
         }
+
+
 
         .secTwoBg {
             left: -117%;
@@ -809,15 +820,13 @@
         }
 
         .xliff-background {
-            width: 107vw;
-            transform: translate(-26%, -8%);
+            width: 111vw;
+            transform: translate(-12%, 1%) scaleY(0.8);
         }
 
         .xliff-section {
             top: 325px;
         }
-
-        .tools-container {}
     }
 
     @media screen and (max-width: 1530px) {
@@ -1574,18 +1583,7 @@
             })
         });
         animationObserver.observe(animation);
-        var imgOne = 0;
-        var imgTwo = 1;
 
-        var images = [
-
-            "{{asset('/images/mockups/ar-aplikacija-dev.png')}}",
-            '{{asset("/images/mockups/dl-fin-unsa-ba.png")}}',
-            '{{asset("/images/mockups/ar-aplikacija-dev.png")}}',
-            '{{asset("/images/mockups/edu-smartlab-ba.png")}}',
-            '{{asset("/images/mockups/fin-unsa-ba.png")}}',
-            '{{asset("/images/mockups/xliff-mockup.png")}}'
-        ];
         let popupClickLeft = document.querySelector(".popup-click-left");
         let popupClickRight = document.querySelector(".popup-click-right");
         let popupVideo = document.querySelector(".popup-content");
@@ -1613,6 +1611,7 @@
             popupOverlay.style.width = "100vw";
             popupOverlay.style.height = "100vh";
         }
+
         let rightImg = document.querySelector("#right-img");
         let leftImg = document.querySelector("#left-img");
         let leftImgOverlay = document.querySelector("#left-img-overlay");
@@ -1640,29 +1639,43 @@
             changeImage("next");
             clipPath(rightImg, leftImg);
         });
+
+
+
+
+        function addIndicator(left, right) {
+            for (let i = 0; i < images.length; i++) {
+                sliderIndicator.childNodes[i].classList.remove("active-indicator");
+                sliderIndicator.childNodes[left].classList.add("active-indicator");
+                sliderIndicator.childNodes[right].classList.add("active-indicator");
+            }
+        }
+        let imgOne = 0;
+        let imgTwo = 1;
+
+        let images = [
+            '{{asset("/images/mockups/ar-aplikacija-dev.png")}}',
+            '{{asset("/images/mockups/dl-fin-unsa-ba.png")}}',
+            '{{asset("/images/mockups/ar-aplikacija-dev.png")}}',
+            '{{asset("/images/mockups/edu-smartlab-ba.png")}}',
+            '{{asset("/images/mockups/fin-unsa-ba.png")}}',
+            '{{asset("/images/mockups/xliff-mockup.png")}}'
+        ];
         let sliderIndicator = document.querySelector(".slider-indicator");
         for (let i = 0; i < images.length; i++) {
             let span = document.createElement("span");
             sliderIndicator.appendChild(span);
-
-
-
         }
 
-        console.log(imgOne, imgTwo)
-
         function changeImage(par) {
-            var currentLeft, currentRight;
+            let currentLeft, currentRight;
             console.log("left: ", imgOne, "right: ", imgTwo);
             leftImgOverlay.src = images[imgOne];
             rightImgOverlay.src = images[imgTwo];
-            for (let i = 0; i < images.length; i++) {
-                sliderIndicator.childNodes[i].classList.remove("active-indicator");
-                sliderIndicator.childNodes[imgOne].classList.add("active-indicator");
-                sliderIndicator.childNodes[imgTwo].classList.add("active-indicator");
-            }
+
 
             if (par == "next") {
+
                 if (imgTwo == images.length - 1) {
                     imgOne = imgTwo;
                     imgTwo = 0;
@@ -1670,17 +1683,19 @@
                     imgOne = imgTwo;
                     imgTwo = imgTwo + 1;
                 }
-            } else if (par == "previous") {
+            }
+            if (par == "previous") {
                 if (imgOne == 0) {
+                    imgTwo = imgOne;
                     imgOne = images.length - 1;
-                    imgTwo = imgOne - 1;
+
                 } else {
                     imgTwo = imgOne;
-                    imgOne = imgTwo - 1;
+                    imgOne = imgOne - 1;
                 }
 
             }
-
+            addIndicator(imgOne, imgTwo);
             var imgOneSrc = images[imgOne];
             var imgTwoSrc = images[imgTwo];
 

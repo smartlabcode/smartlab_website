@@ -424,6 +424,18 @@
         object-position: 0px 10px !important;
     }
 
+    @media screen and (min-width: 2000px) {
+        .section-one-bg {
+            position: absolute;
+            width: 4096px;
+            top: -126%;
+            /* left: -30%; */
+            right: -53%;
+            z-index: -100;
+            transform: rotate(20deg);
+        }
+    }
+
     @media only screen and (max-width: 1500px) {
 
         .section-one-bg {

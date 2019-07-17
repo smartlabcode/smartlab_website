@@ -1,4 +1,5 @@
 @extends('layouts.app')
+<link href="{{ asset('css/font.css') }}" rel="stylesheet">
 <style>
     .h3-font {
         font-family: "Montserrat", sans-serif;
@@ -333,8 +334,8 @@
     }
 
     .--ln {
-        background-color: #2ca7e0;
-        border: 1px solid #2ca7e0;
+        background-color: #0077B5;
+        border: 1px solid #0077B5;
         transition: background-color 0.2s ease-in-out;
     }
 
@@ -379,11 +380,14 @@
     .team-member a {
         color: white;
         display: inline-block;
-        width: 100%;
         height: 100%;
         line-height: 70px;
         border-radius: 35px;
         overflow: hidden;
+    }
+
+    .team-description-bottom-social-img-container a {
+        width: 100%;
     }
 
     .button:hover a {
@@ -403,7 +407,18 @@
     }
 
     .team-description h3 {
-        font-size: 3rem;
+        font-size: 2em;
+    }
+
+    @media screen and (min-width: 2000px) {
+        .section-one-bg {
+            width: 4906px;
+            top: -489%;
+
+            right: -77%;
+
+            transform: rotate(20deg);
+        }
     }
 
     @media only screen and (max-width: 1400px) {
@@ -683,7 +698,7 @@
                 </p>
             </div>
             <div class="team-description-bottom">
-                <button class="button"><a href="{{asset('/pages/outsourcing_profile?0')}}">Read More</a></button>
+                <a href="{{asset('/pages/outsourcing_profile?0')}}"><button class="button">Read More</button></a>
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
                         <a href="#">
@@ -837,7 +852,7 @@
                 </p>
             </div>
             <div class="team-description-bottom">
-                <button class="button"><a href="{{asset('/pages/outsourcing_profile?1')}}">Read More</a></button>
+                <a href="{{asset('/pages/outsourcing_profile?1')}}"><button class="button">Read More</button></a>
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
                         <a href="#">
@@ -992,7 +1007,7 @@
                 </p>
             </div>
             <div class="team-description-bottom">
-                <button class="button"><a href="{{asset('/pages/outsourcing_profile?2')}}">Read More</a></button>
+                <a href="{{asset('/pages/outsourcing_profile?2')}}"><button class="button">Read More</button></a>
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
                         <a href="#">
@@ -1148,7 +1163,7 @@
                 </p>
             </div>
             <div class="team-description-bottom">
-                <button class="button"><a href="{{asset('/pages/outsourcing_profile?3')}}">Read More</a></button>
+                <a href="{{asset('/pages/outsourcing_profile?3')}}"><button class="button">Read More</button></a>
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
                         <a href="#">
@@ -1304,7 +1319,7 @@
                 </p>
             </div>
             <div class="team-description-bottom">
-                <button class="button"><a href="{{asset('/pages/outsourcing_profile?4')}}">Read More</a></button>
+                <a href="{{asset('/pages/outsourcing_profile?4')}}"><button class="button">Read More</button></a>
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
                         <a href="#">
@@ -1460,7 +1475,7 @@
                 </p>
             </div>
             <div class="team-description-bottom">
-                <button class="button"><a href="{{asset('/pages/outsourcing_profile?5')}}">Read More</a></button>
+                <a href="{{asset('/pages/outsourcing_profile?5')}}"><button class="button">Read More</button></a>
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
                         <a href="#">
@@ -1616,7 +1631,7 @@
                 </p>
             </div>
             <div class="team-description-bottom">
-                <button class="button"><a href="{{asset('/pages/outsourcing_profile?6')}}">Read More</a></button>
+                <a href="{{asset('/pages/outsourcing_profile?6')}}"><button class="button">Read More</button></a>
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
                         <a href="#">
@@ -1772,7 +1787,7 @@
                 </p>
             </div>
             <div class="team-description-bottom">
-                <button class="button"><a href="{{asset('/pages/outsourcing_profile?7')}}">Read More</a></button>
+                <a href="{{asset('/pages/outsourcing_profile?7')}}"><button class="button">Read More</button></a>
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
                         <a href="#">
@@ -1928,7 +1943,7 @@
                 </p>
             </div>
             <div class="team-description-bottom">
-                <button class="button"><a href="{{asset('/pages/outsourcing_profile?8')}}">Read More</a></button>
+                <a href="{{asset('/pages/outsourcing_profile?8')}}"><button class="button">Read More</button></a>
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
                         <a href="#">
