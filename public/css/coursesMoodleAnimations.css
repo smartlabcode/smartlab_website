@@ -611,6 +611,7 @@ textarea:focus {
 }
 
 .tools-img div {
+    background-color: white;
     flex-basis: 30%;
     border-radius: 15px;
     text-align: center;
@@ -629,7 +630,8 @@ textarea:focus {
 }
 
 .tools-img img {
-    width: 90px;
+    width: 75px;
+    height: 75px;
     margin-top: 1rem;
     flex-basis: 100%;
     object-fit: contain;
