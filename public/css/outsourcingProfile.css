@@ -437,7 +437,7 @@
         width: 4096px;
         top: -126%;
         /* left: -30%; */
-        right: -53%;
+        left: -3%;
         z-index: -100;
         transform: rotate(20deg);
     }
@@ -446,8 +446,8 @@
 @media only screen and (max-width: 1500px) {
 
     .section-one-bg {
-        top: -91%;
-        transform: rotate(15deg);
+        top: -119%;
+        transform: rotate(25deg);
     }
 }
 

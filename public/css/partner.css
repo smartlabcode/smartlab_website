@@ -5,8 +5,8 @@
     border-radius: 35px;
     width: 260px;
     height: 70px;
-    font-size: 1.4em !important;
-    font-weight: 500;
+    font-size: 1.1em !important;
+    font-weight: bold;
     color: white;
     background-color: var(--button-bg-color);
     border: 1px solid var(--button-bg-color);
@@ -607,6 +607,13 @@ textarea:focus {
         left: -2vw;
         transform: scaleY(0.6);
         z-index: -100;
+    }
+    .partner-experience-bg {
+        position: absolute;
+        z-index: -100;
+        width: 197%;
+        transform: translateX(-22%) scaleY(.7);
+        top: -61%;
     }
 }
 
