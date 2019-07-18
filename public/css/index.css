@@ -997,14 +997,7 @@
       background-position-y: 35%;
     }
   }
-  @media screen and (max-width: 1750px){
-      .section-one{
-          top: unset;
-      }
-      .section-two{
-          margin-top: -320px !important;
-      }
-  }
+
   @media screen and (max-width: 1500px) {
     /*.partners-images {
       flex-basis: 40%;
@@ -1173,9 +1166,7 @@
     .contact-section .submit {
       margin-bottom: 150px;
     }
-    .section-two {
-        margin-top: -85px !important;
-    }
+
     .section-three {
       padding-top: 0;
     }
