@@ -111,16 +111,11 @@
           <div class="note-display --border-right --border-bottom" data-note="98">
             <div class="circle">
               <svg width="150" height="150" class="circle__svg">
-                <filter id="dropshadow" height="130%">
-                  <feGaussianBlur in="SourceAlpha" stdDeviation="3" /> <!-- stdDeviation is how much to blur -->
-                  <feOffset dx="0" dy="0" result="offsetblur" /> <!-- how much to offset -->
-                  <feComponentTransfer>
-                    <feFuncA type="linear" slope="0.3" /> <!-- slope is the opacity of the shadow -->
-                  </feComponentTransfer>
-                  <feMerge>
-                    <feMergeNode /> <!-- this contains the offset blurred image -->
-                    <feMergeNode in="SourceGraphic" /> <!-- this contains the element that the filter is applied to -->
-                  </feMerge>
+                <filter id="dropshadow" width="130%" height="130%">
+                  <feOffset result="offOut" in="SourceGraphic" dx="0" dy="0"></feOffset>
+                  <feColorMatrix result="matrixOut" in="offOut" type="matrix" values="0 0 0 0 0 0 0.21 0 0 0 0 0 0.57 0 0 0 0 0 0.5 0" />
+                  <feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="3"></feGaussianBlur>
+                  <feBlend in="SourceGraphic" in2="blurOut" mode="normal"></feBlend>
                 </filter>
                 <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--path"></circle>
                 <circle cx="75" cy="75" r="50" class="circle__progress circle__progress--fill" style="filter:url(#dropshadow)"></circle>
