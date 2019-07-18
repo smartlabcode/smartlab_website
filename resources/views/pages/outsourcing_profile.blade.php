@@ -11,7 +11,7 @@
 
     .h4-font {
         font-family: "Montserrat", sans-serif;
-        font-weight: bold;
+        /*font-weight: bold;*/
         font-size: 1.4em;
         margin-top: 0;
         margin-bottom: 15px;
@@ -36,8 +36,8 @@
         border-radius: 35px;
         width: 260px;
         height: 70px;
-        font-size: 1.4em !important;
-        font-weight: 500;
+        font-size: 1.1em !important;
+        font-weight: bold;
         color: white;
         background-color: var(--button-bg-color);
         border: 1px solid var(--button-bg-color);
@@ -222,10 +222,14 @@
         z-index: 10;
     }
 
+
     .team-description {
         text-align: left;
         width: 50%;
+        position: relative;
+        top: 25px;
     }
+
 
     .team-description h5 {
         display: none;
@@ -262,8 +266,8 @@
     .team-description-bottom {
         display: flex;
         position: absolute;
-        right: 0%;
-        bottom: 80px;
+        right: -110%;
+        bottom: 9%;
     }
 
     .team-description-bottom button {
@@ -336,15 +340,20 @@
         line-height: 70px;
         border-radius: 35px;
         overflow: hidden;
+
+    }
+
+    .team-description-bottom>a {
+        display: none;
     }
 
     .section-one-bg {
         position: absolute;
-        width: 3000px;
-        top: -96%;
-        left: -30%;
+        width: 4096;
+        top: -138%;
+        left: -33%;
         z-index: -100;
-        transform: rotate(7deg);
+        transform: rotate(16deg);
     }
 
     .line-overlay {
@@ -485,13 +494,19 @@
         }
 
         .team-description {
-            width: 60%;
+            width: 50%;
             margin-top: 25px;
         }
 
         .team-description .h3-font,
         .team-description .h4-font {
             text-align: center;
+        }
+
+        .team-description-bottom {
+
+            right: -106%;
+
         }
 
         .section-one-bg {
@@ -535,7 +550,9 @@
     @media only screen and (max-width: 725px) {
         .section-one-bg {
             width: 1500px;
-            top: -27%;
+            top: -36%;
+            left: -48%;
+            transform: rotate(9deg);
         }
     }
 
@@ -544,13 +561,17 @@
             flex-basis: 100%;
         }
 
-        .section-one-bg {
-            width: 1500px;
-            top: -22%;
-        }
+
     }
 
     @media only screen and (max-width: 470px) {
+        .section-one-bg {
+            width: 1200px;
+            top: -18%;
+            left: -58%;
+            transform: rotate(22deg);
+        }
+
         .team-description-bottom-social {
             flex-direction: row;
         }
@@ -602,6 +623,11 @@
             object-position: 0px 0px;
             /* margin: 0 auto; */
             /* display: block; */
+        }
+
+        .outsourcing-about {
+            padding: 0 15px;
+            margin-top: 0 !important;
         }
     }
 </style>

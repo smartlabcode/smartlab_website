@@ -12,7 +12,7 @@
 
     .h4-font {
         font-family: "Montserrat", sans-serif;
-        font-weight: bold;
+        /*font-weight: bold;*/
         font-size: 1.4em;
         margin-top: 0;
         margin-bottom: 15px;
@@ -37,8 +37,8 @@
         border-radius: 35px;
         width: 260px;
         height: 70px;
-        font-size: 1.4em !important;
-        font-weight: 500;
+        font-size: 1.1em !important;
+        font-weight: bold;
         color: white;
         background-color: var(--button-bg-color);
         border: 1px solid var(--button-bg-color);
@@ -565,14 +565,14 @@
                     animator, front end or back end developer you are on the
                     right place.
                 </p>
-                <button class="button">Available People</button>
+                <a href="#team-members"><button class="button">Available People</button></a>
             </div>
         </div>
         <img class="section-one-img-right" src="{{ asset('images/partner/outsourcing-header-img.svg') }}" />
     </div>
 </section>
 <section>
-    <div class="team-member contain">
+    <div id="team-members" class="team-member contain">
         <!-- team skills Irfan K.-->
         <div class="team-skills">
 

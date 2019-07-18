@@ -906,6 +906,30 @@
 
         }
 
+        @media only screen and (max-width: 750px) {
+            .partnership-container {
+                display: none;
+            }
+
+            .margin-t-400 {
+                margin-top: 0 !important;
+            }
+
+            .margin-b-150 {
+                margin-bottom: 100px !important;
+            }
+
+            .partner-experience-bg {
+                width: 200%;
+                top: -14%;
+            }
+
+            nav {
+                margin-bottom: 0 !important;
+            }
+        }
+
+
         @media only screen and (max-width: 600px) {
             .partner-experience {
 
@@ -942,6 +966,21 @@
             }
 
 
+        }
+
+        @media only screen and (max-width: 425px) {
+            nav {
+                margin-bottom: 0 !important;
+            }
+
+            .header-background {
+                position: absolute;
+                z-index: -100;
+                transform: rotate(17deg);
+                top: -18%;
+                right: -41vw;
+                width: 172vw;
+            }
         }
 
         @media only screen and (max-width: 400px) {

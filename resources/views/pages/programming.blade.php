@@ -427,8 +427,8 @@
         border-radius: 35px;
         width: 260px;
         height: 70px;
-        font-size: 1.4em !important;
-        font-weight: 500;
+        font-size: 1.1em !important;
+        font-weight: bold;
         color: white;
         background-color: var(--button-bg-color);
         border: 1px solid var(--button-bg-color);
@@ -1242,9 +1242,10 @@
         }
 
         .background-img {
-            top: 3%;
+            top: 18%;
+            width: 143%;
+            transform: rotate(57deg);
         }
-
 
 
         .our-works {
@@ -1263,7 +1264,9 @@
             margin-top: 0;
         }
 
-        .tools-container {}
+        .tools-container {
+            top: -145px;
+        }
 
         .section3 {
             margin-bottom: 0 !important;
@@ -1274,8 +1277,9 @@
         }
 
         .xliff-background {
-            width: 644%;
-            top: 8%;
+            width: 604%;
+            top: -1%;
+            left: -125%;
         }
 
         .xliff-background-container {

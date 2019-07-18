@@ -124,8 +124,8 @@
     border-radius: 35px;
     width: 260px;
     height: 70px;
-    font-size: 1.4em !important;
-    font-weight: 500;
+    font-size: 1.1em !important;
+    font-weight: bold;
     color: white;
     background-color: var(--button-bg-color);
     border: 1px solid var(--button-bg-color);
@@ -1491,12 +1491,20 @@
   }
 
   @media screen and (max-width: 425px) {
-
-
-    .background-img {
-      top: 3%;
+    .section-two-background-top {
+      right: 84%;
+      top: 7%;
     }
 
+    .background-img {
+      top: 4%;
+      width: 141%;
+    }
+
+    .section-two-bot-item img {
+      max-height: 205px;
+      padding: 0;
+    }
 
     .section-two-bot-item button {
       margin-top: 25px;

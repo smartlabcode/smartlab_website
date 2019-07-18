@@ -243,8 +243,8 @@
         border-radius: 35px;
         width: 260px;
         height: 70px;
-        font-size: 1.4em !important;
-        font-weight: 500;
+        font-size: 1.1em !important;
+        font-weight: bold;
         color: white;
         background-color: var(--button-bg-color);
         border: 1px solid var(--button-bg-color);
@@ -319,7 +319,8 @@
         flex-direction: column;
         align-items: center;
         padding: 50px;
-        flex-basis: 100%
+        flex-basis: 100%;
+        justify-content: space-between;
     }
 
     .careers-positions-info p {
@@ -469,6 +470,16 @@
             margin-bottom: 25px;
         }
 
+        .carrers-positions-image-container {
+            max-height: 350px;
+        }
+
+        .carrers-positions-mobile {
+            display: inline-block;
+            width: 96%;
+            transform: translate(-12%, -33%);
+        }
+
         .header-content {
             flex-direction: column-reverse;
         }
@@ -495,6 +506,83 @@
             margin-bottom: 150px !important;
         }
     }
+
+    @media only screen and (max-width: 700px) {
+        .carrers-positions-mobile {
+            transform: translate(-12%, -30%);
+        }
+    }
+
+    @media only screen and (max-width: 750px) {
+        .partnership-container {
+            display: none;
+        }
+
+        .margin-t-400 {
+            margin-top: 0 !important;
+        }
+
+        .margin-b-150 {
+            margin-bottom: 100px !important;
+        }
+
+        nav {
+            margin-bottom: 0 !important;
+        }
+
+        .header-background {
+            top: -33%;
+        }
+
+        #aboveSectionThree {
+            margin-bottom: 10px;
+        }
+
+        .careers-positions-container {
+            margin-bottom: 0 !important;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .carrers-positions-image-container {
+            max-height: 300px;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .carrers-positions-image-container {
+            max-height: 250px;
+        }
+
+        .careers-positions-info {
+            padding: 25px;
+        }
+    }
+
+    @media only screen and (max-width: 425px) {
+
+
+        .header-background {
+            position: absolute;
+            z-index: -100;
+            transform: rotate(17deg);
+            top: -18%;
+            right: -41vw;
+            width: 172vw;
+        }
+    }
+
+    @media only screen and (max-width: 375px) {
+        .carrers-positions-image-container {
+            max-height: 200px;
+        }
+    }
+
+    @media only screen and (max-width: 320px) {
+        .carrers-positions-image-container {
+            max-height: 165px;
+        }
+    }
 </style>
 
 <link href="{{ asset('css/font.css') }}" rel="stylesheet">
@@ -511,7 +599,7 @@
         <div class="header-content-left">
             <h1 class="h1-font">@lang('careers.h1')</h1>
             <p class="p-font">@lang('careers.paragraph')</p>
-            <button class="button --gray">@lang('careers.button')</button>
+            <a href="#aboveSectionThree"><button class="button --gray">@lang('careers.button')</button></a>
         </div>
         <div class="header-content-right">
             <img src="{{asset('/images/partner/join-us-header.svg')}}" alt="Join us header background">
