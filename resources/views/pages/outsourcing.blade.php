@@ -1,557 +1,5 @@
 @extends('layouts.app')
-<link href="{{ asset('css/font.css') }}" rel="stylesheet">
-<style>
-    .h3-font {
-        font-family: "Montserrat", sans-serif;
-        font-weight: bold;
-        font-size: 1.4em;
-        margin-top: 0;
-        margin-bottom: 0;
-        color: var(--h1-color);
-    }
-
-    .h4-font {
-        font-family: "Montserrat", sans-serif;
-        /*font-weight: bold;*/
-        font-size: 1.4em;
-        margin-top: 0;
-        margin-bottom: 15px;
-        color: var(--h2-color);
-    }
-
-    .h5-font {
-        font-family: "Montserrat", sans-serif;
-        font-weight: bold;
-        font-size: 1.4em;
-        margin-top: 0;
-        margin-bottom: 25px;
-        color: var(--h1-color);
-    }
-
-
-
-    .button {
-        font-family: "Montserrat", sans-serif;
-        cursor: pointer;
-        border: none;
-        border-radius: 35px;
-        width: 260px;
-        height: 70px;
-        font-size: 1.1em !important;
-        font-weight: bold;
-        color: white;
-        background-color: var(--button-bg-color);
-        border: 1px solid var(--button-bg-color);
-        transition: all 0.2s ease-in;
-
-    }
-
-    .button:focus {
-        outline: none;
-    }
-
-    .button:hover {
-        background-color: white;
-        color: var(--button-bg-color);
-        border: 1px solid var(--button-bg-color);
-    }
-
-    .nav-list {
-        color: rgb(20, 33, 61) !important;
-    }
-
-    .grey {
-        color: rgb(20, 33, 61) !important;
-    }
-
-    .arrow::before {
-        background-color: rgb(20, 33, 61) !important;
-    }
-
-    .arrow:hover:before {
-        transform: rotateX(-180deg) translate(-100%, -170%);
-        animation: arrow 0.2s ease-in-out forwards !important;
-    }
-
-    .nav-top p {
-        color: rgb(20, 33, 61) !important;
-    }
-
-    .nav-top label {
-        color: rgb(20, 33, 61) !important;
-    }
-
-    @keyframes arrow {
-        0% {
-            background-color: var(--h1-color);
-        }
-
-        50% {
-            background-color: var(--h1-color);
-        }
-
-        100% {
-            background-color: white;
-        }
-    }
-
-    .section-one {
-        /*height: 75%;*/
-        position: relative;
-    }
-
-    .section-one-bg {
-        position: absolute;
-        width: 3000px;
-        top: -270%;
-        /* bottom: -80%; */
-        /* left: -25vw; */
-        right: -30%;
-        z-index: -100;
-    }
-
-    .section-one-img-container {
-        position: relative;
-        max-height: 600px;
-        height: 600px;
-        margin-top: 10%;
-        margin-bottom: 10%;
-    }
-
-    .section-one-img-left-container {
-        position: relative;
-        max-height: 600px;
-        height: 600px;
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-top: 10%;
-    }
-
-    .section-one-img-left-container p {
-        margin-top: 35px;
-        margin-bottom: 30px;
-    }
-
-    .section-one-img-left {
-        position: absolute;
-    }
-
-    .--part1 {
-        left: -50px;
-        bottom: -20px;
-        width: 60%;
-    }
-
-    .--part2 {
-        top: -40px;
-        right: 70px;
-        width: 40%;
-    }
-
-    .section-one-img-right {
-        width: 40%;
-        max-height: 600px;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-    }
-
-    .team-member {
-        display: flex;
-        justify-content: left;
-        align-items: center;
-        margin-bottom: 50px !important;
-        padding: 80px 100px;
-        -webkit-box-shadow: -1px -1px 15px 1px var(--shadow-color);
-        -moz-box-shadow: -1px -1px 15px 1px var(--shadow-color);
-        box-shadow: -1px -1px 15px 1px var(--shadow-color);
-        border-radius: 15px;
-    }
-
-    .team-img-container {
-        position: relative;
-    }
-
-    .team-mask {
-        position: absolute;
-        z-index: 0;
-        top: 0;
-    }
-
-
-    .team-img-container {
-        position: relative;
-        height: 325px;
-    }
-
-    .team-img {
-        z-index: 20;
-        position: relative;
-        padding-top: 0 !important;
-        z-index: 20;
-        position: relative;
-        padding-top: 0 !important;
-        transform: rotate(-154deg);
-        clip-path: url(#clipPath);
-        height: 325px;
-        width: 285px;
-    }
-
-    .team-img img {
-        transform: rotate(154deg);
-        object-fit: contain;
-        position: absolute;
-        top: 0;
-        padding-top: 0 !important;
-        width: 100%;
-        object-position: 0px 10px;
-    }
-
-    .mirza img {
-        object-position: 0px 10px !important;
-    }
-
-    .team-blue1 {
-        position: absolute;
-        top: -6px;
-        width: 70%;
-        transform: rotate(242deg);
-        z-index: 10;
-    }
-
-    .team-orange1 {
-        position: absolute;
-        right: 132px;
-        bottom: -23px;
-        width: 60%;
-        z-index: 10;
-    }
-
-    .team-blue2 {
-        position: absolute;
-        bottom: -17px;
-        right: -5px;
-        width: 41%;
-        transform: rotate(0deg);
-        z-index: 10;
-    }
-
-    .team-orange2 {
-        position: absolute;
-        right: 142px;
-        bottom: 65px;
-        transform: rotate(32deg);
-        width: 65%;
-        z-index: 10;
-    }
-
-    .team-blue3 {
-        position: absolute;
-        bottom: 6px;
-        width: 31%;
-        right: 8px;
-        transform: rotate(242deg);
-        z-index: 10;
-    }
-
-    .team-orange3 {
-        position: absolute;
-        right: 77px;
-        top: -6px;
-        width: 81%;
-        z-index: 10;
-        transform: rotate(-106deg);
-    }
-
-    .team-blue4 {
-        position: absolute;
-        width: 42%;
-        transform: rotate(2deg);
-        z-index: 10;
-        bottom: 29px;
-        left: -13px;
-    }
-
-    .team-orange4 {
-        position: absolute;
-        right: -28px;
-        bottom: -38px;
-        width: 81%;
-        z-index: 10;
-    }
-
-    .team-description {
-        text-align: left;
-        margin-left: 100px;
-        width: 68%;
-    }
-
-    .team-orange-circle {
-        position: absolute;
-        transform: rotate(-111deg);
-        top: 0;
-        width: 35%;
-        right: -30vw;
-        z-index: -100;
-    }
-
-    .team-orange-circle-bottom {
-        position: absolute;
-        width: 20%;
-        /* bottom: -70px; */
-        bottom: -5%;
-        left: -26vw;
-        /* left: -340px; */
-        z-index: -101;
-    }
-
-    .team-blue-circle {
-        position: absolute;
-        width: 50%;
-        /* left: -420px; */
-        left: -40vw;
-        transform: rotate(282deg);
-        z-index: -100;
-    }
-
-    .team-description-bottom {
-        display: flex;
-        margin-top: 50px;
-    }
-
-    .team-description-bottom-social {
-        display: flex;
-    }
-
-    .team-description-bottom-social-img-container {
-        border-radius: 50%;
-        height: 69px;
-        width: 69px;
-        margin-left: 10px;
-        cursor: pointer;
-    }
-
-    .--ln {
-        background-color: #0077B5;
-        border: 1px solid #0077B5;
-        transition: background-color 0.2s ease-in-out;
-    }
-
-    .--git {
-        background-color: #000000;
-        border: 1px solid #000000;
-        transition: background-color 0.2s ease-in-out;
-    }
-
-    .team-description-bottom-social-img-container svg {
-        width: 35px;
-        height: 35px;
-        transform: translate(47%, 47%);
-    }
-
-    .--ln:hover {
-        background-color: white;
-    }
-
-    .team-description-bottom-social-img-container:hover .cls-1 {
-        fill: #2ca7e0;
-    }
-
-    .team-description-bottom-social-img-container:hover .cls-2 {
-        fill: #000000;
-    }
-
-    .--git:hover {
-        background-color: white;
-    }
-
-    .cls-1 {
-        fill: white;
-        transition: fill 0.2s ease-in-out;
-    }
-
-    .cls-2 {
-        fill: white;
-        transition: fill 0.2s ease-in-out;
-    }
-
-    .team-member a {
-        color: white;
-        display: inline-block;
-        height: 100%;
-        line-height: 70px;
-        border-radius: 35px;
-        overflow: hidden;
-    }
-
-    .team-description-bottom-social-img-container a {
-        width: 100%;
-    }
-
-    .button:hover a {
-        color: var(--button-bg-color);
-    }
-
-    .button a:hover {
-        text-decoration: none;
-    }
-
-    .team-description-long {
-        display: none;
-    }
-
-    .team-skills {
-        display: none;
-    }
-
-    .team-description h3 {
-        font-size: 2em;
-    }
-
-    @media screen and (min-width: 2000px) {
-        .section-one-bg {
-            width: 4906px;
-            top: -489%;
-
-            right: -77%;
-
-            transform: rotate(20deg);
-        }
-    }
-
-    @media only screen and (max-width: 1400px) {
-        .section-one-img-container {
-            display: flex;
-        }
-
-        .section-one-bg {
-            position: absolute;
-            width: 2500px;
-            top: -130%;
-            /* bottom: -80%; */
-            /* left: -25vw; */
-            right: -46%;
-            z-index: -100;
-        }
-    }
-
-    @media only screen and (max-width: 1330px) {
-        .section-one-bg {
-            right: -60%;
-        }
-
-        .section-one-img-left-container {
-
-            width: 60%;
-
-        }
-    }
-
-    @media only screen and (max-width: 1200px) {
-        .team-member {
-            padding: 40px 50px;
-        }
-
-        .team-description {
-            margin-left: 50px;
-        }
-
-        .section-one-img-left-container {
-            margin-top: 0%;
-        }
-
-        .section-one-img-right {
-            position: static;
-        }
-    }
-
-    @media only screen and (max-width: 1140px) {
-        .section-one-bg {
-            right: -80%;
-        }
-    }
-
-    @media only screen and (max-width: 900px) {
-        .team-description {
-            margin-left: 0;
-            margin-top: 50px;
-            width: 100%;
-        }
-
-        .section-one {
-            /*height: 100%;*/
-        }
-
-        .team-description h3,
-        .team-description h4,
-        .team-description h5 {
-            text-align: center;
-        }
-
-        .team-description-bottom {
-            justify-content: space-between;
-        }
-
-        .team-member {
-            flex-direction: column;
-        }
-
-        .section-one-img-container {
-            max-height: 750px;
-            height: 750px;
-            display: flex;
-            flex-direction: column-reverse;
-        }
-
-        .section-one-img-left-container {
-            width: 100%;
-            text-align: center;
-        }
-
-        .section-one-img-right {
-            max-height: unset;
-            height: unset;
-            position: static;
-            width: 100%;
-        }
-
-        .section-one-bg {
-            top: -95%;
-            right: -50%;
-            width: 1500px
-        }
-    }
-
-    @media only screen and (max-width: 600px) {
-        .section-one-bg {
-            top: -90%;
-        }
-
-        .team-description-bottom {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .team-description-bottom .button {
-            margin-bottom: 25px;
-        }
-    }
-
-    @media only screen and (max-width: 425px) {
-        .section-one {
-            /*height: 100%;*/
-        }
-
-        .section-one-bg {
-            top: -55%;
-            width: 1000px;
-        }
-    }
-</style>
-<link href="{{ asset('css/font.css') }}" rel="stylesheet">
+<link href="{{ asset('css/outsourcing.min.css') }}" rel="stylesheet">
 @section('content')
 
 <!--@include('parts.break_space')-->
@@ -682,7 +130,7 @@
                 </defs>
             </svg>
             <div class="team-img">
-                <img class="profile-image" src="{{ asset('images/team/irfo-k.png') }}" alt="Irfan K">
+                <img class="profile-image" src="{{ asset('images/team/irfo-k.jpg') }}" alt="Irfan K">
             </div>
             <img src="{{ asset('images/img/blue-circle.svg') }}" class="team-blue1">
             <img src="{{ asset('images/img/orange-circle.svg') }}" class="team-orange1">
@@ -836,7 +284,7 @@
                 </defs>
             </svg>
             <div class="team-img">
-                <img class="profile-image" src="{{ asset('images/team/ibro.png') }}" alt="Ibrahim Z">
+                <img class="profile-image" src="{{ asset('images/team/ibro.jpg') }}" alt="Ibrahim Z">
             </div>
             <img src="{{ asset('images/img/blue-circle.svg') }}" class="team-blue2">
             <img src="{{ asset('images/img/orange-circle.svg') }}" class="team-orange2">
@@ -991,7 +439,7 @@
                 </defs>
             </svg>
             <div class="team-img">
-                <img class="profile-image" src="{{ asset('images/team/hare.png') }}" alt="Haris M">
+                <img class="profile-image" src="{{ asset('images/team/hare.jpg') }}" alt="Haris M">
             </div>
             <img src="{{ asset('images/img/blue-circle.svg') }}" class="team-blue3">
             <img src="{{ asset('images/img/orange-circle.svg') }}" class="team-orange3">
@@ -1147,7 +595,7 @@
                 </defs>
             </svg>
             <div class="team-img">
-                <img class="profile-image" src="{{ asset('images/team/amer.png') }}" alt="Amer M">
+                <img class="profile-image" src="{{ asset('images/team/amer.jpg') }}" alt="Amer M">
             </div>
             <img src="{{ asset('images/img/blue-circle.svg') }}" class="team-blue4">
             <img src="{{ asset('images/img/orange-circle.svg') }}" class="team-orange4">
@@ -1303,7 +751,7 @@
                 </defs>
             </svg>
             <div class="team-img">
-                <img class="profile-image" src="{{ asset('images/team/irfo-s.png') }}" alt="Irfan S">
+                <img class="profile-image" src="{{ asset('images/team/irfo-s.jpg') }}" alt="Irfan S">
             </div>
             <img src="{{ asset('images/img/blue-circle.svg') }}" class="team-blue1">
             <img src="{{ asset('images/img/orange-circle.svg') }}" class="team-orange1">
@@ -1459,7 +907,7 @@
                 </defs>
             </svg>
             <div class="team-img">
-                <img class="profile-image" src="{{ asset('images/team/aida.png') }}" alt="Aida R">
+                <img class="profile-image" src="{{ asset('images/team/aida.jpg') }}" alt="Aida R">
             </div>
             <img src="{{ asset('images/img/blue-circle.svg') }}" class="team-blue2">
             <img src="{{ asset('images/img/orange-circle.svg') }}" class="team-orange2">
@@ -1615,7 +1063,7 @@
                 </defs>
             </svg>
             <div class="team-img">
-                <img class="profile-image" src="{{ asset('images/team/emir.png') }}" alt="Emir M">
+                <img class="profile-image" src="{{ asset('images/team/emir.jpg') }}" alt="Emir M">
             </div>
             <img src="{{ asset('images/img/blue-circle.svg') }}" class="team-blue3">
             <img src="{{ asset('images/img/orange-circle.svg') }}" class="team-orange3">
@@ -1771,7 +1219,7 @@
                 </defs>
             </svg>
             <div class="team-img">
-                <img class="profile-image" src="{{ asset('images/team/florin.png') }}" alt="Florin B">
+                <img class="profile-image" src="{{ asset('images/team/florin.jpg') }}" alt="Florin B">
             </div>
             <img src="{{ asset('images/img/blue-circle.svg') }}" class="team-blue4">
             <img src="{{ asset('images/img/orange-circle.svg') }}" class="team-orange4">
@@ -1927,7 +1375,7 @@
                 </defs>
             </svg>
             <div class="team-img mirza">
-                <img class="profile-image" src="{{ asset('images/team/mirza.png') }}" alt="Mirza O">
+                <img class="profile-image" src="{{ asset('images/team/mirza.jpg') }}" alt="Mirza O">
             </div>
             <img src="{{ asset('images/img/blue-circle.svg') }}" class="team-blue2">
             <img src="{{ asset('images/img/orange-circle.svg') }}" class="team-orange2">
@@ -2071,7 +1519,7 @@
                 </defs>
             </svg>
             <div class="team-img">
-                <img class="profile-image" src="{{ asset('images/team/emina.png') }}" alt="Emina K">
+                <img class="profile-image" src="{{ asset('images/team/emina.jpg') }}" alt="Emina K">
             </div>
             <img src="{{ asset('images/img/blue-circle.svg') }}" class="team-blue3">
             <img src="{{ asset('images/img/orange-circle.svg') }}" class="team-orange3">

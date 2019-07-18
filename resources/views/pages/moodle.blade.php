@@ -2,8 +2,7 @@
 @extends('layouts.app')
 
 
-<link href="{{ asset('css/coursesMoodleAnimations.css') }}" rel="stylesheet">
-<link href="{{ asset('css/font.css') }}" rel="stylesheet">
+<link href="{{ asset('css/coursesMoodleAnimations.min.css') }}" rel="stylesheet">
 <style>
     #left-img-overlay {
         position: absolute;
@@ -251,7 +250,6 @@
         });
         const animationObserver = new IntersectionObserver(function(entries, animationObserver) {
             entries.forEach(entry => {
-                console.log(entry);
                 if (entry.isIntersecting) {
                     lottie.play();
                 } else lottie.pause();
@@ -259,15 +257,12 @@
         });
         animationObserver.observe(animation);
 
-        var imgOne = 0;
-        var imgTwo = 1;
-
-        var images = [
-
-
-            '{{asset("/images/mockups/dl-fin-unsa-ba.png")}}',
-            '{{asset("/images/mockups/edu-smartlab-ba.png")}}'
+        let images = [
+            '{{asset("/images/mockups/dl-fin-unsa-ba.jpg")}}',
+            '{{asset("/images/mockups/edu-smartlab-ba.jpg")}}'
         ];
+
+
         let popupClickLeft = document.querySelector(".popup-click-left");
         let popupClickRight = document.querySelector(".popup-click-right");
         let popupVideo = document.querySelector(".popup-content");
@@ -294,10 +289,6 @@
             popupOverlay.style.width = "100vw";
             popupOverlay.style.height = "100vh";
         }
-        popupClickLeft.addEventListener("click", () => popupContent(imgOne));
-        popupClickRight.addEventListener("click", () => popupContent(imgTwo));
-        let prev = document.querySelector("#prev");
-        let next = document.querySelector("#next");
 
         let rightImg = document.querySelector("#right-img");
         let leftImg = document.querySelector("#left-img");
@@ -312,6 +303,11 @@
             elem1.classList.add("circle-r");
             elem2.classList.add("circle-l");
         }
+        popupClickLeft.addEventListener("click", () => popupContent(imgOne));
+        popupClickRight.addEventListener("click", () => popupContent(imgTwo));
+        let prev = document.querySelector("#prev");
+        let next = document.querySelector("#next");
+
         prev.addEventListener("click", function() {
             changeImage("previous");
             clipPath(rightImg, leftImg);
@@ -328,6 +324,8 @@
                 sliderIndicator.childNodes[right].classList.add("active-indicator");
             }
         }
+        let imgOne = 0;
+        let imgTwo = 1;
         let sliderIndicator = document.querySelector(".slider-indicator");
         for (let i = 0; i < images.length; i++) {
             let span = document.createElement("span");
@@ -368,15 +366,11 @@
 
             document.getElementById("left-img").src = imgOneSrc;
             document.getElementById("right-img").src = imgTwoSrc;
-            //leftImgOverlay.style.width = document.querySelector(".slider-left").offsetWidth - 20;
-
-
         }
         changeImage("demo");
 
         let schedule = document.querySelector("#schedule");
         let contact = document.querySelector("#contact");
-
 
         schedule.addEventListener("click", function() {
             if (contact.clientHeight != 80) {

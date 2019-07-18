@@ -1,8 +1,7 @@
 <!-- Extend main layout -->
 @extends('layouts.app')
 
-<link href="{{ asset('css/coursesMoodleAnimations.css') }}" rel="stylesheet">
-<link href="{{ asset('css/font.css') }}" rel="stylesheet">
+<link href="{{ asset('css/coursesMoodleAnimations.min.css') }}" rel="stylesheet">
 <style>
     #left-img-overlay {
         position: absolute;
@@ -291,148 +290,144 @@
             })
         });
         animationObserver.observe(animation);
+    });
+    var imgOne = 0;
+    var imgTwo = 1;
 
-        var imgOne = 0;
-        var imgTwo = 1;
+    var images = [
+        'https://www.youtube.com/embed/Q3cZOOmbJdE', // 0
+        'https://www.youtube.com/embed/s5xDYxh2SAw', // 1
+        'https://www.youtube.com/embed/V25yh0oI_y8', // 2
+        'https://www.youtube.com/embed/xN1Uf4GtwIs', // 3
+        'https://www.youtube.com/embed/Vh49p4JyE9s',
+        'https://www.youtube.com/embed/W65Ywt3a04c',
+        'https://www.youtube.com/embed/yoY-Hba4sZk'
+    ];
+    let youtube_video_id = [];
+    let video_thumbnail = [];
+    for (let i = 0; i < images.length; i++) {
+        youtube_video_id[i] = images[i].match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/).pop();
+        if (youtube_video_id[i].length == 11) {
+            video_thumbnail[i] = '//img.youtube.com/vi/' + youtube_video_id[i] + '/0.jpg';
+        }
+    }
+    let popupClickLeft = document.querySelector(".popup-click-left");
+    let popupClickRight = document.querySelector(".popup-click-right");
+    let popupVideo = document.querySelector("#popup-image");
+    let closePopup = document.querySelector(".close");
+    let popup = document.querySelector(".popup");
+    let popupOverlay = document.querySelector(".popup-overlay");
+    closePopup.addEventListener("click", popupClose);
+    popupOverlay.addEventListener("click", popupClose);
 
-        var images = [
-            'https://www.youtube.com/embed/Q3cZOOmbJdE', // 0
-            'https://www.youtube.com/embed/s5xDYxh2SAw', // 1
-            'https://www.youtube.com/embed/V25yh0oI_y8', // 2
-            'https://www.youtube.com/embed/xN1Uf4GtwIs', // 3
-            'https://www.youtube.com/embed/Vh49p4JyE9s',
-            'https://www.youtube.com/embed/W65Ywt3a04c',
-            'https://www.youtube.com/embed/yoY-Hba4sZk'
-        ];
-        let youtube_video_id = [];
-        let video_thumbnail = [];
+    function popupClose() {
+        popupVideo.src = "";
+        closePopup.style.display = "none";
+        popup.classList.remove("shadow-2");
+        popupOverlay.style.width = "0vw";
+        popupOverlay.style.height = "0vh";
+    }
+
+    function popupContent(imgIndex) {
+        popupVideo.src = images[imgIndex];
+        closePopup.style.display = "inline-block";
+        popup.classList.add("shadow-2");
+        popupOverlay.style.width = "100vw";
+        popupOverlay.style.height = "100vh";
+    }
+    popupClickLeft.addEventListener("click", () => popupContent(imgOne));
+    popupClickRight.addEventListener("click", () => popupContent(imgTwo));
+    let prev = document.querySelector("#prev");
+    let next = document.querySelector("#next");
+    let rightImg = document.querySelector("#right-img");
+    let leftImg = document.querySelector("#left-img");
+    let leftImgOverlay = document.querySelector("#left-img-overlay");
+    let rightImgOverlay = document.querySelector("#right-img-overlay");
+
+    function clipPath(elem1, elem2) {
+        elem1.classList.remove("circle-r");
+        elem2.classList.remove("circle-l");
+        void elem1.offsetWidth;
+        void elem2.offsetWidth;
+        elem1.classList.add("circle-r");
+        elem2.classList.add("circle-l");
+    }
+    prev.addEventListener("click", function() {
+        changeImage("previous");
+        clipPath(rightImg, leftImg);
+    });
+    next.addEventListener("click", function() {
+        changeImage("next");
+        clipPath(rightImg, leftImg);
+    });
+
+    function addIndicator(left, right) {
         for (let i = 0; i < images.length; i++) {
-            youtube_video_id[i] = images[i].match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/).pop();
-            if (youtube_video_id[i].length == 11) {
-                video_thumbnail[i] = '//img.youtube.com/vi/' + youtube_video_id[i] + '/0.jpg';
-            }
+            sliderIndicator.childNodes[i].classList.remove("active-indicator");
+            sliderIndicator.childNodes[left].classList.add("active-indicator");
+            sliderIndicator.childNodes[right].classList.add("active-indicator");
         }
-        console.log(video_thumbnail);
+    }
+    let sliderIndicator = document.querySelector(".slider-indicator");
+    for (let i = 0; i < images.length; i++) {
+        let span = document.createElement("span");
+        sliderIndicator.appendChild(span);
+    }
 
-        let popupClickLeft = document.querySelector(".popup-click-left");
-        let popupClickRight = document.querySelector(".popup-click-right");
-        let popupVideo = document.querySelector("#popup-image");
-        let closePopup = document.querySelector(".close");
-        let popup = document.querySelector(".popup");
-        let popupOverlay = document.querySelector(".popup-overlay");
-        closePopup.addEventListener("click", popupClose);
-        popupOverlay.addEventListener("click", popupClose);
-
-        function popupClose() {
-            popupVideo.src = "";
-            closePopup.style.display = "none";
-            popup.classList.remove("shadow-2");
-            popupOverlay.style.width = "0vw";
-            popupOverlay.style.height = "0vh";
-        }
-
-        function popupContent(imgIndex) {
-            popupVideo.src = images[imgIndex];
-            closePopup.style.display = "inline-block";
-            popup.classList.add("shadow-2");
-            popupOverlay.style.width = "100vw";
-            popupOverlay.style.height = "100vh";
-        }
-        popupClickLeft.addEventListener("click", () => popupContent(imgOne));
-        popupClickRight.addEventListener("click", () => popupContent(imgTwo));
-        let prev = document.querySelector("#prev");
-        let next = document.querySelector("#next");
-        let rightImg = document.querySelector("#right-img");
-        let leftImg = document.querySelector("#left-img");
-        let leftImgOverlay = document.querySelector("#left-img-overlay");
-        let rightImgOverlay = document.querySelector("#right-img-overlay");
-
-        function clipPath(elem1, elem2) {
-            elem1.classList.remove("circle-r");
-            elem2.classList.remove("circle-l");
-            void elem1.offsetWidth;
-            void elem2.offsetWidth;
-            elem1.classList.add("circle-r");
-            elem2.classList.add("circle-l");
-        }
-        prev.addEventListener("click", function() {
-            changeImage("previous");
-            clipPath(rightImg, leftImg);
-        });
-        next.addEventListener("click", function() {
-            changeImage("next");
-            clipPath(rightImg, leftImg);
-        });
-
-        function addIndicator(left, right) {
-            for (let i = 0; i < images.length; i++) {
-                sliderIndicator.childNodes[i].classList.remove("active-indicator");
-                sliderIndicator.childNodes[left].classList.add("active-indicator");
-                sliderIndicator.childNodes[right].classList.add("active-indicator");
-            }
-        }
-        let sliderIndicator = document.querySelector(".slider-indicator");
-        for (let i = 0; i < images.length; i++) {
-            let span = document.createElement("span");
-            sliderIndicator.appendChild(span);
-        }
-
-        function changeImage(par) {
-            let currentLeft, currentRight;
-            console.log("left: ", imgOne, "right: ", imgTwo);
-            leftImgOverlay.src = video_thumbnail[imgOne];
-            rightImgOverlay.src = video_thumbnail[imgTwo];
+    function changeImage(par) {
+        let currentLeft, currentRight;
+        leftImgOverlay.src = video_thumbnail[imgOne];
+        rightImgOverlay.src = video_thumbnail[imgTwo];
 
 
-            if (par == "next") {
+        if (par == "next") {
 
-                if (imgTwo == images.length - 1) {
-                    imgOne = imgTwo;
-                    imgTwo = 0;
-                } else {
-                    imgOne = imgTwo;
-                    imgTwo = imgTwo + 1;
-                }
-            }
-            if (par == "previous") {
-                if (imgOne == 0) {
-                    imgTwo = imgOne;
-                    imgOne = images.length - 1;
-
-                } else {
-                    imgTwo = imgOne;
-                    imgOne = imgOne - 1;
-                }
-
-            }
-            addIndicator(imgOne, imgTwo);
-            var imgOneSrc = video_thumbnail[imgOne];
-            var imgTwoSrc = video_thumbnail[imgTwo];
-
-            document.getElementById("left-img").src = imgOneSrc;
-            document.getElementById("right-img").src = imgTwoSrc;
-            //leftImgOverlay.style.width = document.querySelector(".slider-left").offsetWidth - 20;
-
-
-        }
-        changeImage("demo");
-
-        let schedule = document.querySelector("#schedule");
-        let contact = document.querySelector("#contact");
-
-
-        schedule.addEventListener("click", function() {
-            if (contact.clientHeight != 80) {
-                contact.style.height = 0;
+            if (imgTwo == images.length - 1) {
+                imgOne = imgTwo;
+                imgTwo = 0;
             } else {
-                if (window.innerWidth <= 600) {
-                    contact.style.height = 115 + "%";
-                } else {
-                    contact.style.height = 90 + "%";
-                }
-
+                imgOne = imgTwo;
+                imgTwo = imgTwo + 1;
             }
-        });
+        }
+        if (par == "previous") {
+            if (imgOne == 0) {
+                imgTwo = imgOne;
+                imgOne = images.length - 1;
+
+            } else {
+                imgTwo = imgOne;
+                imgOne = imgOne - 1;
+            }
+
+        }
+        addIndicator(imgOne, imgTwo);
+        var imgOneSrc = video_thumbnail[imgOne];
+        var imgTwoSrc = video_thumbnail[imgTwo];
+
+        document.getElementById("left-img").src = imgOneSrc;
+        document.getElementById("right-img").src = imgTwoSrc;
+        //leftImgOverlay.style.width = document.querySelector(".slider-left").offsetWidth - 20;
+
+
+    }
+    changeImage("demo");
+
+    let schedule = document.querySelector("#schedule");
+    let contact = document.querySelector("#contact");
+
+
+    schedule.addEventListener("click", function() {
+        if (contact.clientHeight != 80) {
+            contact.style.height = 0;
+        } else {
+            if (window.innerWidth <= 600) {
+                contact.style.height = 115 + "%";
+            } else {
+                contact.style.height = 90 + "%";
+            }
+
+        }
     });
 </script>
 @endsection
