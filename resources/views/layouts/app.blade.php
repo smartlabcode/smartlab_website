@@ -22,26 +22,12 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/font.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/menu.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/footer.min.css') }}" rel="stylesheet">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" href="/images/icons/fav.png">
 
     <!-- Wrote some style and move it to app.css later on -->
-    <style>
-        :root {
-            --shadow-color: rgba(0, 53, 145, 0.15);
-            --button-bg-color: #4885fa;
-            --button-bg-orange: #ff931f;
-            --h2-color: #4885FA;
-            --h1-color: #14213d;
-            --p-color: #c9d6e2;
-            scroll-behavior: smooth;
-        }
-
-        #app {
-            width: 90%;
-            margin: 0 auto;
-        }
-    </style>
 
 </head>
 

@@ -86,9 +86,7 @@
 
   .section-one {
     position: relative;
-    top: 100px;
     display: flex;
-
     justify-content: space-between;
   }
 
@@ -165,7 +163,7 @@
   }
 
   .section-two {
-    margin-top: 5%;
+    margin-top: -170px !important;
     position: relative;
   }
 

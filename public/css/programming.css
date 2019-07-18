@@ -71,9 +71,8 @@ background-position-y: -200px;*/
 .background-img {
     position: absolute;
     width: 85vw;
-    /* max-height: 124vh; */
-    top: -406px;
-    right: -300px;
+    top: -505px;
+    right: -330px;
     z-index: -10;
     transform: rotate(-17deg);
 }
