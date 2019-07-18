@@ -640,7 +640,128 @@ textarea:focus {
     font-size: 1.3em;
     font-family: "Montserrat", sans-serif;
 }
+#left-img-overlay {
+    position: absolute;
 
+    width: calc(100% - 20px);
+
+
+}
+
+#right-img-overlay {
+    position: absolute;
+
+    width: calc(100% - 20px);
+
+}
+
+.slider-indicator {
+    justify-content: center !important;
+}
+
+
+
+.circle-r {
+    animation: circle-clip-path-r 0.5s ease-in;
+    animation-fill-mode: forwards;
+    /*clip-path: circle(10%);*/
+}
+
+.circle-l {
+    animation: circle-clip-path-l 0.5s ease-in;
+    animation-fill-mode: forwards;
+    /*clip-path: circle(10%);*/
+}
+
+
+@keyframes circle-clip-path-r {
+    from {
+        clip-path: circle(10% at 100% 50%);
+    }
+
+    to {
+        clip-path: circle(75% at 50% 50%);
+    }
+}
+
+@keyframes circle-clip-path-l {
+    from {
+        clip-path: circle(10% at 0% 50%);
+    }
+
+    to {
+        clip-path: circle(75% at 50% 50%);
+    }
+}
+
+.popup-click svg {
+    width: 50px !important;
+    height: auto !important;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.youtube-fill {
+    transition: fill 0.2s ease-in-out;
+}
+
+.popup-click:hover .youtube-fill {
+    fill: #f00 !important;
+
+}
+
+@media screen and (max-width: 768px) {
+    @keyframes circle-clip-path-r {
+        from {
+            clip-path: circle(10% at 50% 50%);
+        }
+
+        to {
+            clip-path: circle(75% at 50% 50%);
+        }
+    }
+
+    @keyframes circle-clip-path-l {
+        from {
+            clip-path: circle(10% at 50% 50%);
+        }
+
+        to {
+            clip-path: circle(75% at 50% 50%);
+        }
+    }
+}
+.slider-indicator span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 5px;
+    margin-top: 20px;
+    background-color: #c9d6e2;
+    transition: all 0.5s ease-in-out;
+}
+
+.active-indicator {
+    background-color: var(--h1-color) !important;
+    transition: all 0.5s ease-in-out;
+    width: 12px !important;
+    height: 12px !important;
+    animation: square 0.5s ease-in;
+}
+@keyframes square {
+    0% {
+        border-radius: 50%;
+    }
+    50%{
+        border-radius: 40%;
+    }
+    100%{
+        border-radius: 50%;
+    }
+}
 @media screen and (min-width: 2000px) {
     .background-img {
         top: -700px;
@@ -866,7 +987,7 @@ textarea:focus {
     .slider-right {
         position: absolute;
         background-color: transparent;
-        width: 97%;
+        width: 96%;
     }
 
     .slider-left {
@@ -1087,7 +1208,10 @@ textarea:focus {
     #slider>img:first-child {
         left: 5px;
     }
-
+    .slider-right {
+        
+        width: 95%;
+    }
     .our-works .h1-font {
         margin-top: 30px;
         margin-bottom: 80px;

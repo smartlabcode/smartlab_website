@@ -2,74 +2,6 @@
 @extends('layouts.app')
 
 <link href="{{ asset('css/coursesMoodleAnimations.min.css') }}" rel="stylesheet">
-<style>
-    #left-img-overlay {
-        position: absolute;
-        left: 10px;
-        width: calc(100% - 20px);
-    }
-
-    #right-img-overlay {
-        position: absolute;
-        right: 10px;
-        width: calc(100% - 20px);
-    }
-
-
-    .circle-r {
-        animation: circle-clip-path-r 0.5s ease-in;
-        animation-fill-mode: forwards;
-        /*clip-path: circle(10%);*/
-    }
-
-    .circle-l {
-        animation: circle-clip-path-l 0.5s ease-in;
-        animation-fill-mode: forwards;
-        /*clip-path: circle(10%);*/
-    }
-
-    .slider-indicator {
-        justify-content: center !important;
-    }
-
-    .slider-indicator span {
-        display: inline-block;
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        margin: 5px;
-        margin-top: 20px;
-        background-color: var(--h2-color);
-        transition: all 0.5s ease-in-out;
-    }
-
-    .active-indicator {
-        background-color: var(--h1-color) !important;
-        transition: all 0.5s ease-in-out;
-        width: 17px !important;
-        height: 17px !important;
-    }
-
-    @keyframes circle-clip-path-r {
-        from {
-            clip-path: circle(10% at 100% 50%);
-        }
-
-        to {
-            clip-path: circle(75% at 50% 50%);
-        }
-    }
-
-    @keyframes circle-clip-path-l {
-        from {
-            clip-path: circle(10% at 0% 50%);
-        }
-
-        to {
-            clip-path: circle(75% at 50% 50%);
-        }
-    }
-</style>
 @section('content')
 
 <div class="background-section-one">
@@ -324,7 +256,10 @@
             for (let i = 0; i < images.length; i++) {
                 sliderIndicator.childNodes[i].classList.remove("active-indicator");
                 sliderIndicator.childNodes[left].classList.add("active-indicator");
-                sliderIndicator.childNodes[right].classList.add("active-indicator");
+                if (window.innerWidth > 768) {
+                    sliderIndicator.childNodes[right].classList.add("active-indicator");
+                }
+
             }
         }
         let imgOne = 0;
@@ -337,7 +272,6 @@
 
         function changeImage(par) {
             let currentLeft, currentRight;
-            console.log("left: ", imgOne, "right: ", imgTwo);
             leftImgOverlay.src = images[imgOne];
             rightImgOverlay.src = images[imgTwo];
 

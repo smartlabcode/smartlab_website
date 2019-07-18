@@ -2,96 +2,6 @@
 @extends('layouts.app')
 
 <link href="{{ asset('css/coursesMoodleAnimations.min.css') }}" rel="stylesheet">
-<style>
-    #left-img-overlay {
-        position: absolute;
-
-        width: calc(100% - 20px);
-
-
-    }
-
-    #right-img-overlay {
-        position: absolute;
-
-        width: calc(100% - 20px);
-
-    }
-
-    .slider-indicator {
-        justify-content: center !important;
-    }
-
-    .slider-indicator span {
-        display: inline-block;
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        margin: 5px;
-        margin-top: 20px;
-        background-color: var(--h2-color);
-        transition: all 0.5s ease-in-out;
-    }
-
-    .active-indicator {
-        background-color: var(--h1-color) !important;
-        transition: all 0.5s ease-in-out;
-        width: 17px !important;
-        height: 17px !important;
-    }
-
-
-    .circle-r {
-        animation: circle-clip-path-r 0.5s ease-in;
-        animation-fill-mode: forwards;
-        /*clip-path: circle(10%);*/
-    }
-
-    .circle-l {
-        animation: circle-clip-path-l 0.5s ease-in;
-        animation-fill-mode: forwards;
-        /*clip-path: circle(10%);*/
-    }
-
-
-    @keyframes circle-clip-path-r {
-        from {
-            clip-path: circle(10% at 100% 50%);
-        }
-
-        to {
-            clip-path: circle(75% at 50% 50%);
-        }
-    }
-
-    @keyframes circle-clip-path-l {
-        from {
-            clip-path: circle(10% at 0% 50%);
-        }
-
-        to {
-            clip-path: circle(75% at 50% 50%);
-        }
-    }
-
-    .popup-click svg {
-        width: 50px !important;
-        height: auto !important;
-        transform: translate(-50%, -50%);
-        position: absolute;
-        left: 50%;
-        top: 50%;
-    }
-
-    .youtube-fill {
-        transition: fill 0.2s ease-in-out;
-    }
-
-    .popup-click:hover .youtube-fill {
-        fill: #f00 !important;
-
-    }
-</style>
 @section('content')
 
 <div class="background-section-one">
@@ -290,144 +200,147 @@
             })
         });
         animationObserver.observe(animation);
-    });
-    var imgOne = 0;
-    var imgTwo = 1;
+        var imgOne = 0;
+        var imgTwo = 1;
 
-    var images = [
-        'https://www.youtube.com/embed/Q3cZOOmbJdE', // 0
-        'https://www.youtube.com/embed/s5xDYxh2SAw', // 1
-        'https://www.youtube.com/embed/V25yh0oI_y8', // 2
-        'https://www.youtube.com/embed/xN1Uf4GtwIs', // 3
-        'https://www.youtube.com/embed/Vh49p4JyE9s',
-        'https://www.youtube.com/embed/W65Ywt3a04c',
-        'https://www.youtube.com/embed/yoY-Hba4sZk'
-    ];
-    let youtube_video_id = [];
-    let video_thumbnail = [];
-    for (let i = 0; i < images.length; i++) {
-        youtube_video_id[i] = images[i].match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/).pop();
-        if (youtube_video_id[i].length == 11) {
-            video_thumbnail[i] = '//img.youtube.com/vi/' + youtube_video_id[i] + '/0.jpg';
-        }
-    }
-    let popupClickLeft = document.querySelector(".popup-click-left");
-    let popupClickRight = document.querySelector(".popup-click-right");
-    let popupVideo = document.querySelector("#popup-image");
-    let closePopup = document.querySelector(".close");
-    let popup = document.querySelector(".popup");
-    let popupOverlay = document.querySelector(".popup-overlay");
-    closePopup.addEventListener("click", popupClose);
-    popupOverlay.addEventListener("click", popupClose);
-
-    function popupClose() {
-        popupVideo.src = "";
-        closePopup.style.display = "none";
-        popup.classList.remove("shadow-2");
-        popupOverlay.style.width = "0vw";
-        popupOverlay.style.height = "0vh";
-    }
-
-    function popupContent(imgIndex) {
-        popupVideo.src = images[imgIndex];
-        closePopup.style.display = "inline-block";
-        popup.classList.add("shadow-2");
-        popupOverlay.style.width = "100vw";
-        popupOverlay.style.height = "100vh";
-    }
-    popupClickLeft.addEventListener("click", () => popupContent(imgOne));
-    popupClickRight.addEventListener("click", () => popupContent(imgTwo));
-    let prev = document.querySelector("#prev");
-    let next = document.querySelector("#next");
-    let rightImg = document.querySelector("#right-img");
-    let leftImg = document.querySelector("#left-img");
-    let leftImgOverlay = document.querySelector("#left-img-overlay");
-    let rightImgOverlay = document.querySelector("#right-img-overlay");
-
-    function clipPath(elem1, elem2) {
-        elem1.classList.remove("circle-r");
-        elem2.classList.remove("circle-l");
-        void elem1.offsetWidth;
-        void elem2.offsetWidth;
-        elem1.classList.add("circle-r");
-        elem2.classList.add("circle-l");
-    }
-    prev.addEventListener("click", function() {
-        changeImage("previous");
-        clipPath(rightImg, leftImg);
-    });
-    next.addEventListener("click", function() {
-        changeImage("next");
-        clipPath(rightImg, leftImg);
-    });
-
-    function addIndicator(left, right) {
+        var images = [
+            'https://www.youtube.com/embed/Q3cZOOmbJdE', // 0
+            'https://www.youtube.com/embed/s5xDYxh2SAw', // 1
+            'https://www.youtube.com/embed/V25yh0oI_y8', // 2
+            'https://www.youtube.com/embed/xN1Uf4GtwIs', // 3
+            'https://www.youtube.com/embed/Vh49p4JyE9s',
+            'https://www.youtube.com/embed/W65Ywt3a04c',
+            'https://www.youtube.com/embed/yoY-Hba4sZk'
+        ];
+        let youtube_video_id = [];
+        let video_thumbnail = [];
         for (let i = 0; i < images.length; i++) {
-            sliderIndicator.childNodes[i].classList.remove("active-indicator");
-            sliderIndicator.childNodes[left].classList.add("active-indicator");
-            sliderIndicator.childNodes[right].classList.add("active-indicator");
-        }
-    }
-    let sliderIndicator = document.querySelector(".slider-indicator");
-    for (let i = 0; i < images.length; i++) {
-        let span = document.createElement("span");
-        sliderIndicator.appendChild(span);
-    }
-
-    function changeImage(par) {
-        let currentLeft, currentRight;
-        leftImgOverlay.src = video_thumbnail[imgOne];
-        rightImgOverlay.src = video_thumbnail[imgTwo];
-
-
-        if (par == "next") {
-
-            if (imgTwo == images.length - 1) {
-                imgOne = imgTwo;
-                imgTwo = 0;
-            } else {
-                imgOne = imgTwo;
-                imgTwo = imgTwo + 1;
+            youtube_video_id[i] = images[i].match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/).pop();
+            if (youtube_video_id[i].length == 11) {
+                video_thumbnail[i] = '//img.youtube.com/vi/' + youtube_video_id[i] + '/0.jpg';
             }
         }
-        if (par == "previous") {
-            if (imgOne == 0) {
-                imgTwo = imgOne;
-                imgOne = images.length - 1;
+        let popupClickLeft = document.querySelector(".popup-click-left");
+        let popupClickRight = document.querySelector(".popup-click-right");
+        let popupVideo = document.querySelector("#popup-image");
+        let closePopup = document.querySelector(".close");
+        let popup = document.querySelector(".popup");
+        let popupOverlay = document.querySelector(".popup-overlay");
+        closePopup.addEventListener("click", popupClose);
+        popupOverlay.addEventListener("click", popupClose);
 
-            } else {
-                imgTwo = imgOne;
-                imgOne = imgOne - 1;
+        function popupClose() {
+            popupVideo.src = "";
+            closePopup.style.display = "none";
+            popup.classList.remove("shadow-2");
+            popupOverlay.style.width = "0vw";
+            popupOverlay.style.height = "0vh";
+        }
+
+        function popupContent(imgIndex) {
+            popupVideo.src = images[imgIndex];
+            closePopup.style.display = "inline-block";
+            popup.classList.add("shadow-2");
+            popupOverlay.style.width = "100vw";
+            popupOverlay.style.height = "100vh";
+        }
+        popupClickLeft.addEventListener("click", () => popupContent(imgOne));
+        popupClickRight.addEventListener("click", () => popupContent(imgTwo));
+        let prev = document.querySelector("#prev");
+        let next = document.querySelector("#next");
+        let rightImg = document.querySelector("#right-img");
+        let leftImg = document.querySelector("#left-img");
+        let leftImgOverlay = document.querySelector("#left-img-overlay");
+        let rightImgOverlay = document.querySelector("#right-img-overlay");
+
+        function clipPath(elem1, elem2) {
+            elem1.classList.remove("circle-r");
+            elem2.classList.remove("circle-l");
+            void elem1.offsetWidth;
+            void elem2.offsetWidth;
+            elem1.classList.add("circle-r");
+            elem2.classList.add("circle-l");
+        }
+        prev.addEventListener("click", function() {
+            changeImage("previous");
+            console.log("prev")
+            clipPath(rightImg, leftImg);
+        });
+        next.addEventListener("click", function() {
+            changeImage("next");
+            clipPath(rightImg, leftImg);
+        });
+
+        function addIndicator(left, right) {
+            for (let i = 0; i < images.length; i++) {
+                sliderIndicator.childNodes[i].classList.remove("active-indicator");
+                sliderIndicator.childNodes[left].classList.add("active-indicator");
+                if (window.innerWidth > 768) {
+                    sliderIndicator.childNodes[right].classList.add("active-indicator");
+                }
             }
+        }
+        let sliderIndicator = document.querySelector(".slider-indicator");
+        for (let i = 0; i < images.length; i++) {
+            let span = document.createElement("span");
+            sliderIndicator.appendChild(span);
+        }
+
+        function changeImage(par) {
+            let currentLeft, currentRight;
+            leftImgOverlay.src = video_thumbnail[imgOne];
+            rightImgOverlay.src = video_thumbnail[imgTwo];
+
+
+            if (par == "next") {
+
+                if (imgTwo == images.length - 1) {
+                    imgOne = imgTwo;
+                    imgTwo = 0;
+                } else {
+                    imgOne = imgTwo;
+                    imgTwo = imgTwo + 1;
+                }
+            }
+            if (par == "previous") {
+                if (imgOne == 0) {
+                    imgTwo = imgOne;
+                    imgOne = images.length - 1;
+
+                } else {
+                    imgTwo = imgOne;
+                    imgOne = imgOne - 1;
+                }
+
+            }
+            addIndicator(imgOne, imgTwo);
+            var imgOneSrc = video_thumbnail[imgOne];
+            var imgTwoSrc = video_thumbnail[imgTwo];
+
+            document.getElementById("left-img").src = imgOneSrc;
+            document.getElementById("right-img").src = imgTwoSrc;
+            //leftImgOverlay.style.width = document.querySelector(".slider-left").offsetWidth - 20;
+
 
         }
-        addIndicator(imgOne, imgTwo);
-        var imgOneSrc = video_thumbnail[imgOne];
-        var imgTwoSrc = video_thumbnail[imgTwo];
+        changeImage("demo");
 
-        document.getElementById("left-img").src = imgOneSrc;
-        document.getElementById("right-img").src = imgTwoSrc;
-        //leftImgOverlay.style.width = document.querySelector(".slider-left").offsetWidth - 20;
+        let schedule = document.querySelector("#schedule");
+        let contact = document.querySelector("#contact");
 
 
-    }
-    changeImage("demo");
-
-    let schedule = document.querySelector("#schedule");
-    let contact = document.querySelector("#contact");
-
-
-    schedule.addEventListener("click", function() {
-        if (contact.clientHeight != 80) {
-            contact.style.height = 0;
-        } else {
-            if (window.innerWidth <= 600) {
-                contact.style.height = 115 + "%";
+        schedule.addEventListener("click", function() {
+            if (contact.clientHeight != 80) {
+                contact.style.height = 0;
             } else {
-                contact.style.height = 90 + "%";
-            }
+                if (window.innerWidth <= 600) {
+                    contact.style.height = 115 + "%";
+                } else {
+                    contact.style.height = 90 + "%";
+                }
 
-        }
+            }
+        });
     });
 </script>
 @endsection

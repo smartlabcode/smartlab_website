@@ -748,22 +748,33 @@ textarea:focus {
 
 .slider-indicator span {
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     margin: 5px;
     margin-top: 20px;
-    background-color: var(--h2-color);
+    background-color: #c9d6e2;
     transition: all 0.5s ease-in-out;
 }
 
 .active-indicator {
     background-color: var(--h1-color) !important;
     transition: all 0.5s ease-in-out;
-    width: 17px !important;
-    height: 17px !important;
+    width: 12px !important;
+    height: 12px !important;
+    animation: square 0.5s ease-in;
 }
-
+@keyframes square {
+    0% {
+        border-radius: 50%;
+    }
+    50%{
+        border-radius: 40%;
+    }
+    100%{
+        border-radius: 50%;
+    }
+}
 @keyframes circle-clip-path-r {
     from {
         clip-path: circle(10% at 100% 50%);
@@ -1035,6 +1046,25 @@ textarea:focus {
 }
 
 @media screen and (max-width: 768px) {
+    @keyframes circle-clip-path-r {
+        from {
+            clip-path: circle(10% at 50% 50%);
+        }
+
+        to {
+            clip-path: circle(75% at 50% 50%);
+        }
+    }
+
+    @keyframes circle-clip-path-l {
+        from {
+            clip-path: circle(10% at 50% 50%);
+        }
+
+        to {
+            clip-path: circle(75% at 50% 50%);
+        }
+    }
     .popup-click-right {
         display: none;
     }
@@ -1042,7 +1072,7 @@ textarea:focus {
     .slider-right {
         position: absolute;
         background-color: transparent;
-        width: 97%;
+        width: 96%;
     }
 
     .slider-left {
@@ -1177,10 +1207,6 @@ textarea:focus {
         margin-bottom: 40px;
 
     }
-
-    .xliff-background-container {}
-
-    .tools-container {}
 
     .tools-img {
         flex-basis: 30%;
@@ -1338,6 +1364,6 @@ textarea:focus {
         top: 0;
     }
 
-    .tools-container {}
+
 
 }

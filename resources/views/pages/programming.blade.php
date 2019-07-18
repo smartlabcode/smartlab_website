@@ -307,7 +307,9 @@
             for (let i = 0; i < images.length; i++) {
                 sliderIndicator.childNodes[i].classList.remove("active-indicator");
                 sliderIndicator.childNodes[left].classList.add("active-indicator");
-                sliderIndicator.childNodes[right].classList.add("active-indicator");
+                if (window.innerWidth > 768) {
+                    sliderIndicator.childNodes[right].classList.add("active-indicator");
+                }
             }
         }
         let imgOne = 0;
