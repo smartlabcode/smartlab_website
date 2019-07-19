@@ -655,7 +655,7 @@
     -webkit-box-shadow: -1px -1px 25px 1px var(--shadow-color);
     -moz-box-shadow: -1px -1px 25px 1px var(--shadow-color);
     box-shadow: -1px -1px 25px 1px var(--shadow-color);
-    flex-basis: 24%;
+    flex-basis: 23%;
     text-align: center;
     max-height: 580px;
     overflow: hidden;
