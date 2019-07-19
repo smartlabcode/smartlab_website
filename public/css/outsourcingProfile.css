@@ -362,12 +362,15 @@
 .line-main {
     position: absolute;
     left: 0;
+    top: 0;
 }
 
 .line-container {
     position: relative;
     width: 230px;
     height: 100px;
+    margin-bottom: 100px;
+    flex-basis: 25%;
 }
 
 .line-container>div:first-of-type {
@@ -379,6 +382,7 @@
     position: relative;
     top: 40px;
     width: 230px;
+    height: 30px;
 }
 
 /*.counter {
@@ -393,6 +397,7 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    /*max-width: 1379px !important;*/
 }
 
 .path {
