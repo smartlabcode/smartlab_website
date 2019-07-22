@@ -1,9 +1,9 @@
 <!-- Extend main layout -->
 @extends('layouts.app')
 
-<link href="{{ asset('css/coursesMoodleAnimations.min.css') }}" rel="stylesheet">
-@section('content')
 
+@section('content')
+<link href="{{ asset('css/coursesMoodleAnimations.min.css') }}" rel="stylesheet">
 <div class="background-section-one">
     <img class="background-img" src="{{asset('/images/img/header-illustration-group.svg')}}" alt="blue background image" />
     <img class="background-img-circle --circle1" src="{{asset('/images/img/fluid-bright-circle.svg')}}" alt="background circle" />
@@ -162,8 +162,8 @@
                 <img src="{{asset('/images/tools/1280px-Unity_Technologies_logo.svg.png')}}" alt="unity logo">
                 <p>@lang('programming.unity')</p>
             </div>
-
         </div>
+    </div>
 </section>
 
 <script>

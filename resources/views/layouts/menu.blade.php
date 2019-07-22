@@ -113,8 +113,8 @@
                     backgroundImg.style.right = "-200px";
                 }
             }
-        } catch {
-            console.log("");
+        } catch (err) {
+            console.log(err);
         }
 
 

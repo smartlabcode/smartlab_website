@@ -1,7 +1,7 @@
 @extends('layouts.app')
-<link href="{{ asset('css/jobs.min.css') }}" rel="stylesheet">
-@section('content')
 
+@section('content')
+<link href="{{ asset('css/jobs.min.css') }}" rel="stylesheet">
 <!-- TODO dont delete this-->
 @include('parts.break_space')
 
