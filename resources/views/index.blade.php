@@ -657,7 +657,11 @@
     let blogText = document.querySelectorAll(".blog-text");
     let temp;
 
-
+    const optionsTeam = {
+      root: null,
+      threshold: 0.1,
+      rootMargin: "300px"
+    };
     for (let i = 0; i < blogValue.length; i++) {
       temp = blogValue[i].value.replace(/(<([^>]+)>)/ig, "");;
       blogText[i].innerHTML = temp;
@@ -670,7 +674,7 @@
           teamImagesObserver.unobserve(entry.target);
         }
       });
-    }, options);
+    }, optionsTeam);
     for (let i = 0; i < teamImages.length; i++) {
       teamImagesObserver.observe(teamImages[i]);
     }

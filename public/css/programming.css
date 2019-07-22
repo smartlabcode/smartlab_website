@@ -612,7 +612,7 @@ textarea:focus {
     box-sizing: border-box;
     background-color: var(--h1-color);
     border: 1px solid var(--h1-color);
-
+    display: none; /* privremeno dok se ne napravi xliff page */
 }
 
 .xliff-section .button:hover {

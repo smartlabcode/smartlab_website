@@ -95,7 +95,7 @@ nav .contain {
     color: white;
     display: block;
     padding: 10px 20px 10px 40px;
-    height: 100%;
+    /*height: 100%;*/
     width: 100%;
     text-transform: uppercase;
     white-space: nowrap;
@@ -171,7 +171,9 @@ nav .contain {
     justify-content: flex-end;
     font-family: "Montserrat", sans-serif;
 }
-
+.nav-top a{
+    color: white !important;
+}
 .nav-top p {
     opacity: 0.5;
     color: white;
