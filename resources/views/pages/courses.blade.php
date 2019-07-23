@@ -84,7 +84,7 @@
         </div>
         <img class="secTwoBg4" src="{{asset('/images/img/orange-circle.svg')}}">
     </div>
-    <div class="contact-section" id="contact">
+    <div class="contact-section" id="contact" style="height:0px">
         <div class="contact-form-container">
             <h2 class="text-center h1-font">@lang('courses.contact')</h2>
             <form class="contact-form" action="/demo" method="POST">
@@ -93,38 +93,39 @@
                 <div class="contact-form-group">
                     <div>
                         <label for="name">@lang('courses.contactName')</label>
-                        <input type="text" name="name" id="name" required />
+                        <input class="form-control" type="text" name="name" id="name" required />
                     </div>
                     <div>
                         <label for="company">@lang('courses.contactCompany')</label>
-                        <input type="text" name="company" id="company" />
+                        <input class="form-control" type="text" name="company" id="company" />
                     </div>
                 </div>
                 <div class="contact-form-group">
                     <div>
                         <label for="subject">@lang('courses.contactSubject')</label>
-                        <input type="text" name="subject" id="subject" required />
+                        <input class="form-control" type="text" name="subject" id="subject" required />
                     </div>
                     <div>
                         <label for="email">@lang('courses.contactEmail')</label>
-                        <input type="email" name="email" id="email" required />
+                        <input class="form-control" type="email" name="email" id="email" required />
                     </div>
                 </div>
                 <div class="contact-form-group">
                     <div>
                         <label for="date">@lang('courses.contactDate')</label>
-                        <input type="date" name="date" id="date" required />
+                        <input class="form-control" type="date" name="date" id="date" required />
                     </div>
                     <div>
                         <label for="time">@lang('courses.contactTime')</label>
-                        <input type="time" name="time" id="time" required />
+                        <input class="form-control" type="time" name="time" id="time" required />
                     </div>
                 </div>
                 <div class="contact-form-group textarea">
                     <label for="message">@lang('courses.contactMessage')</label>
-                    <textarea name="message" rows="7" id="message" required></textarea>
+                    <textarea class="form-control" name="message" rows="7" id="message" required></textarea>
                 </div>
-                <input class="button submit" type="submit" value=@lang('courses.buttonSend') />
+                <p class="policyText">@lang('careers.we-are-commited') <a href="#">@lang('careers.privacy')</a>.</p>
+                <button class="button submit" type="submit" value=@lang('courses.buttonSend')>Send</button>
             </form>
         </div>
     </div>

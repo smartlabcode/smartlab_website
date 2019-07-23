@@ -32,11 +32,6 @@
     color: var(--h1-color);
 }
 
-.p-font {
-    font-family: "Source Sans Pro", sans-serif !important;
-    font-size: 1.4rem;
-    color: #354144 !important;
-}
 
 .contain {
     max-width: 1440px;

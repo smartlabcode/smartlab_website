@@ -27,14 +27,6 @@ html {
     outline: 0;
 }
 
-.h1-font {
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-    font-size: 3em;
-    margin-top: 0;
-    margin-bottom: 25px;
-    color: var(--h1-color);
-}
 
 .h2-font {
     font-family: "Montserrat", sans-serif;
@@ -42,12 +34,6 @@ html {
     color: var(--h2-color);
 }
 
-.p-font {
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 1.5em;
-    font-weight: 300;
-    color: var(--h1-color);
-}
 
 .shadow-1 {
     -webkit-box-shadow: -1px -1px 15px 1px var(--shadow-color);
@@ -71,10 +57,10 @@ background-position-y: -200px;*/
 .background-img {
     position: absolute;
     width: 85vw;
-    top: -505px;
+    top: -586px;
     right: -330px;
     z-index: -10;
-    transform: rotate(-17deg);
+    transform: rotate(-20deg);
 }
 
 .background-img-orange-circle {
@@ -114,10 +100,9 @@ background-position-y: -200px;*/
 
 .section-one {
     position: relative;
-    top: 100px;
     display: flex;
-    padding-bottom: 100px;
     justify-content: space-between;
+    padding-top: 50px;
 }
 
 .section-one-text {
@@ -129,7 +114,6 @@ background-position-y: -200px;*/
 
 .section-one-text ul {
     padding-top: 20px;
-    font-weight: 500;
     list-style-type: circle;
 }
 
@@ -448,24 +432,20 @@ font-size: 2em;
 }
 
 .secTwoBg {
-    top: -23%;
+    top: 0px;
     transform: rotate(242deg);
     position: absolute;
-    left: -97%;
-    /* left: -1052px; */
+    left: -109%;
     z-index: -120;
-    /* display: flex; */
-    /* justify-content: flex-start; */
     width: 108%;
 }
 
 .secTwoBg2 {
     width: 50%;
-    /* width: 800px; */
     position: absolute;
-    top: -41%;
+    top: -48px;
     z-index: -130;
-    left: -43%;
+    left: -773px;
 }
 
 .secTwoBg3 {
@@ -517,7 +497,6 @@ font-size: 2em;
 .contact-form {
     display: flex;
     flex-direction: column;
-    font-size: 1.3em;
     font-family: "Montserrat", sans-serif;
     margin-bottom: 0;
 }
@@ -541,7 +520,13 @@ textarea {
     border: 1px solid rgba(122, 161, 233, 0.5);
     resize: none !important;
 }
-
+.policyText {
+    font-size: 12px !important;
+    color: #aaa;
+    position: relative;
+    left: 4px;
+    padding-bottom: 0 !important;
+}
 input:focus,
 textarea:focus {
     outline: none !important;
@@ -588,7 +573,50 @@ textarea:focus {
     height: 0%;
     transition: all 0.5s ease-in;
 }
+#uploadFileArea, form input, form select, form textarea {
+    padding: 15px 20px!important;
+    height: auto!important;
+    box-sizing: border-box;
+    border: 2px solid #c9d6e2!important;
+    border-radius: 10px!important;
+    font-family: "Source Sans Pro",sans-serif!important;
+    font-size: 1.4em!important;
+}
 
+input:focus,
+textarea:focus {
+    outline: none !important;
+    border: 1px solid rgba(122, 161, 233, 1);
+}
+form input:focus,
+form textarea:focus,
+form select:focus,
+#uploadFileArea:focus {
+    -webkit-box-shadow: -1px 1px 15px 0px rgba(0, 53, 145, 0) !important;
+    -moz-box-shadow: -1px 1px 15px 0px rgba(0, 53, 145, 0) !important;
+    box-shadow: -1px 1px 15px 0px rgba(0, 53, 145, 0) !important;
+    border: 2px solid rgba(0, 53, 145, 1) !important;
+    font-size: 1.4em !important;
+}
+
+#uploadFileArea:active {
+    -webkit-box-shadow: -1px 1px 15px 0px rgba(0, 53, 145, 0) !important;
+    -moz-box-shadow: -1px 1px 15px 0px rgba(0, 53, 145, 0) !important;
+    box-shadow: -1px 1px 15px 0px rgba(0, 53, 145, 0) !important;
+    border: 3px solid rgba(0, 53, 145, 1) !important;
+}
+.contact-form-group label,
+.contact-form-group input,
+.contact-form-group textarea {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.textarea {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
 .contact-form-container p {
     font-family: "Montserrat", sans-serif;
     font-size: 1.3em;
@@ -1162,22 +1190,6 @@ textarea:focus {
         width: 145%;
     }
 
-    .h1-font {
-        font-size: 1.5em;
-    }
-
-    .h2-font {
-        font-size: 1.3em;
-    }
-
-    .p-font {
-        font-size: 1.2em;
-    }
-
-    .button {
-        font-size: 1.2em;
-        outline: hidden;
-    }
 
     .xliff-container {
         flex-wrap: wrap;

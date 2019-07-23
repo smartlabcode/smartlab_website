@@ -2,18 +2,18 @@
 
 return [
     "h1" => "Join Our Team",
-    "paragraph" => "Apply to our opened positions or our internship program that includes training and practice in the digital industry. We offer 
-    a great energy, a lot of knowledge, lot of socializing and an opportunity for long-term contract!",
+    "paragraph" => "Apply to our opened positions or our internship programme that includes training and practice in the digital industry. We offer great energy, a lot of knowledge, a lot of socializing and an opportunity for a long-term contract!",
     "button" => "Apply",
     "availablePositions" => "Available Positions",
     "eL-h1" => "eLearning Designer (m/f)",
-    "opisEL" => "If you like the creative industry, you are into graphics, you like to learn new things and appreciate the perspective, apply to the position of content designers for online learning",
+    "opisEL" => "If you love the creative industry, you are working with graphics, love to learn new things and appreciate the perspective, sign up for the 
+    E-Learning Content Designer Position",
     "opisDev" => "Ako voliš kreativnu IT industriju, baviš se web programiranjem,
     želiš raditi na projektima velikih evropskih i svjetskih kompanija,
     prijavi se na poziciji Back-end web Developera...",
     "readMore" => "Read more",
     "Dev-h1" => "Fullstack Web Developer (m/f)",
-    "opis" => "If you like the creative IT industry, you are in web programming, you want to work on projects of large European and world companies, apply for the position of Fullstack Web Developer.",
+    "opis" => "If you like the creative IT industry, you are doing web programming, you want to work on the projects of large European and world companies, sign up for the Back-End Web Developer Position ...",
     "apply-h1" => "Apply to Be a Part of SmartLab Team",
     "name" => "*Name",
     "prezime" => "*Last name",

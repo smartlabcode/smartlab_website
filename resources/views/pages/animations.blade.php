@@ -96,7 +96,7 @@
         </div>
         <img class="secTwoBg4" src="{{asset('/images/img/orange-circle.svg')}}" alt="orange circle">
     </div>
-    <div class="contact-section" id="contact">
+    <div class="contact-section" id="contact" style="height:0px">
         <div class="contact-form-container">
             <h2 class="text-center h1-font">@lang('animations.contact')</h2>
             <form class="contact-form" action="/demo" method="POST">
@@ -136,7 +136,7 @@
                     <label for="message">@lang('animations.contactMessage')</label>
                     <textarea name="message" rows="7" id="message" required></textarea>
                 </div>
-                <input class="button submit" type="submit" value=@lang('animations.buttonSend') />
+                <button class="button submit" type="submit" value=@lang('animations.buttonSend')>@lang('animations.buttonSend')</button>
             </form>
         </div>
     </div>

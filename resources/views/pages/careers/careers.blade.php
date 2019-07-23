@@ -81,32 +81,32 @@
         @csrf
 
         <div class="form-group">
-            <label class="p-font" for="name">@lang('careers.name')</label>
+            <label for="name">@lang('careers.name')</label>
             <input type="text" name="name" class="form-control" id="name" placeholder="" required>
         </div>
 
         <div class="form-group">
-            <label class="p-font" for="surname">@lang('careers.prezime')</label>
+            <label for="surname">@lang('careers.prezime')</label>
             <input type="text" name="lastname" class="form-control" id="surname" placeholder="" required>
         </div>
 
         <div class="form-group">
-            <label class="p-font" for="phone">@lang('careers.broj')</label>
+            <label for="phone">@lang('careers.broj')</label>
             <input type="number" name="phone_number" class="form-control" id="phone" placeholder="" required>
         </div>
 
         <div class="form-group">
-            <label class="p-font" for="name">@lang('careers.email')</label>
+            <label for="name">@lang('careers.email')</label>
             <input type="email" name="email" class="form-control" id="email" placeholder="" required>
         </div>
 
         <div class="form-group">
-            <label class="p-font" for="name">@lang('careers.napomena')</label>
+            <label for="name">@lang('careers.napomena')</label>
             <textarea name="message" class="form-control" id="name" placeholder="" required></textarea>
         </div>
 
         <div class="form-group">
-            <label class="p-font" for="category">@lang('careers.kategorija')</label>
+            <label for="category">@lang('careers.kategorija')</label>
             <select class="form-control" name="category" id="category" required>
                 <option disabled>@lang('careers.choose-kategorija')</option>
                 <option value="designer">@lang('careers.dizajner')</option>
@@ -118,7 +118,7 @@
 
             <br />
 
-            <label class="p-font" for="uploadFileArea">@lang('careers.files')</label>
+            <label for="uploadFileArea">@lang('careers.files')</label>
             <div id="uploadFileArea" class="form-control" onclick="openUploadWindow()">
                 <p id="uploadText">@lang('careers.click-to') <br />@lang('careers.upload-files')</p>
                 <input id="inputFile" type="file" name="files[]" onchange="fileUploaded()" multiple />

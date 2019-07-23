@@ -1,16 +1,16 @@
 <?php
 
 return [
-    "heading" => "Entwicklung und Programmierung",
-    "title" => "Back- und Frontend-Entwicklung von Lern- und Leistungsmanagementsystemen sowie benutzerdefinierte Funktionen und Iteraktivitätsoptionen machen Ihre Kurse überzeugend und benutzerfreundlich.",
-    "liOne" => "Maßgeschneiderte Tracking und Reporting-Funktionen",
-    "liTwo" => "Flash zu HTML5 Konvertierung bestehender Kurse, um die Bereitstellung für mehrere Plattformen zu ermöglichen.",
-    "liThree" => "Szenario-basierte Quizes",
-    "liFour" => "Englaging-Tools für Webinare",
-    "liFive" => "Augumentierte Realität integriert",
-    "ourWorks" => "Unsere Arbeiten",
-    "wantSeeMore" => "Ich möchte mehr sehen:",
-    "demo" => "Planen Sie eine Demo",
+    "heading" => "Implementierung und Programmierung",
+    "title" => "Back-End und Front-End System-Entwicklung für das Lernen und die Leistungssteuerung sowie angepasste Funktionen und interaktiver Inhalt, die Ihre Kurse attraktiv und nutzerfreundlich machen.",
+    "liOne" => "Spezifische Inhaltskontrolle und Berichterstattung",
+    "liTwo" => "Umwandlung existierender Kurse von Flash in HTML5, was die Nutzung verschiedener Plattformen und Geräten ermöglicht.",
+    "liThree" => "Auf Wordpress beruhende Quiz",
+    "liFour" => "Werkzeugnutzung für Webinare",
+    "liFive" => "Integrierte erweiterte Realität (AR)",
+    "ourWorks" => "Unsere Arbeit",
+    "wantSeeMore" => "Wollen Sie mehr sehen:",
+    "demo" => "Vereinbaren Sie eine Vorführung",
     "contact" => "Kontakt",
 
     // demo form
@@ -22,18 +22,18 @@ return [
     "time" => "Besprechungszeit",
     "message" => "Nachricht",
 
-    "xliffTranslation" => "XLIFF Übersetzung",
-    "uploadFile" => "Laden Sie Ihre Datei hoch",
-    "uploadFileText" => "XLF hochladen und Sprachen für die Übersetzung auswählen",
-    "downloadXls" => "XLS herunterladen",
-    "downloadXlsText" => "XLS-Datei (Excel) herunterladen, die alle Daten Ihres ursprünglichen XLF und zusätzliche Spalten für ausgewählte Sprachen enthält.",
-    "translateColumns" => "Spalten übersetzen",
-    "translateColumnsText" => "Fügen Sie Übersetzungen in bestimmte Spalten ein und laden Sie Ihre Dateien hoch (Original XLF und neue XLS-Datei mit Übersetzungen).",
-    "downloadReady" => "Bereit zum Download",
-    "explanationText" => "Jetzt erstellt der Server XLF-Dateien für alle ausgewählten Sprachen und die endgültigen Dateien werden Ihnen per E-Mail zugesandt.",
-    "seeMore" => "Mehr sehen",
-    "toolsTechnologies" => "Tools und Technologien",
-    "toolsTechnologiesText" => "Wir entwickeln maßgeschneiderte eLearning-Schulungen, die mit einer Vielzahl von Tools und Technologien auf Ihre strategischen Unternehmensziele abgestimmt sind.",
+    "xliffTranslation" => "XLIFF-Übersetzung",
+    "uploadFile" => "Laden Sie Ihr Dokument hoch",
+    "uploadFileText" => "Laden Sie Ihre XLF-Datei und wählen Sie die Sprachen für die Übersetzung",
+    "downloadXls" => "Laden Sie die XLS-Datei herunter",
+    "downloadXlsText" => "Laden Sie die XLS-Datei (Excel), die alle Angaben aus Ihrer Original-XLF-Datei und zusätzliche Kolonnen für die gewählten Sprachen enthält",
+    "translateColumns" => "Übersetzen Sie die Kolonnen",
+    "translateColumnsText" => "Setzen Sie die Übersetzungen in die Kolonnen ein und laden Sie Ihre Dateien hoch (Original-XLF und neue XLS-Dateien mit den Übersetzungen)",
+    "downloadReady" => "Bereit zum Herunterladen",
+    "explanationText" => "Server erstellt XLF-Dateien für alle gewählten Sprachen und sie sind dann bereit zum Herunterladen ",
+    "seeMore" => "Sehen Sie mehr",
+    "toolsTechnologies" => "Werkzeuge und Technologien",
+    "toolsTechnologiesText" => "Wir benutzen die agilste Herangehensweise und die neuesten Technologien in unserem Entwicklungsprozess.",
 
     // T&T
     "php" => "PHP",
@@ -43,4 +43,3 @@ return [
     "github" => "GitHub",
     "unity" => "Unity"
 ];
-

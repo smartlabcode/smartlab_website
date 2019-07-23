@@ -2,12 +2,12 @@
 
 return [
     "heading" => "Development and programming",
-    "title" => "Back and front-end development of learning and performance managment systems, as well as custom functions and iteractivity options making your courses compelling and user friendly.",
-    "liOne" => "Custom made tracking and reporting features",
+    "title" => "Back and front-end development of learning and performance management systems, as well as custom functions and interactivity options making your courses compelling and user-friendly.",
+    "liOne" => "Custom-made tracking and reporting features",
     "liTwo" => "Flash to HTML5 conversion of existing courses to enable delivery for multiple platforms",
-    "liThree" => "Scenario based quizes",
-    "liFour" => "Englaging tools for webinars",
-    "liFive" => "Augumented reality integrated",
+    "liThree" => "Wordpress based quizzes",
+    "liFour" => "Engaging tools for webinars",
+    "liFive" => "Augmented reality integrated",
     "ourWorks" => "Our Works",
     "wantSeeMore" => "Want to see more:",
     "demo" => "Schedule a demo",
@@ -23,17 +23,17 @@ return [
     "message" => "Message",
 
     "xliffTranslation" => "XLIFF Translation",
-    "uploadFile" => "Upload your file",
+    "uploadFile" => "Upload your ﬁle",
     "uploadFileText" => "Upload XLF and select languages for translation",
     "downloadXls" => "Download XLS",
-    "downloadXlsText" => "Download XLS file (excel) which contains all the data from your original XLF and additional columns for selected languages",
+    "downloadXlsText" => "Download your  XLS file (excel) which contains all the data from your original XLF and the additional columns for selected languages",
     "translateColumns" => "Translate columns",
-    "translateColumnsText" => "Insert translations in given columns and upload yourfiles (Original XLF and new XLS file with translations)",
-    "downloadReady" => "Ready for download",
-    "explanationText" => "Now server creates XLF files for all selectedlanguages and final files will be send to you by email",
+    "translateColumnsText" => "Insert translations into given columns and upload your files (The original XLF and a new XLS file with translations)",
+    "downloadReady" => "Ready to download",
+    "explanationText" => "Now, the server is creating the XLF files for all selected languages and then they are ready to be downloaded",
     "seeMore" => "See more",
     "toolsTechnologies" => "Tools and Technologies",
-    "toolsTechnologiesText" => "We design custom eLearning training that aligns with your strategic corporate objectives using a vareity of tools and technologies.",
+    "toolsTechnologiesText" => "We keep using the most agile approach and the newest technologies in our development process.",
 
     // T&T
     "php" => "PHP",
@@ -43,4 +43,3 @@ return [
     "github" => "GitHub",
     "unity" => "Unity"
 ];
-

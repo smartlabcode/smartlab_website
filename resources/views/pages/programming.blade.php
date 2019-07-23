@@ -84,7 +84,7 @@
         </div>
         <img class="secTwoBg4" src="{{asset('/images/img/orange-circle.svg')}}" alt="orange circle background">
     </div>
-    <div class="contact-section" id="contact">
+    <div class="contact-section" id="contact" style="height:0px">
         <div class="contact-form-container">
             <h2 class="text-center h1-font">@lang('programming.contact')</h2>
             <form class="contact-form" action="/demo" method="POST">
@@ -124,7 +124,8 @@
                     <label for="message">*@lang('programming.time')</label>
                     <textarea name="message" rows="7" id="message" required></textarea>
                 </div>
-                <input class="button submit" type="submit" value="Send" />
+                <p class="policyText">@lang('careers.we-are-commited') <a href="#">@lang('careers.privacy')</a>.</p>
+                <button class="button submit" type="submit" value="Send">Send</button>
             </form>
         </div>
     </div>

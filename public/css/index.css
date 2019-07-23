@@ -11,15 +11,16 @@
     position: relative;
   }
 
-  .background-img {
-    position: absolute;
-    width: 85vw;
-    /* max-height: 124vh; */
-    top: -505px;
-    right: -330px;
-    z-index: -10;
-    transform: rotate(-17deg);
+
+    .background-img {
+      position: absolute;
+      width: 85vw;
+      top: -586px;
+      right: -330px;
+      z-index: -10;
+      transform: rotate(-20deg);
   }
+  
 
   .background-img-orange-circle {
     position: absolute;
@@ -88,6 +89,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+    padding-top: 50px;
   }
 
   .section-one-text {
@@ -102,7 +104,7 @@
 }*/
   .section-one-animation {
     object-fit: contain;
-    height: 85vh;
+    
     width: 60%;
     min-width: 350px;
     margin-left: 0;
@@ -163,14 +165,13 @@
   }
 
   .section-two {
-    margin-top: -170px !important;
     position: relative;
   }
 
   .section-two-hero {
     text-align: center;
     padding-bottom: 50px;
-    margin-top: 300px;
+    margin-top: 50px;
   }
 
 
@@ -298,7 +299,7 @@
 
   .section-three {
     position: relative;
-    padding-top: 150px;
+    padding-top: 100px;
   }
 
   .about-orange-circle {
@@ -959,9 +960,10 @@
 
   @media screen and (min-width: 2000px) {
     .background-img {
-      top: -700px;
-      right: -500px;
-    }
+      top: -946px;
+      right: -519px;
+      width: 85vw;
+  }
 
     .background-img-orange-circle {
       right: 1210px;
@@ -1007,11 +1009,15 @@
     }
   }
 
-  @media screen and (max-width: 1400px) {
+  @media screen and (max-width: 1440px) {
     .background-img {
-      width: 97vw;
-      max-height: 180%;
-    }
+      position: absolute;
+      width: 98vw;
+      top: -454px;
+      right: -330px;
+      z-index: -10;
+      transform: rotate(-17deg);
+  }
 
     .section-one {
       justify-content: space-around;
@@ -1021,7 +1027,6 @@
   @media screen and (max-width: 1200px) {
     .contain {
       width: 95%;
-
     }
 
     .blog-container {
@@ -1084,15 +1089,28 @@
     }
   }
 
-  @media screen and (max-width: 1026px) {
-    .section-one {
-      position: relative;
-      top: 0px;
+  @media screen and (max-width: 1024px) {
+    .section-two-top {
+      height: auto;
+      max-height: 350px;
+    }
+    .section-two-top-left{
+      flex-basis: 45%;
+    }
+    .section-two-top-left img{
+      height: 350px;
+      padding: 25px;
+    }
+      .section-one {
+       
+        padding-top: 85px;
+        padding-bottom: 100px;
+    
     }
 
     .section-one-animation {
-      height: 70vh;
-      width: 80%;
+      /*height: 70vh;
+      width: 80%;*/
       margin: 0;
       transform: translateX(15%);
     }
@@ -1104,6 +1122,7 @@
 
     .background-img {
       width: 110vw;
+      top: -395px;
     }
 
     .--circle3 {
@@ -1165,9 +1184,7 @@
       margin-bottom: 150px;
     }
 
-    .section-three {
-      padding-top: 0;
-    }
+  
 
     .team {
       padding-top: 0;
@@ -1223,7 +1240,7 @@
     }
 
     .section-one-animation {
-      height: 70vw;
+     
       width: 70%;
       transform: translateX(0%);
     }
@@ -1249,7 +1266,7 @@
     .section-two-background-bot-orange {
       left: 89%;
     }
-
+    
     .contact-form-container {
       width: 80%;
     }
@@ -1271,7 +1288,7 @@
     }
 
     .section-two {
-      margin-top: 20%;
+      margin-top: 150px;
     }
 
     .section-two-top {
@@ -1286,11 +1303,6 @@
       padding: 10px;
       text-align: left;
     }
-
-    .section-two-bot-item {}
-
-    .section-two-bot-item div {}
-
     .section-two-bot-item .p-font,
     .section-two-bot-item .h2-font {
       padding-left: 0;
@@ -1300,10 +1312,9 @@
       width: 25%;
     }
 
-    .section-two-bot-item img {}
   }
 
-  @media screen and (max-width: 776px) {
+  @media screen and (max-width: 778px) {
     .contact-section {
       background-size: 376vw;
     }
@@ -1318,21 +1329,7 @@
       /*margin-top: 80px;*/
     }
 
-    .section-three {
-      margin-top: 250px;
-    }
-
-    .team {
-      margin-top: 250px;
-    }
-
-    .testemonials {
-      margin-top: 250px;
-    }
-
-    .blog-section {
-      margin-top: 250px;
-    }
+   
 
     .contact-section {
       top: 120px;
@@ -1434,25 +1431,6 @@
       top: -20px;
     }
 
-    .h1-font {
-      font-size: 1.5em;
-    }
-
-    .h2-font {
-      font-size: 1.3em;
-    }
-
-    .p-font {
-      font-size: 1.2em;
-    }
-
-    .button {
-      width: 166px;
-      height: 45px;
-      font-size: 1.2em;
-      outline: hidden;
-    }
-
     .footer p {
       font-size: 1.1em;
     }
@@ -1480,7 +1458,30 @@
     .partners-images img {
       width: 32%;
     }
-
+    .section-two-bot-item img {
+      max-height: 205px;
+      padding: 0;
+    }
+    .section-two-top-left img {
+      max-height: 205px;
+      padding: 0;
+    }
+    .section-two-bot-item button {
+      margin-top: 25px;
+    }
+    .section-two-top{
+      max-height: unset;
+    }
+    .section-two-top button {
+      margin: 25px;
+    }
+    .contact-form-container{
+      padding-top: 135px;
+    }
+    .contact-section{
+      background-position-y: 61%;
+      background-size: 400vw;
+    }
   }
 
   @media screen and (max-width: 425px) {
@@ -1494,18 +1495,7 @@
       width: 141%;
     }
 
-    .section-two-bot-item img {
-      max-height: 205px;
-      padding: 0;
-    }
-
-    .section-two-bot-item button {
-      margin-top: 25px;
-    }
-
-    .section-two-top button {
-      margin: 25px;
-    }
+    
 
     .section-one-text {
       /*margin-bottom: 50px;*/
@@ -1513,6 +1503,7 @@
 
     .section-one {
       margin-bottom: 40px;
+      padding-top: 0;
     }
 
     .section-two {

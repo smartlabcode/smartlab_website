@@ -8,12 +8,10 @@
     <div class="section-one-img-container contain">
         <div class="section-one-img-left-container">
             <div>
-                <h1 class="h1-font">Outsource Real Person</h1>
-                <p class="p-font">If you want to outsource an eLearning designer, educative video
-                    animator, front end or back end developer you are on the
-                    right place.
+                <h1 class="h1-font">@lang('outsourcing.header')</h1>
+                <p class="p-font">@lang('outsourcing.info')
                 </p>
-                <a href="#team-members"><button class="button">Available People</button></a>
+                <a href="#team-members"><button class="button">@lang('outsourcing.people')</button></a>
             </div>
         </div>
         <img class="section-one-img-right" src="{{ asset('images/partner/outsourcing-header-img.svg') }}" />
@@ -105,21 +103,13 @@
             <!-- Opširan tekst za outsourcing_profile page Irfan K.-->
             <div class="p-font">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
-                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
-                    praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                    @lang('outsourcing.irfank-long-first-p')
                 </p>
                 <p>
-                    Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
-                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
-                    praesent luptatum zzril delenit augue duis
+                    @lang('outsourcing.irfank-long-second-p')
                 </p>
             </div>
-            <button class="button">Hire me</button>
+            <button class="button">@lang('outsourcing.hire')</button>
         </div>
         <div class="team-img-container">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
@@ -140,9 +130,7 @@
                 <h3 class="h3-font">Irfan K.</h3>
                 <h4 class="h4-font">eLearning Designer</h4>
                 <h5 class="h5-font">Skills: </h5>
-                <p class="p-font">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-                    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat, Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit...
+                <p class="p-font">@lang('outsourcing.irfank-about-short')
                 </p>
             </div>
             <div class="team-description-bottom">
@@ -259,21 +247,13 @@
             <!-- Opširan tekst za outsourcing_profile page Ibrahim Z.-->
             <div class="p-font">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
-                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
-                    praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                    @lang('outsourcing.ibrahimz-long-first-p')
                 </p>
                 <p>
-                    Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
-                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
-                    praesent luptatum zzril delenit augue duis
+                    @lang('outsourcing.ibrahimz-long-second-p')
                 </p>
             </div>
-            <button class="button">Hire me</button>
+            <button class="button">@lang('outsourcing.hire')</button>
         </div>
         <div class="team-img-container">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
@@ -295,7 +275,9 @@
                 <h3 class="h3-font">Ibrahim Z.</h3>
                 <h4 class="h4-font">eLearning /wordpress Developer</h4>
                 <h5 class="h5-font">Skills: </h5>
-                <p class="p-font">Hi! I am Ibrahim Zubača, a wordpress developer focused on crafting great web experiences. Beside being a web developer, I am a photography hobbyist and travel/adventure lover.
+                <p class="p-font">
+                    @lang('outsourcing.ibrahimz-about-short')
+
                 </p>
             </div>
             <div class="team-description-bottom">
@@ -413,21 +395,13 @@
             <!-- Opširan tekst za outsourcing_profile page Haris M.-->
             <div class="p-font">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
-                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
-                    praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                    @lang('outsourcing.harism-long-first-p')
                 </p>
                 <p>
-                    Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
-                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
-                    praesent luptatum zzril delenit augue duis
+                    @lang('outsourcing.harism-long-second-p')
                 </p>
             </div>
-            <button class="button">Hire me</button>
+            <button class="button">@lang('outsourcing.hire')</button>
         </div>
         <div class="team-img-container">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
@@ -448,9 +422,7 @@
                 <h3 class="h3-font">Haris M.</h3>
                 <h4 class="h4-font">eLearning/JS Developer</h4>
                 <h5 class="h5-font">Skills: </h5>
-                <p class="p-font">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-                    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat, Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit...
+                <p class="p-font">@lang('outsourcing.harism-about-short')
                 </p>
             </div>
             <div class="team-description-bottom">
@@ -621,13 +593,14 @@
             <!-- Opširan tekst za outsourcing_profile page Amer M.-->
             <div class="p-font">
                 <p>
-                    Hello! I'm Amer Masleša, a designer and animator focused on eLearning and multimedia design. I strive to create simple, original, and impactful user experiences. Design has always been my passion and hobby since my early childhood. I learned design and animation on my own out of curiosity. This curiosity helped me to stay up-to-date from year to year and I’m still learning every single day to ensure I can deliver the most modern and effective solutions.Hello! I'm Amer Masleša, a designer and animator focused on eLearning and multimedia design. I strive to create simple, original, and impactful user experiences. Design has always been my passion and hobby since my early childhood. I learned design and animation on my own out of curiosity. This curiosity helped me to stay up-to-date from year to year and I’m still learning every single day to ensure I can deliver the most modern and effective solutions.
+                    @lang('outsourcing.amerm-long-first-p')
                 </p>
                 <p>
-                    I believe in working hard and smart instead of searching for “hacks and shortcuts”. As technology progresses things are getting more and more complex. As a designer, I have a special opportunity to make these complex processes simple, delightful and joy to use every day. I'm always looking for new and exciting opportunities, so don't hesitate to get in touch.
+                    @lang('outsourcing.amerm-long-second-p')
+                </p>h.
                 </p>
             </div>
-            <button class="button">Hire me</button>
+            <button class="button">@lang('outsourcing.hire')</button>
         </div>
         <div class="team-img-container">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
@@ -649,7 +622,8 @@
                 <h4 class="h4-font">eLearning/multimedia Designer</h4>
                 <h5 class="h5-font">Skills: </h5>
                 <p class="p-font">
-                    Hello! I'm Amer Masleša, a designer and animator focused on eLearning and multimedia design. I strive to create simple, original, and impactful user experiences. I can deliver the most modern and effective solutions. I'm always looking for new and exciting opportunities, so don't hesitate to get in touch.
+                    @lang('outsourcing.amerm-about-short')
+
                 </p>
             </div>
             <div class="team-description-bottom">
@@ -768,21 +742,13 @@
             <!-- Opširan tekst za outsourcing_profile page Irfan S.-->
             <div class="p-font">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
-                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
-                    praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                    @lang('outsourcing.irfans-long-first-p')
                 </p>
                 <p>
-                    Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
-                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
-                    praesent luptatum zzril delenit augue duis
+                    @lang('outsourcing.irfans-long-second-p')
                 </p>
             </div>
-            <button class="button">Hire me</button>
+            <button class="button">@lang('outsourcing.hire')</button>
         </div>
         <div class="team-img-container">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
@@ -803,9 +769,10 @@
                 <h3 class="h3-font">Irfan S.</h3>
                 <h4 class="h4-font">eLearning Designer</h4>
                 <h5 class="h5-font">Skills: </h5>
-                <p class="p-font">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-                    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat, Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit...
+                <p class="p-font">
+
+                    @lang('outsourcing.irfans-about-short')
+
                 </p>
             </div>
             <div class="team-description-bottom">
@@ -924,21 +891,13 @@
             <!-- Opširan tekst za outsourcing_profile page Aida R.-->
             <div class="p-font">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
-                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
-                    praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                    @lang('outsourcing.aidar-long-first-p')
                 </p>
                 <p>
-                    Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
-                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
-                    praesent luptatum zzril delenit augue duis
+                    @lang('outsourcing.aidar-long-second-p')
                 </p>
             </div>
-            <button class="button">Hire me</button>
+            <button class="button">@lang('outsourcing.hire')</button>
         </div>
         <div class="team-img-container">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
@@ -959,9 +918,7 @@
                 <h3 class="h3-font">Aida R.</h3>
                 <h4 class="h4-font">eLearning/instructional Designer</h4>
                 <h5 class="h5-font">Skills: </h5>
-                <p class="p-font">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-                    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat, Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit...
+                <p class="p-font">@lang('outsourcing.aidar-about-short')
                 </p>
             </div>
             <div class="team-description-bottom">
@@ -1080,21 +1037,13 @@
             <!-- Opširan tekst za outsourcing_profile page Emir M.-->
             <div class="p-font">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
-                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
-                    praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                    @lang('outsourcing.emirm-long-first-p')
                 </p>
                 <p>
-                    Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
-                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
-                    praesent luptatum zzril delenit augue duis
+                    @lang('outsourcing.emirm-long-second-p')
                 </p>
             </div>
-            <button class="button">Hire me</button>
+            <button class="button">@lang('outsourcing.hire')</button>
         </div>
         <div class="team-img-container">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
@@ -1115,9 +1064,7 @@
                 <h3 class="h3-font">Emir M.</h3>
                 <h4 class="h4-font">Front-End/moodle developer</h4>
                 <h5 class="h5-font">Skills: </h5>
-                <p class="p-font">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-                    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat, Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit...
+                <p class="p-font">@lang('outsourcing.emirm-about-short')
                 </p>
             </div>
             <div class="team-description-bottom">
@@ -1236,21 +1183,13 @@
             <!-- Opširan tekst za outsourcing_profile page Florin B.-->
             <div class="p-font">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
-                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
-                    praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                    @lang('outsourcing.florinb-long-first-p')
                 </p>
                 <p>
-                    Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
-                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
-                    praesent luptatum zzril delenit augue duis
+                    @lang('outsourcing.florinb-long-second-p')
                 </p>
             </div>
-            <button class="button">Hire me</button>
+            <button class="button">@lang('outsourcing.hire')</button>
         </div>
         <div class="team-img-container">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
@@ -1271,9 +1210,7 @@
                 <h3 class="h3-font">Florin B.</h3>
                 <h4 class="h4-font">Front-End Developer</h4>
                 <h5 class="h5-font">Skills: </h5>
-                <p class="p-font">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-                    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat, Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit...
+                <p class="p-font">@lang('outsourcing.florinb-about-short')
                 </p>
             </div>
             <div class="team-description-bottom">
@@ -1478,21 +1415,13 @@
             <!-- Opširan tekst za outsourcing_profile page Mirza O.-->
             <div class="p-font">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
-                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
-                    praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                    @lang('outsourcing.mirzao-long-first-p')
                 </p>
                 <p>
-                    Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
-                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
-                    praesent luptatum zzril delenit augue duis
+                    @lang('outsourcing.mirzao-long-second-p')
                 </p>
             </div>
-            <button class="button">Hire me</button>
+            <button class="button">@lang('outsourcing.hire')</button>
         </div>
         <div class="team-img-container">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
@@ -1513,9 +1442,7 @@
                 <h3 class="h3-font">Mirza O.</h3>
                 <h4 class="h4-font">Full Stack/DevOps</h4>
                 <h5 class="h5-font">Skills: </h5>
-                <p class="p-font">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-                    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat, Ut wisi
-                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit...
+                <p class="p-font">@lang('outsourcing.mirzao-about-short')
                 </p>
             </div>
             <div class="team-description-bottom">

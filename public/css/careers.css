@@ -151,6 +151,10 @@
     position: relative;
     left: 4px;
 }
+label {
+    font-family: "Montserrat" ,sans-serif;
+    color:var(--h1-color);
+}
 
 #verifiedIcon {
     width: 60px;
@@ -354,7 +358,7 @@ form select,
 }
 
 form textarea {
-    height: 221px !important;
+    height: 214px!important;
     font-family: "Source Sans Pro", sans-serif !important;
     font-size: 1.4em !important;
 }
