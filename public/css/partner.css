@@ -22,7 +22,9 @@
     color: var(--button-bg-color) !important;
     border: 1px solid var(--button-bg-color) !important;
 }
-
+.nav-top p span {
+    color: var(--h1-color);
+}
 .--gray {
     background-color: #C9D6E2;
     border-color: #C9D6E2;
@@ -93,7 +95,7 @@ form select:focus,
     position: absolute;
     z-index: -100;
     transform: rotate(0deg);
-    top: -80%;
+    top: -87%;
     right: -26%;
     width: 88%;
 }
@@ -101,6 +103,7 @@ form select:focus,
 .header-content {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .header-content-left {
@@ -116,7 +119,7 @@ form select:focus,
 }
 
 .header-content-right {
-    flex-basis: 50%;
+    flex-basis: 46%;
     margin-top: 150px;
 }
 
@@ -146,12 +149,15 @@ form select:focus,
     align-items: center;
     text-align: center;
 }
-
+#partnership-options{
+    position: absolute;
+    top: -75px;
+}
 .partner-item img {
     flex-basis: 25%;
     margin-top: 20px;
-    min-height: 200px;
-    width: 40%;
+    min-height: 160px;
+    width: 30%;
 }
 
 .partner-item h2 {
@@ -415,7 +421,7 @@ form select:focus,
 
 .partner-experience {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding-top: 15%;
     flex-wrap: wrap;
@@ -427,7 +433,7 @@ form select:focus,
 }
 
 .partner-experience-logo {
-    flex-basis: 20%;
+    flex-basis: 10%;
 }
 
 .partner-experience-logo img {
@@ -437,18 +443,40 @@ form select:focus,
 
 .partner-experience-content {
     flex-basis: 77%;
-    padding: 150px 0 0px 100px;
+    padding: 100px 0 0px 100px;
     /* margin-left: 50px; */
     background-image: url(../images/img/quotation-marks.svg);
     background-repeat: no-repeat;
     background-size: 30%;
 }
-
-.partner-experience-content p {
+.partner-experience-content p{
     color: white !important;
-    font-style: italic;
 }
+.partner-experience-content>p {
+   
+    font-style: italic;
+    height: 100px;
+    margin-bottom: 50px;
+}
+#indicators{
+    flex-basis: 100%;
+    /* align-items: center; */
+    text-align: center;
+}
+.indicator {
+    margin: 5px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--h2-color);
+    opacity: 0.5;
+    cursor: pointer;
+  }
 
+  .indicator-opacity {
+    opacity: 1 !important;
+  }
 .partner-experience-image {
     display: flex;
     align-items: center;
@@ -471,9 +499,9 @@ form select:focus,
 .partner-experience-bg {
     position: absolute;
     z-index: -100;
-    width: 160%;
-    transform: translateX(-16%) scaleY(0.8);
-    top: -35%;
+    width: 152%;
+    transform: translateX(-16%) scaleY(.8);
+    top: -28%;
 }
 
 .partner-experience-name {
@@ -602,7 +630,7 @@ textarea:focus {
 }
 
 .margin-b-150 {
-    margin-bottom: 250px !important;
+    margin-bottom: 150px !important;
 }
 
 .nav-top p {
@@ -901,7 +929,7 @@ textarea:focus {
         right: -41vw;
         width: 157vw;
     }
-
+}
     @media only screen and (max-width: 800px) {
         .partner-experience-logo img {
             width: 100%;
@@ -934,13 +962,9 @@ textarea:focus {
         .margin-b-150 {
             margin-bottom: 150px !important;
         }
-    }
-
-    @media only screen and (max-width: 800px) {
         .partner-experience-bg {
-            width: 175%;
+            width: 220%;
         }
-
     }
 
     @media only screen and (max-width: 750px) {
@@ -1009,7 +1033,17 @@ textarea:focus {
         nav {
             margin-bottom: 0 !important;
         }
-
+        .partner-experience-bg {
+            width: 350%;
+        }
+        
+        .partnership-steps-item div img{
+            padding: 0;
+            max-height: 100px;
+        }
+        .partner-experience-content>p {
+            height: auto;
+        }
         .header-background {
             position: absolute;
             z-index: -100;

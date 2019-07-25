@@ -425,6 +425,7 @@
 
 .outsourcing-about {
     margin-top: 150px !important;
+    visibility: hidden;
 }
 
 .outsourcing-about .button {
@@ -435,7 +436,9 @@
 .mirza {
     object-position: 0px 10px !important;
 }
-
+.nav-top p span {
+    color: var(--h1-color);
+}
 @media screen and (min-width: 2000px) {
     .section-one-bg {
         position: absolute;

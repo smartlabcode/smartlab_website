@@ -1,7 +1,20 @@
 <!-- Extend main layout -->
 @extends('layouts.app')
 
+<style>
+    .loader-container {
+        position: absolute;
+        right: 50%;
+        top: 50%;
+        width: 200px;
+        z-index: 100;
+        transform: translate(50%, -50%);
+    }
 
+    .section-one-animation {
+        position: relative;
+    }
+</style>
 @section('content')
 <link href="{{ asset('css/programming.min.css') }}" rel="stylesheet">
 <div class="background-section-one">
@@ -25,7 +38,11 @@
                 </ul>
             </p>
         </div>
-        <div class="section-one-animation"></div>
+        <div class="section-one-animation">
+            <div class="loader-container">
+                <img src="{{asset('/images/preloader.gif')}}">
+            </div>
+        </div>
 
 
     </section>
@@ -86,7 +103,6 @@
     </div>
     <div class="contact-section" id="contact" style="height:0px">
         <div class="contact-form-container">
-            <h2 class="text-center h1-font">@lang('programming.contact')</h2>
             <form class="contact-form" action="/demo" method="POST">
                 <!-- Include token -->
                 @csrf
@@ -223,14 +239,22 @@
 
 
         const animation = document.querySelector(".section-one-animation");
-        lottie.loadAnimation({
+        let animationData = lottie.loadAnimation({
             container: animation, // the dom element that will contain the animation
             renderer: 'svg',
             loop: true,
             autoplay: false,
-            path: "{{asset('/images/online-courses-animation')}}" // the path to the animation json
+            path: "{{asset('/images/dev-animation')}}" // the path to the animation json
 
         });
+        lottie.setQuality("medium");
+        let ready = false;
+        let loaderContainer = document.querySelector(".loader-container");
+        animationData.addEventListener("DOMLoaded", function() {
+            ready = true;
+            lottie.play();
+            loaderContainer.style.display = "none";
+        })
         const animationObserver = new IntersectionObserver(function(entries, animationObserver) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -241,10 +265,7 @@
         animationObserver.observe(animation);
 
         var images = [
-            "{{asset('/images/mockups/ar-aplikacija-dev.jpg')}}",
-            '{{asset("/images/mockups/dl-fin-unsa-ba.jpg")}}',
-            '{{asset("/images/mockups/ar-aplikacija-dev.jpg")}}',
-            '{{asset("/images/mockups/edu-smartlab-ba.jpg")}}',
+            "{{asset('/images/mockups/ar-aplikacija-dev-002.jpg')}}",
             '{{asset("/images/mockups/fin-unsa-ba.jpg")}}',
             '{{asset("/images/mockups/xliff-mockup.jpg")}}'
         ];

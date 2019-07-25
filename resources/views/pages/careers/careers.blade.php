@@ -23,6 +23,8 @@
 </section>
 <section>
     <h1 class="h1-font centar">@lang('careers.availablePositions')</h1>
+    <br />
+    <br />
     <div class="careers-positions-container contain">
         <div class="careers-positions">
             <div class="carrers-positions-image-container">

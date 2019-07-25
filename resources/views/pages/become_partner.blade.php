@@ -8,7 +8,7 @@
             <div class="header-content-left">
                 <h1 class="h1-font">@lang('partner.header')</h1>
                 <p class="p-font">@lang('partner.info')</p>
-                <button class="button --gray">@lang('partner.options')</button>
+                <a href="#partnership-options"><button class="button --gray">@lang('partner.options')</button></a>
             </div>
             <div class="header-content-right">
                 <img src="../images/partner/partner-header-img.svg">
@@ -16,13 +16,17 @@
         </div>
 
     </section>
-    <section class="partner-container contain margin-b-150 ">
+
+    <section class="partner-container contain margin-b-150" style="position: relative">
+        <div id="partnership-options">
+
+        </div>
         <div class="partner-item">
             <img src="../images/partner/course-production-icon.svg">
             <div>
                 <h2 class="h2-font">@lang('partner.course-header')</h2>
                 <p class="p-font">@lang('partner.course-info')</p>
-                <button class="button">@lang('partner.become-partner')</button>
+                <a href="#partner-contact"><button class="button" id="button-course" data-option="course">@lang('partner.become-partner')</button></a>
             </div>
 
         </div>
@@ -31,7 +35,7 @@
             <div>
                 <h2 class="h2-font">@lang('partner.moodle-header')</h2>
                 <p class="p-font">@lang('partner.moodle-info')</p>
-                <button class="button">@lang('partner.become-partner')</button>
+                <a href="#partner-contact"><button class="button" id="button-moodle" data-option="moodle">@lang('partner.become-partner')</button></a>
             </div>
 
         </div>
@@ -40,7 +44,7 @@
             <div>
                 <h2 class="h2-font">@lang('partner.service-header')</h2>
                 <p class="p-font">@lang('partner.service-info')</p>
-                <button class="button">@lang('partner.become-partner')</button>
+                <a href="#partner-contact"><button class="button" id="button-service" data-option="service">@lang('partner.become-partner')</button></a>
             </div>
 
         </div>
@@ -138,26 +142,27 @@
     <section class="contain margin-b-150  partner-experience-container">
         <img class="partner-experience-bg" src="../images/partner/partnership-experience-bg.svg">
 
-        <div class="partner-experience">
+        <div class="partner-experience partners-text">
             <h2 class="centar h1-font margin-b-50">@lang('partner.partner-experience')</h2>
             <div class="partner-experience-logo">
-                <img src="../images/partner/logo.png" alt="partner logo" />
+                <img src="{{asset('/images/partners-logo/risk-crew.png')}}" alt="partner logo" id="partners-logo" />
             </div>
             <div class="partner-experience-content">
-                <p class="p-font margin-b-100">@lang('partner.partner-testimonial1')</p>
+                <p class="p-font" id="partners-text">“We found SmartLab very professional to work with. They quickly understood the brief, they were proactive and easy to communicate with during the build phase and delivered a final product that met fully with our expectations.”</p>
                 <div class="partner-experience-image">
-                    <img src="../images/partner/nick.jpg" alt="partner">
+                    <img src="{{asset('/images/partners-images/nick-r.jpg')}}" alt="partner" id="partners-image">
                     <p>
-                        <span class="partner-experience-name">Nick Roberts</span>
-                        <span class="partner-experience-company">Risk Crew</span>
+                        <span class="partner-experience-name" id="partners-name">Nick Roberts</span>
+                        <span class="partner-experience-company" id="partners-company">Risk Crew</span>
                     </p>
-
                 </div>
+
             </div>
+            <div id="indicators"><span class="indicator indicator-opacity"></span><span class="indicator"></span></div>
         </div>
     </section>
     <!-- TODO dont delete this-->
-    <section class="partner-form-section contain">
+    <section class="partner-form-section contain" id="partner-contact">
         @include('parts.break_space')
         @include('parts.error_success')
 
@@ -197,9 +202,9 @@
                     <label for="bussiness_category" class="p-font">*Please Select</label>
                     <select name="bussiness_category" id="bussiness_category" required>
                         <option selected disabled>Choose category</option>
-                        <option value="production">Production / Multimedia e-Leaning Materials</option>
-                        <option value="elearning">Representation</option>
-                        <option value="other">Other</option>
+                        <option value="production">Course Production Partnership</option>
+                        <option value="elearning">Moodle Support Partnership</option>
+                        <option value="other">Service Reseller Partnership</option>
                     </select>
                 </div>
 
@@ -227,15 +232,106 @@
     </section>
 </div>
 <script>
-    function openUploadWindow() {
-        document.getElementById("inputFile").click();
-    }
+    document.addEventListener("DOMContentLoaded", function(event) {
+        function openUploadWindow() {
+            document.getElementById("inputFile").click();
+        }
 
 
-    function fileUploaded() {
-        // TODO check if file is selected
-        let uploadText = document.getElementById("uploadText");
-        uploadText.innerHTML = "<img id='verifiedIcon' src='/images/icons/verified.svg' />";
-    }
+        function fileUploaded() {
+            // TODO check if file is selected
+            let uploadText = document.getElementById("uploadText");
+            uploadText.innerHTML = "<img id='verifiedIcon' src='/images/icons/verified.svg' />";
+        }
+
+        let courseButton = document.querySelector("#button-course");
+        let moodleButton = document.querySelector("#button-moodle");
+        let serviceButton = document.querySelector("#button-service");
+        let bussinessCategory = document.querySelector("#bussiness_category");
+        courseButton.addEventListener("click", function() {
+            bussinessCategory.options[1].selected = true;
+        });
+        moodleButton.addEventListener("click", function() {
+            bussinessCategory.options[2].selected = true;
+        });
+        serviceButton.addEventListener("click", function() {
+            bussinessCategory.options[3].selected = true;
+        });
+
+        let partnersText = document.querySelector("#partners-text");
+        let partnersImage = document.querySelector("#partners-image");
+        let partnersLogo = document.querySelector("#partners-logo");
+        let partnersName = document.querySelector("#partners-name");
+        let partnersCompany = document.querySelector("#partners-company");
+        let indicators = document.querySelectorAll(".indicator");
+        let partnersTextContainer = document.querySelector(".partners-text");
+
+
+
+
+        let partners = [{
+            text: "“We found SmartLab very professional to work with. They quickly understood the brief, they were proactive and easy to communicate with during the build phase and delivered a final product that met fully with our expectations.”",
+            image: "{{asset('/images/partners-images/nick-r.jpg')}}",
+            logo: "{{asset('/images/partners-logo/risk-crew.png')}}",
+            name: "Nick Roberts",
+            company: "Risk Crew"
+        }, {
+            text: "“We have been working with smartlab since 2017 and really appreciate the cooperation with them.Our requests have been quickly processed and our demands realized according to our desires. Smartlab is also knownfor flexibility and maintaining short - term deadlines.They react and realize projects quickly and successfully.Working with them also is really enjoyable because they are people who understand people.”",
+            image: "{{asset('/images/partners-images/vanessa.png')}}",
+            logo: "{{asset('/images/partners-logo/FKC-22.png')}}",
+            name: "Vanessa Ernst",
+            company: "Fischer, Knoblauch & Co."
+        }];
+        let j = 1;
+
+        function testemonialsChange() {
+
+            if (j == indicators.length) {
+                indicators[j - 1].classList.remove("indicator-opacity");
+                j = 0;
+            }
+            indicators[j].classList.add("indicator-opacity");
+            if (j > 0) {
+                indicators[j - 1].classList.remove("indicator-opacity");
+            }
+            partnersChange(partners[j]);
+            j++;
+        }
+        let interval;
+        const options = {
+            root: null,
+            threshold: 0,
+            rootMargin: "0px"
+        };
+        const observer2 = new IntersectionObserver(function(entries, observer2) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        interval = setInterval(testemonialsChange, 5000);
+                    } else {
+                        window.clearInterval(interval, 5000);
+                    }
+                });
+            },
+            options);
+        observer2.observe(partnersTextContainer);
+
+        function partnersChange(partners) {
+            partnersText.innerText = partners.text;
+            partnersLogo.src = partners.logo;
+            partnersImage.src = partners.image;
+            partnersName.innerText = partners.name;
+            partnersCompany.innerText = partners.company;
+        }
+        for (let i = 0; i < indicators.length; i++) {
+            indicators[i].addEventListener("click", function() {
+                for (let m = 0; m < indicators.length; m++) {
+                    indicators[m].classList.remove("indicator-opacity");
+                }
+                j = i;
+                indicators[i].classList.add("indicator-opacity");
+                partnersChange(partners[j]);
+            })
+        }
+    });
 </script>
 @endsection

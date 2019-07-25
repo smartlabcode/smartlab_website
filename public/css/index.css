@@ -56,7 +56,9 @@
   .text-center {
     text-align: center;
   }
-
+  .section-one-text .h2-font{
+    color: var(--h2-color) !important;
+  }
 
 
 
@@ -84,6 +86,17 @@
   transform: rotate(-90deg);
 }*/
 
+.loader-container {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  width: 200px;
+  z-index: 100;
+  transform: translate(50%, -50%);
+}
+
+
+
 
   .section-one {
     position: relative;
@@ -103,10 +116,11 @@
   font-size: 2em;
 }*/
   .section-one-animation {
+    position: relative;
     object-fit: contain;
-    
     width: 60%;
     min-width: 350px;
+    height: 75vh;
     margin-left: 0;
     margin-right: -8%;
     transform: translateX(-1%);
@@ -119,7 +133,7 @@
     border-radius: 35px;
     width: 260px;
     height: 70px;
-    font-size: 1.1em !important;
+    font-size: 1em !important;
     font-weight: bold;
     color: white;
     background-color: var(--button-bg-color);
@@ -593,6 +607,7 @@
   .partners-text .p-font {
     margin-bottom: 0;
     font-style: italic;
+    height: 75px;
   }
   #partners-company{
     color: var(--h2-color) !important;
@@ -712,17 +727,17 @@
   .blog div:not(.img-container)::after {
     position: absolute;
     content: "...";
-    bottom: 12px;
-    right: -40px;
-    color:var(--h1-color);
+    bottom: 21px;
+    right: -35px;
+    color: var(--h1-color);
     font-size: 1.2em;
-    padding-top: 0px;
+    padding-top: 0;
     line-height: 1.2em;
-    padding-left: 10px;
+    padding-left: 5px;
     padding-right: 47px;
     padding-bottom: 4px;
-    background-color: white;
-    font-weight: bold;
+    background-color: #fff;
+    font-weight: 700;
   }
 
   .blog-button {
@@ -730,7 +745,10 @@
   }
 
   .blog div:not(.img-container) {
-    padding: 10px;
+    padding-top: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
   }
 
   .blog img {
@@ -747,7 +765,7 @@
   .img-container {
     display: inline-block;
     position: relative;
-    width: 100%;
+    width: 101%;
     height: 300px;
     vertical-align: middle;
     overflow: hidden;
@@ -1471,7 +1489,7 @@
     }
 
     .partners-images img {
-      width: 32%;
+      width: 100%;
     }
     .section-two-bot-item img {
       max-height: 205px;
@@ -1509,7 +1527,9 @@
       top: 4%;
       width: 141%;
     }
-
+    .partners-text .p-font{
+      height: auto;
+    }
     
 
     .section-one-text {
@@ -1585,6 +1605,9 @@
       margin-top: 5px;
     }
 
+    .about-us{
+      display: none;
+    }
     .about-us .h1-font {
       padding-top: 50px;
     }

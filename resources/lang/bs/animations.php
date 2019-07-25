@@ -1,6 +1,6 @@
 <?php
 return [
-    "Animations" => "Edukacijski video animirani sadržaji",
+    "Animation" => "Edukacijski video animirani sadržaji",
     "secOneP1" => "Zabavite i edukujte svoje polaznike našim privlačnim i zanimljivim animiranim video spotovima. Predstavite svoje proizvode, prenesite znanje svojim polaznicima i objasnite svoj radni proces uz pomoć interaktivnog multimedijalnog sadržaja.",
     "secOneUlFirst" => "Konvertovanje vaših pisanih uputstava i priručnika u multimedijalne video tutorijale",
     "secOneUlSecond" => "Uvodni video za vaše usluge i složene funkcije",

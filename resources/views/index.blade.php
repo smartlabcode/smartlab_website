@@ -20,7 +20,11 @@
       <a href="#contact"><button class="button margin-top-27">@lang('index.heading_button')</button></a>
     </div>
 
-    <div class="section-one-animation"></div>
+    <div class="section-one-animation">
+            <div class="loader-container">
+                <img src="{{asset('/images/preloader.gif')}}">
+            </div>
+    </div>
 
 
 
@@ -541,7 +545,7 @@
         <a href="http://tvsa.ba/" target="_blank"><img src="{{asset('/images/partners-logo/TVSA-2.png')}}" alt="televizija sarajevo logo" /></a>
         <a href="https://eloomi.com/" target="_blank"><img src="{{asset('/images/partners-logo/eloomi-4.png')}}" alt="eloomi logo" /></a>
         <a href="https://fin.unsa.ba/" target="_blank"><img src="{{asset('/images/partners-logo/FIN-2.png')}}" alt="fakultet islamskih nauka logo" /></a>
-        <a href="https://www.themaisonprivee.com/" target="_blank"><img src="{{asset('/images/partners-logo/maisonprive-2.png')}}" alt="maison prive logo" /></a>
+        <a><img src="{{asset('/images/partners-logo/maisonprive-2.png')}}" alt="maison prive logo" /></a>
         <a href="http://www.biramoporavak.com/" target="_blank"><img src="{{asset('/images/partners-logo/biramoporavak-2.png')}}" alt="biramo oporavak logo" /></a>
         <a><img src="{{asset('/images/partners-logo/BDfD-2.png')}}" alt="bosnian doctors for disabled logo" /></a>
       </div>
@@ -697,7 +701,8 @@
   document.addEventListener("DOMContentLoaded", function(event) {
     //blogs
     const animation = document.querySelector(".section-one-animation");
-    lottie.loadAnimation({
+
+    let animationData = lottie.loadAnimation({
       container: animation, // the dom element that will contain the animation
       renderer: 'svg',
       loop: true,
@@ -705,6 +710,15 @@
       path: "{{asset('/images/home-animation')}}" // the path to the animation json
 
     });
+    lottie.setQuality("medium");
+    let ready = false;
+        let loaderContainer = document.querySelector(".loader-container");
+        animationData.addEventListener("DOMLoaded", function() {
+            ready = true;
+            lottie.play();
+            loaderContainer.style.display = "none";
+        })
+        lottie.setQuality("medium");
     const options = {
       root: null,
       threshold: 0,
@@ -712,7 +726,7 @@
     };
     const animationObserver = new IntersectionObserver(function(entries, animationObserver) {
       entries.forEach(entry => {
-        if (entry.isIntersecting && window.innerWidth > 768) {
+        if (entry.isIntersecting) {
           lottie.play();
         } else lottie.pause();
       })
@@ -820,12 +834,12 @@
       company: "Afrika Presents Ltd"
     }, {
       text: "“I worked with SmartLab on a new website conceptualisation and development, finding their team to be efficient, effective and responsive as we worked through the iterations. Rizah in particular generated some strong ideas and ensured that tight timelines were adhered to.”",
-      image: "{{asset('/images/partners-images/Paul.png')}}",
+      image: "{{asset('/images/partners-images/paul.png')}}",
       name: "Paul Mallee",
       company: "MaisonPrive Holiday Homes LLC"
     }, {
       text: "“The Training Terminal was in need of an experienced elearning developer. We tried several compaines, however, SmartLab team with their skills, dedication and ability stood out from the rest. Highly recommended.”",
-      image: "{{asset('/images/partners-images/Mark.png')}}",
+      image: "{{asset('/images/partners-images/mark.png')}}",
       name: "Mark Illingworth ",
       company: "The Training Terminal"
     }, {

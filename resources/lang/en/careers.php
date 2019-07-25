@@ -8,9 +8,7 @@ return [
     "eL-h1" => "eLearning Designer (m/f)",
     "opisEL" => "If you love the creative industry, you are working with graphics, love to learn new things and appreciate the perspective, sign up for the 
     E-Learning Content Designer Position",
-    "opisDev" => "Ako voliš kreativnu IT industriju, baviš se web programiranjem,
-    želiš raditi na projektima velikih evropskih i svjetskih kompanija,
-    prijavi se na poziciji Back-end web Developera...",
+    "opisDev" => "If you like the creative IT industry, you are doing web programming, you want to work on the projects of large European and world companies, sign up for the Back-End Web Developer Position ...",
     "readMore" => "Read more",
     "Dev-h1" => "Fullstack Web Developer (m/f)",
     "opis" => "If you like the creative IT industry, you are doing web programming, you want to work on the projects of large European and world companies, sign up for the Back-End Web Developer Position ...",

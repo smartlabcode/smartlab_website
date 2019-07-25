@@ -1,6 +1,6 @@
 <?php
 return [
-    "animations" => "Edukations-Videoanimations-Inhalte",
+    "Animation" => "Edukations-Videoanimations-Inhalte",
     "secOneP1" => "Unterhalten und bilden Sie Ihre Teilnehmer mit unseren attraktiven und interessanten animierten Video-Spots. Stellen Sie Ihre Produkte vor, vermitteln Sie Ihr Wissen Ihren Teilnehmern und erklären Sie Ihren Arbeitsablauf mit interaktiven Multimedia-Inhalten.",
     "secOneUlFirst" => "Wandeln Sie Ihre schriftlichen Anleitungen und Handbücher in Multimedia-Video-Tutorials um",
     "secOneUlSecond" => "Einführungs-Video für Ihre Dienstleistungen und komplexe Funktionen ",

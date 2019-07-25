@@ -137,7 +137,7 @@
                 <a href="{{asset('/pages/outsourcing_profile?0')}}"><button class="button">Read More</button></a>
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
-                        <a href="#">
+                        <a href="https://www.linkedin.com/in/irfan-karisik-53ab54148" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="3560.264 10238 32.563 30">
                                 <g id="Group_339" data-name="Group 339" transform="translate(2736.264 5708)">
                                     <path id="Path_1171" data-name="Path 1171" class="cls-1" d="M8,42.662a.827.827,0,0,0,.813.813h5.813a.827.827,0,0,0,.813-.812V23.413a.827.827,0,0,0-.812-.812H8.813A.827.827,0,0,0,8,23.413Z" transform="translate(816 4516.525)"></path>
@@ -429,7 +429,7 @@
                 <a href="{{asset('/pages/outsourcing_profile?2')}}"><button class="button">Read More</button></a>
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
-                        <a href="#">
+                        <a href="https://www.linkedin.com/in/haris-musli%C4%87-619460137/" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="3560.264 10238 32.563 30">
                                 <g id="Group_339" data-name="Group 339" transform="translate(2736.264 5708)">
                                     <path id="Path_1171" data-name="Path 1171" class="cls-1" d="M8,42.662a.827.827,0,0,0,.813.813h5.813a.827.827,0,0,0,.813-.812V23.413a.827.827,0,0,0-.812-.812H8.813A.827.827,0,0,0,8,23.413Z" transform="translate(816 4516.525)"></path>
@@ -441,7 +441,7 @@
                     </div>
                     <div class="team-description-bottom-social-img-container --git">
 
-                        <a href="#">
+                        <a href="https://github.com/thewhitewolf2411" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="-8634 2822 36 35.119">
 
                                 <g id="github" transform="translate(-8634 2816.635)">
@@ -630,7 +630,7 @@
                 <a href="{{asset('/pages/outsourcing_profile?3')}}"><button class="button">Read More</button></a>
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
-                        <a href="#">
+                        <a href="https://www.linkedin.com/in/amer-masleša-5a6397161" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="3560.264 10238 32.563 30">
                                 <g id="Group_339" data-name="Group 339" transform="translate(2736.264 5708)">
                                     <path id="Path_1171" data-name="Path 1171" class="cls-1" d="M8,42.662a.827.827,0,0,0,.813.813h5.813a.827.827,0,0,0,.813-.812V23.413a.827.827,0,0,0-.812-.812H8.813A.827.827,0,0,0,8,23.413Z" transform="translate(816 4516.525)"></path>
@@ -779,7 +779,7 @@
                 <a href="{{asset('/pages/outsourcing_profile?4')}}"><button class="button">Read More</button></a>
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
-                        <a href="#">
+                        <a href="https://www.linkedin.com/in/irfan-starcevic-863267154" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="3560.264 10238 32.563 30">
                                 <g id="Group_339" data-name="Group 339" transform="translate(2736.264 5708)">
                                     <path id="Path_1171" data-name="Path 1171" class="cls-1" d="M8,42.662a.827.827,0,0,0,.813.813h5.813a.827.827,0,0,0,.813-.812V23.413a.827.827,0,0,0-.812-.812H8.813A.827.827,0,0,0,8,23.413Z" transform="translate(816 4516.525)"></path>
@@ -925,7 +925,7 @@
                 <a href="{{asset('/pages/outsourcing_profile?5')}}"><button class="button">Read More</button></a>
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
-                        <a href="#">
+                        <a href="https://www.linkedin.com/in/aida-filipovi%C4%87-red%C5%BEovi%C4%87-4a034a1b" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="3560.264 10238 32.563 30">
                                 <g id="Group_339" data-name="Group 339" transform="translate(2736.264 5708)">
                                     <path id="Path_1171" data-name="Path 1171" class="cls-1" d="M8,42.662a.827.827,0,0,0,.813.813h5.813a.827.827,0,0,0,.813-.812V23.413a.827.827,0,0,0-.812-.812H8.813A.827.827,0,0,0,8,23.413Z" transform="translate(816 4516.525)"></path>
@@ -1083,7 +1083,7 @@
                     </div>
                     <div class="team-description-bottom-social-img-container --git">
 
-                        <a href="#">
+                        <a href="https://github.com/emirm990" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="-8634 2822 36 35.119">
 
                                 <g id="github" transform="translate(-8634 2816.635)">
@@ -1449,7 +1449,7 @@
                 <a href="{{asset('/pages/outsourcing_profile?8')}}"><button class="button">Read More</button></a>
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
-                        <a href="#">
+                        <a href="https://www.linkedin.com/in/mirza-oglecevac-b03266158" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="3560.264 10238 32.563 30">
                                 <g id="Group_339" data-name="Group 339" transform="translate(2736.264 5708)">
                                     <path id="Path_1171" data-name="Path 1171" class="cls-1" d="M8,42.662a.827.827,0,0,0,.813.813h5.813a.827.827,0,0,0,.813-.812V23.413a.827.827,0,0,0-.812-.812H8.813A.827.827,0,0,0,8,23.413Z" transform="translate(816 4516.525)"></path>
@@ -1461,7 +1461,7 @@
                     </div>
                     <div class="team-description-bottom-social-img-container --git">
 
-                        <a href="#">
+                        <a href="https://github.com/MirzaazriM" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="-8634 2822 36 35.119">
 
                                 <g id="github" transform="translate(-8634 2816.635)">

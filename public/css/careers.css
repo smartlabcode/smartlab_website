@@ -8,7 +8,9 @@
     flex-direction: row;
     align-items: center;
 }
-
+.nav-top p span {
+    color: var(--h1-color);
+}
 #firstSection>div {
     width: 50%;
     margin-top: -50px;
@@ -207,7 +209,7 @@ label {
 }
 
 .margin-b-150 {
-    margin-bottom: 250px !important;
+    margin-bottom: 150px !important;
 }
 
 .header-background {
@@ -222,6 +224,7 @@ label {
 .header-content {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .header-content-left {
