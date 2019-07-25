@@ -534,16 +534,16 @@
         <a href="https://wellspark.co.uk/" target="_blank"><img src="{{asset('/images/partners-logo/WELLS-PARK-2.png')}}" alt="wells park communications logo" /></a>
         <a href="http://de.loop-tv.eu/" target="_blank"><img src="{{asset('/images/partners-logo/loop-TV-2.png')}}" alt="loop tv logo" /></a>
         <a href="https://zomppp.de/" target="_blank"><img src="{{asset('/images/partners-logo/zomppp-2.png')}}" alt="zomppp logo" /></a>
-        <img src="{{asset('/images/partners-logo/UAP-QMS-2.png')}}" alt="uap managment system logo" />
+        <a><img src="{{asset('/images/partners-logo/UAP-QMS-2.png')}}" alt="uap managment system logo" /></a>
         <a href="https://www.totemlearning.com/" target="_blank"><img src="{{asset('/images/partners-logo/tottem-2.png')}}" alt="totem learning logo" /></a>
         <a href="https://www.safetycourses4u.com/" target="_blank"><img src="{{asset('/images/partners-logo/safetycourses4u-2.png')}}" alt="safety courses for you logo" /></a>
         <a href="http://dimenzijaplus.ba/" target="_blank"><img src="{{asset('images/partners-logo/dimenzija_plus-2.png')}}/" alt="dimenzija plus logo" /></a>
         <a href="http://tvsa.ba/" target="_blank"><img src="{{asset('/images/partners-logo/TVSA-2.png')}}" alt="televizija sarajevo logo" /></a>
         <a href="https://eloomi.com/" target="_blank"><img src="{{asset('/images/partners-logo/eloomi-4.png')}}" alt="eloomi logo" /></a>
         <a href="https://fin.unsa.ba/" target="_blank"><img src="{{asset('/images/partners-logo/FIN-2.png')}}" alt="fakultet islamskih nauka logo" /></a>
-        <img src="{{asset('/images/partners-logo/maisonprive-2.png')}}" alt="maison prive logo" /></a>
+        <a href="https://www.themaisonprivee.com/" target="_blank"><img src="{{asset('/images/partners-logo/maisonprive-2.png')}}" alt="maison prive logo" /></a>
         <a href="http://www.biramoporavak.com/" target="_blank"><img src="{{asset('/images/partners-logo/biramoporavak-2.png')}}" alt="biramo oporavak logo" /></a>
-        <img src="{{asset('/images/partners-logo/BDfD-2.png')}}" alt="bosnian doctors for disabled logo" />
+        <a><img src="{{asset('/images/partners-logo/BDfD-2.png')}}" alt="bosnian doctors for disabled logo" /></a>
       </div>
     </div>
   </div>

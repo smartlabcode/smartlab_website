@@ -347,8 +347,8 @@
 
 .section-one-bg {
     position: absolute;
-    width: 4096;
-    top: -138%;
+    width: 4096px;
+    top: -149%;
     left: -33%;
     z-index: -100;
     transform: rotate(16deg);
@@ -440,19 +440,18 @@
     .section-one-bg {
         position: absolute;
         width: 4096px;
-        top: -126%;
-        /* left: -30%; */
+        top: -112%;
         left: -3%;
         z-index: -100;
-        transform: rotate(20deg);
+        transform: rotate(18deg);
     }
 }
 
 @media only screen and (max-width: 1500px) {
 
     .section-one-bg {
-        top: -119%;
-        transform: rotate(25deg);
+        top: -104%;
+        transform: rotate(30deg);
     }
 }
 
@@ -489,7 +488,7 @@
     .line-container>div:first-of-type {
         text-align: center;
         position: relative;
-        top: 85px;
+        top: 45px;
     }
 
     .team-member {

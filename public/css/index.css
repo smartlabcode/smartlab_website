@@ -1321,7 +1321,10 @@
     }
 
     .partners-images img {
-      width: 25%;
+      width: 100%;
+    }
+    .partners-images a{
+      width: 22%;
     }
 
   }
