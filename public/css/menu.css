@@ -378,7 +378,7 @@ nav .contain {
     }
 
     .height-js {
-        height: calc(100vh - 95px) !important;
+        height: calc(100vh - 55px) !important;
     }
 
     .nav-li a {
@@ -424,17 +424,20 @@ nav .contain {
     }
 
     .nav-li:hover .expandable-first {
-        height: 252px;
+        /* 4*57px*/
+        height: 228px;
 
     }
 
     .nav-li:hover .expandable-second {
-        height: 126px;
+        /* 2*57px */
+        height: 114px;
 
     }
 
     .nav-li:hover .expandable-third {
-        height: 189px;
+        /* 3*57px */
+        height: 171px;
 
     }
 

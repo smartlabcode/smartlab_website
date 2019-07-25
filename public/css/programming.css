@@ -790,8 +790,6 @@ form select:focus,
 .active-indicator {
     background-color: var(--h1-color) !important;
     transition: all 0.5s ease-in-out;
-    width: 12px !important;
-    height: 12px !important;
     animation: square 0.5s ease-in;
 }
 @keyframes square {
@@ -1025,7 +1023,7 @@ form select:focus,
 @media screen and (max-width: 900px) {
     .background-img {
         top: -13%;
-        right: -61%;
+        right: -65%;
         transform: rotate(62deg);
     }
 
@@ -1057,7 +1055,7 @@ form select:focus,
     .section-one-text {
         width: 100%;
         text-align: center;
-        margin-top: 100px;
+        /*margin-top: 100px;*/
     }
 
     .section-one-animation {
@@ -1106,7 +1104,11 @@ form select:focus,
         background-color: transparent;
         width: 96%;
     }
-
+    .slider-right.shadow-1{
+        -webkit-box-shadow: none !important;
+        -moz-box-shadow: none !important;
+        box-shadow: none !important;
+    }
     .slider-left {
         flex-basis: 100%;
     }
@@ -1275,7 +1277,7 @@ form select:focus,
     }
 
     .background-img {
-        top: 18%;
+        top: 32%;
         width: 143%;
         transform: rotate(57deg);
     }
@@ -1294,7 +1296,7 @@ form select:focus,
     }
 
     .section-one-text {
-        margin-top: 0;
+        margin-top: 50px;
     }
 
     .tools-container {

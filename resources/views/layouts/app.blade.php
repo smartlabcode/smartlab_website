@@ -77,7 +77,7 @@
         .h2-font {
             font-family: "Montserrat", sans-serif;
             font-size: 1.8em;
-            color: var(--h2-color) !important;
+            color: var(--h1-color) !important;
         }
 
         .p-font {

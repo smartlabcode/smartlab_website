@@ -140,28 +140,28 @@
         </div>
         <div class="tools-img">
             <div>
-                <img src="{{asset('/images/tools/php_PNG28.png')}}" alt="php logo">
-                <p>@lang('programming.php')</p>
+                <img src="{{asset('/images/tools/articulate.jpg')}}" alt="Articulate Storyline logo">
+                <p>Articulate Storyline</p>
             </div>
             <div class="tools-img-margin-both">
-                <img src="{{asset('/images/tools/HTML5CSS3Logos.svg')}}" alt="HTML & CSS logo">
-                <p>@lang('programming.htmlCss')</p>
+                <img src="{{asset('/images/tools/rise.png')}}" alt="Articulate Rise logo">
+                <p>Articulate Rise</p>
             </div>
             <div>
-                <img src="{{asset('/images/tools/1200px-Unofficial_JavaScript_logo_2.svg.png')}}" alt="javascript logo">
-                <p>@lang('programming.js')</p>
+                <img src="{{asset('/images/tools/1200px-Adobe_Animate_CC_icon.svg.png')}}" alt="Adobe Aimate logo">
+                <p>Adobe Aimate</p>
             </div>
             <div>
-                <img src="{{asset('/images/tools/WordPress-logotype-wmark.png')}}" alt="wordpress logo">
-                <p>@lang('programming.wp')</p>
+                <img src="{{asset('/images/tools/scorm.png')}}" alt="SCORM logo">
+                <p>SCORM</p>
             </div>
             <div class="tools-img-margin-both">
-                <img src="{{asset('/images/tools/github.svg')}}" alt="github logo">
-                <p>@lang('programming.github')</p>
+                <img src="{{asset('/images/tools/ispring-logo_1640x414.png')}}" alt="iSpring Solutions logo">
+                <p>iSpring Solutions</p>
             </div>
             <div>
-                <img src="{{asset('/images/tools/1280px-Unity_Technologies_logo.svg.png')}}" alt="unity logo">
-                <p>@lang('programming.unity')</p>
+                <img src="{{asset('/images/tools/GAMIFICATION-NATION-2-LOGO-e152757991733.png')}}" alt="Gamification Nation logo">
+                <p>Gamification Nation</p>
             </div>
         </div>
     </div>
@@ -182,7 +182,7 @@
         });
         const animationObserver = new IntersectionObserver(function(entries, animationObserver) {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
+                if (entry.isIntersecting && window.innerWidth > 768) {
                     lottie.play();
                 } else lottie.pause();
             })
@@ -206,7 +206,7 @@
         let closePopup = document.querySelector(".close");
         let popup = document.querySelector(".popup");
         let popupOverlay = document.querySelector(".popup-overlay");
-
+        let sliderRight = document.querySelector(".slider-right");
         closePopup.addEventListener("click", popupClose);
         popupOverlay.addEventListener("click", popupClose);
 

@@ -269,7 +269,7 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img data-src="{{asset('/images/team/irfo-k.jpg')}}" alt="Irfan K photo">
+            <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/irfo-k.jpg')}}" alt="Irfan K photo">
           </div>
           <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1">
           <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1">
@@ -289,7 +289,7 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img data-src="{{asset('/images/team/ibro.jpg')}}" alt="Ibrahim Z photo">
+            <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/ibro.jpg')}}" alt="Ibrahim Z photo">
           </div>
           <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue2">
           <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange2">
@@ -309,7 +309,7 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img data-src="{{asset('/images/team/hare.jpg')}}" alt="Haris M photo">
+            <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/hare.jpg')}}" alt="Haris M photo">
           </div>
           <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue3">
           <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange3">
@@ -329,7 +329,7 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img data-src="{{asset('/images/team/rizah.jpg')}}" alt="Rizah K photo">
+            <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/rizah.jpg')}}" alt="Rizah K photo">
           </div>
           <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue4">
           <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange4">
@@ -349,7 +349,7 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img data-src="{{asset('/images/team/amer.jpg')}}" alt="Amer M photo">
+            <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/amer.jpg')}}" alt="Amer M photo">
           </div>
           <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1">
           <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1">
@@ -369,7 +369,7 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img data-src="{{asset('/images/team/irfo-s.jpg')}}" alt="Irfan S photo">
+            <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/irfo-s.jpg')}}" alt="Irfan S photo">
           </div>
           <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue2">
           <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange2">
@@ -389,7 +389,7 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img data-src="{{asset('/images/team/aida.jpg')}}" alt="Aida R photo">
+            <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/aida.jpg')}}" alt="Aida R photo">
           </div>
           <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue3">
           <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange3">
@@ -409,7 +409,7 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img data-src="{{asset('/images/team/emir.jpg')}}" alt="Emir M photo">
+            <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/emir.jpg')}}" alt="Emir M photo">
           </div>
           <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue4">
           <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange4">
@@ -429,7 +429,7 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img data-src="{{asset('/images/team/florin.jpg')}}" alt="Florin B photo">
+            <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/florin.jpg')}}" alt="Florin B photo">
           </div>
           <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1">
           <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1">
@@ -449,14 +449,15 @@
             </defs>
           </svg>
           <div class="team-img mirza">
-            <img data-src="{{asset('/images/team/mirza.jpg')}}" alt="Mirza O photo">
+            <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/mirza.jpg')}}" alt="Mirza O photo">
           </div>
           <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue2">
           <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange2">
         </div>
         <div class="team-description">
           <h3>Mirza O.</h3>
-          <p>Full Stack/DevOps</p>
+          <p>
+            <!--Full Stack/DevOps--> Back-End Praktikant</p>
         </div>
       </div>
       <div class="team-member">
@@ -470,7 +471,7 @@
             </defs>
           </svg>
           <div class="team-img">
-            <img data-src="{{asset('/images/team/emina.jpg')}}" alt="Emina K photo">
+            <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/emina.jpg')}}" alt="Emina K photo">
           </div>
           <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue3">
           <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange3">
@@ -491,7 +492,7 @@
             </defs>
           </svg>
           <div class="team-img blank">
-            <img data-src="{{asset('/images/team/team-blank.svg')}}" alt="Blank photo, could be you">
+            <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/team-blank.svg')}}" alt="Blank photo, could be you">
           </div>
           <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue4">
           <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange4">
@@ -523,25 +524,25 @@
             <p id="partners-name" class="h2-font">Mara Menzies</p>
             <p id="partners-company" class="p-font">Afrika Presents Ltd</p>
           </div>
-          <div id="indicators"><span class="indicator indicator-opacity"></span><span class="indicator"></span><span class="indicator"></span><span class="indicator"></span><span class="indicator"></span></div>
+          <div id="indicators"><span class="indicator indicator-opacity"></span><span class="indicator"></span><span class="indicator"></span><span class="indicator"></span></div>
         </div>
       </div>
       <div class="partners-images">
-        <img src="{{asset('/images/partners-logo/TheTrainingTerminal-2.png')}}" alt="TrainingTerminal logo" />
-        <img src="{{asset('/images/partners-logo/FKC-2.png')}}" alt="Ficher, Knoblauch & co logo" />
-        <img src="{{asset('/images/partners-logo/leanscape-2.png')}}" alt="leanscape logo" />
-        <img src="{{asset('/images/partners-logo/WELLS-PARK-2.png')}}" alt="wells park communications logo" />
-        <img src="{{asset('/images/partners-logo/loop-TV-2.png')}}" alt="loop tv logo" />
-        <img src="{{asset('/images/partners-logo/zomppp-2.png')}}" alt="zomppp logo" />
+        <a href="https://www.thetrainingterminal.co/" target="_blank"><img src="{{asset('/images/partners-logo/TheTrainingTerminal-2.png')}}" alt="TrainingTerminal logo" /></a>
+        <a href="https://www.fkc-online.com/index.php/de" target="_blank"><img src="{{asset('/images/partners-logo/FKC-2.png')}}" alt="Ficher, Knoblauch & co logo" /></a>
+        <a href="https://www.leanscape.io/" target="_blank"><img src="{{asset('/images/partners-logo/leanscape-2.png')}}" alt="leanscape logo" /></a>
+        <a href="https://wellspark.co.uk/" target="_blank"><img src="{{asset('/images/partners-logo/WELLS-PARK-2.png')}}" alt="wells park communications logo" /></a>
+        <a href="http://de.loop-tv.eu/" target="_blank"><img src="{{asset('/images/partners-logo/loop-TV-2.png')}}" alt="loop tv logo" /></a>
+        <a href="https://zomppp.de/" target="_blank"><img src="{{asset('/images/partners-logo/zomppp-2.png')}}" alt="zomppp logo" /></a>
         <img src="{{asset('/images/partners-logo/UAP-QMS-2.png')}}" alt="uap managment system logo" />
-        <img src="{{asset('/images/partners-logo/tottem-2.png')}}" alt="totem learning logo" />
-        <img src="{{asset('/images/partners-logo/safetycourses4u-2.png')}}" alt="safety courses for you logo" />
-        <img src="{{asset('images/partners-logo/dimenzija_plus-2.png')}}/" alt="dimenzija plus logo" />
-        <img src="{{asset('/images/partners-logo/TVSA-2.png')}}" alt="televizija sarajevo logo" />
-        <img src="{{asset('/images/partners-logo/eloomi-4.png')}}" alt="eloomi logo" />
-        <img src="{{asset('/images/partners-logo/FIN-2.png')}}" alt="fakultet islamskih nauka logo" />
-        <img src="{{asset('/images/partners-logo/maisonprive-2.png')}}" alt="maison prive logo" />
-        <img src="{{asset('/images/partners-logo/biramoporavak-2.png')}}" alt="biramo oporavak logo" />
+        <a href="https://www.totemlearning.com/" target="_blank"><img src="{{asset('/images/partners-logo/tottem-2.png')}}" alt="totem learning logo" /></a>
+        <a href="https://www.safetycourses4u.com/" target="_blank"><img src="{{asset('/images/partners-logo/safetycourses4u-2.png')}}" alt="safety courses for you logo" /></a>
+        <a href="http://dimenzijaplus.ba/" target="_blank"><img src="{{asset('images/partners-logo/dimenzija_plus-2.png')}}/" alt="dimenzija plus logo" /></a>
+        <a href="http://tvsa.ba/" target="_blank"><img src="{{asset('/images/partners-logo/TVSA-2.png')}}" alt="televizija sarajevo logo" /></a>
+        <a href="https://eloomi.com/" target="_blank"><img src="{{asset('/images/partners-logo/eloomi-4.png')}}" alt="eloomi logo" /></a>
+        <a href="https://fin.unsa.ba/" target="_blank"><img src="{{asset('/images/partners-logo/FIN-2.png')}}" alt="fakultet islamskih nauka logo" /></a>
+        <img src="{{asset('/images/partners-logo/maisonprive-2.png')}}" alt="maison prive logo" /></a>
+        <a href="http://www.biramoporavak.com/" target="_blank"><img src="{{asset('/images/partners-logo/biramoporavak-2.png')}}" alt="biramo oporavak logo" /></a>
         <img src="{{asset('/images/partners-logo/BDfD-2.png')}}" alt="bosnian doctors for disabled logo" />
       </div>
     </div>
@@ -552,6 +553,71 @@
   <img class="blog-orange-circle-small" src="{{asset('/images/img/orange-circle.svg')}}" alt="orange circle background" />
   <h2 class="text-center h1-font">@lang('index.blog_h2')</h2>
   <div class="blog-container">
+    <a href="{{env('BLOG_DOMAIN')}}/{{App::getlocale()}}" target="_blank" class="blog">
+      <div class="img-container">
+        <div class="img-container-overlay img-container-overlay-blue ">
+        </div>
+        <img src='{{asset("/images/blog/blog1.jpg")}}' alt="blog" />
+        <svg class="wave" viewBox="0 0 500 500">
+          <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
+        </svg>
+      </div>
+      <div>
+        <h2 class="h2-font">‘Out of the box’ learning</h2>
+        <p><span>February 14, 2018</span><span>-</span> <span>Rizah K.</span></p>
+        <input class="blog-value" type="hidden" value='Whenever one thinks of certain processes that develop around us, it is easy to conclude that those processes have a massive impact in our everyday life. The change is seen best when comparing between the childhood of those who were born in the middle or at the end of the 80s and the childhood of nowadays children. Often times we hear how those changes are negative and very harmful for individuals and the society in general. Nevertheless, I would like to focus on certain features and altogether to distinguish what has changed and what hasn’t. This way we will find out how does our everyday life really look like.'>
+        <p class="blog-text" class="p-font">Whenever one thinks of certain processes that develop around us, it is easy to conclude that those processes have a massive impact in our everyday life. The change is seen best when comparing between the childhood of those who were born in the middle or at the end of the 80s and the childhood of nowadays children. Often times we hear how those changes are negative and very harmful for individuals and the society in general. Nevertheless, I would like to focus on certain features and altogether to distinguish what has changed and what hasn’t. This way we will find out how does our everyday life really look like.</p>
+      </div>
+    </a>
+    <a href="{{env('BLOG_DOMAIN')}}/{{App::getlocale()}}" target="_blank" class="blog">
+      <div class="img-container">
+        <div class="img-container-overlay img-container-overlay-orange ">
+        </div>
+        <img src='{{asset("/images/blog/nova.jpg")}}' alt="blog" />
+        <svg class="wave" viewBox="0 0 500 500">
+          <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
+        </svg>
+      </div>
+      <div>
+        <h2 class="h2-font">Road to ACE</h2>
+        <p><span>February 14, 2018</span><span>-</span> <span>Irfan S.</span></p>
+        <input class="blog-value" type="hidden" value='From the very beginning one asks himself: What is Adobe and how did it come up with a certificate? – The Adobe Company was created in 1982 and has massively changed the digital world. Today, it possesses numerous applications in its collection, where the most known are: Adobe Photoshop which treats the photography, Adobe Illustrator which is closely connected with the printing preparations and vector graphics, InDesign, Premiere Pro, After Effects etc.'>
+        <p class="blog-text" class="p-font">From the very beginning one asks himself: What is Adobe and how did it come up with a certificate? – The Adobe Company was created in 1982 and has massively changed the digital world. Today, it possesses numerous applications in its collection, where the most known are: Adobe Photoshop which treats the photography, Adobe Illustrator which is closely connected with the printing preparations and vector graphics, InDesign, Premiere Pro, After Effects etc.</p>
+      </div>
+    </a>
+    <a href="{{env('BLOG_DOMAIN')}}/{{App::getlocale()}}" target="_blank" class="blog">
+      <div class="img-container">
+        <div class="img-container-overlay img-container-overlay-blue ">
+        </div>
+        <img src='{{asset("/images/blog/blog2.png")}}' alt="blog" />
+        <svg class="wave" viewBox="0 0 500 500">
+          <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
+        </svg>
+      </div>
+      <div>
+        <h2 class="h2-font">E-learning In Everyday Life</h2>
+        <p><span>March 6, 2018</span><span>-</span> <span>Medina K.</span></p>
+        <input class="blog-value" type="hidden" value='E-learning is becoming the most used mean of education. It has already been applied in many schools, mainly in higher institutions. Thus, according to many researchers, it is not merely easy, but it has become advantageous in regarding to traditional reading. This conclusion comes from comparing its advantages and disadvantages, which results with greater benefits than drawbacks. In this article I will elaborate the effect of e-learning in our daily routines.'>
+        <p class="blog-text" class="p-font">E-learning is becoming the most used mean of education. It has already been applied in many schools, mainly in higher institutions. Thus, according to many researchers, it is not merely easy, but it has become advantageous in regarding to traditional reading. This conclusion comes from comparing its advantages and disadvantages, which results with greater benefits than drawbacks. In this article I will elaborate the effect of e-learning in our daily routines.</p>
+      </div>
+    </a>
+    <a href="{{env('BLOG_DOMAIN')}}/{{App::getlocale()}}" target="_blank" class="blog">
+      <div class="img-container">
+        <div class="img-container-overlay img-container-overlay-orange ">
+        </div>
+        <img src='{{asset("/images/blog/blog3.jpg")}}' alt="blog" />
+        <svg class="wave" viewBox="0 0 500 500">
+          <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
+        </svg>
+      </div>
+      <div>
+        <h2 class="h2-font">Augmented reality</h2>
+        <p><span>September 28, 2018</span> <span>-</span> <span>Haris M.</span></p>
+        <input class="blog-value" type="hidden" value='Remember Pokémon GO? That game that made people walk using their mobile phones? Ever taught what is the technology behind that concept? Technology used in making entire world go chasing Pokémon around forests and through the city is called Augmented Reality. Concept of Augmented Reality is fairly simple. Electrical devices with microprocessors, camera and display use real-world environment to superimpose 2D and 3D models into it through display. That is how Pokémon  Go game worked. Using level field as starting point, Augmented Reality technology imposed Pokémon characters and Poke balls and other elements of the game via camera and display. Augmented Reality (in further text AR) has been explored for many applications. Since 1970s and 1980s, there has been development of technologies meant for everyday use, i.e. „horizontal“ across all applications rather than a specific „vertical“ market.'>
+        <p class="blog-text" class="p-font">Remember Pokémon GO? That game that made people walk using their mobile phones? Ever taught what is the technology behind that concept? Technology used in making entire world go chasing Pokémon around forests and through the city is called Augmented Reality. Concept of Augmented Reality is fairly simple. Electrical devices with microprocessors, camera and display use real-world environment to superimpose 2D and 3D models into it through display. That is how Pokémon Go game worked. Using level field as starting point, Augmented Reality technology imposed Pokémon characters and Poke balls and other elements of the game via camera and display. Augmented Reality (in further text AR) has been explored for many applications. Since 1970s and 1980s, there has been development of technologies meant for everyday use, i.e. „horizontal“ across all applications rather than a specific „vertical“ market.</p>
+      </div>
+    </a>
+    <!--
     @foreach ($blogs as $blog)
 
     <a href="{{env('BLOG_DOMAIN')}}/blog/{{$blog->id}}/{{App::getlocale()}}" target="_blank" class="blog">
@@ -572,7 +638,7 @@
     </a>
 
     @endforeach
-
+-->
     <div class="blog-button">
       <a href="{{env('BLOG_DOMAIN')}}/{{App::getlocale()}}" target="_blank"><button class="button">@lang('index.blog_button')</button></a>
     </div>
@@ -753,25 +819,20 @@
       name: "Mara Menzies",
       company: "Afrika Presents Ltd"
     }, {
-      text: "Ima da ih opjevam!",
-      image: "https://www.fokus.ba/wp-content/uploads/2018/12/halid-beslic-1.jpg",
-      name: "Halid Bešlić",
-      company: "Bešlić Inc"
+      text: "“I worked with SmartLab on a new website conceptualisation and development, finding their team to be efficient, effective and responsive as we worked through the iterations. Rizah in particular generated some strong ideas and ensured that tight timelines were adhered to.”",
+      image: "{{asset('/images/partners-images/Paul.png')}}",
+      name: "Paul Mallee",
+      company: "MaisonPrive Holiday Homes LLC"
     }, {
-      text: "I'll be back!",
-      image: "https://cdn1.thr.com/sites/default/files/imagecache/scale_crop_768_433/2018/01/the_terminator_still.jpg",
-      name: "Terminator",
-      company: "Time Traveling Ltd"
+      text: "“The Training Terminal was in need of an experienced elearning developer. We tried several compaines, however, SmartLab team with their skills, dedication and ability stood out from the rest. Highly recommended.”",
+      image: "{{asset('/images/partners-images/Mark.png')}}",
+      name: "Mark Illingworth ",
+      company: "The Training Terminal"
     }, {
-      text: "Ja došao onako",
-      image: "https://pbs.twimg.com/profile_images/727765055132057600/dfF6JL_C_400x400.jpg",
-      name: "Slučajni prolaznik",
-      company: "Prolazništvo"
-    }, {
-      text: "Čisto da se popuni",
-      image: "https://image.shutterstock.com/image-photo/menacing-silhouette-hooded-man-shadow-260nw-137674373.jpg",
-      name: "Niko Nikić",
-      company: "Nema"
+      text: "“It’s a great pleasure to be working with Smartlab – they are exactly how international collaboration should work to the benefit of agencies and customers; and they form an essential part of our future client offer”.",
+      image: "{{asset('/images/partners-images/Nick.png')}}",
+      name: "Nick Saalfeld",
+      company: "Wells Park Communications"
     }];
     let j = 1;
 

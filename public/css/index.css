@@ -228,7 +228,9 @@
     flex-direction: column;
     justify-content: space-around;
   }
-
+  .section-two-top-right .h2-font{
+    font-weight: bold;
+  }
   .section-two-bot {
     display: flex;
     margin-top: 20px;
@@ -270,6 +272,7 @@
 
   .section-two-bot-item h2 {
     margin-bottom: 0.5rem;
+    font-weight: bold;
   }
 
   h2 span {
@@ -325,9 +328,10 @@
 
   .about-us>div {
     flex-basis: 25%;
-
   }
-
+  .about-us>div p{
+    font-size: 1.2em;
+  }
   .about-us p {
     margin-top: 25px;
     font-family: "Montserrat", sans-serif;
@@ -490,14 +494,15 @@
 
   .team-description h3 {
     font-family: "Montserrat", sans-serif;
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: bold;
-    color: var(--h2-color);
+    color: var(--h1-color);
   }
 
   .team-description p {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 1.5em;
+    color: var(--h1-color);
   }
 
   .team-orange-circle {
@@ -542,17 +547,17 @@
   #indicators {
     display: flex;
     flex-direction: row;
-    width: 200px;
     justify-content: space-around;
     margin-top: 50px;
   }
 
   .indicator {
+    margin: 5px;
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
-    background-color: var(--h2-color);
+    background-color: var(--h1-color);
     opacity: 0.5;
     cursor: pointer;
   }
@@ -589,7 +594,9 @@
     margin-bottom: 0;
     font-style: italic;
   }
-
+  #partners-company{
+    color: var(--h2-color) !important;
+  }
   .partners-text .h2-font {
     margin-bottom: 0px;
   }
@@ -699,12 +706,15 @@
     color: var(--p-color) !important;
     /* padding-bottom: 14px; */
   }
-
-  .blog .blog-text::after {
+  .blog h2{
+    height: 62px;
+  }
+  .blog div:not(.img-container)::after {
     position: absolute;
     content: "...";
-    bottom: 24px;
-    right: 14px;
+    bottom: 12px;
+    right: -40px;
+    color:var(--h1-color);
     font-size: 1.2em;
     padding-top: 0px;
     line-height: 1.2em;
@@ -1166,6 +1176,7 @@
 
     .section-two-bot-item h2 {
       margin-bottom: 2rem;
+      font-weight: bold;
     }
 
     .margin-both {
@@ -1303,6 +1314,7 @@
       padding: 10px;
       text-align: left;
     }
+    
     .section-two-bot-item .p-font,
     .section-two-bot-item .h2-font {
       padding-left: 0;
@@ -1686,7 +1698,7 @@
 
     .contact-section {
       background-size: 927vw;
-      background-position-y: 54%;
+      /*background-position-y: 54%;*/
       margin-bottom: 200px;
       background-color: white;
     }
@@ -1778,7 +1790,7 @@
   .percent__int {
     font-size: 28px;
     font-family: "Montserrat", sans-serif;
-    color: var(--h2-color);
+    color: var(--h1-color);
     font-weight: 400;
   }
 
@@ -1786,7 +1798,7 @@
     font-size: 16px;
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
-    color: var(--h2-color);
+    color: var(--h1-color);
   }
 
   .label {

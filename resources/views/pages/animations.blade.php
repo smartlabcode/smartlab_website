@@ -151,28 +151,28 @@
         </div>
         <div class="tools-img">
             <div>
-                <img src="{{asset('/images/tools/php_PNG28.png')}}" alt="php logo">
-                <p>@lang('programming.php')</p>
+                <img src="{{asset('/images/tools/788px-Adobe_After_effects_CC_icon.svg.png')}}" alt="Adobe After Effects logo">
+                <p>Adobe After Effects</p>
             </div>
             <div class="tools-img-margin-both">
-                <img src="{{asset('/images/tools/HTML5CSS3Logos.svg')}}" alt="HTML & CSS logo">
-                <p>@lang('programming.htmlCss')</p>
+                <img src="{{asset('/images/tools/Adobe_Premiere_Pro_Logo.svg.png')}}" alt="Adobe Premiere Pro logo">
+                <p>Adobe Premiere Pro</p>
             </div>
             <div>
-                <img src="{{asset('/images/tools/1200px-Unofficial_JavaScript_logo_2.svg.png')}}" alt="javascript logo">
-                <p>@lang('programming.js')</p>
+                <img src="{{asset('/images/tools/1200px-Adobe_Animate_CC_icon.svg.png')}}" alt="Adobe Animate logo">
+                <p>Adobe Animate</p>
             </div>
             <div>
-                <img src="{{asset('/images/tools/WordPress-logotype-wmark.png')}}" alt="wordpress logo">
-                <p>@lang('programming.wp')</p>
+                <img src="{{asset('/images/tools/camtasia.png')}}" alt="Camtasia logo">
+                <p>Camtasia</p>
             </div>
             <div class="tools-img-margin-both">
-                <img src="{{asset('/images/tools/github.svg')}}" alt="github logo">
-                <p>@lang('programming.github')</p>
+                <img src="{{asset('/images/tools/replay_256px.png')}}" alt="Articulate Replay logo">
+                <p>Articulate Replay</p>
             </div>
             <div>
-                <img src="{{asset('/images/tools/1280px-Unity_Technologies_logo.svg.png')}}" alt="unity logo">
-                <p>@lang('programming.unity')</p>
+                <img src="{{asset('/images/tools/ca.png')}}" alt="Character Animator logo">
+                <p>Character Animator</p>
             </div>
         </div>
     </div>

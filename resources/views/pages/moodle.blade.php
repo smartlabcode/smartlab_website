@@ -137,28 +137,28 @@
         </div>
         <div class="tools-img">
             <div>
-                <img src="{{asset('/images/tools/php_PNG28.png')}}" alt="php logo">
-                <p>@lang('programming.php')</p>
+                <img src="{{asset('/images/tools/moodle-logo-39b36ce704607472-512x512.png')}}" alt="Moodle logo">
+                <p>Moodle</p>
             </div>
             <div class="tools-img-margin-both">
-                <img src="{{asset('/images/tools/HTML5CSS3Logos.svg')}}" alt="HTML & CSS logo">
-                <p>@lang('programming.htmlCss')</p>
+                <img src="{{asset('/images/tools/bbb-logo.png')}}" alt="BigBlueButton logo">
+                <p>BigBlueButton</p>
             </div>
             <div>
-                <img src="{{asset('/images/tools/1200px-Unofficial_JavaScript_logo_2.svg.png')}}" alt="javascript logo">
-                <p>@lang('programming.js')</p>
+                <img src="{{asset('/images/tools/php_PNG28.png')}}" alt="PHP logo">
+                <p>PHP</p>
             </div>
             <div>
-                <img src="{{asset('/images/tools/WordPress-logotype-wmark.png')}}" alt="wordpress logo">
-                <p>@lang('programming.wp')</p>
+                <img src="{{asset('/images/tools/htmlcss-js.png')}}" alt="HTML/CSS/JS logo" style="width:150px">
+                <p>HTML/CSS/JS</p>
             </div>
             <div class="tools-img-margin-both">
-                <img src="{{asset('/images/tools/github.svg')}}" alt="github logo">
-                <p>@lang('programming.github')</p>
+                <img src="{{asset('/images/tools/scorm.png')}}" alt="SCORM logo">
+                <p>SCORM</p>
             </div>
             <div>
-                <img src="{{asset('/images/tools/1280px-Unity_Technologies_logo.svg.png')}}" alt="unity logo">
-                <p>@lang('programming.unity')</p>
+                <img src="{{asset('/images/tools/unnamed.png')}}" alt="MoodleAPP logo">
+                <p>MoodleAPP</p>
             </div>
         </div>
     </div>
