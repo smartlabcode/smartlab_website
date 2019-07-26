@@ -984,7 +984,7 @@
     const sectionTwoItems = document.querySelectorAll(".section-two-item");
     const options2 = {
       root: null,
-      threshold: 0.5,
+      threshold: 0.1,
       rootMargin: "0px"
     };
     const sectionTwoItemsObserver = new IntersectionObserver(function(entries, sectionTwoItemsObserver) {
