@@ -125,7 +125,7 @@
         'logs',
         'assets',
         'translations',
-        'edit/*'
+        'translations/*'
         ];
 
         $adminRoute = false;
