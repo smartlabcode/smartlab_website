@@ -127,7 +127,7 @@ font-size: 2em;
 }*/
 .section-one-animation {
     object-fit: contain;
-    height: 85vh;
+    height: 800px;
     width: 60%;
     min-width: 350px;
     margin-left: 0;
@@ -857,8 +857,8 @@ form select:focus,
     }
 
     .xliff-background {
-        width: 111vw;
-        transform: translate(-12%, 1%) scaleY(0.8);
+        width: 113vw;
+        transform: translate(-13%,-12%) scaleY(.6);
     }
 
     .xliff-section {
@@ -882,10 +882,10 @@ form select:focus,
     }
 }
 
-@media screen and (max-width: 1440px) {
-    .section-one-animation {
-        margin-right: -8%;
-    }
+@media screen and (max-width: 1440px){
+    .section-one-animation{
+        height: 700px;
+      }
 }
 
 @media screen and (max-width: 1400px) {
@@ -989,18 +989,23 @@ form select:focus,
 }
 
 
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 1024px) {
     .section-one {
         /*position: relative;
         top: 0px;*/
     }
-
-    .section-one-animation {
-        height: 70vh;
-        width: 59%;
-        margin: 0px;
-        transform: translateX(5%);
+    .section-one-text ul li {
+        white-space: wrap;
+        white-space: normal;
+        list-style-position: outside;
+        /* padding-left: 0px; */
+        margin-left: 20px;
     }
+    .section-one-animation {
+        height: 500px;
+        margin: 0;
+        transform: translateX(15%);
+      }
 
 
     .background-img {
@@ -1018,7 +1023,7 @@ form select:focus,
 
     .xliff-background {
         width: 145vw;
-        top: 13%;
+        top: -33%;
     }
 
     .background-img-orange-circle {
@@ -1066,10 +1071,11 @@ form select:focus,
     }
 
     .section-one-animation {
-        height: 70vw;
+     
         width: 70%;
         transform: translateX(0%);
-    }
+      }
+
 
     .contact-form-container {
         width: 80%;
@@ -1138,7 +1144,8 @@ form select:focus,
 
     .xliff-background {
         width: 170vw;
-        top: -3%;
+    top: -44%;
+    transform: scaleY(.9);
     }
 
     .xliff-background-container {
@@ -1288,7 +1295,10 @@ form select:focus,
         width: 143%;
         transform: rotate(57deg);
     }
-
+    .section-one-animation{
+        width: 100%;
+        height: 350px;
+      }
 
     .our-works {
         margin-top: 200px !important;
@@ -1320,7 +1330,7 @@ form select:focus,
 
     .xliff-background {
         width: 604%;
-        top: -1%;
+        top: -11%;
         left: -125%;
     }
 
@@ -1372,7 +1382,7 @@ form select:focus,
 
     .xliff-background {
         width: 747%;
-        top: 16%;
+        top: -10%;
     }
 
     .section-one-animation {

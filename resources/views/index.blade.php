@@ -24,6 +24,8 @@
       <div class="loader-container">
         <img src="{{asset('/images/preloader.gif')}}">
       </div>
+
+
     </div>
 
 

@@ -386,7 +386,9 @@ form button:hover {
         max-height: 500px;
         height: 500px;
     }
-
+    .buttons-container{
+        width: 100%;
+    }
     .--part2 {
         top: 35%;
     }
@@ -408,7 +410,17 @@ form button:hover {
         top: 23%;
     }
 }
-
+@media screen and (max-width: 600px){
+    .buttons-container {
+        width: 100%;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    #applyDeveloperButton{
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+}
 @media screen and (max-width: 425px) {
     .section-one-img-container {
         max-height: 300px;

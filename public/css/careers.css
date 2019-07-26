@@ -414,7 +414,7 @@ form button:hover {
     .careers-positions-image {
         display: none;
     }
-
+    
     .carrers-positions-image-container {
 
         background-color: var(--shadow-color);
@@ -489,7 +489,7 @@ form button:hover {
     }
 
     .header-content-right {
-        margin-top: 50px;
+        margin-top: 85px;
         /* height: 100vw; */
         width: 70vw;
     }
@@ -516,7 +516,9 @@ form button:hover {
         transform: translate(-12%, -30%);
     }
 }
+@media only screen and (max-width: 768px){
 
+}
 @media only screen and (max-width: 750px) {
     .partnership-container {
         display: none;
