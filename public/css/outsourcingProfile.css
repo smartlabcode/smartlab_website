@@ -56,7 +56,9 @@
 .grey {
     color: rgb(20, 33, 61) !important;
 }
-
+.skill-name{
+    margin-bottom: 0;
+}
 .arrow::before {
     background-color: rgb(20, 33, 61) !important;
 }

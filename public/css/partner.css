@@ -121,6 +121,7 @@ form select:focus,
 .header-content-right {
     flex-basis: 46%;
     margin-top: 150px;
+    height: 580px;
 }
 
 .partner-container {
@@ -654,7 +655,11 @@ textarea:focus {
         background-color: white;
     }
 }
-
+#uploadFileArea>p {
+    font-size: 16px;
+    padding-top: 22px;
+    text-align: center;
+}
 @media screen and (min-width: 2000px) {
     .background-img {
         top: -700px;
@@ -1069,4 +1074,3 @@ textarea:focus {
 
 
     }
-}

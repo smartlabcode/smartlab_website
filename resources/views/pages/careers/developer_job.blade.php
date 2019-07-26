@@ -20,6 +20,7 @@
 
 </section>
 <section class="jobParameters contain">
+
     <h1 class="h1-font" id="availablePositions">@lang('careers-developer.Dev-h1')</h1>
 
     <br /><br />
@@ -30,13 +31,13 @@
 
     <h5 class="h5-font">@lang('careers-developer.strucne-karakteristike')</h5>
     <ul class="p-font">
-        <li class="p-font">@lang('careers-developer.karakteristika1')</li>
-        <li class="p-font">@lang('careers-developer.karakteristika2')</li>
-        <li class="p-font">@lang('careers-developer.karakteristika3')</li>
-        <li class="p-font">@lang('careers-developer.karakteristika4')</li>
-        <li class="p-font">@lang('careers-developer.karakteristika5')</li>
-        <li class="p-font">@lang('careers-developer.karakteristika6')</li>
-        <li class="p-font">@lang('careers-developer.karakteristika7')</li>
+        <li>@lang('careers-developer.karakteristika1')</li>
+        <li>@lang('careers-developer.karakteristika2')</li>
+        <li>@lang('careers-developer.karakteristika3')</li>
+        <li>@lang('careers-developer.karakteristika4')</li>
+        <li>@lang('careers-developer.karakteristika5')</li>
+        <li>@lang('careers-developer.karakteristika6')</li>
+        <li>@lang('careers-developer.karakteristika7')</li>
     </ul>
 
     <br />
@@ -49,7 +50,11 @@
     <p class="h5-font">@lang('careers-developer.datum')</p>
 
     <br />
-    <button class="button" id="applyDeveloperButton">@lang('careers-developer.send')</button>
+    <div class="buttons-container">
+        <a href="{{asset('/pages/careers')}}"><button class="button">Back</button></a>
+        <button class="button" id="applyDeveloperButton">@lang('careers-developer.apply')</button>
+    </div>
+
 </section>
 
 

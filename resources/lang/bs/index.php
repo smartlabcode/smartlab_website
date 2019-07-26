@@ -14,7 +14,7 @@ return [
     'section_two_bot_left_h2' => 'Edukacijska<span> video animacija</span>',
     'section_two_bot_left_p' => 'Zabavite i edukujte svoje polaznike našim originalnim i animiranim video sadržajima.',
     'section_two_bot_left_button' => 'Saznajte više',
-    'section_two_bot_mid_h2' => 'Implementiranje <span>i programiranje </span>',
+    'section_two_bot_mid_h2' => 'Razvoj <span>i programiranje </span>',
     'section_two_bot_mid_p' => 'Back-end i front-end programiranje interaktivnih sadržaja čine vaše kurseve privlačnim i prilagođenim korisinicima za lakše korištenje.',
     'section_two_bot_mid_button' => 'Saznajte više',
     'section_two_bot_right_h2' => 'Implementacija <span> Moodle LMS sistema </span>',

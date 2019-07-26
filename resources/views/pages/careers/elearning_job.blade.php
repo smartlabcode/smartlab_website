@@ -30,19 +30,19 @@
 
     <h5 class="h5-font">@lang('careers-elearning.strucne-karakteristike')</h5>
     <ul class="p-font">
-        <li class="p-font">@lang('careers-elearning.karakteristika1')</li>
-        <li class="p-font">@lang('careers-elearning.karakteristika2')</li>
-        <li class="p-font">@lang('careers-elearning.karakteristika3')</li>
-        <li class="p-font">@lang('careers-elearning.karakteristika4')</li>
-        <li class="p-font">@lang('careers-elearning.karakteristika5')</li>
+        <li>@lang('careers-elearning.karakteristika1')</li>
+        <li>@lang('careers-elearning.karakteristika2')</li>
+        <li>@lang('careers-elearning.karakteristika3')</li>
+        <li>@lang('careers-elearning.karakteristika4')</li>
+        <li>@lang('careers-elearning.karakteristika5')</li>
     </ul>
 
     <br />
 
-    <h5 class="h5-font">@lang('careers-elearning.pozeljno')</h5>
+    <h5 class="h5-font">@lang('careers-elearning.pozeljno'):</h5>
     <ul class="p-font">
-        <li class="p-font">@lang('careers-elearning.njemacki')</li>
-        <li class="p-font">@lang('careers-elearning.frontend')</li>
+        <li>@lang('careers-elearning.njemacki')</li>
+        <li>@lang('careers-elearning.frontend')</li>
     </ul>
 
 
@@ -53,8 +53,11 @@
     <p class="h5-font" class="jobDetails">@lang('careers-elearning.lokacija')</p>
     <p class="h5-font" class="jobDetails">@lang('careers-elearning.pozicije')</p>
     <p class="h5-font" class="jobDetails">@lang('careers-elearning.datum')</p>
+    <div class="buttons-container">
+        <a href="{{asset('/pages/careers')}}"><button class="button">Back</button></a>
+        <button class="button" id="applyDeveloperButton">@lang('careers-elearning.apply')</button>
+    </div>
 
-    <button class="button" id="applyDeveloperButton">@lang('careers-elearning.button')</button>
 </section>
 
 

@@ -213,10 +213,15 @@
 
 /* New style */
 
-
+.--back{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
 .jobParameters {
     width: 90%;
     margin: 0 auto;
+    position: relative;
 }
 
 
@@ -294,10 +299,14 @@
 .jobParameters h5 {
     margin-bottom: 1rem;
 }
-
-.jobParameters button {
+.buttons-container{
+    padding-top: 25px;
     margin: 0 auto;
-    display: block;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.jobParameters button {
     outline: none !important;
 }
 
@@ -315,7 +324,7 @@ form select,
 }
 
 form textarea {
-    height: 274px !important;
+    height: 245px!important;
     font-family: "Source Sans Pro", sans-serif !important;
     font-size: 1.4em !important;
 }

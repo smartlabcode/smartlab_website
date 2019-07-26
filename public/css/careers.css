@@ -275,6 +275,7 @@ label {
 .header-content-right {
     flex-basis: 46%;
     margin-top: 150px;
+    height: 580px;
 }
 
 .careers-positions-container {

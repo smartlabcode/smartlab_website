@@ -26,6 +26,24 @@
                 <div>
                     <p class="skill-name p-font">Articulate
                         Storyline</p>
+                    <span class="counter h2-font" data-note="95">0</span><span class="h2-font">%</span>
+                </div>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="95">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Moodle</p>
                     <span class="counter h2-font" data-note="80">0</span><span class="h2-font">%</span>
                 </div>
                 <div>
@@ -40,14 +58,34 @@
                         </g>
                     </svg>
                 </div>
+
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Adobe Captivate</p>
+                    <span class="counter h2-font" data-note="50">0</span><span class="h2-font">%</span>
+                </div>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="50">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                </div>
+
             </div>
             <div class="line-container">
                 <div>
                     <p class="skill-name p-font">Adobe Photoshop</p>
-                    <span class="counter h2-font" data-note="70">0</span><span class="h2-font">%</span>
+                    <span class="counter h2-font" data-note="50">0</span><span class="h2-font">%</span>
                 </div>
                 <div>
-                    <svg class="line-overlay" height="80" width="230" data-note="70">
+                    <svg class="line-overlay" height="80" width="230" data-note="50">
                         <g fill="none">
                             <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0"></path>
                         </g>
@@ -58,11 +96,28 @@
                         </g>
                     </svg>
                 </div>
-
             </div>
             <div class="line-container">
                 <div>
-                    <p class="skill-name p-font">Wordpress</p>
+                    <p class="skill-name p-font">Adobe Animate</p>
+                    <span class="counter h2-font" data-note="30">0</span><span class="h2-font">%</span>
+                </div>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="30">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Vyond</p>
                     <span class="counter h2-font" data-note="80">0</span><span class="h2-font">%</span>
                 </div>
                 <div>
@@ -77,15 +132,14 @@
                         </g>
                     </svg>
                 </div>
-
             </div>
             <div class="line-container">
                 <div>
-                    <p class="skill-name p-font">HTML/CSS</p>
-                    <span class="counter h2-font" data-note="90">0</span><span class="h2-font">%</span>
+                    <p class="skill-name p-font">MailChimp</p>
+                    <span class="counter h2-font" data-note="95">0</span><span class="h2-font">%</span>
                 </div>
                 <div>
-                    <svg class="line-overlay" height="80" width="230" data-note="90">
+                    <svg class="line-overlay" height="80" width="230" data-note="95">
                         <g fill="none">
                             <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0"></path>
                         </g>
@@ -96,7 +150,42 @@
                         </g>
                     </svg>
                 </div>
-
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Google Ads</p>
+                    <span class="counter h2-font" data-note="80">0</span><span class="h2-font">%</span>
+                </div>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="80">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Social Media Advertising</p>
+                    <span class="counter h2-font" data-note="80">0</span><span class="h2-font">%</span>
+                </div>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="80">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                </div>
             </div>
         </div>
         <div class="team-description-long">
@@ -273,7 +362,7 @@
         <div class="team-description">
             <div>
                 <h3 class="h3-font">Ibrahim Z.</h3>
-                <h4 class="h4-font">eLearning /wordpress Developer</h4>
+                <h4 class="h4-font">eLearning / wordpress Developer</h4>
                 <h5 class="h5-font">Skills: </h5>
                 <p class="p-font">
                     @lang('outsourcing.ibrahimz-about-short')
@@ -310,11 +399,11 @@
         </div>
     </div>
     <div class="team-member contain">
+        <!-- Haris M skills -->
         <div class="team-skills">
             <div class="line-container">
                 <div>
-                    <p class="skill-name p-font">Articulate
-                        Storyline</p>
+                    <p class="skill-name p-font">PHP</p>
                     <span class="counter h2-font" data-note="50">0</span><span class="h2-font">%</span>
                 </div>
                 <div>
@@ -333,12 +422,11 @@
             </div>
             <div class="line-container">
                 <div>
-                    <p class="skill-name p-font">Articulate
-                        Storyline</p>
-                    <span class="counter h2-font" data-note="68">0</span><span class="h2-font">%</span>
+                    <p class="skill-name p-font">JavaScript</p>
+                    <span class="counter h2-font" data-note="70">0</span><span class="h2-font">%</span>
                 </div>
                 <div>
-                    <svg class="line-overlay" height="80" width="230" data-note="68">
+                    <svg class="line-overlay" height="80" width="230" data-note="70">
                         <g fill="none">
                             <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0"></path>
                         </g>
@@ -353,12 +441,11 @@
             </div>
             <div class="line-container">
                 <div>
-                    <p class="skill-name p-font">Articulate
-                        Storyline</p>
-                    <span class="counter h2-font" data-note="80">0</span><span class="h2-font">%</span>
+                    <p class="skill-name p-font">Java</p>
+                    <span class="counter h2-font" data-note="100">0</span><span class="h2-font">%</span>
                 </div>
                 <div>
-                    <svg class="line-overlay" height="80" width="230" data-note="80">
+                    <svg class="line-overlay" height="80" width="230" data-note="100">
                         <g fill="none">
                             <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0"></path>
                         </g>
@@ -373,12 +460,65 @@
             </div>
             <div class="line-container">
                 <div>
-                    <p class="skill-name p-font">Articulate
-                        Storyline</p>
-                    <span class="counter h2-font" data-note="90">0</span><span class="h2-font">%</span>
+                    <p class="skill-name p-font">C#</p>
+                    <span class="counter h2-font" data-note="100">0</span><span class="h2-font">%</span>
                 </div>
                 <div>
-                    <svg class="line-overlay" height="80" width="230" data-note="90">
+                    <svg class="line-overlay" height="80" width="230" data-note="100">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">HTML/CSS</p>
+                    <span class="counter h2-font" data-note="70">0</span><span class="h2-font">%</span>
+                </div>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="70">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">MySQL</p>
+                    <span class="counter h2-font" data-note="70">0</span><span class="h2-font">%</span>
+                </div>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="70">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">SQLite</p>
+                    <span class="counter h2-font" data-note="100">0</span><span class="h2-font">%</span>
+                </div>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="100">
                         <g fill="none">
                             <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0"></path>
                         </g>
@@ -420,7 +560,7 @@
         <div class="team-description">
             <div>
                 <h3 class="h3-font">Haris M.</h3>
-                <h4 class="h4-font">eLearning/JS Developer</h4>
+                <h4 class="h4-font">eLearning / JS Developer</h4>
                 <h5 class="h5-font">Skills: </h5>
                 <p class="p-font">@lang('outsourcing.harism-about-short')
                 </p>
@@ -619,7 +759,7 @@
         <div class="team-description">
             <div>
                 <h3 class="h3-font">Amer M.</h3>
-                <h4 class="h4-font">eLearning/multimedia Designer</h4>
+                <h4 class="h4-font">eLearning / multimedia Designer</h4>
                 <h5 class="h5-font">Skills: </h5>
                 <p class="p-font">
                     @lang('outsourcing.amerm-about-short')
@@ -657,14 +797,15 @@
     </div>
     <div class="team-member contain">
         <div class="team-skills">
+            <!-- Irfan S skills -->
             <div class="line-container">
                 <div>
                     <p class="skill-name p-font">Articulate
                         Storyline</p>
-                    <span class="counter h2-font" data-note="50">0</span><span class="h2-font">%</span>
+                    <span class="counter h2-font" data-note="100">0</span><span class="h2-font">%</span>
                 </div>
                 <div>
-                    <svg class="line-overlay" height="80" width="230" data-note="50">
+                    <svg class="line-overlay" height="80" width="230" data-note="100">
                         <g fill="none">
                             <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0"></path>
                         </g>
@@ -679,12 +820,11 @@
             </div>
             <div class="line-container">
                 <div>
-                    <p class="skill-name p-font">Articulate
-                        Storyline</p>
-                    <span class="counter h2-font" data-note="68">0</span><span class="h2-font">%</span>
+                    <p class="skill-name p-font">Adobe Illustrator</p>
+                    <span class="counter h2-font" data-note="100">0</span><span class="h2-font">%</span>
                 </div>
                 <div>
-                    <svg class="line-overlay" height="80" width="230" data-note="68">
+                    <svg class="line-overlay" height="80" width="230" data-note="100">
                         <g fill="none">
                             <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0"></path>
                         </g>
@@ -699,8 +839,26 @@
             </div>
             <div class="line-container">
                 <div>
-                    <p class="skill-name p-font">Articulate
-                        Storyline</p>
+                    <p class="skill-name p-font">Adobe Photoshop</p>
+                    <span class="counter h2-font" data-note="95">0</span><span class="h2-font">%</span>
+                </div>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="95">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                </div>
+
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Adobe Indesign</p>
                     <span class="counter h2-font" data-note="80">0</span><span class="h2-font">%</span>
                 </div>
                 <div>
@@ -719,12 +877,11 @@
             </div>
             <div class="line-container">
                 <div>
-                    <p class="skill-name p-font">Articulate
-                        Storyline</p>
-                    <span class="counter h2-font" data-note="90">0</span><span class="h2-font">%</span>
+                    <p class="skill-name p-font">Edge Animate</p>
+                    <span class="counter h2-font" data-note="95">0</span><span class="h2-font">%</span>
                 </div>
                 <div>
-                    <svg class="line-overlay" height="80" width="230" data-note="90">
+                    <svg class="line-overlay" height="80" width="230" data-note="95">
                         <g fill="none">
                             <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0"></path>
                         </g>
@@ -736,6 +893,24 @@
                     </svg>
                 </div>
 
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Adobe Animate</p>
+                    <span class="counter h2-font" data-note="75">0</span><span class="h2-font">%</span>
+                </div>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="75">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                </div>
             </div>
         </div>
         <div class="team-description-long">
@@ -805,71 +980,11 @@
         </div>
     </div>
     <div class="team-member contain">
+        <!-- Aida R skills -->
         <div class="team-skills">
             <div class="line-container">
                 <div>
-                    <p class="skill-name p-font">Articulate
-                        Storyline</p>
-                    <span class="counter h2-font" data-note="50">0</span><span class="h2-font">%</span>
-                </div>
-                <div>
-                    <svg class="line-overlay" height="80" width="230" data-note="50">
-                        <g fill="none">
-                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0"></path>
-                        </g>
-                    </svg>
-                    <svg class="line-main" height="80" width="230">
-                        <g fill="none">
-                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0"></path>
-                        </g>
-                    </svg>
-                </div>
-
-            </div>
-            <div class="line-container">
-                <div>
-                    <p class="skill-name p-font">Articulate
-                        Storyline</p>
-                    <span class="counter h2-font" data-note="68">0</span><span class="h2-font">%</span>
-                </div>
-                <div>
-                    <svg class="line-overlay" height="80" width="230" data-note="68">
-                        <g fill="none">
-                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0"></path>
-                        </g>
-                    </svg>
-                    <svg class="line-main" height="80" width="230">
-                        <g fill="none">
-                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0"></path>
-                        </g>
-                    </svg>
-                </div>
-
-            </div>
-            <div class="line-container">
-                <div>
-                    <p class="skill-name p-font">Articulate
-                        Storyline</p>
-                    <span class="counter h2-font" data-note="80">0</span><span class="h2-font">%</span>
-                </div>
-                <div>
-                    <svg class="line-overlay" height="80" width="230" data-note="80">
-                        <g fill="none">
-                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0"></path>
-                        </g>
-                    </svg>
-                    <svg class="line-main" height="80" width="230">
-                        <g fill="none">
-                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0"></path>
-                        </g>
-                    </svg>
-                </div>
-
-            </div>
-            <div class="line-container">
-                <div>
-                    <p class="skill-name p-font">Articulate
-                        Storyline</p>
+                    <p class="skill-name p-font">Adobe Photoshop</p>
                     <span class="counter h2-font" data-note="90">0</span><span class="h2-font">%</span>
                 </div>
                 <div>
@@ -885,6 +1000,80 @@
                     </svg>
                 </div>
 
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Adobe InDesign</p>
+                    <span class="counter h2-font" data-note="95">0</span><span class="h2-font">%</span>
+                </div>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="95">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                </div>
+
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Adobe Illustrator</p>
+                    <span class="counter h2-font" data-note="93">0</span><span class="h2-font">%</span>
+                </div>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="93">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                </div>
+
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Adobe Acrobat Pro</p>
+                    <span class="counter h2-font" data-note="85">0</span><span class="h2-font">%</span>
+                </div>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="85">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">Articulate Storyline</p>
+                    <span class="counter h2-font" data-note="70">0</span><span class="h2-font">%</span>
+                </div>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="70">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                </div>
             </div>
         </div>
         <div class="team-description-long">
@@ -916,7 +1105,7 @@
         <div class="team-description">
             <div>
                 <h3 class="h3-font">Aida R.</h3>
-                <h4 class="h4-font">eLearning/instructional Designer</h4>
+                <h4 class="h4-font">eLearning / instructional Designer</h4>
                 <h5 class="h5-font">Skills: </h5>
                 <p class="p-font">@lang('outsourcing.aidar-about-short')
                 </p>
@@ -951,15 +1140,15 @@
         </div>
     </div>
     <div class="team-member contain">
+        <!-- Emir M skills -->
         <div class="team-skills">
             <div class="line-container">
                 <div>
-                    <p class="skill-name p-font">Articulate
-                        Storyline</p>
-                    <span class="counter h2-font" data-note="50">0</span><span class="h2-font">%</span>
+                    <p class="skill-name p-font">HTML/CSS</p>
+                    <span class="counter h2-font" data-note="90">0</span><span class="h2-font">%</span>
                 </div>
                 <div>
-                    <svg class="line-overlay" height="80" width="230" data-note="50">
+                    <svg class="line-overlay" height="80" width="230" data-note="90">
                         <g fill="none">
                             <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0"></path>
                         </g>
@@ -974,28 +1163,7 @@
             </div>
             <div class="line-container">
                 <div>
-                    <p class="skill-name p-font">Articulate
-                        Storyline</p>
-                    <span class="counter h2-font" data-note="68">0</span><span class="h2-font">%</span>
-                </div>
-                <div>
-                    <svg class="line-overlay" height="80" width="230" data-note="68">
-                        <g fill="none">
-                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0"></path>
-                        </g>
-                    </svg>
-                    <svg class="line-main" height="80" width="230">
-                        <g fill="none">
-                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0"></path>
-                        </g>
-                    </svg>
-                </div>
-
-            </div>
-            <div class="line-container">
-                <div>
-                    <p class="skill-name p-font">Articulate
-                        Storyline</p>
+                    <p class="skill-name p-font">JavaScript</p>
                     <span class="counter h2-font" data-note="80">0</span><span class="h2-font">%</span>
                 </div>
                 <div>
@@ -1014,12 +1182,30 @@
             </div>
             <div class="line-container">
                 <div>
-                    <p class="skill-name p-font">Articulate
-                        Storyline</p>
-                    <span class="counter h2-font" data-note="90">0</span><span class="h2-font">%</span>
+                    <p class="skill-name p-font">Adobe Photoshop</p>
+                    <span class="counter h2-font" data-note="60">0</span><span class="h2-font">%</span>
                 </div>
                 <div>
-                    <svg class="line-overlay" height="80" width="230" data-note="90">
+                    <svg class="line-overlay" height="80" width="230" data-note="60">
+                        <g fill="none">
+                            <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                    <svg class="line-main" height="80" width="230">
+                        <g fill="none">
+                            <path stroke-width="20" stroke-linecap="round" stroke="rgba(0, 53, 145, 0.15)" d="M5 60 l215 0"></path>
+                        </g>
+                    </svg>
+                </div>
+
+            </div>
+            <div class="line-container">
+                <div>
+                    <p class="skill-name p-font">React.js</p>
+                    <span class="counter h2-font" data-note="70">0</span><span class="h2-font">%</span>
+                </div>
+                <div>
+                    <svg class="line-overlay" height="80" width="230" data-note="70">
                         <g fill="none">
                             <path class="path" stroke-width="20" stroke-linecap="round" stroke="#4885FA" d="M5 60 l215 0"></path>
                         </g>
@@ -1062,7 +1248,7 @@
         <div class="team-description">
             <div>
                 <h3 class="h3-font">Emir M.</h3>
-                <h4 class="h4-font">Front-End/moodle developer</h4>
+                <h4 class="h4-font">Front-End / moodle developer</h4>
                 <h5 class="h5-font">Skills: </h5>
                 <p class="p-font">@lang('outsourcing.emirm-about-short')
                 </p>
@@ -1440,7 +1626,7 @@
         <div class="team-description">
             <div>
                 <h3 class="h3-font">Mirza O.</h3>
-                <h4 class="h4-font">Full Stack/DevOps</h4>
+                <h4 class="h4-font">Full Stack / DevOps</h4>
                 <h5 class="h5-font">Skills: </h5>
                 <p class="p-font">@lang('outsourcing.mirzao-about-short')
                 </p>

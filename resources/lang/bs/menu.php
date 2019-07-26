@@ -10,7 +10,7 @@ return [
 	'tenth_item' => 'Izloguj se',
 	'online_courses' => 'Online kursevi',
 	'educational_video' => 'Edukacijski video animirani sadržaji',
-	'programming' => 'Implementiranje i programiranje',
+	'programming' => 'Razvoj i programiranje',
 	'moodle' => 'Moodle LMS',
 	'about_us' => 'O nama',
 	'our_team' => 'Naš tim',
