@@ -125,6 +125,7 @@
         'logs',
         'assets',
         'translations',
+        'edit/*'
         ];
 
         $adminRoute = false;
@@ -140,6 +141,9 @@
 
         @if(!$adminRoute)
         @yield('footer')
+        @else
+        <link rel="stylesheet" href="{{ asset('/css/adminRoute.css') }}">
+
         @endif
 
         {{-- @auth--}}

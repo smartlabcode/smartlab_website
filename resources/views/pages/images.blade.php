@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 <style>
-
     .card-img-top {
         height: 150px;
     }
@@ -13,79 +12,76 @@
         justify-content: space-around;
     }
 
-    #imagesContainer > div {
+    #imagesContainer>div {
         margin: 10px;
-        box-shadow: 1px 2px 1px rgba(150,150,150, 0.5);
+        box-shadow: 1px 2px 1px rgba(150, 150, 150, 0.5);
     }
 
-    #imagesContainer > div:hover {
-        box-shadow: 3px 3px 3px rgba(150,150,150, 0.5);
+    #imagesContainer>div:hover {
+        box-shadow: 3px 3px 3px rgba(150, 150, 150, 0.5);
     }
 
     #inputFile {
         display: none;
     }
-
 </style>
 
 @section('content')
 
-    @include('parts.break_space')
+@include('parts.break_space')
 
-    <div class="listTable">
+<div class="listTable">
 
-        <h2>Website images</h2>
+    <h2>Website images</h2>
 
-        @include('parts.error_success')
+    @include('parts.error_success')
 
-        <div id="imagesContainer">
+    <div id="imagesContainer">
 
-            @foreach($links as $link)
+        @foreach($links as $link)
 
-                <div id="{{$link['name']}}" class="card" style="width: 18rem;">
-                    <img src="{{env('APP_BASE_URL')}}/{{$link['path']}}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">{{$link['name']}}</h5>
-                        <button class="btn btn-primary" onclick="setImageElement(this)">Change</button>
-                    </div>
-                </div>
-
-            @endforeach
-
+        <div id="{{$link['name']}}" class="card" style="width: 18rem;">
+            <img src="{{env('APP_URL')}}/{{$link['path']}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{$link['name']}}</h5>
+                <button class="btn btn-primary" onclick="setImageElement(this)">Change</button>
+            </div>
         </div>
 
-        <form id="imageForm" action="/assets" method="POST" enctype="multipart/form-data">
-
-            @csrf
-
-            <input id="image_name" type="hidden" name="image_name"/>
-            <input id="inputFile" type="file" accept="image/jpg,image/png,image/jpeg" name="files[]" onchange="showUploadedImage()" />
-        </form>
+        @endforeach
 
     </div>
 
+    <form id="imageForm" action="/assets" method="POST" enctype="multipart/form-data">
 
-    <script>
+        @csrf
 
-        var firstParent = "";
+        <input id="image_name" type="hidden" name="image_name" />
+        <input id="inputFile" type="file" accept="image/jpg,image/png,image/jpeg" name="files[]" onchange="showUploadedImage()" />
+    </form>
 
-        function setImageElement(event) {
-            firstParent = event.parentNode.parentNode;
-            document.getElementById('image_name').value = firstParent.id;
+</div>
 
-            document.getElementById("inputFile").click();
-        }
 
-        function showUploadedImage() {
-            var file = document.getElementById("inputFile").files[0];
+<script>
+    var firstParent = "";
 
-            _PREVIEW_URL = URL.createObjectURL(file);
-            firstParent.getElementsByTagName('img')[0].src = _PREVIEW_URL;
+    function setImageElement(event) {
+        firstParent = event.parentNode.parentNode;
+        document.getElementById('image_name').value = firstParent.id;
 
-            // submit form
-            document.getElementById('imageForm').submit();
-        }
+        document.getElementById("inputFile").click();
+    }
 
-    </script>
+    function showUploadedImage() {
+        var file = document.getElementById("inputFile").files[0];
+
+        _PREVIEW_URL = URL.createObjectURL(file);
+        firstParent.getElementsByTagName('img')[0].src = _PREVIEW_URL;
+
+        // submit form
+        document.getElementById('imageForm').submit();
+    }
+</script>
 
 @endsection
