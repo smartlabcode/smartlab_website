@@ -461,7 +461,7 @@
         <div class="team-description">
           <h3>Mirza O.</h3>
           <p>
-            <!--Full Stack/DevOps--> Back-End Praktikant</p>
+            Full Stack/DevOps</p>
         </div>
       </div>
       <div class="team-member">
