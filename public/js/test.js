@@ -1,6 +1,5 @@
 // TO-DO set session storage with description and image for outsourcing_profile page
 
-
 let button = document.querySelectorAll(".button");
 let profileImg = document.querySelectorAll(".profile-image");
 let description = document.querySelectorAll(".team-description");
@@ -21,11 +20,21 @@ class Team {
     }
 }
 
-
 for (let i = 0; i < profileImg.length; i++) {
-    team[i] = new Team(profileImg[i].src, description[i].innerHTML, descriptionLong[i].innerHTML, skills[i]);
-    sessionImg[i] = sessionStorage.setItem("teamImg" + i, team[i].image);
-    sessionDesc[i] = sessionStorage.setItem("teamDesc" + i, team[i].description);
-    sessionDescLong[i] = sessionStorage.setItem("teamDescLong" + i, team[i].descriptionLong);
-    sessionSkills[i] = sessionStorage.setItem("teamSkills" + i, team[i].skills.innerHTML);
+    team[i] = new Team(
+        profileImg[i].src,
+        description[i].innerHTML,
+        descriptionLong[i].innerHTML,
+        skills[i]
+    );
+    sessionImg[i] = localStorage.setItem("teamImg" + i, team[i].image);
+    sessionDesc[i] = localStorage.setItem("teamDesc" + i, team[i].description);
+    sessionDescLong[i] = localStorage.setItem(
+        "teamDescLong" + i,
+        team[i].descriptionLong
+    );
+    sessionSkills[i] = localStorage.setItem(
+        "teamSkills" + i,
+        team[i].skills.innerHTML
+    );
 }
