@@ -454,7 +454,7 @@
               </clipPath>
             </defs>
           </svg>
-          <div class="team-img mirza">
+          <div class="team-img">
             <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/mirza.jpg')}}" alt="Mirza O photo">
           </div>
           <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue2">
@@ -698,6 +698,39 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function(event) {
+    if (window.innerWidth <= 425) {
+      console.log(window.innerWidth);
+      document.querySelector(".section-two").setAttribute("id", "about");
+    }
+    var browser = (function() {
+      var test = function(regexp) {
+        return regexp.test(window.navigator.userAgent);
+      }
+      switch (true) {
+        case test(/edge/i):
+          return "edge";
+        case test(/opr/i) && (!!window.opr || !!window.opera):
+          return "opera";
+        case test(/chrome/i) && !!window.chrome:
+          return "chrome";
+        case test(/trident/i):
+          return "ie";
+        case test(/firefox/i):
+          return "firefox";
+        case test(/safari/i):
+          return "safari";
+        default:
+          return "other";
+      }
+    })();
+    if (browser == "edge") {
+      let teamImg = document.querySelectorAll(".team-img img");
+      document.querySelector(".join").style = "transform: translateX(0)";
+      for (let i = 0; i < teamImg.length - 1; i++) {
+        console.log(teamImg[i])
+        teamImg[i].style = "border-radius:170% 90% 150% 130%; height:300px; object-fit: cover; object-position: unset;"
+      }
+    }
     //blogs
     const animation = document.querySelector(".section-one-animation");
 

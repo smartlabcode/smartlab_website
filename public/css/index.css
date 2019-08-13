@@ -1639,6 +1639,7 @@
 
     .submit {
       margin-bottom: 60px;
+      align-self: center;
     }
 
     .contain {

@@ -1289,7 +1289,9 @@ form select:focus,
     .button {
         font-size: 1.2em !important;
     }
-
+    .submit {
+        align-self: center;
+    }
     .background-img {
         top: 32%;
         width: 143%;

@@ -44,21 +44,20 @@ class BlogsController extends Controller
                         LEFT JOIN blog_translations AS bt ON b.id = bt.blogs_id
                         WHERE b.deleted_at IS NULL
                         GROUP BY b.id
-                        ORDER BY b.created_at');
+                        ORDER BY b.created_at'
+            );
 
             // return blogs list page with its data
             return view('pages.blogs.blogs_list', [
                 'blogs' => $blogs
             ]);
-
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', 'BlogsController - index: '. $e->getMessage());
+            $this->logService->setLog('ERROR', 'BlogsController - index: ' . $e->getMessage());
 
             // return error view
             return view('pages.general_error');
         }
-
     }
 
 
@@ -72,15 +71,13 @@ class BlogsController extends Controller
         try {
             // return create blog form page
             return view('pages.blogs.blogs_create');
-
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', 'BlogsController - create: '. $e->getMessage());
+            $this->logService->setLog('ERROR', 'BlogsController - create: ' . $e->getMessage());
 
             // return error view
             return view('pages.general_error');
         }
-
     }
 
     /**
@@ -118,15 +115,13 @@ class BlogsController extends Controller
                 'language' => $lang,
                 'blog' => $blog[0]
             ]);
-
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', 'BlogsController - add: '. $e->getMessage());
+            $this->logService->setLog('ERROR', 'BlogsController - add: ' . $e->getMessage());
 
             // return error view
             return view('pages.general_error');
         }
-
     }
 
     /**
@@ -147,7 +142,7 @@ class BlogsController extends Controller
 
         $existing = $request->input('existing');
         // check if neccessary values are entered correctly, if no return error messages
-        if ($existing == "true"){
+        if ($existing == "true") {
             $request->validate([
                 'content' => 'required|min:3',
                 'title' => 'required|min:3|max:255',
@@ -168,9 +163,9 @@ class BlogsController extends Controller
 
         // check if image is uploaded
         $image = request()->image;
-        if(isset($image)) {
+        if (isset($image)) {
             // set image name
-            $imageName = time().'.'.request()->image->getClientOriginalExtension();
+            $imageName = time() . '.' . request()->image->getClientOriginalExtension();
 
             // upload image
             request()->image->move(public_path('/images'), $imageName);
@@ -256,10 +251,9 @@ class BlogsController extends Controller
                 'blog' => $blog[0],
                 'language' => $lang
             ]);
-
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', 'BlogsController - edit: '. $e->getMessage());
+            $this->logService->setLog('ERROR', 'BlogsController - edit: ' . $e->getMessage());
 
             // return error view
             return view('pages.general_error');
@@ -291,7 +285,7 @@ class BlogsController extends Controller
         if (isset(request()->image)) {
             // set image name to be the same as previous one
             // $imageName = $request->input('old_image_name');
-            $imageName = time().'.'.request()->image->getClientOriginalExtension();
+            $imageName = time() . '.' . request()->image->getClientOriginalExtension();
             //$imageName = substr($imageName, strrpos($imageName, '/') + 1);
 
             // upload new image
@@ -349,15 +343,13 @@ class BlogsController extends Controller
 
             // return with message
             $request->session()->flash('message', 'Blog successfully deleted.');
-
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', 'BlogsController - destroy: '. $e->getMessage());
+            $this->logService->setLog('ERROR', 'BlogsController - destroy: ' . $e->getMessage());
 
             // return with message
             $request->session()->flash('error', 'Blog couldnt be deleted.');
         }
-
     }
 
     /**
@@ -367,7 +359,8 @@ class BlogsController extends Controller
      * @param $id
      * @param $state
      */
-    public function publish(Request $request, $id, $state) {
+    public function publish(Request $request, $id, $state)
+    {
 
         try {
             // get blog for publishing/unpublishing
@@ -385,15 +378,12 @@ class BlogsController extends Controller
 
             // set message to session
             $request->session()->flash('message', 'Blog successfully ' . $newState);
-
         } catch (\Exception $e) {
             // add log
-            $this->logService->setLog('ERROR', 'BlogsController - publish: '. $e->getMessage());
+            $this->logService->setLog('ERROR', 'BlogsController - publish: ' . $e->getMessage());
 
             // return with message
             $request->session()->flash('error', 'Couldnt change blog published state.');
         }
-
     }
-
 }

@@ -62,7 +62,7 @@
 }
 
 .arrow::before {
-    background-color: rgb(20, 33, 61) !important;
+    /*background-color: rgb(20, 33, 61) !important;*/
 }
 
 .arrow:hover:before {
@@ -520,6 +520,7 @@
         height: unset;
         position: static;
         width: 100%;
+    height: 100%;
     }
 
     .section-one-bg {
@@ -552,7 +553,7 @@
         .team-member {
             padding: 40px 20px;
         }
-        
+    
     .section-one-bg {
         top: -55%;
         width: 1000px;

@@ -140,12 +140,17 @@ nav .contain {
 
 
 .arrow:hover:before {
-    transform: rotateX(-180deg) translate(-100%, -160%);
+    border-top: 0px;
+    border-bottom: 5px solid white;
+    transform:translateX(-100%) translateY(110%);
+    /* */
 }
 
 .arrow-js:hover:before {
-    transform: rotateX(-180deg) translate(-100%, -225%);
-    animation: arrow 0.2s ease-in-out forwards;
+    border-top: 0px;
+    border-bottom: 5px solid white;
+    transform:translateX(-100%) translateY(170%);
+    /*animation: arrow 0.2s ease-in-out forwards;*/
 }
 
 @keyframes arrow {
@@ -215,6 +220,20 @@ nav .contain {
 
 .arrow-js::before {
     display: inline-block;
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 100%;
+    top: 50%;
+    transform: translateX(-100%) translateY(-20%);
+    transition: 0.2s all ease-in-out;
+    z-index: 10;
+    border-top: 5px solid var(--h1-color);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    
+    /*display: inline-block;
     position: absolute;
     content: "";
     background-color: #14213d;
@@ -226,11 +245,24 @@ nav .contain {
     -webkit-clip-path: polygon(0 50%, 50% 100%, 100% 50%);
     clip-path: polygon(0 50%, 50% 100%, 100% 50%);
     transition: 0.2s transform ease-in-out;
-    z-index: 10;
+    z-index: 10;*/
 }
 
 .arrow::before {
     display: inline-block;
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 100%;
+    top: 50%;
+    transform: translateX(-100%) translateY(-20%);
+    transition: 0.2s all ease-in-out;
+    z-index: 10;
+    border-top: 5px solid white;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    /*display: inline-block;
     position: absolute;
     content: "";
     background-color: white;
@@ -242,7 +274,7 @@ nav .contain {
     -webkit-clip-path: polygon(0 50%, 50% 100%, 100% 50%);
     clip-path: polygon(0 50%, 50% 100%, 100% 50%);
     transition: 0.2s all ease-in-out;
-    z-index: 10;
+    z-index: 10;*/
 }
 
 .join {
@@ -400,12 +432,14 @@ nav .contain {
     }
 
     .arrow:hover:before {
-        transform: rotateX(-180deg) translate(-100%, -95%);
+        transform: translateY(100%);
+        /*transform: rotate(180deg);*/
+        /*translate(-100%, -95%);*/
         opacity: 0;
     }
 
     .arrow::before {
-        background-color: var(--h1-color);
+        border-top-color: var(--h1-color);
         left: 95%;
     }
 

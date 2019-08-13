@@ -247,7 +247,7 @@
         for (let i = 0; i < images.length; i++) {
             youtube_video_id[i] = images[i].match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/).pop();
             if (youtube_video_id[i].length == 11) {
-                video_thumbnail[i] = '//img.youtube.com/vi/' + youtube_video_id[i] + '/0.jpg';
+                video_thumbnail[i] = '//img.youtube.com/vi/' + youtube_video_id[i] + '/hqdefault.jpg';
             }
         }
         let popupClickLeft = document.querySelector(".popup-click-left");

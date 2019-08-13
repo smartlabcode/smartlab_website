@@ -376,6 +376,7 @@ footer img {
     .footer-bot-column:nth-child(3) {
         width: 97%;
     }
+    
 }
 
 @media screen and (max-width: 375px) {
