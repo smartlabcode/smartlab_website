@@ -612,10 +612,10 @@ textarea:focus {
     /*background-color: rgb(20, 33, 61) !important;*/
 }
 
-.arrow:hover:before {
+/*.arrow:hover:before {
     transform: rotateX(-180deg) translate(-100%, -170%);
     animation: arrow 0.2s ease-in-out forwards !important;
-}
+}*/
 
 .margin-t-400 {
     margin-top: 400px !important;

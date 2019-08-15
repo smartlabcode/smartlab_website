@@ -7,7 +7,14 @@
     --p-color: #c9d6e2;
     scroll-behavior: smooth;
 }
-
+.shadow{
+    -webkit-box-shadow: -1px -1px 15px 1px var(--shadow-color);
+    -moz-box-shadow: -1px -1px 15px 1px var(--shadow-color);
+    box-shadow: -1px -1px 15px 1px var(--shadow-color);
+}
+.nav-top-color {
+    color: var(--h1-color) !important;
+}
 a:not([href]):not([tabindex]),
 a:not([href]):not([tabindex]):focus,
 a:not([href]):not([tabindex]):hover {
@@ -175,9 +182,11 @@ nav .contain {
     display: flex;
     justify-content: flex-end;
     font-family: "Montserrat", sans-serif;
+    overflow: hidden;
+    transition: 0.2s all ease-in-out;
 }
 .nav-top a{
-    color: white !important;
+    color: white ;
 }
 .nav-top p {
     opacity: 0.5;

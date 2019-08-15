@@ -65,10 +65,10 @@
     /*background-color: rgb(20, 33, 61) !important;*/
 }
 
-.arrow:hover:before {
+/*.arrow:hover:before {
     transform: rotateX(-180deg) translate(-100%, -170%);
     animation: arrow 0.2s ease-in-out forwards !important;
-}
+}*/
 
 .nav-top p {
     color: rgb(20, 33, 61) !important;
@@ -529,7 +529,12 @@
         width: 1500px
     }
 }
-
+@media only screen and (max-width: 768px){
+    .team-description-bottom-social {
+        flex-basis: 100%;
+        justify-content: center;
+    }
+}
 @media only screen and (max-width: 600px) {
     .section-one-bg {
         top: -90%;

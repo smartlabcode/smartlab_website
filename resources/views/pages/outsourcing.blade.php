@@ -223,7 +223,7 @@
                 </p>
             </div>
             <div class="team-description-bottom">
-                <a href="{{asset('/pages/outsourcing_profile?0')}}"><button class="button">Read More</button></a>
+                <!--<a href="{{asset('/pages/outsourcing_profile?0')}}"><button class="button">Read More</button></a>-->
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
                         <a href="https://www.linkedin.com/in/irfan-karisik-53ab54148" target="_blank">
@@ -370,7 +370,7 @@
                 </p>
             </div>
             <div class="team-description-bottom">
-                <a href="{{asset('/pages/outsourcing_profile?1')}}"><button class="button">Read More</button></a>
+                <!--<a href="{{asset('/pages/outsourcing_profile?1')}}"><button class="button">Read More</button></a>-->
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
                         <a href="#">
@@ -566,7 +566,7 @@
                 </p>
             </div>
             <div class="team-description-bottom">
-                <a href="{{asset('/pages/outsourcing_profile?2')}}"><button class="button">Read More</button></a>
+                <!--<a href="{{asset('/pages/outsourcing_profile?2')}}"><button class="button">Read More</button></a>-->
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
                         <a href="https://www.linkedin.com/in/haris-musli%C4%87-619460137/" target="_blank">
@@ -767,7 +767,7 @@
                 </p>
             </div>
             <div class="team-description-bottom">
-                <a href="{{asset('/pages/outsourcing_profile?3')}}"><button class="button">Read More</button></a>
+                <!--<a href="{{asset('/pages/outsourcing_profile?3')}}"><button class="button">Read More</button></a>-->
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
                         <a href="https://www.linkedin.com/in/amer-masleša-5a6397161" target="_blank">
@@ -951,7 +951,7 @@
                 </p>
             </div>
             <div class="team-description-bottom">
-                <a href="{{asset('/pages/outsourcing_profile?4')}}"><button class="button">Read More</button></a>
+                <!--<a href="{{asset('/pages/outsourcing_profile?4')}}"><button class="button">Read More</button></a>-->
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
                         <a href="https://www.linkedin.com/in/irfan-starcevic-863267154" target="_blank">
@@ -1111,7 +1111,7 @@
                 </p>
             </div>
             <div class="team-description-bottom">
-                <a href="{{asset('/pages/outsourcing_profile?5')}}"><button class="button">Read More</button></a>
+                <!--<a href="{{asset('/pages/outsourcing_profile?5')}}"><button class="button">Read More</button></a>-->
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
                         <a href="https://www.linkedin.com/in/aida-filipovi%C4%87-red%C5%BEovi%C4%87-4a034a1b" target="_blank">
@@ -1254,7 +1254,7 @@
                 </p>
             </div>
             <div class="team-description-bottom">
-                <a href="{{asset('/pages/outsourcing_profile?6')}}"><button class="button">Read More</button></a>
+                <!--<a href="{{asset('/pages/outsourcing_profile?6')}}"><button class="button">Read More</button></a>-->
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
                         <a href="https://www.linkedin.com/in/emir-meki%C4%87-245524190/" target="_blank">
@@ -1400,7 +1400,7 @@
                 </p>
             </div>
             <div class="team-description-bottom">
-                <a href="{{asset('/pages/outsourcing_profile?7')}}"><button class="button">Read More</button></a>
+                <!--<a href="{{asset('/pages/outsourcing_profile?7')}}"><button class="button">Read More</button></a>-->
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
                         <a href="#">
@@ -1632,7 +1632,7 @@
                 </p>
             </div>
             <div class="team-description-bottom">
-                <a href="{{asset('/pages/outsourcing_profile?8')}}"><button class="button">Read More</button></a>
+                <!--<a href="{{asset('/pages/outsourcing_profile?8')}}"><button class="button">Read More</button></a>-->
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
                         <a href="https://www.linkedin.com/in/mirza-oglecevac-b03266158" target="_blank">
