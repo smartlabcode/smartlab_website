@@ -91,7 +91,40 @@
         background-color: white;
     }
 }
+.header-container {
+    position: relative;
+}
+.margin-b-150 {
+    margin-bottom: 150px !important;
+}
+.header-background {
+    position: absolute;
+    z-index: -100;
+    transform: rotate(0deg);
+    top: -80%;
+    right: -26%;
+    width: 88%;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-content-left {
+    flex-basis: 50%;
+    padding-right: 50px;
+}
 
+.header-content-left p {
+
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
+.header-content-right {
+    flex-basis: 46%;
+    margin-top: 150px;
+    height: 580px;
+}
 .section-one {
     /*height: 75%;*/
     position: relative;
@@ -99,12 +132,11 @@
 
 .section-one-bg {
     position: absolute;
-    width: 3000px;
-    top: -270%;
-    /* bottom: -80%; */
-    /* left: -25vw; */
-    right: -30%;
     z-index: -100;
+    transform: rotate(0);
+    top: -129%;
+    right: -26%;
+    width: 88%;
 }
 
 .section-one-img-container {
@@ -419,6 +451,10 @@
 
         transform: rotate(20deg);
     }
+    .background-img {
+        top: -700px;
+        right: -500px;
+    }
 }
 @media only screen and (max-width: 1440px){
     .section-one-bg {
@@ -529,6 +565,42 @@
         width: 1500px
     }
 }
+@media only screen and (max-width: 850px){
+    .header-content {
+        flex-direction: column-reverse;
+    }
+    .header-content-right {
+        margin-top: 85px;
+        width: 70vw;
+    }
+    .header-content-left {
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+    .header-content-left .button {
+        margin-top: 25px;
+    }
+    .header-background {
+        position: absolute;
+        z-index: -100;
+        transform: rotate(17deg);
+        top: -29%;
+        right: -41vw;
+        width: 157vw;
+    }
+    .margin-b-150{
+        margin-bottom: 100px !important;
+    }
+}
+@media only screen and (max-width: 750px){
+    .header-background {
+        top: -33%;
+    }
+}
+
 @media only screen and (max-width: 768px){
     .team-description-bottom-social {
         flex-basis: 100%;
@@ -552,8 +624,16 @@
 }
 
 @media only screen and (max-width: 425px) {
-    .section-one {
-        /*height: 100%;*/
+    .header-background {
+        position: absolute;
+        z-index: -100;
+        transform: rotate(17deg);
+        top: -18%;
+        right: -41vw;
+        width: 172vw;
+    }
+    .header-content-left h1{
+        text-align: center;
     }
         .team-member {
             padding: 40px 20px;

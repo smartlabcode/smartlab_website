@@ -3,19 +3,21 @@
 @section('content')
 <link href="{{ asset('css/outsourcing.min.css') }}" rel="stylesheet">
 <!--@include('parts.break_space')-->
-<section class="section-one">
-    <img class="section-one-bg" src="{{ asset('images/partner/designer-developer-header-bg.svg') }}" />
-    <div class="section-one-img-container contain">
-        <div class="section-one-img-left-container">
-            <div>
-                <h1 class="h1-font">@lang('outsourcing.header')</h1>
-                <p class="p-font">@lang('outsourcing.info')
-                </p>
-                <a href="#team-members"><button class="button">@lang('outsourcing.people')</button></a>
-            </div>
+<section class="header-container margin-b-150 ">
+    <img src="{{asset('/images/partner/join-us-header-img.svg')}}" alt="header background" class="header-background background-img">
+    <div class="header-content contain">
+        <div class="header-content-left">
+            <h1 class="h1-font">Outsource Real Person</h1>
+            <p class="p-font">If you want to outsource an eLearning designer, educative video
+                animator, front end or back end developer you are on the
+                right place.</p>
+            <a href="#aboveSectionThree"><button class="button --gray">Available People</button></a>
         </div>
-        <img class="section-one-img-right" src="{{ asset('images/partner/outsourcing-header-img.svg') }}" />
+        <div class="header-content-right">
+            <img src="{{asset('/images/partner/outsourcing-header-img.svg')}}" alt="Join us header background">
+        </div>
     </div>
+
 </section>
 <section>
     <div id="team-members" class="team-member contain">

@@ -3,6 +3,9 @@
 
 @section('content')
 <link href="{{ asset('css/index.min.css') }}" rel="stylesheet">
+<div class="loader-container">
+  <img src="{{asset('/images/preloader.gif')}}">
+</div>
 <div class="background-section-one">
   <img class="background-img" src="{{asset('/images/img/header-illustration-group.svg')}}" alt="blue background image" />
   <img class="background-img-circle --circle1" src="{{asset('/images/img/fluid-bright-circle.svg')}}" alt="bright circle background" />
@@ -21,9 +24,7 @@
     </div>
 
     <div class="section-one-animation">
-      <div class="loader-container">
-        <img src="{{asset('/images/preloader.gif')}}">
-      </div>
+
 
 
     </div>
@@ -518,6 +519,7 @@
     <div class="flex">
 
       <div class="partners-text">
+        <img class="partners-text-background" src="{{asset('/images/bg-testimonial.svg')}}" alt="partners background" />
         <div>
           <p class="p-font" id="partners-text">
             “SmartLab team created a fantastic web-based quiz for Afrika Presents with a downloadable badge. Incredible attention to details. Better than anticipated and they had a true understanding and delivered just what we were looking for. We look forward to working together again in the future.”
@@ -556,7 +558,7 @@
   <img class="blog-orange-circle-small" src="{{asset('/images/img/orange-circle.svg')}}" alt="orange circle background" />
   <h2 class="text-center h1-font">@lang('index.blog_h2')</h2>
   <div class="blog-container">
-    <a href="{{env('BLOG_DOMAIN')}}/{{App::getlocale()}}" target="_blank" class="blog">
+    <!--<a href="{{env('BLOG_DOMAIN')}}/{{App::getlocale()}}" target="_blank" class="blog">
       <div class="img-container">
         <div class="img-container-overlay img-container-overlay-blue ">
         </div>
@@ -619,13 +621,13 @@
         <input class="blog-value" type="hidden" value='Remember Pokémon GO? That game that made people walk using their mobile phones? Ever taught what is the technology behind that concept? Technology used in making entire world go chasing Pokémon around forests and through the city is called Augmented Reality. Concept of Augmented Reality is fairly simple. Electrical devices with microprocessors, camera and display use real-world environment to superimpose 2D and 3D models into it through display. That is how Pokémon  Go game worked. Using level field as starting point, Augmented Reality technology imposed Pokémon characters and Poke balls and other elements of the game via camera and display. Augmented Reality (in further text AR) has been explored for many applications. Since 1970s and 1980s, there has been development of technologies meant for everyday use, i.e. „horizontal“ across all applications rather than a specific „vertical“ market.'>
         <p class="blog-text" class="p-font">Remember Pokémon GO? That game that made people walk using their mobile phones? Ever taught what is the technology behind that concept? Technology used in making entire world go chasing Pokémon around forests and through the city is called Augmented Reality. Concept of Augmented Reality is fairly simple. Electrical devices with microprocessors, camera and display use real-world environment to superimpose 2D and 3D models into it through display. That is how Pokémon Go game worked. Using level field as starting point, Augmented Reality technology imposed Pokémon characters and Poke balls and other elements of the game via camera and display. Augmented Reality (in further text AR) has been explored for many applications. Since 1970s and 1980s, there has been development of technologies meant for everyday use, i.e. „horizontal“ across all applications rather than a specific „vertical“ market.</p>
       </div>
-    </a>
-    <!--
+    </a> -->
+
     @foreach ($blogs as $blog)
 
     <a href="{{env('BLOG_DOMAIN')}}/blog/{{$blog->id}}/{{App::getlocale()}}" target="_blank" class="blog">
       <div class="img-container">
-        <div class="img-container-overlay @if ($blog->id % 2 != 0) img-container-overlay-blue @else img-container-overlay-orange @endif">
+        <div class="img-container-overlay">
         </div>
         <img src='{{asset("$blog->image_path")}}' alt="blog" />
         <svg class="wave" viewBox="0 0 500 500">
@@ -641,7 +643,7 @@
     </a>
 
     @endforeach
--->
+
     <div class="blog-button">
       <a href="{{env('BLOG_DOMAIN')}}/{{App::getlocale()}}" target="_blank"><button class="button">@lang('index.blog_button')</button></a>
     </div>
@@ -748,7 +750,11 @@
     animationData.addEventListener("DOMLoaded", function() {
       ready = true;
       lottie.play();
-      loaderContainer.style.display = "none";
+      loaderContainer.classList.add("loaderEnd");
+      setTimeout(function() {
+        loaderContainer.style.display = "none";
+      }, 500)
+
     })
     lottie.setQuality("medium");
     const options = {
@@ -768,16 +774,16 @@
     let blogValue = document.querySelectorAll(".blog-value");
     let blogText = document.querySelectorAll(".blog-text");
     let temp;
-
+    for (let i = 0; i < blogValue.length; i++) {
+      temp = blogValue[i].value.replace(/(<([^>]+)>)/ig, "");
+      blogText[i].innerHTML = temp;
+    }
     const optionsTeam = {
       root: null,
       threshold: 0.1,
       rootMargin: "300px"
     };
-    for (let i = 0; i < blogValue.length; i++) {
-      temp = blogValue[i].value.replace(/(<([^>]+)>)/ig, "");;
-      blogText[i].innerHTML = temp;
-    }
+
     let teamImages = document.querySelectorAll(".team-img img");
     const teamImagesObserver = new IntersectionObserver(function(entries, observer) {
       entries.forEach(entry => {

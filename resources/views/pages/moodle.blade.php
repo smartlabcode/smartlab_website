@@ -1,21 +1,10 @@
 <!-- Extend main layout -->
 @extends('layouts.app')
-<style>
-    .loader-container {
-        position: absolute;
-        right: 50%;
-        top: 50%;
-        width: 200px;
-        z-index: 100;
-        transform: translate(50%, -50%);
-    }
-
-    .section-one-animation {
-        position: relative;
-    }
-</style>
 @section('content')
 <link href="{{ asset('css/coursesMoodleAnimations.min.css') }}" rel="stylesheet">
+<div class="loader-container">
+    <img src="{{asset('/images/preloader.gif')}}">
+</div>
 <div class="background-section-one">
     <img class="background-img" src="{{asset('/images/img/header-illustration-group.svg')}}" alt="blue background image" />
     <img class="background-img-circle --circle1" src="{{asset('/images/img/fluid-bright-circle.svg')}}" alt="fluid bright circle" />
@@ -37,9 +26,7 @@
             </p>
         </div>
         <div class="section-one-animation">
-            <div class="loader-container">
-                <img src="{{asset('/images/preloader.gif')}}">
-            </div>
+
         </div>
 
 
@@ -197,7 +184,10 @@
         animationData.addEventListener("DOMLoaded", function() {
             ready = true;
             lottie.play();
-            loaderContainer.style.display = "none";
+            loaderContainer.classList.add("loaderEnd");
+            setTimeout(function() {
+                loaderContainer.style.display = "none";
+            }, 500)
         })
         const animationObserver = new IntersectionObserver(function(entries, animationObserver) {
             entries.forEach(entry => {

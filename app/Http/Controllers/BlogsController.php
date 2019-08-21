@@ -317,6 +317,7 @@ class BlogsController extends Controller
             $blogTags = new BlogTag();
             $blogTags->tag = $tag;
             $blogTags->blogs_id = $blogTranslation->blogs_id;
+            $blogTags->id = $blogTranslation->blogs_id;
             $blogTags->save();
         }
 

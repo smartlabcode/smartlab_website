@@ -719,7 +719,7 @@ form select:focus,
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 400px;
+    margin-top: 250px;
 }
 
 .tools-info {
@@ -762,8 +762,8 @@ form select:focus,
 
 .tools-img p {
     margin: 1rem 0;
-    font-size: 1.3em;
-    font-family: "Montserrat", sans-serif;
+    font-size: 1.4em;
+    font-family: "Source Sans Pro", sans-serif
 
 }
 
@@ -829,7 +829,28 @@ form select:focus,
         clip-path: circle(75% at 50% 50%);
     }
 }
-
+.loader-container {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: rgba(255,255,255,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .loaderEnd{
+    animation: fadeOut 1s forwards;
+  }
+  @keyframes fadeOut{
+    from{
+      opacity: 1;
+    }
+    to{
+      opacity: 0;
+    }
+  }
 @media screen and (min-width: 2000px) {
     .background-img {
         top: -700px;
