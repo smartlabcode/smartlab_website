@@ -3,6 +3,11 @@
 @section('content')
 <link href="{{ asset('css/outsourcing.min.css') }}" rel="stylesheet">
 <!--@include('parts.break_space')-->
+<div class="loader-container">
+    <div class="css-animation-container">
+        <div class="css-animation"></div>
+    </div>
+</div>
 <section class="header-container margin-b-150 ">
     <img src="{{asset('/images/partner/join-us-header-img.svg')}}" alt="header background" class="header-background background-img">
     <div class="header-content contain">
@@ -1664,5 +1669,14 @@
     </div>
 
 </section>
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+        let loaderContainer = document.querySelector(".loader-container");
+        loaderContainer.classList.add("loaderEnd");
+        setTimeout(function() {
+            loaderContainer.style.display = "none";
+        }, 1000)
+    })
+</script>
 <script type="module" src=" {{ asset('/js/test.js') }}"></script>
 @endsection

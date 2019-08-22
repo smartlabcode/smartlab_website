@@ -2,6 +2,11 @@
 <link href="{{ asset('css/partner.min.css') }}" rel="stylesheet">
 @section('content')
 <div>
+    <div class="loader-container">
+        <div class="css-animation-container">
+            <div class="css-animation"></div>
+        </div>
+    </div>
     <section class="header-container margin-b-150 ">
         <img src="../images/partner/join-us-header-img.svg" alt="header background" class="header-background background-img">
         <div class="header-content contain">
@@ -236,6 +241,14 @@
         function openUploadWindow() {
             document.getElementById("inputFile").click();
         }
+
+
+        let loaderContainer = document.querySelector(".loader-container");
+        loaderContainer.classList.add("loaderEnd");
+        setTimeout(function() {
+            loaderContainer.style.display = "none";
+        }, 1000)
+
 
 
         function fileUploaded() {

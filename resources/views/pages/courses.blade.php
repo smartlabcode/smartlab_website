@@ -4,7 +4,9 @@
 @section('content')
 <link href="{{ asset('css/coursesMoodleAnimations.min.css') }}" rel="stylesheet">
 <div class="loader-container">
-    <img src="{{asset('/images/preloader.gif')}}">
+    <div class="css-animation-container">
+        <div class="css-animation"></div>
+    </div>
 </div>
 <div class="background-section-one">
     <img class="background-img" src="{{asset('/images/img/header-illustration-group.svg')}}" alt="blue background image" />
@@ -47,6 +49,20 @@
             <div class="popup-container">
                 <div class="popup-content iframe-container">
                     <iframe id="popup-image" src=""></iframe>
+                </div>
+                <div class="popup-description">
+                    <div>
+                        <h3>Popup header</h3>
+                        <p>Popup text</p>
+                    </div>
+                    <div class="popup-controls">
+                        <div class="popup-controls-prev">
+                            <p>&lt;</p>
+                        </div>
+                        <div class="popup-controls-next">
+                            <p>&gt;</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -192,7 +208,7 @@
             loaderContainer.classList.add("loaderEnd");
             setTimeout(function() {
                 loaderContainer.style.display = "none";
-            }, 500)
+            }, 1000)
         })
         lottie.setQuality("medium");
         const animationObserver = new IntersectionObserver(function(entries, animationObserver) {
@@ -286,53 +302,70 @@
             changeImage("next");
             clipPath(rightImg, leftImg);
         });
+        let currentPair = 0;
 
-        function addIndicator(left, right) {
-            for (let i = 0; i < images.length; i++) {
+        function addIndicator(currentPair) {
+            for (let i = 0; i < images.length / 2; i++) {
                 sliderIndicator.childNodes[i].classList.remove("active-indicator");
-                sliderIndicator.childNodes[left].classList.add("active-indicator");
-                if (window.innerWidth > 768) {
-                    sliderIndicator.childNodes[right].classList.add("active-indicator");
-                }
-
+                sliderIndicator.childNodes[currentPair].classList.add("active-indicator");
             }
         }
         let imgOne = 0;
         let imgTwo = 1;
         let sliderIndicator = document.querySelector(".slider-indicator");
-        for (let i = 0; i < images.length; i++) {
+        for (let i = 0; i < images.length / 2; i++) {
             let span = document.createElement("span");
             sliderIndicator.appendChild(span);
         }
 
         function changeImage(par) {
+            // todo prev par preskače ponekad
             let currentLeft, currentRight;
             leftImgOverlay.src = images[imgOne];
             rightImgOverlay.src = images[imgTwo];
 
 
             if (par == "next") {
-
-                if (imgTwo == images.length - 1) {
-                    imgOne = imgTwo;
+                imgOne = imgOne + 2;
+                imgTwo = imgTwo + 2;
+                if (imgOne > images.length - 1 && imgTwo > images.length - 1) {
+                    imgOne = 0;
+                    imgTwo = 1;
+                    currentPair = 0;
+                } else if (imgTwo > images.length - 1) {
+                    imgOne = images.length - 1;
                     imgTwo = 0;
+                    currentPair = Math.floor((images.length - 1) / 2);
+                } else if (imgOne > images.length - 1) {
+                    imgOne = 0;
+                    imgTwo = 1;
+                    currentPair = 0;
                 } else {
-                    imgOne = imgTwo;
-                    imgTwo = imgTwo + 1;
+                    currentPair++;
                 }
+
             }
             if (par == "previous") {
-                if (imgOne == 0) {
-                    imgTwo = imgOne;
+                imgTwo = imgTwo - 2;
+                imgOne = imgOne - 2;
+                if (imgOne < 0 && imgTwo < 0) {
+                    imgOne = images.length - 2;
+                    imgTwo = images.length - 1;
+                    currentPair = Math.floor((images.length - 1) / 2);
+                } else if (imgTwo < 0) {
+                    imgOne = images.length - 2;
+                    imgTwo = images.length - 1;
+                    currentPair = Math.floor((images.length - 1) / 2);
+                } else if (imgOne < 0) {
                     imgOne = images.length - 1;
-
+                    imgTwo = 0;
+                    currentPair = Math.floor((images.length - 1) / 2);
                 } else {
-                    imgTwo = imgOne;
-                    imgOne = imgOne - 1;
+                    currentPair--;
                 }
-
             }
-            addIndicator(imgOne, imgTwo);
+            console.log(imgOne, imgTwo, currentPair, images.length)
+            addIndicator(currentPair);
             var imgOneSrc = images[imgOne];
             var imgTwoSrc = images[imgTwo];
 

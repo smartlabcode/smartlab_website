@@ -4,7 +4,9 @@
 
 <link href="{{ asset('css/coursesMoodleAnimations.min.css') }}" rel="stylesheet">
 <div class="loader-container">
-    <img src="{{asset('/images/preloader.gif')}}">
+    <div class="css-animation-container">
+        <div class="css-animation"></div>
+    </div>
 </div>
 <div class="background-section-one">
     <img class="background-img" src="{{asset('/images/img/header-illustration-group.svg')}}" alt="blue background image" />
@@ -202,7 +204,7 @@
             loaderContainer.classList.add("loaderEnd");
             setTimeout(function() {
                 loaderContainer.style.display = "none";
-            }, 500)
+            }, 1000)
         })
         lottie.setQuality("medium");
 

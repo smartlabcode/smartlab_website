@@ -7,6 +7,11 @@
 
 
 <!-- Join our team section -->
+<div class="loader-container">
+    <div class="css-animation-container">
+        <div class="css-animation"></div>
+    </div>
+</div>
 <section class="section-one">
     <img class="section-one-bg" src="{{ asset('images/partner/designer-developer-header-bg.svg') }}" />
     <div class="section-one-img-container">
@@ -140,7 +145,11 @@
         function openUploadWindow() {
             document.getElementById("inputFile").click();
         }
-
+        let loaderContainer = document.querySelector(".loader-container");
+        loaderContainer.classList.add("loaderEnd");
+        setTimeout(function() {
+            loaderContainer.style.display = "none";
+        }, 1000)
 
         function fileUploaded() {
             // TODO check if file is selected

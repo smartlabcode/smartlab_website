@@ -11,7 +11,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Smartlab') }}</title>
-
+    <link href="{{ asset('css/loader.min.css') }}" rel="stylesheet">
     <!-- Scripts -->
     <!--<script src="{{ asset('js/app.js') }}" defer></script>-->
 
@@ -19,6 +19,7 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:300,700&display=swap" rel="stylesheet">
+
     <!-- Styles -->
     <link href="{{ asset('css/app.min.css') }}" rel="stylesheet">
     <!--<link href="{{ asset('css/font.min.css') }}" rel="stylesheet">-->
