@@ -535,22 +535,22 @@
         </div>
       </div>
       <div class="partners-images">
-        <a href="https://www.thetrainingterminal.co/" target="_blank"><img src="{{asset('/images/partners-logo/TheTrainingTerminal-2.png')}}" alt="TrainingTerminal logo" /></a>
-        <a href="https://www.fkc-online.com/index.php/de" target="_blank"><img src="{{asset('/images/partners-logo/FKC-2.png')}}" alt="Ficher, Knoblauch & co logo" /></a>
-        <a href="https://www.leanscape.io/" target="_blank"><img src="{{asset('/images/partners-logo/leanscape-2.png')}}" alt="leanscape logo" /></a>
-        <a href="https://wellspark.co.uk/" target="_blank"><img src="{{asset('/images/partners-logo/WELLS-PARK-2.png')}}" alt="wells park communications logo" /></a>
-        <a href="http://de.loop-tv.eu/" target="_blank"><img src="{{asset('/images/partners-logo/loop-TV-2.png')}}" alt="loop tv logo" /></a>
-        <a href="https://zomppp.de/" target="_blank"><img src="{{asset('/images/partners-logo/zomppp-2.png')}}" alt="zomppp logo" /></a>
-        <a><img src="{{asset('/images/partners-logo/UAP-QMS-2.png')}}" alt="uap managment system logo" /></a>
-        <a href="https://www.totemlearning.com/" target="_blank"><img src="{{asset('/images/partners-logo/tottem-2.png')}}" alt="totem learning logo" /></a>
-        <a href="https://www.safetycourses4u.com/" target="_blank"><img src="{{asset('/images/partners-logo/safetycourses4u-2.png')}}" alt="safety courses for you logo" /></a>
-        <a href="http://dimenzijaplus.ba/" target="_blank"><img src="{{asset('images/partners-logo/dimenzija_plus-2.png')}}/" alt="dimenzija plus logo" /></a>
-        <a href="http://tvsa.ba/" target="_blank"><img src="{{asset('/images/partners-logo/TVSA-2.png')}}" alt="televizija sarajevo logo" /></a>
-        <a href="https://eloomi.com/" target="_blank"><img src="{{asset('/images/partners-logo/eloomi-4.png')}}" alt="eloomi logo" /></a>
-        <a href="https://fin.unsa.ba/" target="_blank"><img src="{{asset('/images/partners-logo/FIN-2.png')}}" alt="fakultet islamskih nauka logo" /></a>
-        <a><img src="{{asset('/images/partners-logo/maisonprive-2.png')}}" alt="maison prive logo" /></a>
-        <a href="http://www.biramoporavak.com/" target="_blank"><img src="{{asset('/images/partners-logo/biramoporavak-2.png')}}" alt="biramo oporavak logo" /></a>
-        <a><img src="{{asset('/images/partners-logo/BDfD-2.png')}}" alt="bosnian doctors for disabled logo" /></a>
+        <a href="https://www.thetrainingterminal.co/" target="_blank"><img data-src="{{asset('/images/partners-logo/TheTrainingTerminal-2.png')}}" alt="TrainingTerminal logo" /></a>
+        <a href="https://www.fkc-online.com/index.php/de" target="_blank"><img data-src="{{asset('/images/partners-logo/FKC-2.png')}}" alt="Ficher, Knoblauch & co logo" /></a>
+        <a href="https://www.leanscape.io/" target="_blank"><img data-src="{{asset('/images/partners-logo/leanscape-2.png')}}" alt="leanscape logo" /></a>
+        <a href="https://wellspark.co.uk/" target="_blank"><img data-src="{{asset('/images/partners-logo/WELLS-PARK-2.png')}}" alt="wells park communications logo" /></a>
+        <a href="http://de.loop-tv.eu/" target="_blank"><img data-src="{{asset('/images/partners-logo/loop-TV-2.png')}}" alt="loop tv logo" /></a>
+        <a href="https://zomppp.de/" target="_blank"><img data-src="{{asset('/images/partners-logo/zomppp-2.png')}}" alt="zomppp logo" /></a>
+        <a><img data-src="{{asset('/images/partners-logo/UAP-QMS-2.png')}}" alt="uap managment system logo" /></a>
+        <a href="https://www.totemlearning.com/" target="_blank"><img data-src="{{asset('/images/partners-logo/tottem-2.png')}}" alt="totem learning logo" /></a>
+        <a href="https://www.safetycourses4u.com/" target="_blank"><img data-src="{{asset('/images/partners-logo/safetycourses4u-2.png')}}" alt="safety courses for you logo" /></a>
+        <a href="http://dimenzijaplus.ba/" target="_blank"><img data-src="{{asset('images/partners-logo/dimenzija_plus-2.png')}}/" alt="dimenzija plus logo" /></a>
+        <a href="http://tvsa.ba/" target="_blank"><img data-src="{{asset('/images/partners-logo/TVSA-2.png')}}" alt="televizija sarajevo logo" /></a>
+        <a href="https://eloomi.com/" target="_blank"><img data-src="{{asset('/images/partners-logo/eloomi-4.png')}}" alt="eloomi logo" /></a>
+        <a href="https://fin.unsa.ba/" target="_blank"><img data-src="{{asset('/images/partners-logo/FIN-2.png')}}" alt="fakultet islamskih nauka logo" /></a>
+        <a><img data-src="{{asset('/images/partners-logo/maisonprive-2.png')}}" alt="maison prive logo" /></a>
+        <a href="http://www.biramoporavak.com/" target="_blank"><img data-src="{{asset('/images/partners-logo/biramoporavak-2.png')}}" alt="biramo oporavak logo" /></a>
+        <a><img data-src="{{asset('/images/partners-logo/BDfD-2.png')}}" alt="bosnian doctors for disabled logo" /></a>
       </div>
     </div>
   </div>
@@ -798,7 +798,19 @@
     for (let i = 0; i < teamImages.length; i++) {
       teamImagesObserver.observe(teamImages[i]);
     }
-
+    let partnerLogos = document.querySelectorAll(".partners-images img");
+    const partnerLogosObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.src = entry.target.dataset.src;
+          partnerLogosObserver.unobserve(entry.target);
+        }
+      });
+    }, optionsTeam);
+    for (let i = 0; i < partnerLogos.length; i++) {
+      partnerLogosObserver.observe(partnerLogos[i]);
+    }
+    console.log(partnerLogos);
     //blogs end
     // about us circle animation start 
     const aboutUs = document.querySelector("#aboutUs");

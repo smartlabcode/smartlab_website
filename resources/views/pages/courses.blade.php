@@ -168,7 +168,7 @@
             </div>
             <div>
                 <img src="{{asset('/images/tools/1200px-Adobe_Animate_CC_icon.svg.png')}}" alt="Adobe Aimate logo">
-                <p>Adobe Aimate</p>
+                <p>Adobe Animate</p>
             </div>
             <div>
                 <img src="{{asset('/images/tools/scorm.png')}}" alt="SCORM logo">

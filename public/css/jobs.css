@@ -427,7 +427,10 @@ form button:hover {
         max-height: 300px;
         height: 300px;
     }
-
+    .section-one{
+        margin-top: 0;
+        margin-bottom: 95px;
+    }
     .section-one-img-left-container {
         max-height: 300px;
         height: 300px;
@@ -443,7 +446,7 @@ form button:hover {
     }
 
     .section-one-bg {
-        top: -77%;
+        top: -85%;
     }
 
     .section-one-img-right {

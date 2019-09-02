@@ -1066,6 +1066,9 @@ textarea:focus {
             right: -41vw;
             width: 172vw;
         }
+        .header-content-right{
+            margin-top: 110px;
+        }
     }
 
     @media only screen and (max-width: 400px) {

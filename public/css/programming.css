@@ -1383,10 +1383,18 @@ form select:focus,
     }
 
     .background-section-one {
-        margin-top: 125px;
+        margin-top: 0px;
     }
-
-
+    .background-img {
+        top: 47%;
+        width: 161%;
+    }
+    .tools{
+        margin-top: 50px;
+    }
+    .tools-container{
+        top: 0;
+    }
     .background-img-orange-circle {
         right: -25px;
         /* bottom: -89%; */

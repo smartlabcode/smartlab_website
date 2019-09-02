@@ -581,8 +581,8 @@
     position: absolute;
     z-index: -100;
     width: 115vw;
-    transform: scaleY(0.9);
-    top: -50%;
+    transform: scaleY(.8);
+    top: -57%;
   }
   .partners-text {
     flex-basis: 80%;
@@ -611,7 +611,10 @@
   .partners-text .p-font {
     margin-bottom: 0;
     font-style: italic;
-    height: 75px;
+    
+  }
+  #partners-text{
+    height: 100px;
   }
   #partners-company{
     color: var(--h2-color) !important;
@@ -1033,7 +1036,12 @@
       background-position-y: 35%;
     }
   }
-
+  @media screen and (max-width:1680px){
+    .partners-text-background {
+      transform: scaleY(0.9);
+      top: -46%;
+    }
+  }
   @media screen and (max-width: 1500px) {
     /*.partners-images {
       flex-basis: 40%;
@@ -1372,7 +1380,9 @@
       top: -37%;
   }
 
-
+  #partners-text {
+    height: 150px;
+}
     .contact-form-container p {
       font-size: 1em;
     }
@@ -1381,7 +1391,9 @@
       /*margin-top: 80px;*/
     }
 
-   
+    #indicators {
+      margin-top: 25px;
+    }
 
     .contact-section {
       top: 120px;
@@ -1543,7 +1555,7 @@
       top: 7%;
     }
     .partners-text-background {
-      width: 164vw;
+      width: 180vw;
       transform: scaleY(1.6);
       top: 12%;
   }
@@ -1554,7 +1566,9 @@
     .partners-text .p-font{
       height: auto;
     }
-    
+    #partners-text{
+      height: 190px;
+    }
 
     .section-one-text {
       /*margin-bottom: 50px;*/
@@ -1684,9 +1698,9 @@
       margin-top: 15px;
     }
     .partners-text-background {
-      width: 164vw;
-      transform: scaleY(1.6);
-      top: 12%;
+      width: 198vw;
+      top: 14%;
+      left: -50%;
   }
     .contact-section {
       background-size: 927vw;
@@ -1708,7 +1722,7 @@
     }
 
     .background-section-one {
-      margin-top: 125px;
+      margin-top: 0px;
     }
 
     .section-one-text {
@@ -1779,7 +1793,16 @@
       object-position: -100;
       left: -50%;
   }
-
+  #partners-text {
+    height: 270px;
+}
+.contact-form-container{
+  padding-top: 0;
+}
+.contact-section{
+  background-position-y: 49%;
+  background-position-x: 36%;
+}
   }
   
 

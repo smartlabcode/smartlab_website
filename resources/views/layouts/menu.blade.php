@@ -81,7 +81,7 @@
             <li class="nav-li nav-li-js"><a class="grey padding-right-0" href="{{route('logout')}}">@lang('menu.tenth_item')</a></li>
 
             @endauth
-            <div class="nav-top-mobile contain">
+            <div class="nav-top-mobile">
 
                 <p><span>Call: </span><span>+387 61 811 394</span> <span class="margin-right">+387 33 956 222</span></p>
                 <form action="/language" method="POST" class="mobile-language-form">

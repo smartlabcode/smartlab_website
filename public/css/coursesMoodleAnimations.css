@@ -384,7 +384,7 @@
     font-family: "Montserrat", sans-serif;
     cursor: pointer;
     border: none;
-    border-radius: 35px;
+    border-radius: 35px !important;
     width: 260px;
     height: 70px;
     font-size: 1.1em !important;
@@ -547,7 +547,7 @@ form select:focus,
     align-self: flex-end;
     margin-top: 20px;
     background-color: var(--button-bg-orange);
-    border: 1px solid var(--button-bg-orange);
+    border: 1px solid var(--button-bg-orange) !important;
     font-size: 1.1em !important;
     font-family: "Montserrat" ,sans-serif;
     margin-bottom: 100px;
@@ -1337,7 +1337,7 @@ form select:focus,
     }
 
     .background-section-one {
-        margin-top: 125px;
+        margin-top: 0px;
     }
 
     .--circle1 {

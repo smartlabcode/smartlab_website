@@ -31,9 +31,6 @@ a:not([href]):not([tabindex]):hover {
     color: rgb(20, 33, 61) !important;
 }
 
-nav .contain {
-    margin-bottom: 0 !important;
-}
 
 .nav-list {
     list-style-type: none;
@@ -349,14 +346,15 @@ nav .contain {
     .nav-top {
         display: none !important;
     }
-
     .nav-top-mobile {
         display: flex !important;
         flex-direction: column-reverse;
         align-items: center;
         color: var(--h1-color);
         flex-basis: 100%;
+        margin-bottom: 55px !important;
     }
+
 
 
 
