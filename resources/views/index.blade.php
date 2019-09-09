@@ -703,7 +703,6 @@
 <script>
   document.addEventListener("DOMContentLoaded", function(event) {
     if (window.innerWidth <= 425) {
-      console.log(window.innerWidth);
       document.querySelector(".section-two").setAttribute("id", "about");
     }
     var browser = (function() {
@@ -731,13 +730,12 @@
       let teamImg = document.querySelectorAll(".team-img img");
       document.querySelector(".join").style = "transform: translateX(0)";
       for (let i = 0; i < teamImg.length - 1; i++) {
-        console.log(teamImg[i])
         teamImg[i].style = "border-radius:170% 90% 150% 130%; height:300px; object-fit: cover; object-position: unset;"
       }
     }
     //blogs
     const animation = document.querySelector(".section-one-animation");
-
+    lottie.setQuality("low");
     let animationData = lottie.loadAnimation({
       container: animation, // the dom element that will contain the animation
       renderer: 'svg',
@@ -746,10 +744,11 @@
       path: "{{asset('/images/home-animation')}}" // the path to the animation json
 
     });
-    lottie.setQuality("medium");
+
     let ready = false;
     let loaderContainer = document.querySelector(".loader-container");
     animationData.addEventListener("DOMLoaded", function() {
+
       ready = true;
       lottie.play();
       loaderContainer.classList.add("loaderEnd");
@@ -758,7 +757,6 @@
       }, 1000)
 
     })
-    lottie.setQuality("medium");
     const options = {
       root: null,
       threshold: 0,
@@ -810,7 +808,6 @@
     for (let i = 0; i < partnerLogos.length; i++) {
       partnerLogosObserver.observe(partnerLogos[i]);
     }
-    console.log(partnerLogos);
     //blogs end
     // about us circle animation start 
     const aboutUs = document.querySelector("#aboutUs");
@@ -958,7 +955,6 @@
     testemonials.addEventListener('touchend', handleTouchEnd, false);
 
     function handleTouchEnd(evt) {
-      console.log(evt);
       interval = setInterval(testemonialsChange, 5000);
     }
 
@@ -988,7 +984,6 @@
 
           j++;
           if (j < indicators.length) {
-            console.log(j, indicators.length);
             for (let m = 0; m < indicators.length; m++) {
               indicators[m].classList.remove("indicator-opacity");
             }
@@ -996,7 +991,6 @@
             partnersChange(partners[j]);
           } else {
             j = 0;
-            console.log(j, indicators.length);
             for (let m = 0; m < indicators.length; m++) {
               indicators[m].classList.remove("indicator-opacity");
             }
@@ -1009,7 +1003,6 @@
           window.clearInterval(interval, 5000);
           if (j >= 1) {
             j--;
-            console.log(j, indicators.length);
             for (let m = 0; m < indicators.length; m++) {
               indicators[m].classList.remove("indicator-opacity");
             }

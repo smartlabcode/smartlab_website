@@ -199,10 +199,11 @@
             path: "{{asset('/images/online-courses-animation')}}" // the path to the animation json
 
         });
-        lottie.setQuality("medium");
+
         let ready = false;
         let loaderContainer = document.querySelector(".loader-container");
         animationData.addEventListener("DOMLoaded", function() {
+            lottie.setQuality("low");
             ready = true;
             lottie.play();
             loaderContainer.classList.add("loaderEnd");
@@ -210,7 +211,6 @@
                 loaderContainer.style.display = "none";
             }, 1000)
         })
-        lottie.setQuality("medium");
         const animationObserver = new IntersectionObserver(function(entries, animationObserver) {
             entries.forEach(entry => {
                 if (entry.isIntersecting && window.innerWidth > 768) {
@@ -364,7 +364,6 @@
                     currentPair--;
                 }
             }
-            console.log(imgOne, imgTwo, currentPair, images.length)
             addIndicator(currentPair);
             var imgOneSrc = images[imgOne];
             var imgTwoSrc = images[imgTwo];

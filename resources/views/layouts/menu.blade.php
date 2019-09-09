@@ -161,7 +161,6 @@
         })
 
         function navTopHide(scrollDown) {
-            console.log(scrollDown);
             if (scrollDown) {
                 nav.style.backgroundColor = "white";
                 nav.classList.add("shadow");
@@ -227,7 +226,6 @@
         navTopHide();
         if (window.innerWidth > 900) {
             window.addEventListener("scroll", function(event) {
-                /*console.log(this.oldScroll < this.scrollY);*/
                 navTopHide(this.oldScroll < this.scrollY);
                 this.oldScroll = this.scrollY;
 

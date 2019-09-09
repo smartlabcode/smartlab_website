@@ -259,8 +259,15 @@
             changeImage("next");
             clipPath(rightImg, leftImg);
         });
+        let currentPair = 0;
 
-        function addIndicator(left, right) {
+        function addIndicator(currentPair) {
+            for (let i = 0; i < images.length / 2; i++) {
+                sliderIndicator.childNodes[i].classList.remove("active-indicator");
+                sliderIndicator.childNodes[currentPair].classList.add("active-indicator");
+            }
+        }
+        /*function addIndicator(left, right) {
             for (let i = 0; i < images.length; i++) {
                 sliderIndicator.childNodes[i].classList.remove("active-indicator");
                 sliderIndicator.childNodes[left].classList.add("active-indicator");
@@ -268,18 +275,21 @@
                     sliderIndicator.childNodes[right].classList.add("active-indicator");
                 }
             }
-        }
+        }*/
         let imgOne = 0;
         let imgTwo = 1;
         let sliderIndicator = document.querySelector(".slider-indicator");
-        for (let i = 0; i < images.length; i++) {
+        for (let i = 0; i < images.length / 2; i++) {
             let span = document.createElement("span");
             sliderIndicator.appendChild(span);
         }
+        /*for (let i = 0; i < images.length; i++) {
+            let span = document.createElement("span");
+            sliderIndicator.appendChild(span);
+        }*/
 
-        function changeImage(par) {
+        /*function changeImage(par) {
             let currentLeft, currentRight;
-            console.log("left: ", imgOne, "right: ", imgTwo);
             leftImgOverlay.src = images[imgOne];
             rightImgOverlay.src = images[imgTwo];
 
@@ -306,6 +316,59 @@
 
             }
             addIndicator(imgOne, imgTwo);
+            var imgOneSrc = images[imgOne];
+            var imgTwoSrc = images[imgTwo];
+
+            document.getElementById("left-img").src = imgOneSrc;
+            document.getElementById("right-img").src = imgTwoSrc;
+        }*/
+        function changeImage(par) {
+            // todo prev par preskače ponekad
+            let currentLeft, currentRight;
+            leftImgOverlay.src = images[imgOne];
+            rightImgOverlay.src = images[imgTwo];
+
+
+            if (par == "next") {
+                imgOne = imgOne + 2;
+                imgTwo = imgTwo + 2;
+                if (imgOne > images.length - 1 && imgTwo > images.length - 1) {
+                    imgOne = 0;
+                    imgTwo = 1;
+                    currentPair = 0;
+                } else if (imgTwo > images.length - 1) {
+                    imgOne = images.length - 1;
+                    imgTwo = 0;
+                    currentPair = Math.floor((images.length - 1) / 2);
+                } else if (imgOne > images.length - 1) {
+                    imgOne = 0;
+                    imgTwo = 1;
+                    currentPair = 0;
+                } else {
+                    currentPair++;
+                }
+
+            }
+            if (par == "previous") {
+                imgTwo = imgTwo - 2;
+                imgOne = imgOne - 2;
+                if (imgOne < 0 && imgTwo < 0) {
+                    imgOne = images.length - 2;
+                    imgTwo = images.length - 1;
+                    currentPair = Math.floor((images.length - 1) / 2);
+                } else if (imgTwo < 0) {
+                    imgOne = images.length - 2;
+                    imgTwo = images.length - 1;
+                    currentPair = Math.floor((images.length - 1) / 2);
+                } else if (imgOne < 0) {
+                    imgOne = images.length - 1;
+                    imgTwo = 0;
+                    currentPair = Math.floor((images.length - 1) / 2);
+                } else {
+                    currentPair--;
+                }
+            }
+            addIndicator(currentPair);
             var imgOneSrc = images[imgOne];
             var imgTwoSrc = images[imgTwo];
 
