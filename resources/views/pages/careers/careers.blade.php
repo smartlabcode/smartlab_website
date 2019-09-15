@@ -126,7 +126,7 @@
             <br />
 
             <label for="uploadFileArea">@lang('careers.files')</label>
-            <div id="uploadFileArea" class="form-control" onclick="openUploadWindow()">
+            <div id="uploadFileArea" class="form-control">
                 <p id="uploadText">@lang('careers.click-to') <br />@lang('careers.upload-files')</p>
                 <input id="inputFile" type="file" name="files[]" onchange="fileUploaded()" multiple />
             </div>
@@ -151,6 +151,9 @@
         setTimeout(function() {
             loaderContainer.style.display = "none";
         }, 1000)
+        document.getElementById("uploadFileArea").addEventListener("click", function() {
+            openUploadWindow();
+        });
 
         function openUploadWindow() {
             document.getElementById("inputFile").click();
