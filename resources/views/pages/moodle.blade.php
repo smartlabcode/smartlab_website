@@ -49,6 +49,20 @@
                 <div class="popup-content">
                     <img id="popup-image" src="">
                 </div>
+                <div class="popup-description">
+                    <div>
+                        <h3 id="popup-header">Popup header</h3>
+                        <p id="popup-description">Popup text</p>
+                    </div>
+                </div>
+                <div class="popup-controls">
+                    <div class="popup-controls-prev" id="popup-prev">
+                        <p>&lt;</p>
+                    </div>
+                    <div class="popup-controls-next" id="popup-next">
+                        <p>&gt;</p>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -204,7 +218,14 @@
             '{{asset("/images/mockups/dl-fin-unsa-ba.jpg")}}',
             '{{asset("/images/mockups/edu-smartlab-ba.jpg")}}'
         ];
-
+        const header = [
+            "Popup header 1",
+            "Popup header 2"
+        ]
+        const description = [
+            "Popup description 1",
+            "Popup description 2"
+        ]
 
         let popupClickLeft = document.querySelector(".popup-click-left");
         let popupClickRight = document.querySelector(".popup-click-right");
@@ -217,6 +238,34 @@
         closePopup.addEventListener("click", popupClose);
         popupOverlay.addEventListener("click", popupClose);
 
+        let popupDescription = document.querySelector("#popup-description");
+        let popupHeader = document.querySelector("#popup-header");
+        let popupNext = document.querySelector("#popup-next");
+        let popupPrev = document.querySelector("#popup-prev");
+        let currentImage = 0;
+
+        closePopup.addEventListener("click", popupClose);
+        popupOverlay.addEventListener("click", popupClose);
+        popupNext.addEventListener("click", () => {
+            currentImage++;
+            console.log(currentImage)
+            if (currentImage >= description.length) {
+                popupContent(0);
+            } else {
+                popupContent(currentImage);
+            }
+
+        });
+        popupPrev.addEventListener("click", () => {
+            currentImage--;
+            if (currentImage < 0) {
+                popupContent(description.length - 1);
+            } else {
+                popupContent(currentImage);
+            }
+
+        });
+
         function popupClose() {
             popupImage.src = "";
             closePopup.style.display = "none";
@@ -226,11 +275,14 @@
         }
 
         function popupContent(imgIndex) {
+            currentImage = imgIndex;
             popupImage.src = images[imgIndex];
             closePopup.style.display = "inline-block";
             popup.classList.add("shadow-2");
             popupOverlay.style.width = "100vw";
             popupOverlay.style.height = "100vh";
+            popupHeader.innerText = header[imgIndex];
+            popupDescription.innerText = description[imgIndex];
         }
 
         let rightImg = document.querySelector("#right-img");

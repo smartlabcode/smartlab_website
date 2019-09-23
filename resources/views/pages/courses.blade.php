@@ -52,16 +52,16 @@
                 </div>
                 <div class="popup-description">
                     <div>
-                        <h3>Popup header</h3>
-                        <p>Popup text</p>
+                        <h3 id="popup-header">Popup header</h3>
+                        <p id="popup-description">Popup text</p>
                     </div>
-                    <div class="popup-controls">
-                        <div class="popup-controls-prev">
-                            <p>&lt;</p>
-                        </div>
-                        <div class="popup-controls-next">
-                            <p>&gt;</p>
-                        </div>
+                </div>
+                <div class="popup-controls">
+                    <div class="popup-controls-prev" id="popup-prev">
+                        <p>&lt;</p>
+                    </div>
+                    <div class="popup-controls-next" id="popup-next">
+                        <p>&gt;</p>
                     </div>
                 </div>
             </div>
@@ -220,7 +220,7 @@
         });
         animationObserver.observe(animation);
 
-        let courses = [
+        const courses = [
             "https://smartlab.ba/demowbt/project09/story_html5.html",
             "https://smartlab.ba/demowbt/project12/story_html5.html",
             "https://smartlab.ba/demowbt/project01/story_html5.html",
@@ -234,7 +234,7 @@
             "https://smartlab.ba/demowbt/project15/story_html5.html",
             "https://smartlab.ba/demowbt/project16/story_html5.html"
         ];
-        let images = [
+        const images = [
             "{{asset('/images/mockups/projects/project09.jpg')}}",
             "{{asset('/images/mockups/projects/project12.jpg')}}",
             "{{asset('/images/mockups/projects/project01.jpg')}}",
@@ -248,7 +248,34 @@
             "{{asset('/images/mockups/projects/project15.jpg')}}",
             "{{asset('/images/mockups/projects/project16.jpg')}}"
         ]
-
+        const header = [
+            "Popup header 1",
+            "Popup header 2",
+            "Popup header 3",
+            "Popup header 4",
+            "Popup header 5",
+            "Popup header 6",
+            "Popup header 7",
+            "Popup header 8",
+            "Popup header 9",
+            "Popup header 10",
+            "Popup header 11",
+            "Popup header 12"
+        ]
+        const description = [
+            "Popup description 1",
+            "Popup description 2",
+            "Popup description 3",
+            "Popup description 4",
+            "Popup description 5",
+            "Popup description 6",
+            "Popup description 7",
+            "Popup description 8",
+            "Popup description 9",
+            "Popup description 10",
+            "Popup description 11",
+            "Popup description 12"
+        ]
         let popupClickLeft = document.querySelector(".popup-click-left");
         let popupClickRight = document.querySelector(".popup-click-right");
         let popupVideo = document.querySelector(".popup-content");
@@ -256,9 +283,34 @@
         let closePopup = document.querySelector(".close");
         let popup = document.querySelector(".popup");
         let popupOverlay = document.querySelector(".popup-overlay");
+        let popupDescription = document.querySelector("#popup-description");
+        let popupHeader = document.querySelector("#popup-header");
         let sliderRight = document.querySelector(".slider-right");
+
+        let popupNext = document.querySelector("#popup-next");
+        let popupPrev = document.querySelector("#popup-prev");
+        let currentImage = 0;
         closePopup.addEventListener("click", popupClose);
         popupOverlay.addEventListener("click", popupClose);
+        popupNext.addEventListener("click", () => {
+            currentImage++;
+            console.log(currentImage)
+            if (currentImage >= description.length) {
+                popupContent(0);
+            } else {
+                popupContent(currentImage);
+            }
+
+        });
+        popupPrev.addEventListener("click", () => {
+            currentImage--;
+            if (currentImage < 0) {
+                popupContent(description.length - 1);
+            } else {
+                popupContent(currentImage);
+            }
+
+        });
 
         function popupClose() {
             popupImage.src = "";
@@ -269,11 +321,14 @@
         }
 
         function popupContent(imgIndex) {
+            currentImage = imgIndex;
             popupImage.src = courses[imgIndex];
             closePopup.style.display = "inline-block";
             popup.classList.add("shadow-2");
             popupOverlay.style.width = "100vw";
             popupOverlay.style.height = "100vh";
+            popupHeader.innerText = header[imgIndex];
+            popupDescription.innerText = description[imgIndex];
         }
 
         let rightImg = document.querySelector("#right-img");
@@ -370,6 +425,7 @@
 
             document.getElementById("left-img").src = imgOneSrc;
             document.getElementById("right-img").src = imgTwoSrc;
+
         }
         changeImage("demo");
 

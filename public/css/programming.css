@@ -237,10 +237,52 @@ font-size: 2em;
 
 .popup-container {
     width: 100%;
-    height: 0%;
+    max-height: 70vh;
     margin: 0 auto;
+    display: flex;
 }
-
+.popup-description{
+    flex-basis: 20%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.popup-description h3{
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+.popup-controls{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    width: 110px;
+    justify-content: space-between;
+}
+.popup-controls:hover{
+    cursor: pointer;
+}
+.popup-controls-prev:hover p, .popup-controls-next:hover p{
+    transform: scale(1.2);
+}
+.popup-controls div{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: var(--h1-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.popup-controls p{
+    margin-bottom: 0;
+    color: white;
+    font-size: 2em;
+    transition: 0.2s all ease-in-out;
+    font-family: "Montserrat" ,sans-serif;
+}
 .popup-overlay {
     position: fixed;
     top: 0;

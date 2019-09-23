@@ -51,6 +51,20 @@
                 <div class="popup-content iframe-container">
                     <iframe id="popup-image" src=""></iframe>
                 </div>
+                <div class="popup-description">
+                    <div>
+                        <h3 id="popup-header">Popup header</h3>
+                        <p id="popup-description">Popup text</p>
+                    </div>
+                </div>
+                <div class="popup-controls">
+                    <div class="popup-controls-prev" id="popup-prev">
+                        <p>&lt;</p>
+                    </div>
+                    <div class="popup-controls-next" id="popup-next">
+                        <p>&gt;</p>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -223,7 +237,7 @@
         var imgOne = 0;
         var imgTwo = 1;
 
-        var images = [
+        const images = [
             'https://www.youtube.com/embed/Q3cZOOmbJdE', // 0
             'https://www.youtube.com/embed/s5xDYxh2SAw', // 1
             'https://www.youtube.com/embed/V25yh0oI_y8', // 2
@@ -232,6 +246,24 @@
             'https://www.youtube.com/embed/W65Ywt3a04c',
             'https://www.youtube.com/embed/yoY-Hba4sZk'
         ];
+        const header = [
+            "Popup header 1",
+            "Popup header 2",
+            "Popup header 3",
+            "Popup header 4",
+            "Popup header 5",
+            "Popup header 6",
+            "Popup header 7"
+        ]
+        const description = [
+            "Popup description 1",
+            "Popup description 2",
+            "Popup description 3",
+            "Popup description 4",
+            "Popup description 5",
+            "Popup description 6",
+            "Popup description 7"
+        ]
         let youtube_video_id = [];
         let video_thumbnail = [];
         for (let i = 0; i < images.length; i++) {
@@ -246,8 +278,34 @@
         let closePopup = document.querySelector(".close");
         let popup = document.querySelector(".popup");
         let popupOverlay = document.querySelector(".popup-overlay");
+
+        let popupDescription = document.querySelector("#popup-description");
+        let popupHeader = document.querySelector("#popup-header");
+        let popupNext = document.querySelector("#popup-next");
+        let popupPrev = document.querySelector("#popup-prev");
+        let currentImage = 0;
+
         closePopup.addEventListener("click", popupClose);
         popupOverlay.addEventListener("click", popupClose);
+        popupNext.addEventListener("click", () => {
+            currentImage++;
+            console.log(currentImage)
+            if (currentImage >= description.length) {
+                popupContent(0);
+            } else {
+                popupContent(currentImage);
+            }
+
+        });
+        popupPrev.addEventListener("click", () => {
+            currentImage--;
+            if (currentImage < 0) {
+                popupContent(description.length - 1);
+            } else {
+                popupContent(currentImage);
+            }
+
+        });
 
         function popupClose() {
             popupVideo.src = "";
@@ -258,11 +316,14 @@
         }
 
         function popupContent(imgIndex) {
+            currentImage = imgIndex;
             popupVideo.src = images[imgIndex];
             closePopup.style.display = "inline-block";
             popup.classList.add("shadow-2");
             popupOverlay.style.width = "100vw";
             popupOverlay.style.height = "100vh";
+            popupHeader.innerText = header[imgIndex];
+            popupDescription.innerText = description[imgIndex];
         }
         popupClickLeft.addEventListener("click", () => popupContent(imgOne));
         popupClickRight.addEventListener("click", () => popupContent(imgTwo));
