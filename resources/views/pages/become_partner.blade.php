@@ -221,7 +221,7 @@
                 </div>
                 <div>
                     <label for="uploadFileArea" class="p-font">@lang('careers.files')</label>
-                    <div id="uploadFileArea" class="form-control" onclick="openUploadWindow()">
+                    <div id="uploadFileArea" class="form-control">
                         <p id="uploadText"><span>@lang('careers.click-to') <br />@lang('careers.upload-files')</span></p>
                         <input id="inputFile" type="file" name="files[]" onchange="fileUploaded()" multiple />
                     </div>
@@ -238,6 +238,10 @@
 </div>
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
+        document.getElementById("uploadFileArea").addEventListener("click", function() {
+            openUploadWindow();
+        });
+
         function openUploadWindow() {
             document.getElementById("inputFile").click();
         }

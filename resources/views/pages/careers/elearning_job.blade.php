@@ -121,7 +121,7 @@
             <br />
 
             <label for="uploadFileArea" class="p-font">@lang('careers-elearning.files')</label>
-            <div id="uploadFileArea" class="form-control" onclick="openUploadWindow()">
+            <div id="uploadFileArea" class="form-control">
                 <p id="uploadText">@lang('careers-elearning.click-to') <br /> @lang('careers-elearning.upload-files')</p>
                 <input id="inputFile" type="file" name="files[]" onchange="fileUploaded()" multiple />
             </div>
@@ -145,6 +145,10 @@
         function openUploadWindow() {
             document.getElementById("inputFile").click();
         }
+        document.getElementById("uploadFileArea").addEventListener("click", function() {
+            openUploadWindow();
+        });
+
         let loaderContainer = document.querySelector(".loader-container");
         loaderContainer.classList.add("loaderEnd");
         setTimeout(function() {

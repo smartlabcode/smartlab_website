@@ -48,6 +48,7 @@
             <div class="popup-container">
                 <div class="popup-content">
                     <img id="popup-image" src="">
+                    <img id="popup-image-back" src="">
                 </div>
                 <div class="popup-description">
                     <div>
@@ -231,6 +232,7 @@
         let popupClickRight = document.querySelector(".popup-click-right");
         let popupVideo = document.querySelector(".popup-content");
         let popupImage = document.querySelector("#popup-image");
+        let popupImageBack = document.querySelector("#popup-image-back");
         let closePopup = document.querySelector(".close");
         let popup = document.querySelector(".popup");
         let popupOverlay = document.querySelector(".popup-overlay");
@@ -248,20 +250,19 @@
         popupOverlay.addEventListener("click", popupClose);
         popupNext.addEventListener("click", () => {
             currentImage++;
-            console.log(currentImage)
             if (currentImage >= description.length) {
-                popupContent(0);
+                popupContent(0, "right");
             } else {
-                popupContent(currentImage);
+                popupContent(currentImage, "right");
             }
 
         });
         popupPrev.addEventListener("click", () => {
             currentImage--;
             if (currentImage < 0) {
-                popupContent(description.length - 1);
+                popupContent(description.length - 1, "left");
             } else {
-                popupContent(currentImage);
+                popupContent(currentImage, "left");
             }
 
         });
@@ -274,9 +275,59 @@
             popupOverlay.style.height = "0vh";
         }
 
-        function popupContent(imgIndex) {
+        function popupContent(imgIndex, side) {
+            let cssClasName = "slideFromLeft";
             currentImage = imgIndex;
             popupImage.src = images[imgIndex];
+            if (side == "right") {
+
+                if (imgIndex >= 1) {
+                    popupImageBack.src = images[imgIndex - 1];
+                }
+                if (imgIndex == 0) {
+                    popupImageBack.src = images[images.length - 1];
+                }
+                if (imgIndex == images.length) {
+                    popupImageBack.src = images[0];
+                }
+            } else {
+
+                if (imgIndex >= 0) {
+                    popupImageBack.src = images[imgIndex + 1];
+                }
+                if (imgIndex == images.length - 1) {
+                    popupImageBack.src = images[0];
+                }
+            }
+
+
+            if (side == "left") {
+                popupImage.removeAttribute("style");
+                popupImage.style.right = "-100%";
+
+                popupImage.classList.remove("slideFromLeft");
+                void popupHeader.offsetWidth;
+                cssClasName = "slideFromRight";
+
+            } else {
+                popupImage.removeAttribute("style");
+                popupImage.style.left = "-100%";
+
+                popupImage.classList.remove("slideFromRight");
+                void popupHeader.offsetWidth;
+                cssClasName = "slideFromLeft";
+            }
+            popupHeader.classList.remove("fadeIn");
+            popupDescription.classList.remove("fadeIn");
+            popupImage.classList.remove(cssClasName);
+            popupImage.classList.remove("fadeIn");
+            void popupHeader.offsetWidth;
+            void popupDescription.offsetWidth;
+            void popupImage.offsetWidth;
+            popupHeader.classList.add("fadeIn");
+            popupDescription.classList.add("fadeIn");
+            popupImage.classList.add(cssClasName);
+            popupImage.classList.add("fadeIn");
             closePopup.style.display = "inline-block";
             popup.classList.add("shadow-2");
             popupOverlay.style.width = "100vw";
@@ -298,8 +349,8 @@
             elem1.classList.add("circle-r");
             elem2.classList.add("circle-l");
         }
-        popupClickLeft.addEventListener("click", () => popupContent(imgOne));
-        popupClickRight.addEventListener("click", () => popupContent(imgTwo));
+        popupClickLeft.addEventListener("click", () => popupContent(imgOne, "left"));
+        popupClickRight.addEventListener("click", () => popupContent(imgTwo, "right"));
         let prev = document.querySelector("#prev");
         let next = document.querySelector("#next");
 
@@ -437,9 +488,9 @@
                 contact.style.height = 0;
             } else {
                 if (window.innerWidth <= 600) {
-                    contact.style.height = 115 + "%";
+                    contact.style.height = 1270 + "px";
                 } else {
-                    contact.style.height = 90 + "%";
+                    contact.style.height = 940 + "px";
                 }
 
             }

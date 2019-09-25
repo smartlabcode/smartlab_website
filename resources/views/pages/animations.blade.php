@@ -49,7 +49,8 @@
             <span class="close"> X </span>
             <div class="popup-container">
                 <div class="popup-content iframe-container">
-                    <iframe id="popup-image" src=""></iframe>
+                    <iframe id="popup-image" src="" style="opacity: 1;"></iframe>
+                    <img id="popup-image-back" src="" style="display: none;">
                 </div>
                 <div class="popup-description">
                     <div>
@@ -275,6 +276,7 @@
         let popupClickLeft = document.querySelector(".popup-click-left");
         let popupClickRight = document.querySelector(".popup-click-right");
         let popupVideo = document.querySelector("#popup-image");
+        let popupImageBack = document.querySelector("#popup-image-back");
         let closePopup = document.querySelector(".close");
         let popup = document.querySelector(".popup");
         let popupOverlay = document.querySelector(".popup-overlay");
@@ -289,20 +291,19 @@
         popupOverlay.addEventListener("click", popupClose);
         popupNext.addEventListener("click", () => {
             currentImage++;
-            console.log(currentImage)
             if (currentImage >= description.length) {
-                popupContent(0);
+                popupContent(0, "right");
             } else {
-                popupContent(currentImage);
+                popupContent(currentImage, "right");
             }
 
         });
         popupPrev.addEventListener("click", () => {
             currentImage--;
             if (currentImage < 0) {
-                popupContent(description.length - 1);
+                popupContent(description.length - 1, "left");
             } else {
-                popupContent(currentImage);
+                popupContent(currentImage, "left");
             }
 
         });
@@ -315,9 +316,47 @@
             popupOverlay.style.height = "0vh";
         }
 
-        function popupContent(imgIndex) {
+        function popupContent(imgIndex, side) {
+            let cssClasName = "slideFromLeft";
             currentImage = imgIndex;
             popupVideo.src = images[imgIndex];
+
+            /*if (imgIndex >= 1) {
+                popupImageBack.src = video_thumbnail[imgIndex - 1];
+            }
+            if (imgIndex == 0) {
+                popupImageBack.src = video_thumbnail[images.length - 1];
+            } else if (imgIndex == images.length) {
+                popupImageBack.src = video_thumbnail[0];
+            }*/
+
+            /*if (side == "left") {
+                popupVideo.removeAttribute("style");
+                popupVideo.style.right = "-100%";
+
+                popupVideo.classList.remove("slideFromLeft");
+                void popupVideo.offsetWidth;
+                cssClasName = "slideFromRight";
+
+            } else {
+                popupVideo.removeAttribute("style");
+                popupVideo.style.left = "-100%";
+
+                popupVideo.classList.remove("slideFromRight");
+                void popupVideo.offsetWidth;
+                cssClasName = "slideFromLeft";
+            }*/
+            popupHeader.classList.remove("fadeIn");
+            popupDescription.classList.remove("fadeIn");
+            //popupVideo.classList.remove(cssClasName);
+            //popupVideo.classList.remove("fadeIn");
+            void popupHeader.offsetWidth;
+            void popupDescription.offsetWidth;
+            //void popupVideo.offsetWidth;
+            popupHeader.classList.add("fadeIn");
+            popupDescription.classList.add("fadeIn");
+            //popupVideo.classList.add(cssClasName);
+            //popupVideo.classList.add("fadeIn");
             closePopup.style.display = "inline-block";
             popup.classList.add("shadow-2");
             popupOverlay.style.width = "100vw";
@@ -478,9 +517,9 @@
                 contact.style.height = 0;
             } else {
                 if (window.innerWidth <= 600) {
-                    contact.style.height = 115 + "%";
+                    contact.style.height = 1270 + "px";
                 } else {
-                    contact.style.height = 90 + "%";
+                    contact.style.height = 940 + "px";
                 }
 
             }

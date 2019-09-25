@@ -118,7 +118,7 @@
             <br />
 
             <label for="uploadFileArea" class="p-font">@lang('careers-developer.files')</label>
-            <div id="uploadFileArea" class="form-control" onclick="openUploadWindow()">
+            <div id="uploadFileArea" class="form-control">
                 <p id="uploadText">@lang('careers-developer.click-to') <br /> @lang('careers-developer.upload-files')</p>
                 <input id="inputFile" type="file" name="files[]" onchange="fileUploaded()" multiple />
             </div>
@@ -143,6 +143,9 @@
             document.getElementById("inputFile").click();
         }
 
+        document.getElementById("uploadFileArea").addEventListener("click", function() {
+            openUploadWindow();
+        });
         let loaderContainer = document.querySelector(".loader-container");
         loaderContainer.classList.add("loaderEnd");
         setTimeout(function() {
@@ -165,7 +168,6 @@
                 sectionThree.style.height = 0;
             }
         });
-        console.log(sectionThree.clientHeight, applyButton)
     });
 </script>
 @endsection
