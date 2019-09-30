@@ -1,10 +1,6 @@
 <!-- Extend main layout -->
 @extends('layouts.app')
 <style>
-    nav {
-        display: none !important;
-    }
-
     :root {
         --shadow-color: rgba(0, 53, 145, 0.15);
         --button-bg-color: #4885fa;
