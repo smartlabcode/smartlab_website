@@ -263,12 +263,13 @@ font-size: 2em;
     display: flex;
 }
 .popup-description{
-    flex-basis: 20%;
+    flex-basis: 0%;
+    overflow: hidden;
     display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    /*padding: 10px;*/
 }
 .popup-description h3{
     font-family: "Montserrat", sans-serif;
@@ -282,6 +283,7 @@ font-size: 2em;
     display: flex;
     width: 110px;
     justify-content: space-between;
+    z-index: 111;
 }
 .popup-controls:hover{
     cursor: pointer;
@@ -830,8 +832,8 @@ form select:focus,
 }
 
 .tools-img img {
-    width: 140px;
-    height: 75px;
+    max-width: 130px;
+    max-height: 75px;
     margin-top: 1rem;
     flex-basis: 100%;
     object-fit: contain;

@@ -49,7 +49,7 @@
             <span class="close"> X </span>
             <div class="popup-container">
                 <div class="popup-content iframe-container">
-                    <iframe id="popup-image" src="" style="opacity: 1;"></iframe>
+                    <iframe id="popup-image" src="" style="opacity: 1; position: absolute;"></iframe>
                     <img id="popup-image-back" src="" style="display: none;">
                 </div>
                 <div class="popup-description">

@@ -20,7 +20,7 @@
     </div>
 
     <div class="nav-bot contain">
-        <a href="{{asset('/')}}"><img class="nav-logo" src="{{asset('/images/smartlab-logo.svg')}}"></a>
+        <a href="{{asset('/')}}"><img class="nav-logo" src="{{asset('/images/smartlab-logo.svg')}}" alt="smartlab logo"></a>
         <div class="nav-button" id="nav-button">
             <div class="nav-button-inner" id="nav-button-inner"></div>
             <div class="nav-button-inner-before" id="nav-button-inner-before"></div>
@@ -61,7 +61,7 @@
             </li>
             <li class="nav-li nav-li-js">
                 <!-- Open link in new tab and set its language depending on the current language in main website -->
-                <a class="padding-right-0 grey" href="{{ env("BLOG_DOMAIN")  }}/@if(App::getlocale()){{App::getlocale()}}@else en @endif" target="_blank">@lang('menu.fourth_item')</a>
+                <a class="padding-right-0 grey" href="{{ env("BLOG_DOMAIN")  }}/@if(App::getlocale()){{App::getlocale()}}@else en @endif" target="_blank" rel="noopener">@lang('menu.fourth_item')</a>
             </li>
             <li class="nav-li nav-li-js last same-page-link"><a class="padding-right-0 grey" href="{{asset('/#contact')}}">@lang('menu.fifth_item')</a></li>
 
@@ -229,6 +229,8 @@
                 navTopHide(this.oldScroll < this.scrollY);
                 this.oldScroll = this.scrollY;
 
+            }, {
+                passive: true
             });
         }
 

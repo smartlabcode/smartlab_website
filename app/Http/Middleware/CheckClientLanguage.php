@@ -23,7 +23,7 @@ class CheckClientLanguage
         // if user didnt set language manually use his default browser language
         if (!isset($lang)) {
 
-            $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+            $lang = isset($_SERVER["HTTP_ACCEPT_LANGUAGE"]) ? substr($_SERVER["HTTP_ACCEPT_LANGUAGE"], 0, 2) : '';
 
             // check language
             if ($lang == 'bs' || $lang == 'hr' || $lang == 'sr') {

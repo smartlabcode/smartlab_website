@@ -280,8 +280,8 @@
           <div class="team-img">
             <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/irfo-k.jpg')}}" alt="Irfan K photo">
           </div>
-          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1">
-          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1">
+          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1" alt="team background">
+          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1" alt="team background">
         </div>
         <div class="team-description">
           <h3>Irfan K.</h3>
@@ -300,8 +300,8 @@
           <div class="team-img">
             <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/ibro.jpg')}}" alt="Ibrahim Z photo">
           </div>
-          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue2">
-          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange2">
+          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue2" alt="team background">
+          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange2" alt="team background">
         </div>
         <div class="team-description">
           <h3>Ibrahim Z.</h3>
@@ -320,8 +320,8 @@
           <div class="team-img">
             <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/hare.jpg')}}" alt="Haris M photo">
           </div>
-          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue3">
-          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange3">
+          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue3" alt="team background">
+          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange3" alt="team background">
         </div>
         <div class="team-description">
           <h3>Haris M.</h3>
@@ -340,8 +340,8 @@
           <div class="team-img">
             <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/rizah.jpg')}}" alt="Rizah K photo">
           </div>
-          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue4">
-          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange4">
+          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue4" alt="team background">
+          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange4" alt="team background">
         </div>
         <div class="team-description">
           <h3>Rizah K.</h3>
@@ -360,8 +360,8 @@
           <div class="team-img">
             <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/amer.jpg')}}" alt="Amer M photo">
           </div>
-          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1">
-          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1">
+          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1" alt="team background">
+          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1" alt="team background">
         </div>
         <div class="team-description">
           <h3>Amer M.</h3>
@@ -380,8 +380,8 @@
           <div class="team-img">
             <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/irfo-s.jpg')}}" alt="Irfan S photo">
           </div>
-          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue2">
-          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange2">
+          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue2" alt="team background">
+          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange2" alt="team background">
         </div>
         <div class="team-description">
           <h3>Irfan S.</h3>
@@ -400,8 +400,8 @@
           <div class="team-img">
             <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/aida.jpg')}}" alt="Aida R photo">
           </div>
-          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue3">
-          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange3">
+          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue3" alt="team background">
+          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange3" alt="team background">
         </div>
         <div class="team-description">
           <h3>Aida R.</h3>
@@ -420,8 +420,8 @@
           <div class="team-img">
             <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/emir.jpg')}}" alt="Emir M photo">
           </div>
-          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue4">
-          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange4">
+          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue4" alt="team background">
+          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange4" alt="team background">
         </div>
         <div class="team-description">
           <h3>Emir M.</h3>
@@ -440,8 +440,8 @@
           <div class="team-img">
             <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/florin.jpg')}}" alt="Florin B photo">
           </div>
-          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1">
-          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1">
+          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1" alt="team background">
+          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1" alt="team background">
         </div>
         <div class="team-description">
           <h3>Florin B.</h3>
@@ -460,8 +460,8 @@
           <div class="team-img">
             <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/mirza.jpg')}}" alt="Mirza O photo">
           </div>
-          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue2">
-          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange2">
+          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue2" alt="team background">
+          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange2" alt="team background">
         </div>
         <div class="team-description">
           <h3>Mirza O.</h3>
@@ -482,8 +482,8 @@
           <div class="team-img">
             <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/emina.jpg')}}" alt="Emina K photo">
           </div>
-          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue3">
-          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange3">
+          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue3" alt="team background">
+          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange3" alt="team background">
         </div>
         <div class="team-description">
           <h3>Emina K.</h3>
@@ -503,8 +503,8 @@
           <div class="team-img blank">
             <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/team-blank.svg')}}" alt="Blank photo, could be you">
           </div>
-          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue4">
-          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange4">
+          <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue4" alt="team background">
+          <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange4" alt="team background">
         </div>
         <div class="team-description">
           <h3>You?</h3>
@@ -535,21 +535,21 @@
         </div>
       </div>
       <div class="partners-images">
-        <a href="https://www.thetrainingterminal.co/" target="_blank"><img data-src="{{asset('/images/partners-logo/TheTrainingTerminal-2.png')}}" alt="TrainingTerminal logo" /></a>
-        <a href="https://www.fkc-online.com/index.php/de" target="_blank"><img data-src="{{asset('/images/partners-logo/FKC-2.png')}}" alt="Ficher, Knoblauch & co logo" /></a>
-        <a href="https://www.leanscape.io/" target="_blank"><img data-src="{{asset('/images/partners-logo/leanscape-2.png')}}" alt="leanscape logo" /></a>
-        <a href="https://wellspark.co.uk/" target="_blank"><img data-src="{{asset('/images/partners-logo/WELLS-PARK-2.png')}}" alt="wells park communications logo" /></a>
-        <a href="http://de.loop-tv.eu/" target="_blank"><img data-src="{{asset('/images/partners-logo/loop-TV-2.png')}}" alt="loop tv logo" /></a>
-        <a href="https://zomppp.de/" target="_blank"><img data-src="{{asset('/images/partners-logo/zomppp-2.png')}}" alt="zomppp logo" /></a>
+        <a href="https://www.thetrainingterminal.co/" target="_blank" rel="noopener"><img data-src="{{asset('/images/partners-logo/TheTrainingTerminal-2.png')}}" alt="TrainingTerminal logo" /></a>
+        <a href="https://www.fkc-online.com/index.php/de" target="_blank" rel="noopener"><img data-src="{{asset('/images/partners-logo/FKC-2.png')}}" alt="Ficher, Knoblauch & co logo" /></a>
+        <a href="https://www.leanscape.io/" target="_blank" rel="noopener"><img data-src="{{asset('/images/partners-logo/leanscape-2.png')}}" alt="leanscape logo" /></a>
+        <a href="https://wellspark.co.uk/" target="_blank" rel="noopener"><img data-src="{{asset('/images/partners-logo/WELLS-PARK-2.png')}}" alt="wells park communications logo" /></a>
+        <a href="http://de.loop-tv.eu/" target="_blank" rel="noopener"><img data-src="{{asset('/images/partners-logo/loop-TV-2.png')}}" alt="loop tv logo" /></a>
+        <a href="https://zomppp.de/" target="_blank" rel="noopener"><img data-src="{{asset('/images/partners-logo/zomppp-2.png')}}" alt="zomppp logo" /></a>
         <a><img data-src="{{asset('/images/partners-logo/UAP-QMS-2.png')}}" alt="uap managment system logo" /></a>
-        <a href="https://www.totemlearning.com/" target="_blank"><img data-src="{{asset('/images/partners-logo/tottem-2.png')}}" alt="totem learning logo" /></a>
-        <a href="https://www.safetycourses4u.com/" target="_blank"><img data-src="{{asset('/images/partners-logo/safetycourses4u-2.png')}}" alt="safety courses for you logo" /></a>
-        <a href="http://dimenzijaplus.ba/" target="_blank"><img data-src="{{asset('images/partners-logo/dimenzija_plus-2.png')}}/" alt="dimenzija plus logo" /></a>
-        <a href="http://tvsa.ba/" target="_blank"><img data-src="{{asset('/images/partners-logo/TVSA-2.png')}}" alt="televizija sarajevo logo" /></a>
-        <a href="https://eloomi.com/" target="_blank"><img data-src="{{asset('/images/partners-logo/eloomi-4.png')}}" alt="eloomi logo" /></a>
-        <a href="https://fin.unsa.ba/" target="_blank"><img data-src="{{asset('/images/partners-logo/FIN-2.png')}}" alt="fakultet islamskih nauka logo" /></a>
+        <a href="https://www.totemlearning.com/" target="_blank" rel="noopener"><img data-src="{{asset('/images/partners-logo/tottem-2.png')}}" alt="totem learning logo" /></a>
+        <a href="https://www.safetycourses4u.com/" target="_blank" rel="noopener"><img data-src="{{asset('/images/partners-logo/safetycourses4u-2.png')}}" alt="safety courses for you logo" /></a>
+        <a href="http://dimenzijaplus.ba/" target="_blank" rel="noopener"><img data-src="{{asset('images/partners-logo/dimenzija_plus-2.png')}}/" alt="dimenzija plus logo" /></a>
+        <a href="http://tvsa.ba/" target="_blank" rel="noopener"><img data-src="{{asset('/images/partners-logo/TVSA-2.png')}}" alt="televizija sarajevo logo" /></a>
+        <a href="https://eloomi.com/" target="_blank" rel="noopener"><img data-src="{{asset('/images/partners-logo/eloomi-4.png')}}" alt="eloomi logo" /></a>
+        <a href="https://fin.unsa.ba/" target="_blank" rel="noopener"><img data-src="{{asset('/images/partners-logo/FIN-2.png')}}" alt="fakultet islamskih nauka logo" /></a>
         <a><img data-src="{{asset('/images/partners-logo/maisonprive-2.png')}}" alt="maison prive logo" /></a>
-        <a href="http://www.biramoporavak.com/" target="_blank"><img data-src="{{asset('/images/partners-logo/biramoporavak-2.png')}}" alt="biramo oporavak logo" /></a>
+        <a href="http://www.biramoporavak.com/" target="_blank" rel="noopener"><img data-src="{{asset('/images/partners-logo/biramoporavak-2.png')}}" alt="biramo oporavak logo" /></a>
         <a><img data-src="{{asset('/images/partners-logo/BDfD-2.png')}}" alt="bosnian doctors for disabled logo" /></a>
       </div>
     </div>
@@ -627,11 +627,11 @@
 
     @foreach ($blogs as $blog)
 
-    <a href="{{env('BLOG_DOMAIN')}}/blog/{{$blog->id}}/{{App::getlocale()}}" target="_blank" class="blog">
+    <a href="{{env('BLOG_DOMAIN')}}/blog/{{$blog->id}}/{{App::getlocale()}}" target="_blank" rel="noopener" class="blog">
       <div class="img-container">
         <div class="img-container-overlay">
         </div>
-        <img src='{{asset("$blog->image_path")}}' alt="blog" />
+        <img data-src='{{asset("$blog->image_path")}}' alt="blog background image" class="blog-image" />
         <svg class="wave" viewBox="0 0 500 500">
           <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
         </svg>
@@ -647,7 +647,7 @@
     @endforeach
 
     <div class="blog-button">
-      <a href="{{env('BLOG_DOMAIN')}}/{{App::getlocale()}}" target="_blank"><button class="button">@lang('index.blog_button')</button></a>
+      <a href="{{env('BLOG_DOMAIN')}}/{{App::getlocale()}}" target="_blank" rel="noopener"><button class="button">@lang('index.blog_button')</button></a>
     </div>
 
   </div>
@@ -864,8 +864,18 @@
       }, interval);
     }
     // about us circle animation end
-
-
+    let blogImages = document.querySelectorAll(".blog-image");
+    const blogImagesObserer = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.src = entry.target.dataset.src;
+          blogImagesObserer.unobserve(entry.target);
+        }
+      });
+    }, options);
+    for (let i = 0; i < blogImages.length; i++) {
+      blogImagesObserer.observe(blogImages[i]);
+    }
     let partnersText = document.querySelector("#partners-text");
     let partnersImage = document.querySelector("#partners-image");
     let partnersName = document.querySelector("#partners-name");
@@ -950,9 +960,15 @@
       return evt.touches || // browser API
         evt.originalEvent.touches; // jQuery
     }
-    testemonials.addEventListener('touchstart', handleTouchStart, false);
-    testemonials.addEventListener('touchmove', handleTouchMove, false);
-    testemonials.addEventListener('touchend', handleTouchEnd, false);
+    testemonials.addEventListener('touchstart', handleTouchStart, {
+      passive: true
+    });
+    testemonials.addEventListener('touchmove', handleTouchMove, {
+      passive: true
+    });
+    testemonials.addEventListener('touchend', handleTouchEnd, {
+      passive: true
+    });
 
     function handleTouchEnd(evt) {
       interval = setInterval(testemonialsChange, 5000);

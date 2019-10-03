@@ -9,7 +9,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    <meta name="Description" content="In our everyday work, everything is related to 'pure creativity, Articulate design and development, Moodle LMS, custom eLearning solutions and much more'. We are ready to take on any challenge! Using our highly collaborative design approach, we'll build your custom solution from the ground up.We are a team of creative professionals and designers who are dedicated to graphics, websites and educational solutions.We have the will, skills and commitment to help our customers to stand out from the crowd of other organisations and companies.Creation of online and offline content is our specialty. Regardless of which type and size of projects we do, they are extremely important to us and we do our best that the results of our work contribute to your success.">
     <title>{{ config('app.name', 'Smartlab') }}</title>
     <link href="{{ asset('css/loader.min.css') }}" rel="stylesheet">
     <!-- Scripts -->
@@ -17,16 +17,21 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:300,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://linkedin.com">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.min.css') }}" rel="stylesheet">
-    <!--<link href="{{ asset('css/font.min.css') }}" rel="stylesheet">-->
     <link href="{{ asset('css/menu.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/footer.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.min.css') }}" rel="stylesheet">
+
+
+
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" href="/images/icons/fav.png">
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114227726-1"></script>
     <script>
@@ -215,5 +220,26 @@ https://px.ads.linkedin.com/collect/?pid=1480233&fmt=gif
     <script src="{{ asset('/js/app.js') }}"></script>
 
 </body>
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            xfbml: true,
+            version: 'v4.0'
+        });
+    };
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<!-- Your customer chat code -->
+<div class="fb-customerchat" attribution=setup_tool page_id="1415224878505764" theme_color="#437efa">
+</div>
 
 </html>
