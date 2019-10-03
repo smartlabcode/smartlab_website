@@ -239,7 +239,7 @@ https://px.ads.linkedin.com/collect/?pid=1480233&fmt=gif
     }(document, 'script', 'facebook-jssdk'));
 </script>
 <!-- Your customer chat code -->
-<div class="fb-customerchat" attribution=setup_tool page_id="1415224878505764" theme_color="#437efa">
+<div class="fb-customerchat" attribution=setup_tool page_id="1415224878505764" theme_color="#437efa" greeting_dialog_display='hide'>
 </div>
 
 </html>
