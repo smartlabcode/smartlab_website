@@ -38,7 +38,8 @@ class ContactController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function handleContactInfo(Request $request) {
+    public function handleContactInfo(Request $request)
+    {
 
         // TODO issues with try/catch block and data validation
         // set request data to session so that it can be used for old input if neccessary
@@ -75,7 +76,8 @@ class ContactController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function handleBussinessInfo(Request $request) {
+    public function handleBussinessInfo(Request $request)
+    {
 
         // TODO issues with try/catch block and data validation
         // set data to session in order to use in input fields if invalid data is sent
@@ -108,12 +110,12 @@ class ContactController extends Controller
         if (file_exists($_FILES['files']['tmp_name'][0])) {
 
             // generate new folder name
-            $folderName = rand(1,10000);
+            $folderName = rand(1, 10000);
 
             // make folder where contact files will temporary be located
-            Storage::makeDirectory("/" .$folderName);
+            Storage::makeDirectory("/" . $folderName);
             // set path where tou store uploaded files
-            $path = storage_path()  ."/app/" . $folderName;
+            $path = storage_path()  . "/app/" . $folderName;
             $this->uploader->uploadFiles($_FILES, $path);
             // $attachment = true;
             $contact->file_path = "/" . $folderName . '/contact.zip';
@@ -138,7 +140,8 @@ class ContactController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function handleDemoInfo(Request $request) {
+    public function handleDemoInfo(Request $request)
+    {
 
         // TODO issues with try/catch block and data validation
         // set request data to session so that it can be used for old input if neccessary
@@ -179,7 +182,8 @@ class ContactController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function handleCareersInfo(Request $request) {
+    public function handleCareersInfo(Request $request)
+    {
 
         // TODO issues with try/catch block and data validation
         // set request data to session so that it can be used for old input if neccessary
@@ -202,7 +206,7 @@ class ContactController extends Controller
         $contact->lastname = $request->input('lastname');
         $contact->email = $request->input('email');
         $contact->phone_number = $request->input('phone_number');
-       // $contact->subject = $request->input('subject');
+        // $contact->subject = $request->input('subject');
         $contact->message = $request->input('message');
         $contact->category = $request->input('category');
 
@@ -210,12 +214,12 @@ class ContactController extends Controller
         if (file_exists($_FILES['files']['tmp_name'][0])) {
 
             // generate new folder name
-            $folderName = rand(1,10000);
+            $folderName = rand(1, 10000);
 
             // make folder where contact files will temporary be located
-            Storage::makeDirectory("/" .$folderName);
+            Storage::makeDirectory("/" . $folderName);
             // set path where tou store uploaded files
-            $path = storage_path()  ."/app/" . $folderName;
+            $path = storage_path()  . "/app/" . $folderName;
             $this->uploader->uploadFiles($_FILES, $path);
             // $attachment = true;
             $contact->file_path = "/" . $folderName . '/contact.zip';
@@ -232,4 +236,3 @@ class ContactController extends Controller
         return redirect('/pages/careers#aboveSectionThree')->with('message', 'Career request successfully sent.');
     }
 }
-

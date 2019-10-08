@@ -2,7 +2,7 @@
 
 <style>
     #saveTranslationsButton {
-        float:right;
+        float: right;
     }
 
     #translationsContainer {
@@ -13,7 +13,7 @@
 
     #translationsContainer table {
         width: 600px;
-        box-shadow: 2px 2px 2px rgba(150,150,150, 0.5), -2px 0 2px rgba(150,150,150, 0.5);
+        box-shadow: 2px 2px 2px rgba(150, 150, 150, 0.5), -2px 0 2px rgba(150, 150, 150, 0.5);
     }
 
     #translationsContainer textarea {
@@ -22,14 +22,16 @@
         height: 70px;
     }
 </style>
-
+@section('css')
+<link href="{{ asset('css/app.min.css') }}" rel="stylesheet">
+@endsection
 @section('content')
 
-    @include('parts.break_space')
+@include('parts.break_space')
 
-    @include('parts.error_success')
+@include('parts.error_success')
 
-    <div class="listTable">
+<div class="listTable">
 
     <div id="translationsContainer">
 
@@ -41,35 +43,35 @@
             <table class="table table-striped table-light">
 
                 <thead>
-                <tr>
-                    <th scope="col">Key</th>
-                    <th scope="col">Value</th>
-                </tr>
+                    <tr>
+                        <th scope="col">Key</th>
+                        <th scope="col">Value</th>
+                    </tr>
                 </thead>
 
                 <tbody>
 
-                 @foreach($data as $key => $item)
+                    @foreach($data as $key => $item)
 
-                        <tr>
-                            <td>{{$key}}</td>
-                            <td>
-                                <textarea id="{{$key}}" name="{{$key}}">{{$item}}</textarea>
-                            </td>
-                        </tr>
+                    <tr>
+                        <td>{{$key}}</td>
+                        <td>
+                            <textarea id="{{$key}}" name="{{$key}}">{{$item}}</textarea>
+                        </td>
+                    </tr>
 
-                 @endforeach
+                    @endforeach
 
                 </tbody>
             </table>
 
-            <input type="hidden" name="file_name" value="{{$page}}"/>
+            <input type="hidden" name="file_name" value="{{$page}}" />
             <button id="saveTranslationsButton" type="submit" class="btn btn-primary">Save</button>
 
         </form>
 
     </div>
 
-    </div>
+</div>
 
 @endsection

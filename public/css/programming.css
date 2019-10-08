@@ -18,7 +18,9 @@ body {
 html {
     overflow-x: hidden !important;
 }
-
+main{
+    padding-bottom: 460px;
+}
 .bold {
     font-weight: bold;
 }
@@ -115,12 +117,12 @@ background-position-y: -200px;*/
 .section-one-text ul {
     padding-top: 0px;
     padding-left: 0px;
-    list-style-position: inside;
     list-style-type: circle;
+    padding-left: 20px;
 }
-.section-one-text ul li{
+/*.section-one-text ul li{
     white-space: nowrap;
-}
+}*/
 /*.section-one-text h2,
 .section-one-text h1 {
 font-size: 2em;
@@ -327,12 +329,12 @@ font-size: 2em;
     height: 50px;
     border-radius: 50%;
     background-color: var(--button-bg-orange);
-    color: white !important;
-    opacity: 1 !important;
+    color: #fff!important;
+    opacity: 1!important;
     padding-top: 14px;
     padding-left: 18px;
-    transition: 0.2s transform ease-in-out;
-
+    transition: .2s transform ease-in-out;
+    font-size: 1.5em;
 }
 
 .close:hover {
@@ -1244,8 +1246,8 @@ form select:focus,
 
     .xliff-background {
         width: 170vw;
-    top: -44%;
-    transform: scaleY(.9);
+        top: -24%;
+        transform: scaleY(.9);
     }
 
     .xliff-background-container {
@@ -1267,7 +1269,7 @@ form select:focus,
     }
 
     .xliff-item .p-font {
-        font-size: 1em;
+        font-size: 1.5em;
     }
 
     .xliff-item {
@@ -1386,6 +1388,9 @@ form select:focus,
 }
 
 @media screen and (max-width: 425px) {
+    #next{
+        right: -15px;
+    }
     .button {
         font-size: 1.2em !important;
     }
@@ -1432,7 +1437,7 @@ form select:focus,
 
     .xliff-background {
         width: 604%;
-        top: -11%;
+        top: -8%;
         left: -125%;
     }
 
@@ -1455,7 +1460,11 @@ form select:focus,
 
 
 }
-
+@media screen and (max-width: 375px){
+    .xliff-background{
+        width: 681%;
+    }
+}
 @media screen and (max-width: 360px) {
     .section-one {
         top: 0;
@@ -1491,7 +1500,7 @@ form select:focus,
     }
 
     .xliff-background {
-        width: 747%;
+        width: 793%;
         top: -10%;
     }
 
@@ -1508,7 +1517,12 @@ form select:focus,
     .secTwoBg4 {
         top: 0;
     }
-
-
-
+}
+@media screen and (max-width: 360px){
+    #prev{
+        left: -22px;
+    }
+    #next{
+        right: -15px;
+    }
 }

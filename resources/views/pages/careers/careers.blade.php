@@ -1,7 +1,8 @@
 @extends('layouts.app')
-
-@section('content')
+@section('css')
 <link href="{{ asset('css/careers.min.css') }}" rel="stylesheet">
+@endsection
+@section('content')
 <!-- TODO dont delete this-->
 <!--@include('parts.break_space')-->
 
@@ -142,8 +143,8 @@
     </form>
 
 </section>
-
-
+@endsection
+@section('js')
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
         let loaderContainer = document.querySelector(".loader-container");
@@ -167,5 +168,4 @@
         }
     })
 </script>
-
 @endsection

@@ -1,5 +1,7 @@
 /* SECTION ONE */
-
+main{
+    padding-bottom: 460px;
+}
 .iframe-container {
     position: relative;
     overflow: hidden;
@@ -8,7 +10,7 @@
 
 .iframe-container iframe {
     position: absolute !important;
-    bottom: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     border: 0;
@@ -148,6 +150,7 @@
     padding-top: 14px;
     padding-left: 18px;
     transition: 0.2s transform ease-in-out;
+    font-size: 1.5em;
 }
 
 .close:hover {
@@ -1290,6 +1293,9 @@ form select:focus,
 }
 
 @media screen and (max-width: 425px) {
+    #next{
+        right: -15px;
+    }
     .button {
         font-size: 1.2em !important;
     }
@@ -1403,5 +1409,13 @@ form select:focus,
 
     .secTwoBg4 {
         top: 0;
+    }
+}
+@media screen and (max-width: 360px){
+    #prev{
+        left: -22px;
+    }
+    #next{
+        right: -15px;
     }
 }

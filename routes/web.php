@@ -60,7 +60,7 @@ Route::get('pages/courses', 'PagesController@showCoursesPage');
 Route::get('pages/animations', 'PagesController@showAnimationsPage');
 Route::get('pages/programming', 'PagesController@showProgrammingPage');
 Route::get('pages/moodle', 'PagesController@showMoodlePage');
-
+Route::get('pages/project', 'PagesController@showProjectPage');
 // TODO new routes
 Route::get('pages/careers', 'PagesController@showCareersPage');
 Route::get('pages/careers/elearning', 'PagesController@showCareersElearningPage');

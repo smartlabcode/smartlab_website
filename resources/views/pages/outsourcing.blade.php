@@ -1,7 +1,8 @@
 @extends('layouts.app')
-
-@section('content')
+@section('css')
 <link href="{{ asset('css/outsourcing.min.css') }}" rel="stylesheet">
+@endsection
+@section('content')
 <!--@include('parts.break_space')-->
 <div class="loader-container">
     <div class="css-animation-container">
@@ -1669,6 +1670,8 @@
     </div>
 
 </section>
+@endsection
+@section('js')
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
         let loaderContainer = document.querySelector(".loader-container");
@@ -1678,5 +1681,5 @@
         }, 1000)
     })
 </script>
-<script type="module" src=" {{ asset('/js/test.js') }}"></script>
+<script type="module" src=" {{ asset('/js/test.min.js') }}"></script>
 @endsection

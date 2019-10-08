@@ -1,11 +1,10 @@
 @extends('layouts.app')
-
-@section('content')
+@section('css')
 <link href="{{ asset('css/jobs.min.css') }}" rel="stylesheet">
+@endsection
+@section('content')
 <!-- TODO dont delete this-->
 @include('parts.break_space')
-
-
 <!-- Join our team section -->
 <div class="loader-container">
     <div class="css-animation-container">
@@ -138,8 +137,8 @@
     </form>
 
 </section>
-
-
+@endsection
+@section('js')
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
         function openUploadWindow() {
@@ -174,7 +173,4 @@
         console.log(sectionThree.clientHeight, applyButton)
     });
 </script>
-
-
-
 @endsection

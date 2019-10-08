@@ -27,7 +27,7 @@
                 <div>
                     <img src="{{asset('/images/footer/social-icons/mail.svg')}}" alt="email" />
                     <p>
-                        <a href=" mailto:hello@smartlab.ba">hello@smartlab.ba</a>
+                        <a href=" mailto:hello&#64;smartlab.ba">hello&#64;smartlab.ba</a>
                     </p>
                 </div>
             </div>

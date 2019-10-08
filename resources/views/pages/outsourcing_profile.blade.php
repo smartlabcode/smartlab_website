@@ -1,7 +1,8 @@
 @extends('layouts.app')
-
-@section('content')
+@section('css')
 <link href="{{ asset('css/outsourcingProfile.min.css') }}" rel="stylesheet">
+@endsection
+@section('content')
 <section class="section-one">
     <img class="section-one-bg" src="{{ asset('images/partner/designer-developer-header-bg.svg') }}" alt="header background" />
 </section>
@@ -31,5 +32,8 @@
 <section class="outsourcing-about team-description-long contain">
 
 </section>
-<script type="module" src="{{ asset('/js/outsourcing_profile.js') }}"></script>
+
+@endsection
+@section('js')
+<script type="module" src="{{ asset('/js/outsourcing_profile.min.js') }}"></script>
 @endsection

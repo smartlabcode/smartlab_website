@@ -9,8 +9,30 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="Description" content="In our everyday work, everything is related to 'pure creativity, Articulate design and development, Moodle LMS, custom eLearning solutions and much more'. We are ready to take on any challenge! Using our highly collaborative design approach, we'll build your custom solution from the ground up.We are a team of creative professionals and designers who are dedicated to graphics, websites and educational solutions.We have the will, skills and commitment to help our customers to stand out from the crowd of other organisations and companies.Creation of online and offline content is our specialty. Regardless of which type and size of projects we do, they are extremely important to us and we do our best that the results of our work contribute to your success.">
+    <meta name="Description" content="A team of creative professionals and designers dedicated to graphics, websites and eLearning. Let's turn your ideas into a high-quality learning experience!">
+    <meta name=”robots” content="index, follow">
     <title>{{ config('app.name', 'Smartlab') }}</title>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "url": "https://smartlab.ba/",
+            "name": "Smartlab Sarajevo",
+            "email": "mailto:hello@smartlab.ba",
+            "logo": "https://smartlab.ba/images/smartlab-logo.svg",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+387-33-956-222",
+                "contactType": "sales"
+            },
+            "address": {
+                "streetAddress": "Kolodvorska 5",
+                "addressLocality": "Sarajevo",
+                "postalCode": 71000,
+                "addressCountry": "BA"
+            }
+        }
+    </script>
     <link href="{{ asset('css/loader.min.css') }}" rel="stylesheet">
     <!-- Scripts -->
     <!--<script src="{{ asset('js/app.js') }}" defer></script>-->
@@ -23,12 +45,10 @@
     <link rel="preconnect" href="https://linkedin.com">
 
     <!-- Styles -->
-    <link href="{{ asset('css/menu.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/footer.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/app.min.css') }}" rel="stylesheet">
-
-
-
+    <!--<link href="{{ asset('css/app.min.css') }}" rel="stylesheet">-->
+    <link href="{{ asset('css/menu.min.css') }}" rel="stylesheet">
+    @yield('css')
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" href="/images/icons/fav.png">
 
@@ -161,7 +181,7 @@ https://px.ads.linkedin.com/collect/?pid=1480233&fmt=gif
 
     @include('layouts.footer')
     <!-- Main application layout -->
-    <div id="app">
+    <div id="app" style="position:relative;">
         <!-- Navigation -->
         <nav class="contain">
             <!-- Include menu-->
@@ -217,8 +237,9 @@ https://px.ads.linkedin.com/collect/?pid=1480233&fmt=gif
 
     </div>
     <script src="{{ asset('/js/lottie.js') }}"> </script>
-    <script src="{{ asset('/js/app.js') }}"></script>
-
+    <script src="{{ asset('/js/menu.min.js') }}"></script>
+    <script src="{{ asset('/js/language.min.js') }}"></script>
+    @yield('js')
 </body>
 <!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>

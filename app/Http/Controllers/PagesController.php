@@ -214,6 +214,20 @@ class PagesController extends Controller
             return view('pages.general_error');
         }
     }
+    public function showProjectPage()
+    {
+
+        try {
+
+            return view('pages.project');
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', 'PagesController - showProjectPage: ' . $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+    }
     /**
      * Display Partner page
      */

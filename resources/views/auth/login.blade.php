@@ -1,10 +1,17 @@
 @extends('layouts.app')
-
+<style>
+    #app {
+        height: 100vh;
+    }
+</style>
+@section('css')
+<link href="{{ asset('css/app.min.css') }}" rel="stylesheet">
+@endsection
 @section('content')
 
-    @include('parts.break_space')
+@include('parts.break_space')
 
-    <div class="container">
+<div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -21,9 +28,9 @@
                                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @if ($errors->has('email'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first('email') }}</strong>
+                                </span>
                                 @endif
                             </div>
                         </div>
@@ -35,9 +42,9 @@
                                 <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required autocomplete="current-password">
 
                                 @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first('password') }}</strong>
+                                </span>
                                 @endif
                             </div>
                         </div>
@@ -61,9 +68,9 @@
                                 </button>
 
                                 {{--@if (Route::has('password.request'))--}}
-                                    {{--<a class="btn btn-link" href="{{ route('password.request') }}">--}}
-                                        {{--{{ __('Forgot Your Password?') }}--}}
-                                    {{--</a>--}}
+                                {{--<a class="btn btn-link" href="{{ route('password.request') }}">--}}
+                                {{--{{ __('Forgot Your Password?') }}--}}
+                                {{--</a>--}}
                                 {{--@endif--}}
                             </div>
                         </div>
