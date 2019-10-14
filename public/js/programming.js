@@ -12,7 +12,11 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	let loaderContainer = document.querySelector('.loader-container');
 	animationData.addEventListener('DOMLoaded', function() {
 		ready = true;
-		lottie.play();
+		lottie.stop();
+		if (window.innerWidth > 425) {
+			lottie.play();
+		}
+
 		loaderContainer.classList.add('loaderEnd');
 		setTimeout(function() {
 			loaderContainer.style.display = 'none';
@@ -20,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	});
 	const animationObserver = new IntersectionObserver(function(entries, animationObserver) {
 		entries.forEach((entry) => {
-			if (entry.isIntersecting) {
+			if (entry.isIntersecting && window.innerWidth > 425) {
 				lottie.play();
 			} else lottie.pause();
 		});
@@ -80,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	function popupContent(imgIndex, side) {
 		// privremeno ukinuto otvaranje novog taba umjesto popup-a na mobitelima
 		let notDisabled = false;
-
+ 
 		if (/*window.innerWidth < 768*/ notDisabled) {
 			console.log(window.location.origin + images[imgIndex]);
 			window.localStorage.setItem('imagePath', images[imgIndex]);
@@ -90,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 		} else {
 			let cssClasName = 'slideFromLeft';
 			currentImage = imgIndex;
-			popupImage.src = images[imgIndex];
+			popupImage.src = images[imgIndex]; 
 
 			if (side == 'right') {
 				if (imgIndex >= 1) {

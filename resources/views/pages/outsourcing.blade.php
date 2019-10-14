@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', '- Outsource real person')
 @section('css')
 <link href="{{ asset('css/outsourcing.min.css') }}" rel="stylesheet">
 @endsection

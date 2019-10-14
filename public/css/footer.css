@@ -33,7 +33,11 @@ html {
 	font-weight: bold;
 	background-color: transparent;
 	border: 1px solid white;
+	color: white;
 	transition: all 0.2s ease-in;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .social-icons-container {
@@ -48,7 +52,9 @@ html {
 
 .footer-button:hover {
 	background-color: white;
+	color: var(--h1-color);
 	border: 1px solid var(white);
+	text-decoration: none;
 }
 
 .footer-button:hover a {
@@ -346,9 +352,14 @@ footer img {
 		background-position-x: 35%;
 		background-position-y: 10px;
 		background-size: 1900px;
-		padding-top: 250px;
+		padding-top: 225px;
 	}
-
+	footer p {
+		padding-bottom: 10px;
+	}
+	.footer-phone-container p {
+		padding-bottom: 10px;
+	}
 	.footer-top-row {
 		flex-basis: 95%;
 	}
@@ -390,8 +401,8 @@ footer img {
 	footer {
 		background-position-x: 27%;
 		background-size: 2000px;
-		background-position-y: 20px;
-		padding-top: 185px;
+		background-position-y: -30px;
+		padding-top: 110px;
 	}
 	.footer-top-column:nth-child(3) {
 		margin-left: 0;
@@ -399,7 +410,9 @@ footer img {
 	.footer-top-column {
 		flex-basis: 55%;
 	}
-
+	.social-icons-container {
+		padding-bottom: 15px;
+	}
 	.footer-top-row {
 		justify-content: center;
 	}

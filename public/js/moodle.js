@@ -12,7 +12,11 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	let loaderContainer = document.querySelector('.loader-container');
 	animationData.addEventListener('DOMLoaded', function() {
 		ready = true;
-		lottie.play();
+		lottie.stop();
+		if (window.innerWidth > 425) {
+			lottie.play();
+		}
+
 		loaderContainer.classList.add('loaderEnd');
 		setTimeout(function() {
 			loaderContainer.style.display = 'none';
@@ -20,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	});
 	const animationObserver = new IntersectionObserver(function(entries, animationObserver) {
 		entries.forEach((entry) => {
-			if (entry.isIntersecting) {
+			if (entry.isIntersecting && window.innerWidth > 425) {
 				lottie.play();
 			} else lottie.pause();
 		});

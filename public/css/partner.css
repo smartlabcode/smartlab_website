@@ -610,16 +610,6 @@ textarea:focus {
 .grey {
     color: rgb(20, 33, 61) !important;
 }
-
-.arrow::before {
-    /*background-color: rgb(20, 33, 61) !important;*/
-}
-
-/*.arrow:hover:before {
-    transform: rotateX(-180deg) translate(-100%, -170%);
-    animation: arrow 0.2s ease-in-out forwards !important;
-}*/
-
 .margin-t-400 {
     margin-top: 400px !important;
 }
@@ -1037,6 +1027,11 @@ textarea:focus {
             padding-top: 25%;
         }
     }
+    @media only screen and (max-width: 475px) {
+        main {
+            padding-bottom: 500px;
+        }
+    }
 
     @media only screen and (max-width: 450px) {
         .partner-experience-bg {
@@ -1047,6 +1042,12 @@ textarea:focus {
     }
 
     @media only screen and (max-width: 425px) {
+        .partnership-steps-item>img {
+            height: 72%;
+            position: absolute;
+            left: -3%;
+            bottom: -3%;
+        }
         nav {
             margin-bottom: 0 !important;
         }
@@ -1081,11 +1082,20 @@ textarea:focus {
 
 
     }
+    @media only screen and (max-width: 375px) {
+        .partnership-steps-item div img {
+            max-height: 80px;
+        }
+        
 
+    }
     @media only screen and (max-width: 350px) {
         .partner-experience-bg {
             width: 400%;
         }
-
-
+    }
+    @media only screen and (max-width: 320px) {
+        .partnership-steps-item div img {
+            max-height: 70px;
+        }
     }

@@ -61,15 +61,6 @@ main {
 	color: rgb(20, 33, 61) !important;
 }
 
-.arrow::before {
-	/*background-color: rgb(20, 33, 61) !important;*/
-}
-
-/*.arrow:hover:before {
-    transform: rotateX(-180deg) translate(-100%, -170%);
-    animation: arrow 0.2s ease-in-out forwards !important;
-}*/
-
 .nav-top p {
 	color: rgb(20, 33, 61) !important;
 }
@@ -515,10 +506,6 @@ main {
 		margin-left: 0;
 		margin-top: 50px;
 		width: 100%;
-	}
-
-	.section-one {
-		/*height: 100%;*/
 	}
 
 	.team-description h3,

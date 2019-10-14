@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', '- Become our partner')
 @section('css')
 <link href="{{ asset('css/partner.min.css') }}" rel="stylesheet">
 @endsection

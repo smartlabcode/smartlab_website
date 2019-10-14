@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', '- Join our team')
 @section('css')
 <link href="{{ asset('css/careers.min.css') }}" rel="stylesheet">
 @endsection
@@ -28,7 +29,7 @@
 
 </section>
 <section>
-    <h1 class="h1-font centar">@lang('careers.availablePositions')</h1>
+    <h2 class="h1-font centar">@lang('careers.availablePositions')</h2>
     <br />
     <br />
     <div class="careers-positions-container contain">
@@ -77,7 +78,7 @@
 
 <section id="sectionThree">
 
-    <h1 class="h1-font">@lang('careers.apply-h1')</h1>
+    <h2 class="h1-font">@lang('careers.apply-h1')</h2>
 
     <br /><br />
 

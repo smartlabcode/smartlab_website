@@ -601,8 +601,6 @@ form select:focus,
 }
 
 .contact-section {
-    width: 112%;
-    left: -6%;
     position: relative;
     padding-top: 80px;
     overflow: hidden;
@@ -1293,6 +1291,10 @@ form select:focus,
 }
 
 @media screen and (max-width: 425px) {
+    .close{
+        right: -16px;
+        top: -16px;
+    }
     #next{
         right: -15px;
     }
@@ -1366,7 +1368,16 @@ form select:focus,
         margin-bottom: 80px;
     }
 }
-
+@media screen and (max-width: 375px){
+    .tools-img p {
+        margin-bottom: 0.1rem;
+        margin-top: 1rem;
+        height: 50px;
+    }
+    .tools-img div{
+        height: 155px;
+    }
+}
 @media screen and (max-width: 360px) {
     .section-one {
         top: 0;

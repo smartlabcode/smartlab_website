@@ -651,8 +651,6 @@ textarea:focus {
 }
 
 .contact-section {
-    width: 112%;
-    left: -6%;
     position: relative;
     padding-top: 80px;
     overflow: hidden;
@@ -753,9 +751,6 @@ form select:focus,
     text-align: center;
     flex-basis: 100%;
 }
-
-.xliff-section h1 {}
-
 .xliff-section h3 {
     font-size: 2.5em;
     font-weight: bold;
@@ -1041,8 +1036,6 @@ form select:focus,
         transform: rotate(147deg) !important;
         top: 6%;
     }
-
-    .tools-container {}
 }
 
 @media screen and (max-width: 1200px) {
@@ -1092,10 +1085,6 @@ form select:focus,
 
 
 @media screen and (max-width: 1024px) {
-    .section-one {
-        /*position: relative;
-        top: 0px;*/
-    }
     .section-one-text ul li {
         white-space: wrap;
         white-space: normal;
@@ -1388,6 +1377,10 @@ form select:focus,
 }
 
 @media screen and (max-width: 425px) {
+    .close{
+        right: -16px;
+        top: -16px;
+    }
     #next{
         right: -15px;
     }
@@ -1463,6 +1456,14 @@ form select:focus,
 @media screen and (max-width: 375px){
     .xliff-background{
         width: 681%;
+    }
+    .tools-img p {
+        margin-bottom: 0.1rem;
+        margin-top: 1rem;
+        height: 50px;
+    }
+    .tools-img div{
+        height: 155px;
     }
 }
 @media screen and (max-width: 360px) {

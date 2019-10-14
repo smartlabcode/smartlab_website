@@ -11,6 +11,7 @@
         text-transform: capitalize;
     }
 </style>
+
 @section('css')
 <link href="{{ asset('css/app.min.css') }}" rel="stylesheet">
 @endsection

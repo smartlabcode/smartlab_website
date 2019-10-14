@@ -1,5 +1,6 @@
 <!-- Extend main layout -->
 @extends('layouts.app')
+@section('title', '- Online courses')
 @section('css')
 <link href="{{ asset('css/coursesMoodleAnimations.min.css') }}" rel="stylesheet">
 @endsection
@@ -154,7 +155,7 @@
 <section class="contain tools-container">
     <div class="tools">
         <div class="tools-info">
-            <h1 class="h1-font">@lang('courses.sec3h2')</h1>
+            <h2 class="h1-font">@lang('courses.sec3h2')</h2>
             <p class="p-font">
                 @lang('courses.sec3p')
             </p>

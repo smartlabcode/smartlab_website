@@ -1,5 +1,6 @@
 <!-- Extend main layout -->
 @extends('layouts.app')
+@section('title', '- Development and programming')
 @section('css')
 <link href="{{ asset('css/programming.min.css') }}" rel="stylesheet">
 @endsection
@@ -155,7 +156,7 @@
     <img class="xliff-background" src="{{asset('/images/img/light-blue-bg.svg')}}" alt="light blue background">
     <div class="xliff-section">
 
-        <h1 class="h1-font">@lang('programming.xliffTranslation')</h1>
+        <h2 class="h1-font">@lang('programming.xliffTranslation')</h2>
         <div class="xliff-container">
             <div class="xliff-item">
                 <img src="{{asset('/images/xliff-icons/step1-icon-upload.svg')}}" alt="step one upload">
@@ -204,7 +205,7 @@
 <section class="contain tools-container">
     <div class="tools">
         <div class="tools-info">
-            <h1 class="h1-font">@lang('programming.toolsTechnologies')</h1>
+            <h2 class="h1-font">@lang('programming.toolsTechnologies')</h2>
             <p class="p-font">
                 @lang('programming.toolsTechnologiesText')
             </p>

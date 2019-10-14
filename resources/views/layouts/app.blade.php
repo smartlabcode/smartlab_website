@@ -9,17 +9,19 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="Description" content="A team of creative professionals and designers dedicated to graphics, websites and eLearning. Let's turn your ideas into a high-quality learning experience!">
-    <meta name=”robots” content="index, follow">
-    <title>{{ config('app.name', 'Smartlab') }}</title>
+    <meta name="Description" content="Smartlab is a team of creative professionals and designers dedicated to graphics, websites and eLearning. Let's turn your ideas into a high-quality learning experience!">
+    <meta name=”robots” content="i
+    ndex, follow">
+
+    <title>{{config('app_name', 'Smartlab')}} @yield('title')</title>
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "Organization",
             "url": "https://smartlab.ba/",
+            "logo": "https://smartlab.ba/images/smartlab-logo.svg",
             "name": "Smartlab Sarajevo",
             "email": "mailto:hello@smartlab.ba",
-            "logo": "https://smartlab.ba/images/smartlab-logo.svg",
             "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+387-33-956-222",
@@ -33,7 +35,7 @@
             }
         }
     </script>
-    <link href="{{ asset('css/loader.min.css') }}" rel="stylesheet">
+
     <!-- Scripts -->
     <!--<script src="{{ asset('js/app.js') }}" defer></script>-->
 
@@ -48,6 +50,7 @@
     <link href="{{ asset('css/footer.min.css') }}" rel="stylesheet">
     <!--<link href="{{ asset('css/app.min.css') }}" rel="stylesheet">-->
     <link href="{{ asset('css/menu.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/loader.min.css') }}" rel="stylesheet">
     @yield('css')
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" href="/images/icons/fav.png">
