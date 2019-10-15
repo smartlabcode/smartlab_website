@@ -391,7 +391,16 @@
         <div> <label for="subject">*@lang('index.formSubject')</label> <input type="text" name="subject" id="subject" required /></div>
         <div> <label for="email">*@lang('index.formEmail')</label> <input type="email" name="email" id="email" required /></div>
       </div>
-      <div class="contact-form-group textarea"> <label for="message">*@lang('index.formMessage')</label><textarea name="message" rows="7" id="message" required></textarea></div> <button class="button submit button-orange" value="Send">Send</button>
+      <div class="contact-form-group textarea"> <label for="message">*@lang('index.formMessage')</label><textarea name="message" rows="7" id="message" required></textarea></div>
+      <div class="captcha-container">{!! app('captcha')->display() !!}
+        @if ($errors->has('g-recaptcha-response'))
+        <span class="help-block">
+          <strong style="color: red">{{ $errors->first('g-recaptcha-response') }}</strong>
+        </span>
+        @endif
+        <button class="button submit button-orange" value="Send">Send</button></div>
+
     </form>
   </div>
+  {!! NoCaptcha::renderJs() !!}
 </section> @endsection @section('js') <script src="{{ asset('/js/index.min.js') }}"></script> @endsection

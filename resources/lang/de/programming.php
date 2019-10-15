@@ -21,7 +21,7 @@ return [
     "date" => "Versammlungstermin",
     "time" => "Besprechungszeit",
     "message" => "Nachricht",
-
+    "buttonSend" => "Senden",
     "xliffTranslation" => "XLIFF-Übersetzung",
     "uploadFile" => "Laden Sie Ihr Dokument hoch",
     "uploadFileText" => "Laden Sie Ihre XLF-Datei und wählen Sie die Sprachen für die Übersetzung",

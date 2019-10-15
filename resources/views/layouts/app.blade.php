@@ -184,7 +184,7 @@ https://px.ads.linkedin.com/collect/?pid=1480233&fmt=gif
 
     @include('layouts.footer')
     <!-- Main application layout -->
-    <div id="app" style="position:relative;">
+    <div id="app" style="position:relative;overflow-x: hidden;">
         <!-- Navigation -->
         <nav class="contain">
             <!-- Include menu-->

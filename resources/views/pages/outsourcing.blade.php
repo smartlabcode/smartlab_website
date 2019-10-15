@@ -18,14 +18,15 @@
             <p class="p-font">If you want to outsource an eLearning designer, educative video
                 animator, front end or back end developer you are on the
                 right place.</p>
-            <a href="#aboveSectionThree"><button class="button --gray">Available People</button></a>
+            <a href="#team-members-anchor"><button class="button --gray">Available People</button></a>
         </div>
         <div class="header-content-right">
             <img src="{{asset('/images/partner/outsourcing-header-img.svg')}}" alt="Join us header background">
         </div>
     </div>
-
+    <div id="team-members-anchor"></div>
 </section>
+
 <section>
     <div id="team-members" class="team-member contain">
         <!-- team skills Irfan K.-->

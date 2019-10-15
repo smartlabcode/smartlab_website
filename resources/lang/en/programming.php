@@ -21,7 +21,7 @@ return [
     "date" => "Meeting date",
     "time" => "Meeting time",
     "message" => "Message",
-
+    "buttonSend" => "Send",
     "xliffTranslation" => "XLIFF Translation",
     "uploadFile" => "Upload your ﬁle",
     "uploadFileText" => "Upload XLF and select languages for translation",

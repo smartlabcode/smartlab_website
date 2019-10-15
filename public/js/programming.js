@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	function popupContent(imgIndex, side) {
 		// privremeno ukinuto otvaranje novog taba umjesto popup-a na mobitelima
 		let notDisabled = false;
- 
+
 		if (/*window.innerWidth < 768*/ notDisabled) {
 			console.log(window.location.origin + images[imgIndex]);
 			window.localStorage.setItem('imagePath', images[imgIndex]);
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 		} else {
 			let cssClasName = 'slideFromLeft';
 			currentImage = imgIndex;
-			popupImage.src = images[imgIndex]; 
+			popupImage.src = images[imgIndex];
 
 			if (side == 'right') {
 				if (imgIndex >= 1) {
@@ -291,13 +291,13 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	let contact = document.querySelector('#contact');
 
 	schedule.addEventListener('click', function() {
-		if (contact.clientHeight != 80) {
+		if (contact.clientHeight != 0) {
 			contact.style.height = 0;
 		} else {
 			if (window.innerWidth <= 600) {
-				contact.style.height = 1270 + 'px';
+				contact.style.height = 1230 + 'px';
 			} else {
-				contact.style.height = 940 + 'px';
+				contact.style.height = 830 + 'px';
 			}
 		}
 	});

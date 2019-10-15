@@ -436,7 +436,7 @@ footer img {
 		flex-basis: 60%;
 	}
 	footer {
-		padding-top: 170px;
+		/*padding-top: 170px;*/
 	}
 	.footer-top-column:nth-child(3) {
 		margin-left: 0;

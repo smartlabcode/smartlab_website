@@ -51,7 +51,8 @@ class ContactController extends Controller
             'lastname' => 'required|max:45',
             'email' => 'required|max:45',
             'subject' => 'required|max:255',
-            'message' => 'required'
+            'message' => 'required',
+            'g-recaptcha-response' => 'required|captcha'
         ]);
 
         // create contact and push mail to queue
@@ -91,7 +92,8 @@ class ContactController extends Controller
             'bussiness_phone_number' => 'required',
             'bussiness_email' => 'required|email',
             'bussiness_message' => 'required',
-            'bussiness_category' => 'required'
+            'bussiness_category' => 'required',
+            'g-recaptcha-response' => 'required|captcha'
         ]);
 
         // create contact and push mail to queue
@@ -150,12 +152,13 @@ class ContactController extends Controller
         // check if neccessary values are entered correctly, if no return error messages
         $request->validate([
             'name' => 'required|max:45',
-            'company' => 'required|max:45',
+            'company' => 'present|max:45',
             'email' => 'required|max:45',
             'subject' => 'required|max:255',
             'message' => 'required',
             'date' => 'required',
-            'time' => 'required'
+            'time' => 'required',
+            'g-recaptcha-response' => 'required|captcha'
         ]);
 
         // create contact and push mail to queue
@@ -196,7 +199,8 @@ class ContactController extends Controller
             'email' => 'required|email',
             'phone_number' => 'required|max:45',
             'message' => 'required',
-            'category' => 'required'
+            'category' => 'required',
+            'g-recaptcha-response' => 'required|captcha'
         ]);
 
         // create contact and push mail to queue

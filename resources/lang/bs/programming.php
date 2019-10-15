@@ -21,7 +21,7 @@ return [
     "date" => "Datum sastanka",
     "time" => "Vrijeme sastanka",
     "message" => "Poruka",
-
+    "buttonSend" => "Pošalji",
     "xliffTranslation" => "XLIFF Prevod",
     "uploadFile" => "Postavite svoj dokument",
     "uploadFileText" => "Postavite XLF datoteku i odaberite jezike za prevod",

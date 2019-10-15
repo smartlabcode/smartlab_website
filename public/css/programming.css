@@ -14,7 +14,15 @@ body {
     overflow-x: hidden !important;
     overflow-y: hidden !important;
 }
-
+.captcha-container {
+	z-index: 10;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 40px;
+}
+.help-block strong {
+	color: rgba(255, 0, 0, 0.6);
+}
 html {
     overflow-x: hidden !important;
 }
@@ -652,7 +660,7 @@ textarea:focus {
 
 .contact-section {
     position: relative;
-    padding-top: 80px;
+    padding-top: 0;
     overflow: hidden;
     height: 0%;
     transition: all 0.5s ease-in;
@@ -1377,6 +1385,25 @@ form select:focus,
 }
 
 @media screen and (max-width: 425px) {
+    .tools-container{
+        padding-top:0;
+        top: -220px;
+    }
+    .captcha-container {
+		flex-direction: column;
+        margin-bottom: 150px;
+        margin-top: 0;
+		align-items: center;
+    }
+    .xliff-background-container {
+        margin-top: 80px !important;
+    }
+    .submit{
+        margin-bottom: 15px;
+    }
+    main{
+        padding-bottom: 300px;
+    }
     .close{
         right: -16px;
         top: -16px;
@@ -1415,11 +1442,6 @@ form select:focus,
     .section-one-text {
         margin-top: 50px;
     }
-
-    .tools-container {
-        top: -145px;
-    }
-
     .section3 {
         margin-bottom: 0 !important;
     }
@@ -1434,9 +1456,7 @@ form select:focus,
         left: -125%;
     }
 
-    .xliff-background-container {
-        margin-top: 0 !important;
-    }
+    
 
     #slider>img:last-child {
         right: -14px;
@@ -1525,5 +1545,13 @@ form select:focus,
     }
     #next{
         right: -15px;
+    }
+}
+@media screen and (max-width: 360px){
+    footer{
+        padding-top: 110px;
+    }
+    main{
+        padding-bottom: 460px;
     }
 }

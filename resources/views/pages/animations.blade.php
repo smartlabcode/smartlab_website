@@ -159,8 +159,17 @@
                     <label for="message">@lang('animations.contactMessage')</label>
                     <textarea name="message" rows="7" id="message" required></textarea>
                 </div>
-                <button class="button submit" type="submit" value=@lang('animations.buttonSend')>@lang('animations.buttonSend')</button>
+                <p class="policyText">@lang('careers.we-are-commited') <a href="#">@lang('careers.privacy')</a>.</p>
+                <div class="captcha-container">{!! app('captcha')->display() !!}
+                    @if ($errors->has('g-recaptcha-response'))
+                    <span class="help-block">
+                        <strong style="color: red">{{ $errors->first('g-recaptcha-response') }}</strong>
+                    </span>
+                    @endif
+                    <button class="button submit" type="submit" value=@lang('animations.buttonSend')>@lang('animations.buttonSend')</button>
+                </div>
             </form>
+            {!! NoCaptcha::renderJs() !!}
         </div>
     </div>
 </section>

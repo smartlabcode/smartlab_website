@@ -288,13 +288,13 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	let contact = document.querySelector('#contact');
 
 	schedule.addEventListener('click', function() {
-		if (contact.clientHeight != 80) {
+		if (contact.clientHeight != 0) {
 			contact.style.height = 0;
 		} else {
 			if (window.innerWidth <= 600) {
-				contact.style.height = 1270 + 'px';
+				contact.style.height = 1230 + 'px';
 			} else {
-				contact.style.height = 940 + 'px';
+				contact.style.height = 830 + 'px';
 			}
 		}
 	});

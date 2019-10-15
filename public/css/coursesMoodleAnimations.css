@@ -1,6 +1,16 @@
 /* SECTION ONE */
 main{
     padding-bottom: 460px;
+    overflow: hidden;
+}
+.captcha-container {
+	z-index: 10;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 40px;
+}
+.help-block strong {
+	color: rgba(255, 0, 0, 0.6);
 }
 .iframe-container {
     position: relative;
@@ -492,14 +502,11 @@ main{
 
 .contact-form-container {
     width: 50%;
+    color: var(--h1-color);
     margin: 0 auto;
 }
 
 .contact-form-container .h1-font {
-    color: var(--h1-color);
-}
-
-.contact-form-container {
     color: var(--h1-color);
 }
 
@@ -602,7 +609,6 @@ form select:focus,
 
 .contact-section {
     position: relative;
-    padding-top: 80px;
     overflow: hidden;
     height: 0%;
     transition: all 0.5s ease-in;
@@ -690,6 +696,7 @@ form select:focus,
 }
 
 .tools-container {
+    padding-top: 80px;
     position: relative;
 }
 
@@ -1291,6 +1298,21 @@ form select:focus,
 }
 
 @media screen and (max-width: 425px) {
+    .tools-container{
+        padding-top:0;
+    }
+    .contact-section{
+        padding-top:0;
+    }
+    .captcha-container {
+		flex-direction: column;
+        margin-bottom: 150px;
+        margin-top: 0;
+		align-items: center;
+    }
+    .submit{
+        margin-bottom: 15px;
+    }
     .close{
         right: -16px;
         top: -16px;

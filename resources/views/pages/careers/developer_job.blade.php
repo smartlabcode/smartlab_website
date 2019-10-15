@@ -68,10 +68,6 @@
 
 <section id="sectionThree" class="contain">
 
-
-
-    <br /><br />
-
     @include('parts.error_success')
 
     <div id="targetPoint"></div>
@@ -132,10 +128,18 @@
         {{-- Subject: <input type="text" name="subject" />--}}
 
         <!-- Submit form -->
-        <button class="button" id="sendCareerButton">@lang('careers-elearning.send')</button>
+        <div class="captcha-container">{!! app('captcha')->display() !!}
+            @if ($errors->has('g-recaptcha-response'))
+            <span class="help-block">
+                <strong style="color: red">{{ $errors->first('g-recaptcha-response') }}</strong>
+            </span>
+            @endif
+            <button class="button" id="sendCareerButton">@lang('careers-elearning.send')</button>
+        </div>
+
 
     </form>
-
+    {!! NoCaptcha::renderJs() !!}
 </section>
 
 
