@@ -134,23 +134,13 @@
             </div>
 
         </div>
-
-
         <p class="policyText">@lang('careers.we-are-commited') <a href="#">@lang('careers.privacy')</a>.</p>
-
         <!-- Submit form -->
-        <div class="captcha-container">{!! app('captcha')->display() !!}
-            @if ($errors->has('g-recaptcha-response'))
-            <span class="help-block">
-                <strong style="color: red">{{ $errors->first('g-recaptcha-response') }}</strong>
-            </span>
-            @endif
-            <button id="sendCareerButton" class="button">@lang('careers.send') </button>
+        <div class="submit-container">
+            <input type="submit" id="sendCareerButton" class="button submit" value="@lang('careers.send')">
         </div>
-
-
+        @captcha
     </form>
-    {!! NoCaptcha::renderJs() !!}
 </section>
 @endsection
 @section('js')

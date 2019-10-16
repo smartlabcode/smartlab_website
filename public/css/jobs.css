@@ -63,8 +63,23 @@ main {
 	background-color: var(--button-bg-color);
 	border: 1px solid var(--button-bg-color);
 	transition: all 0.2s ease-in;
+	z-index: 10;
 }
-
+.submit-container {
+	display: flex;
+	width: 100% !important;
+	justify-content: flex-end;
+}
+.submit {
+	font-family: "Montserrat", sans-serif !important;
+	cursor: pointer;
+	border: none;
+	border-radius: 35px !important;
+	width: 260px;
+	height: 70px !important;
+	font-size: 1.1em !important;
+	font-weight: bold;
+}
 .button:hover {
 	background-color: white;
 	color: var(--button-bg-color);
@@ -386,7 +401,12 @@ form button:hover {
 	.section-one-img-right {
 		bottom: 10%;
 	}
-
+	.jobParameters {
+		margin-bottom: 100px !important;
+	}
+	#sectionThree {
+		margin-bottom: 100px !important;
+	}
 	.section-one-img-left-container {
 		max-height: 500px;
 		height: 500px;
@@ -436,8 +456,17 @@ form button:hover {
 		margin-top: 0;
 		align-items: center;
 	}
+	.submit-container {
+		justify-content: center;
+	}
 	form .button {
 		margin-top: 25px;
+	}
+	#careerForm {
+		margin-bottom: 50px;
+	}
+	#sectionThree {
+		margin-bottom: 0 !important;
 	}
 	.section-one-img-container {
 		max-height: 300px;
@@ -471,5 +500,10 @@ form button:hover {
 		margin-right: 2%;
 		right: 0;
 		bottom: 0;
+	}
+}
+@media screen and (max-width: 320px) {
+	#careerForm {
+		margin-bottom: 100px;
 	}
 }

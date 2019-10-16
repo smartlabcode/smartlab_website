@@ -57,6 +57,7 @@
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114227726-1"></script>
+    <script src="{{ asset('js/captcha.min.js') }}"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 

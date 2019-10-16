@@ -122,28 +122,14 @@
             </div>
 
         </div>
-
-
         <p class="policyText">@lang('careers-developer.we-are-commited') <a href="#">@lang('careers-developer.privacy')</a>.</p>
         {{-- Subject: <input type="text" name="subject" />--}}
-
-        <!-- Submit form -->
-        <div class="captcha-container">{!! app('captcha')->display() !!}
-            @if ($errors->has('g-recaptcha-response'))
-            <span class="help-block">
-                <strong style="color: red">{{ $errors->first('g-recaptcha-response') }}</strong>
-            </span>
-            @endif
-            <button class="button" id="sendCareerButton">@lang('careers-elearning.send')</button>
+        <div class="submit-container">
+            <input type="button" class="button submit" id="sendCareerButton" value="@lang('careers-elearning.send')">
         </div>
-
-
+        @captcha
     </form>
-    {!! NoCaptcha::renderJs() !!}
 </section>
-
-
-
 @endsection
 @section('js')
 <script>

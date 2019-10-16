@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: user
@@ -27,7 +28,8 @@ class MailerService
      * @param $recipient
      * @param $emailBody
      */
-    public function sendEmail($subject, $recipient, $emailBody, $attachment = false, $folderName = false) {
+    public function sendEmail($subject, $recipient, $emailBody, $attachment = false, $folderName = false)
+    {
 
         // create PHPMailer object
         $mail = new PHPMailer(true);
@@ -43,6 +45,7 @@ class MailerService
             $mail->Port = env('MAIL_PORT');
             $mail->setFrom(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'));
             $mail->addAddress($recipient, 'Receiver');     // Add a recipient
+
             //Content
             $mail->isHTML(true);
             $mail->Subject = $subject;
@@ -65,12 +68,10 @@ class MailerService
             if ($attachment) {
                 $this->delete($folderName);
             }
-
         } catch (Exception $e) {
             // add log
             $this->logService->setLog('ERROR', 'MailchimpService - sendEmail: ' . $mail->ErrorInfo);
         }
-
     }
 
     /**
@@ -78,7 +79,8 @@ class MailerService
      *
      * @param $contactType
      */
-    public function zip($path) {
+    public function zip($path)
+    {
 
         try {
             // create zip file and store attachments in it
@@ -88,14 +90,13 @@ class MailerService
             // loop through specified folder and add all the files to the zip
             foreach (glob($path . "/*") as $file) {
                 if (is_file($file)) {
-                    $newFilename = substr($file,strrpos($file,'/') + 1);
+                    $newFilename = substr($file, strrpos($file, '/') + 1);
                     $zip->addFile($file, $newFilename);
                 }
             }
 
             // close zip object
             $zip->close();
-
         } catch (\Exception $e) {
             // add log
             $this->logService->setLog('ERROR', 'MailerService - zip: ' . $e->getMessage());
@@ -106,15 +107,18 @@ class MailerService
      * Delete all files from specified folder
      *
      */
-    public function delete() {
+    public function delete()
+    {
 
         try {
             // delete all uploaded files
-            foreach (glob(storage_path()."/app/*") as $folder) {
+            foreach (glob(storage_path() . "/app/*") as $folder) {
 
-                if (is_dir($folder)
+                if (
+                    is_dir($folder)
                     && strpos($folder, 'images') === false
-                    && strpos($folder, 'public') === false) {
+                    && strpos($folder, 'public') === false
+                ) {
 
                     foreach (glob($folder . "/*") as $file) {
                         unlink($file);
@@ -125,11 +129,9 @@ class MailerService
                     rmdir($folder);
                 }
             }
-
         } catch (\Exception $e) {
             // add log
             $this->logService->setLog('ERROR', 'MailerService - delete: ' . $e->getMessage());
         }
     }
-
 }

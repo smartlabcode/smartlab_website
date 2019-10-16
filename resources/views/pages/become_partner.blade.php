@@ -230,18 +230,12 @@
                     </div>
                 </div>
             </div>
-            <div class="captcha-container">{!! app('captcha')->display() !!}
-                @if ($errors->has('g-recaptcha-response'))
-                <span class="help-block">
-                    <strong style="color: red">{{ $errors->first('g-recaptcha-response') }}</strong>
-                </span>
-                @endif
-                <button class="button --dark-blue">Submit</button>
+            <div class="submit-container">
+                <input type="submit" class="button submit --dark-blue" value=@lang('moodle.buttonSend')>
             </div>
-            <!-- Submit form -->
-        </form>
-        {!! NoCaptcha::renderJs() !!}
 
+            @captcha
+        </form>
     </section>
 </div>
 @endsection

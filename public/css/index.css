@@ -10,6 +10,7 @@ background-position-x: 300px;
 background-position-y: -200px;*/
 	position: relative;
 }
+
 main {
 	padding-bottom: 145px;
 }
@@ -833,6 +834,7 @@ textarea:focus {
 	background-color: var(--button-bg-orange);
 	border: 1px solid var(--button-bg-orange);
 	z-index: 10;
+	margin-top: 30px;
 }
 
 .submit:hover {
@@ -1404,7 +1406,7 @@ textarea:focus {
 	}
 	.contact-section .submit {
 		margin-bottom: 30px;
-		margin-top: 0;
+		margin-top: 25px;
 		align-self: center;
 	}
 	.section-two-background-top {
@@ -1453,13 +1455,13 @@ textarea:focus {
 	}
 
 	.contact-form-container {
-		padding-top: 230px;
+		padding-top: 50px;
 	}
 
 	.contact-section {
 		background-size: 927vw;
-		background-position-y: 42%;
-		margin-bottom: 200px;
+		background-position-y: 39%;
+		margin-bottom: 310px;
 		background-color: white;
 	}
 
@@ -1545,14 +1547,11 @@ textarea:focus {
 		top: 11%;
 		left: -50%;
 	}
-	.contact-section {
-		background-size: 927vw;
-		background-position-y: 45%;
-		margin-bottom: 200px;
-		background-color: white;
-	}
 	#partners-text {
 		height: 230px;
+	}
+	.contact-section {
+		background-position-y: 41%;
 	}
 }
 
@@ -1597,7 +1596,7 @@ textarea:focus {
 	.contact-section {
 		background-size: 927vw;
 		/*background-position-y: 54%;*/
-		margin-bottom: 200px;
+		margin-bottom: 360px;
 		background-color: white;
 	}
 
@@ -1626,7 +1625,7 @@ textarea:focus {
 		padding-top: 0;
 	}
 	.contact-section {
-		background-position-y: 49%;
+		background-position-y: 45%;
 		background-position-x: 36%;
 	}
 }

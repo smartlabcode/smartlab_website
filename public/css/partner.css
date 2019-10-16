@@ -1,6 +1,9 @@
 main {
 	padding-bottom: 410px;
 }
+.text-center {
+	text-align: center;
+}
 .captcha-container {
 	z-index: 10;
 	display: flex;
@@ -24,7 +27,21 @@ main {
 	border: 1px solid var(--button-bg-color);
 	transition: all 0.2s ease-in;
 }
-
+.submit-container {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+}
+.submit {
+	font-family: "Montserrat", sans-serif;
+	cursor: pointer;
+	border-radius: 35px !important;
+	width: 260px;
+	height: 70px !important;
+	font-size: 1.1em !important;
+	font-weight: bold;
+	z-index: 10;
+}
 .button:focus {
 	outline: 0;
 }
@@ -795,6 +812,9 @@ textarea:focus {
 	.partner-experience-bg {
 		top: -16%;
 	}
+	.partner-form-section {
+		margin-bottom: 100px !important;
+	}
 }
 @media only screen and (max-width: 900px) {
 	.--step3::after {
@@ -1027,8 +1047,14 @@ textarea:focus {
 		margin-top: 0;
 		align-items: center;
 	}
+	.submit-container {
+		justify-content: center;
+	}
 	.--dark-blue {
-		margin-top: 25px;
+		margin-top: 0px;
+	}
+	.partner-form-section {
+		margin-bottom: 0 !important;
 	}
 	.partnership-steps-item > img {
 		height: 72%;

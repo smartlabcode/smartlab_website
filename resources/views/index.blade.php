@@ -1,7 +1,10 @@
 @extends('layouts.app')
 @section('title', '- Custom eLearning solutions')
 @section('css')
-<link href="{{ asset('css/index.min.css') }}" rel="stylesheet"> @endsection @section('content')<div class="loader-container">
+<link href="{{ asset('css/index.min.css') }}" rel="stylesheet">
+@endsection
+@section('content')
+<div class="loader-container">
   <div class="css-animation-container">
     <div class="css-animation"></div>
   </div>
@@ -383,7 +386,9 @@
   <div class="contact-form-container ">
     <div id="contact"></div>
     <p>@lang('index.contact_p')</p>
-    <h2 class="text-center h1-font">@lang('index.contact_h2')</h2> @include('parts.error_success')<form class="contact-form" action="/contact" method="POST"> @csrf<div class="contact-form-group">
+    <h2 class="text-center h1-font">@lang('index.contact_h2')</h2> @include('parts.error_success')
+    <form class="contact-form" action="/contact" method="POST"> @csrf<div class="contact-form-group">
+
         <div> <label for="name">*@lang('index.formName')</label> <input type="text" name="name" id="name" required /></div>
         <div> <label for="surnanme">*@lang('index.formSurname')</label> <input type="text" name="lastname" id="lastname" required /></div>
       </div>
@@ -392,15 +397,13 @@
         <div> <label for="email">*@lang('index.formEmail')</label> <input type="email" name="email" id="email" required /></div>
       </div>
       <div class="contact-form-group textarea"> <label for="message">*@lang('index.formMessage')</label><textarea name="message" rows="7" id="message" required></textarea></div>
-      <div class="captcha-container">{!! app('captcha')->display() !!}
-        @if ($errors->has('g-recaptcha-response'))
-        <span class="help-block">
-          <strong style="color: red">{{ $errors->first('g-recaptcha-response') }}</strong>
-        </span>
-        @endif
-        <button class="button submit button-orange" value="Send">Send</button></div>
-
+      <input class="button submit button-orange" value="Send" type="submit">
+      @captcha
     </form>
   </div>
-  {!! NoCaptcha::renderJs() !!}
-</section> @endsection @section('js') <script src="{{ asset('/js/index.min.js') }}"></script> @endsection
+
+</section>
+@endsection
+@section('js')
+<script src="{{ asset('/js/index.min.js') }}"></script>
+@endsection

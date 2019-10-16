@@ -650,12 +650,15 @@ textarea:focus {
     margin-top: 20px;
     background-color: var(--button-bg-orange);
     border: 1px solid var(--button-bg-orange);
+    z-index: 10;
+    border-radius: 35px;
+    height: 70px !important;
 }
 
 .submit:hover {
     background-color: transparent;
     color: var(--button-bg-orange);
-    border: 1px solid var(--button-bg-orange);
+    border: 1px solid var(--button-bg-orange) !important;
 }
 
 .contact-section {
@@ -670,7 +673,6 @@ textarea:focus {
     height: auto!important;
     box-sizing: border-box;
     border: 2px solid #c9d6e2!important;
-    border-radius: 10px!important;
     font-family: "Source Sans Pro",sans-serif!important;
     font-size: 1.4em!important;
 }
@@ -1061,10 +1063,6 @@ form select:focus,
         right: -28%;
         width: 40%;
     }
-
-    .xliff-background-container {
-        margin-top: 0 !important;
-    }
 }
 
 @media screen and (max-width: 1175px) {
@@ -1073,8 +1071,11 @@ form select:focus,
     .background-img-orange-circle {
         right: 530px;
     }
-
-    .button {
+    .submit{
+        width: 208px !important;
+        height: 56px !important;
+    }
+    .button, .submit{
         width: 208px;
         height: 56px;
     }
@@ -1248,7 +1249,7 @@ form select:focus,
     }
 
     .xliff-background-container {
-        margin-top: 0 !important;
+        margin-top: 130px !important;
     }
 
     .section3 {
@@ -1411,7 +1412,7 @@ form select:focus,
     #next{
         right: -15px;
     }
-    .button {
+    .button, .submit {
         font-size: 1.2em !important;
     }
     .submit {
