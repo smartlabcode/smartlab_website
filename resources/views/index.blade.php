@@ -234,11 +234,11 @@
               </clipPath>
             </defs>
           </svg>
-          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/amer.jpg')}}" alt="Amer M photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1" alt="team background">
+          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/zulfo.jpg')}}" alt="Zulfo M photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1" alt="team background">
         </div>
         <div class="team-description">
-          <h3>Amer M.</h3>
-          <p>eLearning/multimedia Designer</p>
+          <h3>Zulfo M.</h3>
+          <p>Full Stack Developer</p>
         </div>
       </div>
       <div class="team-member">

@@ -743,10 +743,10 @@
             <!-- Opširan tekst za outsourcing_profile page Amer M.-->
             <div class="p-font">
                 <p>
-                    @lang('outsourcing.amerm-long-first-p')
+                    @lang('outsourcing.zulfom-long-first-p')
                 </p>
                 <p>
-                    @lang('outsourcing.amerm-long-second-p')
+                    @lang('outsourcing.zulfom-long-second-p')
                 </p>h.
                 </p>
             </div>
@@ -761,18 +761,18 @@
                 </defs>
             </svg>
             <div class="team-img">
-                <img class="profile-image" src="{{ asset('images/team/amer.jpg') }}" alt="Amer M">
+                <img class="profile-image" src="{{ asset('images/team/zulfo.jpg') }}" alt="Zulfo M">
             </div>
             <img src="{{ asset('images/img/blue-circle.svg') }}" class="team-blue4">
             <img src="{{ asset('images/img/orange-circle.svg') }}" class="team-orange4">
         </div>
         <div class="team-description">
             <div>
-                <h3 class="h3-font">Amer M.</h3>
-                <h4 class="h4-font">eLearning / multimedia Designer</h4>
+                <h3 class="h3-font">Zulfo M.</h3>
+                <h4 class="h4-font">Full Stack Developer</h4>
                 <h5 class="h5-font">Skills: </h5>
                 <p class="p-font">
-                    @lang('outsourcing.amerm-about-short')
+                    @lang('outsourcing.zulfom-about-short')
 
                 </p>
             </div>
@@ -780,7 +780,7 @@
                 <!--<a href="{{asset('/pages/outsourcing_profile?3')}}"><button class="button">Read More</button></a>-->
                 <div class="team-description-bottom-social">
                     <div class="team-description-bottom-social-img-container --ln">
-                        <a href="https://www.linkedin.com/in/amer-masleša-5a6397161" target="_blank" rel="noopener">
+                        <a href="https://www.linkedin.com/in/zulfo-muhovi%C4%87-507889132/" target="_blank" rel="noopener">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="3560.264 10238 32.563 30">
                                 <g id="Group_339" data-name="Group 339" transform="translate(2736.264 5708)">
                                     <path id="Path_1171" data-name="Path 1171" class="cls-1" d="M8,42.662a.827.827,0,0,0,.813.813h5.813a.827.827,0,0,0,.813-.812V23.413a.827.827,0,0,0-.812-.812H8.813A.827.827,0,0,0,8,23.413Z" transform="translate(816 4516.525)"></path>
@@ -792,7 +792,7 @@
                     </div>
                     <div class="team-description-bottom-social-img-container --git">
 
-                        <a href="#">
+                        <a href="https://github.com/zuxbrt" target="_blank" rel="noopener">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="-8634 2822 36 35.119">
 
                                 <g id="github" transform="translate(-8634 2816.635)">
