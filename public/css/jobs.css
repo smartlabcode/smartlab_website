@@ -7,6 +7,12 @@
 	--p-color: #c9d6e2;
 	scroll-behavior: smooth;
 }
+.alert-success {
+	text-align: center;
+	margin-bottom: 50px;
+	font-size: 1.3rem;
+	color: green;
+}
 main {
 	padding-bottom: 410px;
 }
@@ -43,7 +49,9 @@ main {
 	margin-bottom: 0;
 	color: var(--h1-color);
 }
-
+.--carrers-font {
+	font-size: 1.2rem !important;
+}
 .contain {
 	max-width: 1440px;
 	width: 90%;

@@ -106,9 +106,9 @@
             <label for="category" class="p-font">@lang('careers-developer.kategorija')</label>
             <select class="form-control" name="category" id="category" required>
                 <option selected disabled>@lang('careers-developer.choose-kategorija')</option>
-                <option value="designer">@lang('careers-developer.dizajner')</option>
+                <!--<option value="designer">@lang('careers-developer.dizajner')</option>-->
                 <option value="developer">@lang('careers-developer.developer')</option>
-                <option value="ux-ui-designer">@lang('careers-developer.dizajner-uxui')</option>
+                <!--<option value="ux-ui-designer">@lang('careers-developer.dizajner-uxui')</option>-->
                 <option value="practitioner">@lang('careers-developer.praktikant')</option>
             </select>
 
@@ -118,7 +118,7 @@
             <label for="uploadFileArea" class="p-font">@lang('careers-developer.files')</label>
             <div id="uploadFileArea" class="form-control">
                 <p id="uploadText">@lang('careers-developer.click-to') <br /> @lang('careers-developer.upload-files')</p>
-                <input id="inputFile" type="file" name="files[]" onchange="fileUploaded()" multiple />
+                <input id="inputFile" type="file" name="files[]" multiple />
             </div>
 
         </div>
@@ -134,6 +134,9 @@
 @section('js')
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
+        let inputFile = document.querySelector("#inputFile");
+        inputFile.addEventListener('change', fileUploaded);
+
         function openUploadWindow() {
             document.getElementById("inputFile").click();
         }

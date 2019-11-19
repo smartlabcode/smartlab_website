@@ -29,21 +29,21 @@
     <br /><br />
 
     <p class="p-font">@lang('careers-elearning.opisEL')</p>
-
+    <p class="p-font">@lang('careers-elearning.opisEL2')</p>
     <br /><br />
 
-    <h5 class="h5-font">@lang('careers-elearning.strucne-karakteristike')</h5>
+    <h5 class="h5-font --carrers-font">@lang('careers-elearning.strucne-karakteristike')</h5>
     <ul class="p-font">
         <li>@lang('careers-elearning.karakteristika1')</li>
         <li>@lang('careers-elearning.karakteristika2')</li>
         <li>@lang('careers-elearning.karakteristika3')</li>
         <li>@lang('careers-elearning.karakteristika4')</li>
-        <li>@lang('careers-elearning.karakteristika5')</li>
+        <!--<li>@lang('careers-elearning.karakteristika5')</li>-->
     </ul>
 
     <br />
 
-    <h5 class="h5-font">@lang('careers-elearning.pozeljno'):</h5>
+    <h5 class="h5-font --carrers-font">@lang('careers-elearning.pozeljno')</h5>
     <ul class="p-font">
         <li>@lang('careers-elearning.njemacki')</li>
         <li>@lang('careers-elearning.frontend')</li>
@@ -54,9 +54,10 @@
 
     <br />
 
-    <p class="h5-font" class="jobDetails">@lang('careers-elearning.lokacija')</p>
-    <p class="h5-font" class="jobDetails">@lang('careers-elearning.pozicije')</p>
-    <p class="h5-font" class="jobDetails">@lang('careers-elearning.datum')</p>
+    <p class="h5-font jobDetails --carrers-font">@lang('careers-elearning.lokacija')</p>
+    <p class="h5-font jobDetails --carrers-font">@lang('careers-elearning.pozicije')</p>
+    <p class="h5-font jobDetails --carrers-font">@lang('careers-elearning.datum')</p>
+    <p class="h5-font jobDetails --carrers-font">@lang('careers-elearning.rok')</p>
     <div class="buttons-container">
         <a href="{{asset('/pages/careers')}}"><button class="button">Back</button></a>
         <button class="button" id="applyDeveloperButton">@lang('careers-elearning.apply')</button>
@@ -107,8 +108,8 @@
             <select class="form-control" name="category" id="category" required>
                 <option selected disabled>@lang('careers-elearning.choose-kategorija')</option>
                 <option value="designer">@lang('careers-elearning.dizajner')</option>
-                <option value="developer">@lang('careers-elearning.developer')</option>
-                <option value="ux-ui-designer">@lang('careers-elearning.dizajner-uxui')</option>
+                <!--<option value="developer">@lang('careers-elearning.developer')</option>-->
+                <!--<option value="ux-ui-designer">@lang('careers-elearning.dizajner-uxui')</option>-->
                 <option value="practitioner">@lang('careers-elearning.praktikant')</option>
             </select>
 
@@ -118,7 +119,7 @@
             <label for="uploadFileArea" class="p-font">@lang('careers-elearning.files')</label>
             <div id="uploadFileArea" class="form-control">
                 <p id="uploadText">@lang('careers-elearning.click-to') <br /> @lang('careers-elearning.upload-files')</p>
-                <input id="inputFile" type="file" name="files[]" onchange="fileUploaded()" multiple />
+                <input id="inputFile" type="file" name="files[]" multiple />
             </div>
 
         </div>
@@ -138,6 +139,9 @@
 @section('js')
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
+        let inputFile = document.querySelector("#inputFile");
+        inputFile.addEventListener('change', fileUploaded);
+
         function openUploadWindow() {
             document.getElementById("inputFile").click();
         }

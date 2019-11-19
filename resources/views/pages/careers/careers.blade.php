@@ -120,7 +120,7 @@
                 <option disabled>@lang('careers.choose-kategorija')</option>
                 <option value="designer">@lang('careers.dizajner')</option>
                 <option value="developer">@lang('careers.developer')</option>
-                <option value="ux-ui-designer">@lang('careers.dizajner-uxui')</option>
+                <!--<option value="ux-ui-designer">@lang('careers.dizajner-uxui')</option>-->
                 <option value="practitioner">@lang('careers.praktikant')</option>
             </select>
 
@@ -130,7 +130,7 @@
             <label for="uploadFileArea">@lang('careers.files')</label>
             <div id="uploadFileArea" class="form-control">
                 <p id="uploadText">@lang('careers.click-to') <br />@lang('careers.upload-files')</p>
-                <input id="inputFile" type="file" name="files[]" onchange="fileUploaded()" multiple />
+                <input id="inputFile" type="file" name="files[]" multiple />
             </div>
 
         </div>
@@ -147,6 +147,8 @@
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
         let loaderContainer = document.querySelector(".loader-container");
+        let inputFile = document.querySelector("#inputFile");
+        inputFile.addEventListener('change', fileUploaded);
         loaderContainer.classList.add("loaderEnd");
         setTimeout(function() {
             loaderContainer.style.display = "none";

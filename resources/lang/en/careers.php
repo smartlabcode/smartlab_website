@@ -5,9 +5,8 @@ return [
     "paragraph" => "Apply to our opened positions or our internship programme that includes training and practice in the digital industry. We offer great energy, a lot of knowledge, a lot of socializing and an opportunity for a long-term contract!",
     "button" => "Apply",
     "availablePositions" => "Available Positions",
-    "eL-h1" => "eLearning Designer (m/f)",
-    "opisEL" => "If you love the creative industry, you are working with graphics, love to learn new things and appreciate the perspective, sign up for the 
-    E-Learning Content Designer Position",
+    "eL-h1" => "Graphic Designer (m/f)",
+    "opisEL" => "If you love the creative industry, get involved in graphics, love learning new things and appreciate perspective, apply for a Online Learning Content Designer.",
     "opisDev" => "If you like the creative IT industry, you are doing web programming, you want to work on the projects of large European and world companies, sign up for the Back-End Web Developer Position ...",
     "readMore" => "Read more",
     "Dev-h1" => "Fullstack Web Developer (m/f)",
