@@ -49,7 +49,6 @@ Route::middleware(['auth', 'is_not_xlf_user'])->group(function () {
         Route::resource('careers', 'CareersController');
         Route::post('careers/store', 'CareersController@storeJob'); // TODO store route is not defined in resource at all - check this
     });
-
 });
 
 // logout route
@@ -68,6 +67,7 @@ Route::get('pages/careers/elearning', 'PagesController@showCareersElearningPage'
 Route::get('pages/careers/developer', 'PagesController@showCareersDeveloperPage');
 Route::get('pages/partner', 'PagesController@showPartnerPage');
 Route::get('pages/outsourcing', 'PagesController@showOutsourcingPage');
+Route::get('pages/outsourcing_profile', 'PagesController@showOutsourcingProfilePage');
 Route::get('pages/xlf', 'PagesController@showXlfPage');
 Route::get('pages/xlf_signin', 'PagesController@showXlfSignInPage');
 Route::post('xlf/signup', 'XlfUserController@register');
