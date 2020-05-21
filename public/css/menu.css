@@ -705,7 +705,7 @@ a {
 	-webkit-text-decoration-skip: objects;
 }
 a:hover {
-	color: #1d68a7;
+	/* color: #1d68a7; */
 	text-decoration: underline;
 }
 a:not([href]):not([tabindex]),

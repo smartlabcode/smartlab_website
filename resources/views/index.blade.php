@@ -368,7 +368,9 @@
 </section>
 <section class="blog-section contain"> <img class="blog-orange-circle-big" src="{{asset('/images/img/orange-circle.svg')}}" alt="orange circle background" /> <img class="blog-orange-circle-small" src="{{asset('/images/img/orange-circle.svg')}}" alt="orange circle background" />
   <h2 class="text-center h1-font">@lang('index.blog_h2')</h2>
-  <div class="blog-container"> @foreach ($blogs as $blog)<a href="{{env('BLOG_DOMAIN')}}/blog/{{$blog->id}}/{{App::getlocale()}}" target="_blank" rel="noopener" class="blog">
+  <div class="blog-container">
+     @foreach ($blogs as $blog)
+    <a href="{{env('BLOG_DOMAIN')}}/blog/{{$blog->id}}/{{App::getlocale()}}" target="_blank" rel="noopener" class="blog">
       <div class="img-container">
         <div class="img-container-overlay"></div> <img data-src='{{asset("$blog->image_path")}}' alt="blog background image" class="blog-image" /> <svg class="wave" viewBox="0 0 500 500">
           <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill: white;"></path>
@@ -379,7 +381,14 @@
         <p><span>{{$blog->created_at}}</span> <span>{{$blog->name}}</span></p> <input class="blog-value" type="hidden" value='{{$blog->text}}'>
         <p class="blog-text p-font"></p>
       </div>
-    </a>@endforeach<div class="blog-button"> <a href="{{env('BLOG_DOMAIN')}}/{{App::getlocale()}}" target="_blank" rel="noopener"><button class="button">@lang('index.blog_button')</button></a></div>
+      <div class="blog-bottom-gradient"></div>
+    </a>
+    @endforeach
+    <div class="blog-button">
+      <a href="{{env('BLOG_DOMAIN')}}/{{App::getlocale()}}" target="_blank" rel="noopener">
+        <button class="button">@lang('index.blog_button')</button>
+      </a>
+    </div>
   </div>
 </section>
 <section class="contact-section" name="contact"><img class="contact-orange-circle-r" src="{{asset('/images/img/orange-circle.svg')}}" alt="background orange circle" /> <img class="contact-orange-circle-l" src="{{asset('/images/img/orange-circle.svg')}}" alt="background orange circle" />
