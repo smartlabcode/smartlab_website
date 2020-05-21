@@ -111,6 +111,15 @@
             </div>
         </a>
 
+        <a href="/team">
+            <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                <div class="card-header">Team</div>
+                <div class="card-body">
+                    <h5 class="card-title">Team managment</h5>
+                    <p class="card-text">Edit team members.</p>
+                </div>
+            </div>
+        </a>
     </div>
 
 </div>

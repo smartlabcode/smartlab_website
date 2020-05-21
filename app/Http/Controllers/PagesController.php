@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Services\LogService;
+use App\Team;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -44,9 +45,11 @@ class PagesController extends Controller
                         LIMIT 4'
             );
 
+            $teamMembers = Team::all();
 
             return view('index', [
-                'blogs' => $blogs
+                'blogs' => $blogs,
+                'teamMembers' => $teamMembers
             ]);
         } catch (\Exception $e) {
             // add log

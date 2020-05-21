@@ -48,6 +48,10 @@ Route::middleware(['auth', 'is_not_xlf_user'])->group(function () {
         // routes for careers
         Route::resource('careers', 'CareersController');
         Route::post('careers/store', 'CareersController@storeJob'); // TODO store route is not defined in resource at all - check this
+        Route::get('/team','TeamController@index')->name('team.index');
+        Route::get('/team/{id}','TeamController@edit')->name('team.edit');
+        Route::post('/team/{id}/update','TeamController@update')->name('team.update');
+        Route::get('/team/{id}/delete', 'TeamController@delete')->name('team.delete');
     });
 });
 
@@ -106,3 +110,4 @@ Route::post('assets', 'ImagesController@update');
 Auth::routes([
     //'register' => false
 ]);
+
