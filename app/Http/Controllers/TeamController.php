@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Storage;
 class TeamController extends Controller
 {
     public function index(){
-        $members = Team::all();
+        $members = Team::withTrashed()->get();
         return view('pages.team.index', [
             'members' => $members
         ]);
@@ -57,5 +57,13 @@ class TeamController extends Controller
         $teamMember->delete();
         
         return redirect()->back();
+    }
+
+    public function restore($id){
+        $teamMember = Team::withTrashed()->findOrFail($id);
+        $teamMember->restore();
+
+        return redirect()->back();
+
     }
 }

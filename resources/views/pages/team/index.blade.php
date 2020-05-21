@@ -45,7 +45,11 @@
                     <p class="card-text">{{$member->title}}</p>
                     <div>
                         <a href="{{ route('team.edit',['id'=> $member->id]) }}" class="btn btn-primary">Edit</a>
-                        <a href="{{ route('team.delete', ['id'=> $member->id]) }}" class="btn btn-danger">Delete</a>
+                        @if($member->deleted_at)
+                            <a href="{{ route('team.restore', ['id'=> $member->id]) }}" class="btn btn-success">Restore</a>
+                        @else
+                            <a href="{{ route('team.delete', ['id'=> $member->id]) }}" class="btn btn-danger">Delete</a>
+                        @endif
                     </div>
                 </div>
             </div>

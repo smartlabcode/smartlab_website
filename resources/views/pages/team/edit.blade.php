@@ -49,8 +49,8 @@
                 <!-- <input type="hidden" name="image" value="{{$member['photo']}}" /> -->
                 <input type="file" name="image" class="btn btn-primary"/>
                 <div class="card-body card-body-flex">
-                    <input class="card-title" type="text" name="name" value="{{$member->name}}"/>
-                    <input class="card-text" type="text" name="title"  value="{{$member->title}}" />
+                    <input class="card-title form-control" type="text" name="name" value="{{$member->name}}"/>
+                    <input class="card-text form-control" type="text" name="title"  value="{{$member->title}}" />
                     <div class="button-container">
                         <button type="submit" class="btn btn-primary">Save</button>
                         <a href="{{route('team.index')}}" class="btn btn-danger">Cancel</a>

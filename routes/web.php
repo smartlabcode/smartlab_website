@@ -52,6 +52,7 @@ Route::middleware(['auth', 'is_not_xlf_user'])->group(function () {
         Route::get('/team/{id}','TeamController@edit')->name('team.edit');
         Route::post('/team/{id}/update','TeamController@update')->name('team.update');
         Route::get('/team/{id}/delete', 'TeamController@delete')->name('team.delete');
+        Route::get('/team/{id}/restore', 'TeamController@restore')->name('team.restore');
     });
 });
 
