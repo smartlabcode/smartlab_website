@@ -1,0 +1,38 @@
+<?php
+
+return [
+
+    "Dev-h1" => "Fullstack Web Developer (m/f)",
+    "opisDev" => "If you like the creative IT industry, you are in web programming, you want to work on projects of large European and world companies, apply for the position of Fullstack Web Developer.",
+    "strucne-karakteristike" => "Required professional characteristics of candidates:",
+    "karakteristika1" => "PHP 7",
+    "karakteristika2" => "OOP(Object oriented programming)",
+    "karakteristika3" => "MySQL 5.6+",
+    "karakteristika4" => "MVC architecture",
+    "karakteristika5" => "JavaScript/jQuery",
+    "karakteristika6" => "CSS3 & HTML5",
+    "karakteristika7" => "GIT Version control",
+    "hello" => "If you find yourself in the described characteristics, you want a pleasant atmosphere of work as well as stimulating income, send your CV and motivation letter to ",
+    "lokacija" => "Location: Sarajevo",
+    "pozicije" => "Number of positions: 2",
+    "datum" => "Date of publication: 20.05.2019",
+    "apply" => "Apply now",
+    "name" => "*Name",
+    "prezime" => "*Last name",
+    "broj" => "*Phone number",
+    "email" => "*E-mail",
+    "napomena" => "*Note/Short Brief",
+    "kategorija" => "*Category",
+    "choose-kategorija" => "Choose category",
+    "dizajner" => "Designer",
+    "developer" => "Developer",
+    "dizajner-uxui" => "UX/UI Designer",
+    "praktikant" => "Practitioner",
+    "files" => "Place for your files (optional)",
+    "click-to" => "Click to",
+    "upload-files" => " upload file/s",
+    "we-are-commited" => "We're commited to your privacy. SmartLab uses the information you provide to us to contact you about our relevant content, product and services. You may unsubscribe from these communications at any time. For more information check out our ",
+    "privacy" => " Privacy Policy",
+    "send" => "Send",
+
+];

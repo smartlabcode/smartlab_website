@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-5487 190.705 377.696 230.595">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #2b3e55;
+        font-family: Roboto-Bold, Roboto;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        font-size: 66px;
+      }
+
+      .cls-3 {
+        font-size: 70px;
+      }
+    </style>
+  </defs>
+  <g id="Group_1214" data-name="Group 1214" transform="translate(-5487 190.705)">
+    <g id="Group_1195" data-name="Group 1195">
+      <path id="Path_3236" data-name="Path 3236" class="cls-1" d="M279.245,197.066H98.451A98.553,98.553,0,0,1,0,98.451H0A98.413,98.413,0,0,1,98.451,0H279.245A98.413,98.413,0,0,1,377.7,98.451h0A98.553,98.553,0,0,1,279.245,197.066Z"/>
+      <g id="Group_1194" data-name="Group 1194" transform="translate(139.705 163.372)">
+        <path id="Path_3237" data-name="Path 3237" class="cls-1" d="M143.512,131.45,85,166.623,93.875,99.4Z" transform="translate(-85 -99.4)"/>
+      </g>
+    </g>
+    <g id="Group" transform="translate(61.86 24.927)">
+      <text id="WE_ARE" data-name="WE ARE" class="cls-2" transform="translate(6.081 63)"><tspan x="0" y="0">WE ARE</tspan></text>
+      <text id="HIRING_" data-name="HIRING!" class="cls-3" transform="translate(0 127.813)"><tspan x="0" y="0">HIRING!</tspan></text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-1654 5450 187 110.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-3 {
+        fill: #14213d;
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-6 {
+        fill: url(#linear-gradient-5);
+      }
+
+      .cls-7 {
+        fill: url(#linear-gradient-6);
+      }
+
+      .cls-8 {
+        fill: url(#linear-gradient-7);
+      }
+
+      .cls-9 {
+        fill: url(#linear-gradient-8);
+      }
+
+      .cls-10 {
+        fill: url(#linear-gradient-9);
+      }
+
+      .cls-11 {
+        fill: url(#linear-gradient-10);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="-0.002" y1="0.5" x2="0.999" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff931f"/>
+      <stop offset="1" stop-color="#ff931f"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="-0.001" y1="0.5" x2="1" y2="0.5" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="-0.001" y1="0.499" x2="1" y2="0.499" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-4" x1="0" y1="0.5" x2="1.001" y2="0.5" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-5" x1="-0.001" y1="0.498" x2="1.001" y2="0.498" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-6" x1="0" y1="0.5" x2="1" y2="0.5" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-7" x1="0.001" y1="0.501" x2="0.999" y2="0.501" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-8" x1="0" y1="0.501" x2="0.999" y2="0.501" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-9" x1="0.002" y1="0.5" x2="1.002" y2="0.5" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-10" x1="0.003" y1="0.5" x2="1.003" y2="0.5" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="Group_975" data-name="Group 975" transform="translate(-1654 5450)">
+    <g id="Group_973" data-name="Group 973">
+      <circle id="Ellipse_123" data-name="Ellipse 123" class="cls-1" cx="15" cy="15" r="15" transform="translate(77.9)"/>
+      <circle id="Ellipse_124" data-name="Ellipse 124" class="cls-2" cx="15" cy="15" r="15" transform="translate(10.1 5.9)"/>
+      <path id="Path_2780" data-name="Path 2780" class="cls-3" d="M5,43.5a5.015,5.015,0,0,0-5,5H0v61.8H10.1V48.6h0A5.121,5.121,0,0,0,5,43.5Z"/>
+      <path id="Path_2781" data-name="Path 2781" class="cls-4" d="M49.7,75.5h5.2a6.2,6.2,0,1,0,0-12.4H52.4L34.1,43.4l-.2-.2a12.246,12.246,0,0,0-21.3,8.3v.1h0V87.7H37.2v-23l7.9,8.8A6.127,6.127,0,0,0,49.7,75.5Z"/>
+      <circle id="Ellipse_125" data-name="Ellipse 125" class="cls-5" cx="15" cy="15" r="15" transform="translate(146.8 5.9)"/>
+      <path id="Path_2782" data-name="Path 2782" class="cls-6" d="M162,39.2a12.013,12.013,0,0,0-8.2,3.2l-.2.2a11.986,11.986,0,0,0-1.1,1.2L134.4,63.3H131a6.2,6.2,0,0,0,0,12.4h6.2a6.127,6.127,0,0,0,4.6-2l7.9-8.8V87.8h24.6V51.6h0v-.1A12.291,12.291,0,0,0,162,39.2Z"/>
+      <path id="Path_2783" data-name="Path 2783" class="cls-3" d="M186.9,48.5a5,5,0,0,0-10,0h0v61.8H187V48.5Z"/>
+      <path id="Path_2784" data-name="Path 2784" class="cls-7" d="M67.4,72.2c3.4,0,4.8-2.3,6.2-6.2l5.1-12.1V74.7H107V53.3s5.1,13,5.1,13.2c0,0,2.7,6.2,6.1,6.3h.1a5.687,5.687,0,0,0,5.5-7.7c-.1-.2-9.4-20.7-13.8-29.2a6.356,6.356,0,0,0-5.8-3.5H81.3a5.619,5.619,0,0,0-5.1,3.2L61.2,66A6.1,6.1,0,0,0,67.4,72.2Z"/>
+      <path id="Path_2785" data-name="Path 2785" class="cls-3" d="M142.9,78.4H44a3.9,3.9,0,0,0-3.9,3.9v4.5H146.8V82.3A3.971,3.971,0,0,0,142.9,78.4Z"/>
+    </g>
+    <path id="Path_2786" data-name="Path 2786" class="cls-8" d="M73.8,110.5H12.5V86.9H37.1v4H69.5a4.225,4.225,0,0,1,4.2,4.2v15.4Z"/>
+    <path id="Path_2787" data-name="Path 2787" class="cls-9" d="M174.3,110.5H113.1V95.6a4.7,4.7,0,0,1,4.7-4.7h32v-4h24.6v23.6Z"/>
+    <g id="Group_974" data-name="Group 974">
+      <rect id="Rectangle_277" data-name="Rectangle 277" class="cls-10" width="13" height="19.5" transform="translate(78.4 90.9)"/>
+      <rect id="Rectangle_278" data-name="Rectangle 278" class="cls-11" width="13.3" height="19.5" transform="translate(93.4 90.9)"/>
+    </g>
+  </g>
+</svg>

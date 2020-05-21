@@ -1,0 +1,31 @@
+<?php
+
+return [
+    "h1" => "Werden Sie Teil unseres Teams",
+    "paragraph" => "Bewerben Sie sich um unsere freien Stellen oder unser Praktikums-Programm, das ein Training und ein Praktikum in der digitalen Industrie beinhaltet. Wir bieten eine hervorragende Energie, großes Wissen, viel Freundschaft und die Möglichkeit zu einer langfristigen Einstellung!",
+    "button" => "Anwenden",
+    "availablePositions" => "Freie Stellen",
+    "eL-h1" => "eLearning-Designer (m/f)",
+    "opisEL" => "Wenn Sie die kreative Industrie mögen, sich mit Grafik beschäftigen, gerne neue Sachen lernen und die Perspektive schätzen, bewerben Sie sich um die Stelle als Inhalts-Designer für das Online-Lernen.",
+    "readMore" => "Mehr erfahren",
+    "Dev-h1" => "Fullstack Webentwickler (m/f)",
+    "opisDev" => "Wenn Sie die kreative IT-Industrie mögen, sich mit Web-Programmierung beschäftigen, an Projekten großer europäischer und weltweiter Unternehmen arbeiten möchten, bewerben Sie sich um die Stelle als Back-End Web-Developer",
+    "apply-h1" => "Bewerben Sie sich als Teil des SmartLab-Teams.",
+    "name" => "*Name",
+    "prezime" => "*Nachname",
+    "broj" => "*Telefonnummer",
+    "email" => "*E-mail",
+    "napomena" => "*Hinweis/Kurze Kurzanleitung",
+    "kategorija" => "*Kategorie",
+    "choose-kategorija" => "Kategorie auswählen",
+    "dizajner" => "Designer",
+    "developer" => "Entwickler",
+    "dizajner-uxui" => "UX/UI Designer",
+    "praktikant" => "Praktiker",
+    "files" => "Platz für Ihre Dateien (freiwillig)",
+    "click-to" => "Klicken Sie hier",
+    "upload-files" => "Datei/en hochladen",
+    "we-are-commited" => "Wir verpflichten uns zu Ihrer Privatsphäre. SmartLab verwendet die von Ihnen zur Verfügung gestellten Informationen, um Sie über unsere relevanten Inhalte, Produkte und Dienstleistungen zu informieren. Sie können diese Mitteilungen jederzeit abbestellen. Weitere Informationen finden Sie in unserer",
+    "privacy" => "Datenschutzerklärung.",
+    "send" => "Senden"
+];

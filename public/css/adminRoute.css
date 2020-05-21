@@ -1,0 +1,6 @@
+.nav-top p, .nav-top a, .nav-top label, .nav-li a{
+    color: black !important;
+}
+.container, .listTable{
+    margin-top: 5% !important;
+}

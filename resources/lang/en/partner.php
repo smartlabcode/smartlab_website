@@ -1,0 +1,28 @@
+<?php
+return [
+    "header" => "Become our Partner",
+    "info" => "Generate new business opportunities, grow your revenue or create value for your customers by getting into partnership with SmartLab. Partnering with a variety of extraordinary organisations helps make  progress towards achieving your goals.",
+    "options" => "Partnership Options",
+    "become-partner" => "Become a Partner",
+    "course-header" => "Course Production Partnership",
+    "course-info" => "If you are an eLearning company offering the eLearning solutions to your clients, but sometimes you do not have enough resources to meet the deadlines, then “Course Production Partnership Programme” is an ideal solution for you. Through this program, we can exchange experience and knowledge and together become more efficient in future challenges.",
+    "moodle-header" => "Moodle Support Partnership",
+    "moodle-info" => "If you want professional support for your Moodle LMS, then feel free to reach us for this program. Moodle Support Partnership will bring us in a win-win situation where we can update, backup and make sure that your LMS is working properly and always with good performance. Creating Moodle Themes according to your brand identity is one of  the fastest solutions we can offer.",
+    "service-header" => "Service Reseller Partnership",
+    "service-info" => "Feel free to offer our solutions to your customers and enjoy the benefits of discounts, merge marketing campaigns and references, training & knowledge transfer. Besides that, if you have a valuable product and want to have a reseller partner for South East Europe, SmartLab is available for that type of partnership.",
+    "use-case-header" => "Case Partnership",
+    "use-case-step1" => "The company from Germany reached SmartLab asking to support them in the articulate e-learning production.",
+    "use-case-step2" => "We arranged a meeting, defined the needs and created an action plan.",
+    "use-case-step3" => " The design and development have been implemented according to the Partner’s budget.",
+    "use-case-step4" => "During the production, both partners were constantly communicating with each other to make sure that everything is aligned to the client’s expectation.",
+    "use-case-step5" => "At the end of the production, we deployed the Master version of e-learning courses and started with establishing  a long-term partnership.",
+    "six-steps" => "A partnership can be arranged in 6 steps",
+    "step1" => "Kick- off meeting between CEOs or other management personnel from both parties",
+    "step2" => "Partnership contract signed by both parties",
+    "step3" => "Both parties define the budget for the first pilot project, so the team members can start working together",
+    "step4" => "During the production phase, time schedule and progress must be controlled by both parties",
+    "step5" => "Delivery and implementation are always aligned to a win-win approach",
+    "step6" => "Team members visit each other enjoying the possibility of  making a new friendship",
+    "partner-experience" => "Partner’s experience",
+    "partner-testimonial1" => "“We found SmartLab very professional to work with. They quickly understood the brief, they were proactive and easy to communicate with during the build phase and delivered a final product that met fully with our expectations.”"
+];
