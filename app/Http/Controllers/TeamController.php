@@ -9,6 +9,13 @@ use Illuminate\Support\Facades\Storage;
 
 class TeamController extends Controller
 {
+    public function validateInput($request){
+        return $request->validate([
+            'name' => ['required','max:100'],
+            'title' => ['required','max:100'],
+            'image' => ['required']
+        ]);
+    }
     public function index(){
         $members = Team::withTrashed()->get();
         return view('pages.team.index', [
@@ -24,6 +31,8 @@ class TeamController extends Controller
     }
 
     public function update($id,Request $request){
+
+        $validator=$this->validateInput($request);
 
         $teamMember = Team::find($id);
 
@@ -47,13 +56,16 @@ class TeamController extends Controller
         $teamMember->save();
         
         // dd($path);
-        return redirect()->back();
+        return redirect()->back()->withErrors($validator);
         
     }
 
     public function delete($id){
-        $teamMember = Team::findOrFail($id);
+        $teamMember = Team::withTrashed()->findOrFail($id);
 
+        if($teamMember->deleted_at != null){
+            $teamMember->forceDelete();
+        }
         $teamMember->delete();
         
         return redirect()->back();
@@ -65,5 +77,32 @@ class TeamController extends Controller
 
         return redirect()->back();
 
+    }
+
+    public function store(Request $request){
+
+        $validator=$this->validateInput($request);
+
+        $teamMember = new Team;
+
+        $image = $request->image;
+        $name = $request->name;
+        $title = $request->title;
+        $imageName = "";
+
+        if(isset($image)){
+            $path = $image->store('public/team');
+            $imageName = explode("/", $path); 
+            $imageName = $imageName[2];
+        }else{
+            $imageName = $teamMember->photo;
+        }
+
+        $teamMember->name = $name;
+        $teamMember->title = $title;
+        $teamMember->photo = $imageName;
+
+        $teamMember->save();
+        return redirect()->back()->withErrors($validator);  
     }
 }

@@ -46,11 +46,13 @@
             <form class="card" action="{{$member->id}}/update" enctype="multipart/form-data" method="POST">
                 @csrf
                 <img class="card-img-top" src="{{$imagePath}}" alt="Card image cap">
-                <!-- <input type="hidden" name="image" value="{{$member['photo']}}" /> -->
-                <input type="file" name="image" class="btn btn-primary"/>
+                {{ $errors->first('image') }}
+                <input type="file" name="image" class="btn btn-primary @if($errors->first('image')) is-invalid @endif"/>
                 <div class="card-body card-body-flex">
-                    <input class="card-title form-control" type="text" name="name" value="{{$member->name}}"/>
-                    <input class="card-text form-control" type="text" name="title"  value="{{$member->title}}" />
+                    {{ $errors->first('name') }}
+                    <input class="card-title form-control @if($errors->first('name')) is-invalid @endif" type="text" name="name" value="{{$member->name}}" required/>
+                    {{ $errors->first('title') }}
+                    <input class="card-text form-control @if($errors->first('title')) is-invalid @endif" type="text" name="title"  value="{{$member->title}}" required/>
                     <div class="button-container">
                         <button type="submit" class="btn btn-primary">Save</button>
                         <a href="{{route('team.index')}}" class="btn btn-danger">Cancel</a>
