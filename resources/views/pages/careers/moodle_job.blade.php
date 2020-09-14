@@ -60,12 +60,12 @@
     </ul>
 
     <br />
-    <p class="h5-font"> @lang('careers-moodle.hello')<a href="mailto:posao@smartlab.ba" target="_blank">posao@smartlab.ba.</a></p>
-    <p class="h5-font"> @lang('careers-moodle.hello2')</p>
+    <p><strong> @lang('careers-moodle.hello')<a href="mailto:posao@smartlab.ba" target="_blank">posao@smartlab.ba.</a></strong></p>
+    <p><strong>@lang('careers-moodle.hello2')</strong></p>
 
     <br />
 
-    <p class="h5-font">@lang('careers-moodle.datum')</p>
+    <p><strong>@lang('careers-moodle.datum')</strong></p>
 
     <br />
     <div class="buttons-container">

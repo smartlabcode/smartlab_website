@@ -62,12 +62,12 @@
     </ul>
 
     <br />
-    <p class="h5-font"> @lang('careers-multimedia.hello')<a href="mailto:posao@smartlab.ba" target="_blank">posao@smartlab.ba.</a></p>
-    <p class="h5-font"> @lang('careers-multimedia.hello2')</p>
+    <p><strong>@lang('careers-multimedia.hello')<a href="mailto:posao@smartlab.ba" target="_blank">posao@smartlab.ba.</a></strong></p>
+    <p><strong>@lang('careers-multimedia.hello2')</strong></p>
     <br />
 
-    <p class="h5-font">@lang('careers-multimedia.lokacija')</p>
-    <p class="h5-font">@lang('careers-multimedia.datum')</p>
+    <p><strong>@lang('careers-multimedia.lokacija')</strong></p>
+    <p><strong>@lang('careers-multimedia.datum')<strong></p>
 
     <br />
     <div class="buttons-container">

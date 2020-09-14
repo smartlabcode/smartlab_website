@@ -28,7 +28,11 @@ return [
     "upload-files" => " upload file/s",
     "we-are-commited" => "We're commited to your privacy. SmartLab uses the information you provide to us to contact you about our relevant content, product and services. You may unsubscribe from these communications at any time. For more information check out our Privacy Policy.",
     "privacy" => " Privacy Policy.",
-    "send" => "Send"
+    "send" => "Send",
 
-
+    "mmd-h1" => "Multimedia Designer",
+    "opisMMD" => "Naš tim čini skupina kreativaca i dizajnera koji su posvećeni kreiranju grafičkih, web i edukacijskih rješenja. Tražimo novog člana tima za rad u našem uredu u Zavidovićima: Multimedia dizajner.",
+    
+    "mdev-h1" => "Moodle LMS Administrator",
+    "opisMdev" => "U svom radu koristimo Moodle LMS kao vodeći “Open source” sistem za upravljanje učenjem. U tu svrhu tražimo novog člana tima: Moodle LMS Administratora",
 ];
