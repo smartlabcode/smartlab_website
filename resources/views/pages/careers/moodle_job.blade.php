@@ -60,8 +60,8 @@
     </ul>
 
     <br />
-    <p><strong> @lang('careers-moodle.hello')<a href="mailto:posao@smartlab.ba" target="_blank">posao@smartlab.ba.</a></strong></p>
-    <p><strong>@lang('careers-moodle.hello2')</strong></p>
+    <p class="p-font">@lang('careers-moodle.hello')<a href="mailto:posao@smartlab.ba" target="_blank">posao@smartlab.ba.</a></p>
+    <p class="p-font">@lang('careers-moodle.hello2')</strong></p>
 
     <br />
 

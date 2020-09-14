@@ -6,7 +6,7 @@ return [
     "opisEL" => "SmartLab Sarajevo otvara prvi kreatini studio na teritoriji općine Zavidovići. Zarad toga, raspisuje javni konkurs: ",
     "opisEL2" => "Ako voliš kreativnu industriju, baviš se grafikom, voliš da učiš nove stvari i cijeniš perspektivu, prijavi se na poziciji dizajnera saržaja za online učenje.",
     "opisMultimedia" => "SmartLab je IT kompanija specijalizirana za eLearning. Naš tim čini skupina kreativaca i dizajnera koji su posvećeni kreiranju grafičkih, web i edukacijskih rješenja. 
-    Tražimo novog člana tima za rad u našem uredu u Zavidovićima: <strong>Multimedia dizajner</strong>",
+    Tražimo novog člana tima za rad u našem uredu u Zavidovićima: Multimedia dizajner",
     "opis-poslova" => "Opis poslova: ",
     "opis1" => "- Editovanje video sadržaja",
     "opis2" => "- Produkcija video tutoriala",

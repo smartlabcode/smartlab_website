@@ -62,8 +62,8 @@
     </ul>
 
     <br />
-    <p><strong>@lang('careers-multimedia.hello')<a href="mailto:posao@smartlab.ba" target="_blank">posao@smartlab.ba.</a></strong></p>
-    <p><strong>@lang('careers-multimedia.hello2')</strong></p>
+    <p class="p-font">@lang('careers-multimedia.hello')<a href="mailto:posao@smartlab.ba" target="_blank">posao@smartlab.ba.</a></p>
+    <p class="p-font">@lang('careers-multimedia.hello2')</p>
     <br />
 
     <p><strong>@lang('careers-multimedia.lokacija')</strong></p>

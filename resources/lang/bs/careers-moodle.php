@@ -7,7 +7,7 @@ return [
     "opisEL2" => "Ako voliš kreativnu industriju, baviš se grafikom, voliš da učiš nove stvari i cijeniš perspektivu, prijavi se na poziciji dizajnera saržaja za online učenje.",
     "opisDev" => "SmartLab je IT kompanija specijalizirana za eLearning. Naš tim čini skupina kreativaca i dizajnera koji su posvećeni kreiranju grafičkih, 
     web i edukacijskih rješenja. U svom radu koristimo Moodle LMS kao vodeći “Open source” sistem za upravljanje učenjem. U tu svrhu tražimo novog člana tima: 
-    <strong>Moodle LMS Administratora</strong>",
+    Moodle LMS Administratora",
     "opis-poslova" => "Opis poslova: ",
     "opis1" => "- Administriranje Moodle sistema za klijente;",
     "opis2" => "- Razvoj e-learning sadržaja u Moodle-u;",
