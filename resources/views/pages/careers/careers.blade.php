@@ -33,37 +33,40 @@
     <br />
     <br />
     <div class="careers-positions-container contain">
+
         <div class="careers-positions">
             <div class="carrers-positions-image-container">
                 <img class="careers-positions-image --left-10px" src="{{ asset('images/careers/megaphone-orange.svg') }}" alt="orange megaphone" />
-                <img class="careers-positions-image " src="{{ asset('images/careers/designer-page-img.svg') }}" alt="designer wanted" />
+                <img class="careers-positions-image " src="{{ asset('images/careers/multimediaDesigner-page-img.svg') }}" alt="multimedia designer wanted" />
                 <img class="carrers-positions-mobile" src="{{ asset('images/careers/we-are-hiring-des.svg') }}" alt="designer wanted" />
             </div>
 
             <div class="careers-positions-info">
-                <h2>@lang('careers.eL-h1')</h2>
+                <h2>@lang('careers.mmd-h1')</h2>
                 <p class="p-font">
-                    @lang('careers.opisEL')
+                    @lang('careers.opisMMD')
                 </p>
-                <a href="{{asset('/pages/careers/elearning')}}"><button class="button button-orange">@lang('careers.readMore')</button></a>
+                <a href="{{asset('/pages/careers/multimedia')}}"><button class="button button-orange">@lang('careers.readMore')</button></a>
             </div>
         </div>
 
         <div class="careers-positions">
             <div class="carrers-positions-image-container">
                 <img class="careers-positions-image --left-10px" src="{{ asset('images/careers/megaphone-blue.svg') }}" alt="blue megaphone" />
-                <img class="careers-positions-image" src="{{ asset('images/careers/developer-page-img.svg') }}" alt="developer wanted" />
+                <img class="careers-positions-image" src="{{ asset('images/careers/moodleAdministrator-page-img.svg') }}" alt="moodle administrator wanted" />
                 <img class="carrers-positions-mobile" src="{{ asset('images/careers/we-are-hiring-dev.svg') }}" alt="developer wanted" />
             </div>
 
             <div class="careers-positions-info">
-                <h2>@lang('careers.Dev-h1')</h2>
+                <h2>@lang('careers.mdev-h1')</h2>
                 <p class="p-font">
-                    @lang('careers.opisDev')
+                    @lang('careers.opisMdev')
                 </p>
-                <a href="{{asset('/pages/careers/developer')}}"><button class="button">@lang('careers.readMore')</button></a>
+                <a href="{{asset('/pages/careers/moodle')}}"><button class="button">@lang('careers.readMore')</button></a>
+
             </div>
         </div>
+        
     </div>
 </section>
 
@@ -118,8 +121,8 @@
             <label for="category">@lang('careers.kategorija')</label>
             <select class="form-control" name="category" id="category" required>
                 <option disabled>@lang('careers.choose-kategorija')</option>
-                <option value="designer">@lang('careers.dizajner')</option>
-                <option value="developer">@lang('careers.developer')</option>
+                <option value="multimediaDesigner">Multimedia Designer</option>
+                <option value="moodleDeveloper">Moodle LMS Administrator</option>
                 <!--<option value="ux-ui-designer">@lang('careers.dizajner-uxui')</option>-->
                 <option value="practitioner">@lang('careers.praktikant')</option>
             </select>

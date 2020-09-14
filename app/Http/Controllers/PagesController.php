@@ -281,4 +281,40 @@ class PagesController extends Controller
             return view('pages.general_error');
         }
     }
+
+    /**
+     * Display careers multimedia job page
+     */
+    public function showCareersMultimediaPage()
+    {
+
+        try {
+
+            return view('pages.careers.multimedia_job');
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', 'PagesController - showCareersMultimediaPage: ' . $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+    }
+
+    /**
+     * Display careers moodle job page
+     */
+    public function showCareersMoodlePage()
+    {
+
+        try {
+
+            return view('pages.careers.moodle_job');
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', 'PagesController - showCareersMoodlePage: ' . $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+    }
 }

@@ -12,6 +12,9 @@
 */
 
 // for all of the routes in the following group user needs to be authenticated to see them
+
+use Illuminate\Support\Facades\Route;
+
 Route::middleware(['auth', 'is_not_xlf_user'])->group(function () {
 
     // route for displaying page after admin logs in
@@ -61,10 +64,15 @@ Route::get('pages/animations', 'PagesController@showAnimationsPage');
 Route::get('pages/programming', 'PagesController@showProgrammingPage');
 Route::get('pages/moodle', 'PagesController@showMoodlePage');
 Route::get('pages/project', 'PagesController@showProjectPage');
+
 // TODO new routes
 Route::get('pages/careers', 'PagesController@showCareersPage');
 Route::get('pages/careers/elearning', 'PagesController@showCareersElearningPage');
 Route::get('pages/careers/developer', 'PagesController@showCareersDeveloperPage');
+
+Route::get('pages/careers/multimedia', 'PagesController@showCareersMultimediaPage');
+Route::get('pages/careers/moodle', 'PagesController@showCareersMoodlePage');
+
 Route::get('pages/partner', 'PagesController@showPartnerPage');
 Route::get('pages/outsourcing', 'PagesController@showOutsourcingPage');
 Route::get('pages/outsourcing_profile', 'PagesController@showOutsourcingProfilePage');
