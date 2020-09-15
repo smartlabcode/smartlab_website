@@ -80,7 +80,7 @@
     <br />
     <div class="buttons-container">
         <a href="{{asset('/pages/careers')}}"><button class="button">Back</button></a>
-        <button class="button" id="applyDeveloperButton">@lang('careers-developer.apply')</button>
+        {{-- <button class="button" id="applyDeveloperButton">@lang('careers-developer.apply')</button> --}}
     </div>
 
 </section>
