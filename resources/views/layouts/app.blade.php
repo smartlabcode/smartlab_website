@@ -50,7 +50,7 @@
     <link href="{{ asset('css/footer.min.css') }}" rel="stylesheet">
     <!--<link href="{{ asset('css/app.min.css') }}" rel="stylesheet">-->
     <link href="{{ asset('css/menu.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/loader.min.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('css/loader.min.css') }}" rel="stylesheet"> --}}
     @yield('css')
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" href="/images/icons/fav.png">

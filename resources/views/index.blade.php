@@ -204,11 +204,11 @@
               </clipPath>
             </defs>
           </svg>
-          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/hare.jpg')}}" alt="Haris M photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue3" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange3" alt="team background">
+          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/almin.jpg')}}" alt="Almin K photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue3" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange3" alt="team background">
         </div>
         <div class="team-description">
-          <h3>Haris M.</h3>
-          <p>eLearning/JS Developer</p>
+          <h3>Almin K.</h3>
+          <p>eLearning designer</p>
         </div>
       </div>
       <div class="team-member">
@@ -264,11 +264,11 @@
               </clipPath>
             </defs>
           </svg>
-          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/aida.jpg')}}" alt="Aida R photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue3" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange3" alt="team background">
+          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/esad.jpg')}}" alt="Esad O photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue3" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange3" alt="team background">
         </div>
         <div class="team-description">
-          <h3>Aida R.</h3>
-          <p>eLearning/instructional Designer</p>
+          <h3>Esad O.</h3>
+          <p>eLearning designer</p>
         </div>
       </div>
       <div class="team-member">
@@ -294,11 +294,11 @@
               </clipPath>
             </defs>
           </svg>
-          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/florin.jpg')}}" alt="Florin B photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1" alt="team background">
+          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/eldin.jpg')}}" alt="Florin B photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1" alt="team background">
         </div>
         <div class="team-description">
-          <h3>Florin B.</h3>
-          <p>Front-End Developer</p>
+          <h3>Eldin P.</h3>
+          <p>eLearning designer</p>
         </div>
       </div>
       <div class="team-member">
@@ -316,21 +316,7 @@
           <p> Full Stack/DevOps</p>
         </div>
       </div>
-      <div class="team-member">
-        <div class="team-img-container"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
-            <defs>
-              <clipPath id="clipPath">
-                <path d="M94.773,4.745c75.489-25.516,161.5,56.6,172.423,133.442,13.424,94.574-90.134,153.618-147.957,167.637C59.091,320.363,11.322,268.811.8,154.877-6.4,77.363,35.671,24.773,94.773,4.745Z"></path>
-              </clipPath>
-            </defs>
-          </svg>
-          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/emina.jpg')}}" alt="Emina K photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue3" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange3" alt="team background">
-        </div>
-        <div class="team-description">
-          <h3>Emina K.</h3>
-          <p>PR/Administration Manager</p>
-        </div>
-      </div><a class="team-member" href="{{asset('/pages/careers')}}">
+      <a class="team-member" href="{{asset('/pages/careers')}}">
         <div class="team-img-container"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
             <defs>
               <clipPath id="clipPath">
