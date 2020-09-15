@@ -11,6 +11,7 @@
     <meta charset="utf-8">
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Multimedia Designer" />
+    <meta property="og:description" content="@lang('careers-moodle.opisMultimedia')" />
     <meta property="og:image" content="{{url('/images/careers/multimediaDesigner-page-img.svg')}}" />
 </head>
 

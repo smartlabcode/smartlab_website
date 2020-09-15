@@ -11,6 +11,7 @@
     <meta charset="utf-8">
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Moodle LMS Administrator" />
+    <meta property="og:description" content="@lang('careers-moodle.opisDev')" />
     <meta property="og:image" content="{{url('/images/careers/moodleAdministrator-page-img.svg')}}" />
 </head>
 
