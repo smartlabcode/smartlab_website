@@ -11,7 +11,9 @@
     <meta charset="utf-8">
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Moodle LMS Administrator" />
-    <meta property="og:description" content="@lang('careers-moodle.opisDev')" />
+    <meta property="og:description" content="SmartLab je IT kompanija specijalizirana za eLearning. Naš tim čini skupina kreativaca i dizajnera koji su posvećeni kreiranju grafičkih,
+    web i edukacijskih rješenja. U svom radu koristimo Moodle LMS kao vodeći “Open source” sistem za upravljanje učenjem. U tu svrhu tražimo novog člana tima:
+    Moodle LMS Administratora" />
     <meta property="og:image" content="{{url('/images/careers/moodleAdministrator-page-img.svg')}}" />
 </head>
 

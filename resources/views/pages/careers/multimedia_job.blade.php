@@ -11,7 +11,8 @@
     <meta charset="utf-8">
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Multimedia Designer" />
-    <meta property="og:description" content="@lang('careers-moodle.opisMultimedia')" />
+    <meta property="og:description" content="SmartLab je IT kompanija specijalizirana za eLearning. Naš tim čini skupina kreativaca i dizajnera koji su posvećeni kreiranju grafičkih, web i edukacijskih rješenja.
+    Tražimo novog člana tima za rad u našem uredu u Zavidovićima: Multimedia dizajner" />
     <meta property="og:image" content="{{url('/images/careers/multimediaDesigner-page-img.svg')}}" />
 </head>
 
