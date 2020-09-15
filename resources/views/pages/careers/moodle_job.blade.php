@@ -7,6 +7,13 @@
 <!-- TODO dont delete this-->
 @include('parts.break_space')
 
+<head>
+    <meta charset="utf-8">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Moodle LMS Administrator" />
+    <meta property="og:image" content="{{url('/images/careers/moodleAdministrator-page-img.svg')}}" />
+</head>
+
 
 <!-- Join our team section -->
 <div class="loader-container">
