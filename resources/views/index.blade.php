@@ -301,6 +301,23 @@
           <p>eLearning designer</p>
         </div>
       </div>
+
+      <div class="team-member">
+        <div class="team-img-container"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
+            <defs>
+              <clipPath id="clipPath">
+                <path d="M94.773,4.745c75.489-25.516,161.5,56.6,172.423,133.442,13.424,94.574-90.134,153.618-147.957,167.637C59.091,320.363,11.322,268.811.8,154.877-6.4,77.363,35.671,24.773,94.773,4.745Z"></path>
+              </clipPath>
+            </defs>
+          </svg>
+          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/dino.jpg')}}" alt="Dino C photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1" alt="team background">
+        </div>
+        <div class="team-description">
+          <h3>Dino Č.</h3>
+          <p>eLearning designer</p>
+        </div>
+      </div>
+
       <div class="team-member">
         <div class="team-img-container"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
             <defs>
