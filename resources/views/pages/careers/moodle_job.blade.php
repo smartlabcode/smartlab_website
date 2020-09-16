@@ -66,7 +66,6 @@
         <li>@lang('careers-moodle.karakteristika4')</li>
         <li>@lang('careers-moodle.karakteristika5')</li>
         <li>@lang('careers-moodle.karakteristika6')</li>
-        <li>@lang('careers-moodle.karakteristika7')</li>
     </ul>
 
     <br />
