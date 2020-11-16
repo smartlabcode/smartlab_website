@@ -371,7 +371,7 @@
         <div> <label for="email">*@lang('index.formEmail')</label> <input type="email" name="email" id="email" required /></div>
       </div>
       <div class="contact-form-group textarea"> <label for="message">*@lang('index.formMessage')</label><textarea name="message" rows="7" id="message" required></textarea></div>
-      <input class="button submit button-orange" value="Send" type="submit">
+      <input class="button submit button-orange" value="@lang('index.formSend')" type="submit">
       @captcha
     </form>
   </div>

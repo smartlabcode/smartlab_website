@@ -175,51 +175,51 @@
         @include('parts.error_success')
 
 
-        <h2 class="text-center h1-font margin-b-100">Contact us and become our partner</h2>
+        <h2 class="text-center h1-font margin-b-100">@lang('partner.contact-us-title')</h2>
         <form action="/bussiness" method="POST" enctype="multipart/form-data" class="partner-form">
 
             <!-- Include token -->
             @csrf
             <div class="partner-form-group">
                 <div>
-                    <label for="bussiness_name" class="p-font">*Company Name: </label>
+                    <label for="bussiness_name" class="p-font">@lang('partner.contact-us-company-name')</label>
                     <input type="text" name="bussiness_name" id="bussiness_name" required />
                 </div>
                 <div>
-                    <label for="bussiness_website" class="p-font">*Company Website:</label>
+                    <label for="bussiness_website" class="p-font">@lang('partner.company-website')</label>
                     <input type="text" name="bussiness_website" id="bussiness_website" required />
                 </div>
             </div>
             <div class="partner-form-group">
                 <div>
-                    <label for="bussiness_person" class="p-font">*Responsible Person:</label>
+                    <label for="bussiness_person" class="p-font">@lang('partner.responsible-person')</label>
                     <input type="text" name="bussiness_person" id="bussiness_person" required />
                 </div>
 
                 <div>
-                    <label for="bussiness_email" class="p-font">*Email:</label>
+                    <label for="bussiness_email" class="p-font">@lang('partner.email')</label>
                     <input type="email" name="bussiness_email" id="bussiness_email" required />
                 </div>
             </div>
             <div class="partner-form-group">
                 <div>
-                    <label for="bussiness_phone_number" class="p-font">*Phone number:</label>
+                    <label for="bussiness_phone_number" class="p-font">@lang('partner.phone-number')</label>
                     <input type="number" name="bussiness_phone_number" id="bussiness_phone_number" required />
                 </div>
                 <div>
-                    <label for="bussiness_category" class="p-font">*Please Select</label>
+                    <label for="bussiness_category" class="p-font">@lang('partner.please-select')</label>
                     <select name="bussiness_category" id="bussiness_category" required>
-                        <option selected disabled>Choose category</option>
-                        <option value="production">Course Production Partnership</option>
-                        <option value="elearning">Moodle Support Partnership</option>
-                        <option value="other">Service Reseller Partnership</option>
+                        <option selected disabled>@lang('partner.choose-category')</option>
+                        <option value="production">@lang('partner.course-production')</option>
+                        <option value="elearning">@lang('partner.moodle-support')</option>
+                        <option value="other">@lang('partner.service-reseller')</option>
                     </select>
                 </div>
 
             </div>
             <div class="partner-form-group">
                 <div>
-                    <label for="bussiness_message" class="p-font">*Note/Short Brief</label>
+                    <label for="bussiness_message" class="p-font">@lang('partner.note')</label>
                     <textarea name="bussiness_message" id="bussiness_message" required></textarea>
                 </div>
                 <div>

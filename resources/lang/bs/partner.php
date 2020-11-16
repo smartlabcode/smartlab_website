@@ -23,5 +23,18 @@ return [
     "step5" => "Isporuka i implementacija su uvijek usklađeni sa pristupom koji donosi zadovoljstvo gdje svi dobijaju.",
     "step6" => "Članovi tima posjećuju jedni druge uživajući u mogućnosti sklapanja novog prijateljstva",
     "partner-experience" => "Iskustvo partnera",
-    "partner-testimonial1" => "„Otkrili smo SmartLab kao kompaniju sa veoma profesionalnim pristupom. Brzo su shvatili šta želimo, bili su proaktivni i lako komunicirali u procesu suradnje te isporučili konačni proizvod koji je u potpunosti ispunio naša očekivanja.”"
+    "partner-testimonial1" => "„Otkrili smo SmartLab kao kompaniju sa veoma profesionalnim pristupom. Brzo su shvatili šta želimo, bili su proaktivni i lako komunicirali u procesu suradnje te isporučili konačni proizvod koji je u potpunosti ispunio naša očekivanja.”",
+    
+    "contact-us-title" => "Kontaktirajte nas i postanite naš partner",
+    "contact-us-company-name" => "*Ime kompanije:",
+    "company-website" => "*Web stranica kompanije:",
+    "responsible-person" => "*Odgovorna osoba:",
+    "email" => "*Email:",
+    "phone-number" => "*Broj telefona:",
+    "please-select" => "*Molimo odaberite",
+    "choose-category" => "Odaberite kategoriju",
+    "course-production" => "Partnerstvo u vidu razvoja kurseva",
+    "moodle-support" => "Partnerstvo u vidu Moodle podrške",
+    "service-reseller" => "Partnerstvo u vidu prodajnog zastupnika",
+    "note" => "*Napomena / kratki sažetak",
 ];

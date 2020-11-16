@@ -40,5 +40,6 @@ return [
     'formSurname' => 'Prezime',
     'formSubject' => 'Predmet',
     'formEmail' => 'Email',
-    'formMessage' => 'Poruka'
+    'formMessage' => 'Poruka',
+    'formSend' => 'Pošalji'
 ];

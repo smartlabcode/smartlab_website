@@ -24,5 +24,18 @@ return [
     "step5" => "Die Auslieferung und Implementierung sind immer mit der zufrieden stellenden Herangehensweise, wo alle Gewinne machen, abgestimmt.",
     "step6" => "Die Team-Mitglieder besuchen einander, indem sie die Möglichkeit genießen, neue Freundschaften zu schließen.",
     "partner-experience" => "Partner-Erfahrungen",
-    "partner-testimonial1" => "„Wir haben SmartLab als Unternehmen mit einer sehr professionellen Herangehensweise entdeckt. Sie haben schnell realisiert, was wir möchten, sie waren proaktiv und haben im Laufe des Zusammenarbeitsprozesses einfach kommuniziert und das Endprodukt ausgeliefert, welches unsere Erwartungen vollkommen erfüllt hat.“"
+    "partner-testimonial1" => "„Wir haben SmartLab als Unternehmen mit einer sehr professionellen Herangehensweise entdeckt. Sie haben schnell realisiert, was wir möchten, sie waren proaktiv und haben im Laufe des Zusammenarbeitsprozesses einfach kommuniziert und das Endprodukt ausgeliefert, welches unsere Erwartungen vollkommen erfüllt hat.“",
+
+    "contact-us-title" => "Kontaktieren Sie uns und werden Sie unser Partner",
+    "contact-us-company-name" => "*Name der Firma:",
+    "company-website" => "*Unternehmenswebseite:",
+    "responsible-person" => "*Verantwortliche:",
+    "email" => "*Email:",
+    "phone-number" => "*Telefonnummer:",
+    "please-select" => "*Bitte auswählen",
+    "choose-category" => "Kategorie auswählen",
+    "course-production" => "Kurs-Entwicklungs-Partnerschaft",
+    "moodle-support" => "Moodle-Unterstützungs-Partnerschaft",
+    "service-reseller" => "Vertriebsvertreter-Partnerschaft",
+    "note" => "*Hinweis/Kurzbeschreibung",
 ];

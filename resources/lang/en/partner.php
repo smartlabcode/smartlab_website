@@ -24,5 +24,18 @@ return [
     "step5" => "Delivery and implementation are always aligned to a win-win approach",
     "step6" => "Team members visit each other enjoying the possibility of  making a new friendship",
     "partner-experience" => "Partner’s experience",
-    "partner-testimonial1" => "“We found SmartLab very professional to work with. They quickly understood the brief, they were proactive and easy to communicate with during the build phase and delivered a final product that met fully with our expectations.”"
+    "partner-testimonial1" => "“We found SmartLab very professional to work with. They quickly understood the brief, they were proactive and easy to communicate with during the build phase and delivered a final product that met fully with our expectations.”",
+    
+    "contact-us-title" => "Contact us and become our partner",
+    "contact-us-company-name" => "*Company Name:",
+    "company-website" => "*Company Website:",
+    "responsible-person" => "*Responsible Person:",
+    "email" => "*Email:",
+    "phone-number" => "*Phone number:",
+    "please-select" => "*Please Select",
+    "choose-category" => "Choose category",
+    "course-production" => "Course Production Partnership",
+    "moodle-support" => "Moodle Support Partnership",
+    "service-reseller" => "Service Reseller Partnership",
+    "note" => "*Note/Short Brief",
 ];

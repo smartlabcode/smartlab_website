@@ -40,5 +40,6 @@ return [
     'formSurname' => 'Nachname',
     'formSubject' => 'Betreff',
     'formEmail' => 'Email',
-    'formMessage' => 'Nachricht'
+    'formMessage' => 'Nachricht',
+    'formSend' => 'Senden'
 ];
