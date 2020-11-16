@@ -222,6 +222,8 @@ font-size: 2em;
 }
 .section-two-bot h3 {
 	font-weight: 700;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 .section-two-bot-item {
 	min-height: 500px;
