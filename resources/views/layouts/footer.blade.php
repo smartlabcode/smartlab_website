@@ -17,9 +17,6 @@
                     <img src="{{asset('/images/footer/social-icons/phone-receiver.svg')}}" alt="phone" />
                     <div class="footer-phone-container">
                         <p>
-                            <a href="tel: 00387 61 811 394">+387 61 811 394</a>
-                        </p>
-                        <p>
                             <a href="tel: 00387 33 956 222">+387 33 956 222</a>
                         </p>
                     </div>
@@ -35,7 +32,7 @@
                 <img src="{{asset('/images/footer/social-icons/location.svg ')}}" alt="location" />
                 <address>
                     <a href="https://www.google.com/maps/place/SmartLab/@43.8542408,18.3870703,17z/data=!3m1!4b1!4m5!3m4!1s0x4758c8c48c458d13:0xd3b7b0136b05bfe5!8m2!3d43.854237!4d18.389259" target="_blank" rel="noopener">
-                        <p>Kolodvorska 5,</p>
+                        <p>Bulevar Mese Selimovica 81A,</p>
                         <p><span class="wrap">Sarajevo,</span> <span>@lang('footer.state')</span></p>
                     </a>
                 </address>
@@ -53,7 +50,7 @@
 
             </div>
             <div class="footer-bot-column --center">
-                Copyright &copy; 2019 SmartLab
+                Copyright &copy; <?php echo date('Y')?> SmartLab
             </div>
             <div class="footer-bot-column --right">
                 <div class="social-icons-container">
@@ -63,7 +60,7 @@
                         <img src="{{asset('/images/footer/social-icons/skype-icon.svg')}}" class="footer-bot-icons" alt="skype icon" />
                     </a>
                     <a href="#" target="_blank" rel="noopener">
-                        <img src="{{asset('/images/footer/social-icons/youtube-icon.svg')}}" class="footer-bot-icons no-right-margin" alt="youtube icon" />
+                        <a href="https://www.youtube.com/channel/UCCvpynG5iChYpBhvTJ8NwWQ" target="_blank" rel="noopener"><img src="{{asset('/images/footer/social-icons/youtube-icon.svg')}}" class="footer-bot-icons no-right-margin" alt="youtube icon" /></a>
                     </a>
                 </div>
             </div>
