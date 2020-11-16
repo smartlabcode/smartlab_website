@@ -9,3 +9,6 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+public/js/snow.js
+resources/views/layouts/app.blade.php
+resources/views/layouts/app.blade.php
