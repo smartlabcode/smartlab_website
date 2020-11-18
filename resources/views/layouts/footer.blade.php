@@ -39,7 +39,7 @@
             </div>
             <div class="footer-top-column --right">
 
-                <a class="footer-button" href="https://www.google.com/maps/place/SmartLab/@43.8542408,18.3870703,17z/data=!3m1!4b1!4m5!3m4!1s0x4758c8c48c458d13:0xd3b7b0136b05bfe5!8m2!3d43.854237!4d18.389259" target="_blank" rel="noopener">
+                <a class="footer-button" href="https://www.google.com/maps/place/SmartLab/@43.8470448,18.361753,15z/data=!4m2!3m1!1s0x0:0xd3b7b0136b05bfe5?sa=X&ved=2ahUKEwjtwqSSkYztAhWRtYsKHTYmBB0Q_BIwCnoECBIQBQ" target="_blank" rel="noopener">
                     <span>@lang('footer.findUs')</span>
                 </a>
             </div>
