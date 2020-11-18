@@ -957,6 +957,9 @@ input[type=radio] {
 	}
 }
 /* Custom style */
+.phone_number_menu:hover{
+	color: black;
+}
 
 /* Create admin */
 

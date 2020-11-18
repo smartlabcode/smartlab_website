@@ -4,7 +4,7 @@
 <ul class="nav-list " id="nav-list">
     <div class="nav-top contain" id="nav-top">
 
-        <p><span>Call: <a href="tel: +38733956222"><span>+387 33 956 222</span></a></p>
+        <p class="phone_number_menu"><span>Call: <a href="tel: +38733956222"><span>+387 33 956 222</span></a></p>
         <form id="languageForm" action="/language" method="POST">
             <!-- Form for sending new language after user clicks on one of the select options - page is refreshed with new language translations -->
             @csrf
