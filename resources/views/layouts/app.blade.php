@@ -14,6 +14,7 @@
     ndex, follow">
 
     <title>{{config('app_name', 'Smartlab')}} @yield('title')</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Snowstorm/20131208/snowstorm-min.js" integrity="sha512-rMkLONrw50boYG/6Ku0E8VstfWMRn5D0dX3QZS26Mg0rspYq4EHxYOULuPbv9Be2HBbrrmN8dpPgYUeJ4bINCA==" crossorigin="anonymous"></script>
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
