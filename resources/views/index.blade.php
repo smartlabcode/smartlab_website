@@ -355,21 +355,21 @@
         <a href="http://www.biramoporavak.com/" target="_blank" rel="noopener"><img data-src="{{asset('/images/partners-logo/biramoporavak-2.png')}}" alt="biramo oporavak logo" /></a> 
         {{-- <a><img data-src="{{asset('/images/partners-logo/BDfD-2.png')}}" alt="bosnian doctors for disabled logo" /></a></div> --}}
         
-        <a><img data-src="{{asset('/images/partners-logo/eu_info_centar.png')}}" alt="EU Info Centar" /></a> 
-        <a><img data-src="{{asset('/images/partners-logo/giz_logo.gif')}}" alt="GIZ" /></a> 
+        <a href="https://euinfo.ba/en/" style="text-align: center"><img style="width: 80%; margin-top: 5%" data-src="{{asset('/images/partners-logo/eu_info_centar.png')}}" alt="EU Info Centar" /></a> 
+        <a href="https://www.giz.de/" style="text-align: center"><img style="width: 80%; margin-top: 5%" data-src="{{asset('/images/partners-logo/giz_logo.gif')}}" alt="GIZ" /></a> 
 
-        <a><img data-src="{{asset('/images/partners-logo/ads_bih.gif')}}" alt="ADS FBIH" /></a> 
-        <a><img data-src="{{asset('/images/partners-logo/bridge.gif')}}" alt="bridge" /></a> 
+        <a href="https://www.adsfbih.gov.ba/" style="text-align: center"><img style="width: 80%; margin-top: 5%" data-src="{{asset('/images/partners-logo/ads_bih.gif')}}" alt="ADS FBIH" /></a> 
+        <a href="http://shkolla-bridge.info/" style="text-align: center"><img style="width: 80%; margin-top: 5%" data-src="{{asset('/images/partners-logo/bridge.gif')}}" alt="bridge" /></a> 
 
-        <a><img data-src="{{asset('/images/partners-logo/adurs_logo.gif')}}" alt="ADURS" /></a> 
-        <a><img data-src="{{asset('/images/partners-logo/druga_gim_logo.gif')}}" alt="Druga Gimnazija Sarajevo" /></a> 
-        <a><img data-src="{{asset('/images/partners-logo/osce_logo.gif')}}" alt="OSCE BIH" /></a> 
-        <a><img data-src="{{asset('/images/partners-logo/sci_logo.gif')}}" alt="SCI" /></a> 
-        <a><img data-src="{{asset('/images/partners-logo/wcc_logo.gif')}}" alt="WORLDCC" /></a> 
-        <a><img data-src="{{asset('/images/partners-logo/civitas_logo.gif')}}" alt="Civitas" /></a> 
-        <a><img data-src="{{asset('/images/partners-logo/undp_logo.gif')}}" alt="UNDP" /></a>
-        <a><img data-src="{{asset('/images/partners-logo/belfor.gif')}}" alt="SHL" /></a> 
-        <a><img data-src="{{asset('/images/partners-logo/shl_logo.gif')}}" alt="SHL" /></a> 
+        <a href="http://adu.vladars.net/cyrl/" style="text-align: center"><img style="width: 80%; margin-top: 5%" data-src="{{asset('/images/partners-logo/adurs_logo.gif')}}" alt="ADURS" /></a> 
+        <a href="https://2gimnazija.edu.ba/bs/" style="text-align: center"><img style="width: 80%; margin-top: 5%" data-src="{{asset('/images/partners-logo/druga_gim_logo.gif')}}" alt="Druga Gimnazija Sarajevo" /></a> 
+        <a href="https://www.osce.org/" style="text-align: center"><img style="margin-top: 22%" data-src="{{asset('/images/partners-logo/osce_logo.png')}}" alt="OSCE" /></a> 
+        <a href="https://www.savethechildren.net/" style="text-align: center"><img style="width: 80%; margin-top: 5%" data-src="{{asset('/images/partners-logo/sci_logo.gif')}}" alt="SCI" /></a> 
+        <a href="https://www.worldcc.com/" style="text-align: center"><img style="width: 80%; margin-top: 5%" data-src="{{asset('/images/partners-logo/wcc_logo.gif')}}" alt="WORLDCC" /></a> 
+        <a href="https://civitas.ba/" style="text-align: center"><img style="width: 80%; margin-top: 5%" data-src="{{asset('/images/partners-logo/civitas_logo.gif')}}" alt="Civitas" /></a> 
+        <a href="https://www.ba.undp.org/content/bosnia_and_herzegovina/en/home.html" style="text-align: center"><img style="width: 80%; margin-top: 5%" data-src="{{asset('/images/partners-logo/undp_logo.gif')}}" alt="UNDP" /></a>
+        <a href="https://www.belfor.com/en/us" style="text-align: center"><img style="width: 80%; margin-top: 5%" data-src="{{asset('/images/partners-logo/belfor.gif')}}" alt="SHL" /></a> 
+        <a href="https://www.schueler-helfen-leben.de/en/" style="text-align: center"><img style="width: 80%; margin-top: 5%" data-src="{{asset('/images/partners-logo/shl_logo.gif')}}" alt="SHL" /></a> 
 
 
     </div>
