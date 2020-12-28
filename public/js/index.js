@@ -204,6 +204,13 @@ document.addEventListener('DOMContentLoaded', function(event) {
 			image: '/images/partners-images/Nick.png',
 			name: 'Nick Saalfeld',
 			company: 'Wells Park Communications'
+		},
+		{
+			text: '"Working together with SmartLab team on building the Moodle platform and production of online courses for SHL Academy for Young Leaders is a great experience! Rizah, Irfan, and the rest of the team were always patient and ready to give additional explanations since we are an NGO that has just entered the field of e-learning."',
+			image: '/images/partners-images/adnan.png',
+			//name: 'Adnan Pripoljac, Project Coordinator - Academy',
+			name: 'Adnan Pripoljac',
+			company: 'Schüler Helfen Leben'
 		}
 	];
 	let j = 0;

@@ -406,14 +406,15 @@
     <h2 class="text-center h1-font">@lang('index.partners_h2')</h2>
     <div class="flex">
       <div class="partners-text"> <img class="partners-text-background" src="{{asset('/images/bg-testimonial.svg')}}" alt="partners background" />
-        <div>
-          <p class="p-font" id="partners-text"> “SmartLab team created a fantastic web-based quiz for Afrika Presents with a downloadable badge. Incredible attention to details. Better than anticipated and they had a true understanding and delivered just what we were looking for. We look forward to working together again in the future.”</p>
-          <div> <img id="partners-image" src="{{asset('/images/partners-images/Mara.png')}}" alt="partner image" />
+        <div style="padding-top: 0px">
+          <p class="p-font" id="partners-text" style="height: 150px;"> “SmartLab team created a fantastic web-based quiz for Afrika Presents with a downloadable badge. Incredible attention to details. Better than anticipated and they had a true understanding and delivered just what we were looking for. We look forward to working together again in the future.”</p>
+          <div> 
+            <img id="partners-image" src="{{asset('/images/partners-images/Mara.png')}}" alt="partner image" />
             <p id="partners-name" class="h2-font">Mara Menzies</p>
             <p id="partners-company" class="p-font">Afrika Presents Ltd</p>
           </div>
           <div id="indicators">
-            <span class="indicator indicator-opacity"></span><span class="indicator"></span><span class="indicator"></span><span class="indicator"><!--</span><span class="indicator"></span>-->
+            <span class="indicator indicator-opacity"></span><span class="indicator"></span><span class="indicator"></span><span class="indicator"></span><span class="indicator"></span>
           </div>
         </div>
       </div>
@@ -496,5 +497,5 @@
 </section>
 @endsection
 @section('js')
-<script src="{{ asset('/js/index.min.js') }}"></script>
+<script src="{{ asset('/js/index.js') }}"></script>
 @endsection
