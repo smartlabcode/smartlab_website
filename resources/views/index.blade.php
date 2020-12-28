@@ -174,14 +174,14 @@
               </clipPath>
             </defs>
           </svg>
-          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/irfo-k.jpg')}}" alt="Irfan K photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1" alt="team background">
+          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/irfanK.jpg')}}" alt="Irfan K photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1" alt="team background">
         </div>
         <div class="team-description">
           <h3>Irfan K.</h3>
           <p>eLearning Designer</p>
         </div>
       </div>
-      <div class="team-member">
+      {{-- <div class="team-member">
         <div class="team-img-container"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
             <defs>
               <clipPath id="clipPath">
@@ -195,7 +195,7 @@
           <h3>Ibrahim Z.</h3>
           <p>eLearning /wordpress Developer</p>
         </div>
-      </div>
+      </div> --}}
       <div class="team-member">
         <div class="team-img-container"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
             <defs>
@@ -204,7 +204,7 @@
               </clipPath>
             </defs>
           </svg>
-          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/almin.jpg')}}" alt="Almin K photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue3" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange3" alt="team background">
+          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/alminK.jpg')}}" alt="Almin K photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue3" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange3" alt="team background">
         </div>
         <div class="team-description">
           <h3>Almin K.</h3>
@@ -219,7 +219,7 @@
               </clipPath>
             </defs>
           </svg>
-          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/rizah.jpg')}}" alt="Rizah K photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue4" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange4" alt="team background">
+          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/rizahK.jpg')}}" alt="Rizah K photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue4" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange4" alt="team background">
         </div>
         <div class="team-description">
           <h3>Rizah K.</h3>
@@ -234,7 +234,7 @@
               </clipPath>
             </defs>
           </svg>
-          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/zulfo.jpg')}}" alt="Zulfo M photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1" alt="team background">
+          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/zulfoM.jpg')}}" alt="Zulfo M photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1" alt="team background">
         </div>
         <div class="team-description">
           <h3>Zulfo M.</h3>
@@ -249,7 +249,7 @@
               </clipPath>
             </defs>
           </svg>
-          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/irfo-s.jpg')}}" alt="Irfan S photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue2" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange2" alt="team background">
+          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/irfanS.jpg')}}" alt="Irfan S photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue2" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange2" alt="team background">
         </div>
         <div class="team-description">
           <h3>Irfan S.</h3>
@@ -264,7 +264,7 @@
               </clipPath>
             </defs>
           </svg>
-          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/esad.jpg')}}" alt="Esad O photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue3" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange3" alt="team background">
+          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/esadO.jpg')}}" alt="Esad O photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue3" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange3" alt="team background">
         </div>
         <div class="team-description">
           <h3>Esad O.</h3>
@@ -280,7 +280,7 @@
               </clipPath>
             </defs>
           </svg>
-          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/eldin.jpg')}}" alt="Florin B photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1" alt="team background">
+          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/eldinP.jpg')}}" alt="Eldin photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1" alt="team background">
         </div>
         <div class="team-description">
           <h3>Eldin P.</h3>
@@ -296,11 +296,59 @@
               </clipPath>
             </defs>
           </svg>
-          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/dino.jpg')}}" alt="Dino C photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1" alt="team background">
+          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/harun.jpg')}}" alt="Harun L photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1" alt="team background">
+        </div>
+        <div class="team-description">
+          <h3>Harun L.</h3>
+          <p>eLearning designer</p>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <div class="team-img-container"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
+            <defs>
+              <clipPath id="clipPath">
+                <path d="M94.773,4.745c75.489-25.516,161.5,56.6,172.423,133.442,13.424,94.574-90.134,153.618-147.957,167.637C59.091,320.363,11.322,268.811.8,154.877-6.4,77.363,35.671,24.773,94.773,4.745Z"></path>
+              </clipPath>
+            </defs>
+          </svg>
+          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/dinoC.jpg')}}" alt="Dino C photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1" alt="team background">
         </div>
         <div class="team-description">
           <h3>Dino Č.</h3>
           <p>eLearning designer</p>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <div class="team-img-container"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
+            <defs>
+              <clipPath id="clipPath">
+                <path d="M94.773,4.745c75.489-25.516,161.5,56.6,172.423,133.442,13.424,94.574-90.134,153.618-147.957,167.637C59.091,320.363,11.322,268.811.8,154.877-6.4,77.363,35.671,24.773,94.773,4.745Z"></path>
+              </clipPath>
+            </defs>
+          </svg>
+          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/amraC.jpg')}}" alt="Amra C photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1" alt="team background">
+        </div>
+        <div class="team-description">
+          <h3>Amra Č.</h3>
+          <p>Office manager</p>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <div class="team-img-container"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
+            <defs>
+              <clipPath id="clipPath">
+                <path d="M94.773,4.745c75.489-25.516,161.5,56.6,172.423,133.442,13.424,94.574-90.134,153.618-147.957,167.637C59.091,320.363,11.322,268.811.8,154.877-6.4,77.363,35.671,24.773,94.773,4.745Z"></path>
+              </clipPath>
+            </defs>
+          </svg>
+          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/kenanB.jpg')}}" alt="Kenan B photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1" alt="team background">
+        </div>
+        <div class="team-description">
+          <h3>Kenan B.</h3>
+          <p>eLearning Developer</p>
         </div>
       </div>
 
@@ -366,7 +414,7 @@
         <a href="https://www.osce.org/" style="text-align: center"><img style="margin-top: 22%" data-src="{{asset('/images/partners-logo/osce_logo.png')}}" alt="OSCE" /></a> 
         <a href="https://www.savethechildren.net/" style="text-align: center"><img style="width: 75%; margin-top: 8%" data-src="{{asset('/images/partners-logo/sci_logo.gif')}}" alt="SCI" /></a> 
         <a href="https://www.worldcc.com/" style="text-align: center"><img style="width: 75%; margin-top: 8%" data-src="{{asset('/images/partners-logo/wcc_logo.gif')}}" alt="WORLDCC" /></a> 
-        <a href="https://civitas.ba/" style="text-align: center"><img style="width: 75%; margin-top: 8%" data-src="{{asset('/images/partners-logo/civitas_logo.gif')}}" alt="Civitas" /></a> 
+        <a href="https://civitasonlineucionica.ba/" style="text-align: center"><img style="width: 75%; margin-top: 20%" data-src="{{asset('/images/partners-logo/civitas_logo.png')}}" alt="Civitas" /></a> 
         <a href="https://www.ba.undp.org/content/bosnia_and_herzegovina/en/home.html" style="text-align: center"><img style="width: 75%; margin-top: 8%" data-src="{{asset('/images/partners-logo/undp_logo.gif')}}" alt="UNDP" /></a>
         <a href="https://wellspark.co.uk/" target="_blank" rel="noopener"><img data-src="{{asset('/images/partners-logo/WELLS-PARK-2.png')}}" alt="wells park communications logo" /></a> 
         <a href="https://www.schueler-helfen-leben.de/en/" style="text-align: center"><img style="width: 75%; margin-top: 8%" data-src="{{asset('/images/partners-logo/shl_logo.gif')}}" alt="SHL" /></a> 
