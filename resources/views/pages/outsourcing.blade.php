@@ -217,7 +217,7 @@
                 </defs>
             </svg>
             <div class="team-img">
-                <img class="profile-image" src="{{ asset('images/team/irfo-k.jpg') }}" alt="Irfan K">
+                <img class="profile-image" src="{{ asset('images/team/irfanK.jpg') }}" alt="Irfan K">
             </div>
             <img src="{{ asset('images/img/blue-circle.svg') }}" class="team-blue1">
             <img src="{{ asset('images/img/orange-circle.svg') }}" class="team-orange1">
@@ -248,7 +248,7 @@
             </div>
         </div>
     </div>
-    <div class="team-member contain">
+    {{-- <div class="team-member contain">
         <div class="team-skills">
             <!-- team skills Ibrahim Z.-->
             <div class="line-container">
@@ -383,7 +383,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <div class="team-member contain">
         <!-- Amer M skills -->
         <div class="team-skills">
@@ -541,7 +541,7 @@
                 </defs>
             </svg>
             <div class="team-img">
-                <img class="profile-image" src="{{ asset('images/team/zulfo.jpg') }}" alt="Zulfo M">
+                <img class="profile-image" src="{{ asset('images/team/zulfoM.jpg') }}" alt="Zulfo M">
             </div>
             <img src="{{ asset('images/img/blue-circle.svg') }}" class="team-blue4">
             <img src="{{ asset('images/img/orange-circle.svg') }}" class="team-orange4">
@@ -724,7 +724,7 @@
                 </defs>
             </svg>
             <div class="team-img">
-                <img class="profile-image" src="{{ asset('images/team/irfo-s.jpg') }}" alt="Irfan S">
+                <img class="profile-image" src="{{ asset('images/team/irfanS.jpg') }}" alt="Irfan S">
             </div>
             <img src="{{ asset('images/img/blue-circle.svg') }}" class="team-blue1">
             <img src="{{ asset('images/img/orange-circle.svg') }}" class="team-orange1">
