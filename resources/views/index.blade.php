@@ -269,7 +269,7 @@
         </div>
         <div class="team-description">
           <h3>Kenan B.</h3>
-          <p>eLearning Developer</p>
+          <p>Full Stack Developer</p>
         </div>
       </div>
       <div class="team-member">
