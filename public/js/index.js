@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	let partners_bs = [
 		{
 			text:
-				'“SmartLab tim kreirao je fantastičan internetski kviz za Afrika Presents sa značkom za preuzimanje. Nevjerovatna pažnja prema detaljima. Bolje nego što se očekivalo, imali su istinsko razumijevanje i isporučili upravo ono što smo tražili. Radujemo se ponovnoj suradnji u budućnosti.”',
+				'“SmartLab tim kreirao je fantastičan internetski kviz za Afrika Presents sa značkom za koja se može preuzeti. Nevjerovatna pažnja prema detaljima. Bolje nego što se očekivalo, imali su istinsko razumijevanje i isporučili upravo ono što smo tražili. Radujemo se ponovnoj suradnji u budućnosti.”',
 			image: '/images/partners-images/Mara.png',
 			name: 'Mara Menzies',
 			company: 'Afrika Presents Ltd'
@@ -269,7 +269,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 		},
 		{
 			text:
-				'“Terminalu za obuku trebao je iskusni programer za učenje. Isprobali smo nekoliko uspoređivača, međutim, SmartLab tim se svojim vještinama, predanošću i sposobnostima izdvajao od ostalih. Toplo preporučujem.”',
+				'“Terminalu za obuku trebao je iskusnog eLearning developera. Isprobali smo nekoliko uspoređivača, međutim, SmartLab tim se svojim vještinama, predanošću i sposobnostima izdvajao od ostalih. Toplo preporučujem.”',
 			image: '/images/partners-images/mark.png',
 			name: 'Mark Illingworth ',
 			company: 'The Training Terminal'
