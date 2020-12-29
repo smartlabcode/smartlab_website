@@ -407,7 +407,17 @@
     <div class="flex">
       <div class="partners-text"> <img class="partners-text-background" src="{{asset('/images/bg-testimonial.svg')}}" alt="partners background" />
         <div style="padding-top: 0px">
-          <p class="p-font" id="partners-text" style="height: 150px;"> “SmartLab team created a fantastic web-based quiz for Afrika Presents with a downloadable badge. Incredible attention to details. Better than anticipated and they had a true understanding and delivered just what we were looking for. We look forward to working together again in the future.”</p>
+
+          @if(app()->getLocale() == 'en')
+            <p class="p-font" id="partners-text" style="height: 150px;"> “SmartLab team created a fantastic web-based quiz for Afrika Presents with a downloadable badge. Incredible attention to details. Better than anticipated and they had a true understanding and delivered just what we were looking for. We look forward to working together again in the future.”</p>
+          @elseif(app()->getLocale() == 'de')
+            <p class="p-font" id="partners-text" style="height: 150px;"> “Das SmartLab-Team hat ein fantastisches webbasiertes Quiz für Afrika Presents mit einem herunterladbaren Badge erstellt. Unglaubliche Aufmerksamkeit für Details. Besser als erwartet und sie hatten ein echtes Verständnis und lieferten genau das, wonach wir gesucht haben. Wir freuen uns darauf, in Zukunft wieder zusammenzuarbeiten.”</p>
+          @elseif(app()->getLocale() == 'bs')
+            <p class="p-font" id="partners-text" style="height: 150px;"> “SmartLab tim kreirao je fantastičan internetski kviz za Afrika Presents sa značkom za preuzimanje. Nevjerovatna pažnja prema detaljima. Bolje nego što se očekivalo, imali su istinsko razumijevanje i isporučili upravo ono što smo tražili. Radujemo se ponovnoj suradnji u budućnosti.”</p>
+          @else
+            <p class="p-font" id="partners-text" style="height: 150px;"> “SmartLab team created a fantastic web-based quiz for Afrika Presents with a downloadable badge. Incredible attention to details. Better than anticipated and they had a true understanding and delivered just what we were looking for. We look forward to working together again in the future.”</p>
+          @endif
+
           <div> 
             <img id="partners-image" src="{{asset('/images/partners-images/Mara.png')}}" alt="partner image" />
             <p id="partners-name" class="h2-font">Mara Menzies</p>

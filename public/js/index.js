@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	let indicators = document.querySelectorAll('.indicator');
 	let partnersTextContainer = document.querySelector('.partners-text');
 
-	let partners = [
+	let partners_en = [
 		{
 			text:
 				'“SmartLab team created a fantastic web-based quiz for Afrika Presents with a downloadable badge. Incredible attention to details. Better than anticipated and they had a true understanding and delivered just what we were looking for. We look forward to working together again in the future.”',
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 		},
 		{
 			text:
-				'“It’s a great pleasure to be working with Smartlab – they are exactly how international collaboration should work to the benefit of agencies and customers; and they form an essential part of our future client offer”.',
+				'“It’s a great pleasure to be working with Smartlab – they are exactly how international collaboration should work to the benefit of agencies and customers; and they form an essential part of our future client offer."',
 			image: '/images/partners-images/Nick.png',
 			name: 'Nick Saalfeld',
 			company: 'Wells Park Communications'
@@ -213,6 +213,105 @@ document.addEventListener('DOMContentLoaded', function(event) {
 			company: 'Schüler Helfen Leben'
 		}
 	];
+
+	let partners_de = [
+		{
+			text:
+				'“Das SmartLab-Team hat ein fantastisches webbasiertes Quiz für Afrika Presents mit einem herunterladbaren Badge erstellt. Unglaubliche Aufmerksamkeit für Details. Besser als erwartet und sie hatten ein echtes Verständnis und lieferten genau das, wonach wir gesucht haben. Wir freuen uns darauf, in Zukunft wieder zusammenzuarbeiten.”',
+			image: '/images/partners-images/Mara.png',
+			name: 'Mara Menzies',
+			company: 'Afrika Presents Ltd'
+		},
+		{
+			text:
+				'“Ich habe mit SmartLab an einer neuen Website-Konzeption und -Entwicklung gearbeitet und fand das Team effizient, effektiv und reaktionsschnell, als wir die Iterationen durcharbeiteten. Vor allem Rizah brachte einige starke Ideen ein und sorgte dafür, dass die engen Zeitvorgaben eingehalten wurden.”',
+			image: '/images/partners-images/paul.png',
+			name: 'Paul Mallee',
+			company: 'MaisonPrive Holiday Homes LLC'
+		},
+		{
+			text:
+				'“Das Training Terminal war auf der Suche nach einem erfahrenen E-Learning-Entwickler. Wir haben mehrere Firmen ausprobiert, aber das Team von SmartLab hat sich mit seinen Fähigkeiten, seinem Engagement und seiner Fähigkeit von den anderen abgehoben. Sehr zu empfehlen.”',
+			image: '/images/partners-images/mark.png',
+			name: 'Mark Illingworth ',
+			company: 'The Training Terminal'
+		},
+		{
+			text:
+				'“Es ist eine große Freude, mit Smartlab zusammenzuarbeiten - sie sind genau das, wie internationale Zusammenarbeit zum Vorteil von Agenturen und Kunden funktionieren sollte; und sie sind ein wesentlicher Bestandteil unseres zukünftigen Kundenangebots."',
+			image: '/images/partners-images/Nick.png',
+			name: 'Nick Saalfeld',
+			company: 'Wells Park Communications'
+		},
+		{
+			text: '"Die Zusammenarbeit mit dem SmartLab-Team beim Aufbau der Moodle-Plattform und der Produktion von Online-Kursen für die SHL Academy for Young Leaders ist eine tolle Erfahrung! Rizah, Irfan und der Rest des Teams waren immer geduldig und bereit, zusätzliche Erklärungen zu geben, da wir eine NGO sind, die gerade erst in den Bereich des E-Learnings eingestiegen ist."',
+			image: '/images/partners-images/adnan.png',
+			//name: 'Adnan Pripoljac, Project Coordinator - Academy',
+			name: 'Adnan Pripoljac',
+			company: 'Schüler Helfen Leben'
+		}
+	];
+
+	let partners_bs = [
+		{
+			text:
+				'“SmartLab tim kreirao je fantastičan internetski kviz za Afrika Presents sa značkom za preuzimanje. Nevjerovatna pažnja prema detaljima. Bolje nego što se očekivalo, imali su istinsko razumijevanje i isporučili upravo ono što smo tražili. Radujemo se ponovnoj suradnji u budućnosti.”',
+			image: '/images/partners-images/Mara.png',
+			name: 'Mara Menzies',
+			company: 'Afrika Presents Ltd'
+		},
+		{
+			text:
+				'“Radio sam sa SmartLabom na konceptualizaciji i razvoju nove web stranice, nalazeći njihov tim kao efikasan, efektivan i reagirajući dok smo radili kroz iteracije. Rizah je posebno iznjedrio neke snažne ideje i osigurao da se poštuju rokovi.”',
+			image: '/images/partners-images/paul.png',
+			name: 'Paul Mallee',
+			company: 'MaisonPrive Holiday Homes LLC'
+		},
+		{
+			text:
+				'“Terminalu za obuku trebao je iskusni programer za učenje. Isprobali smo nekoliko uspoređivača, međutim, SmartLab tim se svojim vještinama, predanošću i sposobnostima izdvajao od ostalih. Toplo preporučujem.”',
+			image: '/images/partners-images/mark.png',
+			name: 'Mark Illingworth ',
+			company: 'The Training Terminal'
+		},
+		{
+			text:
+				'“Veliko mi je zadovoljstvo surađivati sa Smartlabom - upravo bi onako kako međunarodna suradnja trebala raditi u korist agencija i kupaca; i oni čine važan dio naše buduće ponude za klijente."',
+			image: '/images/partners-images/Nick.png',
+			name: 'Nick Saalfeld',
+			company: 'Wells Park Communications'
+		},
+		{
+			text: '"Saradnja sa ekipom SmartLab-a na izgradnji Moodle platforme i produkciji kurseva SHL Akademije za mlade lidere je odlično iskustvo! Rizah, Irfan i ostatak ekipe uvijek su imali strpljenja za naša pitanja i bili spremni dati dodatna pojašnjenja budući da smo kao nevladina organizacija tek zakoračili u polje e-learninga."',
+			image: '/images/partners-images/adnan.png',
+			//name: 'Adnan Pripoljac, Project Coordinator - Academy',
+			name: 'Adnan Pripoljac',
+			company: 'Schüler Helfen Leben'
+		}
+	]
+
+	var locale = document.getElementsByTagName("html")[0].getAttribute("lang");
+
+	let partners = null;
+
+	switch (locale) {
+		case 'en':
+			partners = partners_en;
+			break;
+
+		case 'de':
+			partners = partners_de;
+			break;
+
+		case 'bs':
+			partners = partners_bs;
+			break;
+	
+		default:
+			partners = partners_en;
+			break;
+	}
+
 	let j = 0;
 
 	function testemonialsChange() {
