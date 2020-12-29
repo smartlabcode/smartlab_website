@@ -413,7 +413,7 @@
           @elseif(app()->getLocale() == 'de')
             <p class="p-font" id="partners-text" style="height: 150px;"> “Das SmartLab-Team hat ein fantastisches webbasiertes Quiz für Afrika Presents mit einem herunterladbaren Badge erstellt. Unglaubliche Aufmerksamkeit für Details. Besser als erwartet und sie hatten ein echtes Verständnis und lieferten genau das, wonach wir gesucht haben. Wir freuen uns darauf, in Zukunft wieder zusammenzuarbeiten.”</p>
           @elseif(app()->getLocale() == 'bs')
-            <p class="p-font" id="partners-text" style="height: 150px;"> “SmartLab tim kreirao je fantastičan internetski kviz za Afrika Presents sa značkom za koja se može preuzeti. Nevjerovatna pažnja prema detaljima. Bolje nego što se očekivalo, imali su istinsko razumijevanje i isporučili upravo ono što smo tražili. Radujemo se ponovnoj suradnji u budućnosti.”</p>
+            <p class="p-font" id="partners-text" style="height: 150px;"> “SmartLab tim kreirao je fantastičan internetski kviz za Afrika Presents sa značkom koja se može preuzeti. Nevjerovatna pažnja prema detaljima. Bolje nego što se očekivalo, imali su istinsko razumijevanje i isporučili upravo ono što smo tražili. Radujemo se ponovnoj suradnji u budućnosti.”</p>
           @else
             <p class="p-font" id="partners-text" style="height: 150px;"> “SmartLab team created a fantastic web-based quiz for Afrika Presents with a downloadable badge. Incredible attention to details. Better than anticipated and they had a true understanding and delivered just what we were looking for. We look forward to working together again in the future.”</p>
           @endif

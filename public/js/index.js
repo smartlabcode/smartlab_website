@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	let partners_bs = [
 		{
 			text:
-				'“SmartLab tim kreirao je fantastičan internetski kviz za Afrika Presents sa značkom za koja se može preuzeti. Nevjerovatna pažnja prema detaljima. Bolje nego što se očekivalo, imali su istinsko razumijevanje i isporučili upravo ono što smo tražili. Radujemo se ponovnoj suradnji u budućnosti.”',
+				'“SmartLab tim kreirao je fantastičan internetski kviz za Afrika Presents sa značkom koja se može preuzeti. Nevjerovatna pažnja prema detaljima. Bolje nego što se očekivalo, imali su istinsko razumijevanje i isporučili upravo ono što smo tražili. Radujemo se ponovnoj suradnji u budućnosti.”',
 			image: '/images/partners-images/Mara.png',
 			name: 'Mara Menzies',
 			company: 'Afrika Presents Ltd'
