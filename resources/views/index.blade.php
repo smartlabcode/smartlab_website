@@ -178,7 +178,7 @@
         </div>
         <div class="team-description">
           <h3>Irfan K.</h3>
-          <p>eLearning Designer</p>
+          <p>Project Manager</p>
         </div>
       </div>
       {{-- <div class="team-member">
@@ -208,7 +208,7 @@
         </div>
         <div class="team-description">
           <h3>Irfan S.</h3>
-          <p>eLearning Designer</p>
+          <p>Art Director</p>
         </div>
       </div>
       <div class="team-member">
@@ -253,7 +253,7 @@
         </div>
         <div class="team-description">
           <h3>Amra Č.</h3>
-          <p>Office manager</p>
+          <p>Office Manager</p>
         </div>
       </div>
 
@@ -284,7 +284,7 @@
         </div>
         <div class="team-description">
           <h3>Almin K.</h3>
-          <p>eLearning designer</p>
+          <p>eLearning Designer</p>
         </div>
       </div>
       <div class="team-member">
@@ -299,7 +299,7 @@
         </div>
         <div class="team-description">
           <h3>Esad O.</h3>
-          <p>eLearning designer</p>
+          <p>eLearning Designer</p>
         </div>
       </div>
 
@@ -315,7 +315,7 @@
         </div>
         <div class="team-description">
           <h3>Eldin P.</h3>
-          <p>eLearning designer</p>
+          <p>eLearning Designer</p>
         </div>
       </div>
 
@@ -331,7 +331,7 @@
         </div>
         <div class="team-description">
           <h3>Harun L.</h3>
-          <p>Multimedia designer</p>
+          <p>Multimedia Designer</p>
         </div>
       </div>
 
@@ -347,7 +347,7 @@
         </div>
         <div class="team-description">
           <h3>Dino Č.</h3>
-          <p>eLearning designer</p>
+          <p>eLearning Designer</p>
         </div>
       </div>
 
@@ -363,7 +363,7 @@
         </div>
         <div class="team-description">
           <h3>Kenan S.</h3>
-          <p>Multimedia designer</p>
+          <p>Multimedia Designer</p>
         </div>
       </div>
 
@@ -379,7 +379,7 @@
         </div>
         <div class="team-description">
           <h3>Edin H.</h3>
-          <p>eLearning developer</p>
+          <p>eLearning Developer</p>
         </div>
       </div>
 
@@ -453,7 +453,7 @@
         <a href="https://www.adsfbih.gov.ba/" style="text-align: center"><img style="width: 75%; margin-top: 8%" data-src="{{asset('/images/partners-logo/ads_bih.gif')}}" alt="ADS FBIH" /></a> 
         <a href="http://shkolla-bridge.info/" style="text-align: center"><img style="width: 75%; margin-top: 8%" data-src="{{asset('/images/partners-logo/bridge.gif')}}" alt="bridge" /></a> 
 
-        <a href="http://adu.vladars.net/cyrl/" style="text-align: center"><img style="width: 75%; margin-top: 8%" data-src="{{asset('/images/partners-logo/adurs_logo.gif')}}" alt="ADURS" /></a> 
+        <a href="https://obuke.adu.vladars.net/" style="text-align: center"><img style="width: 75%; margin-top: 8%" data-src="{{asset('/images/partners-logo/adurs_logo.gif')}}" alt="ADURS" /></a> 
         <a href="https://2gimnazija.edu.ba/bs/" style="text-align: center"><img style="width: 75%; margin-top: 8%" data-src="{{asset('/images/partners-logo/druga_gim_logo.gif')}}" alt="Druga Gimnazija Sarajevo" /></a> 
         <a href="https://www.osce.org/" style="text-align: center"><img style="margin-top: 22%" data-src="{{asset('/images/partners-logo/osce_logo.png')}}" alt="OSCE" /></a> 
         <a href="https://www.savethechildren.net/" style="text-align: center"><img style="width: 75%; margin-top: 8%" data-src="{{asset('/images/partners-logo/sci_logo.gif')}}" alt="SCI" /></a> 
@@ -461,7 +461,7 @@
         <a href="https://civitasonlineucionica.ba/" style="text-align: center"><img style="width: 75%; margin-top: 20%" data-src="{{asset('/images/partners-logo/civitas_logo.png')}}" alt="Civitas" /></a> 
         <a href="https://www.ba.undp.org/content/bosnia_and_herzegovina/en/home.html" style="text-align: center"><img style="width: 75%; margin-top: 8%" data-src="{{asset('/images/partners-logo/undp_logo.gif')}}" alt="UNDP" /></a>
         <a href="https://wellspark.co.uk/" target="_blank" rel="noopener"><img data-src="{{asset('/images/partners-logo/WELLS-PARK-2.png')}}" alt="wells park communications logo" /></a> 
-        <a href="https://www.schueler-helfen-leben.de/en/" style="text-align: center"><img style="width: 75%; margin-top: 8%" data-src="{{asset('/images/partners-logo/shl_logo.gif')}}" alt="SHL" /></a> 
+        <a href="https://edu.shlakademija.ba/" style="text-align: center"><img style="width: 75%; margin-top: 8%" data-src="{{asset('/images/partners-logo/shl_logo.gif')}}" alt="SHL" /></a> 
 
 
     </div>
