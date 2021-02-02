@@ -107,8 +107,8 @@ Route::put('language', 'LanguagesController@switchLanguage');
 Route::post('subscribe', 'SubscribeController@saveSubscriber');
 
 // routes for editing website images
-Route::get('assets', 'ImagesController@index');
-Route::post('assets', 'ImagesController@update');
+// Route::get('assets', 'ImagesController@index');
+// Route::post('assets', 'ImagesController@update');
 
 // authorization routes - register option is disabled
 Auth::routes([
