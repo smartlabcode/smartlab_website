@@ -418,7 +418,7 @@
       </div>
 
       <div class="partners-images"> 
-        <a href="https://www.thetrainingterminal.co/" target="_blank" rel="noopener"><img data-src="{{asset('/images/partners-logo/TheTrainingTerminal-2.png')}}" alt="TrainingTerminal logo" /></a> 
+        <a href="https://www.thetrainingterminal.com/" target="_blank" rel="noopener"><img data-src="{{asset('/images/partners-logo/TheTrainingTerminal-2.png')}}" alt="TrainingTerminal logo" /></a> 
         <a href="https://www.fkc-online.com/index.php/de" target="_blank" rel="noopener"><img data-src="{{asset('/images/partners-logo/FKC-2.png')}}" alt="Ficher, Knoblauch & co logo" /></a> 
         <a href="https://www.leanscape.io/" target="_blank" rel="noopener"><img data-src="{{asset('/images/partners-logo/leanscape-2.png')}}" alt="leanscape logo" /></a> 
         <a href="https://www.belfor.com/en/us" target="_blank" rel="noopener" style="text-align: center"><img style="width: 75%; margin-top: 8%" data-src="{{asset('/images/partners-logo/belfor.gif')}}" alt="SHL" /></a> 
