@@ -6,7 +6,7 @@ return [
     'heading_p' =>  'Zahvaljujući našem znanju i iskustvu transformiramo ideje u kvalitetno učenje, realiziramo procese e-učenja, ali mnogo toga drugog.',
     'heading_button' => 'Kontaktirajte nas',
     'section_two_h2' => 'Šta radimo?',
-    'section_two_p' => '5. U našem radnom okruženju sve se zasniva na čistoj kreativnosti u pogledu dizajniranja i razvoja eLearning sadržaja. Timski pristup, koristeći Articulate Storyline, Moodle LMS i prilagođena eLearning rješenja, čini nas spremnim za svaki izazov.',
+    'section_two_p' => 'U našem radnom okruženju sve se zasniva na čistoj kreativnosti u pogledu dizajniranja i razvoja eLearning sadržaja. Timski pristup, koristeći Articulate Storyline, Moodle LMS i prilagođena eLearning rješenja, čini nas spremnim za svaki izazov.',
     'section_two_button' => 'Istražite',
     'section_two_top_right_h2' => 'Online kursevi',
     'section_two_top_right_p' => 'Od skice do finalnog rješenja, kroz visokokvalitetne i zanimljive kurseve dizajnirat ćemo i udahnuti život eLearning sadržajima nastalim na vašim idejama.',
