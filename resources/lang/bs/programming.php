@@ -2,14 +2,14 @@
 
 return [
     "heading" => "Implementiranje i programiranje",
-    "title" => "Back-end i front-end razvoj sistema za učenje i upravljanje učinkom, kao i prilagođene funkcije i interaktivni sadržaj koje čine  vaše kurseve privlačnim i jednostavnim za upotrebu.",
+    "title" => "Back-end i front-end razvoj sistema za učenje i upravljanje učinkom, kao i prilagođene funkcije i interaktivni sadržaj učinit će vaše kurseve privlačnim i jednostavnim za upotrebu.",
     "liOne" => "Specifično praćenja sadržaja i izvještavanje",
     "liTwo" => "Konvertovanje postojećih kurseva iz Flash-a u HTML5, što omogućava upotrebu različitih platformi i uređaja.",
     "liThree" => "Kvizovi zasnovani na Wordpress-u",
     "liFour" => "Korištenje alata za webinare",
     "liFive" => "Integrisana proširena stvarnost (AR)",
     "ourWorks" => "Naši radovi",
-    "wantSeeMore" => "Želite vidjeti više:",
+    "wantSeeMore" => "Za detaljniji uvid:",
     "demo" => "Zakažite demonstraciju",
     "contact" => "Kontakt",
 

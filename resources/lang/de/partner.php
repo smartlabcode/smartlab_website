@@ -7,6 +7,7 @@ return [
     "become-partner" => "Werden Sie Partner",
     "course-header" => "Kurs-Entwicklungs-Partnerschaft ",
     "course-info" => "Wenn Sie ein eLearning-Unternehmen sind, das seinen Kunden Online-Lernlösungen anbietet, aber Sie manchmal nicht genug Ressourcen haben, um die Fristen einzuhalten, dann ist die Kurs-Entwicklungs-Partnerschaft die ideale Lösung für Sie. Durch dieses Programm können wir Erfahrungen und Wissen austauschen und gemeinsam in künftigen Herausforderungen effizienter werden.",
+    "moodle-header" => "Moodle-Unterstützungs-Partnerschaft",
     "moodle-info" => "Wenn Sie eine professionelle Unterstützung für Ihr Moodle-LMS möchten, wenden Sie sich an uns für dieses Programm. Die Moodle-Unterstützungs-Partnerschaft bringt uns alle in eine Gewinn-Situation. Überlassen Sie uns die Aktualisierung, die Erstellung von Reserve-Kopien, damit Ihr LMS immer richtig arbeitet und gute Performanzen behält.",
     "service-header" => "Vertriebsvertreter-Partnerschaft",
     "service-info" => "Bieten Sie ruhig unsere Lösungen Ihren Kunden an und genießen Sie sowohl die Rabatt-Vorteile, die Vorteile der gemeinsamen Marketing-Kampagnen und Referenzen als auch die Wissens-Vermittlung. Wenn Sie außerdem ein wertvolles Produkt haben und einen Partner als Vertreter für Südosteuropa haben möchten, dann ist SmartLab für diese Art von Partnerschaft zugänglich.",

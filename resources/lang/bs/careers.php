@@ -2,7 +2,7 @@
 
 return [
     "h1" => "Pridružite se našem timu",
-    "paragraph" => "Prijavite se na naše otvorene pozicije ili naš program stažiranja koji uključuje obuku i praksu u digitalnoj industriji. Nudimo sjajnu energiju, puno znanja, puno druženja i prilike za dugoročni ugovor!",
+    "paragraph" => "Prijavite se na naše otvorene pozicije ili program stažiranja koji uključuje obuku i praksu u digitalnoj industriji. Nudimo sjajnu energiju, mnogo znanja, još više druženja i priliku za dugoročni ugovor!",
     "button" => "Prijavi se",
     "availablePositions" => "Dostupne pozicije",
     "eL-h1" => "Graphic Designer (m/f)",
@@ -10,7 +10,7 @@ return [
     "readMore" => "Pročitaj više",
     "Dev-h1" => "Fullstack Web Developer (m/ž)",
     "opisDev" => "Ako voliš kreativnu IT industriju, baviš se web programiranjem, želiš raditi na projektima velikih evropskih i svjetskih kompanija, prijavi se na poziciji Back-end web Developera...",
-    "apply-h1" => "Prijavite se da budete dio tima  SmartLab-a",
+    "apply-h1" => "Popunite prijavu kako biste postali dio Smartlab tima!",
     "name" => "*Ime",
     "prezime" => "*Prezime",
     "broj" => "*Broj telefona",
