@@ -165,6 +165,7 @@
 <section id="team" class="team contain"> <img class="team-orange-circle" src="{{asset('/images/img/orange-circle.svg')}}" alt="orange background circle" /> <img class="team-blue-circle" src="{{asset('/images/img/blue-circle.svg')}}" alt="blue background circle" /> <img class="team-orange-circle-bottom" src="{{asset('/images/img/orange-circle.svg')}}" alt="background orange circle" />
   <div>
     <h2 class="text-center h1-font">@lang('index.team_h2')</h2>
+    <h3 class="p-font"> @lang('index.team_h3')</h3>
     <div class="flex --four">
       <div class="team-member">
         <div class="team-img-container"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
@@ -476,6 +477,7 @@
 </section>
 <section class="blog-section contain"> <img class="blog-orange-circle-big" src="{{asset('/images/img/orange-circle.svg')}}" alt="orange circle background" /> <img class="blog-orange-circle-small" src="{{asset('/images/img/orange-circle.svg')}}" alt="orange circle background" />
   <h2 class="text-center h1-font">@lang('index.blog_h2')</h2>
+  <h3 class="p-font"> @lang('index.blog_h3')</h3>
   <div class="blog-container"> @foreach ($blogs as $blog)<a href="{{env('BLOG_DOMAIN')}}/blog/{{$blog->id}}/{{App::getlocale()}}" target="_blank" rel="noopener" class="blog">
       <div class="img-container">
         <div class="img-container-overlay"></div> <img data-src='{{asset("$blog->image_path")}}' alt="blog background image" class="blog-image" /> <svg class="wave" viewBox="0 0 500 500">
