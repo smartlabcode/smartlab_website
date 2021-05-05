@@ -1,8 +1,8 @@
 <?php
 
 return [
-  'first_item' => 'Was machen wir',
-  'second_item' => 'Wer sind wir',
+  'first_item' => 'Was machen wir?',
+  'second_item' => 'Wer sind wir?',
   'third_item' => 'Komm mit uns',
   'fourth_item' => 'Blog',
   'fifth_item' => 'Kontakt',
