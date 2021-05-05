@@ -59,9 +59,15 @@
 <section id="about" class="section-three contain"> <img class="about-orange-circle" src="{{asset('/images/img/orange-circle.svg')}}" alt="orange background circle" />
   <div>
     <div class="about-us">
-      <div>
-        <h2 class="h1-font">@lang('index.about_us_h2')</h2>
-        <h3 class="p-font"> @lang('index.about_us_h3')</h3>
+      <div class="mission-vision">
+        <div class="mission">
+        <h2 class="h1-font">@lang('index.about_us_mission_h2')</h2>
+        <h3 class="p-font"> @lang('index.about_us_mission_h3')</h3>
+      </div>
+        <div class="vision">
+        <h2 class="h1-font">@lang('index.about_us_vision_h2')</h2>
+        <h3 class="p-font"> @lang('index.about_us_vision_h3')</h3>
+      </div>
       </div>
       <div id="aboutUs" class="flex about-us">
         <div>
