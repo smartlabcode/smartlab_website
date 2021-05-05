@@ -1,8 +1,8 @@
 <?php
 
 return [
-	'first_item' => 'Šta radimo',
-	'second_item' => 'Ko smo mi',
+	'first_item' => 'Šta radimo?',
+	'second_item' => 'Ko smo mi?',
 	'third_item' => 'Pridružite nam se',
 	'fourth_item' => 'Blog',
 	'fifth_item' => 'Kontakt',
