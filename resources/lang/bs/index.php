@@ -36,7 +36,7 @@ return [
     'team_h3' => 'Mi smo tim kreativaca i dizajnera koji su posvećeni kreiranju grafičkih, web i edukacijskih rješenja. Volja, predanost i vještine koje posjedujemo ključni su faktori kojima pomažemo našim klijentima da se izdvoje iz mnoštva drugih organizacija i kompanija. Kreiranje online i offline sadržaja je naša specijalnost. Bez obzira na veličinu i vrstu projekta na kojem radimo, svaki od njih nam je jednako važan, te naš potpuni trud kanališemo u smjeru maksimalizacije doprinosa našeg rada vašim željenim rezultatima.',
     'partners_h2' => 'Drugi o nama',
     'blog_h2' => 'Blog',
-    'blog_h3' => 'Želiš saznati još više o nama, našim projektima, pročitati neki zanimljiv i edukativan članak? Na našem blogu možeš pronaći mnoštvo inspirativnih i uspješnih priča. A ako pišeš i želiš podijeliti svoju priču, iskustvo ili refleksiju na temu koju smatraš bitnom, pošalji nam je na hello@smartlab.ba, a mi ćemo ti se javiti sa povratnom informacijom.',
+    'blog_h3' => 'Želiš saznati još više o nama, našim projektima, pročitati neki zanimljiv i edukativan članak? Na našem blogu možeš pronaći mnoštvo inspirativnih i uspješnih priča. A ako pišeš i želiš podijeliti svoju priču, iskustvo ili refleksiju na temu koju smatraš bitnom, pošalji nam je na <a href="mailto:hello@smartlab.ba" target="_blank">hello@smartlab.ba</a>, a mi ćemo ti se javiti sa povratnom informacijom.',
     'blog_button' => 'Prikaži više',
     'contact_h2' => 'Kontakt',
     'contact_p' => 'U slučaju da naša web prezentacija nije pružila dovoljno informacija za sva vaša pitanja, prontno ćemo odgovoriti na njih nakon što nam se javite. Također se osjetite slobodnim adresirati nam svaku vrstu projektnog prijedloga ili jednostavno uvodnog zahtjeva za zakazivanje sastanka.',

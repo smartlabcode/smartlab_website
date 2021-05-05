@@ -8,7 +8,7 @@ return [
     "secOneUlFourth" => "Stvaranje posebnih efekata za sadržaj interaktivnih igara za učenje",
     "sec2h2" => "Naši radovi",
     "sec2h22" => "Želite vidjeti više:",
-    "buttonSchedule" => "Zakažite demo",
+    "buttonSchedule" => "Zakažite demonstraciju",
     "sec3h2" => "Alati i tehnologije",
     "sec3p" => "Video produkcija iz eLearning perspektive predstavlja kreiranje funkcija koje mogu konvertovati video zapis u interaktivni sadržaj za učenje. To je korak naprijed u zadržavanju fokusa polaznika.",
     "contact" => "Contact us",

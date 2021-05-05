@@ -56,6 +56,7 @@
                 <div class="social-icons-container">
                     <a href="https://www.facebook.com/smartlabsarajevo/" target="_blank" rel="noopener"><img src="{{asset('/images/footer/social-icons/fb-icon.svg')}}" class="footer-bot-icons" alt="facebook icon" /></a>
                     <a href="https://www.linkedin.com/company/smartlab-sarajevo" target="_blank" rel="noopener"><img src="{{asset('/images/footer/social-icons/linkedin-icon.svg')}}" class=" footer-bot-icons" alt="linkedin icon" /></a>
+                    <a href="https://instagram.com/smartlab_sarajevo" target="_blank" rel="noopener"><img src="{{asset('/images/footer/social-icons/instagram-icon.svg')}}" class=" footer-bot-icons" alt="instagram icon" /></a>
                     <a href="#" target="_blank" rel="noopener">
                         <a href="skype:rizah.kabasi?chat"><img src="{{asset('/images/footer/social-icons/skype-icon.svg')}}" class="footer-bot-icons" alt="skype icon" /></a>
                     </a>

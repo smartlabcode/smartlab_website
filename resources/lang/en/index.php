@@ -36,7 +36,7 @@ return [
 	'team_h3' => 'We are a team of creative people dedicated to creating graphic, web and educational solutions. The will, dedication and skills we possess are key factors in helping our clients stand out from the multitude of other organizations and companies. Creating online and offline content is our specialty. Regardless of the size and type of project we are working on, each of them is equally important to us, so we channel our full effort in order to maximize the quality of our work which eventually leads to your desired results.',
 	'partners_h2' => 'Partners',
 	'blog_h2' => 'Blog',
-	'blog_h3' => 'Do you want to learn even more about us, our projects, or read some interesting and educational articles? On our blog you can find many inspiring and successful stories. And if you are passionate about writing and want to share your story, experience or reflection on a topic that you consider important, send it to us at hello@smartlab.ba, and we will get back to you with feedback.',
+	'blog_h3' => 'Do you want to learn even more about us, our projects, or read some interesting and educational articles? On our blog you can find many inspiring and successful stories. And if you are passionate about writing and want to share your story, experience or reflection on a topic that you consider important, send it to us at <a href="mailto:hello@smartlab.ba" target="_blank">hello@smartlab.ba</a>, and we will get back to you with feedback.',
 	'blog_button' => 'Show More',
 	'contact_h2' => 'Contact',
 	'contact_p' => 'If our web site hasn’t answered all your questions, feel free to contact us with any specific question, project proposal or just an introductory meeting request.',
