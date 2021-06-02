@@ -130,6 +130,24 @@ class PagesController extends Controller
     }
 
     /**
+     * Display frontend dev
+     */
+    public function showCareersFrontDevPage()
+    {
+
+        try {
+
+            return view('pages.frontenddev');
+        } catch (\Exception $e) {
+            // add log
+            $this->logService->setLog('ERROR', 'PagesController - showMoodlePage: ' . $e->getMessage());
+
+            // return error view
+            return view('pages.general_error');
+        }
+    }
+
+    /**
      * Display XLF page
      */
     public function showXlfPage()

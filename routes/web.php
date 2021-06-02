@@ -73,6 +73,8 @@ Route::get('pages/careers/developer', 'PagesController@showCareersDeveloperPage'
 Route::get('pages/careers/multimedia', 'PagesController@showCareersMultimediaPage');
 Route::get('pages/careers/moodle', 'PagesController@showCareersMoodlePage');
 
+Route::get('pages/careers/frontenddev', 'PagesController@showCareersFrontDevPage');
+
 Route::get('pages/partner', 'PagesController@showPartnerPage');
 Route::get('pages/outsourcing', 'PagesController@showOutsourcingPage');
 Route::get('pages/outsourcing_profile', 'PagesController@showOutsourcingProfilePage');
