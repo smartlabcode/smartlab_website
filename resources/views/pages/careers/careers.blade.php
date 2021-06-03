@@ -79,7 +79,7 @@
             </div>
 
             <div class="careers-positions-info">
-                <h2>Fronend Developer</h2>
+                <h2>Frontend Developer</h2>
                 <p class="p-font">
                     SmartLab je IT kompanija specijalizirana za eLearning. Naš tim čini skupina kreativaca i dizajnera koji su posvećeni kreiranju grafičkih, web i edukacijskih rješenja. Ako voliš kreativnu industriju i voliš da učiš nove stvari, SmartLab traži novog člana tima za svoj ured u Sarajevu.
                 </p>
