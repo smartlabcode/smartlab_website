@@ -78,7 +78,7 @@
 
     <br />
 
-    <p><strong>3.6.2021</strong></p>
+    <p><strong>03.06.2021</strong></p>
 
     <br />
     <div class="buttons-container">
