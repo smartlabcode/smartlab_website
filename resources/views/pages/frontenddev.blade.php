@@ -78,7 +78,7 @@
 
     <br />
 
-    <p><strong>@lang('careers-moodle.datum')</strong></p>
+    <p><strong>3.6.2021</strong></p>
 
     <br />
     <div class="buttons-container">
