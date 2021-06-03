@@ -37,16 +37,16 @@
         <div class="careers-positions">
             <div class="carrers-positions-image-container">
                 <img class="careers-positions-image --left-10px" src="{{ asset('images/careers/megaphone-orange.svg') }}" alt="orange megaphone" />
-                <img class="careers-positions-image " src="{{ asset('images/careers/multimediaDesigner-page-img.svg') }}" alt="multimedia designer wanted" />
+                <img class="careers-positions-image " src="{{ asset('images/careers/frontend-developer.svg') }}" alt="multimedia designer wanted" />
                 <img class="carrers-positions-mobile" src="{{ asset('images/careers/we-are-hiring-des.svg') }}" alt="designer wanted" />
             </div>
 
             <div class="careers-positions-info">
-                <h2>@lang('careers.mmd-h1')</h2>
+                <h2>Frontend Developer</h2>
                 <p class="p-font">
-                    @lang('careers.opisMMD')
+                    SmartLab je IT kompanija specijalizirana za eLearning. Naš tim čini skupina kreativaca i dizajnera koji su posvećeni kreiranju grafičkih, web i edukacijskih rješenja. Ako voliš kreativnu industriju i voliš da učiš nove stvari, SmartLab traži novog člana tima za svoj ured u Sarajevu.
                 </p>
-                <a href="{{asset('/pages/careers/multimedia')}}"><button class="button button-orange">@lang('careers.readMore')</button></a>
+                <a href="{{asset('/pages/careers/frontenddev')}}"><button class="button button-orange">@lang('careers.readMore')</button></a>
             </div>
         </div>
 
@@ -74,16 +74,16 @@
         <div class="careers-positions">
             <div class="carrers-positions-image-container">
                 <img class="careers-positions-image --left-10px" src="{{ asset('images/careers/megaphone-orange.svg') }}" alt="orange megaphone" />
-                <img class="careers-positions-image " src="{{ asset('images/careers/frontend-developer.svg') }}" alt="multimedia designer wanted" />
+                <img class="careers-positions-image " src="{{ asset('images/careers/multimediaDesigner-page-img.svg') }}" alt="multimedia designer wanted" />
                 <img class="carrers-positions-mobile" src="{{ asset('images/careers/we-are-hiring-des.svg') }}" alt="designer wanted" />
             </div>
 
             <div class="careers-positions-info">
-                <h2>Frontend Developer</h2>
+                <h2>@lang('careers.mmd-h1')</h2>
                 <p class="p-font">
-                    SmartLab je IT kompanija specijalizirana za eLearning. Naš tim čini skupina kreativaca i dizajnera koji su posvećeni kreiranju grafičkih, web i edukacijskih rješenja. Ako voliš kreativnu industriju i voliš da učiš nove stvari, SmartLab traži novog člana tima za svoj ured u Sarajevu.
+                    @lang('careers.opisMMD')
                 </p>
-                <a href="{{asset('/pages/careers/frontenddev')}}"><button class="button button-orange">@lang('careers.readMore')</button></a>
+                <a href="{{asset('/pages/careers/multimedia')}}"><button class="button button-orange">@lang('careers.readMore')</button></a>
             </div>
         </div>
         
