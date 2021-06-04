@@ -9,10 +9,32 @@
 
 <head>
     <meta charset="utf-8">
-    <meta property="og:type" content="website" />
+    {{-- <meta property="og:type" content="website" />
     <meta property="og:title" content="Frontend Developer" />
     <meta property="og:description" content="SmartLab je IT kompanija specijalizirana za eLearning. Naš tim čini skupina kreativaca i dizajnera koji su posvećeni kreiranju grafičkih, web i edukacijskih rješenja. Ako voliš kreativnu industriju i voliš da učiš nove stvari, SmartLab traži novog člana tima za svoj ured u Sarajevu." />
-    <meta property="og:image" content="{{url('/images/careers/frontend-developer.svg')}}" />
+    <meta property="og:image" content="{{url('/images/careers/frontend-developer.svg')}}" /> --}}
+
+    <meta name="description" content="SmartLab je IT kompanija specijalizirana za eLearning. Naš tim čini skupina kreativaca i dizajnera koji su posvećeni kreiranju grafičkih, web i edukacijskih rješenja. Ako voliš kreativnu industriju i voliš da učiš nove stvari, SmartLab traži novog člana tima za svoj ured u Sarajevu.">
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="Frontend Developer">
+    <meta itemprop="description" content="SmartLab je IT kompanija specijalizirana za eLearning. Naš tim čini skupina kreativaca i dizajnera koji su posvećeni kreiranju grafičkih, web i edukacijskih rješenja. Ako voliš kreativnu industriju i voliš da učiš nove stvari, SmartLab traži novog člana tima za svoj ured u Sarajevu.">
+    <meta itemprop="image" content="http://smartlab.ba/images/careers/frontend-developer.svg">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://smartlab.ba/pages/careers/frontenddev">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Frontend Developer">
+    <meta property="og:description" content="SmartLab je IT kompanija specijalizirana za eLearning. Naš tim čini skupina kreativaca i dizajnera koji su posvećeni kreiranju grafičkih, web i edukacijskih rješenja. Ako voliš kreativnu industriju i voliš da učiš nove stvari, SmartLab traži novog člana tima za svoj ured u Sarajevu.">
+    <meta property="og:image" content="http://smartlab.ba/images/careers/frontend-developer.svg">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Frontend Developer">
+    <meta name="twitter:description" content="SmartLab je IT kompanija specijalizirana za eLearning. Naš tim čini skupina kreativaca i dizajnera koji su posvećeni kreiranju grafičkih, web i edukacijskih rješenja. Ako voliš kreativnu industriju i voliš da učiš nove stvari, SmartLab traži novog člana tima za svoj ured u Sarajevu.">
+    <meta name="twitter:image" content="http://smartlab.ba/images/careers/frontend-developer.svg">
+
+
 </head>
 
 
