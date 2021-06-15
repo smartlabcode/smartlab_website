@@ -47,9 +47,9 @@
 
     <h5 class="h5-font">@lang('careers-multimedia.opis-poslova')</h5>
     <ul class="p-font">
+        <li>@lang('careers-multimedia.opis3')</li>
         <li>@lang('careers-multimedia.opis1')</li>
         <li>@lang('careers-multimedia.opis2')</li>
-        <li>@lang('careers-multimedia.opis3')</li>
     </ul>
 
     <br /><br />
@@ -58,8 +58,8 @@
     <ul class="p-font">
         <li>@lang('careers-multimedia.karakteristika1')</li>
         <li>@lang('careers-multimedia.karakteristika2')</li>
-        <li>@lang('careers-multimedia.karakteristika3')</li>
         <li>@lang('careers-multimedia.karakteristika4')</li>
+        <li>@lang('careers-multimedia.karakteristika3')</li>
         <li>@lang('careers-multimedia.karakteristika5')</li>
         <li>@lang('careers-multimedia.karakteristika6')</li>
         <li>@lang('careers-multimedia.karakteristika7')</li>
@@ -71,12 +71,14 @@
     </ul>
 
     <br />
-    <p class="p-font">@lang('careers-multimedia.hello')<a href="mailto:posao@smartlab.ba" target="_blank">posao@smartlab.ba.</a></p>
+    <p class="p-font">@lang('careers-multimedia.hello')<a href="mailto:posao@smartlab.ba" target="_blank">posao@smartlab.ba</a>, najkasnije do 25.06.2021. </p>
     <p class="p-font">@lang('careers-multimedia.hello2')</p>
     <br />
 
     <p><strong>@lang('careers-multimedia.lokacija')</strong></p>
-    <p><strong>@lang('careers-multimedia.datum')<strong></p>
+    <p><strong>Broj otvorenih pozicija: 2</strong></p>
+    <p><strong>Datum objave: 15.6.2021<strong></p>
+    
 
     <br />
     <div class="buttons-container">
