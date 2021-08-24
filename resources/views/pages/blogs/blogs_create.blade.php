@@ -81,7 +81,7 @@
 
                 <div class="form-group">
                     <label for="title">Blog title</label>
-                    <input type="text" class="form-control" id="title" placeholder="Title" name="title" value="@if(isset($oldTitle)) {{ old('title') }} @elseif(isset($language)) {{$blog->heading}} @endif">
+                    <input type="text" class="form-control" id="title" placeholder="Title" name="title" value="">
 
                 </div>
 
@@ -106,7 +106,7 @@
         ])
 
         <!-- Hidden input values used for holding specific values -->
-        <input id="contentText" name="content" type="hidden" value="@if(isset($oldContent)) {{ old('content') }} @elseif(isset($blog->text)) {{$blog->text}} @endif" />
+        <input id="contentText" name="content" type="hidden" value="" />
         <input id="addToExistingBlog" type="hidden" name="existing" value="@if(isset($language)) true @else false @endif">
         <input id="blogId" type="hidden" name="blog_id" value="@if(isset($id)) {{$id}} @endif">
 
