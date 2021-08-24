@@ -1,6 +1,6 @@
 <!-- Summernote css/js -->
 {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.css" rel="stylesheet"> --}}
-{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.js" defer></script> --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 {{--<link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.css" rel="stylesheet">--}}
 {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.js"></script>--}}
