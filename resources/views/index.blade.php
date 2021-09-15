@@ -329,7 +329,7 @@
       </div>
 
 
-      <div class="team-member">
+      {{-- <div class="team-member">
         <div class="team-img-container"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
             <defs>
               <clipPath id="clipPath">
@@ -343,7 +343,7 @@
           <h3>Eldin P.</h3>
           <p>eLearning Designer</p>
         </div>
-      </div>
+      </div> --}}
 
 
       <div class="team-member">
