@@ -246,7 +246,7 @@
         </div>
         <div class="team-description">
           <h3>Dino Č.</h3>
-          <p>eLearning Designer</p>
+          <p>Front-End Developer</p>
         </div>
       </div>
 
