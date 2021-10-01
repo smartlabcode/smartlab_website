@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Services\LogService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\App;
 
 class PagesController extends Controller
 {
@@ -21,6 +22,11 @@ class PagesController extends Controller
      */
     public function index()
     {
+        session_start();
+        if (isset($_GET['lang'])) {
+            
+            App::setlocale($_GET['lang']);
+        }
 
         try {
 
@@ -36,14 +42,14 @@ class PagesController extends Controller
                           DATE_FORMAT(b.created_at, \'%M %d, %Y\') AS created_at
                         FROM blogs AS b
                         LEFT JOIN users AS u ON b.users_id = u.id
-                        LEFT JOIN blog_translations AS bt ON b.id = bt.blogs_id
-                        WHERE b.deleted_at IS NULL
+                    LEFT JOIN blog_translations AS bt ON b.id = bt.blogs_id
+                    LEFT JOIN blog_tags AS bta ON b.id = bta.blogs_id
+                        WHERE b.published = "true" AND b.deleted_at IS NULL AND bt.language = "'.app()->getLocale().'"
                         AND b.published = "true"
                         GROUP BY b.id
                         ORDER BY b.created_at DESC
                         LIMIT 4'
             );
-
 
             return view('index', [
                 'blogs' => $blogs

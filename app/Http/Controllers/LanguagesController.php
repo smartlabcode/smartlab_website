@@ -29,7 +29,11 @@ class LanguagesController extends Controller
 
             // set language to session so that we can check it in the middleware
             session_start();
-            session()->put('language', $language);
+            if (isset($_GET['lang'])) {
+                session()->put('language', $_GET['lang']);
+            } else {
+                session()->put('language', $language);
+            }
 
         } catch (\Exception $e) {
             // add log
