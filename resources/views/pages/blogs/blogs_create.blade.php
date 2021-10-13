@@ -69,7 +69,7 @@
         @endphp
 
 
-<script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
         <!-- Form elements -->
         <div id="formContainer">
             <div>
@@ -130,7 +130,7 @@
 @section('js')
 <script>
     CKEDITOR.config.height = 500;
-    
+
     function openUploadWindow() {
 
         var upload = document.getElementById("imageInput");
