@@ -40,7 +40,7 @@
 
     <!-- Include error/success messages to be listed if anything goes wrong -->
     @include('parts.error_success')
-
+<script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
     <!-- Form for editing existing blog -->
     <form id="editBlogForm" method="POST" enctype="multipart/form-data">
 
@@ -89,7 +89,8 @@
 
         <div class="form-group">
             <!-- Fake element for editor -->
-            <textarea class="form-control" name="content" placeholder="Blog content" id="content" rows="15"></textarea>
+            <textarea rows="45" id="editor contentText" name="editor1">@if(isset($oldContent)) {{ old('content') }} @elseif(isset($blog->text)) {{$blog->text}} @endif</textarea>
+            {{-- <textarea class="form-control" name="content" placeholder="Blog content" id="content" rows="15"></textarea> --}}
         </div>
 
         <!-- Include tags selector for the blog and set neccessary data -->
@@ -109,19 +110,20 @@
 
 </div>
 
-<!-- Loader element -->
+{{-- <!-- Loader element -->
 <div id="loaderContainer">
     <div class="loader"></div>
-</div>
+</div> --}}
 
-<!-- Include summernote editor -->
-@include('parts.summernote')
+
 
 
 
 @endsection
 @section('js')
 <script>
+    CKEDITOR.config.height = 500;
+
     function openUploadWindow() {
 
         var upload = document.getElementById("imageInput");
@@ -135,6 +137,22 @@
         document.getElementById('imagePlaceholder').src = _PREVIEW_URL;
 
     }
+
+    ClassicEditor
+                                .create( document.querySelector( '#editor' ) )
+                                .then( editor => {
+                                        console.log( editor );
+                                } )
+                                .catch( error => {
+                                        console.error( error );
+                                } );
+
 </script>
-<script src="{{ asset('/js/app.js') }}"></script>
+<script type="text/javascript">
+    CKEDITOR.replace('editor1', {
+        filebrowserUploadUrl: "{{route('ckeditor.upload', ['_token' => csrf_token() ])}}",
+        filebrowserUploadMethod: 'form'
+    });
+</script>
+{{-- <script src="{{ asset('/js/app.js') }}"></script> --}}
 @endsection

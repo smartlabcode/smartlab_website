@@ -115,3 +115,7 @@ Route::post('subscribe', 'SubscribeController@saveSubscriber');
 Auth::routes([
     //'register' => false
 ]);
+
+//CKEditor 5 routes
+Route::get('ckeditor', 'CkeditorController@index');
+Route::post('ckeditor/upload', 'CkeditorController@upload')->name('ckeditor.upload');

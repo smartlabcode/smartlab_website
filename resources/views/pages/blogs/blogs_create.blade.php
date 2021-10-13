@@ -69,7 +69,7 @@
         @endphp
 
 
-
+<script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>
         <!-- Form elements -->
         <div id="formContainer">
             <div>
@@ -96,7 +96,8 @@
         <div class="form-group">
             <label for="content">Blog text</label>
             <!-- Fake element for editor -->
-            <textarea class="form-control" name="content" placeholder="Blog content" id="content" rows="15"></textarea>
+            <textarea id="editor contentText" name="editor1"></textarea>
+            {{-- <textarea class="form-control" name="content" placeholder="Blog content" id="content" rows="15"></textarea> --}}
         </div>
 
         <!-- Include tags selector for the blog and set neccessary data -->
@@ -124,10 +125,12 @@
 @endif
 
 <!-- Include summernote editor -->
-@include('parts.summernote')
+{{-- @include('parts.summernote') --}}
 @endsection
 @section('js')
 <script>
+    CKEDITOR.config.height = 500;
+    
     function openUploadWindow() {
 
         var upload = document.getElementById("imageInput");
@@ -141,6 +144,22 @@
         document.getElementById('imagePlaceholder').src = _PREVIEW_URL;
 
     }
+
+    ClassicEditor
+                                .create( document.querySelector( '#editor' ) )
+                                .then( editor => {
+                                        console.log( editor );
+                                } )
+                                .catch( error => {
+                                        console.error( error );
+                                } );
+
+</script>
+<script type="text/javascript">
+    CKEDITOR.replace('editor1', {
+        filebrowserUploadUrl: "{{route('ckeditor.upload', ['_token' => csrf_token() ])}}",
+        filebrowserUploadMethod: 'form'
+    });
 </script>
 <script src="{{ asset('/js/app.js') }}"></script>
 @endsection
