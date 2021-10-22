@@ -385,7 +385,7 @@
               </clipPath>
             </defs>
           </svg>
-          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/adiK.jpg')}}" alt="Mustafa photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1" alt="team background">
+          <div class="team-img"> <img src="{{asset('/images/team/team-blank.svg')}}" data-src="{{asset('/images/team/adiK.jpg')}}" alt="Adi photo"></div> <img src="{{asset('/images/img/blue-circle.svg')}}" class="team-blue1" alt="team background"> <img src="{{asset('/images/img/orange-circle.svg')}}" class="team-orange1" alt="team background">
         </div>
         <div class="team-description">
           <h3>Adi K.</h3>
