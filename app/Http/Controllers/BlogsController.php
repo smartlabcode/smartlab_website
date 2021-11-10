@@ -9,7 +9,6 @@ use App\Http\Services\LogService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Intervention\Image\ImageManagerStatic as Image;
 
 class BlogsController extends Controller
 {
@@ -165,32 +164,11 @@ class BlogsController extends Controller
         // check if image is uploaded
         $image = request()->image;
         if (isset($image)) {
-            //Old upload
             // set image name
-            // $imageName = time() . '.' . request()->image->getClientOriginalExtension();
-            // // upload image
-            // request()->image->move(public_path('/images'), $imageName);
+            $imageName = time() . '.' . request()->image->getClientOriginalExtension();
 
-            $image       = $request->file('image');
-            
-
-            //Full size photo
-            $filename    = time().$image->getClientOriginalName();
-            $image_resize = Image::make($image->getRealPath());              
-            $image_resize->resize(1600, 1600, function ($constraint) {
-                $constraint->aspectRatio();
-                $constraint->upsize();
-            });
-            $image_resize->save(public_path('images/' .$filename))->encode('jpg', 75);
-
-            //Thumbnail
-            $filename_thumbnail    = 'thumbnail_'.$filename;
-            $image_resize = Image::make($image->getRealPath());              
-            $image_resize->resize(450, 450, function ($constraint) {
-                $constraint->aspectRatio();
-                $constraint->upsize();
-            });
-            $image_resize->save(public_path('images/' .$filename_thumbnail))->encode('jpg', 75);
+            // upload image
+            request()->image->move(public_path('/images'), $imageName);
         }
 
         // check if already exist one translation for the blog, if no create new blog in the database
@@ -198,7 +176,7 @@ class BlogsController extends Controller
 
             // if data is ok set new values to the model
             $blog->users_id = Auth::user()->id;
-            $blog->image_path = '/images/' . $filename;
+            $blog->image_path = '/images/' . $imageName;
             // save model
             $blog->save();
 
