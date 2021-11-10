@@ -175,7 +175,7 @@ return [
         AlbertCht\InvisibleReCaptcha\InvisibleReCaptchaServiceProvider::class,
         //Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
         App\Providers\EventServiceProvider::class,
-        App\Providers\TelescopeServiceProvider::class,
+        // App\Providers\TelescopeServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
     ],
 
