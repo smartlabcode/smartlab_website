@@ -311,12 +311,26 @@ class BlogsController extends Controller
             //$imageName = substr($imageName, strrpos($imageName, '/') + 1);
 
             // upload new image
-            request()->image->move(public_path('/images'), $imageName);
+            // request()->image->move(public_path('/images'), $imageName);
+
+            //Full size photo
+            $image       = $request->file('image');
+            $filename    = $imageName;
+            $image_resize = Image::make($image->getRealPath());              
+            $image_resize->resize(1600, 1600, function ($constraint) {
+                $constraint->aspectRatio();
+                $constraint->upsize();
+            });
+            $image_resize->save(public_path('images/' .$filename))->encode('jpg', 75);
 
             // change image path in the database
             $blog = Blog::where('id', $id)->first();
             $blog->image_path = '/images/' . $imageName;
             $blog->save();
+
+
+            $image       = $request->file('image');
+            
         }
 
         // find blog translation for editing
