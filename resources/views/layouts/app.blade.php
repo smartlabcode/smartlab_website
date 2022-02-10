@@ -62,6 +62,10 @@
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114227726-1"></script>
+    <!-- Global site tag (gtag.js) - Google Ads: 850046557 --> 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-850046557">
+    </script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-850046557');
+     </script>
     <script src="{{ asset('js/captcha.min.js') }}"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
