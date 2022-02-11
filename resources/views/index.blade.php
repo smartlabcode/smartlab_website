@@ -345,7 +345,7 @@
         </div>
       </div>
 
-      <div class="team-member">
+      {{-- <div class="team-member">
         <div class="team-img-container"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
             <defs>
               <clipPath id="clipPath">
@@ -358,8 +358,8 @@
         <div class="team-description">
           <h3>Armin H.</h3>
           <p>eLearning Developer</p>
-        </div>
-      </div>
+        </div> --}}
+      {{-- </div> --}}
 
       <div class="team-member">
         <div class="team-img-container"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
@@ -377,7 +377,7 @@
         </div>
       </div>
 
-          <div class="team-member">
+          {{-- <div class="team-member">
         <div class="team-img-container"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
             <defs>
               <clipPath id="clipPath">
@@ -391,7 +391,7 @@
           <h3>Adi K.</h3>
           <p>UX/UI Designer</p>
         </div>
-      </div>
+      </div> --}}
 
             <div class="team-member">
         <div class="team-img-container"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="2189.72 4884 379.064 396.477" class="team-mask">
