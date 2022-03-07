@@ -308,7 +308,7 @@
         </div>
         <div class="team-description">
           <h3>Esad O.</h3>
-          <p>eLearning Designer</p>
+          <p>Quality Assurance</p>
         </div>
       </div>
 
@@ -405,7 +405,7 @@
         </div>
         <div class="team-description">
           <h3>Mustafa M.</h3>
-          <p>Content Creator</p>
+          <p>Business Developed Assistant</p>
         </div>
       </div>
 
