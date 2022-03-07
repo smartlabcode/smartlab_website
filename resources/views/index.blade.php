@@ -405,7 +405,7 @@
         </div>
         <div class="team-description">
           <h3>Mustafa M.</h3>
-          <p>Business Developed Assistant</p>
+          <p>Business Development Assistant</p>
         </div>
       </div>
 
