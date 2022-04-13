@@ -29,6 +29,11 @@
                     <li>@lang('moodle.secOneUlFourth')</li>
                 </ul>
             </p>
+
+        <div style="height: 50%; margin-top: 60px; display: flex; justify-content: center">
+            <a href="/#contact-form"><button class="button" id="schedule">@lang('moodle.buttonSchedule')</button></a>
+        </div>
+        <img class="secTwoBg4" src="{{asset('/images/img/orange-circle.svg')}}" alt="orange circle background">
         </div>
         <div class="section-one-animation">
 
@@ -102,7 +107,7 @@
             <p class="p-font" style="margin-top: 50px; display: flex; justify-content: center; font-weight: 500">@lang('moodle.sec2h22')</p>
         </div>
         <div style="height: 50%; margin-top: 30px; display: flex; justify-content: center">
-            <button class="button" id="schedule">@lang('moodle.buttonSchedule')</button>
+            <a href="/#contact-form"><button class="button" id="schedule">@lang('moodle.buttonSchedule')</button></a>
         </div>
         <img class="secTwoBg4" src="{{asset('/images/img/orange-circle.svg')}}" alt="orange circle background">
     </div>

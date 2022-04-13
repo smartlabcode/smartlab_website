@@ -29,7 +29,13 @@
                     <li>@lang('courses.secOneUlFourth')</li>
                 </ul>
             </p>
-        </div>
+            
+            <div style="height: 50%; margin-top: 60px; display: flex; justify-content: center">
+                <a href="/#contact-form"><button class="button" id="schedule">@lang('courses.buttonSchedule')</button></a>
+            </div>
+                <img class="secTwoBg4" src="{{asset('/images/img/orange-circle.svg')}}">
+            </div>
+
         <div class="section-one-animation">
 
         </div>
@@ -103,7 +109,7 @@
             <p class="p-font" style="margin-top: 50px; display: flex; justify-content: center; font-weight: 500">@lang('courses.sec2h22')</p>
         </div>
         <div style="height: 50%; margin-top: 30px; display: flex; justify-content: center">
-            <button class="button" id="schedule">@lang('courses.buttonSchedule')</button>
+            <a href="/#contact-form"><button class="button" id="schedule">@lang('courses.buttonSchedule')</button></a>
         </div>
         <img class="secTwoBg4" src="{{asset('/images/img/orange-circle.svg')}}">
     </div>

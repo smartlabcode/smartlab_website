@@ -518,6 +518,7 @@
     <div id="contact"></div>
     <p>@lang('index.contact_p')</p>
     <h2 class="text-center h1-font">@lang('index.contact_h2')</h2> @include('parts.error_success')
+    <div id="contact-form"></div>
     <form class="contact-form" action="/contact" method="POST"> @csrf<div class="contact-form-group">
 
         <div> <label for="name">*@lang('index.formName')</label> <input type="text" name="name" id="name" required /></div>
